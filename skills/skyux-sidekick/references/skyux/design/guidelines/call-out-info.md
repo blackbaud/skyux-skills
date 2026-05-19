@@ -1,0 +1,40 @@
+---
+Title: Call out information
+Reference: https://developer.blackbaud.com/skyux/design/guidelines/call-out-info
+---
+
+# Call out information
+
+The optimal method to highlight information depends on the content and its context.
+
+## Critical messages
+
+To highlight critical information that users absolutely must see when visiting a page, use an [alert](../../components/alert.md) component. If users only need to see an alert once, you can make it dismissible, although you might want to include a way for users to reopen it. Do not make an alert dismissible if it is important for users see every time or if it is triggered by underlying data.
+
+## Summary data
+
+For dense sets of data, you can create summaries to highlight important points. To call out these points, use a [key info](../../components/key-info.md) component. They draw user attention, and then users can decide whether to dig into the underlying data or rely on the high-level understanding.
+
+## Status
+
+Statuses indicate a state or condition at a particular time and fall into four categories: info, success, warning, and danger. For example, a status can indicate that a submission is late, submitted, or awaiting approval.
+
+Status importance
+
+Some statuses are crucial to user tasks, while others are no more important than other information on a page. If statuses are crucial to user tasks, use [labels](../../components/label.md) or [status indicators](../../components/status-indicator.md). If not, use regular text. Err on the side of too few labels and status indicators; if you use too many, they become distracting and lose their ability to grab user attention.
+
+If one status in an area is crucial, that does not mean all statuses are. For example, in a list of invoices with a mix of paid, unpaid, and overdue invoices, it's likely that only overdue invoices require status indicators because they are the only items that require immediate attention.
+
+Placement
+
+Use [labels](../../components/label.md) in a summary context. For example, you can place a label in a page summary.
+
+Use [status indicators](../../components/status-indicator.md) inline to indicate that they are tied to specific pieces of data. For example, you can place a status indicator in a grid cell.
+
+Status presentation decision tree
+
+![](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/calloutinfo/status-decision-tree.73c3e3162f5669436bb38aa0eb4f28b2.png)
+
+## Process updates
+
+To communicate a message that a background process triggers, use a [toast](../../components/toast.md). Background processes include processes that users initiate and system processes that users need to be aware of. Since toasts contain information the user must see, the user must manually dismiss the toast - the toast will not automatically close.
