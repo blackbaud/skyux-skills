@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# Editors
+.idea/
+.vscode/
+
+# Node (defensive; repo ships no root package.json)
+node_modules/
+
+# Logs / temp
+*.log
+.tmp/

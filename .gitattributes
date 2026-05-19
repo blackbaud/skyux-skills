@@ -1,0 +1,4 @@
+# Mark scraped SKY UX docs as generated so GitHub language stats and
+# diff views don't get drowned by every corpus refresh.
+skills/skyux-sidekick/references/skyux/** linguist-generated=true
+skills/skyux-sidekick/references/skills/project-modernization/available-*.md linguist-generated=true
