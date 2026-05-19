@@ -1,7 +1,7 @@
 # skyux-skills
 
-Claude Code agent skills for SKY UX / Angular work, plus a committed corpus
-of SKY UX documentation that the skills consult before writing code.
+Agent skills for SKY UX / Angular work, plus a committed corpus of SKY UX
+documentation that the skills consult before writing code.
 
 Two skills ship from this repo:
 
@@ -29,8 +29,8 @@ Pin to a specific tagged release (recommended, since the repo uses per-skill
 tags):
 
 ```sh
-gh skill install blackbaud/skyux-skills skyux-sidekick --pin skyux-sidekick-v0.14001.0
-gh skill install blackbaud/skyux-skills create-a-new-skyux-project --pin create-a-new-skyux-project-v0.14001.0
+gh skill install blackbaud/skyux-skills skyux-sidekick
+gh skill install blackbaud/skyux-skills create-a-new-skyux-project
 ```
 
 ### Manual
@@ -48,9 +48,7 @@ by a scraper in the private `blackbaud/skyux-skills-conservator` repo and
 mirrored here. To refresh it:
 
 ```sh
-# In the conservator repo:
-cd tools/skyux-scraper
-npm run scrape
+# In the conservator repo, run the update script.
 
 # Back at the conservator repo root, mirror into a sibling clone of skyux-skills:
 rsync -av --delete \
@@ -58,9 +56,9 @@ rsync -av --delete \
   skills/ ../skyux-skills/skills/
 
 # Then in skyux-skills/:
-git diff               # review
-git add skills/
-git commit -m "docs: refresh references corpus YYYY-MM-DD"
+git add -A
+git diff --cached    # review
+git commit -m "chore(skyux-sidekick): refresh references on $(date -u +%Y-%m-%dT%H:%MZ)"
 ```
 
 Commit corpus refreshes separately from SKILL.md edits so reviewers can see

@@ -4,7 +4,7 @@ Rules for Claude (or any agent reading `AGENTS.md`) working on this repo.
 
 ## Purpose
 
-This repo ships two Claude Code agent skills for SKY UX / Angular work:
+This repo ships two agent skills for SKY UX / Angular work:
 
 - `skyux-sidekick` — frontend design skill backed by a committed corpus of
   SKY UX documentation under `skills/skyux-sidekick/references/`.
@@ -34,8 +34,7 @@ Hand-authored content that is allowed:
 - Corpus refreshes (`rsync` mirror) are their own commit, separate from any
   `SKILL.md` or metadata change. Reviewers should not have to read 10k lines
   of generated docs to find a one-line behavior change.
-- Do not commit or open PRs unless explicitly asked. (Mirrors the user's
-  global rule.)
+- Do not commit or open PRs unless explicitly asked.
 
 ## Release discipline
 
