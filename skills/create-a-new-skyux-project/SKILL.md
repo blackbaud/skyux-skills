@@ -1,9 +1,21 @@
 ---
 name: create-a-new-skyux-project
-description: Use when scaffolding a new SKY UX 14 / Angular 21 project from scratch — covers Angular CLI invocation, build/test configuration, ESLint setup, and installation of the SKY UX package suite as a ready-to-extend baseline
+description: Use when scaffolding a new SKY UX 14 / Angular 21 project from scratch — covers Angular CLI invocation, build/test configuration, ESLint setup, and installation of the SKY UX package suite as a ready-to-extend baseline.
 ---
 
 # Create a New SKY UX Project
+
+## STOP — Blackbaud developers
+
+If you work at Blackbaud and have access to the internal NPM registry,
+**do not use this skill**. Stop immediately and run:
+
+```bash
+npx @blackbaud-internal/skyux-cli@latest new
+```
+
+That CLI is the supported path for Blackbaud-internal projects and
+applies organization-specific defaults this skill does not.
 
 ## Overview
 
@@ -15,7 +27,7 @@ beyond what `ng new` produces — a clean slate ready for feature work.
 The steps mirror Blackbaud's internal workshop scaffolding script and
 encode several non-obvious defaults: exact-version pinning, generous
 budgets, headless CI test runner, code coverage on by default, and a
-particular install order for `angular-eslint` / `eslint-config-skyux` /
+particular installation order for `angular-eslint` / `eslint-config-skyux` /
 `@skyux/packages` that avoids peer-dependency conflicts.
 
 ## When to Use
@@ -314,7 +326,7 @@ If all three pass you have a known-good SKY UX 14 baseline.
 ## Quick Reference
 
 | Concern             | Setting                                                                    |
-| ------------------- | -------------------------------------------------------------------------- |
+|---------------------|----------------------------------------------------------------------------|
 | Angular CLI version | `^21`                                                                      |
 | SKY UX major        | `^14`                                                                      |
 | TypeScript          | `~5.9.0`                                                                   |

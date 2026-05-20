@@ -5,10 +5,6 @@
     "type": "website",
     "url": "https://developer.blackbaud.com/skyux"
   },
-  "scraper": {
-    "name": "@blackbaud-internal/skyux-scraper",
-    "version": "0.1.0"
-  },
   "counts": {
     "components": 95,
     "section_indexes": 93,

@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 
 const STALE_DAYS = 30;
 const DEFAULT_UPSTREAM =
-  'https://raw.githubusercontent.com/johnhwhite/prompt-incubator/main/skills/skyux-sidekick/references/_manifest.json';
+  'https://raw.githubusercontent.com/blackbaud/skyux-skills/main/skills/skyux-sidekick/references/_manifest.json';
 const upstreamUrl = process.env.SKYUX_SIDEKICK_UPSTREAM || DEFAULT_UPSTREAM;
 
 const here = path.dirname(fileURLToPath(import.meta.url));
@@ -31,7 +31,10 @@ try {
     headers: { 'User-Agent': 'skyux-sidekick-check-updates' },
   });
   clearTimeout(timer);
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  if (!res.ok) {
+    console.error(`ERROR: could not reach upstream (${upstreamUrl}): ${ctrl.signal} failed with status code ${res.status}`);
+    process.exit(2);
+  }
   upstream = await res.json();
 } catch (err) {
   console.error(

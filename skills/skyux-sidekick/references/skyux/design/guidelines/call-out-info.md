@@ -37,4 +37,4 @@ Status presentation decision tree
 
 ## Process updates
 
-To communicate a message that a background process triggers, use a [toast](../../components/toast.md). Background processes include processes that users initiate and system processes that users need to be aware of. Since toasts contain information the user must see, the user must manually dismiss the toast - the toast will not automatically close.
+To communicate a message that a background process triggers, use a [toast](../../components/toast.md). Background processes include processes that users initiate and system processes that users need to be aware of. Since toasts contain information the user must see, the user must manually dismiss the toast — the toast will not automatically close.
