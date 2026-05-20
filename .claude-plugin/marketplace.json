@@ -1,18 +1,20 @@
 {
   "name": "skyux-skills",
-  "owner": { "name": "blackbaud" },
+  "owner": {
+    "name": "blackbaud"
+  },
   "plugins": [
     {
       "name": "skyux-sidekick",
       "source": "./skills/skyux-sidekick",
       "description": "Use for ANY Angular or SKY UX frontend work — building a new SPA, adding a component, fixing a bug, migrating, modernizing, writing specs, or styling. Forces consultation of the bundled SKY UX documentation in references/ before any code is written and produces a concrete, citation-backed implementation plan that the work must follow.",
-      "version": "0.14001.0"
+      "version": "0.14003.0"
     },
     {
       "name": "create-a-new-skyux-project",
       "source": "./skills/create-a-new-skyux-project",
       "description": "Use when scaffolding a new SKY UX 14 / Angular 21 project from scratch — covers Angular CLI invocation, build/test configuration, ESLint setup, and installation of the SKY UX package suite as a ready-to-extend baseline",
-      "version": "0.14001.0"
+      "version": "0.14002.0"
     }
   ]
 }

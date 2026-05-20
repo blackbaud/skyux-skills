@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 
 const STALE_DAYS = 30;
 const DEFAULT_UPSTREAM =
-  'https://raw.githubusercontent.com/blackbaud/skyux-skills/main/skills/skyux-sidekick/references/_manifest.json';
+  'https://github.com/blackbaud/skyux-skills/raw/refs/heads/main/skills/skyux-sidekick/references/_manifest.json';
 const upstreamUrl = process.env.SKYUX_SIDEKICK_UPSTREAM || DEFAULT_UPSTREAM;
 
 const here = path.dirname(fileURLToPath(import.meta.url));
@@ -29,10 +29,11 @@ try {
   const res = await fetch(upstreamUrl, {
     signal: ctrl.signal,
     headers: { 'User-Agent': 'skyux-sidekick-check-updates' },
+    redirect: 'follow',
   });
   clearTimeout(timer);
   if (!res.ok) {
-    console.error(`ERROR: could not reach upstream (${upstreamUrl}): ${ctrl.signal} failed with status code ${res.status}`);
+    console.error(`ERROR: could not reach upstream (${upstreamUrl}): ${res.status} ${ctrl.signal.reason ?? res.statusText}`);
     process.exit(2);
   }
   upstream = await res.json();

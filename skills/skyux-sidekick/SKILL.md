@@ -1,6 +1,8 @@
 ---
 name: skyux-sidekick
 description: Use for ANY Angular or SKY UX frontend work — building a new SPA, adding a component, fixing a bug, migrating, modernizing, writing specs, or styling. Forces consultation of the bundled SKY UX documentation in references/ before any code is written and produces a concrete, citation-backed implementation plan that the work must follow.
+metadata:
+  license: MIT
 ---
 
 # SKY UX Sidekick

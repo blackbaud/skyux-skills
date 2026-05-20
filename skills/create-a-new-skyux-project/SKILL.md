@@ -1,6 +1,8 @@
 ---
 name: create-a-new-skyux-project
 description: Use when scaffolding a new SKY UX 14 / Angular 21 project from scratch — covers Angular CLI invocation, build/test configuration, ESLint setup, and installation of the SKY UX package suite as a ready-to-extend baseline.
+metadata:
+  license: MIT
 ---
 
 # Create a New SKY UX Project
