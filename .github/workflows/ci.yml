@@ -29,93 +29,14 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Validate marketplace.json shape
-        run: |
-          node <<'NODE'
-          const fs = require('fs');
-          const m = JSON.parse(fs.readFileSync('.claude-plugin/marketplace.json', 'utf8'));
-          const ok = (cond, msg) => { if (!cond) { console.error(msg); process.exit(1); } };
-          ok(typeof m.name === 'string' && m.name, 'marketplace.name missing');
-          ok(m.owner && typeof m.owner.name === 'string', 'marketplace.owner.name missing');
-          ok(Array.isArray(m.plugins) && m.plugins.length > 0, 'marketplace.plugins must be a non-empty array');
-          for (const p of m.plugins) {
-            for (const field of ['name', 'source', 'description', 'version']) {
-              ok(typeof p[field] === 'string' && p[field], `plugin missing or empty field: ${field} (entry: ${JSON.stringify(p)})`);
-            }
-          }
-          console.log('marketplace.json: OK');
-          NODE
+      - name: Run script tests
+        run: node --test scripts/*.test.mjs
 
-      - name: Validate SKILL.md to marketplace.json consistency
-        run: |
-          node <<'NODE'
-          const fs = require('fs');
-          const path = require('path');
-          const m = JSON.parse(fs.readFileSync('.claude-plugin/marketplace.json', 'utf8'));
-          const parseFrontmatter = (raw) => {
-            const match = raw.match(/^---\n([\s\S]*?)\n---/);
-            if (!match) throw new Error('missing YAML frontmatter');
-            const fm = {};
-            for (const line of match[1].split('\n')) {
-              const m2 = line.match(/^([a-zA-Z_][\w-]*):\s*(.*)$/);
-              if (m2) fm[m2[1]] = m2[2];
-            }
-            return fm;
-          };
-          for (const p of m.plugins) {
-            const skillPath = path.join(p.source, 'SKILL.md');
-            if (!fs.existsSync(skillPath)) {
-              console.error(`plugin ${p.name}: SKILL.md missing at ${skillPath}`);
-              process.exit(1);
-            }
-            const fm = parseFrontmatter(fs.readFileSync(skillPath, 'utf8'));
-            if (fm.name !== p.name) {
-              console.error(`plugin ${p.name}: SKILL.md frontmatter name="${fm.name}" does not match marketplace name="${p.name}"`);
-              process.exit(1);
-            }
-            if (fm.description !== p.description) {
-              console.error(`plugin ${p.name}: SKILL.md description does not match marketplace description`);
-              console.error(`  SKILL.md:    ${fm.description}`);
-              console.error(`  marketplace: ${p.description}`);
-              process.exit(1);
-            }
-          }
-          console.log('SKILL.md to marketplace.json: OK');
-          NODE
+      - name: Validate marketplace.json and SKILL.md consistency
+        run: node scripts/validate-marketplace.mjs
 
-      - name: Validate references/_manifest.json
-        run: |
-          node <<'NODE'
-          const fs = require('fs');
-          const m = JSON.parse(fs.readFileSync('skills/skyux-sidekick/references/_manifest.json', 'utf8'));
-          if (!m.generated_at) { console.error('_manifest.json missing generated_at'); process.exit(1); }
-          console.log('_manifest.json: OK');
-          NODE
-
-      - name: Validate AGENTS.md is a symlink to CLAUDE.md
-        run: |
-          if [ ! -L AGENTS.md ]; then
-            echo "AGENTS.md is not a symlink" >&2
-            exit 1
-          fi
-          if [ "$(readlink AGENTS.md)" != "CLAUDE.md" ]; then
-            echo "AGENTS.md does not resolve to CLAUDE.md (got: $(readlink AGENTS.md))" >&2
-            exit 1
-          fi
-          echo "AGENTS.md: OK"
-
-      - name: Validate required root files exist
-        run: |
-          for f in LICENSE README.md CONTRIBUTING.md CLAUDE.md .gitattributes; do
-            if [ ! -f "$f" ]; then
-              echo "missing required file: $f" >&2
-              exit 1
-            fi
-          done
-          echo "root files: OK"
-
-      - name: Run verify-release tests
-        run: node --test scripts/verify-release.test.mjs
+      - name: Validate repository files
+        run: node scripts/validate-repository-files.mjs
 
   verify-release:
     if: startsWith(github.ref, 'refs/tags/') || github.event_name == 'workflow_dispatch'
@@ -136,27 +57,9 @@ jobs:
       - name: Parse tag (or simulate failure on workflow_dispatch)
         id: parse
         env:
+          GITHUB_EVENT_NAME: ${{ github.event_name }}
           SIMULATE_FAILURE: ${{ inputs.simulate_failure }}
-        run: |
-          set -euo pipefail
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            if [ "${SIMULATE_FAILURE}" = "true" ]; then
-              echo "simulate_failure=true requested; failing verify-release deliberately" >&2
-              exit 1
-            else
-              echo "workflow_dispatch with simulate_failure=false; nothing to verify, succeeding" >&2
-              exit 0
-            fi
-          fi
-          TAG="${GITHUB_REF#refs/tags/}"
-          NAME="${TAG%-v*}"
-          VERSION="${TAG##*-v}"
-          if [ -z "$NAME" ] || [ -z "$VERSION" ] || [ "$NAME" = "$TAG" ]; then
-            echo "tag does not match <name>-v<version>: $TAG" >&2
-            exit 1
-          fi
-          echo "name=$NAME"      >> "$GITHUB_OUTPUT"
-          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+        run: node scripts/prepare-release-verification.mjs
 
       - name: Run verify-release.mjs
         if: github.event_name == 'push'
