@@ -3,7 +3,7 @@ import { readFile } from 'node:fs/promises';
 import { execFileSync } from 'node:child_process';
 import {
   checkVersion,
-  checkOtherPluginsUnchanged,
+  checkVersionChangesHaveReleaseTags,
 } from './verify-release-lib.mjs';
 
 const usage = 'Usage: verify-release.mjs <skill-name> <version>';
@@ -19,6 +19,13 @@ function readMarketplaceAtRef(ref) {
   } catch {
     return null;
   }
+}
+
+function readTagsAtRef(ref) {
+  const stdout = execFileSync('git', ['tag', '--points-at', ref], {
+    encoding: 'utf8',
+  });
+  return stdout.split('\n').filter(Boolean);
 }
 
 async function main() {
@@ -40,7 +47,13 @@ async function main() {
 
   const parent = readMarketplaceAtRef('HEAD~1');
   if (parent) {
-    const crossResult = checkOtherPluginsUnchanged(current, parent, skillName);
+    const triggerTag = `${skillName}-v${version}`;
+    const releaseTags = new Set([triggerTag, ...readTagsAtRef('HEAD')]);
+    const crossResult = checkVersionChangesHaveReleaseTags(
+      current,
+      parent,
+      releaseTags,
+    );
     if (!crossResult.ok) {
       console.error(crossResult.error);
       process.exit(1);

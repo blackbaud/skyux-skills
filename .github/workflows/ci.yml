@@ -125,6 +125,10 @@ jobs:
         with:
           fetch-depth: 2
 
+      - name: Fetch release tags
+        if: github.event_name == 'push'
+        run: git fetch --force --tags --depth=2 origin
+
       - uses: actions/setup-node@v4
         with:
           node-version: '22'

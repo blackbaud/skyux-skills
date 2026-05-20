@@ -2,7 +2,7 @@ import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
 import {
   checkVersion,
-  checkOtherPluginsUnchanged,
+  checkVersionChangesHaveReleaseTags,
   parseTag,
 } from './verify-release-lib.mjs';
 
@@ -58,7 +58,7 @@ describe('checkVersion', () => {
   });
 });
 
-describe('checkOtherPluginsUnchanged', () => {
+describe('checkVersionChangesHaveReleaseTags', () => {
   const current = {
     plugins: [
       { name: 'skyux-sidekick', version: '0.14002.0' },
@@ -72,23 +72,71 @@ describe('checkOtherPluginsUnchanged', () => {
     ],
   };
 
-  it('passes when only the named skill changed', () => {
+  it('passes when every changed plugin has a matching release tag', () => {
     assert.deepEqual(
-      checkOtherPluginsUnchanged(current, parent, 'skyux-sidekick'),
+      checkVersionChangesHaveReleaseTags(
+        current,
+        parent,
+        ['skyux-sidekick-v0.14002.0'],
+      ),
       { ok: true },
     );
   });
 
-  it('fails when another plugin also changed version', () => {
+  it('passes when multiple plugins changed and each has a matching release tag', () => {
+    const multiRelease = {
+      plugins: [
+        { name: 'skyux-sidekick', version: '0.14002.0' },
+        { name: 'create-a-new-skyux-project', version: '0.14002.0' },
+      ],
+    };
+    assert.deepEqual(
+      checkVersionChangesHaveReleaseTags(
+        multiRelease,
+        parent,
+        [
+          'skyux-sidekick-v0.14002.0',
+          'create-a-new-skyux-project-v0.14002.0',
+        ],
+      ),
+      { ok: true },
+    );
+  });
+
+  it('fails when a changed plugin does not have a release tag', () => {
     const sneaky = {
       plugins: [
         { name: 'skyux-sidekick', version: '0.14002.0' },
         { name: 'create-a-new-skyux-project', version: '0.14002.0' },
       ],
     };
-    const r = checkOtherPluginsUnchanged(sneaky, parent, 'skyux-sidekick');
+    const r = checkVersionChangesHaveReleaseTags(
+      sneaky,
+      parent,
+      ['skyux-sidekick-v0.14002.0'],
+    );
     assert.equal(r.ok, false);
     assert.match(r.error, /create-a-new-skyux-project/);
+  });
+
+  it('fails when a changed plugin release tag version does not match', () => {
+    const r = checkVersionChangesHaveReleaseTags(
+      current,
+      parent,
+      ['skyux-sidekick-v0.14003.0'],
+    );
+    assert.equal(r.ok, false);
+    assert.match(r.error, /Version mismatch/);
+  });
+
+  it('fails when tags conflict for the same plugin', () => {
+    const r = checkVersionChangesHaveReleaseTags(
+      current,
+      parent,
+      ['skyux-sidekick-v0.14002.0', 'skyux-sidekick-v0.14003.0'],
+    );
+    assert.equal(r.ok, false);
+    assert.match(r.error, /Conflicting release tags/);
   });
 
   it('tolerates a newly-added plugin', () => {
@@ -99,7 +147,11 @@ describe('checkOtherPluginsUnchanged', () => {
       ],
     };
     assert.deepEqual(
-      checkOtherPluginsUnchanged(grown, parent, 'skyux-sidekick'),
+      checkVersionChangesHaveReleaseTags(
+        grown,
+        parent,
+        ['skyux-sidekick-v0.14002.0'],
+      ),
       { ok: true },
     );
   });
