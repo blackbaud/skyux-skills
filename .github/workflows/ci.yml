@@ -169,11 +169,11 @@ jobs:
       - name: Check webhook secret presence
         id: secret
         env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
         run: |
-          if [ -z "${SLACK_WEBHOOK_URL}" ]; then
+          if [ -z "${SLACK_WEBHOOK}" ]; then
             echo "present=false" >> "$GITHUB_OUTPUT"
-            echo "::warning::SLACK_WEBHOOK_URL not set; skipping Slack notification."
+            echo "::warning::SLACK_WEBHOOK not set; skipping Slack notification."
           else
             echo "present=true" >> "$GITHUB_OUTPUT"
           fi
@@ -182,7 +182,11 @@ jobs:
         if: ${{ steps.secret.outputs.present == 'true' }}
         uses: rtCamp/action-slack-notify@e31e87e03dd19038e411e38ae27cbad084a90661  # v2.3.3
         env:
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           SLACK_TITLE: "skyux-skills release verification failed"
           SLACK_MESSAGE: "Tag/ref: ${{ github.ref }}\nCommit: ${{ github.sha }}\nWorkflow: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}\n\nFix forward — do NOT retag. Bump to the next version and push the new tag."
           SLACK_COLOR: danger
+          SLACK_ICON: https://github.com/blackbaud.png?size=48
+          SLACK_USERNAME: SKY UX
+          # slack: #cor-skyux-notifications
+          SLACK_CHANNEL: C01GY7ZP4HM
