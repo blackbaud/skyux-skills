@@ -25,12 +25,16 @@ marketplace.
 
 ### GitHub CLI (`gh skill`)
 
-Pin to a specific tagged release (recommended, since the repo uses per-skill
-tags):
-
 ```sh
 gh skill install blackbaud/skyux-skills skyux-sidekick
 gh skill install blackbaud/skyux-skills create-a-new-skyux-project
+```
+
+### skills.sh (`npx skills`)
+
+```sh
+npx skills add https://github.com/blackbaud/skyux-skills --skill skyux-sidekick
+npx skills add https://github.com/blackbaud/skyux-skills --skill create-a-new-skyux-project
 ```
 
 ### Manual
