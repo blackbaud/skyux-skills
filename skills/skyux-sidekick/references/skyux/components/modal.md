@@ -89,9 +89,9 @@ If users close a modal before saving their changes, use `SkyModalIsDirtyDirectiv
 
 ## Content
 
-### Modal title text
+### Modal heading text
 
-Modal titles use sentence-case capitalization and the following format:
+Modal headings use sentence-case capitalization and the following format:
 
 <Verb> <direct object> for <indirect object>
 
