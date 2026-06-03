@@ -109,6 +109,38 @@ The `stylelint-config-skyux` recommended config includes:
 - the [recommended rules from `stylelint-config-recommended-scss`](https://github.com/stylelint-scss/stylelint-config-recommended-scss)
 - the [recommended rules from `skyux-stylelint`](https://github.com/blackbaud/skyux/tree/main/libs/sdk/skyux-stylelint)
 
+## Experimental style API rules
+
+These ESLint and Stylelint rules ensure that you don't use deprecated, private, or invalid SKY UX classes or SCSS variables. They will become part of the recommended ruleset in SKY UX 15; if you'd like to take advantage of them in SKY UX 14, you can add them to your lint configs.
+
+To use the ESLint rules, include the following in your `eslint.config.mjs` file:
+
+JavaScript
+
+    {
+      files: ['**/*.ts'],
+      rules: {
+        'skyux-eslint/no-invalid-sky-classnames': ['error'],
+        // other ts rules here...
+      },
+    },
+    {
+      files: ['**/*.html'],
+      rules: {
+        'skyux-eslint-template/no-invalid-sky-classnames': ['error'],
+        // other html rules here...
+      },
+    },
+
+To use the Stylelint rules, include the following in your `stylelint.config.mjs` file:
+
+JavaScript
+
+    rules: {
+        'skyux-stylelint/no-invalid-sky-custom-properties': true,
+        'skyux-stylelint/no-deprecated-sky-scss-variables': true
+      },
+
 ## Contributions
 
 The source code for [`eslint-config-skyux`](https://github.com/blackbaud/skyux/tree/main/libs/sdk/eslint-config-skyux) and [`stylelint-config-skyux`](https://github.com/blackbaud/skyux/tree/main/libs/sdk/stylelint-config-skyux) is available on GitHub. You can [file an issue](https://github.com/blackbaud/skyux/issues) or [review our contribution process](../../contribute.md).
