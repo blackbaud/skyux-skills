@@ -34,16 +34,16 @@ Skip any step = lying, not verifying
 
 ## Angular / SKY UX Verification Commands
 
-| Claim                  | Command                                                                     | Success Criteria               |
-| ---------------------- | --------------------------------------------------------------------------- | ------------------------------ |
-| Tests pass             | `npx ng t --include="path/to/component.spec.ts"` or `npx jest path/to/spec` | 0 failures, exit 0             |
-| All project tests pass | `npx ng test` or `npx jest`                                                 | 0 failures, exit 0             |
-| Build succeeds         | `npx ng build`                                                              | exit 0, no errors              |
-| Linter clean           | `npx ng lint`                                                               | 0 errors, 0 warnings           |
-| Bug fixed              | Run the test that reproduced the original symptom                           | Test passes                    |
-| Regression test works  | Red-green cycle: test fails without fix, passes with fix                    | Both runs verified             |
-| Harness test correct   | Run spec, check harness finds element                                       | No "Expected 0 to be 1" errors |
-| Coverage threshold met | Check coverage output after test run                                        | Meets project threshold (100%) |
+| Claim                  | Command                                                  | Success Criteria               |
+| ---------------------- | -------------------------------------------------------- | ------------------------------ |
+| Tests pass             | `npx ng t --include="path/to/component.spec.ts"`         | 0 failures, exit 0             |
+| All project tests pass | `npx ng t`                                               | 0 failures, exit 0             |
+| Build succeeds         | `npx ng build`                                           | exit 0, no errors              |
+| Linter clean           | `npx ng lint`                                            | 0 errors, 0 warnings           |
+| Bug fixed              | Run the test that reproduced the original symptom        | Test passes                    |
+| Regression test works  | Red-green cycle: test fails without fix, passes with fix | Both runs verified             |
+| Harness test correct   | Run spec, check harness finds element                    | No "Expected 0 to be 1" errors |
+| Coverage threshold met | Check coverage output after test run                     | Meets project threshold (100%) |
 
 ## Common Failures
 
@@ -82,7 +82,7 @@ Skip any step = lying, not verifying
 **Tests:**
 
 ```text
-✅ npx ng test → "Tests: 34 passed, 34 total" → "All tests pass"
+✅ npx ng t → "Executed 34 of 34 SUCCESS" → "All tests pass"
 ❌ "Should pass now" / "Looks correct"
 ```
 

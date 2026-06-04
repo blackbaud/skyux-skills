@@ -105,7 +105,7 @@ Vague name, queries internal DOM classes, skips harness
 **MANDATORY. Never skip.**
 
 ```bash
-npx jest path/to/component.spec.ts
+npx ng t --include="path/to/component.spec.ts"
 ```
 
 Confirm:
@@ -171,7 +171,7 @@ Don't add features, refactor other code, or "improve" beyond the test.
 **MANDATORY.**
 
 ```bash
-npx jest path/to/component.spec.ts
+npx ng t --include="path/to/component.spec.ts"
 ```
 
 Confirm:
@@ -327,7 +327,7 @@ it('should close the error modal after an invalid file is uploaded', async () =>
 **Verify RED**
 
 ```bash
-$ npx jest avatar-harness.spec.ts
+$ npx ng t --include="**/avatar-harness.spec.ts"
 FAIL: Expected to be resolved to false but was resolved to true.
 ```
 
@@ -348,7 +348,7 @@ public async closeError(): Promise<void> {
 **Verify GREEN**
 
 ```bash
-$ npx jest avatar-harness.spec.ts
+$ npx ng t --include="**/avatar-harness.spec.ts"
 PASS
 ```
 
