@@ -16,11 +16,11 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | --- | --------------------------------- | ----------- | ------- | --------------------------------------------------------- |
 | 1   | Content                           | design      | 14–17   | `Read file_path=./definition-list.md offset=14 limit=4`   |
 | 2   | Related information               | design      | 18–24   | `Read file_path=./definition-list.md offset=18 limit=7`   |
-| 3   | Installation                      | development | 25–34   | `Read file_path=./definition-list.md offset=25 limit=10`  |
-| 4   | SkyDefinitionListModule           | development | 35–42   | `Read file_path=./definition-list.md offset=35 limit=8`   |
-| 5   | SkyDefinitionListComponent        | development | 43–66   | `Read file_path=./definition-list.md offset=43 limit=24`  |
-| 6   | SkyDefinitionListHeadingComponent | development | 67–74   | `Read file_path=./definition-list.md offset=67 limit=8`   |
-| 7   | SkyDefinitionListContentComponent | development | 75–84   | `Read file_path=./definition-list.md offset=75 limit=10`  |
-| 8   | SkyDefinitionListLabelComponent   | development | 85–94   | `Read file_path=./definition-list.md offset=85 limit=10`  |
-| 9   | SkyDefinitionListValueComponent   | development | 95–104  | `Read file_path=./definition-list.md offset=95 limit=10`  |
-| 10  | Code Examples                     | examples    | 105–158 | `Read file_path=./definition-list.md offset=105 limit=54` |
+| 3   | Installation                      | development | 25–35   | `Read file_path=./definition-list.md offset=25 limit=11`  |
+| 4   | SkyDefinitionListModule           | development | 36–43   | `Read file_path=./definition-list.md offset=36 limit=8`   |
+| 5   | SkyDefinitionListComponent        | development | 44–67   | `Read file_path=./definition-list.md offset=44 limit=24`  |
+| 6   | SkyDefinitionListHeadingComponent | development | 68–75   | `Read file_path=./definition-list.md offset=68 limit=8`   |
+| 7   | SkyDefinitionListContentComponent | development | 76–85   | `Read file_path=./definition-list.md offset=76 limit=10`  |
+| 8   | SkyDefinitionListLabelComponent   | development | 86–95   | `Read file_path=./definition-list.md offset=86 limit=10`  |
+| 9   | SkyDefinitionListValueComponent   | development | 96–105  | `Read file_path=./definition-list.md offset=96 limit=10`  |
+| 10  | Code Examples                     | examples    | 106–159 | `Read file_path=./definition-list.md offset=106 limit=54` |

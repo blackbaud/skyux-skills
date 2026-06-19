@@ -187,7 +187,8 @@ Grids perform poorly in small viewports. The columns in fixed-width grids shrink
 
 NPM package
 
-`@skyux/list-builder-view-grids`[View in NPM](https://www.npmjs.com/package/@skyux/list-builder-view-grids) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/list-builder-view-grids/src/lib/modules/list-view-grid/list-view-grid.module.ts#L28)
+`@skyux/list-builder-view-grids`[View in NPM](https://www.npmjs.com/package/@skyux/list-builder-view-grids) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/list-builder-view-grids/src/lib/modules/list-view-grid/list-view-grid.module.ts#L28)
 
 Install with NPM
 

@@ -151,7 +151,8 @@ If users enter months as text instead of numbers, the datepicker converts the te
 
 NPM package
 
-`@skyux/datetime`[View in NPM](https://www.npmjs.com/package/@skyux/datetime) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/datetime/src/lib/modules/datepicker/datepicker.module.ts#L36)
+`@skyux/datetime`[View in NPM](https://www.npmjs.com/package/@skyux/datetime) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/datetime/src/lib/modules/datepicker/datepicker.module.ts#L36)
 
 Install with NPM
 

@@ -131,7 +131,8 @@ Use proper spacing between boxes.
 
 NPM package
 
-`@skyux/layout`[View in NPM](https://www.npmjs.com/package/@skyux/layout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/layout/src/lib/modules/box/box.module.ts#L26)
+`@skyux/layout`[View in NPM](https://www.npmjs.com/package/@skyux/layout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/layout/src/lib/modules/box/box.module.ts#L26)
 
 Install with NPM
 

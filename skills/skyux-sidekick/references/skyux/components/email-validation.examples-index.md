@@ -12,5 +12,5 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                                    | Lines   | Read invocation                                            |
 | --- | ------------------------------------------ | ------- | ---------------------------------------------------------- |
-| 1   | Email validation using input directive     | 118–154 | `Read file_path=./email-validation.md offset=118 limit=37` |
-| 2   | Email validation on reactive form controls | 155–207 | `Read file_path=./email-validation.md offset=155 limit=53` |
+| 1   | Email validation using input directive     | 119–155 | `Read file_path=./email-validation.md offset=119 limit=37` |
+| 2   | Email validation on reactive form controls | 156–208 | `Read file_path=./email-validation.md offset=156 limit=53` |

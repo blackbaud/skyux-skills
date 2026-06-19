@@ -12,4 +12,4 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                | Lines   | Read invocation                                  |
 | --- | ---------------------- | ------- | ------------------------------------------------ |
-| 1   | Label with basic setup | 326–474 | `Read file_path=./label.md offset=326 limit=149` |
+| 1   | Label with basic setup | 327–475 | `Read file_path=./label.md offset=327 limit=149` |

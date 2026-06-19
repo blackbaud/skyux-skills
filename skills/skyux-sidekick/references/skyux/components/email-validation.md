@@ -63,7 +63,8 @@ Use a succinct error message, and explain that users need to use a valid email a
 
 NPM package
 
-`@skyux/validation`[View in NPM](https://www.npmjs.com/package/@skyux/validation) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/validation/src/lib/modules/email-validation/email-validation.module.ts#L11)
+`@skyux/validation`[View in NPM](https://www.npmjs.com/package/@skyux/validation) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/validation/src/lib/modules/email-validation/email-validation.module.ts#L11)
 
 Install with NPM
 

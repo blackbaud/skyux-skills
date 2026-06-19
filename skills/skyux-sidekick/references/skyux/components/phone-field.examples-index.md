@@ -12,4 +12,4 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                      | Lines   | Read invocation                                        |
 | --- | ---------------------------- | ------- | ------------------------------------------------------ |
-| 1   | Phone field with basic setup | 419–585 | `Read file_path=./phone-field.md offset=419 limit=167` |
+| 1   | Phone field with basic setup | 420–586 | `Read file_path=./phone-field.md offset=420 limit=167` |

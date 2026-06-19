@@ -204,7 +204,8 @@ To provide text equivalents for multi-select pickers that open the show-all dial
 
 NPM package
 
-`@skyux/lookup`[View in NPM](https://www.npmjs.com/package/@skyux/lookup) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/lookup/src/lib/modules/lookup/lookup.module.ts#L24)
+`@skyux/lookup`[View in NPM](https://www.npmjs.com/package/@skyux/lookup) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/lookup/src/lib/modules/lookup/lookup.module.ts#L24)
 
 Install with NPM
 

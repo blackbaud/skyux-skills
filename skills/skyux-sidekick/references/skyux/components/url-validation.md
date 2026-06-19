@@ -17,7 +17,8 @@ The URL validation module validates the format of URLs in input fields.
 
 NPM package
 
-`@skyux/validation`[View in NPM](https://www.npmjs.com/package/@skyux/validation) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/validation/src/lib/modules/url-validation/url-validation.module.ts#L11)
+`@skyux/validation`[View in NPM](https://www.npmjs.com/package/@skyux/validation) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/validation/src/lib/modules/url-validation/url-validation.module.ts#L11)
 
 Install with NPM
 

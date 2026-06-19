@@ -14,8 +14,8 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 
 | #   | Section            | Tab         | Lines  | Read invocation                                 |
 | --- | ------------------ | ----------- | ------ | ----------------------------------------------- |
-| 1   | Installation       | development | 10–19  | `Read file_path=./format.md offset=10 limit=10` |
-| 2   | SkyFormatModule    | development | 20–25  | `Read file_path=./format.md offset=20 limit=6`  |
-| 3   | SkyFormatComponent | development | 26–41  | `Read file_path=./format.md offset=26 limit=16` |
-| 4   | SkyAppFormat       | development | 42–59  | `Read file_path=./format.md offset=42 limit=18` |
-| 5   | Code Examples      | examples    | 60–110 | `Read file_path=./format.md offset=60 limit=51` |
+| 1   | Installation       | development | 10–20  | `Read file_path=./format.md offset=10 limit=11` |
+| 2   | SkyFormatModule    | development | 21–26  | `Read file_path=./format.md offset=21 limit=6`  |
+| 3   | SkyFormatComponent | development | 27–42  | `Read file_path=./format.md offset=27 limit=16` |
+| 4   | SkyAppFormat       | development | 43–60  | `Read file_path=./format.md offset=43 limit=18` |
+| 5   | Code Examples      | examples    | 61–111 | `Read file_path=./format.md offset=61 limit=51` |

@@ -19,11 +19,11 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 3   | Usage                 | design      | 1627–1662 | `Read file_path=./icon.md offset=1627 limit=36`  |
 | 4   | Behavior and states   | design      | 1663–1761 | `Read file_path=./icon.md offset=1663 limit=99`  |
 | 5   | Accessibility         | design      | 1762–1765 | `Read file_path=./icon.md offset=1762 limit=4`   |
-| 6   | Installation          | development | 1766–1775 | `Read file_path=./icon.md offset=1766 limit=10`  |
-| 7   | SkyIconModule         | development | 1776–1781 | `Read file_path=./icon.md offset=1776 limit=6`   |
-| 8   | SkyIconComponent      | development | 1782–1803 | `Read file_path=./icon.md offset=1782 limit=22`  |
-| 9   | SkyIconVariantType    | development | 1804–1809 | `Read file_path=./icon.md offset=1804 limit=6`   |
-| 10  | SkyIconSize           | development | 1810–1817 | `Read file_path=./icon.md offset=1810 limit=8`   |
-| 11  | SkyIconHarness        | testing     | 1818–1863 | `Read file_path=./icon.md offset=1818 limit=46`  |
-| 12  | SkyIconHarnessFilters | testing     | 1864–1881 | `Read file_path=./icon.md offset=1864 limit=18`  |
-| 13  | Code Examples         | examples    | 1882–2061 | `Read file_path=./icon.md offset=1882 limit=180` |
+| 6   | Installation          | development | 1766–1776 | `Read file_path=./icon.md offset=1766 limit=11`  |
+| 7   | SkyIconModule         | development | 1777–1782 | `Read file_path=./icon.md offset=1777 limit=6`   |
+| 8   | SkyIconComponent      | development | 1783–1804 | `Read file_path=./icon.md offset=1783 limit=22`  |
+| 9   | SkyIconVariantType    | development | 1805–1810 | `Read file_path=./icon.md offset=1805 limit=6`   |
+| 10  | SkyIconSize           | development | 1811–1818 | `Read file_path=./icon.md offset=1811 limit=8`   |
+| 11  | SkyIconHarness        | testing     | 1819–1864 | `Read file_path=./icon.md offset=1819 limit=46`  |
+| 12  | SkyIconHarnessFilters | testing     | 1865–1882 | `Read file_path=./icon.md offset=1865 limit=18`  |
+| 13  | Code Examples         | examples    | 1883–2062 | `Read file_path=./icon.md offset=1883 limit=180` |

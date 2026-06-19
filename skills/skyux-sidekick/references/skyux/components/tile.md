@@ -105,7 +105,8 @@ For tiles that are not populated, use [empty-state help](../design/guidelines/us
 
 NPM package
 
-`@skyux/tiles`[View in NPM](https://www.npmjs.com/package/@skyux/tiles) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/tiles/src/lib/modules/tiles/tiles.module.ts#L16)
+`@skyux/tiles`[View in NPM](https://www.npmjs.com/package/@skyux/tiles) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/tiles/src/lib/modules/tiles/tiles.module.ts#L16)
 
 Install with NPM
 

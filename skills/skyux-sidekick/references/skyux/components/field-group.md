@@ -142,7 +142,8 @@ Do use a field group with a checkbox group or radio button group and other field
 
 NPM package
 
-`@skyux/forms`[View in NPM](https://www.npmjs.com/package/@skyux/forms) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/forms/src/lib/modules/field-group/field-group.module.ts#L9)
+`@skyux/forms`[View in NPM](https://www.npmjs.com/package/@skyux/forms) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/forms/src/lib/modules/field-group/field-group.module.ts#L9)
 
 Install with NPM
 

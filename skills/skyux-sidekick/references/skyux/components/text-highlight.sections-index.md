@@ -14,9 +14,9 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 
 | #   | Section                        | Tab         | Lines  | Read invocation                                          |
 | --- | ------------------------------ | ----------- | ------ | -------------------------------------------------------- |
-| 1   | Installation                   | development | 10–19  | `Read file_path=./text-highlight.md offset=10 limit=10`  |
-| 2   | SkyTextHighlightModule         | development | 20–25  | `Read file_path=./text-highlight.md offset=20 limit=6`   |
-| 3   | SkyTextHighlightDirective      | development | 26–41  | `Read file_path=./text-highlight.md offset=26 limit=16`  |
-| 4   | SkyTextHighlightHarness        | testing     | 42–71  | `Read file_path=./text-highlight.md offset=42 limit=30`  |
-| 5   | SkyTextHighlightHarnessFilters | testing     | 72–87  | `Read file_path=./text-highlight.md offset=72 limit=16`  |
-| 6   | Code Examples                  | examples    | 88–195 | `Read file_path=./text-highlight.md offset=88 limit=108` |
+| 1   | Installation                   | development | 10–20  | `Read file_path=./text-highlight.md offset=10 limit=11`  |
+| 2   | SkyTextHighlightModule         | development | 21–26  | `Read file_path=./text-highlight.md offset=21 limit=6`   |
+| 3   | SkyTextHighlightDirective      | development | 27–42  | `Read file_path=./text-highlight.md offset=27 limit=16`  |
+| 4   | SkyTextHighlightHarness        | testing     | 43–72  | `Read file_path=./text-highlight.md offset=43 limit=30`  |
+| 5   | SkyTextHighlightHarnessFilters | testing     | 73–88  | `Read file_path=./text-highlight.md offset=73 limit=16`  |
+| 6   | Code Examples                  | examples    | 89–196 | `Read file_path=./text-highlight.md offset=89 limit=108` |

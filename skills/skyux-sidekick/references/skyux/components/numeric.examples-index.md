@@ -12,4 +12,4 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                       | Lines   | Read invocation                                    |
 | --- | ----------------------------- | ------- | -------------------------------------------------- |
-| 1   | Numeric pipe with basic setup | 132–248 | `Read file_path=./numeric.md offset=132 limit=117` |
+| 1   | Numeric pipe with basic setup | 133–249 | `Read file_path=./numeric.md offset=133 limit=117` |

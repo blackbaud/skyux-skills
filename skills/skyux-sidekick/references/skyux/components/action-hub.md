@@ -190,7 +190,8 @@ Action hubs reflow content in small viewports.
 
 NPM package
 
-`@skyux/pages`[View in NPM](https://www.npmjs.com/package/@skyux/pages) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/pages/src/lib/modules/action-hub/action-hub.module.ts#L45)
+`@skyux/pages`[View in NPM](https://www.npmjs.com/package/@skyux/pages) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/pages/src/lib/modules/action-hub/action-hub.module.ts#L45)
 
 Install with NPM
 

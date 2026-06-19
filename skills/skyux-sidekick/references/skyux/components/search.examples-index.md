@@ -12,4 +12,4 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                 | Lines   | Read invocation                                   |
 | --- | ----------------------- | ------- | ------------------------------------------------- |
-| 1   | Search with basic setup | 250–426 | `Read file_path=./search.md offset=250 limit=177` |
+| 1   | Search with basic setup | 251–427 | `Read file_path=./search.md offset=251 limit=177` |

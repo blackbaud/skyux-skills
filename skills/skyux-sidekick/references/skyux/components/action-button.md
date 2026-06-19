@@ -91,7 +91,8 @@ Use action buttons directly inside tabs instead of modals when users add user-de
 
 NPM package
 
-`@skyux/layout`[View in NPM](https://www.npmjs.com/package/@skyux/layout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/layout/src/lib/modules/action-button/action-button.module.ts#L37)
+`@skyux/layout`[View in NPM](https://www.npmjs.com/package/@skyux/layout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/layout/src/lib/modules/action-button/action-button.module.ts#L37)
 
 Install with NPM
 

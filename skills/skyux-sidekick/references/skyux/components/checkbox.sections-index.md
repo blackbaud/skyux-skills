@@ -21,17 +21,17 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 5   | Layout                         | design      | 205–218  | `Read file_path=./checkbox.md offset=205 limit=14`  |
 | 6   | Accessibility                  | design      | 219–224  | `Read file_path=./checkbox.md offset=219 limit=6`   |
 | 7   | Related information            | design      | 225–237  | `Read file_path=./checkbox.md offset=225 limit=13`  |
-| 8   | Installation                   | development | 238–247  | `Read file_path=./checkbox.md offset=238 limit=10`  |
-| 9   | Recommended patterns           | development | 248–267  | `Read file_path=./checkbox.md offset=248 limit=20`  |
-| 10  | SkyCheckboxModule              | development | 268–273  | `Read file_path=./checkbox.md offset=268 limit=6`   |
-| 11  | SkyCheckboxComponent           | development | 274–381  | `Read file_path=./checkbox.md offset=274 limit=108` |
-| 12  | SkyCheckboxGroupComponent      | development | 382–437  | `Read file_path=./checkbox.md offset=382 limit=56`  |
-| 13  | SkyCheckboxLabelComponent      | development | 438–447  | `Read file_path=./checkbox.md offset=438 limit=10`  |
-| 14  | SkyCheckboxChange              | development | 448–463  | `Read file_path=./checkbox.md offset=448 limit=16`  |
-| 15  | SkyCheckboxGroupHeadingLevel   | development | 464–469  | `Read file_path=./checkbox.md offset=464 limit=6`   |
-| 16  | SkyCheckboxGroupHeadingStyle   | development | 470–477  | `Read file_path=./checkbox.md offset=470 limit=8`   |
-| 17  | SkyCheckboxHarness             | testing     | 478–671  | `Read file_path=./checkbox.md offset=478 limit=194` |
-| 18  | SkyCheckboxHarnessFilters      | testing     | 672–687  | `Read file_path=./checkbox.md offset=672 limit=16`  |
-| 19  | SkyCheckboxGroupHarness        | testing     | 688–835  | `Read file_path=./checkbox.md offset=688 limit=148` |
-| 20  | SkyCheckboxGroupHarnessFilters | testing     | 836–851  | `Read file_path=./checkbox.md offset=836 limit=16`  |
-| 21  | Code Examples                  | examples    | 852–1327 | `Read file_path=./checkbox.md offset=852 limit=476` |
+| 8   | Installation                   | development | 238–248  | `Read file_path=./checkbox.md offset=238 limit=11`  |
+| 9   | Recommended patterns           | development | 249–268  | `Read file_path=./checkbox.md offset=249 limit=20`  |
+| 10  | SkyCheckboxModule              | development | 269–274  | `Read file_path=./checkbox.md offset=269 limit=6`   |
+| 11  | SkyCheckboxComponent           | development | 275–382  | `Read file_path=./checkbox.md offset=275 limit=108` |
+| 12  | SkyCheckboxGroupComponent      | development | 383–438  | `Read file_path=./checkbox.md offset=383 limit=56`  |
+| 13  | SkyCheckboxLabelComponent      | development | 439–448  | `Read file_path=./checkbox.md offset=439 limit=10`  |
+| 14  | SkyCheckboxChange              | development | 449–464  | `Read file_path=./checkbox.md offset=449 limit=16`  |
+| 15  | SkyCheckboxGroupHeadingLevel   | development | 465–470  | `Read file_path=./checkbox.md offset=465 limit=6`   |
+| 16  | SkyCheckboxGroupHeadingStyle   | development | 471–478  | `Read file_path=./checkbox.md offset=471 limit=8`   |
+| 17  | SkyCheckboxHarness             | testing     | 479–672  | `Read file_path=./checkbox.md offset=479 limit=194` |
+| 18  | SkyCheckboxHarnessFilters      | testing     | 673–688  | `Read file_path=./checkbox.md offset=673 limit=16`  |
+| 19  | SkyCheckboxGroupHarness        | testing     | 689–836  | `Read file_path=./checkbox.md offset=689 limit=148` |
+| 20  | SkyCheckboxGroupHarnessFilters | testing     | 837–852  | `Read file_path=./checkbox.md offset=837 limit=16`  |
+| 21  | Code Examples                  | examples    | 853–1328 | `Read file_path=./checkbox.md offset=853 limit=476` |

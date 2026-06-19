@@ -14,11 +14,11 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 
 | #   | Section                        | Tab         | Lines   | Read invocation                                        |
 | --- | ------------------------------ | ----------- | ------- | ------------------------------------------------------ |
-| 1   | Installation                   | development | 14–23   | `Read file_path=./media-query.md offset=14 limit=10`   |
-| 2   | SkyMediaQueryService           | development | 24–83   | `Read file_path=./media-query.md offset=24 limit=60`   |
-| 3   | SkyMediaBreakpoints            | development | 84–116  | `Read file_path=./media-query.md offset=84 limit=33`   |
-| 4   | SkyMediaQueryListener          | development | 117–126 | `Read file_path=./media-query.md offset=117 limit=10`  |
-| 5   | SkyBreakpoint                  | development | 127–136 | `Read file_path=./media-query.md offset=127 limit=10`  |
-| 6   | provideSkyMediaQueryTesting    | development | 137–144 | `Read file_path=./media-query.md offset=137 limit=8`   |
-| 7   | SkyMediaQueryTestingController | testing     | 145–164 | `Read file_path=./media-query.md offset=145 limit=20`  |
-| 8   | Code Examples                  | examples    | 165–417 | `Read file_path=./media-query.md offset=165 limit=253` |
+| 1   | Installation                   | development | 14–24   | `Read file_path=./media-query.md offset=14 limit=11`   |
+| 2   | SkyMediaQueryService           | development | 25–84   | `Read file_path=./media-query.md offset=25 limit=60`   |
+| 3   | SkyMediaBreakpoints            | development | 85–117  | `Read file_path=./media-query.md offset=85 limit=33`   |
+| 4   | SkyMediaQueryListener          | development | 118–127 | `Read file_path=./media-query.md offset=118 limit=10`  |
+| 5   | SkyBreakpoint                  | development | 128–137 | `Read file_path=./media-query.md offset=128 limit=10`  |
+| 6   | provideSkyMediaQueryTesting    | development | 138–145 | `Read file_path=./media-query.md offset=138 limit=8`   |
+| 7   | SkyMediaQueryTestingController | testing     | 146–165 | `Read file_path=./media-query.md offset=146 limit=20`  |
+| 8   | Code Examples                  | examples    | 166–418 | `Read file_path=./media-query.md offset=166 limit=253` |

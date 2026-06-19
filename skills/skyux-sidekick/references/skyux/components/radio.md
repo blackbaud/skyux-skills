@@ -211,7 +211,8 @@ In most cases, radio button group labels are not treated as semantic `h` element
 
 NPM package
 
-`@skyux/forms`[View in NPM](https://www.npmjs.com/package/@skyux/forms) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/forms/src/lib/modules/radio/radio.module.ts#L42)
+`@skyux/forms`[View in NPM](https://www.npmjs.com/package/@skyux/forms) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/forms/src/lib/modules/radio/radio.module.ts#L42)
 
 Install with NPM
 

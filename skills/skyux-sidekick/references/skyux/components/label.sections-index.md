@@ -18,11 +18,11 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 2   | Options                     | design      | 16–189  | `Read file_path=./label.md offset=16 limit=174`  |
 | 3   | Layout                      | design      | 190–195 | `Read file_path=./label.md offset=190 limit=6`   |
 | 4   | Related information         | design      | 196–201 | `Read file_path=./label.md offset=196 limit=6`   |
-| 5   | Installation                | development | 202–211 | `Read file_path=./label.md offset=202 limit=10`  |
-| 6   | SkyLabelModule              | development | 212–217 | `Read file_path=./label.md offset=212 limit=6`   |
-| 7   | SkyLabelComponent           | development | 218–239 | `Read file_path=./label.md offset=218 limit=22`  |
-| 8   | SkyLabelType                | development | 240–245 | `Read file_path=./label.md offset=240 limit=6`   |
-| 9   | SkyIndicatorDescriptionType | development | 246–253 | `Read file_path=./label.md offset=246 limit=8`   |
-| 10  | SkyLabelHarness             | testing     | 254–307 | `Read file_path=./label.md offset=254 limit=54`  |
-| 11  | SkyLabelHarnessFilters      | testing     | 308–323 | `Read file_path=./label.md offset=308 limit=16`  |
-| 12  | Code Examples               | examples    | 324–474 | `Read file_path=./label.md offset=324 limit=151` |
+| 5   | Installation                | development | 202–212 | `Read file_path=./label.md offset=202 limit=11`  |
+| 6   | SkyLabelModule              | development | 213–218 | `Read file_path=./label.md offset=213 limit=6`   |
+| 7   | SkyLabelComponent           | development | 219–240 | `Read file_path=./label.md offset=219 limit=22`  |
+| 8   | SkyLabelType                | development | 241–246 | `Read file_path=./label.md offset=241 limit=6`   |
+| 9   | SkyIndicatorDescriptionType | development | 247–254 | `Read file_path=./label.md offset=247 limit=8`   |
+| 10  | SkyLabelHarness             | testing     | 255–308 | `Read file_path=./label.md offset=255 limit=54`  |
+| 11  | SkyLabelHarnessFilters      | testing     | 309–324 | `Read file_path=./label.md offset=309 limit=16`  |
+| 12  | Code Examples               | examples    | 325–475 | `Read file_path=./label.md offset=325 limit=151` |

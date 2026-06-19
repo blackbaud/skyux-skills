@@ -103,7 +103,8 @@ Use labels that clearly indicate what happens when users select buttons. For exa
 
 NPM package
 
-`@skyux/modals`[View in NPM](https://www.npmjs.com/package/@skyux/modals) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/modals/src/lib/modules/confirm/confirm.service.ts#L17)
+`@skyux/modals`[View in NPM](https://www.npmjs.com/package/@skyux/modals) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/modals/src/lib/modules/confirm/confirm.service.ts#L17)
 
 Install with NPM
 

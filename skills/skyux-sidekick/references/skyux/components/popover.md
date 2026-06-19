@@ -127,7 +127,8 @@ Keep popover content brief and focused on the trigger's task. For dialogs that n
 
 NPM package
 
-`@skyux/popovers`[View in NPM](https://www.npmjs.com/package/@skyux/popovers) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/popovers/src/lib/modules/popover/popover.module.ts#L33)
+`@skyux/popovers`[View in NPM](https://www.npmjs.com/package/@skyux/popovers) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/popovers/src/lib/modules/popover/popover.module.ts#L33)
 
 Install with NPM
 

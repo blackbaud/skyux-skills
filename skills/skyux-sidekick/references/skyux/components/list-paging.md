@@ -26,7 +26,8 @@ Lists and their features are deprecated. We will remove them in a future major v
 
 NPM package
 
-`@skyux/list-builder`[View in NPM](https://www.npmjs.com/package/@skyux/list-builder) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/list-builder/src/lib/modules/list-paging/list-paging.module.ts#L15)
+`@skyux/list-builder`[View in NPM](https://www.npmjs.com/package/@skyux/list-builder) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/list-builder/src/lib/modules/list-paging/list-paging.module.ts#L15)
 
 Install with NPM
 

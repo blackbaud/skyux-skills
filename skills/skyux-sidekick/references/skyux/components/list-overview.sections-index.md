@@ -15,12 +15,12 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | #   | Section               | Tab         | Lines   | Read invocation                                         |
 | --- | --------------------- | ----------- | ------- | ------------------------------------------------------- |
 | 1   | Related information   | design      | 14–23   | `Read file_path=./list-overview.md offset=14 limit=10`  |
-| 2   | Installation          | development | 24–33   | `Read file_path=./list-overview.md offset=24 limit=10`  |
-| 3   | SkyListModule         | development | 34–41   | `Read file_path=./list-overview.md offset=34 limit=8`   |
-| 4   | SkyListComponent      | development | 42–95   | `Read file_path=./list-overview.md offset=42 limit=54`  |
-| 5   | ListDataRequestModel  | development | 96–127  | `Read file_path=./list-overview.md offset=96 limit=32`  |
-| 6   | ListDataResponseModel | development | 128–141 | `Read file_path=./list-overview.md offset=128 limit=14` |
-| 7   | ListSearchModel       | development | 142–167 | `Read file_path=./list-overview.md offset=142 limit=26` |
-| 8   | ListSelectedModel     | development | 168–179 | `Read file_path=./list-overview.md offset=168 limit=12` |
-| 9   | ListSortLabelModel    | development | 180–211 | `Read file_path=./list-overview.md offset=180 limit=32` |
-| 10  | ListSortModel         | development | 212–237 | `Read file_path=./list-overview.md offset=212 limit=26` |
+| 2   | Installation          | development | 24–34   | `Read file_path=./list-overview.md offset=24 limit=11`  |
+| 3   | SkyListModule         | development | 35–42   | `Read file_path=./list-overview.md offset=35 limit=8`   |
+| 4   | SkyListComponent      | development | 43–96   | `Read file_path=./list-overview.md offset=43 limit=54`  |
+| 5   | ListDataRequestModel  | development | 97–128  | `Read file_path=./list-overview.md offset=97 limit=32`  |
+| 6   | ListDataResponseModel | development | 129–142 | `Read file_path=./list-overview.md offset=129 limit=14` |
+| 7   | ListSearchModel       | development | 143–168 | `Read file_path=./list-overview.md offset=143 limit=26` |
+| 8   | ListSelectedModel     | development | 169–180 | `Read file_path=./list-overview.md offset=169 limit=12` |
+| 9   | ListSortLabelModel    | development | 181–212 | `Read file_path=./list-overview.md offset=181 limit=32` |
+| 10  | ListSortModel         | development | 213–238 | `Read file_path=./list-overview.md offset=213 limit=26` |

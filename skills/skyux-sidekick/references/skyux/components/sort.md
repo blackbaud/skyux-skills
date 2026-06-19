@@ -63,7 +63,8 @@ Menu option
 
 NPM package
 
-`@skyux/lists`[View in NPM](https://www.npmjs.com/package/@skyux/lists) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/lists/src/lib/modules/sort/sort.module.ts#L30)
+`@skyux/lists`[View in NPM](https://www.npmjs.com/package/@skyux/lists) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/lists/src/lib/modules/sort/sort.module.ts#L30)
 
 Install with NPM
 

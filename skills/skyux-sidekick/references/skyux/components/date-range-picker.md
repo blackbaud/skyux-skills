@@ -90,7 +90,8 @@ On smaller viewports, the date fields that appear when users select "Specific ra
 
 NPM package
 
-`@skyux/datetime`[View in NPM](https://www.npmjs.com/package/@skyux/datetime) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/datetime/src/lib/modules/date-range-picker/date-range-picker.module.ts#L10)
+`@skyux/datetime`[View in NPM](https://www.npmjs.com/package/@skyux/datetime) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/datetime/src/lib/modules/date-range-picker/date-range-picker.module.ts#L10)
 
 Install with NPM
 

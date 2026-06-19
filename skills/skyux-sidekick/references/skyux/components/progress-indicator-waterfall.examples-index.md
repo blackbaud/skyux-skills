@@ -12,4 +12,4 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                      | Lines   | Read invocation                                                         |
 | --- | ---------------------------- | ------- | ----------------------------------------------------------------------- |
-| 1   | Waterfall progress indicator | 640–912 | `Read file_path=./progress-indicator-waterfall.md offset=640 limit=273` |
+| 1   | Waterfall progress indicator | 641–913 | `Read file_path=./progress-indicator-waterfall.md offset=641 limit=273` |

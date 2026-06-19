@@ -19,17 +19,17 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 3   | Options                        | design      | 52–78   | `Read file_path=./confirm.md offset=52 limit=27`   |
 | 4   | Content                        | design      | 79–95   | `Read file_path=./confirm.md offset=79 limit=17`   |
 | 5   | Related information            | design      | 96–101  | `Read file_path=./confirm.md offset=96 limit=6`    |
-| 6   | Installation                   | development | 102–111 | `Read file_path=./confirm.md offset=102 limit=10`  |
-| 7   | SkyConfirmService              | development | 112–133 | `Read file_path=./confirm.md offset=112 limit=22`  |
-| 8   | SkyConfirmConfig               | development | 134–167 | `Read file_path=./confirm.md offset=134 limit=34`  |
-| 9   | SkyConfirmInstance             | development | 168–193 | `Read file_path=./confirm.md offset=168 limit=26`  |
-| 10  | SkyConfirmType                 | development | 194–226 | `Read file_path=./confirm.md offset=194 limit=33`  |
-| 11  | SkyConfirmButtonConfig         | development | 227–257 | `Read file_path=./confirm.md offset=227 limit=31`  |
-| 12  | SkyConfirmButtonStyleType      | development | 258–263 | `Read file_path=./confirm.md offset=258 limit=6`   |
-| 13  | SkyConfirmCloseEventArgs       | development | 264–279 | `Read file_path=./confirm.md offset=264 limit=16`  |
-| 14  | SkyConfirmHarness              | testing     | 280–369 | `Read file_path=./confirm.md offset=280 limit=90`  |
-| 15  | SkyConfirmButtonHarness        | testing     | 370–415 | `Read file_path=./confirm.md offset=370 limit=46`  |
-| 16  | SkyConfirmButtonHarnessFilters | testing     | 416–436 | `Read file_path=./confirm.md offset=416 limit=21`  |
-| 17  | SkyConfirmTestingModule        | testing     | 437–444 | `Read file_path=./confirm.md offset=437 limit=8`   |
-| 18  | SkyConfirmTestingController    | testing     | 445–500 | `Read file_path=./confirm.md offset=445 limit=56`  |
-| 19  | Code Examples                  | examples    | 501–821 | `Read file_path=./confirm.md offset=501 limit=321` |
+| 6   | Installation                   | development | 102–112 | `Read file_path=./confirm.md offset=102 limit=11`  |
+| 7   | SkyConfirmService              | development | 113–134 | `Read file_path=./confirm.md offset=113 limit=22`  |
+| 8   | SkyConfirmConfig               | development | 135–168 | `Read file_path=./confirm.md offset=135 limit=34`  |
+| 9   | SkyConfirmInstance             | development | 169–194 | `Read file_path=./confirm.md offset=169 limit=26`  |
+| 10  | SkyConfirmType                 | development | 195–227 | `Read file_path=./confirm.md offset=195 limit=33`  |
+| 11  | SkyConfirmButtonConfig         | development | 228–258 | `Read file_path=./confirm.md offset=228 limit=31`  |
+| 12  | SkyConfirmButtonStyleType      | development | 259–264 | `Read file_path=./confirm.md offset=259 limit=6`   |
+| 13  | SkyConfirmCloseEventArgs       | development | 265–280 | `Read file_path=./confirm.md offset=265 limit=16`  |
+| 14  | SkyConfirmHarness              | testing     | 281–370 | `Read file_path=./confirm.md offset=281 limit=90`  |
+| 15  | SkyConfirmButtonHarness        | testing     | 371–416 | `Read file_path=./confirm.md offset=371 limit=46`  |
+| 16  | SkyConfirmButtonHarnessFilters | testing     | 417–437 | `Read file_path=./confirm.md offset=417 limit=21`  |
+| 17  | SkyConfirmTestingModule        | testing     | 438–445 | `Read file_path=./confirm.md offset=438 limit=8`   |
+| 18  | SkyConfirmTestingController    | testing     | 446–501 | `Read file_path=./confirm.md offset=446 limit=56`  |
+| 19  | Code Examples                  | examples    | 502–822 | `Read file_path=./confirm.md offset=502 limit=321` |

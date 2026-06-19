@@ -265,7 +265,8 @@ Do use a single alert to consolidate multiple messages when possible and use alt
 
 NPM package
 
-`@skyux/indicators`[View in NPM](https://www.npmjs.com/package/@skyux/indicators) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/indicators/src/lib/modules/alert/alert.module.ts#L20)
+`@skyux/indicators`[View in NPM](https://www.npmjs.com/package/@skyux/indicators) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/indicators/src/lib/modules/alert/alert.module.ts#L20)
 
 Install with NPM
 

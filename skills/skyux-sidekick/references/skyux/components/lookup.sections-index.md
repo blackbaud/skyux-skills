@@ -20,33 +20,33 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 4   | Behavior and states                               | design      | 166–181   | `Read file_path=./lookup.md offset=166 limit=16`    |
 | 5   | Accessibility                                     | design      | 182–187   | `Read file_path=./lookup.md offset=182 limit=6`     |
 | 6   | Related information                               | design      | 188–202   | `Read file_path=./lookup.md offset=188 limit=15`    |
-| 7   | Installation                                      | development | 203–212   | `Read file_path=./lookup.md offset=203 limit=10`    |
-| 8   | Recommended pattern                               | development | 213–227   | `Read file_path=./lookup.md offset=213 limit=15`    |
-| 9   | SkyLookupModule                                   | development | 228–233   | `Read file_path=./lookup.md offset=228 limit=6`     |
-| 10  | SkyLookupComponent                                | development | 234–367   | `Read file_path=./lookup.md offset=234 limit=134`   |
-| 11  | SkyLookupAddCallbackArgs                          | development | 368–388   | `Read file_path=./lookup.md offset=368 limit=21`    |
-| 12  | SkyLookupAddClickEventArgs                        | development | 389–404   | `Read file_path=./lookup.md offset=389 limit=16`    |
-| 13  | SkyLookupSelectModeType                           | development | 405–410   | `Read file_path=./lookup.md offset=405 limit=6`     |
-| 14  | SkyLookupShowMoreConfig                           | development | 411–431   | `Read file_path=./lookup.md offset=411 limit=21`    |
-| 15  | SkyLookupShowMoreCustomPickerContext              | development | 432–451   | `Read file_path=./lookup.md offset=432 limit=20`    |
-| 16  | SkyLookupShowMoreCustomPicker                     | development | 452–465   | `Read file_path=./lookup.md offset=452 limit=14`    |
-| 17  | SkyLookupShowMoreNativePickerConfig               | development | 466–493   | `Read file_path=./lookup.md offset=466 limit=28`    |
-| 18  | SkyAutocompleteSearchArgs                         | development | 494–505   | `Read file_path=./lookup.md offset=494 limit=12`    |
-| 19  | SkyAutocompleteSearchAsyncArgs                    | development | 506–541   | `Read file_path=./lookup.md offset=506 limit=36`    |
-| 20  | AutocompleteSearchAsyncResultDisplayType          | development | 542–547   | `Read file_path=./lookup.md offset=542 limit=6`     |
-| 21  | SkyAutocompleteSearchAsyncResult                  | development | 548–578   | `Read file_path=./lookup.md offset=548 limit=31`    |
-| 22  | SkyAutocompleteSearchContext                      | development | 579–584   | `Read file_path=./lookup.md offset=579 limit=6`     |
-| 23  | SkyAutocompleteSearchFunctionFilter               | development | 585–590   | `Read file_path=./lookup.md offset=585 limit=6`     |
-| 24  | SkyAutocompleteSearchFunctionResponse             | development | 591–596   | `Read file_path=./lookup.md offset=591 limit=6`     |
-| 25  | SkyAutocompleteSearchFunction                     | development | 597–604   | `Read file_path=./lookup.md offset=597 limit=8`     |
-| 26  | SkyLookupHarness                                  | testing     | 605–844   | `Read file_path=./lookup.md offset=605 limit=240`   |
-| 27  | SkyLookupHarnessFilters                           | testing     | 845–860   | `Read file_path=./lookup.md offset=845 limit=16`    |
-| 28  | SkyLookupSearchResultHarness                      | testing     | 861–978   | `Read file_path=./lookup.md offset=861 limit=118`   |
-| 29  | SkyLookupSearchResultHarnessFilters               | testing     | 979–994   | `Read file_path=./lookup.md offset=979 limit=16`    |
-| 30  | SkyLookupSelectionHarness                         | testing     | 995–1064  | `Read file_path=./lookup.md offset=995 limit=70`    |
-| 31  | SkyLookupShowMorePickerHarness                    | testing     | 1065–1248 | `Read file_path=./lookup.md offset=1065 limit=184`  |
-| 32  | SkyLookupShowMorePickerHarnessFilters             | testing     | 1249–1256 | `Read file_path=./lookup.md offset=1249 limit=8`    |
-| 33  | SkyLookupShowMorePickerSearchResultHarness        | testing     | 1257–1490 | `Read file_path=./lookup.md offset=1257 limit=234`  |
-| 34  | SkyLookupShowMorePickerSearchResultHarnessFilters | testing     | 1491–1511 | `Read file_path=./lookup.md offset=1491 limit=21`   |
-| 35  | SkyAutocompleteInputHarness                       | testing     | 1512–1589 | `Read file_path=./lookup.md offset=1512 limit=78`   |
-| 36  | Code Examples                                     | examples    | 1590–3779 | `Read file_path=./lookup.md offset=1590 limit=2190` |
+| 7   | Installation                                      | development | 203–213   | `Read file_path=./lookup.md offset=203 limit=11`    |
+| 8   | Recommended pattern                               | development | 214–228   | `Read file_path=./lookup.md offset=214 limit=15`    |
+| 9   | SkyLookupModule                                   | development | 229–234   | `Read file_path=./lookup.md offset=229 limit=6`     |
+| 10  | SkyLookupComponent                                | development | 235–368   | `Read file_path=./lookup.md offset=235 limit=134`   |
+| 11  | SkyLookupAddCallbackArgs                          | development | 369–389   | `Read file_path=./lookup.md offset=369 limit=21`    |
+| 12  | SkyLookupAddClickEventArgs                        | development | 390–405   | `Read file_path=./lookup.md offset=390 limit=16`    |
+| 13  | SkyLookupSelectModeType                           | development | 406–411   | `Read file_path=./lookup.md offset=406 limit=6`     |
+| 14  | SkyLookupShowMoreConfig                           | development | 412–432   | `Read file_path=./lookup.md offset=412 limit=21`    |
+| 15  | SkyLookupShowMoreCustomPickerContext              | development | 433–452   | `Read file_path=./lookup.md offset=433 limit=20`    |
+| 16  | SkyLookupShowMoreCustomPicker                     | development | 453–466   | `Read file_path=./lookup.md offset=453 limit=14`    |
+| 17  | SkyLookupShowMoreNativePickerConfig               | development | 467–494   | `Read file_path=./lookup.md offset=467 limit=28`    |
+| 18  | SkyAutocompleteSearchArgs                         | development | 495–506   | `Read file_path=./lookup.md offset=495 limit=12`    |
+| 19  | SkyAutocompleteSearchAsyncArgs                    | development | 507–542   | `Read file_path=./lookup.md offset=507 limit=36`    |
+| 20  | AutocompleteSearchAsyncResultDisplayType          | development | 543–548   | `Read file_path=./lookup.md offset=543 limit=6`     |
+| 21  | SkyAutocompleteSearchAsyncResult                  | development | 549–579   | `Read file_path=./lookup.md offset=549 limit=31`    |
+| 22  | SkyAutocompleteSearchContext                      | development | 580–585   | `Read file_path=./lookup.md offset=580 limit=6`     |
+| 23  | SkyAutocompleteSearchFunctionFilter               | development | 586–591   | `Read file_path=./lookup.md offset=586 limit=6`     |
+| 24  | SkyAutocompleteSearchFunctionResponse             | development | 592–597   | `Read file_path=./lookup.md offset=592 limit=6`     |
+| 25  | SkyAutocompleteSearchFunction                     | development | 598–605   | `Read file_path=./lookup.md offset=598 limit=8`     |
+| 26  | SkyLookupHarness                                  | testing     | 606–845   | `Read file_path=./lookup.md offset=606 limit=240`   |
+| 27  | SkyLookupHarnessFilters                           | testing     | 846–861   | `Read file_path=./lookup.md offset=846 limit=16`    |
+| 28  | SkyLookupSearchResultHarness                      | testing     | 862–979   | `Read file_path=./lookup.md offset=862 limit=118`   |
+| 29  | SkyLookupSearchResultHarnessFilters               | testing     | 980–995   | `Read file_path=./lookup.md offset=980 limit=16`    |
+| 30  | SkyLookupSelectionHarness                         | testing     | 996–1065  | `Read file_path=./lookup.md offset=996 limit=70`    |
+| 31  | SkyLookupShowMorePickerHarness                    | testing     | 1066–1249 | `Read file_path=./lookup.md offset=1066 limit=184`  |
+| 32  | SkyLookupShowMorePickerHarnessFilters             | testing     | 1250–1257 | `Read file_path=./lookup.md offset=1250 limit=8`    |
+| 33  | SkyLookupShowMorePickerSearchResultHarness        | testing     | 1258–1491 | `Read file_path=./lookup.md offset=1258 limit=234`  |
+| 34  | SkyLookupShowMorePickerSearchResultHarnessFilters | testing     | 1492–1512 | `Read file_path=./lookup.md offset=1492 limit=21`   |
+| 35  | SkyAutocompleteInputHarness                       | testing     | 1513–1590 | `Read file_path=./lookup.md offset=1513 limit=78`   |
+| 36  | Code Examples                                     | examples    | 1591–3780 | `Read file_path=./lookup.md offset=1591 limit=2190` |

@@ -112,7 +112,8 @@ Do place list summary after toolbar and filter bar and before the list of items.
 
 NPM package
 
-`@skyux/lists`[View in NPM](https://www.npmjs.com/package/@skyux/lists) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/lists/src/lib/modules/list-summary/list-summary.module.ts#L10)
+`@skyux/lists`[View in NPM](https://www.npmjs.com/package/@skyux/lists) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/lists/src/lib/modules/list-summary/list-summary.module.ts#L10)
 
 Install with NPM
 

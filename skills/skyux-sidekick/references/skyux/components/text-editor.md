@@ -128,7 +128,8 @@ Don't use `stacked` when the text editor:
 
 NPM package
 
-`@skyux/text-editor`[View in NPM](https://www.npmjs.com/package/@skyux/text-editor) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/text-editor/src/lib/modules/text-editor/text-editor.module.ts#L10)
+`@skyux/text-editor`[View in NPM](https://www.npmjs.com/package/@skyux/text-editor) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/text-editor/src/lib/modules/text-editor/text-editor.module.ts#L10)
 
 Install with NPM
 

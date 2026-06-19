@@ -37,7 +37,8 @@ If a toast is the only place users can see a message, display the toast until us
 
 NPM package
 
-`@skyux/toast`[View in NPM](https://www.npmjs.com/package/@skyux/toast) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/toast/src/lib/modules/toast/toast.service.ts#L27)
+`@skyux/toast`[View in NPM](https://www.npmjs.com/package/@skyux/toast) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/toast/src/lib/modules/toast/toast.service.ts#L27)
 
 Install with NPM
 

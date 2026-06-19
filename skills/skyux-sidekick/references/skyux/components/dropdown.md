@@ -144,7 +144,8 @@ Avoid the deprecated `trigger="hover"` setting. The `hover` trigger poses access
 
 NPM package
 
-`@skyux/popovers`[View in NPM](https://www.npmjs.com/package/@skyux/popovers) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/popovers/src/lib/modules/dropdown/dropdown.module.ts#L44)
+`@skyux/popovers`[View in NPM](https://www.npmjs.com/package/@skyux/popovers) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/popovers/src/lib/modules/dropdown/dropdown.module.ts#L44)
 
 Install with NPM
 

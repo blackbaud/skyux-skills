@@ -84,7 +84,8 @@ Do use help inline buttons to invoke element-specific help content.
 
 NPM package
 
-`@skyux/help-inline`[View in NPM](https://www.npmjs.com/package/@skyux/help-inline) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/help-inline/src/lib/modules/help-inline/help-inline.module.ts#L9)
+`@skyux/help-inline`[View in NPM](https://www.npmjs.com/package/@skyux/help-inline) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/help-inline/src/lib/modules/help-inline/help-inline.module.ts#L9)
 
 Install with NPM
 

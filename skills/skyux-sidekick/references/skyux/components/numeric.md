@@ -11,7 +11,8 @@ The numeric pipe and numeric service format numbers with proper localization and
 
 NPM package
 
-`@skyux/core`[View in NPM](https://www.npmjs.com/package/@skyux/core) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/core/src/lib/modules/numeric/numeric.module.ts#L12)
+`@skyux/core`[View in NPM](https://www.npmjs.com/package/@skyux/core) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/core/src/lib/modules/numeric/numeric.module.ts#L12)
 
 Install with NPM
 

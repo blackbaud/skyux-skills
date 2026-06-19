@@ -15,10 +15,10 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | #   | Section                 | Tab         | Lines  | Read invocation                               |
 | --- | ----------------------- | ----------- | ------ | --------------------------------------------- |
 | 1   | Usage                   | design      | 14–19  | `Read file_path=./card.md offset=14 limit=6`  |
-| 2   | Installation            | development | 20–29  | `Read file_path=./card.md offset=20 limit=10` |
-| 3   | SkyCardModule           | development | 30–37  | `Read file_path=./card.md offset=30 limit=8`  |
-| 4   | SkyCardComponent        | development | 38–73  | `Read file_path=./card.md offset=38 limit=36` |
-| 5   | SkyCardTitleComponent   | development | 74–81  | `Read file_path=./card.md offset=74 limit=8`  |
-| 6   | SkyCardContentComponent | development | 82–89  | `Read file_path=./card.md offset=82 limit=8`  |
-| 7   | SkyCardActionsComponent | development | 90–97  | `Read file_path=./card.md offset=90 limit=8`  |
-| 8   | Code Examples           | examples    | 98–184 | `Read file_path=./card.md offset=98 limit=87` |
+| 2   | Installation            | development | 20–30  | `Read file_path=./card.md offset=20 limit=11` |
+| 3   | SkyCardModule           | development | 31–38  | `Read file_path=./card.md offset=31 limit=8`  |
+| 4   | SkyCardComponent        | development | 39–74  | `Read file_path=./card.md offset=39 limit=36` |
+| 5   | SkyCardTitleComponent   | development | 75–82  | `Read file_path=./card.md offset=75 limit=8`  |
+| 6   | SkyCardContentComponent | development | 83–90  | `Read file_path=./card.md offset=83 limit=8`  |
+| 7   | SkyCardActionsComponent | development | 91–98  | `Read file_path=./card.md offset=91 limit=8`  |
+| 8   | Code Examples           | examples    | 99–185 | `Read file_path=./card.md offset=99 limit=87` |

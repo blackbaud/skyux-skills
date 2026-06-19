@@ -128,7 +128,8 @@ When users attach a file, the file name displays as a link beside the replace fi
 
 NPM package
 
-`@skyux/forms`[View in NPM](https://www.npmjs.com/package/@skyux/forms) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/forms/src/lib/modules/file-attachment/file-attachment/file-attachment.module.ts#L16)
+`@skyux/forms`[View in NPM](https://www.npmjs.com/package/@skyux/forms) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/forms/src/lib/modules/file-attachment/file-attachment/file-attachment.module.ts#L16)
 
 Install with NPM
 

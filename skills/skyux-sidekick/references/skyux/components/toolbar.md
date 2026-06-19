@@ -296,7 +296,8 @@ Do include a border separator between the toolbars.
 
 NPM package
 
-`@skyux/layout`[View in NPM](https://www.npmjs.com/package/@skyux/layout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/layout/src/lib/modules/toolbar/toolbar.module.ts#L24)
+`@skyux/layout`[View in NPM](https://www.npmjs.com/package/@skyux/layout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/layout/src/lib/modules/toolbar/toolbar.module.ts#L24)
 
 Install with NPM
 

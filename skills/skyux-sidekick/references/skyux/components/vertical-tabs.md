@@ -129,7 +129,8 @@ You don't need to specify ARIA labels for individual tabs because the required `
 
 NPM package
 
-`@skyux/tabs`[View in NPM](https://www.npmjs.com/package/@skyux/tabs) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/tabs/src/lib/modules/vertical-tabset/vertical-tabset.module.ts#L48)
+`@skyux/tabs`[View in NPM](https://www.npmjs.com/package/@skyux/tabs) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/tabs/src/lib/modules/vertical-tabset/vertical-tabset.module.ts#L48)
 
 Install with NPM
 

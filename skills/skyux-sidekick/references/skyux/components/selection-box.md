@@ -122,7 +122,8 @@ Don't use custom layouts to arrange selection boxes.
 
 NPM package
 
-`@skyux/forms`[View in NPM](https://www.npmjs.com/package/@skyux/forms) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/forms/src/lib/modules/selection-box/selection-box.module.ts#L27)
+`@skyux/forms`[View in NPM](https://www.npmjs.com/package/@skyux/forms) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/forms/src/lib/modules/selection-box/selection-box.module.ts#L27)
 
 Install with NPM
 

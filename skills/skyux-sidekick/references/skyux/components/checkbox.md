@@ -239,7 +239,8 @@ In most cases, checkbox group labels aren't treated as HTML headings, but when n
 
 NPM package
 
-`@skyux/forms`[View in NPM](https://www.npmjs.com/package/@skyux/forms) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/forms/src/lib/modules/checkbox/checkbox.module.ts#L44)
+`@skyux/forms`[View in NPM](https://www.npmjs.com/package/@skyux/forms) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/forms/src/lib/modules/checkbox/checkbox.module.ts#L44)
 
 Install with NPM
 

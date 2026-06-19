@@ -12,4 +12,4 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                          | Lines   | Read invocation                                           |
 | --- | -------------------------------- | ------- | --------------------------------------------------------- |
-| 1   | Definition list with basic setup | 107–158 | `Read file_path=./definition-list.md offset=107 limit=52` |
+| 1   | Definition list with basic setup | 108–159 | `Read file_path=./definition-list.md offset=108 limit=52` |

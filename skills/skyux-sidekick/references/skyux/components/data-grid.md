@@ -190,7 +190,8 @@ To provide a text equivalent for screen readers [to support accessibility](../le
 
 NPM package
 
-`@skyux/ag-grid`[View in NPM](https://www.npmjs.com/package/@skyux/ag-grid) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/ag-grid/src/lib/modules/ag-grid/ag-grid.module.ts#L38)
+`@skyux/ag-grid`[View in NPM](https://www.npmjs.com/package/@skyux/ag-grid) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/ag-grid/src/lib/modules/ag-grid/ag-grid.module.ts#L38)
 
 Install with NPM
 

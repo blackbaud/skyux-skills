@@ -12,4 +12,4 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                 | Lines   | Read invocation                                   |
 | --- | ----------------------- | ------- | ------------------------------------------------- |
-| 1   | Navbar with basic setup | 238–343 | `Read file_path=./navbar.md offset=238 limit=106` |
+| 1   | Navbar with basic setup | 239–344 | `Read file_path=./navbar.md offset=239 limit=106` |

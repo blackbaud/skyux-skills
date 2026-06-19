@@ -246,7 +246,8 @@ Page layouts reflow content at the `xs` breakpoint of 767px.
 
 NPM package
 
-`@skyux/pages`[View in NPM](https://www.npmjs.com/package/@skyux/pages) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/pages/src/lib/modules/page/page.module.ts#L36)
+`@skyux/pages`[View in NPM](https://www.npmjs.com/package/@skyux/pages) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/pages/src/lib/modules/page/page.module.ts#L36)
 
 Install with NPM
 

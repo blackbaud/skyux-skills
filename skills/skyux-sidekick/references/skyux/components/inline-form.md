@@ -78,7 +78,8 @@ Use Done if the inline form does not save data to the database immediately becau
 
 NPM package
 
-`@skyux/inline-form`[View in NPM](https://www.npmjs.com/package/@skyux/inline-form) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/inline-form/src/lib/modules/inline-form/inline-form.module.ts#L13)
+`@skyux/inline-form`[View in NPM](https://www.npmjs.com/package/@skyux/inline-form) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/inline-form/src/lib/modules/inline-form/inline-form.module.ts#L13)
 
 Install with NPM
 

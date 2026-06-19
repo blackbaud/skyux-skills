@@ -79,7 +79,8 @@ The character count indicator always appears in the top right above the input fi
 
 NPM package
 
-`@skyux/forms`[View in NPM](https://www.npmjs.com/package/@skyux/forms) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/forms/src/lib/modules/character-counter/character-counter.module.ts#L28)
+`@skyux/forms`[View in NPM](https://www.npmjs.com/package/@skyux/forms) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/forms/src/lib/modules/character-counter/character-counter.module.ts#L28)
 
 Install with NPM
 

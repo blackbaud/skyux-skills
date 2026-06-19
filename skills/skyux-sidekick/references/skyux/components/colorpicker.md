@@ -134,7 +134,8 @@ Don't use `stacked` when the colorpicker:
 
 NPM package
 
-`@skyux/colorpicker`[View in NPM](https://www.npmjs.com/package/@skyux/colorpicker) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/colorpicker/src/lib/modules/colorpicker/colorpicker.module.ts#L20)
+`@skyux/colorpicker`[View in NPM](https://www.npmjs.com/package/@skyux/colorpicker) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/colorpicker/src/lib/modules/colorpicker/colorpicker.module.ts#L20)
 
 Install with NPM
 

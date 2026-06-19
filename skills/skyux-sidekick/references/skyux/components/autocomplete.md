@@ -31,7 +31,8 @@ For unbounded result sets, use [lookup](./lookup.md) instead. Lookup builds on a
 
 NPM package
 
-`@skyux/lookup`[View in NPM](https://www.npmjs.com/package/@skyux/lookup) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/lookup/src/lib/modules/autocomplete/autocomplete.module.ts#L35)
+`@skyux/lookup`[View in NPM](https://www.npmjs.com/package/@skyux/lookup) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/lookup/src/lib/modules/autocomplete/autocomplete.module.ts#L35)
 
 Install with NPM
 

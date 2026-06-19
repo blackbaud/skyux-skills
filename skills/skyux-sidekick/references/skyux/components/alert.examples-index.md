@@ -12,4 +12,4 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                | Lines   | Read invocation                                 |
 | --- | ---------------------- | ------- | ----------------------------------------------- |
-| 1   | Alert with basic setup | 430–523 | `Read file_path=./alert.md offset=430 limit=94` |
+| 1   | Alert with basic setup | 431–524 | `Read file_path=./alert.md offset=431 limit=94` |

@@ -15,10 +15,10 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | #   | Section                          | Tab         | Lines   | Read invocation                                        |
 | --- | -------------------------------- | ----------- | ------- | ------------------------------------------------------ |
 | 1   | Related information              | design      | 14–24   | `Read file_path=./list-filters.md offset=14 limit=11`  |
-| 2   | Installation                     | development | 25–34   | `Read file_path=./list-filters.md offset=25 limit=10`  |
-| 3   | SkyListFiltersModule             | development | 35–42   | `Read file_path=./list-filters.md offset=35 limit=8`   |
-| 4   | SkyListFilterInlineComponent     | development | 43–50   | `Read file_path=./list-filters.md offset=43 limit=8`   |
-| 5   | SkyListFilterInlineItemComponent | development | 51–84   | `Read file_path=./list-filters.md offset=51 limit=34`  |
-| 6   | SkyListFilterSummaryComponent    | development | 85–98   | `Read file_path=./list-filters.md offset=85 limit=14`  |
-| 7   | SkyListFilterButtonComponent     | development | 99–106  | `Read file_path=./list-filters.md offset=99 limit=8`   |
-| 8   | ListFilterModel                  | development | 107–138 | `Read file_path=./list-filters.md offset=107 limit=32` |
+| 2   | Installation                     | development | 25–35   | `Read file_path=./list-filters.md offset=25 limit=11`  |
+| 3   | SkyListFiltersModule             | development | 36–43   | `Read file_path=./list-filters.md offset=36 limit=8`   |
+| 4   | SkyListFilterInlineComponent     | development | 44–51   | `Read file_path=./list-filters.md offset=44 limit=8`   |
+| 5   | SkyListFilterInlineItemComponent | development | 52–85   | `Read file_path=./list-filters.md offset=52 limit=34`  |
+| 6   | SkyListFilterSummaryComponent    | development | 86–99   | `Read file_path=./list-filters.md offset=86 limit=14`  |
+| 7   | SkyListFilterButtonComponent     | development | 100–107 | `Read file_path=./list-filters.md offset=100 limit=8`  |
+| 8   | ListFilterModel                  | development | 108–139 | `Read file_path=./list-filters.md offset=108 limit=32` |

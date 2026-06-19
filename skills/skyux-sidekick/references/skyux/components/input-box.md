@@ -152,7 +152,8 @@ Input boxes are most common inside [modals](./modal.md) and follow [form design 
 
 NPM package
 
-`@skyux/forms`[View in NPM](https://www.npmjs.com/package/@skyux/forms) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/forms/src/lib/modules/input-box/input-box.module.ts#L35)
+`@skyux/forms`[View in NPM](https://www.npmjs.com/package/@skyux/forms) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/forms/src/lib/modules/input-box/input-box.module.ts#L35)
 
 Install with NPM
 

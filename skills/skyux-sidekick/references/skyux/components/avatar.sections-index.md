@@ -14,11 +14,11 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 
 | #   | Section                 | Tab         | Lines   | Read invocation                                   |
 | --- | ----------------------- | ----------- | ------- | ------------------------------------------------- |
-| 1   | Installation            | development | 10–19   | `Read file_path=./avatar.md offset=10 limit=10`   |
-| 2   | SkyAvatarModule         | development | 20–25   | `Read file_path=./avatar.md offset=20 limit=6`    |
-| 3   | SkyAvatarComponent      | development | 26–65   | `Read file_path=./avatar.md offset=26 limit=40`   |
-| 4   | SkyAvatarSize           | development | 66–71   | `Read file_path=./avatar.md offset=66 limit=6`    |
-| 5   | SkyAvatarSrc            | development | 72–79   | `Read file_path=./avatar.md offset=72 limit=8`    |
-| 6   | SkyAvatarHarness        | testing     | 80–163  | `Read file_path=./avatar.md offset=80 limit=84`   |
-| 7   | SkyAvatarHarnessFilters | testing     | 164–179 | `Read file_path=./avatar.md offset=164 limit=16`  |
-| 8   | Code Examples           | examples    | 180–342 | `Read file_path=./avatar.md offset=180 limit=163` |
+| 1   | Installation            | development | 10–20   | `Read file_path=./avatar.md offset=10 limit=11`   |
+| 2   | SkyAvatarModule         | development | 21–26   | `Read file_path=./avatar.md offset=21 limit=6`    |
+| 3   | SkyAvatarComponent      | development | 27–66   | `Read file_path=./avatar.md offset=27 limit=40`   |
+| 4   | SkyAvatarSize           | development | 67–72   | `Read file_path=./avatar.md offset=67 limit=6`    |
+| 5   | SkyAvatarSrc            | development | 73–80   | `Read file_path=./avatar.md offset=73 limit=8`    |
+| 6   | SkyAvatarHarness        | testing     | 81–164  | `Read file_path=./avatar.md offset=81 limit=84`   |
+| 7   | SkyAvatarHarnessFilters | testing     | 165–180 | `Read file_path=./avatar.md offset=165 limit=16`  |
+| 8   | Code Examples           | examples    | 181–343 | `Read file_path=./avatar.md offset=181 limit=163` |

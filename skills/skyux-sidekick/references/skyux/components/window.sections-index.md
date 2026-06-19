@@ -14,5 +14,5 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 
 | #   | Section         | Tab         | Lines | Read invocation                                 |
 | --- | --------------- | ----------- | ----- | ----------------------------------------------- |
-| 1   | Installation    | development | 10–19 | `Read file_path=./window.md offset=10 limit=10` |
-| 2   | SkyAppWindowRef | development | 20–31 | `Read file_path=./window.md offset=20 limit=12` |
+| 1   | Installation    | development | 10–20 | `Read file_path=./window.md offset=10 limit=11` |
+| 2   | SkyAppWindowRef | development | 21–32 | `Read file_path=./window.md offset=21 limit=12` |

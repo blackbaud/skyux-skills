@@ -11,7 +11,8 @@ The date pipe formats date values according to locale rules. The fuzzy date pipe
 
 NPM package
 
-`@skyux/datetime`[View in NPM](https://www.npmjs.com/package/@skyux/datetime) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/datetime/src/lib/modules/date-pipe/date-pipe.module.ts#L13)
+`@skyux/datetime`[View in NPM](https://www.npmjs.com/package/@skyux/datetime) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/datetime/src/lib/modules/date-pipe/date-pipe.module.ts#L13)
 
 Install with NPM
 

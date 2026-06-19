@@ -27,7 +27,8 @@ Use select fields when users don't know the exact values to select in long lists
 
 NPM package
 
-`@skyux/select-field`[View in NPM](https://www.npmjs.com/package/@skyux/select-field) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/select-field/src/lib/modules/select-field/select-field.module.ts#L12)
+`@skyux/select-field`[View in NPM](https://www.npmjs.com/package/@skyux/select-field) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/select-field/src/lib/modules/select-field/select-field.module.ts#L12)
 
 Install with NPM
 

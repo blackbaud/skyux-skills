@@ -12,4 +12,4 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                            | Lines | Read invocation                                            |
 | --- | ---------------------------------- | ----- | ---------------------------------------------------------- |
-| 1   | Rich text display with basic setup | 60–86 | `Read file_path=./rich-text-display.md offset=60 limit=27` |
+| 1   | Rich text display with basic setup | 61–87 | `Read file_path=./rich-text-display.md offset=61 limit=27` |

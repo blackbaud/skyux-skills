@@ -12,8 +12,8 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                             | Lines     | Read invocation                                          |
 | --- | ----------------------------------- | --------- | -------------------------------------------------------- |
-| 1   | Autocomplete with basic setup       | 707–818   | `Read file_path=./autocomplete.md offset=707 limit=112`  |
-| 2   | Advanced example                    | 819–937   | `Read file_path=./autocomplete.md offset=819 limit=119`  |
-| 3   | Autocomplete with custom search     | 938–1044  | `Read file_path=./autocomplete.md offset=938 limit=107`  |
-| 4   | Autocomplete with search filters    | 1045–1111 | `Read file_path=./autocomplete.md offset=1045 limit=67`  |
-| 5   | Autocomplete with any value allowed | 1112–1332 | `Read file_path=./autocomplete.md offset=1112 limit=221` |
+| 1   | Autocomplete with basic setup       | 708–819   | `Read file_path=./autocomplete.md offset=708 limit=112`  |
+| 2   | Advanced example                    | 820–938   | `Read file_path=./autocomplete.md offset=820 limit=119`  |
+| 3   | Autocomplete with custom search     | 939–1045  | `Read file_path=./autocomplete.md offset=939 limit=107`  |
+| 4   | Autocomplete with search filters    | 1046–1112 | `Read file_path=./autocomplete.md offset=1046 limit=67`  |
+| 5   | Autocomplete with any value allowed | 1113–1333 | `Read file_path=./autocomplete.md offset=1113 limit=221` |

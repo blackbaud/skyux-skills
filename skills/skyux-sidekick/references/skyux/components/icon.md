@@ -1767,7 +1767,8 @@ Icons must meet [WCAG contrast standards](https://www.w3.org/WAI/WCAG21/Techniqu
 
 NPM package
 
-`@skyux/icon`[View in NPM](https://www.npmjs.com/package/@skyux/icon) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/icon/src/lib/modules/icon/icon.module.ts#L12)
+`@skyux/icon`[View in NPM](https://www.npmjs.com/package/@skyux/icon) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/icon/src/lib/modules/icon/icon.module.ts#L12)
 
 Install with NPM
 

@@ -11,7 +11,8 @@ The search input lets users enter search criteria.
 
 NPM package
 
-`@skyux/lookup`[View in NPM](https://www.npmjs.com/package/@skyux/lookup) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/lookup/src/lib/modules/search/search.module.ts#L27)
+`@skyux/lookup`[View in NPM](https://www.npmjs.com/package/@skyux/lookup) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/lookup/src/lib/modules/search/search.module.ts#L27)
 
 Install with NPM
 

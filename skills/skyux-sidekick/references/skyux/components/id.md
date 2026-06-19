@@ -23,7 +23,8 @@ Don't assign hard-coded IDs to elements because this causes collisions if IDs ar
 
 NPM package
 
-`@skyux/core`[View in NPM](https://www.npmjs.com/package/@skyux/core) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/core/src/lib/modules/id/id.module.ts#L9)
+`@skyux/core`[View in NPM](https://www.npmjs.com/package/@skyux/core) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/core/src/lib/modules/id/id.module.ts#L9)
 
 Install with NPM
 

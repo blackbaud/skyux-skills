@@ -11,7 +11,8 @@ The text expand repeater component truncates a list and displays a limited numbe
 
 NPM package
 
-`@skyux/layout`[View in NPM](https://www.npmjs.com/package/@skyux/layout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/layout/src/lib/modules/text-expand-repeater/text-expand-repeater.module.ts#L18)
+`@skyux/layout`[View in NPM](https://www.npmjs.com/package/@skyux/layout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/layout/src/lib/modules/text-expand-repeater/text-expand-repeater.module.ts#L18)
 
 Install with NPM
 

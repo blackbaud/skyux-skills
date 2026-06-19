@@ -19,11 +19,11 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 3   | Options                     | design      | 62–85   | `Read file_path=./field-group.md offset=62 limit=24`   |
 | 4   | Content                     | design      | 86–125  | `Read file_path=./field-group.md offset=86 limit=40`   |
 | 5   | Related information         | design      | 126–140 | `Read file_path=./field-group.md offset=126 limit=15`  |
-| 6   | Installation                | development | 141–150 | `Read file_path=./field-group.md offset=141 limit=10`  |
-| 7   | SkyFieldGroupModule         | development | 151–156 | `Read file_path=./field-group.md offset=151 limit=6`   |
-| 8   | SkyFieldGroupComponent      | development | 157–210 | `Read file_path=./field-group.md offset=157 limit=54`  |
-| 9   | SkyFieldGroupHeadingLevel   | development | 211–216 | `Read file_path=./field-group.md offset=211 limit=6`   |
-| 10  | SkyFieldGroupHeadingStyle   | development | 217–224 | `Read file_path=./field-group.md offset=217 limit=8`   |
-| 11  | SkyFieldGroupHarness        | testing     | 225–318 | `Read file_path=./field-group.md offset=225 limit=94`  |
-| 12  | SkyFieldGroupHarnessFilters | testing     | 319–334 | `Read file_path=./field-group.md offset=319 limit=16`  |
-| 13  | Code Examples               | examples    | 335–647 | `Read file_path=./field-group.md offset=335 limit=313` |
+| 6   | Installation                | development | 141–151 | `Read file_path=./field-group.md offset=141 limit=11`  |
+| 7   | SkyFieldGroupModule         | development | 152–157 | `Read file_path=./field-group.md offset=152 limit=6`   |
+| 8   | SkyFieldGroupComponent      | development | 158–211 | `Read file_path=./field-group.md offset=158 limit=54`  |
+| 9   | SkyFieldGroupHeadingLevel   | development | 212–217 | `Read file_path=./field-group.md offset=212 limit=6`   |
+| 10  | SkyFieldGroupHeadingStyle   | development | 218–225 | `Read file_path=./field-group.md offset=218 limit=8`   |
+| 11  | SkyFieldGroupHarness        | testing     | 226–319 | `Read file_path=./field-group.md offset=226 limit=94`  |
+| 12  | SkyFieldGroupHarnessFilters | testing     | 320–335 | `Read file_path=./field-group.md offset=320 limit=16`  |
+| 13  | Code Examples               | examples    | 336–648 | `Read file_path=./field-group.md offset=336 limit=313` |

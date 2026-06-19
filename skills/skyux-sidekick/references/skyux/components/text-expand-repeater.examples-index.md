@@ -12,4 +12,4 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                               | Lines   | Read invocation                                                |
 | --- | ------------------------------------- | ------- | -------------------------------------------------------------- |
-| 1   | Text expand repeater with basic setup | 214–297 | `Read file_path=./text-expand-repeater.md offset=214 limit=84` |
+| 1   | Text expand repeater with basic setup | 215–298 | `Read file_path=./text-expand-repeater.md offset=215 limit=84` |

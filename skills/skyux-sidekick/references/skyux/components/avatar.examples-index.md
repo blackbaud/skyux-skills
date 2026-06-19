@@ -12,4 +12,4 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example       | Lines   | Read invocation                                   |
 | --- | ------------- | ------- | ------------------------------------------------- |
-| 1   | Basic example | 182–342 | `Read file_path=./avatar.md offset=182 limit=161` |
+| 1   | Basic example | 183–343 | `Read file_path=./avatar.md offset=183 limit=161` |

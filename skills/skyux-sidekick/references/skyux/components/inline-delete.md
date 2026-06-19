@@ -68,7 +68,8 @@ The inline delete confirmation uses the `sky-btn-danger` (red) style for the Del
 
 NPM package
 
-`@skyux/layout`[View in NPM](https://www.npmjs.com/package/@skyux/layout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/layout/src/lib/modules/inline-delete/inline-delete.module.ts#L18)
+`@skyux/layout`[View in NPM](https://www.npmjs.com/package/@skyux/layout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/layout/src/lib/modules/inline-delete/inline-delete.module.ts#L18)
 
 Install with NPM
 

@@ -11,7 +11,8 @@ Repeaters display information in containers for a list of objects. Repeater list
 
 NPM package
 
-`@skyux/lists`[View in NPM](https://www.npmjs.com/package/@skyux/lists) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/lists/src/lib/modules/repeater/repeater.module.ts#L45)
+`@skyux/lists`[View in NPM](https://www.npmjs.com/package/@skyux/lists) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/lists/src/lib/modules/repeater/repeater.module.ts#L45)
 
 Install with NPM
 

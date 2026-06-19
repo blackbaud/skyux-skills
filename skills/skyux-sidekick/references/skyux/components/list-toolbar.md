@@ -54,7 +54,8 @@ Don't use both sorting options on the same list because it can confuse users abo
 
 NPM package
 
-`@skyux/list-builder`[View in NPM](https://www.npmjs.com/package/@skyux/list-builder) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/list-builder/src/lib/modules/list-toolbar/list-secondary-actions/list-secondary-actions.module.ts#L29)
+`@skyux/list-builder`[View in NPM](https://www.npmjs.com/package/@skyux/list-builder) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/list-builder/src/lib/modules/list-toolbar/list-secondary-actions/list-secondary-actions.module.ts#L29)
 
 Install with NPM
 

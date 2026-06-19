@@ -102,7 +102,8 @@ The button beside items expands and collapses the node.
 
 NPM package
 
-`@skyux/angular-tree-component`[View in NPM](https://www.npmjs.com/package/@skyux/angular-tree-component) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/angular-tree-component/src/lib/modules/angular-tree/angular-tree.module.ts#L22)
+`@skyux/angular-tree-component`[View in NPM](https://www.npmjs.com/package/@skyux/angular-tree-component) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/angular-tree-component/src/lib/modules/angular-tree/angular-tree.module.ts#L22)
 
 Install with NPM
 

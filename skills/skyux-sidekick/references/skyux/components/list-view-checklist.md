@@ -25,7 +25,8 @@ List view checklist and its features are deprecated. We will remove it in a futu
 
 NPM package
 
-`@skyux/list-builder-view-checklist`[View in NPM](https://www.npmjs.com/package/@skyux/list-builder-view-checklist) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/list-builder-view-checklist/src/lib/modules/list-view-checklist/list-view-checklist.module.ts#L20)
+`@skyux/list-builder-view-checklist`[View in NPM](https://www.npmjs.com/package/@skyux/list-builder-view-checklist) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/list-builder-view-checklist/src/lib/modules/list-view-checklist/list-view-checklist.module.ts#L20)
 
 Install with NPM
 

@@ -11,7 +11,8 @@ The autonumeric directive automatically formats currency and other numbers that 
 
 NPM package
 
-`@skyux/autonumeric`[View in NPM](https://www.npmjs.com/package/@skyux/autonumeric) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/autonumeric/src/lib/modules/autonumeric/autonumeric.module.ts#L9)
+`@skyux/autonumeric`[View in NPM](https://www.npmjs.com/package/@skyux/autonumeric) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/autonumeric/src/lib/modules/autonumeric/autonumeric.module.ts#L9)
 
 Install with NPM
 

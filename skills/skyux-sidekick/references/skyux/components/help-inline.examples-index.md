@@ -12,6 +12,6 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                              | Lines   | Read invocation                                       |
 | --- | ------------------------------------ | ------- | ----------------------------------------------------- |
-| 1   | Help inline button with popover      | 381–462 | `Read file_path=./help-inline.md offset=381 limit=82` |
-| 2   | Help inline with help key            | 463–541 | `Read file_path=./help-inline.md offset=463 limit=79` |
-| 3   | Help inline button with action click | 542–619 | `Read file_path=./help-inline.md offset=542 limit=78` |
+| 1   | Help inline button with popover      | 382–463 | `Read file_path=./help-inline.md offset=382 limit=82` |
+| 2   | Help inline with help key            | 464–542 | `Read file_path=./help-inline.md offset=464 limit=79` |
+| 3   | Help inline button with action click | 543–620 | `Read file_path=./help-inline.md offset=543 limit=78` |

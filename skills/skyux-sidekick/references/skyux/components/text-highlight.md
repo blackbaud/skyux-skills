@@ -11,7 +11,8 @@ The text highlight directive highlights text all matching text within DOM elemen
 
 NPM package
 
-`@skyux/indicators`[View in NPM](https://www.npmjs.com/package/@skyux/indicators) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/indicators/src/lib/modules/text-highlight/text-highlight.module.ts#L11)
+`@skyux/indicators`[View in NPM](https://www.npmjs.com/package/@skyux/indicators) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/indicators/src/lib/modules/text-highlight/text-highlight.module.ts#L11)
 
 Install with NPM
 

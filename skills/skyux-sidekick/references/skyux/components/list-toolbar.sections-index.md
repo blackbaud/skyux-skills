@@ -17,12 +17,12 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 1   | Usage                                | design      | 14–23   | `Read file_path=./list-toolbar.md offset=14 limit=10`  |
 | 2   | Options                              | design      | 24–40   | `Read file_path=./list-toolbar.md offset=24 limit=17`  |
 | 3   | Related information                  | design      | 41–52   | `Read file_path=./list-toolbar.md offset=41 limit=12`  |
-| 4   | Installation                         | development | 53–62   | `Read file_path=./list-toolbar.md offset=53 limit=10`  |
-| 5   | SkyListSecondaryActionsModule        | development | 63–70   | `Read file_path=./list-toolbar.md offset=63 limit=8`   |
-| 6   | SkyListToolbarComponent              | development | 71–108  | `Read file_path=./list-toolbar.md offset=71 limit=38`  |
-| 7   | SkyListSecondaryActionsComponent     | development | 109–116 | `Read file_path=./list-toolbar.md offset=109 limit=8`  |
-| 8   | SkyListSecondaryActionComponent      | development | 117–124 | `Read file_path=./list-toolbar.md offset=117 limit=8`  |
-| 9   | SkyListToolbarItemComponent          | development | 125–150 | `Read file_path=./list-toolbar.md offset=125 limit=26` |
-| 10  | SkyListToolbarSearchActionsComponent | development | 151–158 | `Read file_path=./list-toolbar.md offset=151 limit=8`  |
-| 11  | SkyListToolbarSortComponent          | development | 159–192 | `Read file_path=./list-toolbar.md offset=159 limit=34` |
-| 12  | SkyListToolbarViewActionsComponent   | development | 193–200 | `Read file_path=./list-toolbar.md offset=193 limit=8`  |
+| 4   | Installation                         | development | 53–63   | `Read file_path=./list-toolbar.md offset=53 limit=11`  |
+| 5   | SkyListSecondaryActionsModule        | development | 64–71   | `Read file_path=./list-toolbar.md offset=64 limit=8`   |
+| 6   | SkyListToolbarComponent              | development | 72–109  | `Read file_path=./list-toolbar.md offset=72 limit=38`  |
+| 7   | SkyListSecondaryActionsComponent     | development | 110–117 | `Read file_path=./list-toolbar.md offset=110 limit=8`  |
+| 8   | SkyListSecondaryActionComponent      | development | 118–125 | `Read file_path=./list-toolbar.md offset=118 limit=8`  |
+| 9   | SkyListToolbarItemComponent          | development | 126–151 | `Read file_path=./list-toolbar.md offset=126 limit=26` |
+| 10  | SkyListToolbarSearchActionsComponent | development | 152–159 | `Read file_path=./list-toolbar.md offset=152 limit=8`  |
+| 11  | SkyListToolbarSortComponent          | development | 160–193 | `Read file_path=./list-toolbar.md offset=160 limit=34` |
+| 12  | SkyListToolbarViewActionsComponent   | development | 194–201 | `Read file_path=./list-toolbar.md offset=194 limit=8`  |

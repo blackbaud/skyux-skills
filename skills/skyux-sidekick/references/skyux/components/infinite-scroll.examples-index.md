@@ -12,4 +12,4 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                       | Lines   | Read invocation                                            |
 | --- | ----------------------------- | ------- | ---------------------------------------------------------- |
-| 1   | Infinite scroll with repeater | 118–257 | `Read file_path=./infinite-scroll.md offset=118 limit=140` |
+| 1   | Infinite scroll with repeater | 119–258 | `Read file_path=./infinite-scroll.md offset=119 limit=140` |

@@ -20,12 +20,12 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 4   | Behavior and states              | design      | 74–83   | `Read file_path=./list-summary.md offset=74 limit=10`   |
 | 5   | Layout                           | design      | 84–93   | `Read file_path=./list-summary.md offset=84 limit=10`   |
 | 6   | Related information              | design      | 94–110  | `Read file_path=./list-summary.md offset=94 limit=17`   |
-| 7   | Installation                     | development | 111–120 | `Read file_path=./list-summary.md offset=111 limit=10`  |
-| 8   | SkyListSummaryModule             | development | 121–126 | `Read file_path=./list-summary.md offset=121 limit=6`   |
-| 9   | SkyListSummaryComponent          | development | 127–134 | `Read file_path=./list-summary.md offset=127 limit=8`   |
-| 10  | SkyListSummaryItemComponent      | development | 135–170 | `Read file_path=./list-summary.md offset=135 limit=36`  |
-| 11  | SkyListSummaryHarness            | testing     | 171–292 | `Read file_path=./list-summary.md offset=171 limit=122` |
-| 12  | SkyListSummaryHarnessFilters     | testing     | 293–308 | `Read file_path=./list-summary.md offset=293 limit=16`  |
-| 13  | SkyListSummaryItemHarness        | testing     | 309–378 | `Read file_path=./list-summary.md offset=309 limit=70`  |
-| 14  | SkyListSummaryItemHarnessFilters | testing     | 379–404 | `Read file_path=./list-summary.md offset=379 limit=26`  |
-| 15  | Code Examples                    | examples    | 405–654 | `Read file_path=./list-summary.md offset=405 limit=250` |
+| 7   | Installation                     | development | 111–121 | `Read file_path=./list-summary.md offset=111 limit=11`  |
+| 8   | SkyListSummaryModule             | development | 122–127 | `Read file_path=./list-summary.md offset=122 limit=6`   |
+| 9   | SkyListSummaryComponent          | development | 128–135 | `Read file_path=./list-summary.md offset=128 limit=8`   |
+| 10  | SkyListSummaryItemComponent      | development | 136–171 | `Read file_path=./list-summary.md offset=136 limit=36`  |
+| 11  | SkyListSummaryHarness            | testing     | 172–293 | `Read file_path=./list-summary.md offset=172 limit=122` |
+| 12  | SkyListSummaryHarnessFilters     | testing     | 294–309 | `Read file_path=./list-summary.md offset=294 limit=16`  |
+| 13  | SkyListSummaryItemHarness        | testing     | 310–379 | `Read file_path=./list-summary.md offset=310 limit=70`  |
+| 14  | SkyListSummaryItemHarnessFilters | testing     | 380–405 | `Read file_path=./list-summary.md offset=380 limit=26`  |
+| 15  | Code Examples                    | examples    | 406–655 | `Read file_path=./list-summary.md offset=406 limit=250` |

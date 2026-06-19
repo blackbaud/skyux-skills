@@ -12,6 +12,6 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                         | Lines    | Read invocation                                        |
 | --- | ------------------------------- | -------- | ------------------------------------------------------ |
-| 1   | Inline form with basic setup    | 547–702  | `Read file_path=./inline-form.md offset=547 limit=156` |
-| 2   | Inline form with custom buttons | 703–899  | `Read file_path=./inline-form.md offset=703 limit=197` |
-| 3   | Inline form with repeater       | 900–1086 | `Read file_path=./inline-form.md offset=900 limit=187` |
+| 1   | Inline form with basic setup    | 548–703  | `Read file_path=./inline-form.md offset=548 limit=156` |
+| 2   | Inline form with custom buttons | 704–900  | `Read file_path=./inline-form.md offset=704 limit=197` |
+| 3   | Inline form with repeater       | 901–1087 | `Read file_path=./inline-form.md offset=901 limit=187` |

@@ -12,4 +12,4 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                     | Lines   | Read invocation                                                      |
 | --- | --------------------------- | ------- | -------------------------------------------------------------------- |
-| 1   | Wizard (progress indicator) | 527–662 | `Read file_path=./progress-indicator-wizard.md offset=527 limit=136` |
+| 1   | Wizard (progress indicator) | 528–663 | `Read file_path=./progress-indicator-wizard.md offset=528 limit=136` |

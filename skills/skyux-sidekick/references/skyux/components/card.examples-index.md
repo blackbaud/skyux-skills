@@ -12,4 +12,4 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example               | Lines   | Read invocation                                |
 | --- | --------------------- | ------- | ---------------------------------------------- |
-| 1   | Card with basic setup | 100–184 | `Read file_path=./card.md offset=100 limit=85` |
+| 1   | Card with basic setup | 101–185 | `Read file_path=./card.md offset=101 limit=85` |

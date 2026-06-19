@@ -18,16 +18,16 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 2   | Anatomy                                   | design      | 20–59    | `Read file_path=./country-field.md offset=20 limit=40`   |
 | 3   | Options                                   | design      | 60–88    | `Read file_path=./country-field.md offset=60 limit=29`   |
 | 4   | Related information                       | design      | 89–102   | `Read file_path=./country-field.md offset=89 limit=14`   |
-| 5   | Installation                              | development | 103–112  | `Read file_path=./country-field.md offset=103 limit=10`  |
-| 6   | Setup                                     | development | 113–116  | `Read file_path=./country-field.md offset=113 limit=4`   |
-| 7   | SkyCountryFieldModule                     | development | 117–122  | `Read file_path=./country-field.md offset=117 limit=6`   |
-| 8   | SkyCountryFieldComponent                  | development | 123–160  | `Read file_path=./country-field.md offset=123 limit=38`  |
-| 9   | SkyCountryFieldCountry                    | development | 161–183  | `Read file_path=./country-field.md offset=161 limit=23`  |
-| 10  | SkyCountryFieldHarness                    | testing     | 184–347  | `Read file_path=./country-field.md offset=184 limit=164` |
-| 11  | SkyCountryFieldHarnessFilters             | testing     | 348–363  | `Read file_path=./country-field.md offset=348 limit=16`  |
-| 12  | SkyCountryFieldSearchResultHarness        | testing     | 364–473  | `Read file_path=./country-field.md offset=364 limit=110` |
-| 13  | SkyCountryFieldSearchResultHarnessFilters | testing     | 474–489  | `Read file_path=./country-field.md offset=474 limit=16`  |
-| 14  | SkyAutocompleteInputHarness               | testing     | 490–567  | `Read file_path=./country-field.md offset=490 limit=78`  |
-| 15  | SkyInputBoxHarness                        | testing     | 568–845  | `Read file_path=./country-field.md offset=568 limit=278` |
-| 16  | SkyInputBoxHarnessFilters                 | testing     | 846–861  | `Read file_path=./country-field.md offset=846 limit=16`  |
-| 17  | Code Examples                             | examples    | 862–1006 | `Read file_path=./country-field.md offset=862 limit=145` |
+| 5   | Installation                              | development | 103–113  | `Read file_path=./country-field.md offset=103 limit=11`  |
+| 6   | Setup                                     | development | 114–117  | `Read file_path=./country-field.md offset=114 limit=4`   |
+| 7   | SkyCountryFieldModule                     | development | 118–123  | `Read file_path=./country-field.md offset=118 limit=6`   |
+| 8   | SkyCountryFieldComponent                  | development | 124–161  | `Read file_path=./country-field.md offset=124 limit=38`  |
+| 9   | SkyCountryFieldCountry                    | development | 162–184  | `Read file_path=./country-field.md offset=162 limit=23`  |
+| 10  | SkyCountryFieldHarness                    | testing     | 185–348  | `Read file_path=./country-field.md offset=185 limit=164` |
+| 11  | SkyCountryFieldHarnessFilters             | testing     | 349–364  | `Read file_path=./country-field.md offset=349 limit=16`  |
+| 12  | SkyCountryFieldSearchResultHarness        | testing     | 365–474  | `Read file_path=./country-field.md offset=365 limit=110` |
+| 13  | SkyCountryFieldSearchResultHarnessFilters | testing     | 475–490  | `Read file_path=./country-field.md offset=475 limit=16`  |
+| 14  | SkyAutocompleteInputHarness               | testing     | 491–568  | `Read file_path=./country-field.md offset=491 limit=78`  |
+| 15  | SkyInputBoxHarness                        | testing     | 569–846  | `Read file_path=./country-field.md offset=569 limit=278` |
+| 16  | SkyInputBoxHarnessFilters                 | testing     | 847–862  | `Read file_path=./country-field.md offset=847 limit=16`  |
+| 17  | Code Examples                             | examples    | 863–1007 | `Read file_path=./country-field.md offset=863 limit=145` |

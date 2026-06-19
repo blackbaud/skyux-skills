@@ -11,7 +11,8 @@ The application window reference service references the global `window` variable
 
 NPM package
 
-`@skyux/core`[View in NPM](https://www.npmjs.com/package/@skyux/core) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/core/src/lib/modules/window/window-ref.ts#L18)
+`@skyux/core`[View in NPM](https://www.npmjs.com/package/@skyux/core) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/core/src/lib/modules/window/window-ref.ts#L18)
 
 Install with NPM
 

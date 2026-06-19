@@ -138,7 +138,8 @@ Use 1/2- or 1/3-width columns for individual timepicker fields inside [modals](.
 
 NPM package
 
-`@skyux/datetime`[View in NPM](https://www.npmjs.com/package/@skyux/datetime) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/datetime/src/lib/modules/timepicker/timepicker.module.ts#L16)
+`@skyux/datetime`[View in NPM](https://www.npmjs.com/package/@skyux/datetime) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/datetime/src/lib/modules/timepicker/timepicker.module.ts#L16)
 
 Install with NPM
 

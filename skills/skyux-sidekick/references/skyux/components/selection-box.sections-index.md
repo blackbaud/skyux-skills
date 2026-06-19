@@ -21,14 +21,14 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 5   | Content                             | design      | 93–96   | `Read file_path=./selection-box.md offset=93 limit=4`    |
 | 6   | Layout                              | design      | 97–108  | `Read file_path=./selection-box.md offset=97 limit=12`   |
 | 7   | Related information                 | design      | 109–120 | `Read file_path=./selection-box.md offset=109 limit=12`  |
-| 8   | Installation                        | development | 121–130 | `Read file_path=./selection-box.md offset=121 limit=10`  |
-| 9   | SkySelectionBoxModule               | development | 131–136 | `Read file_path=./selection-box.md offset=131 limit=6`   |
-| 10  | SkySelectionBoxComponent            | development | 137–152 | `Read file_path=./selection-box.md offset=137 limit=16`  |
-| 11  | SkySelectionBoxHeaderComponent      | development | 153–160 | `Read file_path=./selection-box.md offset=153 limit=8`   |
-| 12  | SkySelectionBoxDescriptionComponent | development | 161–168 | `Read file_path=./selection-box.md offset=161 limit=8`   |
-| 13  | SkySelectionBoxGridComponent        | development | 169–178 | `Read file_path=./selection-box.md offset=169 limit=10`  |
-| 14  | SkySelectionBoxHarness              | testing     | 179–232 | `Read file_path=./selection-box.md offset=179 limit=54`  |
-| 15  | SkySelectionBoxHarnessFilters       | testing     | 233–248 | `Read file_path=./selection-box.md offset=233 limit=16`  |
-| 16  | SkySelectionBoxGridHarness          | testing     | 249–298 | `Read file_path=./selection-box.md offset=249 limit=50`  |
-| 17  | SkySelectionBoxGridHarnessFilters   | testing     | 299–314 | `Read file_path=./selection-box.md offset=299 limit=16`  |
-| 18  | Code Examples                       | examples    | 315–581 | `Read file_path=./selection-box.md offset=315 limit=267` |
+| 8   | Installation                        | development | 121–131 | `Read file_path=./selection-box.md offset=121 limit=11`  |
+| 9   | SkySelectionBoxModule               | development | 132–137 | `Read file_path=./selection-box.md offset=132 limit=6`   |
+| 10  | SkySelectionBoxComponent            | development | 138–153 | `Read file_path=./selection-box.md offset=138 limit=16`  |
+| 11  | SkySelectionBoxHeaderComponent      | development | 154–161 | `Read file_path=./selection-box.md offset=154 limit=8`   |
+| 12  | SkySelectionBoxDescriptionComponent | development | 162–169 | `Read file_path=./selection-box.md offset=162 limit=8`   |
+| 13  | SkySelectionBoxGridComponent        | development | 170–179 | `Read file_path=./selection-box.md offset=170 limit=10`  |
+| 14  | SkySelectionBoxHarness              | testing     | 180–233 | `Read file_path=./selection-box.md offset=180 limit=54`  |
+| 15  | SkySelectionBoxHarnessFilters       | testing     | 234–249 | `Read file_path=./selection-box.md offset=234 limit=16`  |
+| 16  | SkySelectionBoxGridHarness          | testing     | 250–299 | `Read file_path=./selection-box.md offset=250 limit=50`  |
+| 17  | SkySelectionBoxGridHarnessFilters   | testing     | 300–315 | `Read file_path=./selection-box.md offset=300 limit=16`  |
+| 18  | Code Examples                       | examples    | 316–582 | `Read file_path=./selection-box.md offset=316 limit=267` |

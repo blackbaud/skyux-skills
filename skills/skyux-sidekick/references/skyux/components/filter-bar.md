@@ -149,7 +149,8 @@ When displaying filters in the filter bar by default, organize them in descendin
 
 NPM package
 
-`@skyux/filter-bar`[View in NPM](https://www.npmjs.com/package/@skyux/filter-bar) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/filter-bar/src/lib/modules/filter-bar/filter-bar.module.ts#L19)
+`@skyux/filter-bar`[View in NPM](https://www.npmjs.com/package/@skyux/filter-bar) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/filter-bar/src/lib/modules/filter-bar/filter-bar.module.ts#L19)
 
 Install with NPM
 

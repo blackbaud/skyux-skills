@@ -11,7 +11,8 @@ The navbar displays top-level navigation items that can include sub-navigation i
 
 NPM package
 
-`@skyux/navbar`[View in NPM](https://www.npmjs.com/package/@skyux/navbar) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/navbar/src/lib/modules/navbar/navbar.module.ts#L12)
+`@skyux/navbar`[View in NPM](https://www.npmjs.com/package/@skyux/navbar) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/navbar/src/lib/modules/navbar/navbar.module.ts#L12)
 
 Install with NPM
 

@@ -138,7 +138,8 @@ To ensure the readability of modal content, write clear button labels (see **But
 
 NPM package
 
-`@skyux/modals`[View in NPM](https://www.npmjs.com/package/@skyux/modals) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/modals/src/lib/modules/modal/modal.module.ts#L28)
+`@skyux/modals`[View in NPM](https://www.npmjs.com/package/@skyux/modals) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/modals/src/lib/modules/modal/modal.module.ts#L28)
 
 Install with NPM
 

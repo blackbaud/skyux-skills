@@ -57,7 +57,8 @@ You can display messages that require immediate attention as alerts within the p
 
 NPM package
 
-`@skyux/layout`[View in NPM](https://www.npmjs.com/package/@skyux/layout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/layout/src/lib/modules/page-summary/page-summary.module.ts#L39)
+`@skyux/layout`[View in NPM](https://www.npmjs.com/package/@skyux/layout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/layout/src/lib/modules/page-summary/page-summary.module.ts#L39)
 
 Install with NPM
 

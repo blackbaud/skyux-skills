@@ -11,7 +11,8 @@ The data manager component and service manage the exploration of a data set acro
 
 NPM package
 
-`@skyux/data-manager`[View in NPM](https://www.npmjs.com/package/@skyux/data-manager) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/data-manager/src/lib/modules/data-manager/data-manager.module.ts#L36)
+`@skyux/data-manager`[View in NPM](https://www.npmjs.com/package/@skyux/data-manager) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/data-manager/src/lib/modules/data-manager/data-manager.module.ts#L36)
 
 Install with NPM
 

@@ -135,7 +135,8 @@ The phone field input directive validates phone numbers based on the format for 
 
 NPM package
 
-`@skyux/phone-field`[View in NPM](https://www.npmjs.com/package/@skyux/phone-field) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/phone-field/src/lib/modules/phone-field/phone-field.module.ts#L10)
+`@skyux/phone-field`[View in NPM](https://www.npmjs.com/package/@skyux/phone-field) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/phone-field/src/lib/modules/phone-field/phone-field.module.ts#L10)
 
 Install with NPM
 

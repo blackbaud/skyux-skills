@@ -31,7 +31,8 @@ Don't use rich text display anywhere users enter or edit rich text. Use the [tex
 
 NPM package
 
-`@skyux/text-editor`[View in NPM](https://www.npmjs.com/package/@skyux/text-editor) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/text-editor/src/lib/modules/rich-text-display/rich-text-display.module.ts#L9)
+`@skyux/text-editor`[View in NPM](https://www.npmjs.com/package/@skyux/text-editor) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/text-editor/src/lib/modules/rich-text-display/rich-text-display.module.ts#L9)
 
 Install with NPM
 

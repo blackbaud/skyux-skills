@@ -189,7 +189,8 @@ Grids perform poorly in small viewports. The columns in fixed-width grids shrink
 
 NPM package
 
-`@skyux/grids`[View in NPM](https://www.npmjs.com/package/@skyux/grids) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/grids/src/lib/modules/grid/grid.module.ts#L43)
+`@skyux/grids`[View in NPM](https://www.npmjs.com/package/@skyux/grids) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/grids/src/lib/modules/grid/grid.module.ts#L43)
 
 Install with NPM
 

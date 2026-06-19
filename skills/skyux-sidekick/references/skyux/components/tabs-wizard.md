@@ -99,7 +99,8 @@ Use a [primary button](./button.md) for the most important action on each step, 
 
 NPM package
 
-`@skyux/tabs`[View in NPM](https://www.npmjs.com/package/@skyux/tabs) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/tabs/src/lib/modules/tabs/tabs.module.ts#L35)
+`@skyux/tabs`[View in NPM](https://www.npmjs.com/package/@skyux/tabs) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/tabs/src/lib/modules/tabs/tabs.module.ts#L35)
 
 Install with NPM
 

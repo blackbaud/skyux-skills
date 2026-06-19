@@ -149,7 +149,8 @@ Vertically stacked columns in a repeater at the extra small breakpoint.
 
 NPM package
 
-`@skyux/layout`[View in NPM](https://www.npmjs.com/package/@skyux/layout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/layout/src/lib/modules/fluid-grid/fluid-grid.module.ts#L13)
+`@skyux/layout`[View in NPM](https://www.npmjs.com/package/@skyux/layout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/layout/src/lib/modules/fluid-grid/fluid-grid.module.ts#L13)
 
 Install with NPM
 

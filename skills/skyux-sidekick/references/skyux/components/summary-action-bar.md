@@ -102,7 +102,8 @@ When the viewport width changes, summary information re-flows based on the avail
 
 NPM package
 
-`@skyux/action-bars`[View in NPM](https://www.npmjs.com/package/@skyux/action-bars) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/action-bars/src/lib/modules/summary-action-bar/summary-action-bar.module.ts#L31)
+`@skyux/action-bars`[View in NPM](https://www.npmjs.com/package/@skyux/action-bars) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/action-bars/src/lib/modules/summary-action-bar/summary-action-bar.module.ts#L31)
 
 Install with NPM
 

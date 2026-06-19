@@ -12,10 +12,10 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                        | Lines     | Read invocation                                       |
 | --- | ------------------------------ | --------- | ----------------------------------------------------- |
-| 1   | Input box                      | 615–898   | `Read file_path=./input-box.md offset=615 limit=284`  |
-| 2   | Input box with custom errors   | 899–1023  | `Read file_path=./input-box.md offset=899 limit=125`  |
-| 3   | Country field with basic setup | 1024–1166 | `Read file_path=./input-box.md offset=1024 limit=143` |
-| 4   | Datepicker with basic setup    | 1167–1325 | `Read file_path=./input-box.md offset=1167 limit=159` |
-| 5   | Lookup in single select mode   | 1326–1658 | `Read file_path=./input-box.md offset=1326 limit=333` |
-| 6   | Phone field with basic setup   | 1659–1825 | `Read file_path=./input-box.md offset=1659 limit=167` |
-| 7   | Timepicker with basic setup    | 1826–1976 | `Read file_path=./input-box.md offset=1826 limit=151` |
+| 1   | Input box                      | 616–899   | `Read file_path=./input-box.md offset=616 limit=284`  |
+| 2   | Input box with custom errors   | 900–1024  | `Read file_path=./input-box.md offset=900 limit=125`  |
+| 3   | Country field with basic setup | 1025–1167 | `Read file_path=./input-box.md offset=1025 limit=143` |
+| 4   | Datepicker with basic setup    | 1168–1326 | `Read file_path=./input-box.md offset=1168 limit=159` |
+| 5   | Lookup in single select mode   | 1327–1659 | `Read file_path=./input-box.md offset=1327 limit=333` |
+| 6   | Phone field with basic setup   | 1660–1826 | `Read file_path=./input-box.md offset=1660 limit=167` |
+| 7   | Timepicker with basic setup    | 1827–1977 | `Read file_path=./input-box.md offset=1827 limit=151` |

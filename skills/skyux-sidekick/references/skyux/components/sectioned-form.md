@@ -49,7 +49,8 @@ Within each section, follow the patterns in the [form design guidelines](../desi
 
 NPM package
 
-`@skyux/tabs`[View in NPM](https://www.npmjs.com/package/@skyux/tabs) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/tabs/src/lib/modules/sectioned-form/sectioned-form.module.ts#L21)
+`@skyux/tabs`[View in NPM](https://www.npmjs.com/package/@skyux/tabs) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/tabs/src/lib/modules/sectioned-form/sectioned-form.module.ts#L21)
 
 Install with NPM
 

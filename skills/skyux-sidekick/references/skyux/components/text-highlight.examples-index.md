@@ -12,4 +12,4 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                         | Lines  | Read invocation                                          |
 | --- | ------------------------------- | ------ | -------------------------------------------------------- |
-| 1   | Text highlight with basic setup | 90–195 | `Read file_path=./text-highlight.md offset=90 limit=106` |
+| 1   | Text highlight with basic setup | 91–196 | `Read file_path=./text-highlight.md offset=91 limit=106` |

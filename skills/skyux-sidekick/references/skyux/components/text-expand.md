@@ -11,7 +11,8 @@ The text expand component truncates long blocks of text with an ellipsis and a l
 
 NPM package
 
-`@skyux/layout`[View in NPM](https://www.npmjs.com/package/@skyux/layout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/layout/src/lib/modules/text-expand/text-expand.module.ts#L9)
+`@skyux/layout`[View in NPM](https://www.npmjs.com/package/@skyux/layout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/layout/src/lib/modules/text-expand/text-expand.module.ts#L9)
 
 Install with NPM
 

@@ -15,9 +15,9 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | #   | Section                   | Tab         | Lines  | Read invocation                                          |
 | --- | ------------------------- | ----------- | ------ | -------------------------------------------------------- |
 | 1   | Related information       | design      | 10–15  | `Read file_path=./url-validation.md offset=10 limit=6`   |
-| 2   | Installation              | development | 16–25  | `Read file_path=./url-validation.md offset=16 limit=10`  |
-| 3   | SkyUrlValidationModule    | development | 26–31  | `Read file_path=./url-validation.md offset=26 limit=6`   |
-| 4   | SkyUrlValidationDirective | development | 32–45  | `Read file_path=./url-validation.md offset=32 limit=14`  |
-| 5   | SkyUrlValidationOptions   | development | 46–61  | `Read file_path=./url-validation.md offset=46 limit=16`  |
-| 6   | SkyValidators             | development | 62–91  | `Read file_path=./url-validation.md offset=62 limit=30`  |
-| 7   | Code Examples             | examples    | 92–192 | `Read file_path=./url-validation.md offset=92 limit=101` |
+| 2   | Installation              | development | 16–26  | `Read file_path=./url-validation.md offset=16 limit=11`  |
+| 3   | SkyUrlValidationModule    | development | 27–32  | `Read file_path=./url-validation.md offset=27 limit=6`   |
+| 4   | SkyUrlValidationDirective | development | 33–46  | `Read file_path=./url-validation.md offset=33 limit=14`  |
+| 5   | SkyUrlValidationOptions   | development | 47–62  | `Read file_path=./url-validation.md offset=47 limit=16`  |
+| 6   | SkyValidators             | development | 63–92  | `Read file_path=./url-validation.md offset=63 limit=30`  |
+| 7   | Code Examples             | examples    | 93–193 | `Read file_path=./url-validation.md offset=93 limit=101` |

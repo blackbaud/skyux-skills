@@ -20,18 +20,18 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 4   | Behavior and states                         | design      | 92–101   | `Read file_path=./selection-modal.md offset=92 limit=10`   |
 | 5   | Content                                     | design      | 102–113  | `Read file_path=./selection-modal.md offset=102 limit=12`  |
 | 6   | Related information                         | design      | 114–125  | `Read file_path=./selection-modal.md offset=114 limit=12`  |
-| 7   | Installation                                | development | 126–135  | `Read file_path=./selection-modal.md offset=126 limit=10`  |
-| 8   | SkySelectionModalService                    | development | 136–157  | `Read file_path=./selection-modal.md offset=136 limit=22`  |
-| 9   | SkySelectionModalInstance                   | development | 158–169  | `Read file_path=./selection-modal.md offset=158 limit=12`  |
-| 10  | SkyLookupSelectModeType                     | development | 170–175  | `Read file_path=./selection-modal.md offset=170 limit=6`   |
-| 11  | SkySelectionModalAddCallbackArgs            | development | 176–191  | `Read file_path=./selection-modal.md offset=176 limit=16`  |
-| 12  | SkySelectionModalAddClickEventArgs          | development | 192–207  | `Read file_path=./selection-modal.md offset=192 limit=16`  |
-| 13  | SkySelectionModalCloseArgs                  | development | 208–228  | `Read file_path=./selection-modal.md offset=208 limit=21`  |
-| 14  | SkySelectionModalOpenArgs                   | development | 229–301  | `Read file_path=./selection-modal.md offset=229 limit=73`  |
-| 15  | SkySelectionModalResult                     | development | 302–322  | `Read file_path=./selection-modal.md offset=302 limit=21`  |
-| 16  | SkySelectionModalSearchArgs                 | development | 323–348  | `Read file_path=./selection-modal.md offset=323 limit=26`  |
-| 17  | SkySelectionModalSearchResult               | development | 349–381  | `Read file_path=./selection-modal.md offset=349 limit=33`  |
-| 18  | SkySelectionModalHarness                    | testing     | 382–555  | `Read file_path=./selection-modal.md offset=382 limit=174` |
-| 19  | SkySelectionModalSearchResultHarness        | testing     | 556–789  | `Read file_path=./selection-modal.md offset=556 limit=234` |
-| 20  | SkySelectionModalSearchResultHarnessFilters | testing     | 790–810  | `Read file_path=./selection-modal.md offset=790 limit=21`  |
-| 21  | Code Examples                               | examples    | 811–1403 | `Read file_path=./selection-modal.md offset=811 limit=593` |
+| 7   | Installation                                | development | 126–136  | `Read file_path=./selection-modal.md offset=126 limit=11`  |
+| 8   | SkySelectionModalService                    | development | 137–158  | `Read file_path=./selection-modal.md offset=137 limit=22`  |
+| 9   | SkySelectionModalInstance                   | development | 159–170  | `Read file_path=./selection-modal.md offset=159 limit=12`  |
+| 10  | SkyLookupSelectModeType                     | development | 171–176  | `Read file_path=./selection-modal.md offset=171 limit=6`   |
+| 11  | SkySelectionModalAddCallbackArgs            | development | 177–192  | `Read file_path=./selection-modal.md offset=177 limit=16`  |
+| 12  | SkySelectionModalAddClickEventArgs          | development | 193–208  | `Read file_path=./selection-modal.md offset=193 limit=16`  |
+| 13  | SkySelectionModalCloseArgs                  | development | 209–229  | `Read file_path=./selection-modal.md offset=209 limit=21`  |
+| 14  | SkySelectionModalOpenArgs                   | development | 230–302  | `Read file_path=./selection-modal.md offset=230 limit=73`  |
+| 15  | SkySelectionModalResult                     | development | 303–323  | `Read file_path=./selection-modal.md offset=303 limit=21`  |
+| 16  | SkySelectionModalSearchArgs                 | development | 324–349  | `Read file_path=./selection-modal.md offset=324 limit=26`  |
+| 17  | SkySelectionModalSearchResult               | development | 350–382  | `Read file_path=./selection-modal.md offset=350 limit=33`  |
+| 18  | SkySelectionModalHarness                    | testing     | 383–556  | `Read file_path=./selection-modal.md offset=383 limit=174` |
+| 19  | SkySelectionModalSearchResultHarness        | testing     | 557–790  | `Read file_path=./selection-modal.md offset=557 limit=234` |
+| 20  | SkySelectionModalSearchResultHarnessFilters | testing     | 791–811  | `Read file_path=./selection-modal.md offset=791 limit=21`  |
+| 21  | Code Examples                               | examples    | 812–1404 | `Read file_path=./selection-modal.md offset=812 limit=593` |

@@ -11,7 +11,8 @@ The avatar component displays an image to identify a record.
 
 NPM package
 
-`@skyux/avatar`[View in NPM](https://www.npmjs.com/package/@skyux/avatar) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/avatar/src/lib/modules/avatar/avatar.module.ts#L12)
+`@skyux/avatar`[View in NPM](https://www.npmjs.com/package/@skyux/avatar) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/avatar/src/lib/modules/avatar/avatar.module.ts#L12)
 
 Install with NPM
 

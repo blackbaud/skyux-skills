@@ -11,7 +11,8 @@ Tokens display a series of specified objects that users can interact with. They 
 
 NPM package
 
-`@skyux/indicators`[View in NPM](https://www.npmjs.com/package/@skyux/indicators) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/indicators/src/lib/modules/tokens/tokens.module.ts#L22)
+`@skyux/indicators`[View in NPM](https://www.npmjs.com/package/@skyux/indicators) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/indicators/src/lib/modules/tokens/tokens.module.ts#L22)
 
 Install with NPM
 

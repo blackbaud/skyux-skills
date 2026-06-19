@@ -14,9 +14,9 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 
 | #   | Section                         | Tab         | Lines   | Read invocation                                            |
 | --- | ------------------------------- | ----------- | ------- | ---------------------------------------------------------- |
-| 1   | Installation                    | development | 10–19   | `Read file_path=./infinite-scroll.md offset=10 limit=10`   |
-| 2   | SkyInfiniteScrollModule         | development | 20–25   | `Read file_path=./infinite-scroll.md offset=20 limit=6`    |
-| 3   | SkyInfiniteScrollComponent      | development | 26–53   | `Read file_path=./infinite-scroll.md offset=26 limit=28`   |
-| 4   | SkyInfiniteScrollHarness        | testing     | 54–99   | `Read file_path=./infinite-scroll.md offset=54 limit=46`   |
-| 5   | SkyInfiniteScrollHarnessFilters | testing     | 100–115 | `Read file_path=./infinite-scroll.md offset=100 limit=16`  |
-| 6   | Code Examples                   | examples    | 116–257 | `Read file_path=./infinite-scroll.md offset=116 limit=142` |
+| 1   | Installation                    | development | 10–20   | `Read file_path=./infinite-scroll.md offset=10 limit=11`   |
+| 2   | SkyInfiniteScrollModule         | development | 21–26   | `Read file_path=./infinite-scroll.md offset=21 limit=6`    |
+| 3   | SkyInfiniteScrollComponent      | development | 27–54   | `Read file_path=./infinite-scroll.md offset=27 limit=28`   |
+| 4   | SkyInfiniteScrollHarness        | testing     | 55–100  | `Read file_path=./infinite-scroll.md offset=55 limit=46`   |
+| 5   | SkyInfiniteScrollHarnessFilters | testing     | 101–116 | `Read file_path=./infinite-scroll.md offset=101 limit=16`  |
+| 6   | Code Examples                   | examples    | 117–258 | `Read file_path=./infinite-scroll.md offset=117 limit=142` |

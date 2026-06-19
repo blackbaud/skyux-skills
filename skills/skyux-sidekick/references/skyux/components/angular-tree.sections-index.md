@@ -19,8 +19,8 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 3   | Options                        | design      | 44–81   | `Read file_path=./angular-tree.md offset=44 limit=38`   |
 | 4   | Behavior and states            | design      | 82–89   | `Read file_path=./angular-tree.md offset=82 limit=8`    |
 | 5   | Related information            | design      | 90–100  | `Read file_path=./angular-tree.md offset=90 limit=11`   |
-| 6   | Installation                   | development | 101–110 | `Read file_path=./angular-tree.md offset=101 limit=10`  |
-| 7   | SkyAngularTreeModule           | development | 111–116 | `Read file_path=./angular-tree.md offset=111 limit=6`   |
-| 8   | SkyAngularTreeWrapperComponent | development | 117–150 | `Read file_path=./angular-tree.md offset=117 limit=34`  |
-| 9   | SkyAngularTreeNodeComponent    | development | 151–188 | `Read file_path=./angular-tree.md offset=151 limit=38`  |
-| 10  | Code Examples                  | examples    | 189–424 | `Read file_path=./angular-tree.md offset=189 limit=236` |
+| 6   | Installation                   | development | 101–111 | `Read file_path=./angular-tree.md offset=101 limit=11`  |
+| 7   | SkyAngularTreeModule           | development | 112–117 | `Read file_path=./angular-tree.md offset=112 limit=6`   |
+| 8   | SkyAngularTreeWrapperComponent | development | 118–151 | `Read file_path=./angular-tree.md offset=118 limit=34`  |
+| 9   | SkyAngularTreeNodeComponent    | development | 152–189 | `Read file_path=./angular-tree.md offset=152 limit=38`  |
+| 10  | Code Examples                  | examples    | 190–425 | `Read file_path=./angular-tree.md offset=190 limit=236` |

@@ -12,5 +12,5 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                  | Lines   | Read invocation                                    |
 | --- | ------------------------ | ------- | -------------------------------------------------- |
-| 1   | Toolbar with basic setup | 721–830 | `Read file_path=./toolbar.md offset=721 limit=110` |
-| 2   | Toolbar with sections    | 831–958 | `Read file_path=./toolbar.md offset=831 limit=128` |
+| 1   | Toolbar with basic setup | 722–831 | `Read file_path=./toolbar.md offset=722 limit=110` |
+| 2   | Toolbar with sections    | 832–959 | `Read file_path=./toolbar.md offset=832 limit=128` |

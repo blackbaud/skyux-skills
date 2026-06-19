@@ -12,5 +12,5 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                                               | Lines   | Read invocation                                        |
 | --- | ----------------------------------------------------- | ------- | ------------------------------------------------------ |
-| 1   | Media query service with basic setup                  | 167–258 | `Read file_path=./media-query.md offset=167 limit=92`  |
-| 2   | Media query service using a responsive host container | 259–417 | `Read file_path=./media-query.md offset=259 limit=159` |
+| 1   | Media query service with basic setup                  | 168–259 | `Read file_path=./media-query.md offset=168 limit=92`  |
+| 2   | Media query service using a responsive host container | 260–418 | `Read file_path=./media-query.md offset=260 limit=159` |

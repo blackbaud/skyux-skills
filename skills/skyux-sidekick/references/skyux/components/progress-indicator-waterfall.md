@@ -160,7 +160,8 @@ Do use waterfall progress indicators as the only content on a page while users c
 
 NPM package
 
-`@skyux/progress-indicator`[View in NPM](https://www.npmjs.com/package/@skyux/progress-indicator) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/progress-indicator/src/lib/modules/progress-indicator/progress-indicator.module.ts#L48)
+`@skyux/progress-indicator`[View in NPM](https://www.npmjs.com/package/@skyux/progress-indicator) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/progress-indicator/src/lib/modules/progress-indicator/progress-indicator.module.ts#L48)
 
 Install with NPM
 

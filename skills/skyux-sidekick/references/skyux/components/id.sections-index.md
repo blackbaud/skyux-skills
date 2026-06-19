@@ -15,8 +15,8 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | #   | Section        | Tab         | Lines | Read invocation                             |
 | --- | -------------- | ----------- | ----- | ------------------------------------------- |
 | 1   | Usage          | design      | 10–21 | `Read file_path=./id.md offset=10 limit=12` |
-| 2   | Installation   | development | 22–31 | `Read file_path=./id.md offset=22 limit=10` |
-| 3   | SkyIdModule    | development | 32–37 | `Read file_path=./id.md offset=32 limit=6`  |
-| 4   | SkyIdDirective | development | 38–45 | `Read file_path=./id.md offset=38 limit=8`  |
-| 5   | SkyIdService   | development | 46–59 | `Read file_path=./id.md offset=46 limit=14` |
-| 6   | Code Examples  | examples    | 60–86 | `Read file_path=./id.md offset=60 limit=27` |
+| 2   | Installation   | development | 22–32 | `Read file_path=./id.md offset=22 limit=11` |
+| 3   | SkyIdModule    | development | 33–38 | `Read file_path=./id.md offset=33 limit=6`  |
+| 4   | SkyIdDirective | development | 39–46 | `Read file_path=./id.md offset=39 limit=8`  |
+| 5   | SkyIdService   | development | 47–60 | `Read file_path=./id.md offset=47 limit=14` |
+| 6   | Code Examples  | examples    | 61–87 | `Read file_path=./id.md offset=61 limit=27` |

@@ -20,10 +20,10 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 4   | Content                                    | design      | 56–61   | `Read file_path=./character-count.md offset=56 limit=6`   |
 | 5   | Layout                                     | design      | 62–67   | `Read file_path=./character-count.md offset=62 limit=6`   |
 | 6   | Related information                        | design      | 68–77   | `Read file_path=./character-count.md offset=68 limit=10`  |
-| 7   | Installation                               | development | 78–87   | `Read file_path=./character-count.md offset=78 limit=10`  |
-| 8   | SkyCharacterCounterModule                  | development | 88–93   | `Read file_path=./character-count.md offset=88 limit=6`   |
-| 9   | SkyCharacterCounterIndicatorComponent      | development | 94–99   | `Read file_path=./character-count.md offset=94 limit=6`   |
-| 10  | SkyCharacterCounterInputDirective          | development | 100–119 | `Read file_path=./character-count.md offset=100 limit=20` |
-| 11  | SkyCharacterCounterScreenReaderPipe        | development | 120–141 | `Read file_path=./character-count.md offset=120 limit=22` |
-| 12  | SkyCharacterCounterIndicatorHarness        | testing     | 142–187 | `Read file_path=./character-count.md offset=142 limit=46` |
-| 13  | SkyCharacterCounterIndicatorHarnessFilters | testing     | 188–203 | `Read file_path=./character-count.md offset=188 limit=16` |
+| 7   | Installation                               | development | 78–88   | `Read file_path=./character-count.md offset=78 limit=11`  |
+| 8   | SkyCharacterCounterModule                  | development | 89–94   | `Read file_path=./character-count.md offset=89 limit=6`   |
+| 9   | SkyCharacterCounterIndicatorComponent      | development | 95–100  | `Read file_path=./character-count.md offset=95 limit=6`   |
+| 10  | SkyCharacterCounterInputDirective          | development | 101–120 | `Read file_path=./character-count.md offset=101 limit=20` |
+| 11  | SkyCharacterCounterScreenReaderPipe        | development | 121–142 | `Read file_path=./character-count.md offset=121 limit=22` |
+| 12  | SkyCharacterCounterIndicatorHarness        | testing     | 143–188 | `Read file_path=./character-count.md offset=143 limit=46` |
+| 13  | SkyCharacterCounterIndicatorHarnessFilters | testing     | 189–204 | `Read file_path=./character-count.md offset=189 limit=16` |

@@ -22,20 +22,20 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 6   | Content                     | design      | 159–164  | `Read file_path=./tabs.md offset=159 limit=6`   |
 | 7   | Accessibility               | design      | 165–170  | `Read file_path=./tabs.md offset=165 limit=6`   |
 | 8   | Related information         | design      | 171–182  | `Read file_path=./tabs.md offset=171 limit=12`  |
-| 9   | Installation                | development | 183–192  | `Read file_path=./tabs.md offset=183 limit=10`  |
-| 10  | SkyTabsModule               | development | 193–198  | `Read file_path=./tabs.md offset=193 limit=6`   |
-| 11  | SkyTabsetComponent          | development | 199–246  | `Read file_path=./tabs.md offset=199 limit=48`  |
-| 12  | SkyTabComponent             | development | 247–298  | `Read file_path=./tabs.md offset=247 limit=52`  |
-| 13  | SkyTabsetNavButtonComponent | development | 299–328  | `Read file_path=./tabs.md offset=299 limit=30`  |
-| 14  | SkyTabsetNavButtonType      | development | 329–336  | `Read file_path=./tabs.md offset=329 limit=8`   |
-| 15  | SkyTabIndex                 | development | 337–342  | `Read file_path=./tabs.md offset=337 limit=6`   |
-| 16  | SkyTabLayoutType            | development | 343–348  | `Read file_path=./tabs.md offset=343 limit=6`   |
-| 17  | SkyTabsetButtonsDisplayMode | development | 349–354  | `Read file_path=./tabs.md offset=349 limit=6`   |
-| 18  | SkyTabsetStyle              | development | 355–360  | `Read file_path=./tabs.md offset=355 limit=6`   |
-| 19  | SkyTabsetTabIndexesChange   | development | 361–374  | `Read file_path=./tabs.md offset=361 limit=14`  |
-| 20  | SkyTabsetHarness            | testing     | 375–512  | `Read file_path=./tabs.md offset=375 limit=138` |
-| 21  | SkyTabsetHarnessFilters     | testing     | 513–528  | `Read file_path=./tabs.md offset=513 limit=16`  |
-| 22  | SkyTabButtonHarness         | testing     | 529–614  | `Read file_path=./tabs.md offset=529 limit=86`  |
-| 23  | SkyTabButtonHarnessFilters  | testing     | 615–630  | `Read file_path=./tabs.md offset=615 limit=16`  |
-| 24  | SkyTabContentHarness        | testing     | 631–728  | `Read file_path=./tabs.md offset=631 limit=98`  |
-| 25  | Code Examples               | examples    | 729–1101 | `Read file_path=./tabs.md offset=729 limit=373` |
+| 9   | Installation                | development | 183–193  | `Read file_path=./tabs.md offset=183 limit=11`  |
+| 10  | SkyTabsModule               | development | 194–199  | `Read file_path=./tabs.md offset=194 limit=6`   |
+| 11  | SkyTabsetComponent          | development | 200–247  | `Read file_path=./tabs.md offset=200 limit=48`  |
+| 12  | SkyTabComponent             | development | 248–299  | `Read file_path=./tabs.md offset=248 limit=52`  |
+| 13  | SkyTabsetNavButtonComponent | development | 300–329  | `Read file_path=./tabs.md offset=300 limit=30`  |
+| 14  | SkyTabsetNavButtonType      | development | 330–337  | `Read file_path=./tabs.md offset=330 limit=8`   |
+| 15  | SkyTabIndex                 | development | 338–343  | `Read file_path=./tabs.md offset=338 limit=6`   |
+| 16  | SkyTabLayoutType            | development | 344–349  | `Read file_path=./tabs.md offset=344 limit=6`   |
+| 17  | SkyTabsetButtonsDisplayMode | development | 350–355  | `Read file_path=./tabs.md offset=350 limit=6`   |
+| 18  | SkyTabsetStyle              | development | 356–361  | `Read file_path=./tabs.md offset=356 limit=6`   |
+| 19  | SkyTabsetTabIndexesChange   | development | 362–375  | `Read file_path=./tabs.md offset=362 limit=14`  |
+| 20  | SkyTabsetHarness            | testing     | 376–513  | `Read file_path=./tabs.md offset=376 limit=138` |
+| 21  | SkyTabsetHarnessFilters     | testing     | 514–529  | `Read file_path=./tabs.md offset=514 limit=16`  |
+| 22  | SkyTabButtonHarness         | testing     | 530–615  | `Read file_path=./tabs.md offset=530 limit=86`  |
+| 23  | SkyTabButtonHarnessFilters  | testing     | 616–631  | `Read file_path=./tabs.md offset=616 limit=16`  |
+| 24  | SkyTabContentHarness        | testing     | 632–729  | `Read file_path=./tabs.md offset=632 limit=98`  |
+| 25  | Code Examples               | examples    | 730–1102 | `Read file_path=./tabs.md offset=730 limit=373` |

@@ -11,7 +11,8 @@ The infinite scroll component dynamically loads data as users scroll.
 
 NPM package
 
-`@skyux/lists`[View in NPM](https://www.npmjs.com/package/@skyux/lists) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/lists/src/lib/modules/infinite-scroll/infinite-scroll.module.ts#L13)
+`@skyux/lists`[View in NPM](https://www.npmjs.com/package/@skyux/lists) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/lists/src/lib/modules/infinite-scroll/infinite-scroll.module.ts#L13)
 
 Install with NPM
 

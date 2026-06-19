@@ -12,4 +12,4 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                            | Lines   | Read invocation                                        |
 | --- | ---------------------------------- | ------- | ------------------------------------------------------ |
-| 1   | Spot illustration with basic setup | 259–357 | `Read file_path=./illustration.md offset=259 limit=99` |
+| 1   | Spot illustration with basic setup | 260–358 | `Read file_path=./illustration.md offset=260 limit=99` |

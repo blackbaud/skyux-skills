@@ -12,4 +12,4 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example               | Lines   | Read invocation                                 |
 | --- | --------------------- | ------- | ----------------------------------------------- |
-| 1   | Sort with basic setup | 270–487 | `Read file_path=./sort.md offset=270 limit=218` |
+| 1   | Sort with basic setup | 271–488 | `Read file_path=./sort.md offset=271 limit=218` |

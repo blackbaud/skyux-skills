@@ -12,4 +12,4 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                     | Lines   | Read invocation                                       |
 | --- | --------------------------- | ------- | ----------------------------------------------------- |
-| 1   | Fluid grid with basic setup | 426–671 | `Read file_path=./fluid-grid.md offset=426 limit=246` |
+| 1   | Fluid grid with basic setup | 427–672 | `Read file_path=./fluid-grid.md offset=427 limit=246` |

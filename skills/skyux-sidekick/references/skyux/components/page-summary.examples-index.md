@@ -12,4 +12,4 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                       | Lines   | Read invocation                                         |
 | --- | ----------------------------- | ------- | ------------------------------------------------------- |
-| 1   | Page summary with basic setup | 142–248 | `Read file_path=./page-summary.md offset=142 limit=107` |
+| 1   | Page summary with basic setup | 143–249 | `Read file_path=./page-summary.md offset=143 limit=107` |

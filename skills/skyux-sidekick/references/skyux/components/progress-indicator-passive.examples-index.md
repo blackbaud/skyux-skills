@@ -12,4 +12,4 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                    | Lines   | Read invocation                                                      |
 | --- | -------------------------- | ------- | -------------------------------------------------------------------- |
-| 1   | Passive progress indicator | 585–658 | `Read file_path=./progress-indicator-passive.md offset=585 limit=74` |
+| 1   | Passive progress indicator | 586–659 | `Read file_path=./progress-indicator-passive.md offset=586 limit=74` |

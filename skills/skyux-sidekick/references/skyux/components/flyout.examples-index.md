@@ -12,5 +12,5 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                         | Lines    | Read invocation                                   |
 | --- | ------------------------------- | -------- | ------------------------------------------------- |
-| 1   | Flyout with basic setup         | 694–832  | `Read file_path=./flyout.md offset=694 limit=139` |
-| 2   | Flyouts with customized headers | 833–1066 | `Read file_path=./flyout.md offset=833 limit=234` |
+| 1   | Flyout with basic setup         | 695–833  | `Read file_path=./flyout.md offset=695 limit=139` |
+| 2   | Flyouts with customized headers | 834–1067 | `Read file_path=./flyout.md offset=834 limit=234` |

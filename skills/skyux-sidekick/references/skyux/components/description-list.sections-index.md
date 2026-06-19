@@ -21,14 +21,14 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 5   | Content                                | design      | 102–109 | `Read file_path=./description-list.md offset=102 limit=8`   |
 | 6   | Layout                                 | design      | 110–137 | `Read file_path=./description-list.md offset=110 limit=28`  |
 | 7   | Related information                    | design      | 138–149 | `Read file_path=./description-list.md offset=138 limit=12`  |
-| 8   | Installation                           | development | 150–159 | `Read file_path=./description-list.md offset=150 limit=10`  |
-| 9   | SkyDescriptionListModule               | development | 160–165 | `Read file_path=./description-list.md offset=160 limit=6`   |
-| 10  | SkyDescriptionListComponent            | development | 166–191 | `Read file_path=./description-list.md offset=166 limit=26`  |
-| 11  | SkyDescriptionListContentComponent     | development | 192–213 | `Read file_path=./description-list.md offset=192 limit=22`  |
-| 12  | SkyDescriptionListDescriptionComponent | development | 214–221 | `Read file_path=./description-list.md offset=214 limit=8`   |
-| 13  | SkyDescriptionListTermComponent        | development | 222–229 | `Read file_path=./description-list.md offset=222 limit=8`   |
-| 14  | SkyDescriptionListModeType             | development | 230–239 | `Read file_path=./description-list.md offset=230 limit=10`  |
-| 15  | SkyDescriptionListHarness              | testing     | 240–277 | `Read file_path=./description-list.md offset=240 limit=38`  |
-| 16  | SkyDescriptionListHarnessFilters       | testing     | 278–293 | `Read file_path=./description-list.md offset=278 limit=16`  |
-| 17  | SkyDescriptionListContentHarness       | testing     | 294–343 | `Read file_path=./description-list.md offset=294 limit=50`  |
-| 18  | Code Examples                          | examples    | 344–848 | `Read file_path=./description-list.md offset=344 limit=505` |
+| 8   | Installation                           | development | 150–160 | `Read file_path=./description-list.md offset=150 limit=11`  |
+| 9   | SkyDescriptionListModule               | development | 161–166 | `Read file_path=./description-list.md offset=161 limit=6`   |
+| 10  | SkyDescriptionListComponent            | development | 167–192 | `Read file_path=./description-list.md offset=167 limit=26`  |
+| 11  | SkyDescriptionListContentComponent     | development | 193–214 | `Read file_path=./description-list.md offset=193 limit=22`  |
+| 12  | SkyDescriptionListDescriptionComponent | development | 215–222 | `Read file_path=./description-list.md offset=215 limit=8`   |
+| 13  | SkyDescriptionListTermComponent        | development | 223–230 | `Read file_path=./description-list.md offset=223 limit=8`   |
+| 14  | SkyDescriptionListModeType             | development | 231–240 | `Read file_path=./description-list.md offset=231 limit=10`  |
+| 15  | SkyDescriptionListHarness              | testing     | 241–278 | `Read file_path=./description-list.md offset=241 limit=38`  |
+| 16  | SkyDescriptionListHarnessFilters       | testing     | 279–294 | `Read file_path=./description-list.md offset=279 limit=16`  |
+| 17  | SkyDescriptionListContentHarness       | testing     | 295–344 | `Read file_path=./description-list.md offset=295 limit=50`  |
+| 18  | Code Examples                          | examples    | 345–849 | `Read file_path=./description-list.md offset=345 limit=505` |

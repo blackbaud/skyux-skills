@@ -12,4 +12,4 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example               | Lines   | Read invocation                                     |
 | --- | --------------------- | ------- | --------------------------------------------------- |
-| 1   | Date pipe basic setup | 124–152 | `Read file_path=./date-pipe.md offset=124 limit=29` |
+| 1   | Date pipe basic setup | 125–153 | `Read file_path=./date-pipe.md offset=125 limit=29` |

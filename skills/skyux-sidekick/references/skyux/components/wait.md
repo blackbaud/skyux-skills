@@ -23,7 +23,8 @@ When a focused element on a page is placed in a waiting state, focus automatical
 
 NPM package
 
-`@skyux/indicators`[View in NPM](https://www.npmjs.com/package/@skyux/indicators) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/indicators/src/lib/modules/wait/wait.module.ts#L9)
+`@skyux/indicators`[View in NPM](https://www.npmjs.com/package/@skyux/indicators) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/indicators/src/lib/modules/wait/wait.module.ts#L9)
 
 Install with NPM
 

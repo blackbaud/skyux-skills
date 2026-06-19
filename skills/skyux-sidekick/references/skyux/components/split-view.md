@@ -143,7 +143,8 @@ Don't place content below the split view.
 
 NPM package
 
-`@skyux/split-view`[View in NPM](https://www.npmjs.com/package/@skyux/split-view) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/split-view/src/lib/modules/split-view/split-view.module.ts#L28)
+`@skyux/split-view`[View in NPM](https://www.npmjs.com/package/@skyux/split-view) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/split-view/src/lib/modules/split-view/split-view.module.ts#L28)
 
 Install with NPM
 

@@ -18,14 +18,14 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 2   | Content                  | design      | 18–23   | `Read file_path=./toast.md offset=18 limit=6`    |
 | 3   | Behavior and states      | design      | 24–27   | `Read file_path=./toast.md offset=24 limit=4`    |
 | 4   | Related information      | design      | 28–35   | `Read file_path=./toast.md offset=28 limit=8`    |
-| 5   | Installation             | development | 36–45   | `Read file_path=./toast.md offset=36 limit=10`   |
-| 6   | SkyToastService          | development | 46–99   | `Read file_path=./toast.md offset=46 limit=54`   |
-| 7   | SkyToastConfig           | development | 100–120 | `Read file_path=./toast.md offset=100 limit=21`  |
-| 8   | SkyToastType             | development | 121–149 | `Read file_path=./toast.md offset=121 limit=29`  |
-| 9   | SkyToastInstance         | development | 150–169 | `Read file_path=./toast.md offset=150 limit=20`  |
-| 10  | SkyToastContainerOptions | development | 170–181 | `Read file_path=./toast.md offset=170 limit=12`  |
-| 11  | SkyToastDisplayDirection | development | 182–202 | `Read file_path=./toast.md offset=182 limit=21`  |
-| 12  | SkyToasterHarness        | testing     | 203–238 | `Read file_path=./toast.md offset=203 limit=36`  |
-| 13  | SkyToastHarness          | testing     | 239–356 | `Read file_path=./toast.md offset=239 limit=118` |
-| 14  | SkyToastHarnessFilters   | testing     | 357–372 | `Read file_path=./toast.md offset=357 limit=16`  |
-| 15  | Code Examples            | examples    | 373–637 | `Read file_path=./toast.md offset=373 limit=265` |
+| 5   | Installation             | development | 36–46   | `Read file_path=./toast.md offset=36 limit=11`   |
+| 6   | SkyToastService          | development | 47–100  | `Read file_path=./toast.md offset=47 limit=54`   |
+| 7   | SkyToastConfig           | development | 101–121 | `Read file_path=./toast.md offset=101 limit=21`  |
+| 8   | SkyToastType             | development | 122–150 | `Read file_path=./toast.md offset=122 limit=29`  |
+| 9   | SkyToastInstance         | development | 151–170 | `Read file_path=./toast.md offset=151 limit=20`  |
+| 10  | SkyToastContainerOptions | development | 171–182 | `Read file_path=./toast.md offset=171 limit=12`  |
+| 11  | SkyToastDisplayDirection | development | 183–203 | `Read file_path=./toast.md offset=183 limit=21`  |
+| 12  | SkyToasterHarness        | testing     | 204–239 | `Read file_path=./toast.md offset=204 limit=36`  |
+| 13  | SkyToastHarness          | testing     | 240–357 | `Read file_path=./toast.md offset=240 limit=118` |
+| 14  | SkyToastHarnessFilters   | testing     | 358–373 | `Read file_path=./toast.md offset=358 limit=16`  |
+| 15  | Code Examples            | examples    | 374–638 | `Read file_path=./toast.md offset=374 limit=265` |

@@ -226,7 +226,8 @@ Follow these guidelines to ensure that people can use flyouts with assistive tec
 
 NPM package
 
-`@skyux/flyout`[View in NPM](https://www.npmjs.com/package/@skyux/flyout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/flyout/src/lib/modules/flyout/flyout.service.ts#L36)
+`@skyux/flyout`[View in NPM](https://www.npmjs.com/package/@skyux/flyout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/flyout/src/lib/modules/flyout/flyout.service.ts#L36)
 
 Install with NPM
 

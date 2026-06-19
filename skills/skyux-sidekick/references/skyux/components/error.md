@@ -136,7 +136,8 @@ The error component, including its title and description text, is always centere
 
 NPM package
 
-`@skyux/errors`[View in NPM](https://www.npmjs.com/package/@skyux/errors) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/errors/src/lib/modules/error/error.module.ts#L29)
+`@skyux/errors`[View in NPM](https://www.npmjs.com/package/@skyux/errors) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/errors/src/lib/modules/error/error.module.ts#L29)
 
 Install with NPM
 

@@ -12,5 +12,5 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                            | Lines   | Read invocation                                          |
 | --- | ---------------------------------- | ------- | -------------------------------------------------------- |
-| 1   | Inline delete with repeater        | 173–317 | `Read file_path=./inline-delete.md offset=173 limit=145` |
-| 2   | Inline delete with custom elements | 318–440 | `Read file_path=./inline-delete.md offset=318 limit=123` |
+| 1   | Inline delete with repeater        | 174–318 | `Read file_path=./inline-delete.md offset=174 limit=145` |
+| 2   | Inline delete with custom elements | 319–441 | `Read file_path=./inline-delete.md offset=319 limit=123` |

@@ -19,14 +19,14 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 3   | Options                         | design      | 74–107  | `Read file_path=./phone-field.md offset=74 limit=34`   |
 | 4   | Behavior and states             | design      | 108–121 | `Read file_path=./phone-field.md offset=108 limit=14`  |
 | 5   | Related content                 | design      | 122–133 | `Read file_path=./phone-field.md offset=122 limit=12`  |
-| 6   | Installation                    | development | 134–143 | `Read file_path=./phone-field.md offset=134 limit=10`  |
-| 7   | Setup                           | development | 144–147 | `Read file_path=./phone-field.md offset=144 limit=4`   |
-| 8   | SkyPhoneFieldModule             | development | 148–153 | `Read file_path=./phone-field.md offset=148 limit=6`   |
-| 9   | SkyPhoneFieldComponent          | development | 154–193 | `Read file_path=./phone-field.md offset=154 limit=40`  |
-| 10  | SkyPhoneFieldInputDirective     | development | 194–215 | `Read file_path=./phone-field.md offset=194 limit=22`  |
-| 11  | SkyPhoneFieldCountry            | development | 216–244 | `Read file_path=./phone-field.md offset=216 limit=29`  |
-| 12  | SkyPhoneFieldNumberReturnFormat | development | 245–254 | `Read file_path=./phone-field.md offset=245 limit=10`  |
-| 13  | SkyPhoneFieldHarness            | testing     | 255–330 | `Read file_path=./phone-field.md offset=255 limit=76`  |
-| 14  | SkyPhoneFieldHarnessFilters     | testing     | 331–346 | `Read file_path=./phone-field.md offset=331 limit=16`  |
-| 15  | SkyPhoneFieldInputHarness       | testing     | 347–416 | `Read file_path=./phone-field.md offset=347 limit=70`  |
-| 16  | Code Examples                   | examples    | 417–585 | `Read file_path=./phone-field.md offset=417 limit=169` |
+| 6   | Installation                    | development | 134–144 | `Read file_path=./phone-field.md offset=134 limit=11`  |
+| 7   | Setup                           | development | 145–148 | `Read file_path=./phone-field.md offset=145 limit=4`   |
+| 8   | SkyPhoneFieldModule             | development | 149–154 | `Read file_path=./phone-field.md offset=149 limit=6`   |
+| 9   | SkyPhoneFieldComponent          | development | 155–194 | `Read file_path=./phone-field.md offset=155 limit=40`  |
+| 10  | SkyPhoneFieldInputDirective     | development | 195–216 | `Read file_path=./phone-field.md offset=195 limit=22`  |
+| 11  | SkyPhoneFieldCountry            | development | 217–245 | `Read file_path=./phone-field.md offset=217 limit=29`  |
+| 12  | SkyPhoneFieldNumberReturnFormat | development | 246–255 | `Read file_path=./phone-field.md offset=246 limit=10`  |
+| 13  | SkyPhoneFieldHarness            | testing     | 256–331 | `Read file_path=./phone-field.md offset=256 limit=76`  |
+| 14  | SkyPhoneFieldHarnessFilters     | testing     | 332–347 | `Read file_path=./phone-field.md offset=332 limit=16`  |
+| 15  | SkyPhoneFieldInputHarness       | testing     | 348–417 | `Read file_path=./phone-field.md offset=348 limit=70`  |
+| 16  | Code Examples                   | examples    | 418–586 | `Read file_path=./phone-field.md offset=418 limit=169` |

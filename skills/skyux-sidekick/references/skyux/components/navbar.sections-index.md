@@ -14,12 +14,12 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 
 | #   | Section                     | Tab         | Lines   | Read invocation                                   |
 | --- | --------------------------- | ----------- | ------- | ------------------------------------------------- |
-| 1   | Installation                | development | 10–19   | `Read file_path=./navbar.md offset=10 limit=10`   |
-| 2   | SkyNavbarModule             | development | 20–25   | `Read file_path=./navbar.md offset=20 limit=6`    |
-| 3   | SkyNavbarComponent          | development | 26–33   | `Read file_path=./navbar.md offset=26 limit=8`    |
-| 4   | SkyNavbarItemComponent      | development | 34–51   | `Read file_path=./navbar.md offset=34 limit=18`   |
-| 5   | SkyNavbarHarness            | testing     | 52–101  | `Read file_path=./navbar.md offset=52 limit=50`   |
-| 6   | SkyNavbarHarnessFilters     | testing     | 102–117 | `Read file_path=./navbar.md offset=102 limit=16`  |
-| 7   | SkyNavbarItemHarness        | testing     | 118–219 | `Read file_path=./navbar.md offset=118 limit=102` |
-| 8   | SkyNavbarItemHarnessFilters | testing     | 220–235 | `Read file_path=./navbar.md offset=220 limit=16`  |
-| 9   | Code Examples               | examples    | 236–343 | `Read file_path=./navbar.md offset=236 limit=108` |
+| 1   | Installation                | development | 10–20   | `Read file_path=./navbar.md offset=10 limit=11`   |
+| 2   | SkyNavbarModule             | development | 21–26   | `Read file_path=./navbar.md offset=21 limit=6`    |
+| 3   | SkyNavbarComponent          | development | 27–34   | `Read file_path=./navbar.md offset=27 limit=8`    |
+| 4   | SkyNavbarItemComponent      | development | 35–52   | `Read file_path=./navbar.md offset=35 limit=18`   |
+| 5   | SkyNavbarHarness            | testing     | 53–102  | `Read file_path=./navbar.md offset=53 limit=50`   |
+| 6   | SkyNavbarHarnessFilters     | testing     | 103–118 | `Read file_path=./navbar.md offset=103 limit=16`  |
+| 7   | SkyNavbarItemHarness        | testing     | 119–220 | `Read file_path=./navbar.md offset=119 limit=102` |
+| 8   | SkyNavbarItemHarnessFilters | testing     | 221–236 | `Read file_path=./navbar.md offset=221 limit=16`  |
+| 9   | Code Examples               | examples    | 237–344 | `Read file_path=./navbar.md offset=237 limit=108` |

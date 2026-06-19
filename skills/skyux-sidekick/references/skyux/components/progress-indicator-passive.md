@@ -105,7 +105,8 @@ To display passive progress indicators for items in lists, use dynamic container
 
 NPM package
 
-`@skyux/progress-indicator`[View in NPM](https://www.npmjs.com/package/@skyux/progress-indicator) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/progress-indicator/src/lib/modules/progress-indicator/progress-indicator.module.ts#L48)
+`@skyux/progress-indicator`[View in NPM](https://www.npmjs.com/package/@skyux/progress-indicator) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
+/libs/components/progress-indicator/src/lib/modules/progress-indicator/progress-indicator.module.ts#L48)
 
 Install with NPM
 
