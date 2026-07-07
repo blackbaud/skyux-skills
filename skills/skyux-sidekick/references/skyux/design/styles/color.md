@@ -13,27 +13,27 @@ SKY UX uses text colors to communicate information hierarchy, state, and interac
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/text-color-1.64fb3c643c1e3341eaa16544057f8b14.png)
 
-SKY UX text colors convey hierarchy, state, and interaction.
+SKY UX uses text colors to convey information hierarchy, state, and interaction.
 
-Use HTML headings with heading styles to apply colors to headings for pages, containers, and sections and to subtly distinguish headings from other content. For more information, see [Typography](./typography.md).
+SKY UX uses HTML headings to apply colors to headings for pages, containers, and sections. This subtly distinguishes the headings from other content. For more information, see [Typography](./typography.md).
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/text-color-heading.359a5dd28ab8fe606a3d527ef3832fb4.png)
 
-Do use HTML headings classes to control the color of headings.
+Do use HTML headings to apply color to headings.
 
-SKY UX uses default and deemphasized text colors in typography classes to create a visual hierarchy. Use typography classes to control all text properties, including size and color. For more information, see [Typography](./typography.md).
+SKY UX uses body and deemphasized text colors in [typography](./typography.md) classes to create a visual hierarchy. Use typography classes to control all text properties, including size and color.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/text-color-hierarchy.4e3a2ba17fd20d0429e5f8567f08d685.png)
 
 Do use typography classes to control text properties, such as color.
 
-SKY UX uses an action text color for hyperlinked text and tertiary "link" button text. Use `<a>` or button classes instead of applying this color directly.
+SKY UX uses an action text color for hyperlinked text and tertiary "link" button text. Use `<a>` elements or button classes instead of applying this color directly.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/text-color-links.25dbdd34725464cc192345dff8bd62eb.png)
 
 Do use hyperlinks or SKY UX button classes to include the action text color.
 
-SKY UX uses inverse text on high contrast backgrounds, such as primary [action buttons](../../components/action-button.md).
+SKY UX uses inverse text on high-contrast backgrounds, such as [primary buttons](../../components/button.md).
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/text-color-backgrounds.0cbf9bb05c60d726079e96bd288e48e8.png)
 
@@ -57,7 +57,7 @@ In most cases, communicate status with icons and icon mattes by using SKY UX com
 
 ## Background colors
 
-The page background color is the surface background color for pages behind all content and containers.
+The page background color is the surface color for pages behind all content and containers.
 
 The default container background color is for content containers, such as [boxes](../../components/box.md), [data grids](../../components/data-grid.md), [modals](../../components/modal.md), and [tiles](../../components/tile.md).
 
@@ -71,7 +71,7 @@ The dimmed container background color is a subdued background color for containe
 
 Do use the dimmed container background color for containers of supplemental or supportive content.
 
-The backdrop container background color is a neutral background color for use behind design canvases, WYSIWYG editors, and previews. Use containers for text and other content inside canvases and previews. Don't put text directly on the backdrop container background color.
+The backdrop container background color is a neutral background color for use behind design canvases, WYSIWYG editors, and real-time previews. Use containers for text and other content inside canvases and previews. Don't put text directly on the backdrop container background color.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/background-color-backdrop.45f9c6fb6f4207c5793d01e2c1d790e5.png)
 
@@ -107,7 +107,7 @@ In most cases, communicate status with SKY UX components, such as [label](../../
 
 Do use SKY UX components to communicate status when possible.
 
-In rare cases, use status colors directly to add the meaning of a status to other objects or content. Don't rely on color alone to communicate status; include icons or labels for users with color vision differences.
+In rare cases, apply status colors directly to other objects or content. Don't rely on color alone to communicate status; include icons or labels for users with color vision differences.
 
 <table>
   <tbody>
@@ -184,9 +184,9 @@ Do use icon and icon matte status colors to combine the meaning of a status with
 
 ## Classification colors
 
-Use classification colors to color-code blocks of content when the distinction between types of content is significant to users. For example, use classification colors for different types of events in calendars. Don't rely on color alone to classify content; include icons or labels for users with color vision differences.
+Use classification colors to color-code blocks of content when the distinction between types of content is significant. For example, use classification colors in calendars to differentiate between types of events. Don't rely on color alone to classify content; include icons or labels for users with color vision differences.
 
-Classification colors can be chosen arbitrarily and in any sequence. In some cases, you can let users choose classification colors themselves.
+Classification colors don't carry inherent meaning, so they can be chosen in any sequence. In some cases, you can let users choose classification colors themselves.
 
 Don't use classification colors to communicate statuses, such as danger or success.
 
@@ -200,7 +200,7 @@ Do use classification colors to color-code related content.
 
 ### Combining status and classification colors
 
-When objects need to communicate both a classification and a status, you can combine both concepts. Use classification backgrounds and foregrounds in combination with status backgrounds, borders, and icon colors to represent both dimensions independently.
+When an object needs to communicate both a classification and a status, you can combine both concepts. Use classification backgrounds and foregrounds in combination with status backgrounds, borders, and icon colors to represent both dimensions independently.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/classification-color-with-status-color.f1c3cd45fbcd244d1182d65cfec15339.png)
 
@@ -210,51 +210,51 @@ Do combine status and classification colors when necessary.
 
 ### Category palette for multi-series data
 
-Use the categorical palette to represent discrete categories of data, such as slices in a donut chart or bars in a bar chart. Categorical colors are visually distinct, and all 8 meet 3:1 contrast on container backgrounds.
+Use the category palette to represent discrete categories in multi-series data, such as slices in a donut chart or bars in a bar chart. Category colors are visually distinct, and all 8 meet 3:1 contrast on container backgrounds to support accessibility.
 
-Use categorical colors in their intended order. They use different color families and alternate light and dark luminance colors to better support color vision deficiencies.
+Use category colors in sequential order. They use different color families and alternate light and dark luminance to support users with color vision differences.
 
-In most cases, avoid data visualizations with more than 8 categories. If it necessary to use more than 8, start the categorical palette over again, using the category 1 color for the 9th category and so on.
+Avoid data visualizations with more than 8 categories. In rare cases where more than 8 categories are necessary, start the category palette over again, using the category 1 color for the ninth category and so on.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/viz-multi-series-data.594f868379d1ec4fac517792249db157.png)
 
-Do use the categorical palette colors for multi-series data.
+Do use the category palette for multi-series data, such as bar charts.
 
 ### Category palette for single-series data
 
-For data visualizations with one category or no category, use the category 1 color for the data series.
+Use the category 1 color for single-series data visualizations with only one category or no category, such as line charts.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/viz-single-series-data.2e062d319f5d0fa9ebbeee36207c26f4.png)
 
-Do use the first categorical palette color for single-series data.
+Do use the category 1 color for single-series data.
 
 ### Sequential palette
 
-Use the sequential palette to indicate different magnitudes within a range. For data with fewer than 10 magnitudes, always use the first and last color in the palette for the min/max magnitudes and evenly distribute the remaining values between them.
+Use the sequential palette to indicate different magnitudes in a range. When data has fewer than 10 magnitudes, always use the first and last colors in the palette for the minimum and maximum magnitudes and distribute the remaining values as evenly as possible between them.
 
-In some cases, you can use a linear gradient between the first and last color in the sequential palette to create a visualization with finer distinctions.
+You can use a linear gradient from the first to the last color in the sequential palette to create a visualization with finer distinctions.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/viz-sequential-palette.0da975b86d61e7d888bd198ea6c86428.png)
 
 Do use the sequential palette colors to represent a range of magnitudes.
 
-### Diverging palette
+### Diverging palettes
 
-Use the diverging palettes to indicate positive and negative deviations from a central value or neutral midpoint, such as zero, a baseline, or an average.
+Use the diverging palettes to indicate positive and negative deviations from a central value, such as zero, a baseline, or an average.
 
-Always use the positive and negative diverging palettes together in data visualizations — they aren't replacements or alternatives for the sequential palette colors.
+Always use the positive and negative diverging palettes together in data visualizations. Don't use them as alternatives for the sequential palette.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/viz-diverging-palette.20a2981ba20aa9c05159666e5e49b5db.png)
 
-Do use the diverging palette colors to represent positive and negative ranges at the same time.
+Do use the diverging palette to represent positive and negative ranges at the same time.
 
 ### Chart elements
 
-SKY UX uses consistent neutral colors for chart elements.
+SKY UX uses neutral colors for chart elements.
 
-- Gridlines and tick marks use the softest color, providing a subtle visual aid when interpreting charts.
-- Axis lines are a heavier color with more contrast to define chart boundaries.
-- Chart markers use the heaviest color to provide contrast with the colors of data sets in charts. These markers represent some basis of comparison for the data in charts, such as thresholds, benchmarks, or goals.
+- Gridlines and tick marks use the softest color, which provides a subtle visual aid to help users interpret charts.
+- Axis lines use a heavier color with more contrast to define chart boundaries.
+- Chart markers use the heaviest color to contrast with the colors of data sets. These markers represent the basis of comparison for data in charts, such as thresholds, benchmarks, or goals.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/viz-chart-elements.6c1940ec3943f9fe2923d75eafc8705a.png)
 

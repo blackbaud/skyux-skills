@@ -15,7 +15,7 @@ Use `<h1>` through `<h5>` headings to introduce pages and sections of content wi
 
 Do use headings to create a visual hierarchy on pages.
 
-Use only one `<h1>` heading per page, and use the `sky-theme-font-heading-1` class to style it. This page heading uniquely identifies and describes page content.
+Use one `<h1>` heading per page and style it with the `sky-theme-font-heading-1` class. This heading uniquely identifies and describes the page content.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/typography/headings-page-heading.1a525bd55e537ca3c8157b52492c6ede.png)
 
@@ -27,7 +27,7 @@ Don't use `<strong>` or `<em>` tags to visually emphasize body text in a way tha
 
 Don't use bold or italicized body text to mimic headings.
 
-Don't skip heading levels within a layout's visual hierarchy. Semantic HTML elements help describe the contents of pages and components, so use `<h1>` through `<h5>` headings in their proper order.
+Don't skip heading levels within a layout's visual hierarchy. Semantic HTML elements help describe the contents of pages and components, so use `<h1>` through `<h5>` headings in their sequential order.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/typography/headings-skip-dont.8027505593647da10948ff1949ca64be.png)
 
@@ -43,7 +43,7 @@ Body text styles are used for most content on pages, including labels, data, and
 
 ### Medium body text
 
-Medium body text (`sky-theme-font-body-m`) is the default size for text in components and on pages. It's the main text style for content in components that display information, such as [alerts](../../components/alert.md), [description lists](../../components/description-list.md), and [toasts](../../components/toast.md).
+Use medium body text (`sky-theme-font-body-m`) as the default size for text in components and on pages. It's the main text style for content in components that display information, such as [alerts](../../components/alert.md), [description lists](../../components/description-list.md), and [toasts](../../components/toast.md).
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/typography/m-body-examples.113701ef5bde97fcaa3e23a384e2f4a5.png)
 
@@ -63,11 +63,11 @@ Do use medium emphasized body text to emphasize the primary text in the visual h
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/typography/m-emphasized-long-desc.c14d6a5206cc8f6973948d9b6dc7cb93.png)
 
-Long description lists use medium emphasized body text to emphasize the term relative to the description.
+Long description lists use medium emphasized body text to emphasize a term relative to its description.
 
 ### Medium deemphasized
 
-To create secondary relationships with medium body text, use medium deemphasized body text (`sky-theme-font-body-deemphasized-m`). This style decreases the position of text elements in the visual hierarchy. Use it for metadata and for information within a single entity that supplements the primary identifying element, which can be text, a link, or a text component such as [status indicator](../../components/status-indicator.md).
+Use medium deemphasized body text (`sky-theme-font-body-deemphasized-m`) to create secondary relationships with medium body text. This style decreases the position of text elements in the visual hierarchy. Use it for metadata and for information within a single entity that supplements the primary identifying element, which can be text, a link, or a text component such as [status indicator](../../components/status-indicator.md).
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/typography/m-deemphasized-do.4b68e2d5263d7172488bcdc253c993a1.png)
 
@@ -85,7 +85,7 @@ Do use medium deemphasized body text for labels beside larger text elements.
 
 ### Small body text
 
-Use small body text (`sky-theme-font-body-s`) when space is limited to maximize viewable content. Use this style selectively because it is more difficult to read than medium body text. Don't use small body text for the main content or for long blocks of text.
+Use small body text (`sky-theme-font-body-s`) to maximize viewable content when space is limited. Use this style selectively because it is more difficult to read than medium body text. Don't use small body text for the main content or for long blocks of text.
 
 Don't use small body text to achieve higher density for an entire page or for large sections of a page.
 
@@ -99,7 +99,7 @@ Use small emphasized body text (`sky-theme-font-body-emphasized-s`) to increase 
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/typography/s-emphasized.3762f9d4bdc5ac03caa04c786f34992a.png)
 
-Do use small emphasized body text to increase the visual emphasis of a text element in compositions using small body text when space is limited.
+Do use small emphasized body text to increase the visual emphasis of a text element in compositions that use small body text because space is limited.
 
 ### Small deemphasized
 
@@ -107,15 +107,15 @@ Use small deemphasized body text (`sky-theme-font-body-deemphasized-s`) as label
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/typography/s-deemphasized-desc-list.019f13f1d3c35143671782dbb9d2b2d6.png)
 
-Do Use small deemphasized body text to label medium deemphasized body text.
+Do use small deemphasized body text to label medium deemphasized body text.
 
-In single-entity compositions where multiple text elements represent an item, use small deemphasized body text to decrease the position of text elements in the visual hierarchy to the lowest level. Only use this style to place text at a level below deemphasized medium text when it is necessary to differentiate. It should be used in few cases for metadata relative to other supplemental information.
+In single-entity compositions where multiple text elements represent an item, use small deemphasized body text to decrease the position of text elements in the visual hierarchy to the lowest level. Only use this style to place text at a level below deemphasized medium text when it is necessary to differentiate. For example, use it for metadata relative to other supplemental information.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/typography/s-deemphasized-below-m-deemphasized.55a96f43c31f0f472494676585101809.png)
 
 Do use small deemphasized body text for the lowest level in the visual hierarchy to a level beneath medium deemphasized.
 
-Use small deemphasized body text when medium deemphasized body text isn't sufficient to decrease the position of text elements in the visual hierarchy because the composition includes a large number of text elements.
+Use small deemphasized body text when medium deemphasized body text doesn't sufficiently decrease the position of text elements in the visual hierarchy of a composition that includes a large number of text elements.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/typography/s-deemphasized-m-body.feff506ab7bf11e32310aee4f9978189.png)
 
@@ -131,27 +131,27 @@ Do use large body text for lead paragraphs.
 
 ## Paragraphs
 
-Use the HTML `<p>` element with one or more complete sentences to create a paragraph. This applies the correct line-height for readability.
+Use the HTML `<p>` element to create a paragraph with one or more complete sentences. This element applies the correct line-height for readability.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/typography/para-sentences.d82336ce37c20dd4dca51b9803663dbd.png)
 
-Do use the <p> element with one or more complete sentences.
+Do use the <p> element to create a paragraph.
 
-Within paragraphs, use the `<strong>` tag to create visual and semantic importance. Don't use the `sky-theme-font-emphasized` class or underline words.
+Use the `<strong>` tag within paragraphs to create visual and semantic importance. Don't use the deprecated `sky-font-emphasized` class or underline words.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/typography/para-strong.789fa5e5af1e5a1f458a9d8ef1834487.png)
 
 Do use <strong> to visually and semantically indicate importance.
 
-Within paragraphs, use the `<em>` tag to create visual and semantic emphasis or stress. Don't use the `sky-theme-font-deemphasized` class.
+Use the `<em>` tag within paragraphs to create visual and semantic emphasis or stress. Don't use the deprecated `sky-font-deemphasized` class.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/typography/para-em.ed50a8d5524bf0ee51a1bf01003a6d17.png)
 
 Do use <em> to visually and semantically indicate emphasis or stress.
 
-Don't fully justify paragraphs because it adds white space within the text and makes it harder to read. Instead, use starting alignment for paragraphs.
+Don't fully justify paragraphs because this adds white space within the text and makes it harder to read. Instead, use starting alignment for paragraphs.
 
-Don't indent paragraphs. Paragraphs include vertical margins to separate paragraphs visually and make it easy to understand paragraph breaks.
+Don't indent paragraphs. Vertical margins separate paragraphs visually and make it easy to understand paragraph breaks without indents.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/typography/para-justify-dont.fe7a39feb12c364995f77dc9ada6a91c.png)
 
@@ -165,13 +165,13 @@ Use the [key info component](../../components/key-info.md) to call attention to 
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/typography/display-keyinfo.0dd3fe936dd7e0747bf60a6c5403a09f.png)
 
-The key info component calls attention to key metrics.
+The key info component uses display text styles to call attention to key metrics.
 
 Don't use display text styles as headings. Use semantic HTML headings with heading styles instead.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/typography/display-text-dont.a77a744306899db634b63f7334c54298.png)
 
-Don't use display text styles to create headings.
+Don't use display text styles to mimic headings.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/typography/display-headings-do.8f06c8dd8f9d706df834e68bedfbc10e.png)
 
@@ -193,29 +193,29 @@ Use hint text styles for [persistent inline help](../guidelines/user-assistance.
 
 ### Medium hint text
 
-Use medium hint text (`sky-theme-font-hint-m`) to provide inline help for top-level elements. For example, use medium hint text for page-, form-, and field group-level user assistance. The style is built into the [field group](../../components/field-group.md) component.
+Use medium hint text (`sky-theme-font-hint-m`) to provide persistent inline help for top-level elements. For example, use medium hint text for page-, form-, and field group-level user assistance. The style is built into the [field group](../../components/field-group.md) component.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/typography/hint-m.7bdbe6323af0afd5d59562a46133a264.png)
 
-Do use medium hint text for page-, form-, and field group-level help.
+Do use medium hint text for page-, form-, and field group-level inline help.
 
 ### Small hint text
 
-Use small hint text (`sky-theme-font-hint-s`) to provide inline help for individual form input elements where users require assistance. The style is built into all form field components.
+Use small hint text (`sky-theme-font-hint-s`) to provide persistent inline help for individual form input elements where users require assistance. The style is built into all form field components.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/typography/hint-s.1f8b86a5578146f4fe45285e25901056.png)
 
-Small hint text is built into components for field- and label-level help.
+Small hint text is built into components for field- and label-level inline help.
 
 ## Visual hierarchy
 
 Visual hierarchy helps users quickly understand the structure, importance, and relationships within pages. Typography is a key contributor to visual hierarchy, along with [layout](../guidelines/page-layouts/README.md), [spacing](./spacing.md), and [color](./color.md). Typography uses size and weight to guide user attention and to support efficient scanning in dense interfaces.
 
-For compositions that use three or more elements to represent an item, use a deemphasized and emphasized text, along with spacing, to create a visual hierarchy and establish relationships between text elements.
+For compositions where three or more elements represent an item, use deemphasized and emphasized text styles (along with spacing) to create a visual hierarchy and establish relationships between text elements.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/typography/viz-hierarchy-grouped-examples.7e6360f4b793393c42c24c75f96ebfb0.png)
 
-Grouped text compositions create a visual hierarchy by using a combination of body styles.
+Grouped text compositions use a combination of body styles to create a visual hierarchy.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/typography/viz-hierarchy-dont.42fea0b0b9ca69c32dbc89c0c481442e.png)
 
@@ -229,19 +229,19 @@ Do use emphasized text to increase the position of a primary text element in a g
 
 ### Typeface
 
-SKY UX uses BLKB Sans, a custom typeface that is designed to feel modern and techie but still friendly. Its visual characteristics are crafted to ensure that it is flexible and readable across use cases on screens and on small screen sizes. This includes both higher-density information display and longer-form reading.
+SKY UX uses BLKB Sans, a custom typeface that is designed to feel modern and techie but still friendly. Its visual characteristics are crafted to ensure that text is flexible and readable across use cases on screens and on small screen sizes. This includes both higher-density information display and longer-form reading.
 
 BLKB Sans is used for all interface text, including headings, body copy, UI labels, and data-heavy content. Consistent use of the typeface reinforces visual cohesion, improves scannability, and ensures predictable rendering across platforms and browsers.
 
-### Type size ramp
+### Font size ramp
 
 Font sizes are defined using rem units to support responsiveness, accessibility, and user-defined browser preferences. These relative units ensure that text scales consistently when users adjust default font sizes, which supports inclusive design and accessibility requirements.
 
-The font size ramp uses the major second ratio (1..125) for the progression of font sizes. It is optimized for efficient information density without sacrificing readability. Smaller steps between sizes allow for nuanced hierarchy in data-rich interfaces, while still scaling appropriately for long-form oriented experiences.
+The font size ramp uses the major second ratio (1.125) for the progression of font sizes. It is optimized for efficient information density without sacrificing readability. Smaller steps between sizes allow for nuanced hierarchy in data-rich interfaces while still scaling appropriately for long-form oriented experiences.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/typography/font-size-ramp.b6c41a3f2717a97446cbac7334db9ad9.png)
 
-The font size ramp uses the major second ratio (1..125) for the progression of font sizes.
+The font size ramp uses the major second ratio (1.125) for the progression of font sizes.
 
 ## Headings
 

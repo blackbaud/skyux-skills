@@ -9,31 +9,31 @@ This API was significantly updated in SKY UX 14. For the previous version, see t
 
 ## Container borders
 
-The container default border wraps content containers to separate them from their surroundings. It is built into SKY UX container components, such as [boxes](../../components/box.md), [modals](../../components/modal.md), and [tiles](../../components/tile.md).
+The default container border wraps content containers to separate them from their surroundings. It is built into SKY UX container components, such as [boxes](../../components/box.md), [modals](../../components/modal.md), and [tiles](../../components/tile.md).
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/border/container-border.69856fc1df51b04696e1e56b3bba23c9.png)
 
-Use the container default border to separate containers from their surroundings.
+Use the default container border to separate content containers, such as boxes, from their surroundings.
 
 ## Dividers
 
-Use the default divider border to separate heterogeneous sections or regions of a page. It is built into SKY UX components, such as [split view](../../components/split-view.md), [tabs](../../components/tabs.md), and [toolbar](../../components/toolbar.md).
+Use the default divider border to separate disparate sections or regions of a page. This border style is built into SKY UX components, such as [split view](../../components/split-view.md), [tabs](../../components/tabs.md), and [toolbar](../../components/toolbar.md).
 
-Use the soft divider border to separate homogenous sections or rows in a container. Use this border to define instances of content that repeat a pattern, such as items in a list. It is built into SKY UX components, such as [data grid](../../components/data-grid.md), [repeater](../../components/repeater.md), and [selection modal](../../components/selection-modal.md).
+Use the soft divider border to separate related sections or rows in a container. Use this border style to define instances of content that repeat a pattern, such as items in a list. It is built into SKY UX components, such as [data grid](../../components/data-grid.md), [repeater](../../components/repeater.md), and [selection modal](../../components/selection-modal.md).
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/border/divider.618667955ef64b63cb4aeba4bb00211c.png)
 
-Use the default divider border to separate sections of a page, and use the soft divider border to separate rows in a list.
+Do use the default divider border to separate sections of a page and the soft divider border to separate rows in a list.
 
 ## Status borders
 
-Use SKY UX components, such as [alerts](../../components/alert.md) and [toasts](../../components/toast.md), to communicate statuses.
+Border styles that communicate statuses are built into SKY UX components, such as [alerts](../../components/alert.md) and [toasts](../../components/toast.md).
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/border/status-border.761d0cebb9b568296b758b05658cb38f.png)
 
 Use alerts to communicate statuses.
 
-To communicate statuses on objects or blocks of content, combine status background colors and status border classes for the appropriate status type.
+To communicate statuses on other objects or blocks of content, combine status border classes with status background colors for the appropriate status type.
 
 ## Border widths
 
@@ -43,13 +43,13 @@ Use the emphasized border width to add visual emphasis to elements.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/border/border-width-emphasized.db1df2c8664d7d6d48406d291df0e8aa.png)
 
-Use the emphasized border width modifier to add emphasis to an element.
+Use the emphasized border width to add emphasis to an element.
 
-Use the accent border width to increase the visual emphasis on elements that have a meaningful border color in the visual hierarchy. Only apply the accent border width to one side of the elements.
+Use the accent border width to increase the visual emphasis on elements that have a meaningful border color. Only apply the accent border width to one side of the elements.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/border/border-width-accent.5e2c0b44e057a48ee22c80cd48827fb4.png)
 
-Use the accent border width modifier to draw attention to an element, such as a status, that has a meaningful border color.
+Use the accent border width to draw attention to an element, such as a status, that has a meaningful border color.
 
 ## Border styles
 
@@ -59,31 +59,29 @@ SKY UX includes border styles in components and border classes. In rare cases, y
 
 SKY UX uses different border radii for different interactive elements and containers.
 
-The extra small border radius is used for very small elements, such as [tokens](../../components/tokens.md).
+SKY UX uses the extra small border radius for very small elements, such as [tokens](../../components/tokens.md).
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/border/border-radii-xs.f5ecffb9edc56d27c0bd85384d01e4e7.png)
 
 Very small elements, such as tokens, use the extra small border radius.
 
-The small border radius is used for most interactive elements, such as [buttons](../../components/button.md).
+SKY UX uses the small border radius for most interactive elements, such as [buttons](../../components/button.md).
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/border/border-radii-s.0cbf9bb05c60d726079e96bd288e48e8.png)
 
-Most interactive elements in SKY UX use the small border radius.
+Buttons and most other interactive elements in SKY UX use the small border radius.
 
-The medium border radius is used for overlay containers, such as [dropdown menus](../../components/dropdown.md).
+SKY UX uses the medium border radius for overlay containers, such as [dropdown menus](../../components/dropdown.md).
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/border/border-radii-m.9f58ef347814d79523910174cd4741dd.png)
 
 Overlay containers, such as dropdown and input menus, use the medium border radius.
 
-The pill border radius is used for rounded rectangles, such as [labels](../../components/label.md).
-
-The round border radius is used for circular elements, such as [avatars](../../components/avatar.md).
+SKY UX uses the pill border radius for rounded rectangles, such as [labels](../../components/label.md), and it uses the round border radius for circular elements, such as [avatars](../../components/avatar.md).
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/border/border-radii-pill.963768c55807586c4acde0239714224b.png)
 
-Rounded rectangles, such as labels, use the pill border radius, and circular elements, such as avatars, use the round border radius.
+Rounded rectangles, such as labels, use the pill border radius, while circular elements, such as avatars, use the round border radius.
 
 ## Containers
 

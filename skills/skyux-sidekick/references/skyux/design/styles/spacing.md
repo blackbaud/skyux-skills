@@ -9,13 +9,13 @@ This API was significantly updated in SKY UX 14. For the previous version, see t
 
 ## Spacing system basics
 
-The SKY UX spacing system defines how space communicates structure, hierarchy, and meaning across products. Spacing is built on a rem-based (8pt) scale to ensure consistency, accessibility, and predictable behavior across devices and contexts.
+The SKY UX spacing system defines how space communicates structure, hierarchy, and meaning across products. Spacing is built on a rem-based (8pt) scale that ensures consistency, accessibility, and predictable behavior across devices and contexts.
 
-Spacing is handled intrinsically by components wherever possible. This allows common patterns to feel cohesive and effortless out of the box. The system also provides clear spacing guidelines for composing content within containers and page regions. These guidelines help designers and engineers use spacing flow to express relationships between elements in a consistent and intentional way. Together, these principles ensure that spacing is not just visual decoration and that it provides a shared language that articulates content and layout.
+Components handle spacing intrinsically wherever possible so that common patterns feel cohesive and effortless out of the box. Spacing guidelines help designers and engineers use spacing flow to express relationships between elements in a consistent, intentional way when composing content in containers and page sections. Spacing principles ensure that spacing is not just visual decoration and that it provides a shared language that articulates content and layout.
 
 ## Page-level spacing
 
-The [page component](../../components/page/README.md) supports standardized layouts and spacing for the main page elements. This creates consistent, harmonious visual displays when users navigate between pages.
+The [page component](../../components/page/README.md) supports standardized layouts and spacing for the main page elements. This creates a consistent, harmonious visual display when users navigate between pages.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/page-blocks-layout.f7860be5c278dda0278b434cb0de2dec.png)
 
@@ -23,7 +23,7 @@ Do use the page component for consistent page padding and layouts.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/xs-page-layout-blocks.c9aeb0e4887ffcbdfb9c4ff81c3f0143.png)
 
-Do use the page component for consistent page padding that automatically responds to smaller screen sizes.
+Do use the page component to automatically adjust padding for different screen sizes.
 
 ## Page layouts and regions
 
@@ -31,7 +31,7 @@ Use [tile dashboards](../../components/tile.md) and [fluid grids](../../componen
 
 When choosing a layout, consider the type of content and how users interact with it. For pages with dynamic or time-sensitive content, organize containers to emphasize tasks and optimize space usage across screen sizes. For pages that primarily display information, preserve the relative position of containers to support scanning and comprehension.
 
-Tile dashboards and fluid grids support responsive layouts. When building page layouts, account for different screen sizes and viewports to ensure the intended structure is maintained across breakpoints. For details on breakpoint behavior and layout rules, see the [tile](../../components/tile.md) and [fluid grid](../../components/fluid-grid.md) documentation.
+Tile dashboards and fluid grids support responsive layouts. When building page layouts, account for different screen sizes and viewports to ensure the intended structure is maintained across breakpoints. For breakpoint behavior and layout rules, see the [tile](../../components/tile.md) and [fluid grid](../../components/fluid-grid.md) documentation.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/container-fluid-grid-responsive.ac64262a2c1d84492279adadea90c4f5.png)
 
@@ -43,11 +43,11 @@ Containers stacked in columns have different heights based on their contents.
 
 ## Container padding
 
-Containers require padding to set content apart from the container edge. The amount of padding depends on the container size. In general, SKY UX components handle padding. If you need to apply spacing classes manually within elements, only use uniform container padding explicitly when you are creating a custom container surface.
+Containers require padding to set content apart from their edges. The amount of padding depends on the container size. In general, SKY UX components handle padding. If you need to apply spacing classes manually within elements, only use uniform container padding explicitly when you are creating a custom container surface.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/container-padding.23a90c2bc7b4e52aebd45564027a14c1.png)
 
-Do use padding classes to add an even amount of space around the inside edges of containers.
+Do use padding classes for even spacing around the inside edges of containers.
 
 ### Extra small and small
 
@@ -55,7 +55,7 @@ Extra small and small container padding is typically applied to nested container
 
 Example:
 
-- [Alert component](../../components/alert.md)
+- [Alert](../../components/alert.md)
 
 ### Medium
 
@@ -63,26 +63,26 @@ Medium container padding helps create a comfortable reading boundary without ele
 
 Examples:
 
-- [Split view component](../../components/split-view.md) content panel
-- [Tab component](../../components/tabs.md) content panel
+- [Split view](../../components/split-view.md) content panel
+- [Tab](../../components/tabs.md) content panel
 
 ### Large and extra large
 
-Large and extra-large container padding establishes a strong internal boundary so content does not feel constrained or edge-bound. It's typically used within containers or content regions that act as a primary content region or surface, such the content panel on [split view page layouts](../guidelines/page-layouts/split-view-page.md) . These containers are visually prominent and tend to house a large amount of cotent.
+Large and extra-large container padding establishes a strong internal boundary so that content does not feel constrained or edge-bound. It's typically used within containers or content regions that act as a primary content region or surface, such the content panel on [split view page layouts](../guidelines/page-layouts/split-view-page.md) . These containers are visually prominent and tend to house a large amount of cotent.
 
 Large example:
 
-- [Popover component](../../components/popover.md)
+- [Popover](../../components/popover.md)
 
 Extra large examples:
 
-- [Action button component](../../components/action-button.md)
-- [Box component](../../components/box.md)
-- [Flyout component](../../components/flyout.md) content panel
-- [Modal component](../../components/modal.md) content panel
-- [Tile component](../../components/tile.md)
+- [Action button](../../components/action-button.md)
+- [Box](../../components/box.md)
+- [Flyout](../../components/flyout.md) content panel
+- [Modal](../../components/modal.md) content panel
+- [Tile](../../components/tile.md)
 
-The guidelines that follow apply to dense, structured content compositions within containers and regions to support specific tasks and workflow. They don't apply to long-form, narrative, or editorial page layouts for reading, reference, or promotion.
+The guidelines that follow apply to dense, structured content compositions within containers and regions to support tasks and workflows. They don't apply to long-form, narrative, or editorial page layouts for reading, reference, or promotion.
 
 ## Spacing within content regions
 
@@ -90,33 +90,29 @@ Intra-content spacing applies to content within containers or other bounded cont
 
 The guidance below focuses on applying vertical and horizontal spacing within content regions, such as panels, boxes, and data grid cells. It doesn't address component chrome, such as box headers, which manage their own structural spacing. Apply these patterns consistently and explicitly wherever possible.
 
-### Apply spacing
+### Spacing values
 
-Applying spacing follows a defined relationship ladder based on spacing value: None\* → Extra small → Small → Medium\*\*→ Large → Extra large → Extra, extra large\*\*. As elements become less closely related, spacing increases accordingly.
+Spacing between elements indicates how closely related the elements are. The closer the relationship, the less spacing is required. The available spacing values are: None, Extra small, Small, Medium, Large, Extra large, and Extra, extra large. None only applies to vertical spacing, while Medium and Extra, extra large only apply to horizontal spacing.
 
-Spacing is applied between adjacent block-level elements within a content region. Specific spacing values and usage are determined by the vertical or horizontal orientation of the content construction. Within each orientation, a matrix defines the exact spacing to apply for common content patterns. To ensure consistent and predictable results, follow each pattern as written.
+Apply spacing between adjacent block-level elements in a content region. The vertical or horizontal orientation of the content determines which spacing values to use. For each orientation, a matrix defines the exact spacing to apply for common content patterns. For consistent, predictable results, follow these patterns.
 
 Components that manage their own internal spacing are treated as a single block and are not subdivided by these rules.
 
-_\*Applies to vertical spacing rules only_
-
-_\*\*Applies to horizontal spacing rules only_
-
 ## Vertical spacing
 
-Vertical spacing controls the space between stacked elements within a content region. It establishes visual hierarchy and reading flow by increasing or decreasing space based on how closely related elements are. Apply vertical spacing between adjacent block-level elements according to the defined spacing ladder and pattern matrices below.
+Vertical spacing controls the space between stacked elements in a content region. It establishes a visual hierarchy and reading flow by increasing or decreasing space based on how closely related elements are. Apply vertical spacing between adjacent block-level elements based on the following guidance:
 
 <table>
   <tbody>
     <tr>
       <th>
-Space size (stacked)
+Spacing value
 </th>
       <th>
-Type and usage
+Usage
 </th>
       <th>
-Apply between (separates)
+Separates
 </th>
     </tr>
     <tr>
@@ -129,13 +125,13 @@ Apply between (separates)
 
 **Single entity**
 
-Use when elements form a single semantic entity.
+Use with elements that form a single semantic entity.
 
 </td>
       <td>
 
-- Label and value
-- Name and address
+- Labels and values
+- Names and addresses
 
 </td>
     </tr>
@@ -149,13 +145,13 @@ Use when elements form a single semantic entity.
 
 **Bound unit**
 
-Use between properties or information about a single subject.
+Use with properties or information about a single subject.
 
 </td>
       <td>
 
-- Small sets of information about one entity. This can be identifying text plus any metadata, supplemental details, or status information.
-- Below small headings (H4, H5) and content
+- Small sets of information about an entity, such as identifying text and its metadata, supplemental details, or status information
+- Small headings (H4, H5) and content
 
 </td>
     </tr>
@@ -169,13 +165,13 @@ Use between properties or information about a single subject.
 
 **Group**
 
-Use between closely related elements in the same group.
+Use with closely related elements in the same group.
 
 </td>
       <td>
 
-- Homogenous items in a set, such as a list of links
-- Below headings (H2, H3) and content
+- Homogenous items in a set, such as links in a list
+- Headings (H2, H3) and content
 
 </td>
     </tr>
@@ -189,13 +185,13 @@ Use between closely related elements in the same group.
 
 **Section**
 
-Use to separate distinct, peer groups of content.
+Use with distinct, peer groups of content.
 
 </td>
       <td>
 
 - Sections and headings
-- Distinct or heterogenous content related to a parent group.
+- Distinct or heterogenous content related to a parent group
 
 </td>
     </tr>
@@ -209,12 +205,12 @@ Use to separate distinct, peer groups of content.
 
 **Separation**
 
-Use within a container for a strong separation between loosely related regions or between content and container-level actions.
+Use with loosely related regions in a container or with content and container-level actions to create a strong separation.
 
 </td>
       <td>
 
-- Clearly separating new or distinct content
+- New or distinct content from other content
 - Elements set off for more attention within a container, such as drill-in links
 
 </td>
@@ -224,25 +220,21 @@ Use within a container for a strong separation between loosely related regions o
 
 ### None
 
-When elements form a vertically oriented, single entity, such as a label and value, no spacing is needed between them. Use when elements form a single, continuous semantic unit and should read as one phrase or concept without visual separation.
+Use no spacing classes when elements form a single semantic entity that should read as one phrase or concept without visual separation. Spacing classes aren't needed when elements form a single, vertically oriented unit. Apply between:
 
-Apply between:
-
-- Label and value
-- Name and address
+- Labels and values
+- Names and addresses
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/none-vertical.a027cb3a940ffc5fd7bd0b06a04f5e02.png)
 
-Do use no spacing for single-semantic units
+Do use no spacing for single semantic entities.
 
 ### Extra small
 
-Use between adjacent elements that form a bound relationship within the same object, such as bound units.
+Use extra small spacing classes when adjacent elements form a bound relationship within the same object. Apply between:
 
-Apply between:
-
-- Small sets of information about one entity. This can be identifying text plus any metadata, supplemental details, or status information.
-- Below small headings (H4, H5) and content
+- Small sets of information about an entity, such as identifying text and its metadata, supplemental details, or status information
+- Small headings (H4, H5) and content
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/xs-vertical.7821f855e7ecb21af269c8a187072c71.png)
 
@@ -250,12 +242,10 @@ Do use extra small spacing for closely related elements that form a bound unit.
 
 ### Small
 
-Use content (small) spacing as the default spacing flow between elements that belong to the same group and contribute equally to its meaning.
+Use small spacing classes as the default spacing flow when elements belong to the same group and contribute equally to the meaning. Apply between:
 
-Apply between:
-
-- Homogenous items in a set, such as a list of links, [description list](../../components/description-list.md) pairs, and multiple [key info](../../components/key-info.md) instances
-- Below headings (H2, H3) and content
+- Homogenous items in a set, such as links in a list, [description list](../../components/description-list.md) pairs, and [key info](../../components/key-info.md) items
+- Headings (H2, H3) and content
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/s-vertical.f8159caa378a9d88626c7d4cbda7002b.png)
 
@@ -263,12 +253,10 @@ Do use content spacing when elements belong to the same content group and contri
 
 ### Large
 
-Use section (large) spacing to separate distinct, peer sections of content within a container or page region.
+Use large spacing classes when distinct peer sections of content appear in a container or page section. Apply between:
 
-Apply between:
-
-- Sections with headings
-- Distinct or heterogenous content related to a parent group.
+- Sections and headings
+- Distinct or heterogenous content related to a parent group
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/l-vertical-1.1868862a7245ae435da1bc911cb78caa.png)
 
@@ -280,11 +268,9 @@ Don't use section spacing to articulate close relationships
 
 ### Extra large
 
-Use extra large spacing between all content groups and their drill-in links.
+Use extra large spacing classes when a strong separation is required for loosely related regions in a container or for content and container-level actions. Apply between:
 
-Apply between:
-
-- Clearly separating new or distinct content
+- New or distinct content from other content
 - Elements set off for more attention within a container, such as drill-in links
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/xl-vertical.eddbb0b69979b4bf6065f24a1bb75571.png)
@@ -293,10 +279,10 @@ Do separate drill-in links from content groups using extra large spacing to sign
 
 ## Horizontal spacing
 
-Horizontal spacing expresses the strength of visual coupling between adjacent elements that are conceptually related. SKY UX supports two horizontal spacing approaches that can be used together:
+Horizontal spacing controls the space between side-by-side elements in a content region. It visually conveys the strength of the connection between related elements that are adjacent. SKY UX supports two horizontal spacing approaches that can be used together:
 
-1.  Fluid grid is a native layout component used to structure responsive page-level and container-level layouts.
-2.  Inline spacing classes apply consistent horizontal margins between elements. They are intended to be used in tandem with native CSS responsive frameworks, such as Flexbox.
+1.  Use [fluid grids](../../components/fluid-grid.md) to structure responsive page-level and container-level layouts.
+2.  Use inline spacing classes with native CSS responsive frameworks, such as Flexbox, to apply consistent horizontal spacing between elements.
 
 ### Horizontal spacing with fluid grid
 
@@ -304,19 +290,19 @@ Use [fluid grids](../../components/fluid-grid.md) to organize content groups int
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/horizontal-fluid-grid.b901c3d20430a646e45bbe392b52833f.png)
 
-Do use fluid grids to horizontally separate content into equally distributed columns
+Do use fluid grids to horizontally separate content into equally distributed columns.
 
 ### Fluid grid spacing application by size
 
-Fluid grid spacing application by size defines how gutter sizes control the horizontal separation between columns and content groups. Gutter size are selected based on the relationship between adjacent content and the visual density of the layout. The guidance below describes when to use each gutter size and how it affects content grouping, alignment, and readability within fluid grid layouts.
+Fluid grid spacing application by size defines how gutter sizes control the horizontal separation between columns and content groups. Select gutter sizes based on the relationship between adjacent content and the visual density of the layout. The guidance below describes when to use each gutter size and how it affects content grouping, alignment, and readability within fluid grid layouts.
 
 ### Small gutters
 
-Use small gutters to separate content in containers when the content has visible borders. For example, use small gutters between side-by-side input boxes in modals.
+Use small gutters to separate content in containers, such as modals, when the content has visible borders. For example, use small gutters between side-by-side input boxes.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/small-gutters.7f9cc211b06c6b3d5a686a2b0cb5ca6a.png)
 
-Do use small gutters to separate input boxes in horizontal layouts. Inputs can use unbalanced column widths to match highly predictable lengths of user input.
+Do use small gutters to separate content with visible borders, such as input boxes, in horizontal layouts.
 
 ### Large gutters
 
@@ -340,19 +326,19 @@ Disable margins when fluid grids are in containers that include padding.
 
 ### Horizontal spacing with inline spacing classes
 
-When content widths are not dynamic and don't need to resize with the width of their container or content region, use inline spacing classes instead of fluid grid. The amount of horizontal spacing applied depends on the relationship between elements. Like vertical spacing, horizontal spacing communicates relationships and indicates how tightly related elements should read as a unit, even as visual footprint changes.
+When content widths are static and don't change with the width of their container or content region, use inline spacing classes instead of fluid grid. The class to apply depends on the relationship between elements. Like vertical spacing, horizontal spacing communicates relationships and indicates how tightly related elements should read as a unit, even as visual footprint changes.
 
 <table>
   <tbody>
     <tr>
       <th>
-Space size (inline)
+Spacing value
 </th>
       <th>
-Type and usage
+Usage
 </th>
       <th>
-Apply between (separates)
+Separates
 </th>
     </tr>
     <tr>
@@ -365,13 +351,13 @@ Apply between (separates)
 
 **Single entity (inline)**
 
-Use between properties or information that reads as a single unit.
+Use with properties or information that reads as a single unit.
 
 </td>
       <td>
 
-- Label and value
-- Small/medium size icon and single-line label
+- Labels and values
+- Small/medium icons and single-line labels
 
 </td>
     </tr>
@@ -385,12 +371,12 @@ Use between properties or information that reads as a single unit.
 
 **Tight pairing**
 
-Use for strong visual pairing between elements.
+Use with elements for strong visual pairing.
 
 </td>
       <td>
 
-- Small/medium size icon and multi-line label
+- Small/medium icons and multiple lines of stacked text
 
 </td>
     </tr>
@@ -404,13 +390,13 @@ Use for strong visual pairing between elements.
 
 **Pairing**
 
-Use for visual pairing between elements.
+Use with elements for visual pairing.
 
 </td>
       <td>
 
-- Small spot illustration and label
-- Large icon and label
+- Small spot illustrations and labels
+- Large icons and labels
 
 </td>
     </tr>
@@ -424,12 +410,12 @@ Use for visual pairing between elements.
 
 **Loose pairing**
 
-Use for pairing with increased visual separation between larger illustrative elements and text.
+Use with larger illustrative elements and text for pairing with increased visual separation.
 
 </td>
       <td>
 
-- Medium/large spot illustration and label
+- Medium/large spot illustrations and labels
 
 </td>
     </tr>
@@ -443,13 +429,13 @@ Use for pairing with increased visual separation between larger illustrative ele
 
 **Grouped sections**
 
-Use for visual separation within a container between related regions or groups of content.
+Use with related regions or groups of content in a container for visual separation.
 
 </td>
       <td>
 
-- Separates related content groups or regions
-- Extra large spot illustration and label
+- Extra large spot illustrations and text
+- Horizontally oriented label and value pairs
 
 </td>
     </tr>
@@ -463,13 +449,13 @@ Use for visual separation within a container between related regions or groups o
 
 **Distinct sections**
 
-Use for a stronger visual boundary between elements or regions that are conceptually related.
+Use with elements or regions that are conceptually related for a stronger visual boundary.
 
 </td>
       <td>
 
-- Separates distinct content groups or regions
-- Spacing between label and value pairs
+- Distinct peer content groups
+- Vertically oriented label and value pairs
 
 </td>
     </tr>
@@ -478,12 +464,10 @@ Use for a stronger visual boundary between elements or regions that are conceptu
 
 ### Extra small
 
-Use extra small inline spacing between adjacent elements that form a bound relationship within the same group, such as small icon and a single line of text.
+Use extra small inline spacing classes when adjacent elements form a bound relationship in the same group, such as small icons and a single line of text. Apply between:
 
-Apply between:
-
-- Label and value
-- Small/medium icon and single-line label
+- Labels and values
+- Small or medium icons and single-line labels
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/xs-horizontal.a51ae3cf2b4202736b6b1bd11c81f4d6.png)
 
@@ -491,11 +475,9 @@ Do use extra small inline spacing between strongly bonded elements.
 
 ### Small
 
-Use small inline spacing to tightly pair smaller UI elements and visually link them. For example, use small inline spacing between small icons and multiple lines of stacked text.
+Use small inline spacing classes when tight pairing is necessary to visually link smaller UI elements. Apply between:
 
-Apply between:
-
-- Small/medium size icon and multi-line label
+- Small or medium icons and multiple lines of stacked text
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/s-horizontal-1.9f900d140a5cf0ffcee0ef17e995f7f9.png)
 
@@ -507,12 +489,10 @@ Do use small inline spacing to distinguish multiple larger UI elements from each
 
 ### Medium
 
-Use medium inline spacing to distinguish large UI elements from each other while still visually linking them.
+Use medium inline spacing classes when you need to distinguish large UI elements from each other while still visually linking them. Apply between:
 
-Apply between:
-
-- Large icon and label
-- Small spot illustration and label
+- Large icons and labels
+- Small spot illustrations and labels
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/m-horizontal-1.c6f4c34a48131d7eab211e525fdad2f2.png)
 
@@ -524,11 +504,9 @@ Do use medium inline spacing to distinguish multiple larger UI elements from eac
 
 ### Large
 
-Use large inline spacing to visually separate larger UI elements from each other while keeping them loosely linked.
+Use large inline spacing classes when larger UI elements need visual separation but remain loosely linked. Apply between:
 
-Apply between:
-
-- Medium or large spot illustration and text
+- Medium or large spot illustrations and text
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/l-horizontal.a701405831e7fdcd7c41fbc43f5ae6b3.png)
 
@@ -536,11 +514,9 @@ Do use large inline spacing to distinguish medium or large spot illustrations fr
 
 ### Extra large
 
-Use extra large inline spacing to provide visual separation between content sections within a container or region.
+Use extra large inline spacing classes when visual separation is necessary between content sections within a container or region. Apply between:
 
-Apply between:
-
-- Extra large spot illustration and text
+- Extra large spot illustrations and text
 - Horizontally oriented label and value pairs
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/xl-horizontal-1.75250a758fa51463317dd94863c1524a.png)
@@ -553,12 +529,10 @@ Do use extra large inline spacing to separate horizontally oriented label and va
 
 ### Extra, extra large
 
-Use extra, extra large inline spacing to separate borderless sections of loosely related content and sections of unrelated content that require significant horizontal spacing to prevent elements from running together visually.
+Use extra, extra large inline spacing classes when borderless sections of loosely related content or sections of unrelated content require separation. This prevents them from running together visually. Apply between:
 
-Apply between:
-
-- Vertically oriented label and value pairs
 - Distinct peer content groups
+- Vertically oriented label and value pairs
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/xxl-horizontal-1.a2511d3dbc294ca5d7dd25b2b92875b7.png)
 
@@ -590,31 +564,31 @@ Example of a composed container showing how the full spacing hierarchy works tog
 
 ## Form spacing
 
-Form fields generally flow vertically, and input boxes and other SKY UX form field components provide styling, ordering, and positioning within forms. To add bottom margins that ensure consistent vertical spacing between form fields, use vertical margin-bottom spacing in most cases.
+Form fields generally flow vertically, and [input boxes](../../components/input-box.md) and other SKY UX form field components provide styling, ordering, and positioning within forms. To add bottom margins that ensure consistent vertical spacing between form fields, use vertical `margin-bottom` spacing in most cases. For more information about form construction and patterns, see the [SKY UX form design guidelines](../guidelines/form-design.md).
 
 **Don't use stacked when a form field:**
 
-- Is the last field before a field group
+- Is the last field before a [field group](../../components/field-group.md)
 - Is the last field on a form
 - Is followed by one or more conditional fields. Use `sky-theme-margin-bottom-s` instead for closely related fields.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/form-spacing.401b024f3fd4cbbbccbd905661a3bd83.png)
 
-### Vertical spacing in form compositions
+### Vertical spacing in forms
 
 #### Field groups
 
-To separate forms into groups or sections, use [field groups](../../components/field-group.md). This component wraps form fields in semantic and visual groups with headings.
+To separate forms into groups or sections, use [field groups](../../components/field-group.md). This wraps form fields in semantic and visual groups with headings.
 
 #### Applying vertical spacing in forms
 
-Forms are dense, content-rich UI compositions, which causes amplifies vertical tightnessmore than in other compositions. Spacing within forms is handled by SKY UX components. For more information, see the documentaiton for specific components.
+Forms are dense, content-rich UI compositions, which amplifies the vertical tightness. SKY UX components handle spacing in forms. For more information, see the documentation for specific components.
 
 For guidance on adding non-form control content to a form, see the [content container guidelines](../guidelines/content-containers.md).
 
-### Applying horizontal spacing in form compositions
+### Applying horizontal spacing in forms
 
-On small, medium, and large modals, form fields should generally extend the full width of the modal. The most common exception is closely related fields, such as street address and ZIP code fields, that can flow horizontally. Use a fluid grid layout with small gutters for these fields to provide horizontal margins and ensure that the form scales properly to smaller viewports.
+On small, medium, and large modals, form fields should generally extend the full width of the modal. The most common exception is closely related fields, such as street address and ZIP code fields, that can flow horizontally. Use a [fluid grid](../../components/fluid-grid.md) layout with small gutters for these fields to provide horizontal margins and ensure that the form scales properly to smaller viewports.
 
 The most common multi-column layouts are 1/2 width (6 fluid grid columns) and 1/3 width (4 fluid grid columns). However, single-line inputs can use different column widths when the form fields are related and the expected length of user input is predictable. Use a fluid grid layout with small gutters to provide horizontal margins and ensure that the form scales properly to smaller viewports.
 
@@ -624,7 +598,7 @@ Do use small gutters in fluid grids to separate input boxes in horizontal layout
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/vertical-spacing-in-forms.1db123cec75fee39e48c30bcd049639f.png)
 
-Checkbox and radio button groups with short labels can be displayed horizontally using fluid grid.
+Do use fluid grid to horizontally display checkbox and radio button groups with short labels.
 
 ## Stacked margin
 
