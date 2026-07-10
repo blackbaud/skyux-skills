@@ -23,7 +23,8 @@ SKY UX components, available as Angular components, services, and modules, allow
 - [Confirm](./confirm.md) - The confirm component launches simple confirmation dialogs for users to confirm actions.
 - [Country field](./country-field.md) - The country field component creates a text input for users to enter search criteria and select a country.
 - [Data entry grid](./data-entry-grid.md) - Data entry grids provide a spreadsheet-like user interface to enter large amounts of data.
-- [Data grid](./data-grid.md) - Data grids provide a spreadsheet-like user interface to view large amounts of data.
+- [Data grid (advanced)](./data-grid.md) - Data grids provide a spreadsheet-like user interface to view large amounts of data.
+- [Data grid (preview)](./data-grid-component.md) - Data grids provide a spreadsheet-like user interface to view large amounts of data.
 - [Data manager](./data-manager.md) - Data managers enable the exploration of data sets across multiple SKY UX, third-party, or custom views.
 - [Date pipe](./date-pipe.md) - The date pipe formats date values according to locale rules.
 - [Date range picker](./date-range-picker.md) - The date range picker component creates a text input to select a date range from a set of well-known options.

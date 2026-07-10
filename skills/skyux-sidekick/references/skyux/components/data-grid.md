@@ -1,9 +1,9 @@
 ---
-Title: Data grid
+Title: Data grid (advanced)
 Reference: https://developer.blackbaud.com/skyux/components/data-grid
 ---
 
-# Data grid
+# Data grid (advanced)
 
 Data grids provide a SKY UX-themed layout for tabular data. Combine data grids with [data managers](./data-manager.md) to allow users to manipulate larger data sets.
 
@@ -201,11 +201,11 @@ Install with NPM
 
 In addition to the `@skyux/ag-grid` package, you need to install the [`ag-grid-angular`](https://www.ag-grid.com/angular-grid/) and [`ag-grid-community`](https://www.npmjs.com/package/ag-grid-community) packages.
 
-If you use the data entry grid with [the enterprise version of AG Grid instead of the free community version](https://www.ag-grid.com/documentation/angular/licensing/), the data entry grid turns on all enterprise features by default.
+If you use the data grid with [the enterprise version of AG Grid instead of the free community version](https://www.ag-grid.com/documentation/angular/licensing/), the data grid turns on all enterprise features by default.
 
 ## AG Grid styles
 
-To add the SKY UX styles for AG Grid to your SPA, run `ng g @skyux/packages:add-ag-grid-styles --project _my-app_`, which adds `"@skyux/ag-grid/css/sky-ag-grid.css"` to the `styles` section of your [`angular.json`](https://angular.io/guide/workspace-config#styles-and-scripts-configuration). For editable grids, include the class `sky-ag-grid-editable` on the `ag-grid-angular` element.
+To add the SKY UX styles for AG Grid to your SPA, run `ng g @skyux/packages:add-ag-grid-styles --project _my-app_`.
 
 ## AG Grid wrapper component
 
@@ -213,7 +213,7 @@ The `sky-ag-grid-wrapper` component provides WCAG-compliant keyboard navigation 
 
 ## Data manager directive
 
-If you use a data entry grid within a [data manager component](./data-manager.md), the `skyAgGridDataManagerAdapter` directive can manage some standard interactions between the data entry grid and the data manager service. Add the directive should to the `sky-data-view` element that contains the data entry grid to initialize properties from the data state and keep the data entry grid in sync with the data state. When the data entry grid changes, the data state is updated, and when the data state changes, the data entry grid responds to the changes. The directive manages:
+If you use a data grid within a [data manager component](./data-manager.md), the `skyAgGridDataManagerAdapter` directive can manage some standard interactions between the data grid and the data manager service. Add the directive should to the `sky-data-view` element that contains the data grid to initialize properties from the data state and keep the data grid in sync with the data state. When the data grid changes, the data state is updated, and when the data state changes, the data grid responds to the changes. The directive manages:
 
 - column visibility and order
 - selected rows
@@ -221,15 +221,11 @@ If you use a data entry grid within a [data manager component](./data-manager.md
 
 Other properties of the data state, such as filters and applying the sort, still need to be implemented for each use.
 
-## Passing cell editor parameters
-
-You can pass inputs to the SKY UX components used in cell editors via the [column definition's `cellEditorParams` property.](https://www.ag-grid.com/javascript-grid-column-properties/) The component properties are nested under `skyComponentProperties`. All component properties should be supported, and you can see the defined types by importing `SkyCellEditorDatepickerProperties` or `SkyCellEditorAutocompleteProperties`. `cellEditorParams` can also be a function that returns a param object for dynamic editing params. See the demo for examples of using an object or a function.
-
 ## Using other SKY UX components in columns
 
-For full control over a SKY UX component rendered in a cell, you can create your own [cell renderer](https://www.ag-grid.com/javascript-grid-cell-rendering-components/) and place the component inside it. For example, to include a context menu in your grid, you create a cell renderer and place the context menu in the cell renderer. See the demo for an example.
+For full control over a SKY UX component rendered in a cell, you can create your own [cell renderer](https://www.ag-grid.com/angular-data-grid/component-cell-renderer/) and place the component inside it. For example, to include a context menu in your grid, you create a cell renderer and place the context menu in the cell renderer. See the demo for an example.
 
-Additionally, you can inject content into a SKY UX template ref column type. This is especially useful for data entry grids with row actions that need to be usable while editing neighboring cells. See the code examples for more information.
+Additionally, you can inject content into a SKY UX template ref column type. This is especially useful for data grids with row actions that need to be usable while editing neighboring cells. See the code examples for more information.
 
 ## SkyAgGridModule
 
