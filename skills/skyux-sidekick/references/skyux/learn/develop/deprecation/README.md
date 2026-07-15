@@ -35,7 +35,7 @@ Deprecated in favor of the description list component.
 
 Grid
 
-Deprecated, but with plans to develop a new version.
+Deprecated in favor of the data grid component.
 
 Icon
 
@@ -44,6 +44,10 @@ The icon input was removed in favor of iconName.
 List
 
 Deprecated, but with plans to develop a new version.
+
+List view grid
+
+Deprecated in favor of the data grid component.
 
 Modal filter
 

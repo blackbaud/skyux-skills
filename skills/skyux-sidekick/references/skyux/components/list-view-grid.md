@@ -9,7 +9,7 @@ Reference: https://developer.blackbaud.com/skyux/components/list-view-grid
 
 The list view grid component displays a grid for a [SKY UX-themed list of data](./list-overview.md).
 
-List view grid and its features are deprecated. We will remove it in a future major version. We recommend using [data grid](./data-grid.md) instead.
+List view grid and its features are deprecated. We will remove it in a future major version. We recommend using [data grid](./data-grid-component.md) instead. For more information, see the [list view grid deprecation instructions](../learn/develop/deprecation/list-view-grid.md).
 
 ## Usage
 

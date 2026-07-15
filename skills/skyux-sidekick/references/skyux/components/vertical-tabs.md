@@ -176,6 +176,12 @@ Default: `false`
 
 The text to display on the show tabs button on mobile devices.
 
+#### `tabWidth: InputSignalWithTransform<string, string | undefined>`
+
+The width of the tabs pane as a CSS width value (such as `200px`, `15rem`, or `20%`). Set to `"auto"` to size based on tab label content. Maximum width is 25%.
+
+Default: `"25%"`
+
 ### Outputs
 
 #### `activeChange: EventEmitter<number>`
@@ -371,6 +377,14 @@ The optional filter criteria.
 #### Returns
 
 `Promise<SkyVerticalTabButtonHarness[]>`
+
+#### `getTabWidth(): Promise<string | null>`
+
+Gets the tab width as a CSS `flex-basis` value (for example, `200px`), or `null` when no width is set. The width is only applied in the desktop layout, so this returns `null` in the mobile layout.
+
+#### Returns
+
+`Promise<string | null>`
 
 #### `isTabsVisible(): Promise<boolean>`
 

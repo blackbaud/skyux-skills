@@ -2,14 +2,14 @@
 Title: Grid (deprecated)
 Reference: https://developer.blackbaud.com/skyux/components/grid
 ---
-> **Deprecated.** Use [data grid](./data-grid.md) instead. See below for migration details.
+> **Deprecated.** Use [data grid](./data-grid-component.md) instead. See below for migration details.
 
 
 # Grid (deprecated)
 
 Grids provide a SKY UX-themed layout for tabular data.
 
-Grid is deprecated in favor of [data grid](./data-grid.md). For more information, see the [grid deprecation instructions](../learn/develop/deprecation/grid.md).
+Grid is deprecated in favor of [data grid](./data-grid-component.md). For more information, see the [grid deprecation instructions](../learn/develop/deprecation/grid.md).
 
 ## Usage
 

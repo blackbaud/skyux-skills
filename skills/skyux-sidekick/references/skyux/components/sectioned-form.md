@@ -80,6 +80,12 @@ Default: `false`
 
 #### `messageStream: Subject<SkySectionedFormMessage>`
 
+#### `tabWidth: InputSignalWithTransform<string, string | undefined>`
+
+The width of the tabs pane as a CSS width value (such as `200px`, `15rem`, or `20%`). Set to `"auto"` to size based on tab label content. Maximum width is 30%.
+
+Default: `"30%"`
+
 ### Outputs
 
 #### `indexChanged: EventEmitter<number>`
@@ -223,6 +229,14 @@ The optional filter criteria.
 #### Returns
 
 `Promise<SkySectionedFormSectionHarness[]>`
+
+#### `getTabWidth(): Promise<string | null>`
+
+Gets the tab width as a CSS `flex-basis` value (for example, `200px`), or `null` when no width is set. The width is only applied in the desktop layout, so this returns `null` in the mobile layout and when the tabs pane is not rendered at all.
+
+#### Returns
+
+`Promise<string | null>`
 
 #### `isSectionsVisible(): Promise<boolean>`
 
