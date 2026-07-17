@@ -67,12 +67,12 @@ Line items
 
 $250.00 payment processed.
 
-08/01/2023 12:02 am
+08/01/2023 12:02 AM
 
 $150.00 payment processed.
 
-05/15/2023 12:02 am
+05/15/2023 12:02 AM
 
 $250.00 payment processed.
 
-02/01/2023 12:02 am
+02/01/2023 12:02 AM
