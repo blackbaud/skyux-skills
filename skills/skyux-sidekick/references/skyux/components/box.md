@@ -87,11 +87,11 @@ When you need to supplement a box with additional information but don't require 
 
 ### Control button
 
-You can include a button in the top right to provide an edit action or a context menu with multiple actions.
+You can include a borderless icon button (`sky-btn sky-btn-icon-borderless`) in the top right to provide a single edit action or a context menu when multiple actions apply.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/box/box-option-1.463354ca7f78665bc756df8e2f3aac7a.png)
 
-Do include an edit button for editable content.
+Do include a borderless icon button for a single edit action.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/box/box-option-2.924d795b1d06d1015c6134c47e522d10.png)
 

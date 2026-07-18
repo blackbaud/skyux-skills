@@ -304,6 +304,14 @@ Use small gutters to separate content in containers, such as modals, when the co
 
 Do use small gutters to separate content with visible borders, such as input boxes, in horizontal layouts.
 
+### Medium gutters
+
+Use medium gutters to separate containers with visible borders within large content areas, such as pages. For example, use medium gutters to separate boxes on pages.
+
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/fluid-grid/size-m-containers.d38735cac659145b5ca9156fafd86032.png)
+
+Do use medium gutters to separate containers with visible borders within large content areas.
+
 ### Large gutters
 
 Use large gutters to separate content or containers in large areas, such as pages and split view workspaces, when the content or containers don't have visible borders.

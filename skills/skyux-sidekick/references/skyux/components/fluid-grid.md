@@ -79,7 +79,7 @@ Use medium gutters to separate boxes within a page.
 
 #### Large
 
-Use `large` gutters to separate columns of content within containers and large content areas. For example, use `large` gutters to separate columns of content on [pages](./page/README.md) or [split view workspaces](./split-view.md).
+Use `large` gutters to separate columns of content within containers and large content areas when the content doesn't have visible borders. For example, use `large` gutters to separate columns of content on [pages](./page/README.md) or [split view workspaces](./split-view.md).
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/fluid-grid/size-l-content-groups.aebf1fa9789f62cf9c065bb178c6f0f2.png)
 

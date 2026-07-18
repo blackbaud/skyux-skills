@@ -65,7 +65,7 @@ If edit buttons appear in dropdowns in the page actions area, don't display edit
 
 When records are too complex to edit in a single form, organize data into boxes on the record pages to let users edit smaller sets of data. Boxes are also useful to present data in a non-list format in other scenarios.
 
-To enable users edit the data in boxes, display edit buttons in the top right. If they can also perform other actions, display the edit buttons in [context menus](../../components/dropdown.md). Use the same edit form for all fields in a box, and don't mix editable and non-editable data to help set user expectations.
+To enable users to edit the data in a box, display a borderless icon button (`sky-btn sky-btn-icon-borderless`) in the top right. If they can also perform other actions, display the actions in a [context menu](../../components/dropdown.md) instead. Use the same edit form for all fields in a box, and don't mix editable and non-editable data to help set user expectations.
 
 ![Edit non-list-based information](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/managingrecords/edit-box.32f25b0ea04d26ffdef3e6e7dbd5a86b.png)
 
