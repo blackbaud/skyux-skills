@@ -22,9 +22,6 @@ SKY UX components, available as Angular components, services, and modules, allow
 - [Colorpicker](./colorpicker.md) - The colorpicker module provides an input for users to select colors.
 - [Confirm](./confirm.md) - The confirm component launches simple confirmation dialogs for users to confirm actions.
 - [Country field](./country-field.md) - The country field component creates a text input for users to enter search criteria and select a country.
-- [Data entry grid](./data-entry-grid.md) - Data entry grids provide a spreadsheet-like user interface to enter large amounts of data.
-- [Data grid (advanced)](./data-grid.md) - Data grids provide a spreadsheet-like user interface to view large amounts of data.
-- [Data grid (preview)](./data-grid-component.md) - Data grids provide a spreadsheet-like user interface to view large amounts of data.
 - [Data manager](./data-manager.md) - Data managers enable the exploration of data sets across multiple SKY UX, third-party, or custom views.
 - [Date pipe](./date-pipe.md) - The date pipe formats date values according to locale rules.
 - [Date range picker](./date-range-picker.md) - The date range picker component creates a text input to select a date range from a set of well-known options.
@@ -42,7 +39,7 @@ SKY UX components, available as Angular components, services, and modules, allow
 - [Fluid grid](./fluid-grid.md) - Fluid grids provide responsive 12-column layouts to organize content for all screen sizes.
 - [Flyout](./flyout.md) - The flyout service launches a container to display supplementary information related to a task.
 - [Format](./format.md) - The format component places formatted text inside a tokenized string template.
-- [Grid (deprecated)](./grid.md) - The deprecated grid component displays data in a consistent and flexible way.
+- [Grids](./grids.md) - Data grids provide a spreadsheet-like user interface to view or enter large amounts of data.
 - [Help inline button](./help-inline.md) - The help inline button component creates a small help button next to a field.
 - [Icon](./icon.md) - The icon component displays a glyph from the SKY UX icon library.
 - [ID](./id.md) - The ID directive assigns a unique ID to an element that can be referenced by other elements.

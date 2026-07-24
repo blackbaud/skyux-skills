@@ -7,6 +7,10 @@ Reference: https://developer.blackbaud.com/skyux/components/data-entry-grid
 
 Data entry grids use the third-party [AG Grid library](https://www.ag-grid.com/angular-getting-started/) to provide a spreadsheet-like user interface to enter and edit large amounts of data. SKY UX provides styles, a service for default grid options, and components to render and edit cells. To learn about AG Grid and its capabilities, see the [getting-started guide](https://www.ag-grid.com/angular-getting-started/) and [additional documentation.](https://www.ag-grid.com/documentation-main/documentation.php)
 
+## Choosing the right data grid
+
+For guidance on choosing the appropriate data grid for your use case, see [Grids](./grids.md).
+
 ## Usage
 
 ### Use when
@@ -78,7 +82,8 @@ When a lookup cell needs an accessible name that is distinct from the column hea
 
 ### Components
 
-- [Data grid](./data-grid.md)
+- [Data grid (preview)](./data-grid-component.md)
+- [Data grid (advanced)](./data-grid.md)
 - [Data manager](./data-manager.md)
 
 ### Guidelines

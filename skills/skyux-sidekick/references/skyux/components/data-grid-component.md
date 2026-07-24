@@ -9,15 +9,9 @@ We created this new data grid component to simplify the implementation of data g
 
 The `sky-data-grid` component provides a declarative, signal-based grid for tabular data: supply a `data` array of rows and a `<sky-data-grid-column />` for each column, and the grid handles sorting, paging, multiselect, loading states, and more.
 
-## Choosing a data grid
+## Choosing the right data grid
 
-### Use this component when
-
-Reach for `@skyux/data-grid` when you want a straightforward grid driven by inputs and column declarations, with common features such as sorting, paging, selection, and loading states built in. It is a simpler, higher-level alternative to the deprecated `@skyux/grids` and `@skyux/list-builder` grid view.
-
-### Use another grid when
-
-Reach for the [AG Grid-based data grid](./data-grid.md) when you need direct access to AG Grid's full configuration and APIs for advanced scenarios this component doesn't cover.
+For guidance on choosing the appropriate data grid for your use case, see [Grids](./grids.md).
 
 ## Usage
 
@@ -75,7 +69,9 @@ To provide a text equivalent for screen readers [to support accessibility](../le
 ### Guidelines
 
 - [Filter lists](../design/guidelines/filtering-lists.md)
+- [Form design](../design/guidelines/form-design.md)
 - [List page](../design/guidelines/page-layouts/list-page.md)
+- [Page design](../design/guidelines/page-layouts/README.md)
 
 ## Installation
 

@@ -2,7 +2,7 @@
 
 component: grid
 source: ./grid.md
-section_count: 15
+section_count: 16
 
 ---
 
@@ -14,18 +14,19 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 
 | #   | Section                        | Tab         | Lines   | Read invocation                                |
 | --- | ------------------------------ | ----------- | ------- | ---------------------------------------------- |
-| 1   | Usage                          | design      | 14–31   | `Read file_path=./grid.md offset=14 limit=18`  |
-| 2   | Anatomy                        | design      | 32–83   | `Read file_path=./grid.md offset=32 limit=52`  |
-| 3   | Options                        | design      | 84–130  | `Read file_path=./grid.md offset=84 limit=47`  |
-| 4   | Behavior and states            | design      | 131–168 | `Read file_path=./grid.md offset=131 limit=38` |
-| 5   | Related information            | design      | 169–187 | `Read file_path=./grid.md offset=169 limit=19` |
-| 6   | Installation                   | development | 188–198 | `Read file_path=./grid.md offset=188 limit=11` |
-| 7   | SkyGridModule                  | development | 199–206 | `Read file_path=./grid.md offset=199 limit=8`  |
-| 8   | SkyGridComponent               | development | 207–303 | `Read file_path=./grid.md offset=207 limit=97` |
-| 9   | SkyGridColumnComponent         | development | 304–379 | `Read file_path=./grid.md offset=304 limit=76` |
-| 10  | SkyGridColumnAlignment         | development | 380–389 | `Read file_path=./grid.md offset=380 limit=10` |
-| 11  | SkyGridColumnWidthModelChange  | development | 390–415 | `Read file_path=./grid.md offset=390 limit=26` |
-| 12  | SkyGridColumnModel             | development | 416–455 | `Read file_path=./grid.md offset=416 limit=40` |
-| 13  | SkyGridSelectedRowsModelChange | development | 456–471 | `Read file_path=./grid.md offset=456 limit=16` |
-| 14  | SkyGridMessage                 | development | 472–487 | `Read file_path=./grid.md offset=472 limit=16` |
-| 15  | SkyGridMessageType             | development | 488–514 | `Read file_path=./grid.md offset=488 limit=27` |
+| 1   | Choosing the right data grid   | design      | 14–17   | `Read file_path=./grid.md offset=14 limit=4`   |
+| 2   | Usage                          | design      | 18–35   | `Read file_path=./grid.md offset=18 limit=18`  |
+| 3   | Anatomy                        | design      | 36–87   | `Read file_path=./grid.md offset=36 limit=52`  |
+| 4   | Options                        | design      | 88–134  | `Read file_path=./grid.md offset=88 limit=47`  |
+| 5   | Behavior and states            | design      | 135–172 | `Read file_path=./grid.md offset=135 limit=38` |
+| 6   | Related information            | design      | 173–193 | `Read file_path=./grid.md offset=173 limit=21` |
+| 7   | Installation                   | development | 194–204 | `Read file_path=./grid.md offset=194 limit=11` |
+| 8   | SkyGridModule                  | development | 205–212 | `Read file_path=./grid.md offset=205 limit=8`  |
+| 9   | SkyGridComponent               | development | 213–309 | `Read file_path=./grid.md offset=213 limit=97` |
+| 10  | SkyGridColumnComponent         | development | 310–385 | `Read file_path=./grid.md offset=310 limit=76` |
+| 11  | SkyGridColumnAlignment         | development | 386–395 | `Read file_path=./grid.md offset=386 limit=10` |
+| 12  | SkyGridColumnWidthModelChange  | development | 396–421 | `Read file_path=./grid.md offset=396 limit=26` |
+| 13  | SkyGridColumnModel             | development | 422–461 | `Read file_path=./grid.md offset=422 limit=40` |
+| 14  | SkyGridSelectedRowsModelChange | development | 462–477 | `Read file_path=./grid.md offset=462 limit=16` |
+| 15  | SkyGridMessage                 | development | 478–493 | `Read file_path=./grid.md offset=478 limit=16` |
+| 16  | SkyGridMessageType             | development | 494–520 | `Read file_path=./grid.md offset=494 limit=27` |

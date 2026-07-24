@@ -11,6 +11,10 @@ Grids provide a SKY UX-themed layout for tabular data.
 
 Grid is deprecated in favor of [data grid](./data-grid-component.md). For more information, see the [grid deprecation instructions](../learn/develop/deprecation/grid.md).
 
+## Choosing the right data grid
+
+For guidance on choosing the appropriate data grid for your use case, see [Grids](./grids.md).
+
 ## Usage
 
 ### Use when
@@ -171,6 +175,8 @@ Grids perform poorly in small viewports. The columns in fixed-width grids shrink
 ### Components
 
 - [Card](./card.md)
+- [Data grid (preview)](./data-grid-component.md)
+- [Data grid (advanced)](./data-grid.md)
 - [Dropdown](./dropdown.md)
 - [Expandable inline filter](./filter.md)
 - [Infinite scroll](./infinite-scroll.md)

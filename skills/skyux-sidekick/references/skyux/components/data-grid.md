@@ -5,7 +5,13 @@ Reference: https://developer.blackbaud.com/skyux/components/data-grid
 
 # Data grid (advanced)
 
+A new [data grid](./data-grid-component.md) component that simplifies the implementation of data grids will replace this component for common use cases. It is currently in preview mode, and we plan to finish development and officially release it in SKY UX v15.
+
 Data grids provide a SKY UX-themed layout for tabular data. Combine data grids with [data managers](./data-manager.md) to allow users to manipulate larger data sets.
+
+## Choosing the right data grid
+
+For guidance on choosing the appropriate data grid for your use case, see [Grids](./grids.md).
 
 ## Usage
 
@@ -170,6 +176,7 @@ To provide a text equivalent for screen readers [to support accessibility](../le
 ### Components
 
 - [Data entry grid](./data-entry-grid.md)
+- [Data grid (preview)](./data-grid-component.md)
 - [Data manager](./data-manager.md)
 - [Dropdown](./dropdown.md)
 - [Filter bar](./filter-bar.md)

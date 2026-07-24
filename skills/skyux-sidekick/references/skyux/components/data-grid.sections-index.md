@@ -2,7 +2,7 @@
 
 component: data-grid
 source: ./data-grid.md
-section_count: 41
+section_count: 42
 
 ---
 
@@ -14,44 +14,45 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 
 | #   | Section                                  | Tab         | Lines     | Read invocation                                        |
 | --- | ---------------------------------------- | ----------- | --------- | ------------------------------------------------------ |
-| 1   | Usage                                    | design      | 10–27     | `Read file_path=./data-grid.md offset=10 limit=18`     |
-| 2   | Anatomy                                  | design      | 28–79     | `Read file_path=./data-grid.md offset=28 limit=52`     |
-| 3   | Options                                  | design      | 80–139    | `Read file_path=./data-grid.md offset=80 limit=60`     |
-| 4   | Behavior and states                      | design      | 140–163   | `Read file_path=./data-grid.md offset=140 limit=24`    |
-| 5   | Accessibility                            | design      | 164–167   | `Read file_path=./data-grid.md offset=164 limit=4`     |
-| 6   | Related information                      | design      | 168–188   | `Read file_path=./data-grid.md offset=168 limit=21`    |
-| 7   | Installation                             | development | 189–199   | `Read file_path=./data-grid.md offset=189 limit=11`    |
-| 8   | Setup                                    | development | 200–205   | `Read file_path=./data-grid.md offset=200 limit=6`     |
-| 9   | AG Grid styles                           | development | 206–209   | `Read file_path=./data-grid.md offset=206 limit=4`     |
-| 10  | AG Grid wrapper component                | development | 210–213   | `Read file_path=./data-grid.md offset=210 limit=4`     |
-| 11  | Data manager directive                   | development | 214–223   | `Read file_path=./data-grid.md offset=214 limit=10`    |
-| 12  | Using other SKY UX components in columns | development | 224–229   | `Read file_path=./data-grid.md offset=224 limit=6`     |
-| 13  | SkyAgGridModule                          | development | 230–241   | `Read file_path=./data-grid.md offset=230 limit=12`    |
-| 14  | SkyAgGridWrapperComponent                | development | 242–257   | `Read file_path=./data-grid.md offset=242 limit=16`    |
-| 15  | SkyAgGridService                         | development | 258–289   | `Read file_path=./data-grid.md offset=258 limit=32`    |
-| 16  | SkyGetGridOptionsArgs                    | development | 290–313   | `Read file_path=./data-grid.md offset=290 limit=24`    |
-| 17  | SkyAgGridRowDeleteDirective              | development | 314–337   | `Read file_path=./data-grid.md offset=314 limit=24`    |
-| 18  | SkyAgGridRowDeleteConfirmArgs            | development | 338–353   | `Read file_path=./data-grid.md offset=338 limit=16`    |
-| 19  | SkyAgGridRowDeleteCancelArgs             | development | 354–369   | `Read file_path=./data-grid.md offset=354 limit=16`    |
-| 20  | SkyAgGridCellEditorInitialAction         | development | 370–400   | `Read file_path=./data-grid.md offset=370 limit=31`    |
-| 21  | SkyAgGridCellEditorUtils                 | development | 401–438   | `Read file_path=./data-grid.md offset=401 limit=38`    |
-| 22  | SkyCellType                              | development | 439–557   | `Read file_path=./data-grid.md offset=439 limit=119`   |
-| 23  | SkyAgGridHeaderInfo                      | development | 558–577   | `Read file_path=./data-grid.md offset=558 limit=20`    |
-| 24  | SkyAgGridHeaderParams                    | development | 578–598   | `Read file_path=./data-grid.md offset=578 limit=21`    |
-| 25  | SkyAgGridHeaderGroupInfo                 | development | 599–618   | `Read file_path=./data-grid.md offset=599 limit=20`    |
-| 26  | SkyAgGridHeaderGroupParams               | development | 619–634   | `Read file_path=./data-grid.md offset=619 limit=16`    |
-| 27  | SkyAgGridAutocompleteProperties          | development | 635–703   | `Read file_path=./data-grid.md offset=635 limit=69`    |
-| 28  | SkyAutocompleteProperties                | development | 704–774   | `Read file_path=./data-grid.md offset=704 limit=71`    |
-| 29  | SkyCellEditorAutocompleteParams          | development | 775–788   | `Read file_path=./data-grid.md offset=775 limit=14`    |
-| 30  | SkyAgGridCurrencyProperties              | development | 789–812   | `Read file_path=./data-grid.md offset=789 limit=24`    |
-| 31  | SkyAgGridDatepickerProperties            | development | 813–851   | `Read file_path=./data-grid.md offset=813 limit=39`    |
-| 32  | SkyDatepickerProperties                  | development | 852–892   | `Read file_path=./data-grid.md offset=852 limit=41`    |
-| 33  | SkyCellEditorDatepickerParams            | development | 893–906   | `Read file_path=./data-grid.md offset=893 limit=14`    |
-| 34  | SkyAgGridLookupProperties                | development | 907–1028  | `Read file_path=./data-grid.md offset=907 limit=122`   |
-| 35  | SkyCellEditorLookupParams                | development | 1029–1042 | `Read file_path=./data-grid.md offset=1029 limit=14`   |
-| 36  | SkyAgGridNumberProperties                | development | 1043–1061 | `Read file_path=./data-grid.md offset=1043 limit=19`   |
-| 37  | SkyAgGridTextProperties                  | development | 1062–1075 | `Read file_path=./data-grid.md offset=1062 limit=14`   |
-| 38  | SkyAgGridValidatorProperties             | development | 1076–1101 | `Read file_path=./data-grid.md offset=1076 limit=26`   |
-| 39  | SkyAgGridWrapperHarness                  | testing     | 1102–1147 | `Read file_path=./data-grid.md offset=1102 limit=46`   |
-| 40  | SkyAgGridWrapperHarnessFilters           | testing     | 1148–1163 | `Read file_path=./data-grid.md offset=1148 limit=16`   |
-| 41  | Code Examples                            | examples    | 1164–4555 | `Read file_path=./data-grid.md offset=1164 limit=3392` |
+| 1   | Choosing the right data grid             | design      | 12–15     | `Read file_path=./data-grid.md offset=12 limit=4`      |
+| 2   | Usage                                    | design      | 16–33     | `Read file_path=./data-grid.md offset=16 limit=18`     |
+| 3   | Anatomy                                  | design      | 34–85     | `Read file_path=./data-grid.md offset=34 limit=52`     |
+| 4   | Options                                  | design      | 86–145    | `Read file_path=./data-grid.md offset=86 limit=60`     |
+| 5   | Behavior and states                      | design      | 146–169   | `Read file_path=./data-grid.md offset=146 limit=24`    |
+| 6   | Accessibility                            | design      | 170–173   | `Read file_path=./data-grid.md offset=170 limit=4`     |
+| 7   | Related information                      | design      | 174–195   | `Read file_path=./data-grid.md offset=174 limit=22`    |
+| 8   | Installation                             | development | 196–206   | `Read file_path=./data-grid.md offset=196 limit=11`    |
+| 9   | Setup                                    | development | 207–212   | `Read file_path=./data-grid.md offset=207 limit=6`     |
+| 10  | AG Grid styles                           | development | 213–216   | `Read file_path=./data-grid.md offset=213 limit=4`     |
+| 11  | AG Grid wrapper component                | development | 217–220   | `Read file_path=./data-grid.md offset=217 limit=4`     |
+| 12  | Data manager directive                   | development | 221–230   | `Read file_path=./data-grid.md offset=221 limit=10`    |
+| 13  | Using other SKY UX components in columns | development | 231–236   | `Read file_path=./data-grid.md offset=231 limit=6`     |
+| 14  | SkyAgGridModule                          | development | 237–248   | `Read file_path=./data-grid.md offset=237 limit=12`    |
+| 15  | SkyAgGridWrapperComponent                | development | 249–264   | `Read file_path=./data-grid.md offset=249 limit=16`    |
+| 16  | SkyAgGridService                         | development | 265–296   | `Read file_path=./data-grid.md offset=265 limit=32`    |
+| 17  | SkyGetGridOptionsArgs                    | development | 297–320   | `Read file_path=./data-grid.md offset=297 limit=24`    |
+| 18  | SkyAgGridRowDeleteDirective              | development | 321–344   | `Read file_path=./data-grid.md offset=321 limit=24`    |
+| 19  | SkyAgGridRowDeleteConfirmArgs            | development | 345–360   | `Read file_path=./data-grid.md offset=345 limit=16`    |
+| 20  | SkyAgGridRowDeleteCancelArgs             | development | 361–376   | `Read file_path=./data-grid.md offset=361 limit=16`    |
+| 21  | SkyAgGridCellEditorInitialAction         | development | 377–407   | `Read file_path=./data-grid.md offset=377 limit=31`    |
+| 22  | SkyAgGridCellEditorUtils                 | development | 408–445   | `Read file_path=./data-grid.md offset=408 limit=38`    |
+| 23  | SkyCellType                              | development | 446–564   | `Read file_path=./data-grid.md offset=446 limit=119`   |
+| 24  | SkyAgGridHeaderInfo                      | development | 565–584   | `Read file_path=./data-grid.md offset=565 limit=20`    |
+| 25  | SkyAgGridHeaderParams                    | development | 585–605   | `Read file_path=./data-grid.md offset=585 limit=21`    |
+| 26  | SkyAgGridHeaderGroupInfo                 | development | 606–625   | `Read file_path=./data-grid.md offset=606 limit=20`    |
+| 27  | SkyAgGridHeaderGroupParams               | development | 626–641   | `Read file_path=./data-grid.md offset=626 limit=16`    |
+| 28  | SkyAgGridAutocompleteProperties          | development | 642–710   | `Read file_path=./data-grid.md offset=642 limit=69`    |
+| 29  | SkyAutocompleteProperties                | development | 711–781   | `Read file_path=./data-grid.md offset=711 limit=71`    |
+| 30  | SkyCellEditorAutocompleteParams          | development | 782–795   | `Read file_path=./data-grid.md offset=782 limit=14`    |
+| 31  | SkyAgGridCurrencyProperties              | development | 796–819   | `Read file_path=./data-grid.md offset=796 limit=24`    |
+| 32  | SkyAgGridDatepickerProperties            | development | 820–858   | `Read file_path=./data-grid.md offset=820 limit=39`    |
+| 33  | SkyDatepickerProperties                  | development | 859–899   | `Read file_path=./data-grid.md offset=859 limit=41`    |
+| 34  | SkyCellEditorDatepickerParams            | development | 900–913   | `Read file_path=./data-grid.md offset=900 limit=14`    |
+| 35  | SkyAgGridLookupProperties                | development | 914–1035  | `Read file_path=./data-grid.md offset=914 limit=122`   |
+| 36  | SkyCellEditorLookupParams                | development | 1036–1049 | `Read file_path=./data-grid.md offset=1036 limit=14`   |
+| 37  | SkyAgGridNumberProperties                | development | 1050–1068 | `Read file_path=./data-grid.md offset=1050 limit=19`   |
+| 38  | SkyAgGridTextProperties                  | development | 1069–1082 | `Read file_path=./data-grid.md offset=1069 limit=14`   |
+| 39  | SkyAgGridValidatorProperties             | development | 1083–1108 | `Read file_path=./data-grid.md offset=1083 limit=26`   |
+| 40  | SkyAgGridWrapperHarness                  | testing     | 1109–1154 | `Read file_path=./data-grid.md offset=1109 limit=46`   |
+| 41  | SkyAgGridWrapperHarnessFilters           | testing     | 1155–1170 | `Read file_path=./data-grid.md offset=1155 limit=16`   |
+| 42  | Code Examples                            | examples    | 1171–4562 | `Read file_path=./data-grid.md offset=1171 limit=3392` |
