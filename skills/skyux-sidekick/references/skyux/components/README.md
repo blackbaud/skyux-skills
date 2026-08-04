@@ -18,6 +18,7 @@ SKY UX components, available as Angular components, services, and modules, allow
 - [Button](./button.md) - The button classes create buttons to trigger actions from within an interface.
 - [Card (deprecated)](./card.md) - The deprecated card module creates a small container to highlight important information.
 - [Character count](./character-count.md) - The character count indicator component extends a text input to apply a character limit and display an indicator.
+- [Charts (preview)](./charts.md) - Charts visualize data to help users compare values and spot trends at a glance.
 - [Checkbox](./checkbox.md) - The checkbox component renders a SKY UX-themed checkbox.
 - [Colorpicker](./colorpicker.md) - The colorpicker module provides an input for users to select colors.
 - [Confirm](./confirm.md) - The confirm component launches simple confirmation dialogs for users to confirm actions.

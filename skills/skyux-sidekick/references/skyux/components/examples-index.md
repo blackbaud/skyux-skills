@@ -2,7 +2,7 @@
 
 # Code examples — all components
 
-81 of 97 components have a `## Code Examples` section in their source docs.
+81 of 99 components have a `## Code Examples` section in their source docs.
 
 ## Components with code examples
 
@@ -96,6 +96,8 @@ These components do not include a `## Code Examples` section upstream. No index 
 
 - button ([button.md](./button.md))
 - character-count ([character-count.md](./character-count.md))
+- chart-bar ([chart-bar.md](./chart-bar.md))
+- charts ([charts.md](./charts.md))
 - data-grid-component ([data-grid-component.md](./data-grid-component.md))
 - grid ([grid.md](./grid.md))
 - grids ([grids.md](./grids.md))
