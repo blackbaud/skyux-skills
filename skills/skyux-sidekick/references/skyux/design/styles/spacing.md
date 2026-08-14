@@ -225,7 +225,7 @@ Use no spacing classes when elements form a single semantic entity that should r
 - Labels and values
 - Names and addresses
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/none-vertical.a027cb3a940ffc5fd7bd0b06a04f5e02.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/none-vertical.62d093fc4e823cf58e5ba503733c5bbd.png)
 
 Do use no spacing for single semantic entities.
 
@@ -236,7 +236,7 @@ Use extra small spacing classes when adjacent elements form a bound relationship
 - Small sets of information about an entity, such as identifying text and its metadata, supplemental details, or status information
 - Small headings (H4, H5) and content
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/xs-vertical.7821f855e7ecb21af269c8a187072c71.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/xs-vertical.cb117d20d5b1eb1ec0699c8293925ad4.png)
 
 Do use extra small spacing for closely related elements that form a bound unit.
 
@@ -247,7 +247,7 @@ Use small spacing classes as the default spacing flow when elements belong to th
 - Homogenous items in a set, such as links in a list, [description list](../../components/description-list.md) pairs, and [key info](../../components/key-info.md) items
 - Headings (H2, H3) and content
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/s-vertical.f8159caa378a9d88626c7d4cbda7002b.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/s-vertical.0bd91c10591093a76d126ced9369b72c.png)
 
 Do use content spacing when elements belong to the same content group and contribute equally to its meaning.
 
@@ -258,11 +258,11 @@ Use large spacing classes when distinct peer sections of content appear in a con
 - Sections and headings
 - Distinct or heterogenous content related to a parent group
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/l-vertical-1.1868862a7245ae435da1bc911cb78caa.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/l-vertical-1.bc7605bd8c9562dfe3271a599ee81f06.png)
 
 Do use section spacing to separate distinct content groups that don't belong to the same continuous content flow.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/l-vertical-2.056f8b9a9681d4ad9c072b671b5fc3a3.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/l-vertical-2.d264126fec5a8b3c213d5b7ffc81f7ca.png)
 
 Don't use section spacing to articulate close relationships
 
@@ -273,7 +273,7 @@ Use extra large spacing classes when a strong separation is required for loosely
 - New or distinct content from other content
 - Elements set off for more attention within a container, such as drill-in links
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/xl-vertical.eddbb0b69979b4bf6065f24a1bb75571.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/xl-vertical.de457dd9c7a55b256478f6589512eda4.png)
 
 Do separate drill-in links from content groups using extra large spacing to signal a transition from reading content to taking action.
 
@@ -288,7 +288,7 @@ Horizontal spacing controls the space between side-by-side elements in a content
 
 Use [fluid grids](../../components/fluid-grid.md) to organize content groups into defined sections, such as columns, in containers that already have padding.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/horizontal-fluid-grid.b901c3d20430a646e45bbe392b52833f.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/horizontal-fluid-grid.f71aff8dc0bbfe9eb0c7115392f8a80c.png)
 
 Do use fluid grids to horizontally separate content into equally distributed columns.
 
@@ -300,7 +300,7 @@ Fluid grid spacing application by size defines how gutter sizes control the hori
 
 Use small gutters to separate content in containers, such as modals, when the content has visible borders. For example, use small gutters between side-by-side input boxes.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/small-gutters.7f9cc211b06c6b3d5a686a2b0cb5ca6a.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/small-gutters.d831890825534b7156a4190bc5058dc3.png)
 
 Do use small gutters to separate content with visible borders, such as input boxes, in horizontal layouts.
 
@@ -316,11 +316,11 @@ Do use medium gutters to separate containers with visible borders within large c
 
 Use large gutters to separate content or containers in large areas, such as pages and split view workspaces, when the content or containers don't have visible borders.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/large-gutters-1.d0eb6b96579130336b240d54287dbb77.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/large-gutters-1.88d1186989c541fb91d6e2cc8605a7dd.png)
 
 Do use large gutters to separate containers without visible borders.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/large-gutters-2.6b2632082909e992614d9856e675f7c2.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/large-gutters-2.695effc8a2f06efff4448f7f66e7e3cf.png)
 
 Do use large gutters to separate content in large areas
 
@@ -328,7 +328,7 @@ Do use large gutters to separate content in large areas
 
 When fluid grids are inside containers that include padding, turn off the outer margin for the fluid grids using `disableMargin`.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/disable-margin.6bf639b1449694fde9dc4636bfc8224f.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/disable-margin.f9f9386fb9666906dd26674448364115.png)
 
 Disable margins when fluid grids are in containers that include padding.
 
@@ -477,7 +477,7 @@ Use extra small inline spacing classes when adjacent elements form a bound relat
 - Labels and values
 - Small or medium icons and single-line labels
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/xs-horizontal.a51ae3cf2b4202736b6b1bd11c81f4d6.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/xs-horizontal.b4b733184c458be5b32715ebfd48b2ed.png)
 
 Do use extra small inline spacing between strongly bonded elements.
 
@@ -487,11 +487,11 @@ Use small inline spacing classes when tight pairing is necessary to visually lin
 
 - Small or medium icons and multiple lines of stacked text
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/s-horizontal-1.9f900d140a5cf0ffcee0ef17e995f7f9.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/s-horizontal-1.5cfcfb12fa59a14f9b1a4e11789428b8.png)
 
 Do use small inline spacing to tightly pair UI elements.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/s-horizontal-2.21a5d17741cf12ddddf3efc2f2bf59b5.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/s-horizontal-2.fb07eb0100fc814ff80f110eddcf770d.png)
 
 Do use small inline spacing to distinguish multiple larger UI elements from each other while remaining visually linked.
 
@@ -502,11 +502,11 @@ Use medium inline spacing classes when you need to distinguish large UI elements
 - Large icons and labels
 - Small spot illustrations and labels
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/m-horizontal-1.c6f4c34a48131d7eab211e525fdad2f2.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/m-horizontal-1.f00b01e4c076baccc9152565df60a81c.png)
 
 Do use medium inline spacing to distinguish multiple larger UI elements from each other while still visually linking them.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/m-horizontal-2.5265544506659147e107d3543822de3f.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/m-horizontal-2.c93c6b80e88c2e00619513e965f197a7.png)
 
 Do use medium inline spacing to distinguish multiple larger UI elements from each other while still visually linking them.
 
@@ -516,7 +516,7 @@ Use large inline spacing classes when larger UI elements need visual separation 
 
 - Medium or large spot illustrations and text
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/l-horizontal.a701405831e7fdcd7c41fbc43f5ae6b3.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/l-horizontal.6b866c4cf5b348cf346c9088799cc1b7.png)
 
 Do use large inline spacing to distinguish medium or large spot illustrations from other content.
 
@@ -527,7 +527,7 @@ Use extra large inline spacing classes when visual separation is necessary betwe
 - Extra large spot illustrations and text
 - Horizontally oriented label and value pairs
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/xl-horizontal-1.75250a758fa51463317dd94863c1524a.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/xl-horizontal-1.88331994b2de0ec0b581722f1faaf6a5.png)
 
 Do use extra large inline spacing to distinguish extra large spot illustrations from other content.
 
@@ -554,19 +554,19 @@ Do use extra, extra large inline spacing for strong boundaries that separate ver
 
 Full container content visual examples using vertical spacing values:
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/example-1.1de3677b10a32f97c982fb598bfd92eb.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/example-1.0660ffcfbac7c872bc327aaa2147e38c.png)
 
 Example of a composed container showing how the full spacing hierarchy works together to express content relationships.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/example-2.e1c872596a213d389a470e8e75043611.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/example-2.311d0fa54314977541555ec9e4e95d78.png)
 
 Example of a composed container showing how the full spacing hierarchy works together to express content relationships.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/example-3.06354b16bf737d3a1bac9d70e0863f28.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/example-3.815da868d9d7baf444632de1c30ddc5e.png)
 
 Example of a composed container showing how the full spacing hierarchy works together to express content relationships.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/example-4.92ec5ea90791a9cce9b370fd4cd7873b.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/example-4.b7cee7101efe1e78be1373e0b6fff693.png)
 
 Example of a composed container showing how the full spacing hierarchy works together to express content relationships.
 
@@ -604,7 +604,7 @@ The most common multi-column layouts are 1/2 width (6 fluid grid columns) and 1/
 
 Do use small gutters in fluid grids to separate input boxes in horizontal layouts. Inputs can use unbalanced column widths to match highly predictable lengths of user input.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/vertical-spacing-in-forms.1db123cec75fee39e48c30bcd049639f.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/vertical-spacing-in-forms.9291df09882c4f69fd4b03b12f0d318e.png)
 
 Do use fluid grid to horizontally display checkbox and radio button groups with short labels.
 

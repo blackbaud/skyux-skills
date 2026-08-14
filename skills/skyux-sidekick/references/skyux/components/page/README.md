@@ -99,25 +99,25 @@ Page link list (optional)
 
 For [record pages](../../design/guidelines/page-layouts/record-page.md), use the `blocks` layout to organize content into modular blocks. For a wide range of possible layouts, place a [fluid grid](../fluid-grid.md) or another grid layout via flexbox or CSS grid in the content area.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/page-blocks-layout.76f82ea0c799d06acf73237b9266995e.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/page-blocks-layout.d3130deb0c8cba28a2b51c45033635bc.png)
 
 #### List
 
 For [list pages](../../design/guidelines/page-layouts/list-page.md), use the `list` layout to display lists of data.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/page-list-layout.6a565c1ad637e53a00eea686b207b8a7.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/page-list-layout.8d238538536282351e70404d52379856.png)
 
 #### Tabs
 
 For [record pages](../../design/guidelines/page-layouts/record-page.md) or [list pages](../../design/guidelines/page-layouts/list-page.md), use the `tabs` layout to organize large amounts of content into tab panels. Each tab panel can have a different layout. For more information, see [tabs](../tabs.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/page-tabs-layout.cd00761effd67b07f9163f9dca6c9c52.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/page-tabs-layout.f08156fb62b34205accbac4b10b824d1.png)
 
 #### Fit
 
 For [split view pages](../../design/guidelines/page-layouts/split-view-page.md), use the `fit` layout to fill the content area and anchor content to the edges.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/page-fit-layout.2deadebc41c1f7f0e8e8cc83f1aed4d0.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/page-fit-layout.cfb59c6c333f5a9d2d621265cecf6b33.png)
 
 #### None
 

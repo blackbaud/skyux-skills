@@ -29,7 +29,7 @@ Use overlay elevations to lift elements and give the impression that they are ab
 
 The overlay 100 elevation adds a shadow to small and temporary elements that are easily dismissed. This elevation is built into SKY UX components, such as [dropdown menus](../../components/dropdown.md), [popovers](../../components/popover.md), and picker menus on inputs such as [lookup](../../components/lookup.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/elevation/overlay-elevation-100.9f58ef347814d79523910174cd4741dd.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/elevation/overlay-elevation-100.dd269db64bb9a02bd9a408fc75e4aebd.png)
 
 A dropdown menu uses the overlay 100 elevation.
 

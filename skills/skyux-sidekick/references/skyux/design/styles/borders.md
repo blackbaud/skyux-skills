@@ -73,7 +73,7 @@ Buttons and most other interactive elements in SKY UX use the small border radiu
 
 SKY UX uses the medium border radius for overlay containers, such as [dropdown menus](../../components/dropdown.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/border/border-radii-m.9f58ef347814d79523910174cd4741dd.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/border/border-radii-m.dd269db64bb9a02bd9a408fc75e4aebd.png)
 
 Overlay containers, such as dropdown and input menus, use the medium border radius.
 

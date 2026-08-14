@@ -113,7 +113,7 @@ Don't use the list summary to provide a list count on a small, static list.
 
 Don't use the list summary in contexts other than above a list.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/list-summary/list-summary-dont-use-context.439e0cff109911cef5c260ea9ba33f10.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/list-summary/list-summary-dont-use-context.57a0ba47dfae721fb10479ec64a91411.png)
 
 Don't display the list summary without a list.
 

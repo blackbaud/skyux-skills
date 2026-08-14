@@ -33,7 +33,7 @@ Don't skip heading levels within a layout's visual hierarchy. Semantic HTML elem
 
 Don't skip heading levels in hierarchical layouts.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/typography/headings-skip-do.acb771a7aede7d9d2e32d3f77d7dd62b.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/typography/headings-skip-do.dc843b12783b42348b70b2455c3f7552.png)
 
 Do use heading levels in the proper order.
 
@@ -69,7 +69,7 @@ Long description lists use medium emphasized body text to emphasize a term relat
 
 Use medium deemphasized body text (`sky-theme-font-body-deemphasized-m`) to create secondary relationships with medium body text. This style decreases the position of text elements in the visual hierarchy. Use it for metadata and for information within a single entity that supplements the primary identifying element, which can be text, a link, or a text component such as [status indicator](../../components/status-indicator.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/typography/m-deemphasized-do.4b68e2d5263d7172488bcdc253c993a1.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/typography/m-deemphasized-do.27ad77eb427ce1c881aaec56eb94e4a2.png)
 
 Do use medium deemphasized body text for secondary relationships with medium body text.
 

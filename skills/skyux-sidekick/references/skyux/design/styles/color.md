@@ -73,7 +73,7 @@ Do use the dimmed container background color for containers of supplemental or s
 
 The backdrop container background color is a neutral background color for use behind design canvases, WYSIWYG editors, and real-time previews. Use containers for text and other content inside canvases and previews. Don't put text directly on the backdrop container background color.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/background-color-backdrop.45f9c6fb6f4207c5793d01e2c1d790e5.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/background-color-backdrop.4d9d460334095de03c70ac9e8220e646.png)
 
 Do use the backdrop container color behind real-time previews or WYSIWYG editors.
 
