@@ -105,13 +105,13 @@ For [record pages](../../design/guidelines/page-layouts/record-page.md), use the
 
 For [list pages](../../design/guidelines/page-layouts/list-page.md), use the `list` layout to display lists of data.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/page-list-layout.8d238538536282351e70404d52379856.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/page-list-layout.9750148bfa438357acd2e4ba3e25c923.png)
 
 #### Tabs
 
 For [record pages](../../design/guidelines/page-layouts/record-page.md) or [list pages](../../design/guidelines/page-layouts/list-page.md), use the `tabs` layout to organize large amounts of content into tab panels. Each tab panel can have a different layout. For more information, see [tabs](../tabs.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/page-tabs-layout.f08156fb62b34205accbac4b10b824d1.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/page-tabs-layout.a6622d2e4f7c5c73b56ea77f26d108ad.png)
 
 #### Fit
 
