@@ -24,10 +24,10 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 8   | Setup                        | development | 148–151 | `Read file_path=./timepicker.md offset=148 limit=4`   |
 | 9   | SkyTimepickerModule          | development | 152–157 | `Read file_path=./timepicker.md offset=152 limit=6`   |
 | 10  | SkyTimepickerComponent       | development | 158–171 | `Read file_path=./timepicker.md offset=158 limit=14`  |
-| 11  | SkyTimepickerInputDirective  | development | 172–201 | `Read file_path=./timepicker.md offset=172 limit=30`  |
-| 12  | SkyTimepickerTimeFormatType  | development | 202–207 | `Read file_path=./timepicker.md offset=202 limit=6`   |
-| 13  | SkyTimepickerTimeOutput      | development | 208–253 | `Read file_path=./timepicker.md offset=208 limit=46`  |
-| 14  | SkyTimepickerHarness         | testing     | 254–309 | `Read file_path=./timepicker.md offset=254 limit=56`  |
-| 15  | SkyTimepickerFilters         | testing     | 310–325 | `Read file_path=./timepicker.md offset=310 limit=16`  |
-| 16  | SkyTimepickerSelectorHarness | testing     | 326–387 | `Read file_path=./timepicker.md offset=326 limit=62`  |
-| 17  | Code Examples                | examples    | 388–540 | `Read file_path=./timepicker.md offset=388 limit=153` |
+| 11  | SkyTimepickerInputDirective  | development | 172–207 | `Read file_path=./timepicker.md offset=172 limit=36`  |
+| 12  | SkyTimepickerTimeFormatType  | development | 208–213 | `Read file_path=./timepicker.md offset=208 limit=6`   |
+| 13  | SkyTimepickerTimeOutput      | development | 214–259 | `Read file_path=./timepicker.md offset=214 limit=46`  |
+| 14  | SkyTimepickerHarness         | testing     | 260–315 | `Read file_path=./timepicker.md offset=260 limit=56`  |
+| 15  | SkyTimepickerFilters         | testing     | 316–331 | `Read file_path=./timepicker.md offset=316 limit=16`  |
+| 16  | SkyTimepickerSelectorHarness | testing     | 332–393 | `Read file_path=./timepicker.md offset=332 limit=62`  |
+| 17  | Code Examples                | examples    | 394–546 | `Read file_path=./timepicker.md offset=394 limit=153` |

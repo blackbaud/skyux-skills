@@ -442,6 +442,14 @@ Gets the clear all button's aria-label.
 
 `Promise<string | null>`
 
+#### `getHeadingText(): Promise<string | undefined>`
+
+Gets the selection modal's heading text.
+
+#### Returns
+
+`Promise<string | undefined>`
+
 #### `getOnlyShowSelectedAriaLabel(): Promise<string | null>`
 
 Gets the "Only show selected" checkbox's aria-label

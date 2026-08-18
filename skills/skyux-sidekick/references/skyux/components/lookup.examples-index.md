@@ -12,8 +12,8 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                                    | Lines     | Read invocation                                    |
 | --- | ------------------------------------------ | --------- | -------------------------------------------------- |
-| 1   | Lookup in single select mode               | 1593–1925 | `Read file_path=./lookup.md offset=1593 limit=333` |
-| 2   | Lookup in multiple select mode             | 1926–2260 | `Read file_path=./lookup.md offset=1926 limit=335` |
-| 3   | Lookup with custom search results template | 2261–2745 | `Read file_path=./lookup.md offset=2261 limit=485` |
-| 4   | Lookup with a custom picker                | 2746–3385 | `Read file_path=./lookup.md offset=2746 limit=640` |
-| 5   | Lookup with add item button                | 3386–3780 | `Read file_path=./lookup.md offset=3386 limit=395` |
+| 1   | Lookup in single select mode               | 1601–1933 | `Read file_path=./lookup.md offset=1601 limit=333` |
+| 2   | Lookup in multiple select mode             | 1934–2268 | `Read file_path=./lookup.md offset=1934 limit=335` |
+| 3   | Lookup with custom search results template | 2269–2753 | `Read file_path=./lookup.md offset=2269 limit=485` |
+| 4   | Lookup with a custom picker                | 2754–3393 | `Read file_path=./lookup.md offset=2754 limit=640` |
+| 5   | Lookup with add item button                | 3394–3788 | `Read file_path=./lookup.md offset=3394 limit=395` |

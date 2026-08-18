@@ -193,6 +193,12 @@ Default: `false`
 
 The custom time format. For examples, see the [moment.js](https://momentjs.com/docs/#/displaying/format/) docs.
 
+#### `skyTimepickerRetainInvalidValues: InputSignalWithTransform<boolean, unknown>`
+
+Whether to retain invalid entries in the input when it loses focus. When set to `true`, an invalid value remains in the field and the associated form control is flagged with a `skyTime` error, matching the behavior of the datepicker.
+
+Default: `false`
+
 #### `timeFormat: SkyTimepickerTimeFormatType`
 
 The 12-hour `hh` or 24-hour `HH` time format for the input.

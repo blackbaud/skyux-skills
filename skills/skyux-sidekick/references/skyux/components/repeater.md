@@ -164,7 +164,7 @@ Type: Component
 
 Selector: `sky-repeater-item-context-menu`
 
-Wraps and styles a [`sky-dropdown` component](../-popovers/docs/dropdown.md).
+Wraps and styles a [`sky-dropdown` component](./dropdown.md).
 
 ## SkyRepeaterExpandModeType
 

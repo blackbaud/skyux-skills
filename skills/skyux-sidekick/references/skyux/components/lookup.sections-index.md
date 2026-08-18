@@ -44,9 +44,9 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 28  | SkyLookupSearchResultHarness                      | testing     | 862–979   | `Read file_path=./lookup.md offset=862 limit=118`   |
 | 29  | SkyLookupSearchResultHarnessFilters               | testing     | 980–995   | `Read file_path=./lookup.md offset=980 limit=16`    |
 | 30  | SkyLookupSelectionHarness                         | testing     | 996–1065  | `Read file_path=./lookup.md offset=996 limit=70`    |
-| 31  | SkyLookupShowMorePickerHarness                    | testing     | 1066–1249 | `Read file_path=./lookup.md offset=1066 limit=184`  |
-| 32  | SkyLookupShowMorePickerHarnessFilters             | testing     | 1250–1257 | `Read file_path=./lookup.md offset=1250 limit=8`    |
-| 33  | SkyLookupShowMorePickerSearchResultHarness        | testing     | 1258–1491 | `Read file_path=./lookup.md offset=1258 limit=234`  |
-| 34  | SkyLookupShowMorePickerSearchResultHarnessFilters | testing     | 1492–1512 | `Read file_path=./lookup.md offset=1492 limit=21`   |
-| 35  | SkyAutocompleteInputHarness                       | testing     | 1513–1590 | `Read file_path=./lookup.md offset=1513 limit=78`   |
-| 36  | Code Examples                                     | examples    | 1591–3780 | `Read file_path=./lookup.md offset=1591 limit=2190` |
+| 31  | SkyLookupShowMorePickerHarness                    | testing     | 1066–1257 | `Read file_path=./lookup.md offset=1066 limit=192`  |
+| 32  | SkyLookupShowMorePickerHarnessFilters             | testing     | 1258–1265 | `Read file_path=./lookup.md offset=1258 limit=8`    |
+| 33  | SkyLookupShowMorePickerSearchResultHarness        | testing     | 1266–1499 | `Read file_path=./lookup.md offset=1266 limit=234`  |
+| 34  | SkyLookupShowMorePickerSearchResultHarnessFilters | testing     | 1500–1520 | `Read file_path=./lookup.md offset=1500 limit=21`   |
+| 35  | SkyAutocompleteInputHarness                       | testing     | 1521–1598 | `Read file_path=./lookup.md offset=1521 limit=78`   |
+| 36  | Code Examples                                     | examples    | 1599–3788 | `Read file_path=./lookup.md offset=1599 limit=2190` |

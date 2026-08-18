@@ -12,4 +12,4 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                     | Lines   | Read invocation                                       |
 | --- | --------------------------- | ------- | ----------------------------------------------------- |
-| 1   | Timepicker with basic setup | 390–540 | `Read file_path=./timepicker.md offset=390 limit=151` |
+| 1   | Timepicker with basic setup | 396–546 | `Read file_path=./timepicker.md offset=396 limit=151` |

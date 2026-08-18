@@ -268,11 +268,15 @@ Type: Service
 
 `SkyAgGridService` provides methods to get AG Grid `gridOptions` to ensure grids match SKY UX functionality. The `gridOptions` can be overridden, and include registered SKY UX column types.
 
+Locale text is resolved once, when the grid options are created. [AG Grid does not re-read locale text after a grid is created](https://www.ag-grid.com/angular-data-grid/localisation/), so an application that changes locale at runtime must destroy and recreate the grid. Setting `gridOptions.getLocaleText` replaces SKY UX locale text entirely — use `gridOptions.localeText` to override individual strings instead.
+
 ### Methods
 
 #### `getEditableGridOptions(args: SkyGetGridOptionsArgs<T>): GridOptions<T>`
 
 Returns [AG Grid `gridOptions`](https://www.ag-grid.com/angular-data-grid/grid-options/) with default SKY UX options, styling, and cell editors registered for editable grids.
+
+Locale text is resolved once, at call time. If the application's locale changes at runtime, destroy and recreate the grid to pick up the new locale text.
 
 #### Parameters
 
@@ -285,6 +289,8 @@ Returns [AG Grid `gridOptions`](https://www.ag-grid.com/angular-data-grid/grid-o
 #### `getGridOptions(args: SkyGetGridOptionsArgs<T>): GridOptions<T>`
 
 Returns [AG Grid `gridOptions`](https://www.ag-grid.com/angular-data-grid/grid-options/) with default SKY UX options, styling, and cell renderers registered for read-only grids.
+
+Locale text is resolved once, at call time. If the application's locale changes at runtime, destroy and recreate the grid to pick up the new locale text.
 
 #### Parameters
 
@@ -447,7 +453,7 @@ The number that is subtracted from the minuend.
 
 Type: Enumeration
 
-These column types can be used by setting the AG Grid [column definition `type`](https://www.ag-grid.com/angular-data-grid/column-properties/#reference-editing) to one of the following values. Any [SKY UX component](./README.md) can be made into a [cell editor](https://www.ag-grid.com/angular-data-grid/cell-editors/) or [cell renderer](https://www.ag-grid.com/angular-data-grid/component-cell-renderer/) component. If you would like to use a component that does not have a column definition yet, please consider [contributing it](https://github.com/blackbaud/skyux/blob/main/CONTRIBUTING.md) to the SKY UX data entry grid module.
+These column types can be used by setting the AG Grid [column definition `type`](https://www.ag-grid.com/angular-data-grid/column-properties/#reference-editing) to one of the following values. Any [SKY UX component](./README.md) can be made into a [cell editor](https://www.ag-grid.com/angular-data-grid/cell-editors/) or [cell renderer](https://www.ag-grid.com/angular-data-grid/component-cell-renderer/) component. If you would like to use a component that does not have a column definition yet, please consider [contributing it](https://github.com/blackbaud/skyux/blob/main/CONTRIBUTING.md) to the SKY UX data entry grid module. Use `defineSkyAgGridColDef()` to validate a column definition's `cellEditorParams` and `cellRendererParams` against its cell type.
 
     enum SkyCellType {
       Autocomplete = "skyCellAutocomplete",
@@ -510,7 +516,7 @@ Cells in the column will be edited as SKY UX lookup components. You can set any 
 
 **Read-only mode**
 
-Cells the column will display, by default, either: the name(s) of the selected value(s) if there are less than 6, or a summary count of the values if there are more than 5. If the lookup needs to show a different property or needs to be formatted in any way, you can [define a `valueFormatter`](https://www.ag-grid.com/angular-data-grid/value-formatters/) on the column definition.
+Cells in the column will display, by default, either: the name(s) of the selected value(s) if there are less than 6, or a summary count of the values if there are more than 5. If the lookup needs to show a different property or needs to be formatted in any way, you can [define a `valueFormatter`](https://www.ag-grid.com/angular-data-grid/value-formatters/) on the column definition.
 
 #### `SkyCellType.Number`
 
@@ -1085,24 +1091,163 @@ The maximum length of the text that users can enter into the cell.
 Type: Interface
 
     interface SkyAgGridValidatorProperties {
-      validator?: (value: unknown, data?: unknown, rowIndex?: number | null) => boolean;
-      validatorMessage?: string | Signal<string> | ((value: unknown, data?: unknown, rowIndex?: number | null) => string);
-      valueResourceObservable?: (value: unknown, data?: unknown, rowIndex?: number | null) => Observable<string>;
+      validator?: (value: TValue, data?: TData, rowIndex?: number | null) => boolean;
+      validatorMessage?: string | Signal<string> | ((value: TValue, data?: TData, rowIndex?: number | null) => string);
+      valueResourceObservable?: (value: TValue, data?: TData, rowIndex?: number | null) => Observable<string>;
     }
 
 ### Properties
 
-#### `validator?: (value: unknown, data?: unknown, rowIndex?: number | null) => boolean`
+#### `validator?: (value: TValue, data?: TData, rowIndex?: number | null) => boolean`
 
 A function that returns true if the value is valid, or false if it is not. Invalid values will be highlighted and display a validation message.
 
-#### `validatorMessage?: string | Signal<string> | ((value: unknown, data?: unknown, rowIndex?: number | null) => string)`
+#### `validatorMessage?: string | Signal<string> | ((value: TValue, data?: TData, rowIndex?: number | null) => string)`
 
 A string signal function, a string, or a function that returns a string. The message to display when the value is invalid.
 
-#### `valueResourceObservable?: (value: unknown, data?: unknown, rowIndex?: number | null) => Observable<string>`
+#### `valueResourceObservable?: (value: TValue, data?: TData, rowIndex?: number | null) => Observable<string>`
 
 An optional function that returns an observable that emits a string. Can be used with resources to localize the value displayed in the cell.
+
+## defineSkyAgGridColDef
+
+Type: FunctionBuilds a column definition whose `cellEditorParams` and `cellRendererParams` are validated against the SKY UX cell types in the `type` property. The cell type is inferred, so no type arguments are needed:
+
+    defineSkyAgGridColDef({
+      field: 'endDate',
+      type: [SkyCellType.Date, SkyCellType.Validator],
+      cellRendererParams: { skyComponentProperties: { validator: ... } },
+    })
+
+    function defineSkyAgGridColDef(colDef: C & Omit<ColDef<any, any>, "type" | "cellEditorParams" | "cellRendererParams"> & { cellEditorParams?: UnionToIntersection<<a class="sky-docs-codespan-anchor" href="https://developer.blackbaud.com/skyux/components/data-grid?docs-active-tab=design#interface_sky-cell-editor-params-by-type">SkyCellEditorParamsByType</a>[T]> | ((params: ICellEditorParams<any, any>) => UnionToIntersection<<a class="sky-docs-codespan-anchor" href="https://developer.blackbaud.com/skyux/components/data-grid?docs-active-tab=design#interface_sky-cell-editor-params-by-type">SkyCellEditorParamsByType</a>[T]>); cellRendererParams?: UnionToIntersection<<a class="sky-docs-codespan-anchor" href="https://developer.blackbaud.com/skyux/components/data-grid?docs-active-tab=design#interface_sky-cell-renderer-params-by-type">SkyCellRendererParamsByType</a><any, any>[T]> | ((params: ICellRendererParams<any, any>) => UnionToIntersection<<a class="sky-docs-codespan-anchor" href="https://developer.blackbaud.com/skyux/components/data-grid?docs-active-tab=design#interface_sky-cell-renderer-params-by-type">SkyCellRendererParamsByType</a><any, any>[T]>); type: T | T[] } & { field?: F } & Record<Exclude<keyof C, "filter" | "width" | "sort" | "type" | "hide" | "context" | "comparator" | "initialHide" | "suppressAutoSize" | "singleClickEdit" | "loadingCellRenderer" | "loadingCellRendererParams" | "loadingCellRendererSelector" | "rowDragText" | "sortingOrder" | "unSortIcon" | "icons" | "onCellValueChanged" | "onCellClicked" | "onCellDoubleClicked" | "onCellContextMenu" | "cellEditor" | "rowGroup" | "colId" | "field" | "cellDataType" | "allowFormula" | "valueGetter" | "valueFormatter" | "refData" | "keyCreator" | "equals" | "tooltipField" | "tooltipValueGetter" | "tooltipComponentSelector" | "checkboxSelection" | "showDisabledCheckboxes" | "suppressNavigable" | "suppressKeyboardEvent" | "suppressPaste" | "suppressFillHandle" | "lockVisible" | "lockPosition" | "suppressMovable" | "useValueFormatterForExport" | "editable" | "valueSetter" | "valueParser" | "cellEditorParams" | "cellEditorSelector" | "cellEditorPopup" | "cellEditorPopupPosition" | "useValueParserForImport" | "getQuickFilterText" | "filterValueGetter" | "floatingFilter" | "suppressFloatingFilterButton" | "dateComponent" | "dateComponentParams" | "getFindText" | "headerComponent" | "headerComponentParams" | "menuTabs" | "columnChooserParams" | "suppressHeaderMenuButton" | "suppressHeaderFilterButton" | "mainMenuItems" | "contextMenuItems" | "headerCheckboxSelection" | "headerCheckboxSelectionFilteredOnly" | "headerCheckboxSelectionCurrentPageOnly" | "chartDataType" | "pinned" | "initialPinned" | "lockPinned" | "pivot" | "initialPivot" | "pivotIndex" | "initialPivotIndex" | "pivotComparator" | "enablePivot" | "cellStyle" | "cellClass" | "cellClassRules" | "cellRenderer" | "cellRendererParams" | "cellRendererSelector" | "autoHeight" | "wrapText" | "enableCellChangeFlash" | "rowDrag" | "dndSource" | "dndSourceOnRowDrag" | "initialRowGroup" | "rowGroupIndex" | "initialRowGroupIndex" | "enableRowGroup" | "enableValue" | "aggFunc" | "initialAggFunc" | "defaultAggFunc" | "allowedAggFuncs" | "rowGroupingHierarchy" | "groupHierarchy" | "showRowGroup" | "sortable" | "initialSort" | "sortIndex" | "initialSortIndex" | "colSpan" | "rowSpan" | "spanRows" | "initialWidth" | "minWidth" | "maxWidth" | "flex" | "initialFlex" | "resizable" | "suppressSizeToFit" | "pivotValueColumn" | "pivotTotalColumnIds" | "suppressSpanHeaderHeight" | "headerName" | "headerValueGetter" | "headerTooltip" | "headerTooltipValueGetter" | "headerStyle" | "headerClass" | "suppressHeaderKeyboardEvent" | "columnGroupShow" | "toolPanelClass" | "suppressColumnsToolPanel" | "suppressFiltersToolPanel" | "tooltipComponent" | "tooltipComponentParams" | "pivotKeys" | "cellAriaRole" | "wrapHeaderText" | "autoHeaderHeight" | "suppressHeaderContextMenu" | "filterParams" | "floatingFilterComponent" | "floatingFilterComponentParams">, never>): C & { field?: F }
+
+### Parameters
+
+#### `colDef: C & Omit<ColDef<any, any>, "type" | "cellEditorParams" | "cellRendererParams"> & { cellEditorParams?: UnionToIntersection<SkyCellEditorParamsByType[T]> | ((params: ICellEditorParams<any, any>) => UnionToIntersection<SkyCellEditorParamsByType[T]>); cellRendererParams?: UnionToIntersection<SkyCellRendererParamsByType<any, any>[T]> | ((params: ICellRendererParams<any, any>) => UnionToIntersection<SkyCellRendererParamsByType<any, any>[T]>); type: T | T[] } & { field?: F } & Record<Exclude<keyof C, "filter" | "width" | "sort" | "type" | "hide" | "context" | "comparator" | "initialHide" | "suppressAutoSize" | "singleClickEdit" | "loadingCellRenderer" | "loadingCellRendererParams" | "loadingCellRendererSelector" | "rowDragText" | "sortingOrder" | "unSortIcon" | "icons" | "onCellValueChanged" | "onCellClicked" | "onCellDoubleClicked" | "onCellContextMenu" | "cellEditor" | "rowGroup" | "colId" | "field" | "cellDataType" | "allowFormula" | "valueGetter" | "valueFormatter" | "refData" | "keyCreator" | "equals" | "tooltipField" | "tooltipValueGetter" | "tooltipComponentSelector" | "checkboxSelection" | "showDisabledCheckboxes" | "suppressNavigable" | "suppressKeyboardEvent" | "suppressPaste" | "suppressFillHandle" | "lockVisible" | "lockPosition" | "suppressMovable" | "useValueFormatterForExport" | "editable" | "valueSetter" | "valueParser" | "cellEditorParams" | "cellEditorSelector" | "cellEditorPopup" | "cellEditorPopupPosition" | "useValueParserForImport" | "getQuickFilterText" | "filterValueGetter" | "floatingFilter" | "suppressFloatingFilterButton" | "dateComponent" | "dateComponentParams" | "getFindText" | "headerComponent" | "headerComponentParams" | "menuTabs" | "columnChooserParams" | "suppressHeaderMenuButton" | "suppressHeaderFilterButton" | "mainMenuItems" | "contextMenuItems" | "headerCheckboxSelection" | "headerCheckboxSelectionFilteredOnly" | "headerCheckboxSelectionCurrentPageOnly" | "chartDataType" | "pinned" | "initialPinned" | "lockPinned" | "pivot" | "initialPivot" | "pivotIndex" | "initialPivotIndex" | "pivotComparator" | "enablePivot" | "cellStyle" | "cellClass" | "cellClassRules" | "cellRenderer" | "cellRendererParams" | "cellRendererSelector" | "autoHeight" | "wrapText" | "enableCellChangeFlash" | "rowDrag" | "dndSource" | "dndSourceOnRowDrag" | "initialRowGroup" | "rowGroupIndex" | "initialRowGroupIndex" | "enableRowGroup" | "enableValue" | "aggFunc" | "initialAggFunc" | "defaultAggFunc" | "allowedAggFuncs" | "rowGroupingHierarchy" | "groupHierarchy" | "showRowGroup" | "sortable" | "initialSort" | "sortIndex" | "initialSortIndex" | "colSpan" | "rowSpan" | "spanRows" | "initialWidth" | "minWidth" | "maxWidth" | "flex" | "initialFlex" | "resizable" | "suppressSizeToFit" | "pivotValueColumn" | "pivotTotalColumnIds" | "suppressSpanHeaderHeight" | "headerName" | "headerValueGetter" | "headerTooltip" | "headerTooltipValueGetter" | "headerStyle" | "headerClass" | "suppressHeaderKeyboardEvent" | "columnGroupShow" | "toolPanelClass" | "suppressColumnsToolPanel" | "suppressFiltersToolPanel" | "tooltipComponent" | "tooltipComponentParams" | "pivotKeys" | "cellAriaRole" | "wrapHeaderText" | "autoHeaderHeight" | "suppressHeaderContextMenu" | "filterParams" | "floatingFilterComponent" | "floatingFilterComponentParams">, never>`
+
+## SkyAgGridColDef
+
+Type: Type alias
+
+A column definition that validates `cellEditorParams` and `cellRendererParams` against the SKY UX cell types in the column's `type` property. Combine cell types by passing a union of `SkyCellType` values, like `SkyAgGridColDef<SkyCellType.Number | SkyCellType.Validator>`.
+
+    type SkyAgGridColDef = Omit<ColDef<TData, TValue>, "type" | "cellEditorParams" | "cellRendererParams"> & { cellEditorParams?: UnionToIntersection<SkyCellEditorParamsByType[T]> | ((params: ICellEditorParams<TData, TValue>) => UnionToIntersection<SkyCellEditorParamsByType[T]>); cellRendererParams?: UnionToIntersection<SkyCellRendererParamsByType<TData, TValue>[T]> | ((params: ICellRendererParams<TData, TValue>) => UnionToIntersection<SkyCellRendererParamsByType<TData, TValue>[T]>); type: T | T[] }
+
+## SkyCellEditorParamsByType
+
+Type: Interface
+
+The parameters that each SKY UX cell type accepts in the [column definition's `cellEditorParams` property](https://www.ag-grid.com/angular-data-grid/column-properties/#reference-editing-cellEditorParams). Cell types that map to `never` do not accept editor parameters. Use `defineSkyAgGridColDef()` to validate `cellEditorParams` against the column's cell type.
+
+    interface SkyCellEditorParamsByType {
+      skyCellAutocomplete: { skyComponentProperties?: SkyAgGridAutocompleteProperties | SkyAutocompleteProperties };
+      skyCellCurrency: { skyComponentProperties?: SkyAgGridCurrencyProperties };
+      skyCellCurrencyValidator: { skyComponentProperties?: SkyAgGridCurrencyProperties };
+      skyCellDate: { skyComponentProperties?: SkyAgGridDatepickerProperties | SkyDatepickerProperties };
+      skyCellLookup: { skyComponentProperties?: SkyAgGridLookupProperties };
+      skyCellNumber: { skyComponentProperties?: SkyAgGridNumberProperties };
+      skyCellNumberValidator: { skyComponentProperties?: SkyAgGridNumberProperties };
+      skyCellRightAligned: never;
+      skyCellRowSelector: never;
+      skyCellTemplate: never;
+      skyCellText: { skyComponentProperties?: SkyAgGridTextProperties };
+      skyCellValidator: never;
+    }
+
+### Properties
+
+#### `skyCellAutocomplete: { skyComponentProperties?: SkyAgGridAutocompleteProperties | SkyAutocompleteProperties }`
+
+#### `skyCellCurrency: { skyComponentProperties?: SkyAgGridCurrencyProperties }`
+
+#### `skyCellCurrencyValidator: { skyComponentProperties?: SkyAgGridCurrencyProperties }`
+
+#### `skyCellDate: { skyComponentProperties?: SkyAgGridDatepickerProperties | SkyDatepickerProperties }`
+
+#### `skyCellLookup: { skyComponentProperties?: SkyAgGridLookupProperties }`
+
+#### `skyCellNumber: { skyComponentProperties?: SkyAgGridNumberProperties }`
+
+#### `skyCellNumberValidator: { skyComponentProperties?: SkyAgGridNumberProperties }`
+
+#### `skyCellRightAligned: never`
+
+#### `skyCellRowSelector: never`
+
+#### `skyCellTemplate: never`
+
+#### `skyCellText: { skyComponentProperties?: SkyAgGridTextProperties }`
+
+#### `skyCellValidator: never`
+
+## SkyCellRendererParamsByType
+
+Type: Interface
+
+The parameters that each SKY UX cell type accepts in the [column definition's `cellRendererParams` property](https://www.ag-grid.com/angular-data-grid/column-properties/#reference-styling-cellRendererParams). Cell types that map to `never` do not accept renderer parameters. Use `defineSkyAgGridColDef()` to validate `cellRendererParams` against the column's cell type.
+
+    interface SkyCellRendererParamsByType {
+      skyCellAutocomplete: never;
+      skyCellCurrency: { skyComponentProperties?: SkyNumericOptions & SkyAgGridValidatorProperties<TValue, TData> };
+      skyCellCurrencyValidator: { skyComponentProperties?: SkyNumericOptions & SkyAgGridValidatorProperties<TValue, TData> };
+      skyCellDate: never;
+      skyCellLookup: { skyComponentProperties?: SkyAgGridLookupProperties };
+      skyCellNumber: { skyComponentProperties?: SkyAgGridValidatorProperties<TValue, TData> };
+      skyCellNumberValidator: { skyComponentProperties?: SkyAgGridValidatorProperties<TValue, TData> };
+      skyCellRightAligned: never;
+      skyCellRowSelector: { label?: string | ((data: TData) => string | Observable<string>) };
+      skyCellTemplate: { template: TemplateRef<unknown> | Signal<TemplateRef<unknown> | undefined> };
+      skyCellText: { skyComponentProperties?: SkyAgGridValidatorProperties<TValue, TData> };
+      skyCellValidator: { skyComponentProperties?: SkyAgGridValidatorProperties<TValue, TData> };
+    }
+
+### Properties
+
+#### `skyCellAutocomplete: never`
+
+#### `skyCellCurrency: { skyComponentProperties?: SkyNumericOptions & SkyAgGridValidatorProperties<TValue, TData> }`
+
+#### `skyCellCurrencyValidator: { skyComponentProperties?: SkyNumericOptions & SkyAgGridValidatorProperties<TValue, TData> }`
+
+#### `skyCellDate: never`
+
+#### `skyCellLookup: { skyComponentProperties?: SkyAgGridLookupProperties }`
+
+#### `skyCellNumber: { skyComponentProperties?: SkyAgGridValidatorProperties<TValue, TData> }`
+
+#### `skyCellNumberValidator: { skyComponentProperties?: SkyAgGridValidatorProperties<TValue, TData> }`
+
+#### `skyCellRightAligned: never`
+
+#### `skyCellRowSelector: { label?: string | ((data: TData) => string | Observable<string>) }`
+
+#### `skyCellTemplate: { template: TemplateRef<unknown> | Signal<TemplateRef<unknown> | undefined> }`
+
+#### `skyCellText: { skyComponentProperties?: SkyAgGridValidatorProperties<TValue, TData> }`
+
+#### `skyCellValidator: { skyComponentProperties?: SkyAgGridValidatorProperties<TValue, TData> }`
+
+## SkyCellRendererTemplateContext
+
+Type: Interface
+
+The context provided to the template of a template cell renderer.
+
+    interface SkyCellRendererTemplateContext {
+      row: object | undefined;
+      value: unknown;
+    }
+
+### Properties
+
+#### `row: object | undefined`
+
+The row's data.
+
+#### `value: unknown`
+
+The cell's value.
 
 SKY UX test harnesses are built upon Angular CDK component harnesses. For more information see the [Angular CDK component harness documentation](https://material.angular.io/cdk/test-harnesses/overview).
 

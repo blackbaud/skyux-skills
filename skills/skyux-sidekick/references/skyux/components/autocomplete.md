@@ -68,7 +68,7 @@ Selector: `sky-autocomplete`
 
 #### `allowAnyValue: InputSignalWithTransform<boolean, unknown>`
 
-When using `searchAsync`, allows the user to specify arbitrary values not in the search results. This only works in combination with `searchAsync`.
+When using `searchAsync`, allows the user to specify arbitrary values not in the search results. This only works in combination with `searchAsync`. On blur, the typed text is kept as the value rather than reverted, using a matching search result if one is available. Consumers should guard against values set before a `searchAsync` call resolves.
 
 Default: `false`
 
