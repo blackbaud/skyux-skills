@@ -9,7 +9,7 @@ Reference: https://developer.blackbaud.com/skyux/components/select-field
 
 A select field creates a text input or button to launch a modal picker for users to select items from a searchable, browsable, and filterable list.
 
-Select field is deprecated. We will remove it in a future major version. In most cases, we recommend using the [lookup](./lookup.md) component instead, but some scenarios require a different option, such as a [selection box](./selection-box.md) component or an HTML `<select>` element in an [input box](./input-box.md). For more information, review the [select field deprecation instructions](../learn/develop/deprecation/select-field.md).
+Select field is deprecated. We will remove it in SKY UX v15. In most cases, we recommend using the [lookup](./lookup.md) component instead, but some scenarios require a different option, such as a [selection box](./selection-box.md) component or an HTML `<select>` element in an [input box](./input-box.md). For more information, review the [select field deprecation instructions](../learn/develop/deprecation/select-field.md).
 
 ## Usage
 
