@@ -99,13 +99,13 @@ To highlight important information that users should know at a glance, including
 
 To let users select multiple rows in a data grid, use a [data manager](./data-manager.md) and enable multiselect.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-multiselect.49410ebe63b179f9571e2a3b7454341e.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-multiselect.8ac8c32948c498574bac4462e2cd0b98.png)
 
 Do use multiselect to let users select multiple rows.
 
 To let users perform actions on the multiple rows that they select in a data grid, include the [summary action bar](./summary-action-bar.md) at the bottom of the data grid's container. Only use multiselect with a summary action bar when the container is a [page](./page/README.md), [modal](./modal.md), [split view workspace](./split-view.md), or [flyout](./flyout.md). Don't use multiselect with a summary action bar when the data grid is in a container, such as a [tile](./tile.md) or [box](./box.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-multiselect-actions.00ea4f4205e90d4b8596898d84281bb1.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-multiselect-actions.c90ab344d72923f02e19803f9dd52180.png)
 
 Do use multiselect to let users perform actions on multiple rows.
 

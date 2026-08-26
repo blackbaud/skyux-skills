@@ -21,11 +21,11 @@ After you set up modals for your filters, select the default filters to display 
 
 When a modal filter only has a few available filters, you migrate to a filter bar by creating a modal for each filter and displaying buttons for all of them.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/deprecation/modal-filter/event-modal-filter.33829141db334fbb0b7de605f361a199.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/deprecation/modal-filter/event-modal-filter.400c1283a68b7d51dca08cbe6b7e96e9.png)
 
 A list of events includes a modal with a few filters.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/deprecation/modal-filter/event-list-filter-bar.caebb6858926c24eb8b363b83ea6478c.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/deprecation/modal-filter/event-list-filter-bar.089f8740e41cf3ff5e9491d0789cdfdf.png)
 
 In the filter bar, display buttons for each filter to open individual modals.
 
@@ -33,20 +33,20 @@ In the filter bar, display buttons for each filter to open individual modals.
 
 When a modal filter has a large number of filters, you migrate to a filter bar by creating a modal for each filter and then selecting which which filters to display by default in the filter bar.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/deprecation/modal-filter/transactions-list-filters.e14699b35551e86aba9aad59be16ffce.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/deprecation/modal-filter/transactions-list-filters.4feb10c6a4d6dda66743a78732ae0725.png)
 
 A list of transactions has a large number of filters in multiple groups.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/deprecation/modal-filter/transactions-list-filter-bar.21bdfa33452f919ef3e8ffe1f7d2656d.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/deprecation/modal-filter/transactions-list-filter-bar.f53076e5220c4acdbdb15805238e6161.png)
 
 In the filter bar, display filter buttons for the most important or most commonly used filters based on the main tasks that the list supports. The rest are available to users through the filter chooser.
 
 Each filter in the filter bar opens a modal with its options. The filter bar natively supports the lookup filter type, and you can can extend the filter bar to support other filter types. Users can open a filter chooser to change add and remove filters from the filter bar.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/deprecation/modal-filter/transactions-list-post-status-filter.e7bd8e0e7765bebf9755487c71252a73.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/deprecation/modal-filter/transactions-list-post-status-filter.ef84dab49b06c1db3ed480d3a8190027.png)
 
 The lookup filter for post status.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/deprecation/modal-filter/transaction-list-select-filters.c1e292d82925fadb0109cd73ee3ac3ae.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/deprecation/modal-filter/transaction-list-select-filters.70d3cadb5b407340c9f4f24c81d5e0f3.png)
 
 The filter chooser allows users to add and remove filter buttons from the filter bar.

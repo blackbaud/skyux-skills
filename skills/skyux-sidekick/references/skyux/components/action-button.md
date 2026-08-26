@@ -22,7 +22,7 @@ Use action buttons when they represent a decision point within a task where user
 
 Use action buttons immediately after users initiate tasks to differentiate the methods of completion.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/action-button/action-button-use-when-1.12dfebfe661e9bfed392cdf8668f8c7e.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/action-button/action-button-use-when-1.06c0d6b25c8157534c36a31074f337e4.png)
 
 Do use action buttons immediately after users initiate tasks.
 
@@ -48,7 +48,7 @@ Don't use action buttons to present different methods of completing tasks before
 
 Do not use action buttons when consequential choices are not made at the beginning of tasks. Instead, use a different selection input and progressive disclosure to reveal additional content as necessary. Likewise, do not use action buttons when the methods of completion in tasks differ only in minor ways such as an extra field or two. Action buttons represent consequential decisions where the methods of completion can start and end differently and can include entirely different steps and requirements.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/action-button/action-button-dont-use-when-3.39ed616eb1262a0e089e2aa51da356c2.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/action-button/action-button-dont-use-when-3.aa3304f56b7e44051d2a506208ab69a6.png)
 
 Don't use action buttons when choices are not made at the beginning of tasks.
 
@@ -68,7 +68,7 @@ Use action buttons inside modals when tasks mostly take place within modals. For
 
 - Always provide a "Cancel" action inside a modal with action buttons.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/action-button/action-button-behavior-1.bb3199022603f343d081c9cf64694bc1.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/action-button/action-button-behavior-1.1f4c1a8becf1d3890541718eca0c8e4c.png)
 
 Use action buttons directly on pages or tabs that include add or configuration processes but no other tasks. Most add processes use the modal example above.
 

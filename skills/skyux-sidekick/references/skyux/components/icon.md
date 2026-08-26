@@ -1630,11 +1630,11 @@ Icons convey a single meaning with limited variations. Each icon represents a co
 
 Use icons alongside meaningful action labels to help users understand the purpose of actions at a glance.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/icon/img/guidelines/icons/icon-usage-1.bcf382471fa0b5d9a953e8eeba4f15da.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/icon/img/guidelines/icons/icon-usage-1.df96695daebb9cf5b87fe0b0b149a500.png)
 
 Do use icons as a visual shorthand to supplement action labels.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/icon/img/guidelines/icons/icon-usage-2.703e568b8678d66825579c49942b05e6.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/icon/img/guidelines/icons/icon-usage-2.b099a52ebcb649b69d8bba835221b5c8.png)
 
 Avoid standalone icons except when space is too tight for labels and icons are sufficient to represent actions.
 
@@ -1642,21 +1642,21 @@ Avoid standalone icons except when space is too tight for labels and icons are s
 
 Don't use icons solely for visual interest or decoration.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/icon/img/guidelines/icons/icon-usage-4.7e68da2be8522c1abed456b9c12c1f1e.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/icon/img/guidelines/icons/icon-usage-4.541e95e79ea529b0b13c85fad3b179b8.png)
 
 Don't use icons as decoration.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/icon/img/guidelines/icons/icon-usage-3.6531a83af966330abe989dead4037f1b.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/icon/img/guidelines/icons/icon-usage-3.aef88fa3a5ea3354981baee19003e763.png)
 
 Do exclude icons when they don't facilitate user comprehension or drive focus.
 
 Don't use icons for multiple purposes. Each icon conveys a single, specific meaning that users can understand at a glance.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/icon/img/guidelines/icons/icon-usage-6.c7fc1eadfda416f7a56ba885e56c89af.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/icon/img/guidelines/icons/icon-usage-6.297cbbfbd9eebb5b7bc07e8a8dfc3b49.png)
 
 Don't use icons with established meanings for other purposes.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/icon/img/guidelines/icons/icon-usage-5.4daa54018fbc0442ad1b037401672917.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/icon/img/guidelines/icons/icon-usage-5.b30bdfd9e33eabe131172ec44d32ca0a.png)
 
 Do use icons consistently to represent one specific idea or subject.
 
