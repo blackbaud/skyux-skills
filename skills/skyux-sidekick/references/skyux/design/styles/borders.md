@@ -15,6 +15,12 @@ The default container border wraps content containers to separate them from thei
 
 Use the default container border to separate content containers, such as boxes, from their surroundings.
 
+The prominent header border emphasizes prominent containers. Prominent containers, such as chat panels, WYSIWYG editors, and help files, display tools or systems alongside the main page content but don't extend the page content. This style is specifically designed to visually emphasize headers in prominent containers. Don't use it for any other use cases.
+
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/border/prominent-container-header-border-color.9f05790ca8b05900b7dc689a7cc77d33.png)
+
+Do use the prominent header border on headers for prominent containers, such as containers with widgets for WYSIWYG editors.
+
 ## Dividers
 
 Use the default divider border to separate disparate sections or regions of a page. This border style is built into SKY UX components, such as [split view](../../components/split-view.md), [tabs](../../components/tabs.md), and [toolbar](../../components/toolbar.md).
@@ -89,9 +95,17 @@ A border that wraps around a container and separates it from its surroundings.
 
 Container default
 
+The default border around most containers that don't overlay other content.
+
 `sky-theme-border-container-default`
 
 Deprecated:`sky-border-dark` , `sky-border-light` , `sky-elevation-0-bordered`
+
+Prominent container header border
+
+The bottom border for the header on a prominent container.
+
+`sky-theme-border-container-header-prominent`
 
 ## Dividers
 
@@ -281,7 +295,15 @@ Borders that wrap around a container and separate it from its surroundings.
 
 Container default
 
+The default border around most containers that don't overlay other content.
+
 `var(--sky-theme-border-container-default)`
+
+Prominent header border
+
+The bottom border for the header on a prominent container.
+
+`var(--sky-theme-border-container-header-prominent)`
 
 ## Dividers
 

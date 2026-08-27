@@ -109,6 +109,14 @@ The main use cases for danger buttons are [confirmation dialogs](./confirm.md) a
 
 Confirmation dialogs use danger buttons for actions that delete existing data.
 
+#### Prominent header borderless icon buttons
+
+Use prominent header borderless icon buttons inside prominent container headers. Prominent containers, such as chat panels, WYSIWYG editors, and help files, display tools or systems alongside the main page content but don't extend the page content.
+
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/button/prominent-header-icon-button.8326da44958527f136fd87fe7e79de13.png)
+
+Use prominent header borderless icon buttons for actions inside prominent container headers.
+
 ### Don't use when
 
 Don't use multiple buttons in a row for a similar, but distinct actions. To group multiple actions, use a [dropdown button](./dropdown.md) instead.
@@ -442,6 +450,24 @@ Icon only
     >
       <sky-icon iconName="edit" />
     </button>
+
+## Prominent header borderless icon buttons
+
+`sky-btn sky-btn-icon-borderless-on_prominent` classes style borderless icon buttons that sit on the [prominent container header background](../design/styles/color.md). Use them for actions in the headers of containers that display tools alongside the main page content, such as chat panels, WYSIWYG editors, and help files. Always provide an `aria-label` attribute to support assistive technology users.
+
+Icon only
+
+    <div
+      class="sky-theme-color-background-container-header-prominent sky-theme-border-container-header-prominent"
+    >
+      <button
+        type="button"
+        class="sky-btn sky-btn-icon-borderless-on_prominent"
+        aria-label="Prominent header icon action"
+      >
+        <sky-icon iconName="edit" />
+      </button>
+    </div>
 
 ## Inline link
 

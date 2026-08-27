@@ -39,6 +39,12 @@ SKY UX uses inverse text on high-contrast backgrounds, such as [primary buttons]
 
 SKY UX button classes include inverse text color when appropriate.
 
+The prominent header text color emphasizes heading text inside prominent containers. Prominent containers, such as chat panels, WYSIWYG editors, and help files, display tools or systems alongside the main page content but don't extend the page content. This style is specifically designed to visually emphasize headers in prominent containers. Don't use it for any other use cases.
+
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/prominent-container-header-text-color.b202d91230e1a0c410d6659bb849580a.png)
+
+Do use the prominent header text color inside headers for prominent containers, such as containers with widgets for WYSIWYG editors.
+
 ## Icon colors
 
 SKY UX uses icon colors to communicate hierarchy and interaction. These colors are built into SKY UX components, and in most cases, they should not be applied manually.
@@ -76,6 +82,12 @@ The backdrop container background color is a neutral background color for use be
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/background-color-backdrop.4d9d460334095de03c70ac9e8220e646.png)
 
 Do use the backdrop container color behind real-time previews or WYSIWYG editors.
+
+The prominent header background color emphasizes prominent containers. Prominent containers, such as chat panels, WYSIWYG editors, and help files, display tools or systems alongside the main page content but don't extend the page content. This style is specifically designed to visually emphasize headers in prominent containers. Don't use it for any other use cases.
+
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/border/prominent-container-header-border-color.9f05790ca8b05900b7dc689a7cc77d33.png)
+
+Do use the prominent header background color on headers for prominent containers, such as containers with widgets for WYSIWYG editors.
 
 The disabled background color is a consistent color for interactive objects that are disabled. In most cases, this color should be applied through SKY UX component states or the Angular `disabled` property instead of setting it directly.
 
@@ -290,6 +302,12 @@ The background color for containers behind a canvas, WYSIWYG editor, or preview.
 
 `sky-theme-color-background-container-backdrop`
 
+Prominent container header background
+
+The background color for headers of containers of tools that work alongside the main page content.
+
+`sky-theme-color-background-container-header-prominent`
+
 Disabled background
 
 The background color for disabled elements.
@@ -318,6 +336,14 @@ The color for text on heavy background colors, such as primary and danger button
 
 `sky-theme-color-text-inverse`
 
+Bb
+
+Prominent container header text
+
+The color for text on prominent container headers.
+
+`sky-theme-color-text-on_prominent`
+
 ## Icons
 
 ### Icon glyphs
@@ -345,6 +371,12 @@ Inverse icon
 The color for icons on heavy background colors, such as primary and danger button labels.
 
 `sky-theme-color-icon-inverse`
+
+Prominent container header icon
+
+The color for icons on prominent container headers.
+
+`sky-theme-color-icon-on_prominent`
 
 ### Icon mattes
 
@@ -556,6 +588,12 @@ The background color for containers behind a canvas, WYSIWYG editor, or preview.
 
 `var(--sky-theme-color-background-container-backdrop)`
 
+Prominent container header background
+
+The background color for headers of containers of tools that work alongside the main page content.
+
+`var(--sky-theme-color-background-container-header-prominent)`
+
 Disabled background
 
 The background color for disabled elements.
@@ -573,6 +611,12 @@ Default container border
 The border color for separating containers from their surroundings.
 
 `var(--sky-theme-color-border-container-default)`
+
+Prominent header border
+
+The bottom border color for headers of prominent containers.
+
+`var(--sky-theme-color-border-container-header-prominent)`
 
 Disabled border
 
@@ -650,6 +694,14 @@ The color for text on heavy background colors, such as primary and danger button
 
 Deprecated:`var(--sky-text-color-on-dark)`
 
+Bb
+
+Prominent container header text
+
+The color for text on prominent container headers.
+
+`var(--sky-theme-color-text-on_prominent)`
+
 ## Icons
 
 ### Icon glyphs
@@ -677,6 +729,18 @@ Inverse icon
 The color for icons on heavy background colors, such as primary and danger button labels.
 
 `var(--sky-theme-color-icon-inverse)`
+
+Prominent container header icon
+
+The color for icons on prominent container headers.
+
+`var(--sky-theme-color-icon-on_prominent-base)`
+
+Disabled prominent container header icon
+
+The color for icons in disabled buttons on prominent container headers.
+
+`var(--sky-theme-color-icon-on_prominent-disabled)`
 
 ### Icon mattes
 
