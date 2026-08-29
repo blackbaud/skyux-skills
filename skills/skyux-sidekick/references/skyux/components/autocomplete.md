@@ -21,6 +21,20 @@ If you don't wrap the autocomplete component in an input box, set `ariaLabelledB
 
 For unbounded result sets, use [lookup](./lookup.md) instead. Lookup builds on autocomplete and adds the show-all picker, multi-select, and async search affordances along with the accessibility wiring that those flows require.
 
+## Options
+
+### Allow entries that aren't in the data source
+
+To let users enter and select values that aren't in the data source or search results, you can allow them to specify arbitrary values. This supports typeahead experiences where users aren't limited to selecting from known options. You can only enable this feature for dynamic data sources that use asynchronous search.
+
+As users type, their entry remains available for selection even when matching results are still loading or no matching result exists. If the data source contains an exact match, autocomplete selects the matching result instead of creating a separate arbitrary value. Before allowing arbitrary values, make sure your validation and save workflows can support entries outside the data source.
+
+### Highlight search text
+
+By default, autocomplete highlights the portions of search results that match what users enter. This helps users scan the list and understand why each result appears.
+
+You can turn off highlights in search results when they could misrepresent why a result matched, such as when results are based on aliases, synonyms, fuzzy matching, or server-side ranking instead of exact visible-text matches.
+
 ## Related information
 
 ### Guidelines

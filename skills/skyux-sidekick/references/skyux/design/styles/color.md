@@ -89,6 +89,12 @@ The prominent header background color emphasizes prominent containers. Prominent
 
 Do use the prominent header background color on headers for prominent containers, such as containers with widgets for WYSIWYG editors.
 
+The prominent container background color sets the content of prominent containers apart from the rest of the page content. Prominent containers, such as chat panels, WYSIWYG editors, and help files, display tools or systems alongside the main page content but don't extend the page content. This style is specifically designed to set apart the content inside prominent containers. Don't use it for any other use cases.
+
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/prominent-container-background.5d272f3db88c845a402da2c21d76cf07.png)
+
+Do use the prominent container background color on prominent containers, such as chat panels.
+
 The disabled background color is a consistent color for interactive objects that are disabled. In most cases, this color should be applied through SKY UX component states or the Angular `disabled` property instead of setting it directly.
 
 ## Border colors

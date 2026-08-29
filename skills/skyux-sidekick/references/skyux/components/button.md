@@ -113,7 +113,7 @@ Confirmation dialogs use danger buttons for actions that delete existing data.
 
 Use prominent header borderless icon buttons inside prominent container headers. Prominent containers, such as chat panels, WYSIWYG editors, and help files, display tools or systems alongside the main page content but don't extend the page content.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/button/prominent-header-icon-button.8326da44958527f136fd87fe7e79de13.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/button/prominent-header-icon-button.31f85257d539c47a24f33b938a6ae6d9.png)
 
 Use prominent header borderless icon buttons for actions inside prominent container headers.
 
