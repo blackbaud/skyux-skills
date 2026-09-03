@@ -107,6 +107,26 @@ The bottom border for the header on a prominent container.
 
 `sky-theme-border-container-header-prominent`
 
+### Overlay container border
+
+Borders of containers that use elevation to define their boundary instead of a default container border.
+
+Overlay container border top
+
+`sky-theme-border-container-overlay-top`
+
+Overlay container border right
+
+`sky-theme-border-container-overlay-right`
+
+Overlay container border bottom
+
+`sky-theme-border-container-overlay-bottom`
+
+Overlay container border left
+
+`sky-theme-border-container-overlay-left`
+
 ## Dividers
 
 Borders that separate a page into heterogeneous sections or areas.
@@ -299,6 +319,12 @@ The default border around most containers that don't overlay other content.
 
 `var(--sky-theme-border-container-default)`
 
+Overlay container
+
+The border that defines the edges of containers that use elevation to define their boundary instead of a default container border.
+
+`var(--sky-theme-border-container-overlay)`
+
 Prominent header border
 
 The bottom border for the header on a prominent container.
@@ -402,6 +428,12 @@ Accent border style
 The style of a border that highlights an element with a status border in the visual hierarchy.
 
 `var(--sky-theme-border-style-accent)`
+
+Overlay border style
+
+The style of a border that defines the edges of containers that use elevation to define their boundary instead of a typical container border.
+
+`var(--sky-theme-border-style-container-overlay)`
 
 ## Border radius
 

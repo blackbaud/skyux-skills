@@ -308,6 +308,12 @@ The background color for containers behind a canvas, WYSIWYG editor, or preview.
 
 `sky-theme-color-background-container-backdrop`
 
+Prominent container background
+
+The background color for containers of tools that work alongside the main page content.
+
+`sky-theme-color-background-container-prominent`
+
 Prominent container header background
 
 The background color for headers of containers of tools that work alongside the main page content.
@@ -344,6 +350,14 @@ The color for text on heavy background colors, such as primary and danger button
 
 Bb
 
+Text on status background
+
+The color for text on status background colors.
+
+`sky-theme-color-text-on_status`
+
+Bb
+
 Prominent container header text
 
 The color for text on prominent container headers.
@@ -377,6 +391,12 @@ Inverse icon
 The color for icons on heavy background colors, such as primary and danger button labels.
 
 `sky-theme-color-icon-inverse`
+
+Icon on status matte
+
+The color for icons on status icon matte color backgrounds.
+
+`sky-theme-color-icon-on_status`
 
 Prominent container header icon
 
@@ -476,7 +496,7 @@ The color for an icon that conveys success or completion.
 
 ### Status icon mattes
 
-Use status icon matte colors for small backgrounds behind icons that convey status or urgency.
+Use status icon matte colors for small backgrounds behind icons that convey status or urgency. For foreground icons, use the icon on status matte color.
 
 Danger icon matte
 
@@ -594,6 +614,12 @@ The background color for containers behind a canvas, WYSIWYG editor, or preview.
 
 `var(--sky-theme-color-background-container-backdrop)`
 
+Prominent container background
+
+The background color for containers of tools that work alongside the main page content.
+
+`var(--sky-theme-color-background-container-prominent)`
+
 Prominent container header background
 
 The background color for headers of containers of tools that work alongside the main page content.
@@ -702,6 +728,14 @@ Deprecated:`var(--sky-text-color-on-dark)`
 
 Bb
 
+Text on status background
+
+The color for text on status background colors.
+
+`var(--sky-theme-color-text-on_status)`
+
+Bb
+
 Prominent container header text
 
 The color for text on prominent container headers.
@@ -735,6 +769,12 @@ Inverse icon
 The color for icons on heavy background colors, such as primary and danger button labels.
 
 `var(--sky-theme-color-icon-inverse)`
+
+Icon on status matte
+
+The color for foreground icons on status icon matte colors.
+
+`var(--sky-theme-color-icon-on_status)`
 
 Prominent container header icon
 
@@ -854,7 +894,7 @@ The color for an icon that conveys success or completion.
 
 ### Status icon mattes
 
-Use status icon matte colors for small backgrounds behind icons that convey status or urgency.
+Use status icon matte colors for small backgrounds behind icons that convey status or urgency. For foreground icons, use the icon on status matte color.
 
 Danger icon matte
 
