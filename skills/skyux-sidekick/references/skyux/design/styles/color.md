@@ -668,6 +668,14 @@ Divider soft
 
 `var(--sky-theme-color-border-divider-soft)`
 
+### Other
+
+Focus border for action text on status background
+
+The color of a focus-visible border for action text on status backgrounds.
+
+`var(--sky-theme-color-border-action-on_status-focus)`
+
 ## Text
 
 Bb
@@ -712,7 +720,7 @@ Bb
 
 Action contrast text
 
-The color for links and link buttons on backgrounds that require more color contrast to meet accessibility success criteria, such as status containers.
+The color for links and link buttons on backgrounds that require more color contrast to meet accessibility success criteria.
 
 `var(--sky-theme-color-text-action_contrast)`
 
@@ -733,6 +741,14 @@ Text on status background
 The color for text on status background colors.
 
 `var(--sky-theme-color-text-on_status)`
+
+Bb
+
+Action text on status background
+
+The color for text in links and link buttons on status background colors.
+
+`var(--sky-theme-color-text-action_on_status)`
 
 Bb
 
@@ -769,6 +785,12 @@ Inverse icon
 The color for icons on heavy background colors, such as primary and danger button labels.
 
 `var(--sky-theme-color-icon-inverse)`
+
+Icon on status background
+
+The color for icons on status backgrounds.
+
+`var(--sky-theme-color-icon-on_status_bg)`
 
 Icon on status matte
 

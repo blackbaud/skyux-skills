@@ -823,6 +823,16 @@ font-family`var(--sky-theme-font-family-hint-s)`
 
 letter-spacing`var(--sky-theme-font-letter_spacing-hint-s)`
 
+## Other
+
+### Text decoration
+
+Use in rare cases to decorate action text when underlines are necessary for accessibility.
+
+Action text on status background
+
+`var(--sky-theme-font-text_decoration-action-on_status)`
+
 ## Deprecated SCSS variables
 
 SKY UX does not support these deprecated SCSS variables. In many cases, the styles in these variables are now built into components or supported classes and don't need to be manually applied. Read the style overview guidelines to find a suitable replacement.
