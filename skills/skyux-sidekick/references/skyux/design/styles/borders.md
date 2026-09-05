@@ -21,6 +21,12 @@ The prominent header border emphasizes prominent containers. Prominent container
 
 Do use the prominent header border on headers for prominent containers, such as containers with widgets for WYSIWYG editors.
 
+Use the overlay container border for elevated containers with uncertain or variable background colors. Pair this border style with [overlay elevations](./elevation.md). The combined styles define container boundaries. In light mode, they hide the border because a shadow is a sufficient boundary. In dark mode, the styles add the border to reinforce the boundary.
+
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/border/overlay-border-style.ecadaea7332d2cee8936903fd3ab9942.png)
+
+Do use the overlay border style with overlay elevations to define boundaries for elevated containers. In light mode, the styles hide the border. In dark mode, the border reinforces the shadow.
+
 ## Dividers
 
 Use the default divider border to separate disparate sections or regions of a page. This border style is built into SKY UX components, such as [split view](../../components/split-view.md), [tabs](../../components/tabs.md), and [toolbar](../../components/toolbar.md).
