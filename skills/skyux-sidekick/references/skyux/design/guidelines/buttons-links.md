@@ -19,7 +19,7 @@ The style for a primary action is a bold, saturated color that conveys importanc
 - The most frequently used action on a page.
 - The progressive terminal action on a dialog (such as 'Save' or 'Done').
 
-For information about how to use primary actions, see the [primary action guidelines](./page-layouts/README.md#primary-action-guidelines).
+For information about how to use primary actions, see the [primary button guidelines](./page-layouts/README.md#primary-button-guidelines).
 
 ### Secondary actions
 
