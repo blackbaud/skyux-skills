@@ -362,7 +362,7 @@ Returns a child test element or null if not found.
 
 `Promise<TestElement | null>`
 
-Page 1 loaded.
+Loading page 1
 
 ## Code Examples
 
