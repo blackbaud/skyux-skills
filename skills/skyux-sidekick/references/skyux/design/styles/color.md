@@ -39,7 +39,13 @@ SKY UX uses inverse text on high-contrast backgrounds, such as [primary buttons]
 
 SKY UX button classes include inverse text color when appropriate.
 
-The prominent header text color emphasizes heading text inside prominent containers. Prominent containers, such as chat panels, WYSIWYG editors, and help files, display tools or systems alongside the main page content but don't extend the page content. This style is specifically designed to visually emphasize headers in prominent containers. Don't use it for any other use cases.
+SKY UX uses the text on status background class on containers with status background colors, such as [alerts](../../components/alert.md), to maintain contrast across color modes. Don't use the default text color.
+
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/on_status-text-color.7025940ab3a39180d6186cab981d0f36.png)
+
+Do use the text on status background class in containers with status background colors. It maintains contrast in both light and dark mode.
+
+SKY UX uses the prominent header text class to emphasize heading text inside prominent containers. Prominent containers, such as chat panels, WYSIWYG editors, and help files, display tools or systems alongside the main page content but don't extend the page content. This style is specifically designed to visually emphasize headers in prominent containers. Don't use it for any other use cases.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/prominent-container-header-text-color.b202d91230e1a0c410d6659bb849580a.png)
 
@@ -188,9 +194,13 @@ Use the warning color to represent statuses or decisions with significant conseq
   </tbody>
 </table>
 
-### Status background and border colors
+### Status background colors and borders
 
-To communicate a status on an object or block of content, combine background colors and status border classes for the appropriate status type.
+To communicate a status on an object or block of content, combine status background colors and status border classes for the appropriate status type.
+
+Don't use status background colors for containers with interactive elements, such as inputs or buttons.
+
+Use the text on status background class for all text content in containers with a status background color.
 
 ### Status icon and icon matte colors
 
