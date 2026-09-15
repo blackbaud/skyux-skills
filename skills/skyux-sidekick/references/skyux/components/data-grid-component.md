@@ -78,7 +78,7 @@ To provide a text equivalent for screen readers [to support accessibility](../le
 NPM package
 
 `@skyux/data-grid`[View in NPM](https://www.npmjs.com/package/@skyux/data-grid) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/data-grid/src/lib/modules/data-grid/data-grid.ts#L121)
+/libs/components/data-grid/src/lib/modules/data-grid/data-grid.ts#L132)
 
 Install with NPM
 
