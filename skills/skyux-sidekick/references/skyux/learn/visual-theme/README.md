@@ -30,7 +30,7 @@ The design principles and patterns are the same in both themes, but modern visua
 
 Example of a modal in the default visual theme
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/theme/modern-v13-modal-example.fd3fd3672e1062e663a008e365113a8c.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/theme/modern-modal-example-padded.1b40d61f25b64898203a56410a9eca66.png)
 
 Example of a modal in the modern visual theme
 
@@ -53,7 +53,7 @@ SKY UX supports dark mode across the design system. To display dark surface colo
 
 Dark mode serves as more than an aesthetic preference. It provides an important accommodation for users who find high-luminance interfaces difficult or uncomfortable to use. Dark mode offers more comfortable viewing in low-light environments and reduces visual strain. The greatest benefit is often for users managing light-sensitivity conditions, such as migraines or photophobia.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/theme/modern-v13-modal-example.fd3fd3672e1062e663a008e365113a8c.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/theme/modern-modal-example-padded.1b40d61f25b64898203a56410a9eca66.png)
 
 Example of a modal in light mode
 
