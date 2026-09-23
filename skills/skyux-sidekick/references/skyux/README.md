@@ -73,7 +73,7 @@ SKY UX is proudly open sourced and provides third-party developers with the same
 
 Blackbaud SKY Developer enables developers to code for good. We provide a toolset that includes SKY UX, SKY Add-ins™, and SKY API® to extend, customize, and contribute to the capabilities of Blackbaud SKY®.
 
-[Learn more](https://developer.blackbaud.com)
+[Learn more](https://developer.blackbaud.com/developer-home/?svcid=skyux)
 
 ---
 

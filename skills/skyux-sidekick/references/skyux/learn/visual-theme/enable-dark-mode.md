@@ -20,4 +20,4 @@ main.ts TypeScript
 
 ## SKY Add-ins
 
-Add-ins that use Angular and the latest SKY UX libraries automatically display the same visual theme as the solution where they appear. If that solution uses the modern visual theme and also supports color modes, then add-ins also automatically support dark mode. For guidance on using SKY UX with SKY add-ins, see the [SKY API documentation](https://developer.blackbaud.com/skyapi/docs/addins).
+Add-ins that use Angular and the latest SKY UX libraries automatically display the same visual theme as the solution where they appear. If that solution uses the modern visual theme and also supports color modes, then add-ins also automatically support dark mode. For guidance on using SKY UX with SKY add-ins, see the [SKY API documentation](https://developer.blackbaud.com/skyapi/docs/addins?svcid=skyux).

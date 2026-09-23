@@ -22,5 +22,5 @@ You can change the theme at any point in the application's lifecycle by calling 
 
 ## SKY Add-ins
 
-- Add-ins that use Angular and SKY UX automatically support theme switching to match the visual theme of the host service. This means that add-ins automatically display the same visual theme as solution where they appear. A single add-in can display in both themes if viewed in two contexts that use different themes. To use SKY UX with SKY Add-ins, follow the guidance in the [SKY API documentation](https://developer.blackbaud.com/skyapi/docs/addins).
+- Add-ins that use Angular and SKY UX automatically support theme switching to match the visual theme of the host service. This means that add-ins automatically display the same visual theme as solution where they appear. A single add-in can display in both themes if viewed in two contexts that use different themes. To use SKY UX with SKY Add-ins, follow the guidance in the [SKY API documentation](https://developer.blackbaud.com/skyapi/docs/addins?svcid=skyux).
 - SKY Add-ins that don't use SKY UX can still follow the visual theme of their host service. The [styles](../../design/styles/README.md) documentation defines the exact values of the styles for both visual themes. The SKY Add-in client supports a callback function to identify the displayed theme of a host service, so add-ins can switch styles to match.

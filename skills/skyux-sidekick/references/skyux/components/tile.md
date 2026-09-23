@@ -13,7 +13,7 @@ Tiles create flexible containers to display content or features from external so
 
 Use tiles to display content or features from external sources on the Add-ins tab of [record pages](../design/guidelines/page-layouts/record-page.md) . As extension points in the SKY Add-ins framework, tiles are the primary container for external content in SKY UX applications. You can use a tile dashboard to automatically size and arrange tiles and to let users reorder or collapse/expand tiles to meet their specific needs.
 
-For more information, see the [SKY Add-ins documentation for tiles](https://developer.blackbaud.com/skyapi/docs/addins/get-started/skyux-tile) .
+For more information, see the [SKY Add-ins documentation for tiles](https://developer.blackbaud.com/skyapi/docs/addins/get-started/skyux-tile?svcid=skyux) .
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/tiles/img/guidelines/tiles-usage-1.8cfebaaf2bd0bb54cdd108b801a9fb21.png)
 
