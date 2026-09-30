@@ -195,6 +195,10 @@ Default: `"left"`
 
 The ARIA label for the dropdown. This sets the dropdown's `aria-label` attribute to provide a text equivalent for screen readers [to support accessibility](../learn/accessibility/README.md). If multiple dropdowns with no label or the same label appear on the same page, they must have unique ARIA labels that provide context, such as "Context menu for Robert Hernandez" or "Edit Robert Hernandez." For more information about the `aria-label` attribute, see the [WAI-ARIA definition](https://www.w3.org/TR/wai-aria/#aria-label).
 
+#### `messageStream: Subject<SkyDropdownMessage> | undefined`
+
+The RxJS `Subject` to send commands to the dropdown that respect the `SkyDropdownMessage` type.
+
 #### `title: string | undefined`
 
 The title to display in a tooltip when users hover the mouse over the dropdown button.

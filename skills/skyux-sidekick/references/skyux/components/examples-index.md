@@ -2,7 +2,7 @@
 
 # Code examples — all components
 
-81 of 99 components have a `## Code Examples` section in their source docs.
+81 of 100 components have a `## Code Examples` section in their source docs.
 
 ## Components with code examples
 
@@ -101,6 +101,7 @@ These components do not include a `## Code Examples` section upstream. No index 
 - data-grid-component ([data-grid-component.md](./data-grid-component.md))
 - grid ([grid.md](./grid.md))
 - grids ([grids.md](./grids.md))
+- instrumentation ([instrumentation.md](./instrumentation.md))
 - list ([list.md](./list.md))
 - list-filters ([list-filters.md](./list-filters.md))
 - list-overview ([list-overview.md](./list-overview.md))

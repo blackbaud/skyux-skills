@@ -48,6 +48,7 @@ SKY UX components, available as Angular components, services, and modules, allow
 - [Inline delete confirmation](./inline-delete.md) - The inline delete confirmation component prompts users to confirm that they want to delete an item in a list.
 - [Inline form](./inline-form.md) - The inline form component renders a form in the current view rather than in a modal.
 - [Input box](./input-box.md) - The input box provides styling for prompts to enter data in forms.
+- [Instrumentation](./instrumentation.md) - The instrumentation feature reports on user interactions with SKY UX components.
 - [Key info](./key-info.md) - The key info component highlights important information such as summary numbers.
 - [Label](./label.md) - The label component calls out important status information such as warnings.
 - [List (deprecated)](./list.md) - The deprecated list module displays a SKY UX-themed list of data in a consistent, flexible way.
