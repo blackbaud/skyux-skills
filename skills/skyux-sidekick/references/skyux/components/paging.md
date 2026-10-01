@@ -361,7 +361,7 @@ Returns a child test element or null if not found.
 
 `Promise<TestElement | null>`
 
-Loading page 1
+Page 1 loaded.
 
 ## Code Examples
 
