@@ -5,8 +5,6 @@ Reference: https://developer.blackbaud.com/skyux/design/styles/spacing
 
 # Spacing
 
-This API was significantly updated in SKY UX 14. For the previous version, see the SKY UX 13 docs.
-
 ## Spacing system basics
 
 The SKY UX spacing system defines how space communicates structure, hierarchy, and meaning across products. Spacing is built on a rem-based (8pt) scale that ensures consistency, accessibility, and predictable behavior across devices and contexts.

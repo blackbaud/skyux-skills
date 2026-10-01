@@ -112,8 +112,7 @@ Do place list summary after toolbar and filter bar and before the list of items.
 
 NPM package
 
-`@skyux/lists`[View in NPM](https://www.npmjs.com/package/@skyux/lists) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/lists/src/lib/modules/list-summary/list-summary.module.ts#L10)
+`@skyux/lists`[View in NPM](https://www.npmjs.com/package/@skyux/lists) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/lists/src/lib/modules/list-summary/list-summary.module.ts#L10)
 
 Install with NPM
 
@@ -410,7 +409,7 @@ Only find instances whose value text matches the given value.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyListSummaryModule } from '@skyux/lists';
 
 /**
@@ -419,6 +418,7 @@ import { SkyListSummaryModule } from '@skyux/lists';
 @Component({
   selector: 'app-lists-list-summary-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyListSummaryModule],
 })
 export class ListsListSummaryBasicExampleComponent {

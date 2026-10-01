@@ -45,8 +45,7 @@ You can turn off highlights in search results when they could misrepresent why a
 
 NPM package
 
-`@skyux/lookup`[View in NPM](https://www.npmjs.com/package/@skyux/lookup) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/lookup/src/lib/modules/autocomplete/autocomplete.module.ts#L35)
+`@skyux/lookup`[View in NPM](https://www.npmjs.com/package/@skyux/lookup) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/lookup/src/lib/modules/autocomplete/autocomplete.module.ts#L35)
 
 Install with NPM
 
@@ -725,7 +724,7 @@ Sets the value of the input. The value will be set by simulating key presses tha
 
 ```typescript
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SkyIdModule } from '@skyux/core';
 import { SkyInputBoxModule } from '@skyux/forms';
@@ -737,6 +736,7 @@ import { SkyAutocompleteModule } from '@skyux/lookup';
 @Component({
   selector: 'app-lookup-autocomplete-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CommonModule, FormsModule, ReactiveFormsModule, SkyAutocompleteModule, SkyIdModule, SkyInputBoxModule],
 })
 export class LookupAutocompleteBasicExampleComponent {
@@ -837,7 +837,7 @@ describe('Basic autocomplete example', () => {
 
 ```typescript
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SkyInputBoxModule } from '@skyux/forms';
 import {
@@ -854,6 +854,7 @@ import { Planet } from './planet';
 @Component({
   selector: 'app-lookup-autocomplete-advanced-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CommonModule, FormsModule, ReactiveFormsModule, SkyAutocompleteModule, SkyInputBoxModule],
 })
 export class LookupAutocompleteAdvancedExampleComponent {
@@ -956,7 +957,7 @@ export interface Planet {
 
 ```typescript
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SkyInputBoxModule } from '@skyux/forms';
 import { SkyIconModule } from '@skyux/icon';
@@ -974,6 +975,7 @@ import { Ocean } from './ocean';
 @Component({
   selector: 'app-lookup-autocomplete-custom-search-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CommonModule, FormsModule, ReactiveFormsModule, SkyAutocompleteModule, SkyIconModule, SkyInputBoxModule],
 })
 export class LookupAutocompleteCustomSearchExampleComponent {
@@ -1063,7 +1065,7 @@ export interface Ocean {
 
 ```typescript
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SkyInputBoxModule } from '@skyux/forms';
 import { SkyAutocompleteModule, SkyAutocompleteSearchFunctionFilter } from '@skyux/lookup';
@@ -1074,6 +1076,7 @@ import { SkyAutocompleteModule, SkyAutocompleteSearchFunctionFilter } from '@sky
 @Component({
   selector: 'app-lookup-autocomplete-search-filters-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CommonModule, FormsModule, ReactiveFormsModule, SkyAutocompleteModule, SkyInputBoxModule],
 })
 export class LookupAutocompleteSearchFiltersExampleComponent {
@@ -1129,7 +1132,7 @@ export class LookupAutocompleteSearchFiltersExampleComponent {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SkyInputBoxModule } from '@skyux/forms';
 import { SkyAutocompleteModule, SkyAutocompleteSearchAsyncArgs } from '@skyux/lookup';
@@ -1145,6 +1148,7 @@ import { LookupAutocompleteAnyValueExampleService } from './example.service';
 @Component({
   selector: 'app-lookup-autocomplete-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, ReactiveFormsModule, SkyAutocompleteModule, SkyInputBoxModule],
 })
 export class LookupAutocompleteAnyValueExampleComponent {

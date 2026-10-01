@@ -211,8 +211,7 @@ In most cases, radio button group labels are not treated as semantic `h` element
 
 NPM package
 
-`@skyux/forms`[View in NPM](https://www.npmjs.com/package/@skyux/forms) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/forms/src/lib/modules/radio/radio.module.ts#L42)
+`@skyux/forms`[View in NPM](https://www.npmjs.com/package/@skyux/forms) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/forms/src/lib/modules/radio/radio.module.ts#L42)
 
 Install with NPM
 
@@ -888,7 +887,7 @@ The name of the error.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
@@ -922,6 +921,7 @@ function validatePaymentMethod(control: AbstractControl): ValidationErrors | nul
 @Component({
   selector: 'app-forms-radio-standard-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, ReactiveFormsModule, SkyRadioModule],
 })
 export class FormsRadioStandardExampleComponent {
@@ -1098,7 +1098,7 @@ describe('Basic radio group example', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
@@ -1132,6 +1132,7 @@ function validatePaymentMethod(control: AbstractControl): ValidationErrors | nul
 @Component({
   selector: 'app-forms-radio-help-key-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, ReactiveFormsModule, SkyRadioModule],
 })
 export class FormsRadioHelpKeyExampleComponent {
@@ -1298,7 +1299,7 @@ describe('Basic radio group example', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SkyRadioModule } from '@skyux/forms';
 
@@ -1314,6 +1315,7 @@ interface Item {
 @Component({
   selector: 'app-forms-radio-icon-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, ReactiveFormsModule, SkyRadioModule],
 })
 export class FormsRadioIconExampleComponent {

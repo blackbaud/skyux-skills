@@ -105,8 +105,7 @@ For tiles that are not populated, use [empty-state help](../design/guidelines/us
 
 NPM package
 
-`@skyux/tiles`[View in NPM](https://www.npmjs.com/package/@skyux/tiles) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/tiles/src/lib/modules/tiles/tiles.module.ts#L16)
+`@skyux/tiles`[View in NPM](https://www.npmjs.com/package/@skyux/tiles) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/tiles/src/lib/modules/tiles/tiles.module.ts#L16)
 
 Install with NPM
 
@@ -353,7 +352,7 @@ An array of `SkyTileDashboardConfigLayoutColumn` objects that describes how to d
 
 #### `singleColumn: SkyTileDashboardConfigLayoutColumn`
 
-A `SkyTileDashboardConfigLayoutColumn` object that describes how to display tiles in a single column on small screens.
+A `SkyTileDashboardConfigLayoutColumn` object that describes how to display tiles in a single column on extra-small screens.
 
 ## SkyTileDashboardConfigLayoutColumn
 
@@ -971,7 +970,7 @@ Only find instances whose `data-sky-id` attribute matches the given value.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyTileDashboardConfig, SkyTilesModule } from '@skyux/tiles';
 
 import { Tile1Component } from './tile1.component';
@@ -983,6 +982,7 @@ import { Tile2Component } from './tile2.component';
 @Component({
   selector: 'app-tiles-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyTilesModule],
 })
 export class TilesBasicExampleComponent {
@@ -1137,13 +1137,14 @@ describe('Tile dashboard example', () => {
 #### tile1.component.ts
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyTilesModule } from '@skyux/tiles';
 
 @Component({
   // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'div.tile1',
   templateUrl: './tile1.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyTilesModule],
 })
 export class Tile1Component {
@@ -1169,13 +1170,14 @@ export class Tile1Component {
 #### tile2.component.ts
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyTilesModule } from '@skyux/tiles';
 
 @Component({
   // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'div.tile2',
   templateUrl: './tile2.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyTilesModule],
 })
 export class Tile2Component {}

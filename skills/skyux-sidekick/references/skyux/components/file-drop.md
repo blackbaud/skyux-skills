@@ -147,8 +147,7 @@ The file drop element switches to a vertical layout in smaller viewports.
 
 NPM package
 
-`@skyux/forms`[View in NPM](https://www.npmjs.com/package/@skyux/forms) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/forms/src/lib/modules/file-attachment/file-drop/file-drop.module.ts#L12)
+`@skyux/forms`[View in NPM](https://www.npmjs.com/package/@skyux/forms) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/forms/src/lib/modules/file-attachment/file-drop/file-drop.module.ts#L12)
 
 Install with NPM
 
@@ -797,7 +796,7 @@ Provides mocks for file attachment testing.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
@@ -831,6 +830,7 @@ function customValidator(
 @Component({
   selector: 'app-forms-file-drop-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyFileDropModule, SkyStatusIndicatorModule, FormsModule, ReactiveFormsModule],
 })
 export class FormsFileDropBasicExampleComponent {
@@ -1021,7 +1021,7 @@ describe('Basic file drop example', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyFileDropChange, SkyFileDropModule, SkyFileItem, SkyFileLink } from '@skyux/forms';
 import { SkyStatusIndicatorModule } from '@skyux/indicators';
 
@@ -1031,6 +1031,7 @@ import { SkyStatusIndicatorModule } from '@skyux/indicators';
 @Component({
   selector: 'app-forms-file-drop-help-key-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyFileDropModule, SkyStatusIndicatorModule],
 })
 export class FormsFileDropHelpKeyExampleComponent {

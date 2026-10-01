@@ -19,7 +19,7 @@ Do use passive progress indicators to track sequential steps that other users ta
 
 ### Don't use when
 
-Don't use passive progress indicators for tasks that require user interaction. Use [waterfall progress indicators](./progress-indicator-waterfall.md) or [wizards](./progress-indicator-wizard.md) instead.
+Don't use passive progress indicators for tasks that require user interaction. Use [waterfall progress indicators](./progress-indicator-waterfall.md) or [wizards](./tabs-wizard.md) instead.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/progress-indicator/img/guidelines/passive-progress-usage-2.4fbcd6a40e83e29872557a5528e379e8.png)
 
@@ -105,8 +105,7 @@ To display passive progress indicators for items in lists, use dynamic container
 
 NPM package
 
-`@skyux/progress-indicator`[View in NPM](https://www.npmjs.com/package/@skyux/progress-indicator) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/progress-indicator/src/lib/modules/progress-indicator/progress-indicator.module.ts#L48)
+`@skyux/progress-indicator`[View in NPM](https://www.npmjs.com/package/@skyux/progress-indicator) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/progress-indicator/src/lib/modules/progress-indicator/progress-indicator.module.ts#L48)
 
 Install with NPM
 
@@ -588,7 +587,7 @@ Only find instances whose `data-sky-id` attribute matches the given value.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyProgressIndicatorModule } from '@skyux/progress-indicator';
 
 /**
@@ -597,6 +596,7 @@ import { SkyProgressIndicatorModule } from '@skyux/progress-indicator';
 @Component({
   selector: 'app-progress-indicator-passive-indicator-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyProgressIndicatorModule],
 })
 export class ProgressIndicatorPassiveIndicatorBasicExampleComponent {}

@@ -11,8 +11,7 @@ The infinite scroll component dynamically loads data as users scroll.
 
 NPM package
 
-`@skyux/lists`[View in NPM](https://www.npmjs.com/package/@skyux/lists) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/lists/src/lib/modules/infinite-scroll/infinite-scroll.module.ts#L13)
+`@skyux/lists`[View in NPM](https://www.npmjs.com/package/@skyux/lists) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/lists/src/lib/modules/infinite-scroll/infinite-scroll.module.ts#L13)
 
 Install with NPM
 
@@ -121,7 +120,7 @@ Only find instances whose `data-sky-id` attribute matches the given value.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { SkyInfiniteScrollModule, SkyRepeaterModule } from '@skyux/lists';
 
 import { InfiniteScrollDemoItem } from './item';
@@ -141,6 +140,7 @@ let nextId = 0;
     }
   `,
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyInfiniteScrollModule, SkyRepeaterModule],
 })
 export class ListsInfiniteScrollRepeaterExampleComponent implements OnInit {

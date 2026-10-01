@@ -295,8 +295,7 @@ When you need to supplement a status indicator label with additional information
 
 NPM package
 
-`@skyux/indicators`[View in NPM](https://www.npmjs.com/package/@skyux/indicators) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/indicators/src/lib/modules/status-indicator/status-indicator.module.ts#L25)
+`@skyux/indicators`[View in NPM](https://www.npmjs.com/package/@skyux/indicators) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/indicators/src/lib/modules/status-indicator/status-indicator.module.ts#L25)
 
 Install with NPM
 
@@ -461,7 +460,7 @@ Only find instances whose `data-sky-id` attribute matches the given value.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyStatusIndicatorModule } from '@skyux/indicators';
 
 /**
@@ -470,6 +469,7 @@ import { SkyStatusIndicatorModule } from '@skyux/indicators';
 @Component({
   selector: 'app-indicators-status-indicator-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyStatusIndicatorModule],
 })
 export class IndicatorsStatusIndicatorBasicExampleComponent {}
@@ -601,7 +601,7 @@ describe('Status indicator basic example', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyStatusIndicatorModule } from '@skyux/indicators';
 
 /**
@@ -610,6 +610,7 @@ import { SkyStatusIndicatorModule } from '@skyux/indicators';
 @Component({
   selector: 'app-indicators-status-indicator-help-key-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyStatusIndicatorModule],
 })
 export class IndicatorsStatusIndicatorHelpKeyExampleComponent {}

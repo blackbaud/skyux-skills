@@ -5,7 +5,7 @@ Reference: https://developer.blackbaud.com/skyux/learn/develop/deprecation/page-
 
 # Page summary
 
-The [page summary](../../../components/page-summary.md) component is deprecated in favor of the [page](../../../components/page/README.md) component's `sky-page-header` component. For page templates and techniques to summarize page content, see the [page design guidelines](../../../design/guidelines/page-layouts/README.md).
+The page summary component is deprecated in favor of the [page](../../../components/page/README.md) component's `sky-page-header` component. For page templates and techniques to summarize page content, see the [page design guidelines](../../../design/guidelines/page-layouts/README.md). To view development documentation for the page summary component, see the SKY UX 14 docs.
 
 ## How to migrate
 

@@ -23,8 +23,7 @@ When a focused element on a page is placed in a waiting state, focus automatical
 
 NPM package
 
-`@skyux/indicators`[View in NPM](https://www.npmjs.com/package/@skyux/indicators) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/indicators/src/lib/modules/wait/wait.module.ts#L9)
+`@skyux/indicators`[View in NPM](https://www.npmjs.com/package/@skyux/indicators) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/indicators/src/lib/modules/wait/wait.module.ts#L9)
 
 Install with NPM
 
@@ -222,7 +221,7 @@ Only find blocking or non-blocking instances created by the `SkyWaitService`.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyWaitModule } from '@skyux/indicators';
 
 /**
@@ -238,6 +237,7 @@ import { SkyWaitModule } from '@skyux/indicators';
     }
   `,
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyWaitModule],
 })
 export class IndicatorsWaitElementExampleComponent {
@@ -302,7 +302,7 @@ describe('Basic wait', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, OnDestroy, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnDestroy, inject } from '@angular/core';
 import { SkyWaitService } from '@skyux/indicators';
 
 /**
@@ -310,6 +310,7 @@ import { SkyWaitService } from '@skyux/indicators';
  */
 @Component({
   selector: 'app-indicators-wait-page-example',
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
 })
 export class IndicatorsWaitPageExampleComponent implements OnDestroy {

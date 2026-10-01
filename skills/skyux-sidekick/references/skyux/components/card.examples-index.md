@@ -10,6 +10,6 @@ example_count: 1
 
 Read only the slice you need. Each entry below gives the exact `Read` arguments to load one example from `card.md`.
 
-| #   | Example               | Lines   | Read invocation                                |
-| --- | --------------------- | ------- | ---------------------------------------------- |
-| 1   | Card with basic setup | 101–185 | `Read file_path=./card.md offset=101 limit=85` |
+| #   | Example               | Lines  | Read invocation                               |
+| --- | --------------------- | ------ | --------------------------------------------- |
+| 1   | Card with basic setup | 92–177 | `Read file_path=./card.md offset=92 limit=86` |

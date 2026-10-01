@@ -118,8 +118,7 @@ Spacing for center-aligned illustrations and text.
 
 NPM package
 
-`@skyux/indicators`[View in NPM](https://www.npmjs.com/package/@skyux/indicators) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/indicators/src/lib/modules/illustration/illustration.module.ts#L9)
+`@skyux/indicators`[View in NPM](https://www.npmjs.com/package/@skyux/indicators) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/indicators/src/lib/modules/illustration/illustration.module.ts#L9)
 
 Install with NPM
 
@@ -262,7 +261,7 @@ Only find instances whose `data-sky-id` attribute matches the given value.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyIllustrationModule, SkyIllustrationResolverService } from '@skyux/indicators';
 
 import { IllustrationDemoResolverService } from './illustration-demo-resolver.service';
@@ -276,6 +275,7 @@ import { IllustrationDemoResolverService } from './illustration-demo-resolver.se
   imports: [SkyIllustrationModule],
   // This service is provided here as an example; your implementation of `SkyIllustrationResolverService`
   // should be provided at the application level.
+  changeDetection: ChangeDetectionStrategy.Eager,
   providers: [
     {
       provide: SkyIllustrationResolverService,

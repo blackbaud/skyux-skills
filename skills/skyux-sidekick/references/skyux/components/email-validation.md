@@ -63,8 +63,7 @@ Use a succinct error message, and explain that users need to use a valid email a
 
 NPM package
 
-`@skyux/validation`[View in NPM](https://www.npmjs.com/package/@skyux/validation) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/validation/src/lib/modules/email-validation/email-validation.module.ts#L11)
+`@skyux/validation`[View in NPM](https://www.npmjs.com/package/@skyux/validation) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/validation/src/lib/modules/email-validation/email-validation.module.ts#L11)
 
 Install with NPM
 
@@ -114,6 +113,18 @@ Validates URLs in reactive forms. Add this validator directly to the form contro
 
 `ValidationErrors | null`
 
+## skyEmail
+
+Type: Function Preview
+
+Validates that a signal forms field contains a valid email address. Apply inside a `form()` schema. Empty values pass; combine with Angular's `required` rule to require a value.
+
+    function skyEmail(path: SchemaPath<string | undefined, 1, TPathKind>): void
+
+### Parameters
+
+#### `path: SchemaPath<string | undefined, 1, TPathKind>`
+
 ## Code Examples
 
 ### Email validation using input directive
@@ -121,7 +132,7 @@ Validates URLs in reactive forms. Add this validator directly to the form contro
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SkyInputBoxModule } from '@skyux/forms';
 import { SkyEmailValidationModule } from '@skyux/validation';
@@ -132,6 +143,7 @@ import { SkyEmailValidationModule } from '@skyux/validation';
 @Component({
   selector: 'app-validation-email-validation-directive-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, ReactiveFormsModule, SkyEmailValidationModule, SkyInputBoxModule],
 })
 export class ValidationEmailValidationDirectiveExampleComponent {
@@ -158,7 +170,7 @@ export class ValidationEmailValidationDirectiveExampleComponent {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
@@ -177,6 +189,7 @@ import { SkyValidators } from '@skyux/validation';
 @Component({
   selector: 'app-validation-email-validation-control-validator-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, ReactiveFormsModule, SkyInputBoxModule],
 })
 export class ValidationEmailValidationControlValidatorExampleComponent {

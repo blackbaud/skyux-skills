@@ -11,8 +11,7 @@ The avatar component displays an image to identify a record.
 
 NPM package
 
-`@skyux/avatar`[View in NPM](https://www.npmjs.com/package/@skyux/avatar) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/avatar/src/lib/modules/avatar/avatar.module.ts#L12)
+`@skyux/avatar`[View in NPM](https://www.npmjs.com/package/@skyux/avatar) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/avatar/src/lib/modules/avatar/avatar.module.ts#L12)
 
 Install with NPM
 
@@ -185,7 +184,7 @@ Only find instances whose `data-sky-id` attribute matches the given value.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { SkyAvatarModule } from '@skyux/avatar';
 import { SkyFileItem } from '@skyux/forms';
 
@@ -197,6 +196,7 @@ import { DemoService } from './example.service';
 @Component({
   selector: 'app-avatar-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyAvatarModule],
 })
 export class AvatarExampleComponent {

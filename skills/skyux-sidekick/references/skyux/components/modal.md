@@ -138,8 +138,7 @@ To ensure the readability of modal content, write clear button labels (see **But
 
 NPM package
 
-`@skyux/modals`[View in NPM](https://www.npmjs.com/package/@skyux/modals) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/modals/src/lib/modules/modal/modal.module.ts#L28)
+`@skyux/modals`[View in NPM](https://www.npmjs.com/package/@skyux/modals) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/modals/src/lib/modules/modal/modal.module.ts#L25)
 
 Install with NPM
 
@@ -186,16 +185,6 @@ The content of the help popover. When specified along with `headingText`, a [hel
 The title of the help popover. This property only applies when `helpPopoverContent` is also specified.
 
 #### `layout: InputSignal<"none" | "fit">`
-
-## SkyModalHeaderComponent
-
-Type: Component
-
-Selector: `sky-modal-header`
-
-Warning: **Deprecated.** Use the `headingText` input on the `sky-modal` component for modal headings. For inline help, use the `helpKey` or `helpPopoverContent` inputs on the `sky-modal` component.
-
-Specifies a header for the modal.
 
 ## SkyModalContentComponent
 
@@ -670,7 +659,7 @@ Throws if the given criteria does not match the topmost open modal.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, OnDestroy, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnDestroy, inject } from '@angular/core';
 import { SkyHelpService } from '@skyux/core';
 import { SkyModalError, SkyModalInstance, SkyModalService } from '@skyux/modals';
 
@@ -683,6 +672,7 @@ import { ModalComponent } from './modal.component';
  */
 @Component({
   selector: 'app-modals-modal-basic-with-controller-example',
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `<button class="sky-btn sky-btn-default" type="button" (click)="openModal()">Open modal</button>`,
 })
 export class ModalsModalBasicWithControllerExampleComponent implements OnDestroy {
@@ -825,7 +815,7 @@ export class ModalContext {
 #### modal.component.ts
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SkyInputBoxModule } from '@skyux/forms';
 import { SkyModalInstance, SkyModalModule } from '@skyux/modals';
@@ -834,11 +824,12 @@ import { ModalContext } from './modal-context';
 
 @Component({
   imports: [FormsModule, ReactiveFormsModule, SkyInputBoxModule, SkyModalModule],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <form [formGroup]="exampleForm" (submit)="saveForm()">
       <sky-modal headingText="Modal title" helpKey="help.html">
         <sky-modal-content>
-          <sky-input-box>
+          <sky-input-box labelText="Some field">
             <input formControlName="value1" type="text" />
           </sky-input-box>
         </sky-modal-content>
@@ -879,7 +870,7 @@ export class ModalComponent {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, OnDestroy, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnDestroy, inject } from '@angular/core';
 import { SkyWaitService } from '@skyux/indicators';
 import { SkyModalConfigurationInterface, SkyModalService } from '@skyux/modals';
 
@@ -896,6 +887,7 @@ import { ModalComponent } from './modal.component';
  */
 @Component({
   selector: 'app-modals-modal-basic-with-harness-example',
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
 })
 export class ModalsModalBasicWithHarnessExampleComponent implements OnDestroy {
@@ -1098,7 +1090,7 @@ describe('Basic modal', () => {
 #### modal.component.ts
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { SkyInputBoxModule } from '@skyux/forms';
 import { SkyWaitService } from '@skyux/indicators';
@@ -1110,6 +1102,7 @@ import { ModalDemoDataService } from './data.service';
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ReactiveFormsModule, SkyInputBoxModule, SkyModalModule],
 })
 export class ModalComponent {
@@ -1148,7 +1141,7 @@ export class ModalComponent {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, OnDestroy, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnDestroy, inject } from '@angular/core';
 import { SkyWaitService } from '@skyux/indicators';
 import { SkyModalConfigurationInterface, SkyModalService } from '@skyux/modals';
 
@@ -1165,6 +1158,7 @@ import { ModalComponent } from './modal.component';
  */
 @Component({
   selector: 'app-modals-modal-basic-with-harness-help-key-example',
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
 })
 export class ModalsModalBasicWithHarnessHelpKeyExampleComponent implements OnDestroy {
@@ -1356,7 +1350,7 @@ describe('Basic modal', () => {
 #### modal.component.ts
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { SkyInputBoxModule } from '@skyux/forms';
 import { SkyWaitService } from '@skyux/indicators';
@@ -1368,6 +1362,7 @@ import { ModalDemoDataService } from './data.service';
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ReactiveFormsModule, SkyInputBoxModule, SkyModalModule],
 })
 export class ModalComponent {
@@ -1406,7 +1401,7 @@ export class ModalComponent {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, OnDestroy, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnDestroy, inject } from '@angular/core';
 import { SkyWaitService } from '@skyux/indicators';
 import { SkyModalConfigurationInterface, SkyModalService } from '@skyux/modals';
 
@@ -1423,6 +1418,7 @@ import { ModalComponent } from './modal.component';
  */
 @Component({
   selector: 'app-modals-modal-with-error-example',
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
 })
 export class ModalsModalWithErrorExampleComponent implements OnDestroy {
@@ -1618,7 +1614,7 @@ describe('Basic modal', () => {
 #### modal.component.ts
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { SkyInputBoxModule } from '@skyux/forms';
 import { SkyWaitService } from '@skyux/indicators';
@@ -1630,6 +1626,7 @@ import { ModalDemoDataService } from './data.service';
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ReactiveFormsModule, SkyInputBoxModule, SkyModalModule],
 })
 export class ModalComponent {
@@ -1678,7 +1675,7 @@ export class ModalComponent {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, OnDestroy, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnDestroy, inject } from '@angular/core';
 import { SkyModalInstance, SkyModalService } from '@skyux/modals';
 
 import { ModalComponent } from './modal.component';
@@ -1688,6 +1685,7 @@ import { ModalComponent } from './modal.component';
  */
 @Component({
   selector: 'app-modals-modal-basic-with-controller-example',
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `<button class="sky-btn sky-btn-default" type="button" (click)="openModal()">Open modal example</button>`,
 })
 export class ModalsModalBasicWithBannerExampleComponent implements OnDestroy {
@@ -1711,12 +1709,13 @@ export class ModalsModalBasicWithBannerExampleComponent implements OnDestroy {
 #### modal.component.ts
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { SkyIconModule } from '@skyux/icon';
 import { SkyModalInstance, SkyModalModule } from '@skyux/modals';
 
 @Component({
   imports: [SkyIconModule, SkyModalModule],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <sky-modal headingHidden headingText="New feature: Modal with banner support">
       <sky-modal-banner

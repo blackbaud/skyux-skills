@@ -203,8 +203,7 @@ Use labels in a summary context. For example, you can place a label in a page su
 
 NPM package
 
-`@skyux/indicators`[View in NPM](https://www.npmjs.com/package/@skyux/indicators) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/indicators/src/lib/modules/label/label.module.ts#L20)
+`@skyux/indicators`[View in NPM](https://www.npmjs.com/package/@skyux/indicators) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/indicators/src/lib/modules/label/label.module.ts#L20)
 
 Install with NPM
 
@@ -329,7 +328,7 @@ Only find instances whose `data-sky-id` attribute matches the given value.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { SkyIndicatorDescriptionType, SkyLabelModule, SkyLabelType } from '@skyux/indicators';
 
 /**
@@ -338,6 +337,7 @@ import { SkyIndicatorDescriptionType, SkyLabelModule, SkyLabelType } from '@skyu
 @Component({
   selector: 'app-indicators-label-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyLabelModule],
 })
 export class IndicatorsLabelBasicExampleComponent {

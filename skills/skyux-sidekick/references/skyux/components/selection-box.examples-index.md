@@ -12,5 +12,5 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                            | Lines   | Read invocation                                          |
 | --- | ---------------------------------- | ------- | -------------------------------------------------------- |
-| 1   | Selection boxes with checkboxes    | 318–457 | `Read file_path=./selection-box.md offset=318 limit=140` |
-| 2   | Selection boxes with radio buttons | 458–582 | `Read file_path=./selection-box.md offset=458 limit=125` |
+| 1   | Selection boxes with checkboxes    | 317–454 | `Read file_path=./selection-box.md offset=317 limit=138` |
+| 2   | Selection boxes with radio buttons | 455–579 | `Read file_path=./selection-box.md offset=455 limit=125` |

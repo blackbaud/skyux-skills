@@ -5,8 +5,6 @@ Reference: https://developer.blackbaud.com/skyux/design/styles/borders
 
 # Borders
 
-This API was significantly updated in SKY UX 14. For the previous version, see the SKY UX 13 docs.
-
 ## Container borders
 
 The default container border wraps content containers to separate them from their surroundings. It is built into SKY UX container components, such as [boxes](../../components/box.md), [modals](../../components/modal.md), and [tiles](../../components/tile.md).

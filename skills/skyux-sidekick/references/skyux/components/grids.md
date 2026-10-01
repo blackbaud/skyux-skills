@@ -10,7 +10,6 @@ SKY UX includes a few components to create data grids for spreadsheet-like inter
 - [Data entry grid](./data-entry-grid.md) - Data entry grids use the third-party AG Grid library to enable users to enter and edit large amounts of data.
 - [Data grid (preview)](./data-grid-component.md) - Data grids provide straightforward grids driven by inputs and column declarations with common features, such as sorting, paging, and selection.
 - [Data grid (advanced)](./data-grid.md) - Data grids provide advanced grids for scenarios that require direct access to the third-party AG Grid library and its full configuration and APIs.
-- [Grid (deprecated)](./grid.md) - The deprecated grid component was used to display data in a consistent and flexible way.
 
 ## Choosing the right data grid
 

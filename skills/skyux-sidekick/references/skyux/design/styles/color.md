@@ -5,8 +5,6 @@ Reference: https://developer.blackbaud.com/skyux/design/styles/color
 
 # Colors
 
-This API was significantly updated in SKY UX 14. For the previous version, see the SKY UX 13 docs.
-
 ## Text colors
 
 SKY UX uses text colors to communicate information hierarchy, state, and interaction. These colors are built into SKY UX components and typography classes, and in most cases, they should not be applied manually.

@@ -63,8 +63,7 @@ Menu option
 
 NPM package
 
-`@skyux/lists`[View in NPM](https://www.npmjs.com/package/@skyux/lists) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/lists/src/lib/modules/sort/sort.module.ts#L30)
+`@skyux/lists`[View in NPM](https://www.npmjs.com/package/@skyux/lists) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/lists/src/lib/modules/sort/sort.module.ts#L30)
 
 Install with NPM
 
@@ -274,7 +273,7 @@ Only find instances whose text content matches the given value.
 
 ```typescript
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { SkyToolbarModule } from '@skyux/layout';
 import { SkyRepeaterModule, SkySortModule } from '@skyux/lists';
 
@@ -304,6 +303,7 @@ interface SortOption {
     }
   `,
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CommonModule, SkyRepeaterModule, SkySortModule, SkyToolbarModule],
 })
 export class ListsSortBasicExampleComponent implements OnInit {

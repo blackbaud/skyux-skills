@@ -41,8 +41,7 @@ Button bar
 
 NPM package
 
-`@skyux/layout`[View in NPM](https://www.npmjs.com/package/@skyux/layout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/layout/src/lib/modules/back-to-top/back-to-top.module.ts#L14)
+`@skyux/layout`[View in NPM](https://www.npmjs.com/package/@skyux/layout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/layout/src/lib/modules/back-to-top/back-to-top.module.ts#L14)
 
 Install with NPM
 
@@ -147,7 +146,7 @@ Clicks the back to top button.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { SkyBackToTopModule } from '@skyux/layout';
 import { SkyInfiniteScrollModule, SkyRepeaterModule } from '@skyux/lists';
 
@@ -160,6 +159,7 @@ import { Person } from './person';
 @Component({
   selector: 'app-layout-back-to-top-infinite-scroll-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyBackToTopModule, SkyInfiniteScrollModule, SkyRepeaterModule],
 })
 export class LayoutBackToTopInfiniteScrollExampleComponent implements OnInit {
@@ -334,7 +334,7 @@ export class LayoutBackToTopInfiniteScrollExampleComponent implements OnInit {
 ```typescript
 import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { TestBed } from '@angular/core/testing';
-import { SkyAppTestUtility } from '@skyux-sdk/testing';
+import { SkyAppTestUtility } from '@skyux/core/testing';
 import { SkyBackToTopHarness } from '@skyux/layout/testing';
 import { SkyInfiniteScrollHarness } from '@skyux/lists/testing';
 
@@ -404,7 +404,7 @@ export interface Person {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyBackToTopModule } from '@skyux/layout';
 import { SkyRepeaterModule } from '@skyux/lists';
 
@@ -415,6 +415,7 @@ import { SkyRepeaterModule } from '@skyux/lists';
 @Component({
   selector: 'app-layout-back-to-top-repeater-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyBackToTopModule, SkyRepeaterModule],
 })
 export class LayoutBackToTopRepeaterExampleComponent {
@@ -546,7 +547,7 @@ export class LayoutBackToTopRepeaterExampleComponent {
 ```typescript
 import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { TestBed } from '@angular/core/testing';
-import { SkyAppTestUtility } from '@skyux-sdk/testing';
+import { SkyAppTestUtility } from '@skyux/core/testing';
 import { SkyBackToTopHarness } from '@skyux/layout/testing';
 
 import { LayoutBackToTopRepeaterExampleComponent } from './example.component';

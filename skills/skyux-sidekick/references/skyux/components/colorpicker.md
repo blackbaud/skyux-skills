@@ -134,8 +134,7 @@ Don't use `stacked` when the colorpicker:
 
 NPM package
 
-`@skyux/colorpicker`[View in NPM](https://www.npmjs.com/package/@skyux/colorpicker) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/colorpicker/src/lib/modules/colorpicker/colorpicker.module.ts#L20)
+`@skyux/colorpicker`[View in NPM](https://www.npmjs.com/package/@skyux/colorpicker) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/colorpicker/src/lib/modules/colorpicker/colorpicker.module.ts#L20)
 
 Install with NPM
 
@@ -991,7 +990,7 @@ Only find instances whose `data-sky-id` attribute matches the given value.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, ValidationErrors } from '@angular/forms';
 import { SkyColorpickerModule, SkyColorpickerOutput } from '@skyux/colorpicker';
 import { SkyFormErrorModule } from '@skyux/forms';
@@ -1010,6 +1009,7 @@ function isColorpickerOutput(value: unknown): value is SkyColorpickerOutput {
 @Component({
   selector: 'app-colorpicker-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ReactiveFormsModule, SkyColorpickerModule, SkyFormErrorModule],
 })
 export class ColorpickerBasicExampleComponent {
@@ -1146,7 +1146,7 @@ describe('Basic colorpicker example', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import {
   FormBuilder,
   FormControl,
@@ -1179,6 +1179,7 @@ function isColorpickerOutput(value: unknown): value is SkyColorpickerOutput {
 @Component({
   selector: 'app-colorpicker-programmatic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, ReactiveFormsModule, SkyColorpickerModule, SkyFormErrorModule],
 })
 export class ColorpickerProgrammaticExampleComponent {
@@ -1257,7 +1258,7 @@ export class ColorpickerProgrammaticExampleComponent {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, ValidationErrors } from '@angular/forms';
 import { SkyColorpickerModule, SkyColorpickerOutput } from '@skyux/colorpicker';
 import { SkyFormErrorModule } from '@skyux/forms';
@@ -1276,6 +1277,7 @@ function isColorpickerOutput(value: unknown): value is SkyColorpickerOutput {
 @Component({
   selector: 'app-colorpicker-help-key-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ReactiveFormsModule, SkyColorpickerModule, SkyFormErrorModule],
 })
 export class ColorpickerHelpKeyExampleComponent {

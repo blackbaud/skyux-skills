@@ -63,7 +63,7 @@ You can include up to three secondary buttons to provide quick access to common 
 
 ### Needs attention
 
-Display actions that users must perform based on business requirements or best practices, and link users to the place where they can complete the action, such as a [modal](./modal.md), [split view page](../design/guidelines/page-layouts/split-view-page.md), or [record page](../design/guidelines/page-layouts/record-page.md).
+In the needs attention section, display actions that users must perform based on business requirements or best practices, and link users to the place where they can complete the action, such as a [modal](./modal.md), [split view page](../design/guidelines/page-layouts/split-view-page.md), or [record page](../design/guidelines/page-layouts/record-page.md). If no needs attention items are available, the section is hidden and no empty state message is necessary.
 
 Start each item in the list with a verb that communicates the action to perform. After the verb, include the number of items that require attention and a succinct description.
 
@@ -155,9 +155,7 @@ Link needs attention items to the place where users can complete the action, suc
 
 #### Empty state
 
-When no needs attention items are available, an [empty state message](../design/guidelines/user-assistance.md#empty-state-help) indicates that users are caught up.
-
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/action-hub/needs-attention-empty-600.5f5e9218db5b27300f26c925381b1343.png)
+When no needs attention items are available, the needs attention section is hidden.
 
 #### Columns
 
@@ -190,8 +188,7 @@ Action hubs reflow content in small viewports.
 
 NPM package
 
-`@skyux/pages`[View in NPM](https://www.npmjs.com/package/@skyux/pages) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/pages/src/lib/modules/action-hub/action-hub.module.ts#L45)
+`@skyux/pages`[View in NPM](https://www.npmjs.com/package/@skyux/pages) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/pages/src/lib/modules/action-hub/action-hub.module.ts#L43)
 
 Install with NPM
 
@@ -213,33 +210,33 @@ Creates an action hub to direct user attention to important actions and provide 
 
 ### Inputs
 
-#### `needsAttention: SkyActionHubNeedsAttentionInput | undefined`
+#### `needsAttention: InputSignal<SkyActionHubNeedsAttentionInput | undefined>`
 
 The list of actions that users must perform based on business requirements or best practices, or `"loading"` to display a wait indicator.
 
-#### `parentLink: SkyPageLink | undefined`
+#### `parentLink: InputSignal<SkyPageLink | undefined>`
 
 Links back to a parent page.
 
-#### `recentLinks: SkyRecentLinksInput`
+#### `recentLinks: InputSignal<SkyRecentLinksInput>`
 
 The list of recently accessed links, or `"loading"` to display a wait indicator.
 
 Default: `[]`
 
-#### `relatedLinks: SkyPageLinksInput`
+#### `relatedLinks: InputSignal<SkyPageLinksInput>`
 
 The list of related links, or `"loading"` to display a wait indicator.
 
 Default: `[]`
 
-#### `settingsLinks: SkyPageModalLinksInput`
+#### `settingsLinks: InputSignal<SkyPageModalLinksInput>`
 
 The list of settings with modal parameters, or `"loading"` to display a wait indicator.
 
 Default: `[]`
 
-#### `title: string`
+#### `title: InputSignal<string>`
 
 The page title.
 
@@ -598,7 +595,7 @@ Harness for interacting with the needs-attention component in tests.
 
 #### `getEmptyListText(): Promise<string | undefined>`
 
-Gets the text from an empty list. If there are items in the list, this will return `undefined`.
+Needs attention no longer shows an empty list, so this will always return `undefined`.
 
 #### Returns
 
@@ -863,7 +860,7 @@ Only find instances whose text content matches the given value.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyActionHubModule, SkyPageModalLinksInput } from '@skyux/pages';
 
 import { MODAL_TITLE } from './modal-title-token';
@@ -882,6 +879,7 @@ const pastHours = Array.from(Array(5).keys()).map((i) => {
 @Component({
   selector: 'app-pages-action-hub-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyActionHubModule],
 })
 export class PagesActionHubExampleComponent {
@@ -1314,7 +1312,7 @@ describe('SettingsModalComponent', () => {
 #### settings-modal.component.ts
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SkyColorpickerModule } from '@skyux/colorpicker';
 import { SkyInputBoxModule } from '@skyux/forms';
@@ -1325,6 +1323,7 @@ import { MODAL_TITLE } from './modal-title-token';
 @Component({
   selector: 'app-settings-modal',
   templateUrl: './settings-modal.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, ReactiveFormsModule, SkyColorpickerModule, SkyInputBoxModule, SkyModalModule],
 })
 export class SettingsModalComponent {

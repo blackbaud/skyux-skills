@@ -151,8 +151,7 @@ Don't use horizontal lists for multiple description lists in a container.
 
 NPM package
 
-`@skyux/layout`[View in NPM](https://www.npmjs.com/package/@skyux/layout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/layout/src/lib/modules/description-list/description-list.module.ts#L36)
+`@skyux/layout`[View in NPM](https://www.npmjs.com/package/@skyux/layout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/layout/src/lib/modules/description-list/description-list.module.ts#L36)
 
 Install with NPM
 
@@ -349,7 +348,7 @@ Gets the term component text.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyDescriptionListModule } from '@skyux/layout';
 
 /**
@@ -358,6 +357,7 @@ import { SkyDescriptionListModule } from '@skyux/layout';
 @Component({
   selector: 'app-layout-description-list-horizontal-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyDescriptionListModule],
 })
 export class LayoutDescriptionListHorizontalExampleComponent {
@@ -448,7 +448,7 @@ describe('Horizontal description list', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyDescriptionListModule } from '@skyux/layout';
 
 /**
@@ -457,6 +457,7 @@ import { SkyDescriptionListModule } from '@skyux/layout';
 @Component({
   selector: 'app-layout-description-list-vertical-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyDescriptionListModule],
 })
 export class LayoutDescriptionListVerticalExampleComponent {
@@ -547,7 +548,7 @@ describe('Vertical description list', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyDescriptionListModule } from '@skyux/layout';
 
 /**
@@ -556,6 +557,7 @@ import { SkyDescriptionListModule } from '@skyux/layout';
 @Component({
   selector: 'app-layout-description-list-long-description-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyDescriptionListModule],
 })
 export class LayoutDescriptionListLongDescriptionExampleComponent {
@@ -639,7 +641,7 @@ describe('Long description list', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyHelpInlineModule } from '@skyux/help-inline';
 import { SkyDescriptionListModule } from '@skyux/layout';
 
@@ -649,6 +651,7 @@ import { SkyDescriptionListModule } from '@skyux/layout';
 @Component({
   selector: 'app-layout-description-list-inline-help-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyDescriptionListModule, SkyHelpInlineModule],
 })
 export class LayoutDescriptionListInlineHelpExampleComponent {
@@ -750,7 +753,7 @@ describe('Horizontal description list', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyDescriptionListModule } from '@skyux/layout';
 
 /**
@@ -759,6 +762,7 @@ import { SkyDescriptionListModule } from '@skyux/layout';
 @Component({
   selector: 'app-layout-description-list-help-key-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyDescriptionListModule],
 })
 export class LayoutDescriptionListHelpKeyExampleComponent {

@@ -79,8 +79,7 @@ When you need to supplement a toggle switch label with additional information, y
 
 NPM package
 
-`@skyux/forms`[View in NPM](https://www.npmjs.com/package/@skyux/forms) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/forms/src/lib/modules/toggle-switch/toggle-switch.module.ts#L21)
+`@skyux/forms`[View in NPM](https://www.npmjs.com/package/@skyux/forms) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/forms/src/lib/modules/toggle-switch/toggle-switch.module.ts#L20)
 
 Install with NPM
 
@@ -104,7 +103,7 @@ Selector: `sky-toggle-switch`
 
 Warning: **Deprecated.** Use the `labelText` input instead.
 
-The ARIA label for the toggle switch. This sets the `aria-label` attribute to provide a text equivalent for screen readers [to support accessibility](../learn/accessibility/README.md). Use a context-sensitive label, such as "Activate annual fundraiser" for a toggle switch that activates and deactivates an annual fundraiser. Context is especially important if multiple toggle switches are in close proximity. When the `sky-toggle-switch-label` component displays a visible label, this property is only necessary if that label requires extra context. For more information about the `aria-label` attribute, see the [WAI-ARIA definition](https://www.w3.org/TR/wai-aria/#aria-label).
+The ARIA label for the toggle switch. This sets the `aria-label` attribute to provide a text equivalent for screen readers [to support accessibility](../learn/accessibility/README.md). Use a context-sensitive label, such as "Activate annual fundraiser" for a toggle switch that activates and deactivates an annual fundraiser. Context is especially important if multiple toggle switches are in close proximity. This property only applies when `labelText` is not set, since `labelText` takes precedence when both inputs are provided. For more information about the `aria-label` attribute, see the [WAI-ARIA definition](https://www.w3.org/TR/wai-aria/#aria-label).
 
 #### `checked: boolean`
 
@@ -151,16 +150,6 @@ Default: `0`
 #### `toggleChange: EventEmitter<SkyToggleSwitchChange>`
 
 Fires when the checked state of a toggle switch changes.
-
-## SkyToggleSwitchLabelComponent
-
-Type: Component
-
-Selector: `sky-toggle-switch-label`
-
-Warning: **Deprecated.** Use the `labelText` input on the toggle switch component instead.
-
-Specifies the label to display beside the toggle switch. To display a help button beside the label, include a help button element, such as `sky-help-inline`, in the `sky-toggle-switch` element and a `sky-control-help` CSS class on that help button element.
 
 ## SkyToggleSwitchChange
 
@@ -319,7 +308,7 @@ Only find instances whose `data-sky-id` attribute matches the given value.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SkyToggleSwitchModule } from '@skyux/forms';
 
@@ -333,6 +322,7 @@ interface ToggleSwitchFormType {
 @Component({
   selector: 'app-forms-toggle-switch-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, ReactiveFormsModule, SkyToggleSwitchModule],
 })
 export class FormsToggleSwitchBasicExampleComponent {
@@ -423,7 +413,7 @@ describe('Basic toggle switch example', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SkyToggleSwitchModule } from '@skyux/forms';
 
@@ -437,6 +427,7 @@ interface ToggleSwitchFormType {
 @Component({
   selector: 'app-forms-toggle-switch-help-key-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, ReactiveFormsModule, SkyToggleSwitchModule],
 })
 export class FormsToggleSwitchHelpKeyExampleComponent {

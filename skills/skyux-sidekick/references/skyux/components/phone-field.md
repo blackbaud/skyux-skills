@@ -135,8 +135,7 @@ The phone field input directive validates phone numbers based on the format for 
 
 NPM package
 
-`@skyux/phone-field`[View in NPM](https://www.npmjs.com/package/@skyux/phone-field) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/phone-field/src/lib/modules/phone-field/phone-field.module.ts#L10)
+`@skyux/phone-field`[View in NPM](https://www.npmjs.com/package/@skyux/phone-field) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/phone-field/src/lib/modules/phone-field/phone-field.module.ts#L10)
 
 Install with NPM
 
@@ -178,7 +177,7 @@ The format for validated phone numbers. Options include: `"default"`, `"internat
 
 Default: `"default"`
 
-#### `selectedCountry: ModelSignal<SkyPhoneFieldCountry | undefined>`
+#### `selectedCountryInput: InputSignal<SkyPhoneFieldCountry | undefined>`
 
 The currently selected country to validate against.
 
@@ -422,7 +421,7 @@ Sets the value of the input. The value will be set by simulating key presses tha
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { SkyInputBoxModule } from '@skyux/forms';
 import { SkyPhoneFieldModule } from '@skyux/phone-field';
@@ -433,6 +432,7 @@ import { SkyPhoneFieldModule } from '@skyux/phone-field';
 @Component({
   selector: 'app-phone-field-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, ReactiveFormsModule, SkyInputBoxModule, SkyPhoneFieldModule],
 })
 export class PhoneFieldBasicExampleComponent {

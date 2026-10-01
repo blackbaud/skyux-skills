@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-30T06:21:32Z",
+  "generated_at": "2026-10-01T21:07:06Z",
   "source": {
     "type": "website",
     "url": "https://developer.blackbaud.com/skyux"
   },
   "counts": {
-    "components": 100,
-    "section_indexes": 97,
-    "example_indexes": 80
+    "components": 88,
+    "section_indexes": 86,
+    "example_indexes": 82
   },
-  "content_hash": "8178f972ef48f382695063578961923c353161c044144d54d3c725594e850b38"
+  "content_hash": "81c07e64cc513749fd54c92a24d642da3a67a594baf406467a1eaba4d1353e28"
 }

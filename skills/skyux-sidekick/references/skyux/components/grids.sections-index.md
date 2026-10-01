@@ -14,5 +14,5 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 
 | #   | Section                      | Tab    | Lines | Read invocation                                |
 | --- | ---------------------------- | ------ | ----- | ---------------------------------------------- |
-| 1   | Choosing the right data grid | design | 15–34 | `Read file_path=./grids.md offset=15 limit=20` |
-| 2   | Related information          | design | 35–54 | `Read file_path=./grids.md offset=35 limit=20` |
+| 1   | Choosing the right data grid | design | 14–33 | `Read file_path=./grids.md offset=14 limit=20` |
+| 2   | Related information          | design | 34–53 | `Read file_path=./grids.md offset=34 limit=20` |

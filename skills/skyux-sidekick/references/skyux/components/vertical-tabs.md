@@ -129,8 +129,7 @@ You don't need to specify ARIA labels for individual tabs because the required `
 
 NPM package
 
-`@skyux/tabs`[View in NPM](https://www.npmjs.com/package/@skyux/tabs) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/tabs/src/lib/modules/vertical-tabset/vertical-tabset.module.ts#L48)
+`@skyux/tabs`[View in NPM](https://www.npmjs.com/package/@skyux/tabs) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/tabs/src/lib/modules/vertical-tabset/vertical-tabset.module.ts#L48)
 
 Install with NPM
 
@@ -228,6 +227,12 @@ Whether to disable the tab.
 
 Default: `false`
 
+#### `layout: SkyVerticalTabLayoutType`
+
+The tab layout that applies spacing to the tab container element. Use the layout that corresponds with the top-level component type used within the tab, or use `fit` to constrain the tab contents to the available viewport. Use `none` for custom content that does not adhere to predefined spacing or constraints.
+
+Default: `"none"`
+
 #### `tabHeaderCount: number | undefined`
 
 Displays an item count alongside the tab header to indicate how many list items the tab contains.
@@ -261,6 +266,14 @@ The header for the collapsible group of tabs.
 Whether the collapsible group is expanded.
 
 Default: `false`
+
+## SkyVerticalTabLayoutType
+
+Type: Type alias
+
+The layout to apply to a vertical tab's content. Layouts apply spacing that corresponds with the top-level component type used within the tab, or constrain the tab contents to the available viewport in the case of `fit`.
+
+    type SkyVerticalTabLayoutType = "none" | "blocks" | "fit" | "list"
 
 SKY UX test harnesses are built upon Angular CDK component harnesses. For more information see the [Angular CDK component harness documentation](https://material.angular.io/cdk/test-harnesses/overview).
 
@@ -741,3 +754,522 @@ A set of criteria that can be used to filter a list of `SkyVerticalTabContentHar
 #### `dataSkyId?: string | RegExp`
 
 Only find instances whose `data-sky-id` attribute matches the given value.
+
+## Code Examples
+
+### Vertical tabs with basic setup
+
+#### example.component.ts (primary file)
+
+```typescript
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { SkyVerticalTabsetModule } from '@skyux/tabs';
+
+/**
+ * @title Vertical tabs with basic setup
+ */
+@Component({
+  selector: 'app-tabs-vertical-tabs-basic-example',
+  templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
+  imports: [SkyVerticalTabsetModule],
+})
+export class TabsVerticalTabsBasicExampleComponent {}
+```
+
+#### example.component.html
+
+```html
+<sky-vertical-tabset data-sky-id="vertical-tabs-basic" tabWidth="auto">
+  <sky-vertical-tab tabHeading="A short tab"> Tab 1 content </sky-vertical-tab>
+  <sky-vertical-tab tabHeading="Tab 2" [active]="true"> Tab 2 content </sky-vertical-tab>
+  <sky-vertical-tab tabHeading="A very long tab heading that wraps when the width is constrained" [disabled]="true">
+    Tab 3 content
+  </sky-vertical-tab>
+</sky-vertical-tabset>
+```
+
+#### example.component.spec.ts
+
+```typescript
+import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideNoopSkyAnimations } from '@skyux/core';
+import { SkyMediaQueryTestingController, provideSkyMediaQueryTesting } from '@skyux/core/testing';
+import { SkyVerticalTabsetHarness } from '@skyux/tabs/testing';
+
+import { TabsVerticalTabsBasicExampleComponent } from './example.component';
+
+describe('Basic vertical tabs example', () => {
+  async function setupTest(options: { dataSkyId?: string }): Promise<{
+    harness: SkyVerticalTabsetHarness;
+    fixture: ComponentFixture<TabsVerticalTabsBasicExampleComponent>;
+  }> {
+    const fixture = TestBed.createComponent(TabsVerticalTabsBasicExampleComponent);
+
+    // Pin a wide breakpoint so the tabset renders its side-by-side layout
+    // (and applies `tabWidth`) regardless of the test runner's window size.
+    TestBed.inject(SkyMediaQueryTestingController).setBreakpoint('lg');
+
+    const loader = TestbedHarnessEnvironment.loader(fixture);
+
+    const harness = await loader.getHarness(SkyVerticalTabsetHarness.with({ dataSkyId: options.dataSkyId }));
+
+    return { harness, fixture };
+  }
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [TabsVerticalTabsBasicExampleComponent],
+      providers: [provideNoopSkyAnimations(), provideSkyMediaQueryTesting()],
+    });
+  });
+
+  it('should set up vertical tabs', async () => {
+    const { harness } = await setupTest({ dataSkyId: 'vertical-tabs-basic' });
+
+    await expectAsync(harness.getTabWidth()).toBeResolvedTo('auto');
+
+    const allTabs = await harness.getTabs();
+    expect(allTabs.length).toBe(3);
+
+    const activeTab = await harness.getActiveTab();
+    expect(await activeTab?.getTabHeading()).toBe('Tab 2');
+    const activeTabContent = await activeTab?.getTabContent();
+    expect(await activeTabContent?.isVisible()).toBeTrue();
+
+    const disabledTab = await harness.getTab({
+      tabHeading: 'A very long tab heading that wraps when the width is constrained',
+    });
+    expect(await disabledTab?.isDisabled()).toBeTrue();
+  });
+});
+```
+
+### Vertical tabs with grouped tabs
+
+#### example.component.ts (primary file)
+
+```typescript
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { SkyVerticalTabsetModule } from '@skyux/tabs';
+
+import { TabGroup } from './group';
+
+/**
+ * @title Vertical tabs with grouped tabs
+ */
+@Component({
+  selector: 'app-tabs-vertical-tabs-grouped-example',
+  templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
+  imports: [SkyVerticalTabsetModule],
+})
+export class TabsVerticalTabsGroupedExampleComponent {
+  protected groups: TabGroup[] = [
+    {
+      heading: 'Group 1',
+      isOpen: false,
+      isDisabled: false,
+      subTabs: [
+        { tabHeading: 'Group 1 — Tab 1', content: 'Group 1 — Tab 1 Content' },
+        {
+          tabHeading: 'Group 1 — Tab 2',
+          content: 'Group 1 — Tab 2 Content',
+          tabHeaderCount: 7,
+        },
+      ],
+    },
+    {
+      heading: 'Group 2',
+      isOpen: true,
+      isDisabled: false,
+      subTabs: [
+        {
+          tabHeading: 'Group 2 — Tab 1',
+          content: 'Group 2 — Tab 1 Content',
+          active: true,
+        },
+        {
+          tabHeading: 'Group 2 — Tab 2 — Disabled',
+          content: 'Group 2 — Tab 2 Content',
+          disabled: true,
+        },
+      ],
+    },
+    {
+      heading: 'Disabled',
+      isOpen: false,
+      isDisabled: true,
+      subTabs: [],
+    },
+  ];
+}
+```
+
+#### example.component.html
+
+```html
+<sky-vertical-tabset data-sky-id="vertical-tabs-group" showTabsText="Tab list">
+  @for (group of groups; track group) {
+  <sky-vertical-tabset-group [groupHeading]="group.heading" [open]="group.isOpen" [disabled]="group.isDisabled">
+    @for (tab of group.subTabs; track tab) {
+    <sky-vertical-tab
+      [active]="tab.active"
+      [tabHeading]="tab.tabHeading"
+      [tabHeaderCount]="tab.tabHeaderCount"
+      [disabled]="tab.disabled"
+    >
+      {{ tab.content }}
+    </sky-vertical-tab>
+    }
+  </sky-vertical-tabset-group>
+  }
+</sky-vertical-tabset>
+```
+
+#### example.component.spec.ts
+
+```typescript
+import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideNoopSkyAnimations } from '@skyux/core';
+import { SkyVerticalTabsetHarness } from '@skyux/tabs/testing';
+
+import { TabsVerticalTabsGroupedExampleComponent } from './example.component';
+
+describe('Group vertical tabs example', () => {
+  async function setupTest(options: { dataSkyId?: string }): Promise<{
+    harness: SkyVerticalTabsetHarness;
+    fixture: ComponentFixture<TabsVerticalTabsGroupedExampleComponent>;
+  }> {
+    const fixture = TestBed.createComponent(TabsVerticalTabsGroupedExampleComponent);
+    const loader = TestbedHarnessEnvironment.loader(fixture);
+
+    const harness = await loader.getHarness(SkyVerticalTabsetHarness.with({ dataSkyId: options.dataSkyId }));
+
+    return { harness, fixture };
+  }
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [TabsVerticalTabsGroupedExampleComponent],
+      providers: [provideNoopSkyAnimations()],
+    });
+  });
+
+  it('should set up vertical tabs', async () => {
+    const { harness } = await setupTest({ dataSkyId: 'vertical-tabs-group' });
+
+    const allTabs = await harness.getTabs();
+    expect(allTabs.length).toBe(4);
+
+    const groups = await harness.getGroups();
+    expect(groups.length).toBe(3);
+
+    const disabledGroup = await harness.getGroup({
+      groupHeading: 'Disabled',
+    });
+    await expectAsync(disabledGroup?.isDisabled()).toBeResolvedTo(true);
+
+    const group1Tab2 = await harness.getTab({ tabHeading: 'Group 1 — Tab 2' });
+    await expectAsync(group1Tab2.getTabHeaderCount()).toBeResolvedTo(7);
+  });
+
+  it('should have active tab as the first tab in group 2', async () => {
+    const { harness } = await setupTest({ dataSkyId: 'vertical-tabs-group' });
+
+    // Two ways to get a tab inside a group
+    // Through tabset harness
+    const activeTab = await harness.getActiveTab();
+
+    // Through group harness
+    const group2 = await harness.getGroup({ groupHeading: 'Group 2' });
+    await expectAsync(group2?.isActive()).toBeResolvedTo(true);
+
+    const tab1 = await group2?.getVerticalTab({
+      tabHeading: 'Group 2 — Tab 1',
+    });
+
+    const check = (await activeTab?.getTabHeading()) === (await tab1?.getTabHeading());
+    expect(check).toBe(true);
+  });
+});
+```
+
+#### group.ts
+
+```typescript
+export interface TabGroup {
+  heading: string;
+  isOpen: boolean;
+  isDisabled: boolean;
+  subTabs: {
+    tabHeading: string;
+    content: string;
+    tabHeaderCount?: number;
+    active?: boolean;
+    disabled?: boolean;
+  }[];
+}
+```
+
+### Vertical tabs with layout options
+
+#### example.ts (primary file)
+
+```typescript
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { SkyVerticalTabsetModule } from '@skyux/tabs';
+
+/**
+ * @title Vertical tabs with layout options
+ */
+@Component({
+  selector: 'app-tabs-vertical-tabs-layout-example',
+  templateUrl: './example.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [SkyVerticalTabsetModule],
+})
+export class TabsVerticalTabsLayoutExample {}
+```
+
+#### example.html
+
+```html
+<sky-vertical-tabset data-sky-id="vertical-tabs-layout" tabWidth="auto">
+  <sky-vertical-tab tabHeading="Blocks" layout="blocks" [active]="true">
+    The blocks layout adds spacing for laying out blocks of content in a tab panel.
+  </sky-vertical-tab>
+  <sky-vertical-tab tabHeading="List" layout="list">
+    The list layout adds spacing suited for lists of data.
+  </sky-vertical-tab>
+</sky-vertical-tabset>
+```
+
+#### example.spec.ts
+
+```typescript
+import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideNoopSkyAnimations } from '@skyux/core';
+import { SkyMediaQueryTestingController, provideSkyMediaQueryTesting } from '@skyux/core/testing';
+import { SkyVerticalTabsetHarness } from '@skyux/tabs/testing';
+
+import { TabsVerticalTabsLayoutExample } from './example';
+
+describe('Vertical tabs layout example', () => {
+  async function setupTest(): Promise<{
+    harness: SkyVerticalTabsetHarness;
+    fixture: ComponentFixture<TabsVerticalTabsLayoutExample>;
+  }> {
+    const fixture = TestBed.createComponent(TabsVerticalTabsLayoutExample);
+
+    // Pin a wide breakpoint so the tabset renders its side-by-side layout
+    // (and applies `tabWidth`) regardless of the test runner's window size.
+    TestBed.inject(SkyMediaQueryTestingController).setBreakpoint('lg');
+
+    const loader = TestbedHarnessEnvironment.loader(fixture);
+
+    const harness = await loader.getHarness(SkyVerticalTabsetHarness.with({ dataSkyId: 'vertical-tabs-layout' }));
+
+    return { harness, fixture };
+  }
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [TabsVerticalTabsLayoutExample],
+      providers: [provideNoopSkyAnimations(), provideSkyMediaQueryTesting()],
+    });
+  });
+
+  it('should set up vertical tabs with layout options', async () => {
+    const { harness } = await setupTest();
+
+    const allTabs = await harness.getTabs();
+    expect(allTabs.length).toBe(2);
+
+    const activeTab = await harness.getActiveTab();
+    expect(await activeTab?.getTabHeading()).toBe('Blocks');
+
+    const listTab = await harness.getTab({ tabHeading: 'List' });
+    expect(await listTab?.isDisabled()).toBeFalse();
+
+    const blocksTab = await harness.getTab({ tabHeading: 'Blocks' });
+    const blocksTabContent = await blocksTab?.getTabContent();
+    await blocksTab?.click();
+    expect(await blocksTabContent?.isVisible()).toBeTrue();
+  });
+});
+```
+
+### Vertical tabs with grouped and ungrouped tabs
+
+#### example.component.ts (primary file)
+
+```typescript
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { SkyVerticalTabsetModule } from '@skyux/tabs';
+
+import { TabGroup } from './group';
+
+/**
+ * @title Vertical tabs with grouped and ungrouped tabs
+ */
+@Component({
+  selector: 'app-tabs-vertical-tabs-mixed-example',
+  templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
+  imports: [SkyVerticalTabsetModule],
+})
+export class TabsVerticalTabsMixedExampleComponent {
+  protected groupedTabs: TabGroup[] = [
+    {
+      heading: 'Group 1',
+      isOpen: true,
+      subTabs: [
+        {
+          tabHeading: 'Group 1 — Tab 1',
+          content: 'Group 1 — Tab 1 Content',
+          active: true,
+        },
+        {
+          tabHeading: 'Group 1 — Tab 2',
+          content: 'Group 1 — Tab 2 Content',
+        },
+      ],
+    },
+    {
+      heading: 'Group 2',
+      isOpen: false,
+      subTabs: [
+        {
+          tabHeading: 'Group 2 — Tab 1',
+          content: 'Group 2 — Tab 1 Content',
+        },
+        {
+          tabHeading: 'Group 2 — Tab 2',
+          content: 'Group 2 — Tab 2 Content',
+        },
+      ],
+    },
+    {
+      heading: 'Group 3 - disabled',
+      isOpen: false,
+      isDisabled: true,
+      subTabs: [
+        {
+          tabHeading: 'Group 3 — Tab 1',
+          content: 'Group 3 — Tab 1 Content',
+        },
+        {
+          tabHeading: 'Group 3 — Tab 2',
+          content: 'Group 3 — Tab 2 Content',
+        },
+      ],
+    },
+  ];
+}
+```
+
+#### example.component.html
+
+```html
+<sky-vertical-tabset data-sky-id="vertical-tabs-mixed" showTabsText="Tab list">
+  @for (group of groupedTabs; track group) {
+  <sky-vertical-tabset-group [groupHeading]="group.heading" [open]="group.isOpen" [disabled]="group.isDisabled">
+    @for (tab of group.subTabs; track tab) {
+    <sky-vertical-tab [active]="tab.active" [tabHeading]="tab.tabHeading"> {{ tab.content }} </sky-vertical-tab>
+    }
+  </sky-vertical-tabset-group>
+  }
+
+  <sky-vertical-tab tabHeading="Tab 1"> Tab 1 Content </sky-vertical-tab>
+
+  <sky-vertical-tab tabHeading="Tab 2" [tabHeaderCount]="3"> Tab 2 Content </sky-vertical-tab>
+
+  <sky-vertical-tab tabHeading="Tab 3" [disabled]="true"> Tab 3 Content </sky-vertical-tab>
+</sky-vertical-tabset>
+```
+
+#### example.component.spec.ts
+
+```typescript
+import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideNoopSkyAnimations } from '@skyux/core';
+import { SkyVerticalTabsetHarness } from '@skyux/tabs/testing';
+
+import { TabsVerticalTabsMixedExampleComponent } from './example.component';
+
+describe('Mixed vertical tabs example', () => {
+  async function setupTest(options: { dataSkyId?: string }): Promise<{
+    harness: SkyVerticalTabsetHarness;
+    fixture: ComponentFixture<TabsVerticalTabsMixedExampleComponent>;
+  }> {
+    const fixture = TestBed.createComponent(TabsVerticalTabsMixedExampleComponent);
+    const loader = TestbedHarnessEnvironment.loader(fixture);
+
+    const harness = await loader.getHarness(SkyVerticalTabsetHarness.with({ dataSkyId: options.dataSkyId }));
+
+    return { harness, fixture };
+  }
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [TabsVerticalTabsMixedExampleComponent],
+      providers: [provideNoopSkyAnimations()],
+    });
+  });
+
+  it('should show grouped and ungrouped tabs', async () => {
+    const { harness } = await setupTest({ dataSkyId: 'vertical-tabs-mixed' });
+
+    // Test grouped tabs
+    const group1 = await harness.getGroup({ groupHeading: 'Group 1' });
+    expect(group1).toBeTruthy();
+    expect(await group1?.isOpen()).toBe(true);
+
+    const group2 = await harness.getGroup({ groupHeading: 'Group 2' });
+    expect(group2).toBeTruthy();
+    expect(await group2?.isOpen()).toBe(false);
+
+    // Test ungrouped tabs
+    const tab1 = await harness.getTab({ tabHeading: 'Tab 1' });
+    expect(tab1).toBeTruthy();
+
+    const tab2 = await harness.getTab({ tabHeading: 'Tab 2' });
+    expect(tab2).toBeTruthy();
+    expect(await tab2?.getTabHeaderCount()).toBe(3);
+
+    const tab3 = await harness.getTab({ tabHeading: 'Tab 3' });
+    expect(tab3).toBeTruthy();
+    expect(await tab3?.isDisabled()).toBe(true);
+  });
+
+  it('should have the group 1 tab 1 active by default', async () => {
+    const { harness } = await setupTest({ dataSkyId: 'vertical-tabs-mixed' });
+
+    const group1Tab1 = await harness.getTab({ tabHeading: 'Group 1 — Tab 1' });
+    expect(group1Tab1).toBeTruthy();
+    expect(await group1Tab1?.isActive()).toBe(true);
+  });
+});
+```
+
+#### group.ts
+
+```typescript
+export interface TabGroup {
+  heading: string;
+  isOpen: boolean;
+  isDisabled?: boolean;
+  subTabs: {
+    tabHeading: string;
+    content: string;
+    tabHeaderCount?: number;
+    active?: boolean;
+    disabled?: boolean;
+  }[];
+}
+```

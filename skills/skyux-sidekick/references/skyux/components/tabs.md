@@ -184,8 +184,7 @@ You don't need to specify ARIA labels for individual tabs because the required `
 
 NPM package
 
-`@skyux/tabs`[View in NPM](https://www.npmjs.com/package/@skyux/tabs) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/tabs/src/lib/modules/tabs/tabs.module.ts#L35)
+`@skyux/tabs`[View in NPM](https://www.npmjs.com/package/@skyux/tabs) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/tabs/src/lib/modules/tabs/tabs.module.ts#L35)
 
 Install with NPM
 
@@ -734,7 +733,7 @@ Returns a child test element or null if not found.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyTabsModule } from '@skyux/tabs';
 
 /**
@@ -743,6 +742,7 @@ import { SkyTabsModule } from '@skyux/tabs';
 @Component({
   selector: 'app-tabs-static-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyTabsModule],
 })
 export class TabsStaticExampleComponent {}
@@ -805,7 +805,7 @@ describe('Static tabs demo with add and close', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyTabsModule } from '@skyux/tabs';
 
 /**
@@ -814,6 +814,7 @@ import { SkyTabsModule } from '@skyux/tabs';
 @Component({
   selector: 'app-tabs-static-add-close-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyTabsModule],
 })
 export class TabsStaticAddCloseExampleComponent {
@@ -903,7 +904,7 @@ describe('Static tabs demo with add and close', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyTabsModule } from '@skyux/tabs';
 
 /**
@@ -912,6 +913,7 @@ import { SkyTabsModule } from '@skyux/tabs';
 @Component({
   selector: 'app-tabs-dynamic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyTabsModule],
 })
 export class TabsDynamicExampleComponent {
@@ -989,7 +991,7 @@ describe('Dynamic tabs demo with add and close', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyTabsModule } from '@skyux/tabs';
 
 /**
@@ -998,6 +1000,7 @@ import { SkyTabsModule } from '@skyux/tabs';
 @Component({
   selector: 'app-tabs-dynamic-add-close-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyTabsModule],
 })
 export class TabsDynamicAddCloseExampleComponent {

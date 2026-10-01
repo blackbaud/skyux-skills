@@ -127,8 +127,7 @@ Keep popover content brief and focused on the trigger's task. For dialogs that n
 
 NPM package
 
-`@skyux/popovers`[View in NPM](https://www.npmjs.com/package/@skyux/popovers) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/popovers/src/lib/modules/popover/popover.module.ts#L33)
+`@skyux/popovers`[View in NPM](https://www.npmjs.com/package/@skyux/popovers) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/popovers/src/lib/modules/popover/popover.module.ts#L33)
 
 Install with NPM
 
@@ -514,7 +513,7 @@ Only find instances whose `data-sky-id` attribute matches the given value.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyPopoverAlignment, SkyPopoverModule, SkyPopoverPlacement } from '@skyux/popovers';
 
 /**
@@ -523,6 +522,7 @@ import { SkyPopoverAlignment, SkyPopoverModule, SkyPopoverPlacement } from '@sky
 @Component({
   selector: 'app-popovers-popover-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyPopoverModule],
 })
 export class PopoversPopoverBasicExampleComponent {
@@ -638,7 +638,7 @@ describe('Basic popover', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyHelpInlineModule } from '@skyux/help-inline';
 import { SkyPopoverMessage, SkyPopoverMessageType, SkyPopoverModule } from '@skyux/popovers';
 
@@ -650,6 +650,7 @@ import { Subject } from 'rxjs';
 @Component({
   selector: 'app-popovers-popover-programmatic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyHelpInlineModule, SkyPopoverModule],
 })
 export class PopoversPopoverProgrammaticExampleComponent {

@@ -5,7 +5,7 @@ Reference: https://developer.blackbaud.com/skyux/components/inline-form
 
 # Inline form
 
-Inline forms render in context in the current view instead of in a separate modal. It is most commonly used in [grids](./grid.md) and [repeaters](./repeater.md).
+Inline forms render in context in the current view instead of in a separate modal. It is most commonly used in [grids](./grids.md) and [repeaters](./repeater.md).
 
 ## Usage
 
@@ -78,8 +78,7 @@ Use Done if the inline form does not save data to the database immediately becau
 
 NPM package
 
-`@skyux/inline-form`[View in NPM](https://www.npmjs.com/package/@skyux/inline-form) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/inline-form/src/lib/modules/inline-form/inline-form.module.ts#L13)
+`@skyux/inline-form`[View in NPM](https://www.npmjs.com/package/@skyux/inline-form) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/inline-form/src/lib/modules/inline-form/inline-form.module.ts#L13)
 
 Install with NPM
 
@@ -550,7 +549,7 @@ Returns a child test element or null if not found.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SkyInputBoxModule } from '@skyux/forms';
 import { SkyIconModule } from '@skyux/icon';
@@ -571,6 +570,7 @@ interface DemoForm {
 @Component({
   selector: 'app-inline-form-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, ReactiveFormsModule, SkyIconModule, SkyInlineFormModule, SkyInputBoxModule],
 })
 export class InlineFormBasicExampleComponent {
@@ -706,7 +706,7 @@ describe('Inline form basic demo', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, OnInit, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SkyInputBoxModule } from '@skyux/forms';
 import { SkyIconModule } from '@skyux/icon';
@@ -727,6 +727,7 @@ interface DemoForm {
 @Component({
   selector: 'app-inline-form-custom-buttons-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, ReactiveFormsModule, SkyIconModule, SkyInlineFormModule, SkyInputBoxModule],
 })
 export class InlineFormCustomButtonsExampleComponent implements OnInit {
@@ -903,7 +904,7 @@ describe('Inline form custom button demo', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SkyInputBoxModule } from '@skyux/forms';
 import { SkyIconModule } from '@skyux/icon';
@@ -928,6 +929,7 @@ interface Item {
 @Component({
   selector: 'app-inline-form-repeaters-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, ReactiveFormsModule, SkyIconModule, SkyInputBoxModule, SkyRepeaterModule],
 })
 export class InlineFormRepeatersExampleComponent {
@@ -1025,7 +1027,7 @@ export class InlineFormRepeatersExampleComponent {
 
 <ng-template #inlineFormTemplate>
   <form novalidate [formGroup]="formGroup">
-    <sky-input-box labelTex="Title" stacked="true">
+    <sky-input-box labelText="Title" stacked="true">
       <input formControlName="title" type="text" />
     </sky-input-box>
     <sky-input-box labelText="Note">

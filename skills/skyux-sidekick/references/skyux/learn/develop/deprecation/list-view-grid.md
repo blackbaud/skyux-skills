@@ -5,7 +5,7 @@ Reference: https://developer.blackbaud.com/skyux/learn/develop/deprecation/list-
 
 # List view grid
 
-The [list view grid](../../../components/list-view-grid.md) component is deprecated in favor of the [data grid](../../../components/data-grid-component.md) component. Data grid is a simpler, declarative alternative for the common use cases that list view grid previously served. List view grid is part of the `@skyux/list-builder-view-grids` package, not the `@skyux/grids` package, which has its own [migration path](./grid.md).
+The list view grid component is deprecated in favor of the [data grid](../../../components/data-grid-component.md) component. Data grid is a simpler, declarative alternative for the common use cases that list view grid previously served. List view grid is part of the `@skyux/list-builder-view-grids` package, not the `@skyux/grids` package, which has its own [migration path](./grid.md). To view development documentation for the list view grid component, see the SKY UX 14 docs.
 
 ## How to migrate
 

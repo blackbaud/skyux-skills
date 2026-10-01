@@ -12,5 +12,5 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                                | Lines   | Read invocation                               |
 | --- | -------------------------------------- | ------- | --------------------------------------------- |
-| 1   | Box with header, content, and controls | 367–449 | `Read file_path=./box.md offset=367 limit=83` |
-| 2   | Box with help key                      | 450–544 | `Read file_path=./box.md offset=450 limit=95` |
+| 1   | Box with header, content, and controls | 356–439 | `Read file_path=./box.md offset=356 limit=84` |
+| 2   | Box with help key                      | 440–535 | `Read file_path=./box.md offset=440 limit=96` |

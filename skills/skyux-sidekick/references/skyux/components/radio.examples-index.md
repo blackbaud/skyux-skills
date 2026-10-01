@@ -12,6 +12,6 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                         | Lines     | Read invocation                                   |
 | --- | ------------------------------- | --------- | ------------------------------------------------- |
-| 1   | Radio group with standard setup | 886–1095  | `Read file_path=./radio.md offset=886 limit=210`  |
-| 2   | Radio group with help key       | 1096–1295 | `Read file_path=./radio.md offset=1096 limit=200` |
-| 3   | Radio group with icons          | 1296–1347 | `Read file_path=./radio.md offset=1296 limit=52`  |
+| 1   | Radio group with standard setup | 885–1095  | `Read file_path=./radio.md offset=885 limit=211`  |
+| 2   | Radio group with help key       | 1096–1296 | `Read file_path=./radio.md offset=1096 limit=201` |
+| 3   | Radio group with icons          | 1297–1349 | `Read file_path=./radio.md offset=1297 limit=53`  |

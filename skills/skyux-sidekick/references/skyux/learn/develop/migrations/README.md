@@ -15,6 +15,10 @@ Convert to standalone
 
 Replace NgModule declarations with standalone components and directives.
 
+Convert to Vitest matchers
+
+Replace the deprecated Jasmine matchers with the @skyux-sdk/vitest matchers.
+
 Linting --fix
 
 Verify and automatically fix code to meet best practices.

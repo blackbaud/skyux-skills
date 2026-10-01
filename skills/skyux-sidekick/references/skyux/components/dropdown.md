@@ -109,7 +109,7 @@ In addition, follow these guidelines for button text:
 
 ### Placement
 
-Place context-menu dropdowns to the left of all row-specific content but to the right of all list controls, such as expand-collapse actions in [tree views](./angular-tree.md) and checkboxes in [grids](./grid.md) or [repeaters](./repeater.md).
+Place context-menu dropdowns to the left of all row-specific content but to the right of all list controls, such as expand-collapse actions in [tree views](./angular-tree.md) and checkboxes in [grids](./grids.md) or [repeaters](./repeater.md).
 
 Default dropdowns are positioned with the same alignment and margins as [SKY UX buttons](./button.md).
 
@@ -144,8 +144,7 @@ Avoid the deprecated `trigger="hover"` setting. The `hover` trigger poses access
 
 NPM package
 
-`@skyux/popovers`[View in NPM](https://www.npmjs.com/package/@skyux/popovers) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/popovers/src/lib/modules/dropdown/dropdown.module.ts#L44)
+`@skyux/popovers`[View in NPM](https://www.npmjs.com/package/@skyux/popovers) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/popovers/src/lib/modules/dropdown/dropdown.module.ts#L44)
 
 Install with NPM
 
@@ -622,7 +621,7 @@ Only find instances whose `data-sky-id` attribute matches the given value.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyDropdownModule } from '@skyux/popovers';
 
 interface DropdownItem {
@@ -636,6 +635,7 @@ interface DropdownItem {
 @Component({
   selector: 'app-popovers-dropdown-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyDropdownModule],
 })
 export class PopoversDropdownBasicExampleComponent {

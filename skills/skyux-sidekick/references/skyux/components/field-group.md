@@ -142,8 +142,7 @@ Do use a field group with a checkbox group or radio button group and other field
 
 NPM package
 
-`@skyux/forms`[View in NPM](https://www.npmjs.com/package/@skyux/forms) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/forms/src/lib/modules/field-group/field-group.module.ts#L9)
+`@skyux/forms`[View in NPM](https://www.npmjs.com/package/@skyux/forms) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/forms/src/lib/modules/field-group/field-group.module.ts#L9)
 
 Install with NPM
 
@@ -340,7 +339,7 @@ Only find instances whose `data-sky-id` attribute matches the given value.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SkyFieldGroupModule, SkyInputBoxModule } from '@skyux/forms';
 import { SkyFluidGridModule } from '@skyux/layout';
@@ -351,6 +350,7 @@ import { SkyFluidGridModule } from '@skyux/layout';
 @Component({
   selector: 'app-forms-field-group-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, ReactiveFormsModule, SkyFieldGroupModule, SkyFluidGridModule, SkyInputBoxModule],
 })
 export class FormsFieldGroupBasicExampleComponent {
@@ -436,7 +436,7 @@ export class FormsFieldGroupBasicExampleComponent {
       [headingStyle]="4"
       [helpPopoverContent]="helpPopoverContent"
     >
-      <sky-fluid-grid gutterSize="small" [disableMargin]="true">
+      <sky-fluid-grid gutterSize="small">
         <sky-row>
           <sky-column [screenXSmall]="12">
             <sky-input-box labelText="Street address" stacked="true">
@@ -477,7 +477,7 @@ export class FormsFieldGroupBasicExampleComponent {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SkyFieldGroupModule, SkyInputBoxModule } from '@skyux/forms';
 import { SkyFluidGridModule } from '@skyux/layout';
@@ -488,6 +488,7 @@ import { SkyFluidGridModule } from '@skyux/layout';
 @Component({
   selector: 'app-forms-field-group-help-key-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, ReactiveFormsModule, SkyFieldGroupModule, SkyFluidGridModule, SkyInputBoxModule],
 })
 export class FormsFieldGroupHelpKeyExampleComponent {
@@ -570,7 +571,7 @@ export class FormsFieldGroupHelpKeyExampleComponent {
       hintText="We use this address for your end-of-year statement."
       [headingStyle]="4"
     >
-      <sky-fluid-grid gutterSize="small" [disableMargin]="true">
+      <sky-fluid-grid gutterSize="small">
         <sky-row>
           <sky-column [screenXSmall]="12">
             <sky-input-box labelText="Street address" stacked="true">

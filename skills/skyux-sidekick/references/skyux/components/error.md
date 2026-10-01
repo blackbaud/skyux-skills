@@ -136,8 +136,7 @@ The error component, including its title and description text, is always centere
 
 NPM package
 
-`@skyux/errors`[View in NPM](https://www.npmjs.com/package/@skyux/errors) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/errors/src/lib/modules/error/error.module.ts#L29)
+`@skyux/errors`[View in NPM](https://www.npmjs.com/package/@skyux/errors) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/errors/src/lib/modules/error/error.module.ts#L29)
 
 Install with NPM
 
@@ -544,7 +543,7 @@ Returns a child test element or null if not found.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyErrorModule } from '@skyux/errors';
 
 /**
@@ -553,6 +552,7 @@ import { SkyErrorModule } from '@skyux/errors';
 @Component({
   selector: 'app-errors-error-embedded-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyErrorModule],
 })
 export class ErrorsErrorEmbeddedExampleComponent {
@@ -618,7 +618,7 @@ export class ErrorsErrorEmbeddedExampleComponent {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { SkyErrorModalService } from '@skyux/errors';
 
 /**
@@ -626,6 +626,7 @@ import { SkyErrorModalService } from '@skyux/errors';
  */
 @Component({
   selector: 'app-errors-error-modal-example',
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
 })
 export class ErrorsErrorModalExampleComponent {

@@ -246,8 +246,7 @@ Page layouts reflow content at the `xs` breakpoint of 767px.
 
 NPM package
 
-`@skyux/pages`[View in NPM](https://www.npmjs.com/package/@skyux/pages) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/pages/src/lib/modules/page/page.module.ts#L36)
+`@skyux/pages`[View in NPM](https://www.npmjs.com/package/@skyux/pages) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/pages/src/lib/modules/page/page.module.ts#L36)
 
 Install with NPM
 
@@ -769,7 +768,7 @@ Only find instances whose text content matches the given value.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyIconModule } from '@skyux/icon';
 import { SkyPageModule, SkyRecentLink } from '@skyux/pages';
 
@@ -782,6 +781,7 @@ import { HomePageContentComponent } from './home-page-content.component';
 @Component({
   selector: 'app-pages-page-home-page-blocks-layout-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [HomePageContentComponent, SkyIconModule, SkyPageModule],
 })
 export class PagesPageHomePageBlocksLayoutExampleComponent {
@@ -892,7 +892,7 @@ describe('Record page blocks layout example', () => {
 #### home-page-content.component.ts
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyTileDashboardConfig, SkyTilesModule } from '@skyux/tiles';
 
 import { TileMyActionsComponent } from './tile-my-actions.component';
@@ -901,6 +901,7 @@ import { TileUpdatesComponent } from './tile-updates.component';
 @Component({
   selector: 'app-home-page-content',
   templateUrl: './home-page-content.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyTilesModule],
 })
 export class HomePageContentComponent {
@@ -1011,7 +1012,7 @@ export class HomePageContentComponent {
 #### tile-my-actions.component.ts
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyRepeaterModule } from '@skyux/lists';
 import { SkyDropdownModule } from '@skyux/popovers';
 import { SkyTilesModule } from '@skyux/tiles';
@@ -1024,6 +1025,7 @@ import { SkyTilesModule } from '@skyux/tiles';
     }
   `,
   templateUrl: './tile-my-actions.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyTilesModule, SkyDropdownModule, SkyRepeaterModule],
 })
 export class TileMyActionsComponent {
@@ -1087,7 +1089,7 @@ export class TileMyActionsComponent {
 #### tile-updates.component.ts
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyTilesModule } from '@skyux/tiles';
 
 @Component({
@@ -1098,6 +1100,7 @@ import { SkyTilesModule } from '@skyux/tiles';
     }
   `,
   templateUrl: './tile-updates.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyTilesModule],
 })
 export class TileUpdatesComponent {}
@@ -1108,7 +1111,7 @@ export class TileUpdatesComponent {}
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyPageModule } from '@skyux/pages';
 
 import { ListPageContentComponent } from './list-page-content.component';
@@ -1120,6 +1123,7 @@ import { ListPageContentComponent } from './list-page-content.component';
 @Component({
   selector: 'app-pages-page-list-page-list-layout-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ListPageContentComponent, SkyPageModule],
 })
 export class PagesPageListPageListLayoutExampleComponent {}
@@ -1178,7 +1182,7 @@ export class DashboardLinkCellRendererComponent implements ICellRendererAngularC
 #### dashboards-grid-context-menu.component.ts
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyDropdownModule } from '@skyux/popovers';
 
 import { ICellRendererAngularComp } from 'ag-grid-angular';
@@ -1189,6 +1193,7 @@ import { Item } from './item';
 @Component({
   selector: 'app-dashboards-grid-context-menu',
   templateUrl: './dashboards-grid-context-menu.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyDropdownModule],
 })
 export class DashboardGridContextMenuComponent implements ICellRendererAngularComp {
@@ -1223,6 +1228,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SkyHelpTestingController, SkyHelpTestingModule } from '@skyux/core/testing';
 import { SkyPageHarness } from '@skyux/pages/testing';
 
+import { provideSkyAgGridTesting } from '@skyux/ag-grid/testing';
 import { PagesPageListPageListLayoutExampleComponent } from './example.component';
 
 describe('List page list layout example', () => {
@@ -1243,6 +1249,7 @@ describe('List page list layout example', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [PagesPageListPageListLayoutExampleComponent, SkyHelpTestingModule],
+      providers: [provideSkyAgGridTesting()],
     });
   });
 
@@ -1306,7 +1313,7 @@ export interface Item {
 #### list-page-content.component.ts
 
 ```typescript
-import { Component, effect, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, effect, inject, signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { SkyAgGridModule, SkyAgGridService } from '@skyux/ag-grid';
 import {
@@ -1332,6 +1339,7 @@ ModuleRegistry.registerModules([AllCommunityModule]);
   selector: 'app-list-page-content',
   templateUrl: './list-page-content.component.html',
   providers: [SkyDataManagerService],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [AgGridAngular, SkyAgGridModule, SkyDataManagerModule, SkyIconModule, SkyListSummaryModule],
 })
 export class ListPageContentComponent {
@@ -1447,7 +1455,7 @@ export class ListPageContentComponent {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyPageModule } from '@skyux/pages';
 
 import { ListPageContentComponent } from './list-page-content.component';
@@ -1459,6 +1467,7 @@ import { ListPageContentComponent } from './list-page-content.component';
 @Component({
   selector: 'app-pages-page-list-page-tabs-layout-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ListPageContentComponent, SkyPageModule],
 })
 export class PagesPageListPageTabsLayoutExampleComponent {}
@@ -1482,7 +1491,7 @@ export class PagesPageListPageTabsLayoutExampleComponent {}
 #### contact-context-menu.component.ts
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyDropdownModule } from '@skyux/popovers';
 
 import { ICellRendererAngularComp } from 'ag-grid-angular';
@@ -1493,6 +1502,7 @@ import { Contact } from './contact';
 @Component({
   selector: 'app-contacts-grid-context-menu',
   templateUrl: './contact-context-menu.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyDropdownModule],
 })
 export class ContactContextMenuComponent implements ICellRendererAngularComp {
@@ -1567,6 +1577,7 @@ export interface Contact {
 import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
+import { provideSkyAgGridTesting } from '@skyux/ag-grid/testing';
 import { SkyHelpTestingController, SkyHelpTestingModule } from '@skyux/core/testing';
 import { SkyPageHarness } from '@skyux/pages/testing';
 
@@ -1590,7 +1601,7 @@ describe('List page tabs layout example', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [PagesPageListPageTabsLayoutExampleComponent, SkyHelpTestingModule],
-      providers: [provideRouter([])],
+      providers: [provideRouter([]), provideSkyAgGridTesting()],
     });
   });
 
@@ -1644,7 +1655,7 @@ describe('List page tabs layout example', () => {
 #### list-page-contacts-grid.component.ts
 
 ```typescript
-import { Component, Input, OnInit, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit, inject } from '@angular/core';
 import { SkyAgGridModule, SkyAgGridService } from '@skyux/ag-grid';
 import {
   SkyDataManagerModule,
@@ -1673,6 +1684,7 @@ interface Contact {
   selector: 'app-list-page-contacts-grid',
   templateUrl: './list-page-contacts-grid.component.html',
   providers: [SkyDataManagerService],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [AgGridAngular, SkyAgGridModule, SkyDataManagerModule, SkyIconModule, SkyListSummaryModule],
 })
 export class ListPageContactsGridComponent implements OnInit {
@@ -1771,7 +1783,7 @@ export class ListPageContactsGridComponent implements OnInit {
 #### list-page-content.component.ts
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyTabIndex, SkyTabsModule } from '@skyux/tabs';
 
 import { Contact } from './contact';
@@ -1780,6 +1792,7 @@ import { ListPageContactsGridComponent } from './list-page-contacts-grid.compone
 @Component({
   selector: 'app-list-page-content',
   templateUrl: './list-page-content.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ListPageContactsGridComponent, SkyTabsModule],
 })
 export class ListPageContentComponent {
@@ -1854,7 +1867,7 @@ export class ListPageContentComponent {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyPageModule } from '@skyux/pages';
 
 import { RecordPageContentComponent } from './record-page-content.component';
@@ -1866,6 +1879,7 @@ import { RecordPageContentComponent } from './record-page-content.component';
 @Component({
   selector: 'app-pages-page-record-page-blocks-layout-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [RecordPageContentComponent, SkyPageModule],
 })
 export class PagesPageRecordPageBlocksLayoutExampleComponent {}
@@ -1944,7 +1958,7 @@ describe('Record page blocks layout example', () => {
 #### record-page-content.component.html
 
 ```html
-<sky-fluid-grid gutterSize="medium" [disableMargin]="true">
+<sky-fluid-grid gutterSize="medium">
   <sky-row>
     <sky-column [screenMedium]="4" [screenSmall]="12">
       <sky-box class="sky-theme-margin-bottom-xl" headingText="Details">
@@ -2003,7 +2017,7 @@ describe('Record page blocks layout example', () => {
       <sky-box headingText="Recent activity">
         <sky-box-content>
           <sky-repeater>
-            @for (activity of recentActivity; track activity.activity) {
+            @for (activity of recentActivity; track activity.date) {
             <sky-repeater-item>
               <sky-repeater-item-content>
                 <div class="sky-theme-margin-bottom-xs">{{ activity.activity }}</div>
@@ -2041,7 +2055,7 @@ describe('Record page blocks layout example', () => {
 
 ```typescript
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyIconModule } from '@skyux/icon';
 import { SkyKeyInfoModule } from '@skyux/indicators';
 import { SkyBoxModule, SkyDescriptionListModule, SkyFluidGridModule } from '@skyux/layout';
@@ -2051,6 +2065,7 @@ import { SkyRepeaterModule } from '@skyux/lists';
   selector: 'app-record-page-content',
   templateUrl: './record-page-content.component.html',
   styleUrls: ['./record-page-content.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     CommonModule,
     SkyBoxModule,
@@ -2141,7 +2156,7 @@ export class RecordPageContentComponent {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyAvatarModule } from '@skyux/avatar';
 import { SkyAlertModule, SkyLabelModule } from '@skyux/indicators';
 import { SkyPageModule } from '@skyux/pages';
@@ -2155,6 +2170,7 @@ import { RecordPageContentComponent } from './record-page-content.component';
 @Component({
   selector: 'app-pages-page-record-page-tabs-layout-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [RecordPageContentComponent, SkyAlertModule, SkyAvatarModule, SkyLabelModule, SkyPageModule],
 })
 export class PagesPageRecordPageTabsLayoutExampleComponent {}
@@ -2221,7 +2237,7 @@ export interface Attachment {
 #### attachments-grid-context-menu.component.ts
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyDropdownModule } from '@skyux/popovers';
 
 import { ICellRendererAngularComp } from 'ag-grid-angular';
@@ -2232,6 +2248,7 @@ import { Attachment } from './attachment';
 @Component({
   selector: 'app-attachments-grid-context-menu',
   templateUrl: './attachments-grid-context-menu.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyDropdownModule],
 })
 export class AttachmentsGridContextMenuComponent implements ICellRendererAngularComp {
@@ -2290,6 +2307,7 @@ import { provideRouter } from '@angular/router';
 import { SkyHelpTestingController, SkyHelpTestingModule } from '@skyux/core/testing';
 import { SkyPageHarness } from '@skyux/pages/testing';
 
+import { provideSkyAgGridTesting } from '@skyux/ag-grid/testing';
 import { PagesPageRecordPageTabsLayoutExampleComponent } from './example.component';
 
 describe('Record page tabs layout example', () => {
@@ -2310,7 +2328,7 @@ describe('Record page tabs layout example', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [PagesPageRecordPageTabsLayoutExampleComponent, SkyHelpTestingModule],
-      providers: [provideRouter([])],
+      providers: [provideRouter([]), provideSkyAgGridTesting()],
     });
   });
 
@@ -2369,7 +2387,7 @@ describe('Record page tabs layout example', () => {
 #### record-page-attachments-tab.component.ts
 
 ```typescript
-import { Component, OnInit, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
 import { SkyAgGridModule, SkyAgGridService } from '@skyux/ag-grid';
 import {
   SkyDataManagerModule,
@@ -2393,6 +2411,7 @@ ModuleRegistry.registerModules([AllCommunityModule]);
   selector: 'app-record-page-attachments-tab',
   templateUrl: './record-page-attachments-tab.component.html',
   providers: [SkyDataManagerService],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [AgGridAngular, SkyAgGridModule, SkyDataManagerModule, SkyKeyInfoModule, SkyIconModule],
 })
 export class RecordPageAttachmentsTabComponent implements OnInit {
@@ -2501,7 +2520,7 @@ export class RecordPageAttachmentsTabComponent implements OnInit {
 #### record-page-content.component.ts
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyTabIndex, SkyTabsModule } from '@skyux/tabs';
 
 import { RecordPageAttachmentsTabComponent } from './record-page-attachments-tab.component';
@@ -2511,6 +2530,7 @@ import { RecordPageOverviewTabComponent } from './record-page-overview-tab.compo
 @Component({
   selector: 'app-record-page-content',
   templateUrl: './record-page-content.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     RecordPageAttachmentsTabComponent,
     RecordPageNotesTabComponent,
@@ -2607,7 +2627,7 @@ export class RecordPageContentComponent {
 #### record-page-notes-tab.component.ts
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyIconModule } from '@skyux/icon';
 import { SkyKeyInfoModule } from '@skyux/indicators';
 import { SkyToolbarModule } from '@skyux/layout';
@@ -2618,6 +2638,7 @@ import { SkyDropdownModule } from '@skyux/popovers';
 @Component({
   selector: 'app-record-page-notes-tab',
   templateUrl: './record-page-notes-tab.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     SkyDropdownModule,
     SkyIconModule,
@@ -2647,7 +2668,7 @@ export class RecordPageNotesTabComponent {
 #### record-page-overview-tab.component.html
 
 ```html
-<sky-fluid-grid gutterSize="medium" [disableMargin]="true">
+<sky-fluid-grid gutterSize="medium">
   <sky-row>
     <sky-column [screenSmall]="4" [screenXSmall]="12">
       <sky-box class="sky-theme-margin-bottom-xl" headingText="Details">
@@ -2744,7 +2765,7 @@ export class RecordPageNotesTabComponent {
 
 ```typescript
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyIconModule } from '@skyux/icon';
 import { SkyKeyInfoModule } from '@skyux/indicators';
 import { SkyBoxModule, SkyDescriptionListModule, SkyFluidGridModule } from '@skyux/layout';
@@ -2756,6 +2777,7 @@ import { Detail } from './detail';
   selector: 'app-record-page-overview-tab',
   templateUrl: './record-page-overview-tab.component.html',
   styleUrls: ['./record-page-overview-tab.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     CommonModule,
     SkyBoxModule,
@@ -2849,7 +2871,7 @@ export class RecordPageOverviewTabComponent {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyAlertModule } from '@skyux/indicators';
 import { SkyPageModule } from '@skyux/pages';
 
@@ -2862,6 +2884,7 @@ import { SplitViewPageContentComponent } from './split-view-page-content.compone
 @Component({
   selector: 'app-pages-page-split-view-page-fit-layout-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyAlertModule, SkyPageModule, SplitViewPageContentComponent],
 })
 export class PagesPageSplitViewPageFitLayoutExampleComponent {}
@@ -3019,7 +3042,7 @@ describe('Split view page fit layout example', () => {
 #### split-view-page-content.component.ts
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SkySummaryActionBarModule } from '@skyux/action-bars';
 import { SkyInputBoxModule } from '@skyux/forms';
@@ -3043,6 +3066,7 @@ interface WorkspaceItem {
 @Component({
   selector: 'app-split-view-page-content',
   templateUrl: './split-view-page-content.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     FormsModule,
     ReactiveFormsModule,
@@ -3237,7 +3261,7 @@ export class SplitViewPageContentComponent {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, OnInit, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SkySummaryActionBarModule } from '@skyux/action-bars';
 import {
@@ -3281,6 +3305,7 @@ interface DemoForm {
     SkySplitViewModule,
     SkySummaryActionBarModule,
   ],
+  changeDetection: ChangeDetectionStrategy.Eager,
   providers: [SkyDataManagerService],
 })
 export class PagesPageDataManagerSplitViewFitLayoutExampleComponent implements OnInit {

@@ -11,8 +11,7 @@ The numeric pipe and numeric service format numbers with proper localization and
 
 NPM package
 
-`@skyux/core`[View in NPM](https://www.npmjs.com/package/@skyux/core) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/core/src/lib/modules/numeric/numeric.module.ts#L12)
+`@skyux/core`[View in NPM](https://www.npmjs.com/package/@skyux/core) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/core/src/lib/modules/numeric/numeric.module.ts#L12)
 
 Install with NPM
 
@@ -135,7 +134,7 @@ Specifies the minimum value at which numbers are shortened to rounded numbers an
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { SkyNumericModule, SkyNumericOptions } from '@skyux/core';
 import { SkyDescriptionListModule } from '@skyux/layout';
 
@@ -145,6 +144,7 @@ import { SkyDescriptionListModule } from '@skyux/layout';
 @Component({
   selector: 'app-core-numeric-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyDescriptionListModule, SkyNumericModule],
 })
 export class CoreNumericBasicExampleComponent {

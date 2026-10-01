@@ -125,8 +125,7 @@ Use caution with fluid grid to space key info components horizontally. This can 
 
 NPM package
 
-`@skyux/indicators`[View in NPM](https://www.npmjs.com/package/@skyux/indicators) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/indicators/src/lib/modules/key-info/key-info.module.ts#L19)
+`@skyux/indicators`[View in NPM](https://www.npmjs.com/package/@skyux/indicators) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/indicators/src/lib/modules/key-info/key-info.module.ts#L19)
 
 Install with NPM
 
@@ -285,7 +284,7 @@ Only find instances whose `data-sky-id` attribute matches the given value.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { SkyKeyInfoLayoutType, SkyKeyInfoModule } from '@skyux/indicators';
 
 /**
@@ -294,6 +293,7 @@ import { SkyKeyInfoLayoutType, SkyKeyInfoModule } from '@skyux/indicators';
 @Component({
   selector: 'app-indicators-key-info-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyKeyInfoModule],
 })
 export class IndicatorsKeyInfoBasicExampleComponent {
@@ -397,7 +397,7 @@ describe('Basic key info', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { SkyKeyInfoLayoutType, SkyKeyInfoModule } from '@skyux/indicators';
 
 /**
@@ -406,6 +406,7 @@ import { SkyKeyInfoLayoutType, SkyKeyInfoModule } from '@skyux/indicators';
 @Component({
   selector: 'app-indicators-key-info-help-key-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyKeyInfoModule],
 })
 export class IndicatorsKeyInfoHelpKeyExampleComponent {

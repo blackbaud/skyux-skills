@@ -79,13 +79,13 @@ To highlight important considerations about an input, use hint text. This persis
 
 Do use hint text to explain how to enter data.
 
-### Character count
+### Character count indicator
 
-When users are likely to exceed a character limit, use a [character count](./character-count.md) indicator. Character count indicators are useful when technical requirements lead to restrictive character limits and when free-form user entries may be very long.
+When users are likely to exceed a character limit, use a character count indicator. It displays the number of characters users enter, the character limit, and a danger icon if they exceed the limit. Indicators are useful when technical requirements lead to restrictive character limits and free-form user entries might be too long. If users are unlikely to reach character limits, don't use character count indicators.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/input-box/input-box-options-count.6742159929f2689848d03872f8016c22.png)
 
-Do use character count indicators on input fields when users may realistically exceed character limits.
+Do use character count indicators when users are likely to exceed character limits.
 
 ### Stacked margin
 
@@ -131,7 +131,6 @@ Input boxes are most common inside [modals](./modal.md) and follow [form design 
 
 ### Components
 
-- [Character count](./character-count.md)
 - [Country field](./country-field.md)
 - [Datepicker](./datepicker.md)
 - [Field group](./field-group.md)
@@ -152,8 +151,7 @@ Input boxes are most common inside [modals](./modal.md) and follow [form design 
 
 NPM package
 
-`@skyux/forms`[View in NPM](https://www.npmjs.com/package/@skyux/forms) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/forms/src/lib/modules/input-box/input-box.module.ts#L35)
+`@skyux/forms`[View in NPM](https://www.npmjs.com/package/@skyux/forms) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/forms/src/lib/modules/input-box/input-box.module.ts#L37)
 
 Install with NPM
 
@@ -165,7 +163,7 @@ Input boxes usually consist of a text label and a form element, such as `input`,
 
 Other features of input box include:
 
-- Adding a [SKY UX character count](./character-count.md) component with the appropriate validator.
+- Providing a character count indicator through the `characterLimit` input.
 - Adding a [SKY UX help inline](./help-inline.md) button that opens a [SKY UX popover](./popover.md).
 - Displaying a red asterisk (\*) next to the label of required fields based on the input's `ngModel`   `required` property or `FormControl`   [required](https://angular.io/api/forms/RequiredValidator) validator.
 - Displaying errors for well-known validators, including the built-in Angular [max length](https://angular.io/api/forms/MaxLengthValidator), [min length](https://angular.io/api/forms/MinLengthValidator), and [required](https://angular.io/api/forms/RequiredValidator) validators; built-in SKY UX [email](./email-validation.md) and [URL](./email-validation.md) validators; and the validators added by the SKY UX [datepicker](./datepicker.md), [phone field](./phone-field.md), and [timepicker](./timepicker.md) components and directives. These errors render inside an [ARIA live](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) region and are associated with the input element using `aria-errormessage` for accessibility.
@@ -198,7 +196,7 @@ A wrapper component that provides styling and accessibility to form elements.
 
 #### `characterLimit: number | undefined`
 
-The maximum number of characters to allow in the input box. This property places a [SKY UX character count](./character-count.md) on the input element with the appropriate validator, so don't use it with inputs where users are unlikely to exceed character limits. Instead, use [Angular's max length validator](https://angular.io/api/forms/MaxLengthValidator) and a `maxLength` attribute on the input element to handle maximum length validation.
+The character limit for the input box. If users exceed the limit, the input box's form control becomes invalid and the property adds [Validators.maxLength](https://angular.dev/api/forms/Validators). The validation error message and screen reader announcement use `labelText`. This property also displays a character count indicator in the top right with the number of characters that users enter, the character limit, and a danger icon if users exceed the limit. If users are unlikely to exceed a character limit, use `Validators.maxLength` directly instead with a `maxLength` attribute on the input element.
 
 #### `disabled: boolean | undefined`
 
@@ -278,13 +276,31 @@ Clicks the help inline button.
 
 `Promise<void>`
 
+#### `getCharacterCount(): Promise<number>`
+
+Gets the current character count, or throws an error if the input box does not set the `characterLimit` input.
+
+#### Returns
+
+`Promise<number>`
+
 #### `getCharacterCounter(): Promise<SkyCharacterCounterIndicatorHarness>`
+
+Warning: **Deprecated.** Use `getCharacterCount()`, `getCharacterLimit()`, and `isOverCharacterLimit()` instead. Those methods require the `characterLimit` input, so an input box that projects a `sky-character-counter-indicator` component must migrate to that input first.
 
 Gets the character counter indicator for the input box or throws an error if a character limit is not specified.
 
 #### Returns
 
 `Promise<SkyCharacterCounterIndicatorHarness>`
+
+#### `getCharacterLimit(): Promise<number>`
+
+Gets the character limit, or throws an error if the input box does not set the `characterLimit` input.
+
+#### Returns
+
+`Promise<number>`
 
 #### `getCustomErrors(): Promise<SkyStatusIndicatorHarness[]>`
 
@@ -454,6 +470,14 @@ Whether the field is set to an invalid URL.
 
 `Promise<boolean>`
 
+#### `isOverCharacterLimit(): Promise<boolean>`
+
+Whether the character count has exceeded the character limit. Throws an error if the input box does not set the `characterLimit` input.
+
+#### Returns
+
+`Promise<boolean>`
+
 #### `queryHarness(query: HarnessQuery<T>): Promise<T>`
 
 Returns a child harness or throws an error if not found.
@@ -618,7 +642,7 @@ The name of the error.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
@@ -648,6 +672,7 @@ function validateColor(control: AbstractControl): ValidationErrors | null {
 @Component({
   selector: 'app-forms-input-box-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     FormsModule,
     ReactiveFormsModule,
@@ -678,7 +703,7 @@ export class FormsInputBoxBasicExampleComponent {
 ```html
 <div class="sky-theme-padding-inset-balanced-l">
   <form [formGroup]="formGroup">
-    <sky-fluid-grid gutterSize="small" [disableMargin]="false">
+    <sky-fluid-grid gutterSize="small" inset>
       <sky-row>
         <sky-column [screenSmall]="12">
           <h2>New member form</h2>
@@ -897,12 +922,178 @@ describe('Basic input box example', () => {
 });
 ```
 
+### Input box with a character limit
+
+#### example.ts (primary file)
+
+```typescript
+import { Component, inject } from '@angular/core';
+import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { SkyInputBoxModule } from '@skyux/forms';
+
+/**
+ * @title Input box with a character limit
+ */
+@Component({
+  imports: [ReactiveFormsModule, SkyInputBoxModule],
+  selector: 'app-forms-input-box-character-limit-example',
+  templateUrl: './example.html',
+})
+export class FormsInputBoxCharacterLimitExample {
+  protected readonly formGroup = inject(FormBuilder).group({
+    nickname: 'Kelly',
+    bio: 'Volunteer coordinator for the annual fundraising gala.',
+  });
+}
+```
+
+#### example.html
+
+```html
+<form [formGroup]="formGroup">
+  <sky-input-box characterLimit="25" data-sky-id="input-box-nickname" labelText="Nickname" stacked>
+    <input formControlName="nickname" spellcheck="false" type="text" />
+  </sky-input-box>
+  <sky-input-box
+    characterLimit="100"
+    data-sky-id="input-box-bio"
+    hintText="A short description that appears on the member's profile."
+    labelText="Bio"
+  >
+    <textarea formControlName="bio"></textarea>
+  </sky-input-box>
+</form>
+```
+
+#### example.spec.ts
+
+```typescript
+import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { SkyInputBoxHarness } from '@skyux/forms/testing';
+
+import { FormsInputBoxCharacterLimitExample } from './example';
+
+describe('Input box character limit example', () => {
+  async function setupTest(options: { dataSkyId: string }): Promise<{
+    fixture: ComponentFixture<FormsInputBoxCharacterLimitExample>;
+    inputBoxHarness: SkyInputBoxHarness;
+  }> {
+    const fixture = TestBed.createComponent(FormsInputBoxCharacterLimitExample);
+    const loader = TestbedHarnessEnvironment.loader(fixture);
+
+    const inputBoxHarness = await loader.getHarness(SkyInputBoxHarness.with({ dataSkyId: options.dataSkyId }));
+
+    return { fixture, inputBoxHarness };
+  }
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [FormsInputBoxCharacterLimitExample],
+    });
+  });
+
+  describe('nickname field', () => {
+    it('should have the expected label and character limit', async () => {
+      const { fixture, inputBoxHarness } = await setupTest({
+        dataSkyId: 'input-box-nickname',
+      });
+
+      fixture.detectChanges();
+
+      await expectAsync(inputBoxHarness.getLabelText()).toBeResolvedTo('Nickname');
+
+      await expectAsync(inputBoxHarness.getStacked()).toBeResolvedTo(true);
+      await expectAsync(inputBoxHarness.getCharacterLimit()).toBeResolvedTo(25);
+    });
+
+    it('should count the characters in the initial value', async () => {
+      const { fixture, inputBoxHarness } = await setupTest({
+        dataSkyId: 'input-box-nickname',
+      });
+
+      fixture.detectChanges();
+
+      await expectAsync(inputBoxHarness.getCharacterCount()).toBeResolvedTo(5);
+      await expectAsync(inputBoxHarness.isOverCharacterLimit()).toBeResolvedTo(false);
+    });
+
+    it('should update the count as the value changes', async () => {
+      const { fixture, inputBoxHarness } = await setupTest({
+        dataSkyId: 'input-box-nickname',
+      });
+
+      fixture.detectChanges();
+
+      const inputEl = await inputBoxHarness.querySelector('input');
+      await inputEl.setInputValue('Kel');
+      await inputEl.dispatchEvent('input');
+
+      await expectAsync(inputBoxHarness.getCharacterCount()).toBeResolvedTo(3);
+      await expectAsync(inputBoxHarness.isOverCharacterLimit()).toBeResolvedTo(false);
+    });
+
+    it('should indicate when the value exceeds the limit', async () => {
+      const { fixture, inputBoxHarness } = await setupTest({
+        dataSkyId: 'input-box-nickname',
+      });
+
+      fixture.detectChanges();
+
+      const inputEl = await inputBoxHarness.querySelector('input');
+
+      await inputEl.setInputValue('K'.repeat(26));
+      await inputEl.dispatchEvent('input');
+      await inputEl.blur();
+
+      await expectAsync(inputBoxHarness.getCharacterCount()).toBeResolvedTo(26);
+      await expectAsync(inputBoxHarness.isOverCharacterLimit()).toBeResolvedTo(true);
+
+      await expectAsync(inputBoxHarness.hasMaxLengthError()).toBeResolvedTo(true);
+    });
+  });
+
+  describe('bio field', () => {
+    it('should have the expected label, hint text, and character limit', async () => {
+      const { fixture, inputBoxHarness } = await setupTest({
+        dataSkyId: 'input-box-bio',
+      });
+
+      fixture.detectChanges();
+
+      await expectAsync(inputBoxHarness.getLabelText()).toBeResolvedTo('Bio');
+      await expectAsync(inputBoxHarness.getHintText()).toBeResolvedTo(
+        "A short description that appears on the member's profile.",
+      );
+
+      await expectAsync(inputBoxHarness.getCharacterLimit()).toBeResolvedTo(100);
+    });
+
+    it('should count the characters in a textarea', async () => {
+      const { fixture, inputBoxHarness } = await setupTest({
+        dataSkyId: 'input-box-bio',
+      });
+
+      fixture.detectChanges();
+
+      await expectAsync(inputBoxHarness.getCharacterCount()).toBeResolvedTo(54);
+
+      const textareaEl = await inputBoxHarness.querySelector('textarea');
+      await textareaEl.setInputValue('Volunteer coordinator.');
+      await textareaEl.dispatchEvent('input');
+
+      await expectAsync(inputBoxHarness.getCharacterCount()).toBeResolvedTo(22);
+    });
+  });
+});
+```
+
 ### Input box with custom errors
 
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
@@ -927,6 +1118,7 @@ function validateColor(control: AbstractControl): ValidationErrors | null {
 @Component({
   selector: 'app-forms-input-box-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, ReactiveFormsModule, SkyInputBoxModule],
 })
 export class FormsInputBoxWithCustomFormErrorsExampleComponent {
@@ -1027,7 +1219,7 @@ describe('Input box with custom form errors example', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
@@ -1055,6 +1247,7 @@ function validateCountry(control: AbstractControl<SkyCountryFieldCountry | undef
 @Component({
   selector: 'app-lookup-country-field-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, ReactiveFormsModule, SkyCountryFieldModule, SkyInputBoxModule],
 })
 export class LookupCountryFieldBasicExampleComponent {
@@ -1171,7 +1364,7 @@ describe('Basic country field example', () => {
 
 ```typescript
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
@@ -1209,6 +1402,7 @@ function validateDate(control: AbstractControl<Date | string | null>): Validatio
 @Component({
   selector: 'app-datetime-datepicker-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CommonModule, FormsModule, ReactiveFormsModule, SkyDatepickerModule, SkyInputBoxModule],
 })
 export class DatetimeDatepickerBasicExampleComponent {
@@ -1330,7 +1524,7 @@ describe('Basic datepicker example', () => {
 
 ```typescript
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
@@ -1360,6 +1554,7 @@ import { Person } from './person';
 @Component({
   selector: 'app-lookup-single-select-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CommonModule, FormsModule, ReactiveFormsModule, SkyFormErrorModule, SkyInputBoxModule, SkyLookupModule],
 })
 export class LookupSingleSelectExampleComponent implements OnInit {
@@ -1662,7 +1857,7 @@ export interface LookupAsyncDemoSearchResults {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { SkyInputBoxModule } from '@skyux/forms';
 import { SkyPhoneFieldModule } from '@skyux/phone-field';
@@ -1673,6 +1868,7 @@ import { SkyPhoneFieldModule } from '@skyux/phone-field';
 @Component({
   selector: 'app-phone-field-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, ReactiveFormsModule, SkyInputBoxModule, SkyPhoneFieldModule],
 })
 export class PhoneFieldBasicExampleComponent {
@@ -1829,7 +2025,7 @@ describe('Basic phone field example', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
@@ -1863,6 +2059,7 @@ function validateTime(control: AbstractControl<SkyTimepickerTimeOutput | string>
 @Component({
   selector: 'app-datetime-timepicker-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, ReactiveFormsModule, SkyInputBoxModule, SkyTimepickerModule],
 })
 export class DatetimeTimepickerBasicExampleComponent {

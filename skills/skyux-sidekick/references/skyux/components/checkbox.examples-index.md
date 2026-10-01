@@ -12,6 +12,6 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                  | Lines     | Read invocation                                      |
 | --- | ------------------------ | --------- | ---------------------------------------------------- |
-| 1   | Standard checkboxes      | 855–1055  | `Read file_path=./checkbox.md offset=855 limit=201`  |
-| 2   | Checkboxes with help key | 1056–1281 | `Read file_path=./checkbox.md offset=1056 limit=226` |
-| 3   | Icon checkbox group      | 1282–1328 | `Read file_path=./checkbox.md offset=1282 limit=47`  |
+| 1   | Standard checkboxes      | 854–1055  | `Read file_path=./checkbox.md offset=854 limit=202`  |
+| 2   | Checkboxes with help key | 1056–1282 | `Read file_path=./checkbox.md offset=1056 limit=227` |
+| 3   | Icon checkbox group      | 1283–1330 | `Read file_path=./checkbox.md offset=1283 limit=48`  |

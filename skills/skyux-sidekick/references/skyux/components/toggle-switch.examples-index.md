@@ -12,5 +12,5 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                        | Lines   | Read invocation                                          |
 | --- | ------------------------------ | ------- | -------------------------------------------------------- |
-| 1   | Toggle switch with basic setup | 317–420 | `Read file_path=./toggle-switch.md offset=317 limit=104` |
-| 2   | Toggle switch with help key    | 421–527 | `Read file_path=./toggle-switch.md offset=421 limit=107` |
+| 1   | Toggle switch with basic setup | 306–410 | `Read file_path=./toggle-switch.md offset=306 limit=105` |
+| 2   | Toggle switch with help key    | 411–518 | `Read file_path=./toggle-switch.md offset=411 limit=108` |

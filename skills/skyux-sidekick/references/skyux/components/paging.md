@@ -102,8 +102,7 @@ A wait indicator appears while new items load.
 
 NPM package
 
-`@skyux/lists`[View in NPM](https://www.npmjs.com/package/@skyux/lists) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/lists/src/lib/modules/paging/paging.module.ts#L24)
+`@skyux/lists`[View in NPM](https://www.npmjs.com/package/@skyux/lists) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/lists/src/lib/modules/paging/paging.module.ts#L24)
 
 Install with NPM
 
@@ -371,7 +370,7 @@ Loading page 1
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyPagingModule } from '@skyux/lists';
 
 /**
@@ -380,6 +379,7 @@ import { SkyPagingModule } from '@skyux/lists';
 @Component({
   selector: 'app-lists-paging-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyPagingModule],
 })
 export class ListsPagingBasicExampleComponent {

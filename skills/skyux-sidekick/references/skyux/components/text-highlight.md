@@ -11,8 +11,7 @@ The text highlight directive highlights text all matching text within DOM elemen
 
 NPM package
 
-`@skyux/indicators`[View in NPM](https://www.npmjs.com/package/@skyux/indicators) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/indicators/src/lib/modules/text-highlight/text-highlight.module.ts#L11)
+`@skyux/indicators`[View in NPM](https://www.npmjs.com/package/@skyux/indicators) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/indicators/src/lib/modules/text-highlight/text-highlight.module.ts#L11)
 
 Install with NPM
 
@@ -93,7 +92,7 @@ Only find instances whose `data-sky-id` attribute matches the given value.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { SkyCheckboxModule, SkyInputBoxModule } from '@skyux/forms';
 import { SkyTextHighlightModule } from '@skyux/indicators';
@@ -104,6 +103,7 @@ import { SkyTextHighlightModule } from '@skyux/indicators';
 @Component({
   selector: 'app-indicators-text-highlight-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, SkyCheckboxModule, SkyInputBoxModule, SkyTextHighlightModule],
 })
 export class IndicatorsTextHighlightBasicExampleComponent {

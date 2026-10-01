@@ -5,7 +5,7 @@ Reference: https://developer.blackbaud.com/skyux/learn/develop/deprecation/progr
 
 # Progress indicator wizard
 
-The [progress indicator wizard](../../../components/progress-indicator-wizard.md) component is deprecated in favor of the [tabs wizard](../../../components/tabs-wizard.md) component.
+The progress indicator wizard component is deprecated in favor of the [tabs wizard](../../../components/tabs-wizard.md) component. To view development documentation for the progress indicator wizard component, see the SKY UX 14 docs.
 
 ## How to migrate
 

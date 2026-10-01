@@ -84,8 +84,7 @@ Do use help inline buttons to invoke element-specific help content.
 
 NPM package
 
-`@skyux/help-inline`[View in NPM](https://www.npmjs.com/package/@skyux/help-inline) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/help-inline/src/lib/modules/help-inline/help-inline.module.ts#L9)
+`@skyux/help-inline`[View in NPM](https://www.npmjs.com/package/@skyux/help-inline) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/help-inline/src/lib/modules/help-inline/help-inline.module.ts#L9)
 
 Install with NPM
 
@@ -384,7 +383,7 @@ The expected help key.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyHelpInlineModule } from '@skyux/help-inline';
 
 /**
@@ -393,6 +392,7 @@ import { SkyHelpInlineModule } from '@skyux/help-inline';
 @Component({
   imports: [SkyHelpInlineModule],
   selector: 'app-help-inline-popover-example',
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
 })
 export class HelpInlinePopoverExampleComponent {}
@@ -466,7 +466,7 @@ describe('Help inline with popover', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyHelpInlineModule } from '@skyux/help-inline';
 
 /**
@@ -475,6 +475,7 @@ import { SkyHelpInlineModule } from '@skyux/help-inline';
 @Component({
   imports: [SkyHelpInlineModule],
   selector: 'app-help-inline-help-key-example',
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
 })
 export class HelpInlineHelpKeyExampleComponent {}
@@ -545,7 +546,7 @@ describe('Help inline with help key', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyHelpInlineModule } from '@skyux/help-inline';
 
 /**
@@ -554,6 +555,7 @@ import { SkyHelpInlineModule } from '@skyux/help-inline';
 @Component({
   imports: [SkyHelpInlineModule],
   selector: 'app-help-inline-action-click-example',
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
 })
 export class HelpInlineActionClickExampleComponent {

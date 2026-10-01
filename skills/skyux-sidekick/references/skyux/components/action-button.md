@@ -91,8 +91,7 @@ Use action buttons directly inside tabs instead of modals when users add user-de
 
 NPM package
 
-`@skyux/layout`[View in NPM](https://www.npmjs.com/package/@skyux/layout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/layout/src/lib/modules/action-button/action-button.module.ts#L37)
+`@skyux/layout`[View in NPM](https://www.npmjs.com/package/@skyux/layout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/layout/src/lib/modules/action-button/action-button.module.ts#L37)
 
 Install with NPM
 
@@ -368,7 +367,7 @@ Finds action buttons whose header matches given value.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyActionButtonModule } from '@skyux/layout';
 
 /**
@@ -377,6 +376,7 @@ import { SkyActionButtonModule } from '@skyux/layout';
 @Component({
   selector: 'app-layout-action-button-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyActionButtonModule],
 })
 export class LayoutActionButtonBasicExampleComponent {
@@ -413,7 +413,7 @@ export class LayoutActionButtonBasicExampleComponent {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyActionButtonModule, SkyActionButtonPermalink } from '@skyux/layout';
 
 /**
@@ -422,6 +422,7 @@ import { SkyActionButtonModule, SkyActionButtonPermalink } from '@skyux/layout';
 @Component({
   selector: 'app-layout-action-button-permalink-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyActionButtonModule],
 })
 export class LayoutActionButtonPermalinkExampleComponent {

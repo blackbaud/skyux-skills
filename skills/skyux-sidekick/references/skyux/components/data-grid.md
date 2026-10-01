@@ -197,8 +197,7 @@ To provide a text equivalent for screen readers [to support accessibility](../le
 
 NPM package
 
-`@skyux/ag-grid`[View in NPM](https://www.npmjs.com/package/@skyux/ag-grid) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/ag-grid/src/lib/modules/ag-grid/ag-grid.module.ts#L38)
+`@skyux/ag-grid`[View in NPM](https://www.npmjs.com/package/@skyux/ag-grid) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/ag-grid/src/lib/modules/ag-grid/ag-grid.module.ts#L38)
 
 Install with NPM
 
@@ -268,7 +267,7 @@ Type: Service
 
 `SkyAgGridService` provides methods to get AG Grid `gridOptions` to ensure grids match SKY UX functionality. The `gridOptions` can be overridden, and include registered SKY UX column types.
 
-Locale text is resolved once, when the grid options are created. [AG Grid does not re-read locale text after a grid is created](https://www.ag-grid.com/angular-data-grid/localisation/), so an application that changes locale at runtime must destroy and recreate the grid. Setting `gridOptions.getLocaleText` replaces SKY UX locale text entirely — use `gridOptions.localeText` to override individual strings instead.
+Locale text combines AG Grid's stock translations for the app's locale with SKY UX resource strings, and is resolved once, when the grid options are created. [AG Grid does not re-read locale text after a grid is created](https://www.ag-grid.com/angular-data-grid/localisation/), so an application that changes locale at runtime must call this service again and destroy and recreate the grid. Setting `gridOptions.getLocaleText` replaces SKY UX locale text entirely — use `gridOptions.localeText` to override individual strings instead.
 
 ### Methods
 
@@ -1120,11 +1119,11 @@ Type: FunctionBuilds a column definition whose `cellEditorParams` and `cellRende
       cellRendererParams: { skyComponentProperties: { validator: ... } },
     })
 
-    function defineSkyAgGridColDef(colDef: C & Omit<ColDef<any, any>, "type" | "cellEditorParams" | "cellRendererParams"> & { cellEditorParams?: UnionToIntersection<<a class="sky-docs-codespan-anchor" href="https://developer.blackbaud.com/skyux/components/data-grid?docs-active-tab=design#interface_sky-cell-editor-params-by-type">SkyCellEditorParamsByType</a>[T]> | ((params: ICellEditorParams<any, any>) => UnionToIntersection<<a class="sky-docs-codespan-anchor" href="https://developer.blackbaud.com/skyux/components/data-grid?docs-active-tab=design#interface_sky-cell-editor-params-by-type">SkyCellEditorParamsByType</a>[T]>); cellRendererParams?: UnionToIntersection<<a class="sky-docs-codespan-anchor" href="https://developer.blackbaud.com/skyux/components/data-grid?docs-active-tab=design#interface_sky-cell-renderer-params-by-type">SkyCellRendererParamsByType</a><any, any>[T]> | ((params: ICellRendererParams<any, any>) => UnionToIntersection<<a class="sky-docs-codespan-anchor" href="https://developer.blackbaud.com/skyux/components/data-grid?docs-active-tab=design#interface_sky-cell-renderer-params-by-type">SkyCellRendererParamsByType</a><any, any>[T]>); type: T | T[] } & { field?: F } & Record<Exclude<keyof C, "filter" | "width" | "sort" | "type" | "hide" | "context" | "comparator" | "initialHide" | "suppressAutoSize" | "singleClickEdit" | "loadingCellRenderer" | "loadingCellRendererParams" | "loadingCellRendererSelector" | "rowDragText" | "sortingOrder" | "unSortIcon" | "icons" | "onCellValueChanged" | "onCellClicked" | "onCellDoubleClicked" | "onCellContextMenu" | "cellEditor" | "rowGroup" | "colId" | "field" | "cellDataType" | "allowFormula" | "valueGetter" | "valueFormatter" | "refData" | "keyCreator" | "equals" | "tooltipField" | "tooltipValueGetter" | "tooltipComponentSelector" | "checkboxSelection" | "showDisabledCheckboxes" | "suppressNavigable" | "suppressKeyboardEvent" | "suppressPaste" | "suppressFillHandle" | "lockVisible" | "lockPosition" | "suppressMovable" | "useValueFormatterForExport" | "editable" | "valueSetter" | "valueParser" | "cellEditorParams" | "cellEditorSelector" | "cellEditorPopup" | "cellEditorPopupPosition" | "useValueParserForImport" | "getQuickFilterText" | "filterValueGetter" | "floatingFilter" | "suppressFloatingFilterButton" | "dateComponent" | "dateComponentParams" | "getFindText" | "headerComponent" | "headerComponentParams" | "menuTabs" | "columnChooserParams" | "suppressHeaderMenuButton" | "suppressHeaderFilterButton" | "mainMenuItems" | "contextMenuItems" | "headerCheckboxSelection" | "headerCheckboxSelectionFilteredOnly" | "headerCheckboxSelectionCurrentPageOnly" | "chartDataType" | "pinned" | "initialPinned" | "lockPinned" | "pivot" | "initialPivot" | "pivotIndex" | "initialPivotIndex" | "pivotComparator" | "enablePivot" | "cellStyle" | "cellClass" | "cellClassRules" | "cellRenderer" | "cellRendererParams" | "cellRendererSelector" | "autoHeight" | "wrapText" | "enableCellChangeFlash" | "rowDrag" | "dndSource" | "dndSourceOnRowDrag" | "initialRowGroup" | "rowGroupIndex" | "initialRowGroupIndex" | "enableRowGroup" | "enableValue" | "aggFunc" | "initialAggFunc" | "defaultAggFunc" | "allowedAggFuncs" | "rowGroupingHierarchy" | "groupHierarchy" | "showRowGroup" | "sortable" | "initialSort" | "sortIndex" | "initialSortIndex" | "colSpan" | "rowSpan" | "spanRows" | "initialWidth" | "minWidth" | "maxWidth" | "flex" | "initialFlex" | "resizable" | "suppressSizeToFit" | "pivotValueColumn" | "pivotTotalColumnIds" | "suppressSpanHeaderHeight" | "headerName" | "headerValueGetter" | "headerTooltip" | "headerTooltipValueGetter" | "headerStyle" | "headerClass" | "suppressHeaderKeyboardEvent" | "columnGroupShow" | "toolPanelClass" | "suppressColumnsToolPanel" | "suppressFiltersToolPanel" | "tooltipComponent" | "tooltipComponentParams" | "pivotKeys" | "cellAriaRole" | "wrapHeaderText" | "autoHeaderHeight" | "suppressHeaderContextMenu" | "filterParams" | "floatingFilterComponent" | "floatingFilterComponentParams">, never>): C & { field?: F }
+    function defineSkyAgGridColDef(colDef: C & Omit<ColDef<any, any>, "type" | "cellEditorParams" | "cellRendererParams"> & { cellEditorParams?: UnionToIntersection<<a class="sky-docs-codespan-anchor" href="https://developer.blackbaud.com/skyux/components/data-grid?docs-active-tab=design#interface_sky-cell-editor-params-by-type">SkyCellEditorParamsByType</a>[T]> | ((params: ICellEditorParams<any, any>) => UnionToIntersection<<a class="sky-docs-codespan-anchor" href="https://developer.blackbaud.com/skyux/components/data-grid?docs-active-tab=design#interface_sky-cell-editor-params-by-type">SkyCellEditorParamsByType</a>[T]>); cellRendererParams?: UnionToIntersection<<a class="sky-docs-codespan-anchor" href="https://developer.blackbaud.com/skyux/components/data-grid?docs-active-tab=design#interface_sky-cell-renderer-params-by-type">SkyCellRendererParamsByType</a><any, any>[T]> | ((params: ICellRendererParams<any, any>) => UnionToIntersection<<a class="sky-docs-codespan-anchor" href="https://developer.blackbaud.com/skyux/components/data-grid?docs-active-tab=design#interface_sky-cell-renderer-params-by-type">SkyCellRendererParamsByType</a><any, any>[T]>); type: T | T[] } & { field?: F } & Record<Exclude<keyof C, "sort" | "filter" | "width" | "type" | "hide" | "context" | "comparator" | "initialHide" | "suppressAutoSize" | "singleClickEdit" | "loadingCellRenderer" | "loadingCellRendererParams" | "loadingCellRendererSelector" | "rowDragText" | "sortingOrder" | "unSortIcon" | "icons" | "onCellValueChanged" | "onCellClicked" | "onCellDoubleClicked" | "onCellContextMenu" | "cellEditor" | "rowGroup" | "pivot" | "colId" | "field" | "cellDataType" | "allowFormula" | "calculatedExpression" | "valueGetter" | "valueFormatter" | "refData" | "keyCreator" | "equals" | "tooltipField" | "tooltipValueGetter" | "tooltipComponentSelector" | "checkboxSelection" | "showDisabledCheckboxes" | "suppressNavigable" | "suppressNoteActions" | "suppressKeyboardEvent" | "suppressPaste" | "suppressFillHandle" | "lockVisible" | "lockPosition" | "suppressMovable" | "useValueFormatterForExport" | "editable" | "groupRowEditable" | "groupRowValueSetter" | "valueSetter" | "valueParser" | "cellEditorParams" | "cellEditorSelector" | "cellEditorPopup" | "cellEditorPopupPosition" | "useValueParserForImport" | "getQuickFilterText" | "filterValueGetter" | "floatingFilter" | "suppressFloatingFilterButton" | "dateComponent" | "dateComponentParams" | "getFindText" | "headerComponent" | "headerComponentParams" | "menuTabs" | "columnChooserParams" | "suppressHeaderMenuButton" | "suppressHeaderFilterButton" | "mainMenuItems" | "columnMenuItems" | "contextMenuItems" | "headerCheckboxSelection" | "headerCheckboxSelectionFilteredOnly" | "headerCheckboxSelectionCurrentPageOnly" | "chartDataType" | "pinned" | "initialPinned" | "lockPinned" | "initialPivot" | "pivotIndex" | "initialPivotIndex" | "pivotComparator" | "pivotSort" | "initialPivotSort" | "enablePivot" | "cellStyle" | "cellClass" | "cellClassRules" | "cellRenderer" | "cellRendererParams" | "cellRendererSelector" | "autoHeight" | "wrapText" | "enableCellChangeFlash" | "rowDrag" | "dndSource" | "dndSourceOnRowDrag" | "initialRowGroup" | "rowGroupIndex" | "initialRowGroupIndex" | "enableRowGroup" | "enableValue" | "aggFunc" | "initialAggFunc" | "valueIndex" | "initialValueIndex" | "defaultAggFunc" | "allowedAggFuncs" | "showValuesAs" | "initialShowValuesAs" | "showValuesAsDef" | "enableShowValuesAs" | "rowGroupingHierarchy" | "groupHierarchy" | "showRowGroup" | "sortable" | "initialSort" | "sortIndex" | "initialSortIndex" | "colSpan" | "rowSpan" | "spanRows" | "initialWidth" | "minWidth" | "maxWidth" | "flex" | "initialFlex" | "resizable" | "suppressSizeToFit" | "pivotValueColumn" | "pivotTotalColumnIds" | "suppressSpanHeaderHeight" | "headerName" | "headerNameEditable" | "headerValueGetter" | "headerTooltip" | "headerTooltipValueGetter" | "headerStyle" | "headerClass" | "suppressHeaderKeyboardEvent" | "columnGroupShow" | "toolPanelClass" | "suppressColumnsToolPanel" | "suppressFiltersToolPanel" | "tooltipComponent" | "tooltipComponentParams" | "pivotKeys" | "cellAriaRole" | "wrapHeaderText" | "autoHeaderHeight" | "suppressHeaderContextMenu" | "filterParams" | "floatingFilterComponent" | "floatingFilterComponentParams">, never>): C & { field?: F }
 
 ### Parameters
 
-#### `colDef: C & Omit<ColDef<any, any>, "type" | "cellEditorParams" | "cellRendererParams"> & { cellEditorParams?: UnionToIntersection<SkyCellEditorParamsByType[T]> | ((params: ICellEditorParams<any, any>) => UnionToIntersection<SkyCellEditorParamsByType[T]>); cellRendererParams?: UnionToIntersection<SkyCellRendererParamsByType<any, any>[T]> | ((params: ICellRendererParams<any, any>) => UnionToIntersection<SkyCellRendererParamsByType<any, any>[T]>); type: T | T[] } & { field?: F } & Record<Exclude<keyof C, "filter" | "width" | "sort" | "type" | "hide" | "context" | "comparator" | "initialHide" | "suppressAutoSize" | "singleClickEdit" | "loadingCellRenderer" | "loadingCellRendererParams" | "loadingCellRendererSelector" | "rowDragText" | "sortingOrder" | "unSortIcon" | "icons" | "onCellValueChanged" | "onCellClicked" | "onCellDoubleClicked" | "onCellContextMenu" | "cellEditor" | "rowGroup" | "colId" | "field" | "cellDataType" | "allowFormula" | "valueGetter" | "valueFormatter" | "refData" | "keyCreator" | "equals" | "tooltipField" | "tooltipValueGetter" | "tooltipComponentSelector" | "checkboxSelection" | "showDisabledCheckboxes" | "suppressNavigable" | "suppressKeyboardEvent" | "suppressPaste" | "suppressFillHandle" | "lockVisible" | "lockPosition" | "suppressMovable" | "useValueFormatterForExport" | "editable" | "valueSetter" | "valueParser" | "cellEditorParams" | "cellEditorSelector" | "cellEditorPopup" | "cellEditorPopupPosition" | "useValueParserForImport" | "getQuickFilterText" | "filterValueGetter" | "floatingFilter" | "suppressFloatingFilterButton" | "dateComponent" | "dateComponentParams" | "getFindText" | "headerComponent" | "headerComponentParams" | "menuTabs" | "columnChooserParams" | "suppressHeaderMenuButton" | "suppressHeaderFilterButton" | "mainMenuItems" | "contextMenuItems" | "headerCheckboxSelection" | "headerCheckboxSelectionFilteredOnly" | "headerCheckboxSelectionCurrentPageOnly" | "chartDataType" | "pinned" | "initialPinned" | "lockPinned" | "pivot" | "initialPivot" | "pivotIndex" | "initialPivotIndex" | "pivotComparator" | "enablePivot" | "cellStyle" | "cellClass" | "cellClassRules" | "cellRenderer" | "cellRendererParams" | "cellRendererSelector" | "autoHeight" | "wrapText" | "enableCellChangeFlash" | "rowDrag" | "dndSource" | "dndSourceOnRowDrag" | "initialRowGroup" | "rowGroupIndex" | "initialRowGroupIndex" | "enableRowGroup" | "enableValue" | "aggFunc" | "initialAggFunc" | "defaultAggFunc" | "allowedAggFuncs" | "rowGroupingHierarchy" | "groupHierarchy" | "showRowGroup" | "sortable" | "initialSort" | "sortIndex" | "initialSortIndex" | "colSpan" | "rowSpan" | "spanRows" | "initialWidth" | "minWidth" | "maxWidth" | "flex" | "initialFlex" | "resizable" | "suppressSizeToFit" | "pivotValueColumn" | "pivotTotalColumnIds" | "suppressSpanHeaderHeight" | "headerName" | "headerValueGetter" | "headerTooltip" | "headerTooltipValueGetter" | "headerStyle" | "headerClass" | "suppressHeaderKeyboardEvent" | "columnGroupShow" | "toolPanelClass" | "suppressColumnsToolPanel" | "suppressFiltersToolPanel" | "tooltipComponent" | "tooltipComponentParams" | "pivotKeys" | "cellAriaRole" | "wrapHeaderText" | "autoHeaderHeight" | "suppressHeaderContextMenu" | "filterParams" | "floatingFilterComponent" | "floatingFilterComponentParams">, never>`
+#### `colDef: C & Omit<ColDef<any, any>, "type" | "cellEditorParams" | "cellRendererParams"> & { cellEditorParams?: UnionToIntersection<SkyCellEditorParamsByType[T]> | ((params: ICellEditorParams<any, any>) => UnionToIntersection<SkyCellEditorParamsByType[T]>); cellRendererParams?: UnionToIntersection<SkyCellRendererParamsByType<any, any>[T]> | ((params: ICellRendererParams<any, any>) => UnionToIntersection<SkyCellRendererParamsByType<any, any>[T]>); type: T | T[] } & { field?: F } & Record<Exclude<keyof C, "sort" | "filter" | "width" | "type" | "hide" | "context" | "comparator" | "initialHide" | "suppressAutoSize" | "singleClickEdit" | "loadingCellRenderer" | "loadingCellRendererParams" | "loadingCellRendererSelector" | "rowDragText" | "sortingOrder" | "unSortIcon" | "icons" | "onCellValueChanged" | "onCellClicked" | "onCellDoubleClicked" | "onCellContextMenu" | "cellEditor" | "rowGroup" | "pivot" | "colId" | "field" | "cellDataType" | "allowFormula" | "calculatedExpression" | "valueGetter" | "valueFormatter" | "refData" | "keyCreator" | "equals" | "tooltipField" | "tooltipValueGetter" | "tooltipComponentSelector" | "checkboxSelection" | "showDisabledCheckboxes" | "suppressNavigable" | "suppressNoteActions" | "suppressKeyboardEvent" | "suppressPaste" | "suppressFillHandle" | "lockVisible" | "lockPosition" | "suppressMovable" | "useValueFormatterForExport" | "editable" | "groupRowEditable" | "groupRowValueSetter" | "valueSetter" | "valueParser" | "cellEditorParams" | "cellEditorSelector" | "cellEditorPopup" | "cellEditorPopupPosition" | "useValueParserForImport" | "getQuickFilterText" | "filterValueGetter" | "floatingFilter" | "suppressFloatingFilterButton" | "dateComponent" | "dateComponentParams" | "getFindText" | "headerComponent" | "headerComponentParams" | "menuTabs" | "columnChooserParams" | "suppressHeaderMenuButton" | "suppressHeaderFilterButton" | "mainMenuItems" | "columnMenuItems" | "contextMenuItems" | "headerCheckboxSelection" | "headerCheckboxSelectionFilteredOnly" | "headerCheckboxSelectionCurrentPageOnly" | "chartDataType" | "pinned" | "initialPinned" | "lockPinned" | "initialPivot" | "pivotIndex" | "initialPivotIndex" | "pivotComparator" | "pivotSort" | "initialPivotSort" | "enablePivot" | "cellStyle" | "cellClass" | "cellClassRules" | "cellRenderer" | "cellRendererParams" | "cellRendererSelector" | "autoHeight" | "wrapText" | "enableCellChangeFlash" | "rowDrag" | "dndSource" | "dndSourceOnRowDrag" | "initialRowGroup" | "rowGroupIndex" | "initialRowGroupIndex" | "enableRowGroup" | "enableValue" | "aggFunc" | "initialAggFunc" | "valueIndex" | "initialValueIndex" | "defaultAggFunc" | "allowedAggFuncs" | "showValuesAs" | "initialShowValuesAs" | "showValuesAsDef" | "enableShowValuesAs" | "rowGroupingHierarchy" | "groupHierarchy" | "showRowGroup" | "sortable" | "initialSort" | "sortIndex" | "initialSortIndex" | "colSpan" | "rowSpan" | "spanRows" | "initialWidth" | "minWidth" | "maxWidth" | "flex" | "initialFlex" | "resizable" | "suppressSizeToFit" | "pivotValueColumn" | "pivotTotalColumnIds" | "suppressSpanHeaderHeight" | "headerName" | "headerNameEditable" | "headerValueGetter" | "headerTooltip" | "headerTooltipValueGetter" | "headerStyle" | "headerClass" | "suppressHeaderKeyboardEvent" | "columnGroupShow" | "toolPanelClass" | "suppressColumnsToolPanel" | "suppressFiltersToolPanel" | "tooltipComponent" | "tooltipComponentParams" | "pivotKeys" | "cellAriaRole" | "wrapHeaderText" | "autoHeaderHeight" | "suppressHeaderContextMenu" | "filterParams" | "floatingFilterComponent" | "floatingFilterComponentParams">, never>`
 
 ## SkyAgGridColDef
 
@@ -1257,7 +1256,7 @@ Type: Class
 
 `import { SkyAgGridWrapperHarness } from '@skyux/ag-grid/testing';`
 
-Harness for interacting with SKY UX AG Grid components in tests.
+Harness for interacting with SKY UX AG Grid components in tests. Add `provideSkyAgGridTesting()` to the spec's providers so the harness can wait for the grid to finish rendering; without it, render-readiness waits are skipped.
 
 ### Methods
 
@@ -1312,6 +1311,18 @@ A set of criteria that can be used to filter a list of `SkyAgGridWrapperHarness`
 #### `dataSkyId?: string | RegExp`
 
 Only find instances whose `data-sky-id` attribute matches the given value.
+
+## provideSkyAgGridTesting
+
+Type: Function Preview
+
+Configures every grid built through `SkyAgGridService` to disable AG Grid's row/column virtualization and to opt out of AG Grid's Angular test-zone detection while the test is running, so grid work completes without hanging `whenStable()`. The previous test-zone setting is restored when the test's injector is destroyed, so specs that don't opt in aren't affected by ones that do. Add to the spec's `TestBed.configureTestingModule` providers.
+
+### Example
+
+    TestBed.configureTestingModule({
+
+    function provideSkyAgGridTesting(): Provider[]
 
 ## Code Examples
 
@@ -1643,7 +1654,7 @@ export const AG_GRID_DEMO_DATA = [
 
 ```typescript
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { SkyAgGridModule, SkyAgGridService, SkyCellType } from '@skyux/ag-grid';
+import { SkyAgGridModule, SkyAgGridService, SkyCellType, defineSkyAgGridColDef } from '@skyux/ag-grid';
 
 import { AgGridAngular } from 'ag-grid-angular';
 import { AllCommunityModule, ColDef, GridOptions, ModuleRegistry, ValueFormatterParams } from 'ag-grid-community';
@@ -1668,14 +1679,14 @@ export class AgGridDataGridBasicMultiselectExampleComponent {
   protected gridOptions: GridOptions;
 
   #columnDefs: ColDef[] = [
-    {
+    defineSkyAgGridColDef({
       field: 'selected',
       type: SkyCellType.RowSelector,
       cellRendererParams: {
         // Could be a SkyAppResourcesService.getString call that returns an observable.
         label: (data: AgGridDemoRow) => of(`Select ${data.name}`),
       },
-    },
+    }),
     {
       colId: 'context',
       maxWidth: 50,
@@ -3120,7 +3131,7 @@ export class SalesModalComponent implements SkyFilterItemModal {
 ```typescript
 import { ChangeDetectionStrategy, Component, computed, effect, inject, input, signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { SkyAgGridModule, SkyAgGridService, SkyCellType } from '@skyux/ag-grid';
+import { SkyAgGridModule, SkyAgGridService, SkyCellType, defineSkyAgGridColDef } from '@skyux/ag-grid';
 import { SkyDataManagerModule, SkyDataManagerService, SkyDataManagerState } from '@skyux/data-manager';
 import { SkyFilterBarFilterState } from '@skyux/filter-bar';
 
@@ -3147,7 +3158,7 @@ export class ViewGridComponent {
   protected noRowsTemplate = `<div class="sky-deemphasized">No results found.</div>`;
 
   readonly #columnDefs: ColDef[] = [
-    {
+    defineSkyAgGridColDef({
       field: 'selected',
       type: SkyCellType.RowSelector,
       suppressMovable: true,
@@ -3157,7 +3168,7 @@ export class ViewGridComponent {
         // Could be a SkyAppResourcesService.getString call that returns an observable.
         label: (data: AgGridDemoRow) => of(`Select ${data.name}`),
       },
-    },
+    }),
     {
       colId: 'context',
       maxWidth: 50,
@@ -3346,7 +3357,7 @@ export class ViewGridComponent {
 
 ```typescript
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, inject } from '@angular/core';
-import { SkyAgGridModule, SkyAgGridService, SkyCellType } from '@skyux/ag-grid';
+import { SkyAgGridModule, SkyAgGridService, SkyCellType, defineSkyAgGridColDef } from '@skyux/ag-grid';
 import { SkyToolbarModule } from '@skyux/layout';
 import { SkySearchModule } from '@skyux/lookup';
 
@@ -3384,14 +3395,14 @@ export class AgGridDataGridInlineHelpExampleComponent {
   protected noRowsTemplate: string;
 
   #columnDefs: ColDef[] = [
-    {
+    defineSkyAgGridColDef({
       field: 'selected',
       type: SkyCellType.RowSelector,
       cellRendererParams: {
         // Could be a SkyAppResourcesService.getString call that returns an observable.
         label: (data: AgGridDemoRow) => of(`Select ${data.name}`),
       },
-    },
+    }),
     {
       colId: 'context',
       maxWidth: 50,
@@ -4180,13 +4191,13 @@ export const AG_GRID_DEMO_DATA = [
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, TemplateRef, inject, viewChild } from '@angular/core';
-import { SkyAgGridModule, SkyAgGridService, SkyCellType } from '@skyux/ag-grid';
+import { ChangeDetectionStrategy, Component, TemplateRef, inject, viewChild } from '@angular/core';
+import { SkyAgGridModule, SkyAgGridService, SkyCellType, defineSkyAgGridColDef } from '@skyux/ag-grid';
 
 import { AgGridAngular } from 'ag-grid-angular';
 import { AllCommunityModule, ModuleRegistry } from 'ag-grid-community';
 
-import { AG_GRID_DEMO_DATA } from './data';
+import { AG_GRID_DEMO_DATA, AgGridDemoRow } from './data';
 
 ModuleRegistry.registerModules([AllCommunityModule]);
 
@@ -4196,12 +4207,13 @@ ModuleRegistry.registerModules([AllCommunityModule]);
 @Component({
   selector: 'app-ag-grid-data-grid-template-ref-column-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [AgGridAngular, SkyAgGridModule],
 })
 export class AgGridDataGridTemplateRefColumnExampleComponent {
   protected readonly boldColumn = viewChild<TemplateRef<unknown>>('boldColumn');
   protected readonly emphasizedColumn = viewChild<TemplateRef<unknown>>('emphasizedColumn');
-  protected gridOptions = inject(SkyAgGridService).getGridOptions({
+  protected gridOptions = inject(SkyAgGridService).getGridOptions<AgGridDemoRow>({
     gridOptions: {
       columnDefs: [
         {
@@ -4216,7 +4228,7 @@ export class AgGridDataGridTemplateRefColumnExampleComponent {
           maxWidth: 80,
           resizable: false,
         },
-        {
+        defineSkyAgGridColDef({
           field: 'department',
           headerName: 'Department',
           type: SkyCellType.Template,
@@ -4224,8 +4236,8 @@ export class AgGridDataGridTemplateRefColumnExampleComponent {
             template: this.boldColumn,
           },
           initialWidth: 220,
-        },
-        {
+        }),
+        defineSkyAgGridColDef({
           field: 'jobTitle',
           headerName: 'Title',
           type: SkyCellType.Template,
@@ -4233,7 +4245,7 @@ export class AgGridDataGridTemplateRefColumnExampleComponent {
             template: this.emphasizedColumn,
           },
           initialWidth: 220,
-        },
+        }),
       ],
       rowData: AG_GRID_DEMO_DATA,
     },
@@ -4327,7 +4339,7 @@ export const AG_GRID_DEMO_DATA = [
 
 ```typescript
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { SkyAgGridModule, SkyAgGridService, SkyCellType } from '@skyux/ag-grid';
+import { SkyAgGridModule, SkyAgGridService, SkyCellType, defineSkyAgGridColDef } from '@skyux/ag-grid';
 import { SkyToolbarModule } from '@skyux/layout';
 import { SkySearchModule } from '@skyux/lookup';
 
@@ -4370,14 +4382,14 @@ export class AgGridDataGridTopScrollExampleComponent {
       sortable: false,
       cellRenderer: ContextMenuComponent,
     },
-    {
+    defineSkyAgGridColDef({
       field: 'selected',
       type: SkyCellType.RowSelector,
       cellRendererParams: {
         // Could be a SkyAppResourcesService.getString call that returns an observable.
         label: (data: AgGridDemoRow) => of(`Select ${data.name}`),
       },
-    },
+    }),
     {
       field: 'name',
       headerName: 'Name',

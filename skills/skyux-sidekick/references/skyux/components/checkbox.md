@@ -239,8 +239,7 @@ In most cases, checkbox group labels aren't treated as HTML headings, but when n
 
 NPM package
 
-`@skyux/forms`[View in NPM](https://www.npmjs.com/package/@skyux/forms) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/forms/src/lib/modules/checkbox/checkbox.module.ts#L44)
+`@skyux/forms`[View in NPM](https://www.npmjs.com/package/@skyux/forms) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/forms/src/lib/modules/checkbox/checkbox.module.ts#L44)
 
 Install with NPM
 
@@ -857,7 +856,7 @@ Only find instances whose `data-sky-id` attribute matches the given value.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
@@ -875,6 +874,7 @@ import { SkyCheckboxModule } from '@skyux/forms';
 @Component({
   selector: 'app-forms-checkbox-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, ReactiveFormsModule, SkyCheckboxModule],
 })
 export class FormsCheckboxBasicExampleComponent {
@@ -1058,7 +1058,7 @@ describe('Basic checkbox group example', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
@@ -1076,6 +1076,7 @@ import { SkyCheckboxModule } from '@skyux/forms';
 @Component({
   selector: 'app-forms-checkbox-help-key-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, ReactiveFormsModule, SkyCheckboxModule],
 })
 export class FormsCheckboxHelpKeyExampleComponent {
@@ -1284,7 +1285,7 @@ describe('Basic checkbox group example', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SkyCheckboxModule } from '@skyux/forms';
 
@@ -1294,6 +1295,7 @@ import { SkyCheckboxModule } from '@skyux/forms';
 @Component({
   selector: 'app-forms-checkbox-icon-group-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, ReactiveFormsModule, SkyCheckboxModule],
 })
 export class FormsCheckboxIconGroupExampleComponent {

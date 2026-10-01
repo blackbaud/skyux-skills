@@ -16,8 +16,7 @@ SKY UX components, available as Angular components, services, and modules, allow
 - [Back to top](./back-to-top.md) - The back to top directive creates a button for users to easily access the top of long lists.
 - [Box](./box.md) - The box module provides a container for related content and actions.
 - [Button](./button.md) - The button classes create buttons to trigger actions from within an interface.
-- [Card (deprecated)](./card.md) - The deprecated card module creates a small container to highlight important information.
-- [Character count](./character-count.md) - The character count indicator component extends a text input to apply a character limit and display an indicator.
+- [Card](./card.md) - The card module creates a small container to highlight important information.
 - [Charts (preview)](./charts.md) - Charts visualize data to help users compare values and spot trends at a glance.
 - [Checkbox](./checkbox.md) - The checkbox component renders a SKY UX-themed checkbox.
 - [Colorpicker](./colorpicker.md) - The colorpicker module provides an input for users to select colors.
@@ -27,7 +26,6 @@ SKY UX components, available as Angular components, services, and modules, allow
 - [Date pipe](./date-pipe.md) - The date pipe formats date values according to locale rules.
 - [Date range picker](./date-range-picker.md) - The date range picker component creates a text input to select a date range from a set of well-known options.
 - [Datepicker](./datepicker.md) - The datepicker module creates an input and calendar picker to select dates or fuzzy dates.
-- [Definition list (deprecated)](./definition-list.md) - The deprecated definition list module displays a list of label-value pairs.
 - [Description list](./description-list.md) - Description lists display scannable data in term-description pairs.
 - [Dropdown](./dropdown.md) - The dropdown component renders a button to display related actions or context menus in grids or lists.
 - [Email validation](./email-validation.md) - The email validation module ensures that user entries in an input element are valid email addresses.
@@ -51,7 +49,6 @@ SKY UX components, available as Angular components, services, and modules, allow
 - [Instrumentation](./instrumentation.md) - The instrumentation feature reports on user interactions with SKY UX components.
 - [Key info](./key-info.md) - The key info component highlights important information such as summary numbers.
 - [Label](./label.md) - The label component calls out important status information such as warnings.
-- [List (deprecated)](./list.md) - The deprecated list module displays a SKY UX-themed list of data in a consistent, flexible way.
 - [List summary](./list-summary.md) - The list summary highlights important information about lists that users should know at a glance
 - [Lookup](./lookup.md) - The lookup component provides a typeahead search input that lets users select multiple items.
 - [Media queries](./media-query.md) - The media queries service allows users to subscribe to screen size changes at breakpoints.
@@ -59,7 +56,6 @@ SKY UX components, available as Angular components, services, and modules, allow
 - [Navbar](./navbar.md) - The navbar component displays a list of top-level navigation items.
 - [Numeric](./numeric.md) - The numeric pipe shortens long numbers and can format as currency.
 - [Page](./page/README.md) - The page component provides consistent, responsive layouts for common page layouts.
-- [Page summary (deprecated)](./page-summary.md) - The deprecated page summary displays critical information and actions for users to access frequently.
 - [Paging](./paging.md) - The paging component displays a SKY UX-themed pagination control.
 - [Passive progress indicator](./progress-indicator-passive.md) - The passive progress indicator represents sequential steps in processes outside of user control.
 - [Phone field](./phone-field.md) - The phone field module creates a button, search input, and text input for entering and validating phone numbers.
@@ -69,7 +65,6 @@ SKY UX components, available as Angular components, services, and modules, allow
 - [Rich text display](./rich-text-display.md) - The rich text display sanitizes HTML strings before displaying them.
 - [Search](./search.md) - The search component creates a mobile-responsive input control for users to enter search criteria.
 - [Sectioned form](./sectioned-form.md) - The sectioned form component combines forms and lets users target specific areas.
-- [Select field (deprecated)](./select-field.md) - The deprecated select field component launches a modal that displays items for users to select.
 - [Selection box](./selection-box.md) - Selection boxes present users with a choice to make or a question to answer before proceeding with a one-time process.
 - [Selection modal](./selection-modal.md) - Selection modals let users select from a list of options before taking immediate action on the selections.
 - [Sort](./sort.md) - The sort component creates a button and dropdown to select sorting criteria.
@@ -95,4 +90,3 @@ SKY UX components, available as Angular components, services, and modules, allow
 - [Waterfall progress indicator](./progress-indicator-waterfall.md) - The waterfall progress indicator walks users through sequential steps in lengthy or complex tasks.
 - [Window](./window.md) - The window service allows users to reference the global window object.
 - [Wizard](./tabs-wizard.md) - The wizard guides users through a set of pre-defined steps in a particular order.
-- [Wizard (deprecated)](./progress-indicator-wizard.md) - This deprecated version of the wizard uses an outdated approach to guide users through sequential steps.

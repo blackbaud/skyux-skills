@@ -127,8 +127,7 @@ Use **Select** as the standard label for the primary button. Use **Cancel** as t
 
 NPM package
 
-`@skyux/lookup`[View in NPM](https://www.npmjs.com/package/@skyux/lookup) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/lookup/src/lib/modules/selection-modal/selection-modal.service.ts#L22)
+`@skyux/lookup`[View in NPM](https://www.npmjs.com/package/@skyux/lookup) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/lookup/src/lib/modules/selection-modal/selection-modal.service.ts#L22)
 
 Install with NPM
 
@@ -590,7 +589,7 @@ Collapses the repeater item, or does nothing if already collapsed.
 
 #### `deselect(): Promise<void>`
 
-Deselects the repeater item.
+Deselects the repeater item. Throws an error if the item belongs to a single-select repeater, since a single-select item can only be replaced by selecting a different item, not cleared directly.
 
 #### Returns
 
@@ -658,7 +657,7 @@ Whether the repeater item is collapsible.
 
 #### `isDisabled(): Promise<boolean>`
 
-Whether a selectable repeater item is disabled.
+Whether a selectable repeater item is disabled, either via a checkbox's disabled state, or, for a single-select repeater item, via the `aria-disabled` attribute on the item's row.
 
 #### Returns
 
@@ -682,7 +681,7 @@ Whether the repeater item is reorderable.
 
 #### `isSelectable(): Promise<boolean>`
 
-Whether a repeater item has selection enabled.
+Whether a repeater item has selection enabled, either via a checkbox (the repeater's `selectionMode` property set to `multiple` or the item's deprecated `selectable` property) or via the repeater's `selectionMode` property set to `single`.
 
 #### Returns
 
@@ -770,7 +769,7 @@ Returns a child test element or null if not found.
 
 #### `select(): Promise<void>`
 
-Selects the repeater item.
+Selects the repeater item. For a checkbox-selectable item, checks its checkbox. For a single-select repeater item, clicks the item, which also clears any previously selected item.
 
 #### Returns
 
@@ -824,7 +823,7 @@ Only find instances whose `data-sky-id` attribute matches the given value.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { SkySelectionModalSearchResult, SkySelectionModalService } from '@skyux/lookup';
 
 import { map } from 'rxjs/operators';
@@ -837,6 +836,7 @@ import { Person } from './person';
  */
 @Component({
   selector: 'app-lookup-selection-modal-basic-example',
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
 })
 export class LookupSelectionModalBasicExampleComponent {
@@ -1072,7 +1072,7 @@ export interface SearchResults {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, OnDestroy, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnDestroy, inject } from '@angular/core';
 import {
   SkySelectionModalAddClickEventArgs,
   SkySelectionModalCloseArgs,
@@ -1093,6 +1093,7 @@ import { Person } from './person';
  */
 @Component({
   selector: 'app-lookup-selection-modal-add-item-example',
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
 })
 export class LookupSelectionModalAddItemExampleComponent implements OnDestroy {
@@ -1172,7 +1173,7 @@ export class LookupSelectionModalAddItemExampleComponent implements OnDestroy {
 #### add-item-modal.component.ts
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { SkyInputBoxModule } from '@skyux/forms';
 import { SkyModalInstance, SkyModalModule } from '@skyux/modals';
@@ -1182,6 +1183,7 @@ let nextId = 21;
 @Component({
   selector: 'app-add-item-modal',
   templateUrl: './add-item-modal.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ReactiveFormsModule, SkyInputBoxModule, SkyModalModule],
 })
 export class AddItemModalComponent {

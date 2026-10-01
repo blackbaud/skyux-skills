@@ -122,8 +122,7 @@ Don't use custom layouts to arrange selection boxes.
 
 NPM package
 
-`@skyux/forms`[View in NPM](https://www.npmjs.com/package/@skyux/forms) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/forms/src/lib/modules/selection-box/selection-box.module.ts#L27)
+`@skyux/forms`[View in NPM](https://www.npmjs.com/package/@skyux/forms) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/forms/src/lib/modules/selection-box/selection-box.module.ts#L27)
 
 Install with NPM
 
@@ -320,9 +319,8 @@ Only find instances whose `data-sky-id` attribute matches the given value.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SkyIdModule } from '@skyux/core';
 import { SkyCheckboxModule, SkySelectionBoxModule } from '@skyux/forms';
 import { SkyIconModule } from '@skyux/icon';
 
@@ -332,7 +330,8 @@ import { SkyIconModule } from '@skyux/icon';
 @Component({
   selector: 'app-forms-selection-box-checkbox-example',
   templateUrl: './example.component.html',
-  imports: [FormsModule, ReactiveFormsModule, SkyCheckboxModule, SkyIconModule, SkyIdModule, SkySelectionBoxModule],
+  changeDetection: ChangeDetectionStrategy.Eager,
+  imports: [FormsModule, ReactiveFormsModule, SkyCheckboxModule, SkyIconModule, SkySelectionBoxModule],
 })
 export class FormsSelectionBoxCheckboxExampleComponent {
   protected checkboxControls: FormControl[] | undefined;
@@ -389,11 +388,9 @@ export class FormsSelectionBoxCheckboxExampleComponent {
     @for (control of checkboxControls; track control; let i = $index) {
     <sky-selection-box [control]="checkbox">
       <sky-icon [iconName]="selectionBoxes[i].iconName" />
-      <sky-selection-box-header #checkboxHeaderId="skyId" skyId>
-        {{ selectionBoxes[i].name }}
-      </sky-selection-box-header>
+      <sky-selection-box-header> {{ selectionBoxes[i].name }} </sky-selection-box-header>
       <sky-selection-box-description> {{ selectionBoxes[i].description }} </sky-selection-box-description>
-      <sky-checkbox #checkbox [formControl]="control" [labelledBy]="checkboxHeaderId.id" />
+      <sky-checkbox #checkbox labelHidden [formControl]="control" [labelText]="selectionBoxes[i].name" />
     </sky-selection-box>
     }
   </sky-selection-box-grid>
@@ -460,9 +457,8 @@ describe('Selection box checkbox example', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SkyIdModule } from '@skyux/core';
 import { SkyRadioModule, SkySelectionBoxModule } from '@skyux/forms';
 import { SkyIconModule } from '@skyux/icon';
 
@@ -472,7 +468,8 @@ import { SkyIconModule } from '@skyux/icon';
 @Component({
   selector: 'app-forms-selection-box-radio-example',
   templateUrl: './example.component.html',
-  imports: [FormsModule, ReactiveFormsModule, SkyIconModule, SkyIdModule, SkyRadioModule, SkySelectionBoxModule],
+  changeDetection: ChangeDetectionStrategy.Eager,
+  imports: [FormsModule, ReactiveFormsModule, SkyIconModule, SkyRadioModule, SkySelectionBoxModule],
 })
 export class FormsSelectionBoxRadioExampleComponent {
   protected items: Record<string, string>[] = [
@@ -515,9 +512,9 @@ export class FormsSelectionBoxRadioExampleComponent {
       @for (item of items; track item) {
       <sky-selection-box [control]="radio">
         <sky-icon [iconName]="item['iconName']" />
-        <sky-selection-box-header #radioHeaderId="skyId" skyId> {{ item['name'] }} </sky-selection-box-header>
+        <sky-selection-box-header> {{ item['name'] }} </sky-selection-box-header>
         <sky-selection-box-description> {{ item['description'] }} </sky-selection-box-description>
-        <sky-radio #radio [labelledBy]="radioHeaderId.id" [value]="item['value']" />
+        <sky-radio #radio labelHidden [labelText]="item['name']" [value]="item['value']" />
       </sky-selection-box>
       }
     </sky-selection-box-grid>

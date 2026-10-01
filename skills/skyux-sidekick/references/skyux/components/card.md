@@ -1,15 +1,11 @@
 ---
-Title: Card (deprecated)
+Title: Card
 Reference: https://developer.blackbaud.com/skyux/components/card
 ---
-> **Deprecated.** Use [content containers](../design/guidelines/content-containers.md) instead. See below for migration details.
 
-
-# Card (deprecated)
+# Card
 
 Cards create small containers that highlight important information, and you group cards together to display information about related items.
-
-Card is deprecated in favor of other [content containers](../design/guidelines/content-containers.md). For more information, see the [card deprecation instructions](../learn/develop/deprecation/card.md).
 
 ## Usage
 
@@ -21,8 +17,7 @@ Cards frequently present users with a call to action. They can use visual cues t
 
 NPM package
 
-`@skyux/layout`[View in NPM](https://www.npmjs.com/package/@skyux/layout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/layout/src/lib/modules/card/card.module.ts#L38)
+`@skyux/layout`[View in NPM](https://www.npmjs.com/package/@skyux/layout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/layout/src/lib/modules/card/card.module.ts#L35)
 
 Install with NPM
 
@@ -34,17 +29,13 @@ Type: Module
 
 `import { SkyCardModule } from '@skyux/layout';`
 
-Warning: **Deprecated.** `SkyCardModule` is deprecated. For other SKY UX components that group and list content, see the content containers guidelines. For more information, see [https://developer.blackbaud.com/skyux/design/guidelines/content-containers](../design/guidelines/content-containers.md).
-
 ## SkyCardComponent
 
 Type: Component
 
 Selector: `sky-card`
 
-Warning: **Deprecated.** `SkyCardComponent` is deprecated. For other SKY UX components that group and list content, see the content containers guidelines. For more information, see [https://developer.blackbaud.com/skyux/design/guidelines/content-containers](../design/guidelines/content-containers.md).
-
-Creates a a small container to highlight important information.
+Creates a small container to highlight important information.
 
 ### Inputs
 
@@ -103,7 +94,7 @@ Specifies an action that users can perform on the card.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { SkyCheckboxModule } from '@skyux/forms';
 import { SkyCardModule } from '@skyux/layout';
@@ -115,6 +106,7 @@ import { SkyDropdownModule } from '@skyux/popovers';
 @Component({
   selector: 'app-layout-card-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, SkyCardModule, SkyCheckboxModule, SkyDropdownModule],
 })
 export class LayoutCardBasicExampleComponent {

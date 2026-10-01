@@ -149,8 +149,7 @@ Vertically stacked columns in a repeater at the extra small breakpoint.
 
 NPM package
 
-`@skyux/layout`[View in NPM](https://www.npmjs.com/package/@skyux/layout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/layout/src/lib/modules/fluid-grid/fluid-grid.module.ts#L13)
+`@skyux/layout`[View in NPM](https://www.npmjs.com/package/@skyux/layout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/layout/src/lib/modules/fluid-grid/fluid-grid.module.ts#L13)
 
 Install with NPM
 
@@ -174,15 +173,21 @@ Wraps the fluid grid to ensure proper spacing. Without the wrapper, the alignmen
 
 #### `disableMargin: boolean | undefined`
 
-Disables the outer left and right margin of the fluid grid container.
+Warning: **Deprecated.** Use `inset` instead. Note that the values are inverted: setting `disableMargin` to `true` is equivalent to setting `inset` to `false`.
 
-Default: `false`
+Disables the outer left and right margin of the fluid grid container.
 
 #### `gutterSize: SkyFluidGridGutterSizeType`
 
 The type that defines the size of the padding between columns.
 
 Default: `"large"`
+
+#### `inset: InputSignalWithTransform<boolean, unknown>`
+
+Whether to add padding inside the fluid grid container so its content is inset from the container's outer left and right edges. When `false`, the fluid grid's content extends to the edges of its container.
+
+Default: `false`
 
 ## SkyRowComponent
 
@@ -210,17 +215,23 @@ Displays a column within a row of the fluid grid.
 
 ### Inputs
 
-#### `screenLarge: number | undefined`
+#### `screenLarge: number`
 
 The number of columns (1-12) on large screens (more than 1200px). If you do not specify a value, the column inherits the `screenMedium` value.
 
-#### `screenMedium: number | undefined`
+Default: `NaN`
+
+#### `screenMedium: number`
 
 The number of columns (1-12) on medium screens (992-1199px). If you do not specify a value, the column inherits the `screenSmall` value.
 
-#### `screenSmall: number | undefined`
+Default: `NaN`
+
+#### `screenSmall: number`
 
 The number of columns (1-12) on small screens (768-991px). If you do not specify a value, the column inherits the `screenXSmall` value.
+
+Default: `NaN`
 
 #### `screenXSmall: number`
 
@@ -429,123 +440,116 @@ Only find instances whose `data-sky-id` attribute matches the given value.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyFluidGridGutterSizeType, SkyFluidGridModule } from '@skyux/layout';
 
 /**
  * @title Fluid grid with basic setup
  */
 @Component({
-  selector: 'app-layout-fluid-grid-example',
+  selector: 'app-layout-fluid-grid-basic-example',
   templateUrl: './example.component.html',
   styles: [
     `
       .highlight-columns .sky-column {
-        background-color: #97eced;
-        border: 1px solid #56e0e1;
+        border: 1px solid var(--sky-theme-color-classify-1-heavy);
         overflow-wrap: break-word;
       }
     `,
   ],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyFluidGridModule],
 })
-export class LayoutFluidGridExampleComponent {
+export class LayoutFluidGridBasicExampleComponent {
   public gutterSize: SkyFluidGridGutterSizeType | undefined;
-  public disableMargin = false;
 }
 ```
 
 #### example.component.html
 
 ```html
-<div class="highlight-columns">
-  <sky-fluid-grid data-sky-id="fluid-grid" [disableMargin]="disableMargin" [gutterSize]="gutterSize">
+<div class="highlight-columns sky-theme-color-classify-1-soft">
+  <sky-fluid-grid data-sky-id="fluid-grid" [gutterSize]="gutterSize">
     <sky-row data-sky-id="test-row">
-      <sky-column data-sky-id="test-column" [screenSmall]="1"> [screenSmall]="1" </sky-column>
-      <sky-column [screenSmall]="1"> [screenSmall]="1" </sky-column>
-      <sky-column [screenSmall]="1"> [screenSmall]="1" </sky-column>
-      <sky-column [screenSmall]="1"> [screenSmall]="1" </sky-column>
-      <sky-column [screenSmall]="1"> [screenSmall]="1" </sky-column>
-      <sky-column [screenSmall]="1"> [screenSmall]="1" </sky-column>
-      <sky-column [screenSmall]="1"> [screenSmall]="1" </sky-column>
-      <sky-column [screenSmall]="1"> [screenSmall]="1" </sky-column>
-      <sky-column [screenSmall]="1"> [screenSmall]="1" </sky-column>
-      <sky-column [screenSmall]="1"> [screenSmall]="1" </sky-column>
-      <sky-column [screenSmall]="1"> [screenSmall]="1" </sky-column>
-      <sky-column [screenSmall]="1"> [screenSmall]="1" </sky-column>
+      <sky-column data-sky-id="test-column" screenSmall="1"> screenSmall="1" </sky-column>
+      <sky-column screenSmall="1"> screenSmall="1" </sky-column>
+      <sky-column screenSmall="1"> screenSmall="1" </sky-column>
+      <sky-column screenSmall="1"> screenSmall="1" </sky-column>
+      <sky-column screenSmall="1"> screenSmall="1" </sky-column>
+      <sky-column screenSmall="1"> screenSmall="1" </sky-column>
+      <sky-column screenSmall="1"> screenSmall="1" </sky-column>
+      <sky-column screenSmall="1"> screenSmall="1" </sky-column>
+      <sky-column screenSmall="1"> screenSmall="1" </sky-column>
+      <sky-column screenSmall="1"> screenSmall="1" </sky-column>
+      <sky-column screenSmall="1"> screenSmall="1" </sky-column>
+      <sky-column screenSmall="1"> screenSmall="1" </sky-column>
     </sky-row>
 
     <sky-row>
-      <sky-column [screenSmall]="2"> [screenSmall]="2" </sky-column>
-      <sky-column [screenSmall]="2"> [screenSmall]="2" </sky-column>
-      <sky-column [screenSmall]="2"> [screenSmall]="2" </sky-column>
-      <sky-column [screenSmall]="2"> [screenSmall]="2" </sky-column>
-      <sky-column [screenSmall]="2"> [screenSmall]="2" </sky-column>
-      <sky-column [screenSmall]="2"> [screenSmall]="2" </sky-column>
+      <sky-column screenSmall="2"> screenSmall="2" </sky-column>
+      <sky-column screenSmall="2"> screenSmall="2" </sky-column>
+      <sky-column screenSmall="2"> screenSmall="2" </sky-column>
+      <sky-column screenSmall="2"> screenSmall="2" </sky-column>
+      <sky-column screenSmall="2"> screenSmall="2" </sky-column>
+      <sky-column screenSmall="2"> screenSmall="2" </sky-column>
     </sky-row>
 
     <sky-row>
-      <sky-column [screenSmall]="3"> [screenSmall]="3" </sky-column>
-      <sky-column [screenSmall]="3"> [screenSmall]="3" </sky-column>
-      <sky-column [screenSmall]="3"> [screenSmall]="3" </sky-column>
-      <sky-column [screenSmall]="3"> [screenSmall]="3" </sky-column>
+      <sky-column screenSmall="3"> screenSmall="3" </sky-column>
+      <sky-column screenSmall="3"> screenSmall="3" </sky-column>
+      <sky-column screenSmall="3"> screenSmall="3" </sky-column>
+      <sky-column screenSmall="3"> screenSmall="3" </sky-column>
     </sky-row>
 
     <sky-row>
-      <sky-column [screenSmall]="4"> [screenSmall]="4" </sky-column>
-      <sky-column [screenSmall]="4"> [screenSmall]="4" </sky-column>
-      <sky-column [screenSmall]="4"> [screenSmall]="4" </sky-column>
+      <sky-column screenSmall="4"> screenSmall="4" </sky-column>
+      <sky-column screenSmall="4"> screenSmall="4" </sky-column>
+      <sky-column screenSmall="4"> screenSmall="4" </sky-column>
     </sky-row>
 
     <sky-row>
-      <sky-column [screenSmall]="5"> [screenSmall]="5" </sky-column>
-      <sky-column [screenSmall]="7"> [screenSmall]="7" </sky-column>
+      <sky-column screenSmall="5"> screenSmall="5" </sky-column>
+      <sky-column screenSmall="7"> screenSmall="7" </sky-column>
     </sky-row>
 
     <sky-row>
-      <sky-column [screenSmall]="6"> [screenSmall]="6" </sky-column>
-      <sky-column [screenSmall]="6"> [screenSmall]="6" </sky-column>
+      <sky-column screenSmall="6"> screenSmall="6" </sky-column>
+      <sky-column screenSmall="6"> screenSmall="6" </sky-column>
     </sky-row>
 
     <sky-row>
-      <sky-column [screenSmall]="8"> [screenSmall]="8" </sky-column>
-      <sky-column [screenSmall]="4"> [screenSmall]="4" </sky-column>
+      <sky-column screenSmall="8"> screenSmall="8" </sky-column>
+      <sky-column screenSmall="4"> screenSmall="4" </sky-column>
     </sky-row>
 
     <sky-row>
-      <sky-column [screenSmall]="9"> [screenSmall]="9" </sky-column>
-      <sky-column [screenSmall]="3"> [screenSmall]="3" </sky-column>
+      <sky-column screenSmall="9"> screenSmall="9" </sky-column>
+      <sky-column screenSmall="3"> screenSmall="3" </sky-column>
     </sky-row>
 
     <sky-row>
-      <sky-column [screenSmall]="10"> [screenSmall]="10" </sky-column>
-      <sky-column [screenSmall]="2"> [screenSmall]="2" </sky-column>
+      <sky-column screenSmall="10"> screenSmall="10" </sky-column>
+      <sky-column screenSmall="2"> screenSmall="2" </sky-column>
     </sky-row>
 
     <sky-row>
-      <sky-column [screenSmall]="11"> [screenSmall]="11" </sky-column>
-      <sky-column [screenSmall]="1"> [screenSmall]="1" </sky-column>
+      <sky-column screenSmall="11"> screenSmall="11" </sky-column>
+      <sky-column screenSmall="1"> screenSmall="1" </sky-column>
     </sky-row>
 
     <sky-row>
-      <sky-column
-        data-sky-id="dynamic-column"
-        [screenXSmall]="6"
-        [screenSmall]="8"
-        [screenMedium]="9"
-        [screenLarge]="10"
-      >
-        [screenXSmall]="6" [screenSmall]="8" [screenMedium]="9" [screenLarge]="10"
+      <sky-column data-sky-id="dynamic-column" screenXSmall="6" screenSmall="8" screenMedium="9" screenLarge="10">
+        screenXSmall="6" screenSmall="8" screenMedium="9" screenLarge="10"
       </sky-column>
-      <sky-column [screenXSmall]="6" [screenSmall]="4" [screenMedium]="3" [screenLarge]="2">
-        [screenXSmall]="6" [screenSmall]="4" [screenMedium]="3" [screenLarge]="2"
+      <sky-column screenXSmall="6" screenSmall="4" screenMedium="3" screenLarge="2">
+        screenXSmall="6" screenSmall="4" screenMedium="3" screenLarge="2"
       </sky-column>
     </sky-row>
 
     <sky-row data-sky-id="reverse-row" [reverseColumnOrder]="true">
-      <sky-column [screenSmall]="4"> First column </sky-column>
-      <sky-column [screenSmall]="4"> Second column </sky-column>
-      <sky-column [screenSmall]="4"> Third column </sky-column>
+      <sky-column screenSmall="4"> First column </sky-column>
+      <sky-column screenSmall="4"> Second column </sky-column>
+      <sky-column screenSmall="4"> Third column </sky-column>
     </sky-row>
   </sky-fluid-grid>
 </div>
@@ -559,15 +563,15 @@ import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SkyColumnHarness, SkyFluidGridHarness, SkyRowHarness } from '@skyux/layout/testing';
 
-import { LayoutFluidGridExampleComponent } from './example.component';
+import { LayoutFluidGridBasicExampleComponent } from './example.component';
 
 describe('Basic fluid grid', () => {
   async function setupTest(): Promise<{
     fluidGridHarness: SkyFluidGridHarness;
-    fixture: ComponentFixture<LayoutFluidGridExampleComponent>;
+    fixture: ComponentFixture<LayoutFluidGridBasicExampleComponent>;
     loader: HarnessLoader;
   }> {
-    const fixture = TestBed.createComponent(LayoutFluidGridExampleComponent);
+    const fixture = TestBed.createComponent(LayoutFluidGridBasicExampleComponent);
     const loader = TestbedHarnessEnvironment.loader(fixture);
     const fluidGridHarness = await loader.getHarness(
       SkyFluidGridHarness.with({
@@ -580,7 +584,7 @@ describe('Basic fluid grid', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [LayoutFluidGridExampleComponent],
+      imports: [LayoutFluidGridBasicExampleComponent],
     });
   });
 
@@ -594,14 +598,9 @@ describe('Basic fluid grid', () => {
     expect(rows.length).toEqual(12);
   });
 
-  it('should indicate the grid has margins', async () => {
+  it('should indicate the grid has no margins by default', async () => {
     const { fluidGridHarness, fixture } = await setupTest();
 
-    fixture.detectChanges();
-
-    await expectAsync(fluidGridHarness.hasMargin()).toBeResolvedTo(true);
-
-    fixture.componentInstance.disableMargin = true;
     fixture.detectChanges();
 
     await expectAsync(fluidGridHarness.hasMargin()).toBeResolvedTo(false);
@@ -666,6 +665,90 @@ describe('Basic fluid grid', () => {
     await expectAsync(columnHarness.getSmallSize()).toBeResolvedTo(8);
     await expectAsync(columnHarness.getMediumSize()).toBeResolvedTo(9);
     await expectAsync(columnHarness.getLargeSize()).toBeResolvedTo(10);
+  });
+});
+```
+
+### Fluid grid with inset margins
+
+#### example.component.ts (primary file)
+
+```typescript
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { SkyFluidGridModule } from '@skyux/layout';
+
+/**
+ * @title Fluid grid with inset margins
+ */
+@Component({
+  selector: 'app-layout-fluid-grid-inset-example',
+  templateUrl: './example.component.html',
+  styles: [
+    `
+      .highlight-columns .sky-column {
+        border: 1px solid var(--sky-theme-color-classify-1-heavy);
+        overflow-wrap: break-word;
+      }
+    `,
+  ],
+  changeDetection: ChangeDetectionStrategy.Eager,
+  imports: [SkyFluidGridModule],
+})
+export class LayoutFluidGridInsetExampleComponent {}
+```
+
+#### example.component.html
+
+```html
+<div class="highlight-columns sky-theme-color-classify-1-soft">
+  <sky-fluid-grid data-sky-id="fluid-grid" inset>
+    <sky-row data-sky-id="test-row">
+      <sky-column screenSmall="6"> screenSmall="6" </sky-column>
+      <sky-column screenSmall="6"> screenSmall="6" </sky-column>
+    </sky-row>
+  </sky-fluid-grid>
+</div>
+```
+
+#### example.component.spec.ts
+
+```typescript
+import { HarnessLoader } from '@angular/cdk/testing';
+import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { SkyFluidGridHarness } from '@skyux/layout/testing';
+
+import { LayoutFluidGridInsetExampleComponent } from './example.component';
+
+describe('Fluid grid with inset margins', () => {
+  async function setupTest(): Promise<{
+    fluidGridHarness: SkyFluidGridHarness;
+    fixture: ComponentFixture<LayoutFluidGridInsetExampleComponent>;
+    loader: HarnessLoader;
+  }> {
+    const fixture = TestBed.createComponent(LayoutFluidGridInsetExampleComponent);
+    const loader = TestbedHarnessEnvironment.loader(fixture);
+    const fluidGridHarness = await loader.getHarness(
+      SkyFluidGridHarness.with({
+        dataSkyId: 'fluid-grid',
+      }),
+    );
+
+    return { fluidGridHarness, fixture, loader };
+  }
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [LayoutFluidGridInsetExampleComponent],
+    });
+  });
+
+  it('should indicate the grid has margins', async () => {
+    const { fluidGridHarness, fixture } = await setupTest();
+
+    fixture.detectChanges();
+
+    await expectAsync(fluidGridHarness.hasMargin()).toBeResolvedTo(true);
   });
 });
 ```

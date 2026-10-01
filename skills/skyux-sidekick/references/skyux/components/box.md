@@ -131,8 +131,7 @@ Use proper spacing between boxes.
 
 NPM package
 
-`@skyux/layout`[View in NPM](https://www.npmjs.com/package/@skyux/layout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/layout/src/lib/modules/box/box.module.ts#L26)
+`@skyux/layout`[View in NPM](https://www.npmjs.com/package/@skyux/layout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/layout/src/lib/modules/box/box.module.ts#L19)
 
 Install with NPM
 
@@ -203,16 +202,6 @@ The content of the help popover. When specified along with `headingText`, a [hel
 #### `helpPopoverTitle: string | undefined`
 
 The title of the help popover. This property only applies when `helpPopoverContent` is also specified.
-
-## SkyBoxHeaderComponent
-
-Type: Component
-
-Selector: `sky-box-header`
-
-Warning: **Deprecated.** Use `headingText` input on the `sky-box` component instead.
-
-Specifies a header for the box.
 
 ## SkyBoxContentComponent
 
@@ -369,7 +358,7 @@ Only find instances whose `data-sky-id` attribute matches the given value.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyBoxModule } from '@skyux/layout';
 import { SkyDropdownModule } from '@skyux/popovers';
 
@@ -379,6 +368,7 @@ import { SkyDropdownModule } from '@skyux/popovers';
 @Component({
   selector: 'app-layout-box-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyBoxModule, SkyDropdownModule],
 })
 export class LayoutBoxBasicExampleComponent {}
@@ -452,7 +442,7 @@ describe('Basic box', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyBoxModule } from '@skyux/layout';
 import { SkyDropdownModule } from '@skyux/popovers';
 
@@ -462,6 +452,7 @@ import { SkyDropdownModule } from '@skyux/popovers';
 @Component({
   selector: 'app-layout-box-help-key-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyBoxModule, SkyDropdownModule],
 })
 export class LayoutBoxHelpKeyExampleComponent {}

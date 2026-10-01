@@ -2,7 +2,7 @@
 
 component: modal
 source: ./modal.md
-section_count: 25
+section_count: 24
 
 ---
 
@@ -21,21 +21,20 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 5   | Content                        | design      | 90–111   | `Read file_path=./modal.md offset=90 limit=22`    |
 | 6   | Accessibility                  | design      | 112–124  | `Read file_path=./modal.md offset=112 limit=13`   |
 | 7   | Related information            | design      | 125–136  | `Read file_path=./modal.md offset=125 limit=12`   |
-| 8   | Installation                   | development | 137–147  | `Read file_path=./modal.md offset=137 limit=11`   |
-| 9   | SkyModalModule                 | development | 148–153  | `Read file_path=./modal.md offset=148 limit=6`    |
-| 10  | SkyModalComponent              | development | 154–189  | `Read file_path=./modal.md offset=154 limit=36`   |
-| 11  | SkyModalHeaderComponent        | development | 190–199  | `Read file_path=./modal.md offset=190 limit=10`   |
-| 12  | SkyModalContentComponent       | development | 200–207  | `Read file_path=./modal.md offset=200 limit=8`    |
-| 13  | SkyModalFooterComponent        | development | 208–215  | `Read file_path=./modal.md offset=208 limit=8`    |
-| 14  | SkyModalIsDirtyDirective       | development | 216–233  | `Read file_path=./modal.md offset=216 limit=18`   |
-| 15  | SkyModalService                | development | 234–259  | `Read file_path=./modal.md offset=234 limit=26`   |
-| 16  | SkyModalConfigurationInterface | development | 260–323  | `Read file_path=./modal.md offset=260 limit=64`   |
-| 17  | SkyModalInstance               | development | 324–419  | `Read file_path=./modal.md offset=324 limit=96`   |
-| 18  | SkyModalCloseArgs              | development | 420–435  | `Read file_path=./modal.md offset=420 limit=16`   |
-| 19  | SkyModalBeforeCloseHandler     | development | 436–451  | `Read file_path=./modal.md offset=436 limit=16`   |
-| 20  | SkyModalError                  | development | 452–469  | `Read file_path=./modal.md offset=452 limit=18`   |
-| 21  | SkyModalHarness                | testing     | 470–587  | `Read file_path=./modal.md offset=470 limit=118`  |
-| 22  | SkyModalHarnessFilters         | testing     | 588–603  | `Read file_path=./modal.md offset=588 limit=16`   |
-| 23  | SkyModalTestingModule          | testing     | 604–611  | `Read file_path=./modal.md offset=604 limit=8`    |
-| 24  | SkyModalTestingController      | testing     | 612–665  | `Read file_path=./modal.md offset=612 limit=54`   |
-| 25  | Code Examples                  | examples    | 666–1745 | `Read file_path=./modal.md offset=666 limit=1080` |
+| 8   | Installation                   | development | 137–146  | `Read file_path=./modal.md offset=137 limit=10`   |
+| 9   | SkyModalModule                 | development | 147–152  | `Read file_path=./modal.md offset=147 limit=6`    |
+| 10  | SkyModalComponent              | development | 153–188  | `Read file_path=./modal.md offset=153 limit=36`   |
+| 11  | SkyModalContentComponent       | development | 189–196  | `Read file_path=./modal.md offset=189 limit=8`    |
+| 12  | SkyModalFooterComponent        | development | 197–204  | `Read file_path=./modal.md offset=197 limit=8`    |
+| 13  | SkyModalIsDirtyDirective       | development | 205–222  | `Read file_path=./modal.md offset=205 limit=18`   |
+| 14  | SkyModalService                | development | 223–248  | `Read file_path=./modal.md offset=223 limit=26`   |
+| 15  | SkyModalConfigurationInterface | development | 249–312  | `Read file_path=./modal.md offset=249 limit=64`   |
+| 16  | SkyModalInstance               | development | 313–408  | `Read file_path=./modal.md offset=313 limit=96`   |
+| 17  | SkyModalCloseArgs              | development | 409–424  | `Read file_path=./modal.md offset=409 limit=16`   |
+| 18  | SkyModalBeforeCloseHandler     | development | 425–440  | `Read file_path=./modal.md offset=425 limit=16`   |
+| 19  | SkyModalError                  | development | 441–458  | `Read file_path=./modal.md offset=441 limit=18`   |
+| 20  | SkyModalHarness                | testing     | 459–576  | `Read file_path=./modal.md offset=459 limit=118`  |
+| 21  | SkyModalHarnessFilters         | testing     | 577–592  | `Read file_path=./modal.md offset=577 limit=16`   |
+| 22  | SkyModalTestingModule          | testing     | 593–600  | `Read file_path=./modal.md offset=593 limit=8`    |
+| 23  | SkyModalTestingController      | testing     | 601–654  | `Read file_path=./modal.md offset=601 limit=54`   |
+| 24  | Code Examples                  | examples    | 655–1744 | `Read file_path=./modal.md offset=655 limit=1090` |

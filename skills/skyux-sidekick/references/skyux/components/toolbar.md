@@ -296,8 +296,7 @@ Do include a border separator between the toolbars.
 
 NPM package
 
-`@skyux/layout`[View in NPM](https://www.npmjs.com/package/@skyux/layout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/layout/src/lib/modules/toolbar/toolbar.module.ts#L24)
+`@skyux/layout`[View in NPM](https://www.npmjs.com/package/@skyux/layout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/layout/src/lib/modules/toolbar/toolbar.module.ts#L24)
 
 Install with NPM
 
@@ -724,7 +723,7 @@ Returns a child test element or null if not found.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyIconModule } from '@skyux/icon';
 import { SkyToolbarModule } from '@skyux/layout';
 
@@ -734,6 +733,7 @@ import { SkyToolbarModule } from '@skyux/layout';
 @Component({
   selector: 'app-layout-toolbar-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyIconModule, SkyToolbarModule],
 })
 export class LayoutToolbarBasicExampleComponent {
@@ -834,7 +834,7 @@ describe('Basic toolbar example', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyIconModule } from '@skyux/icon';
 import { SkyToolbarModule } from '@skyux/layout';
 
@@ -844,6 +844,7 @@ import { SkyToolbarModule } from '@skyux/layout';
 @Component({
   selector: 'app-layout-toolbar-sectioned-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyIconModule, SkyToolbarModule],
 })
 export class LayoutToolbarSectionedExampleComponent {

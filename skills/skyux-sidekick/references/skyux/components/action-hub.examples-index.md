@@ -12,4 +12,4 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                     | Lines    | Read invocation                                       |
 | --- | --------------------------- | -------- | ----------------------------------------------------- |
-| 1   | Action hub with basic setup | 861–1357 | `Read file_path=./action-hub.md offset=861 limit=497` |
+| 1   | Action hub with basic setup | 858–1356 | `Read file_path=./action-hub.md offset=858 limit=499` |

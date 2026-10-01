@@ -5,7 +5,7 @@ Reference: https://developer.blackbaud.com/skyux/learn/develop/deprecation/stach
 
 # Stache action buttons
 
-The Stache action buttons component is deprecated and can be replaced with the [action button](../../../components/action-button.md) component.
+The Stache action buttons component is deprecated in favor of the [action button](../../../components/action-button.md) component.
 
 ## How to migrate
 

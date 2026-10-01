@@ -12,5 +12,5 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                    | Lines     | Read invocation                                      |
 | --- | -------------------------- | --------- | ---------------------------------------------------- |
-| 1   | File drop with basic setup | 795–1018  | `Read file_path=./file-drop.md offset=795 limit=224` |
-| 2   | File drop with help key    | 1019–1105 | `Read file_path=./file-drop.md offset=1019 limit=87` |
+| 1   | File drop with basic setup | 794–1018  | `Read file_path=./file-drop.md offset=794 limit=225` |
+| 2   | File drop with help key    | 1019–1106 | `Read file_path=./file-drop.md offset=1019 limit=88` |

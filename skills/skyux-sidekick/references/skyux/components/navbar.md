@@ -11,8 +11,7 @@ The navbar displays top-level navigation items that can include sub-navigation i
 
 NPM package
 
-`@skyux/navbar`[View in NPM](https://www.npmjs.com/package/@skyux/navbar) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/navbar/src/lib/modules/navbar/navbar.module.ts#L12)
+`@skyux/navbar`[View in NPM](https://www.npmjs.com/package/@skyux/navbar) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/navbar/src/lib/modules/navbar/navbar.module.ts#L12)
 
 Install with NPM
 
@@ -241,7 +240,7 @@ Only find instances whose `data-sky-id` attribute matches the given value.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SkyNavbarModule } from '@skyux/navbar';
 import { SkyDropdownModule } from '@skyux/popovers';
@@ -252,6 +251,7 @@ import { SkyDropdownModule } from '@skyux/popovers';
 @Component({
   selector: 'app-navbar-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [RouterModule, SkyDropdownModule, SkyNavbarModule],
 })
 export class NavbarExampleComponent {

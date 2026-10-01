@@ -12,5 +12,5 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                                    | Lines   | Read invocation                                        |
 | --- | ------------------------------------------ | ------- | ------------------------------------------------------ |
-| 1   | Infinite scroll with back to top directive | 145–401 | `Read file_path=./back-to-top.md offset=145 limit=257` |
-| 2   | Repeater with back to top directive        | 402–596 | `Read file_path=./back-to-top.md offset=402 limit=195` |
+| 1   | Infinite scroll with back to top directive | 144–401 | `Read file_path=./back-to-top.md offset=144 limit=258` |
+| 2   | Repeater with back to top directive        | 402–597 | `Read file_path=./back-to-top.md offset=402 limit=196` |

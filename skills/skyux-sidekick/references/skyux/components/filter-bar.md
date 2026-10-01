@@ -149,8 +149,7 @@ When displaying filters in the filter bar by default, organize them in descendin
 
 NPM package
 
-`@skyux/filter-bar`[View in NPM](https://www.npmjs.com/package/@skyux/filter-bar) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/filter-bar/src/lib/modules/filter-bar/filter-bar.module.ts#L19)
+`@skyux/filter-bar`[View in NPM](https://www.npmjs.com/package/@skyux/filter-bar) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/filter-bar/src/lib/modules/filter-bar/filter-bar.module.ts#L19)
 
 Install with NPM
 
@@ -675,7 +674,7 @@ Finds a filter item whose label text matches the given value.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { SkyFilterBarFilterItem, SkyFilterBarModule } from '@skyux/filter-bar';
 
 import { FilterModalComponent } from './filter-modal.component';
@@ -686,6 +685,7 @@ import { FilterModalComponent } from './filter-modal.component';
 @Component({
   selector: 'app-filter-bar-modal-example',
   imports: [SkyFilterBarModule],
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
 })
 export class FilterBarModalExampleComponent {
@@ -951,7 +951,7 @@ export class FilterModalComponent implements SkyFilterItemModal {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { SkyFilterBarFilterItem, SkyFilterBarModule, SkyFilterItemLookupSearchAsyncArgs } from '@skyux/filter-bar';
 
 import { ExampleService } from './example.service';
@@ -962,6 +962,7 @@ import { ExampleService } from './example.service';
 @Component({
   selector: 'app-filter-bar-lookup-example',
   imports: [SkyFilterBarModule],
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
 })
 export class FilterBarLookupExampleComponent {
@@ -1101,7 +1102,7 @@ export class ExampleService {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { SkyFilterBarFilterItem, SkyFilterBarModule, SkyFilterItemLookupSearchAsyncArgs } from '@skyux/filter-bar';
 
 import { of } from 'rxjs';
@@ -1115,6 +1116,7 @@ import { FILTER_SELECTION_VALUES } from './filter-selection-values';
 @Component({
   selector: 'app-filter-bar-selectable-example',
   imports: [SkyFilterBarModule],
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
 })
 export class FilterBarSelectableExampleComponent {

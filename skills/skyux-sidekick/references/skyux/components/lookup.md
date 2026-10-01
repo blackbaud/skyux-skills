@@ -204,8 +204,7 @@ To provide text equivalents for multi-select pickers that open the show-all dial
 
 NPM package
 
-`@skyux/lookup`[View in NPM](https://www.npmjs.com/package/@skyux/lookup) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/lookup/src/lib/modules/lookup/lookup.module.ts#L24)
+`@skyux/lookup`[View in NPM](https://www.npmjs.com/package/@skyux/lookup) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/lookup/src/lib/modules/lookup/lookup.module.ts#L24)
 
 Install with NPM
 
@@ -1291,7 +1290,7 @@ Collapses the repeater item, or does nothing if already collapsed.
 
 #### `deselect(): Promise<void>`
 
-Deselects the repeater item.
+Deselects the repeater item. Throws an error if the item belongs to a single-select repeater, since a single-select item can only be replaced by selecting a different item, not cleared directly.
 
 #### Returns
 
@@ -1359,7 +1358,7 @@ Whether the repeater item is collapsible.
 
 #### `isDisabled(): Promise<boolean>`
 
-Whether a selectable repeater item is disabled.
+Whether a selectable repeater item is disabled, either via a checkbox's disabled state, or, for a single-select repeater item, via the `aria-disabled` attribute on the item's row.
 
 #### Returns
 
@@ -1383,7 +1382,7 @@ Whether the repeater item is reorderable.
 
 #### `isSelectable(): Promise<boolean>`
 
-Whether a repeater item has selection enabled.
+Whether a repeater item has selection enabled, either via a checkbox (the repeater's `selectionMode` property set to `multiple` or the item's deprecated `selectable` property) or via the repeater's `selectionMode` property set to `single`.
 
 #### Returns
 
@@ -1471,7 +1470,7 @@ Returns a child test element or null if not found.
 
 #### `select(): Promise<void>`
 
-Selects the repeater item.
+Selects the repeater item. For a checkbox-selectable item, checks its checkbox. For a single-select repeater item, clicks the item, which also clears any previously selected item.
 
 #### Returns
 
@@ -1604,7 +1603,7 @@ Sets the value of the input. The value will be set by simulating key presses tha
 
 ```typescript
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
@@ -1634,6 +1633,7 @@ import { Person } from './person';
 @Component({
   selector: 'app-lookup-single-select-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CommonModule, FormsModule, ReactiveFormsModule, SkyFormErrorModule, SkyInputBoxModule, SkyLookupModule],
 })
 export class LookupSingleSelectExampleComponent implements OnInit {
@@ -1937,7 +1937,7 @@ export interface LookupAsyncDemoSearchResults {
 
 ```typescript
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
@@ -1967,6 +1967,7 @@ import { Person } from './person';
 @Component({
   selector: 'app-lookup-multi-select-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CommonModule, FormsModule, ReactiveFormsModule, SkyFormErrorModule, SkyInputBoxModule, SkyLookupModule],
 })
 export class LookupMultiSelectExampleComponent implements OnInit {
@@ -2272,7 +2273,7 @@ export interface LookupAsyncDemoSearchResults {
 
 ```typescript
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, TemplateRef, ViewChild, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, TemplateRef, ViewChild, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SkyInputBoxModule } from '@skyux/forms';
 import { SkyWaitService } from '@skyux/indicators';
@@ -2294,6 +2295,7 @@ import { Person } from './person';
 @Component({
   selector: 'app-lookup-result-templates-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CommonModule, FormsModule, ReactiveFormsModule, SkyInputBoxModule, SkyLookupModule],
 })
 export class LookupResultTemplatesExampleComponent implements OnInit {
@@ -2757,7 +2759,7 @@ export interface LookupAsyncDemoSearchResults {
 
 ```typescript
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SkyInputBoxModule } from '@skyux/forms';
 import { SkyWaitService } from '@skyux/indicators';
@@ -2782,6 +2784,7 @@ import { PickerModalComponent } from './picker-modal.component';
 @Component({
   selector: 'app-lookup-custom-picker-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CommonModule, FormsModule, ReactiveFormsModule, SkyInputBoxModule, SkyLookupModule],
 })
 export class LookupCustomPickerExampleComponent implements OnInit {
@@ -2884,6 +2887,7 @@ export class LookupCustomPickerExampleComponent implements OnInit {
   >
     <sky-lookup
       formControlName="favoriteNames"
+      idProperty="name"
       [enableShowMore]="true"
       [showAddButton]="true"
       [showMoreConfig]="showMoreConfig"
@@ -3277,7 +3281,7 @@ export class PickerHarness extends ComponentHarness {
           <sky-icon iconName="person" />
           <sky-selection-box-header> {{ people[i].name }} </sky-selection-box-header>
           <sky-selection-box-description> {{ people[i].formal }} </sky-selection-box-description>
-          <sky-checkbox #checkbox [formControl]="personControl" />
+          <sky-checkbox #checkbox labelHidden [formControl]="personControl" [labelText]="people[i].name" />
         </sky-selection-box>
         }
       </sky-selection-box-grid>
@@ -3307,7 +3311,7 @@ export class PickerHarness extends ComponentHarness {
 #### picker-modal.component.ts
 
 ```typescript
-import { ChangeDetectorRef, Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, inject } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SkyCheckboxModule, SkySelectionBoxModule } from '@skyux/forms';
 import { SkyIconModule } from '@skyux/icon';
@@ -3324,6 +3328,7 @@ import { Person } from './person';
   selector: 'app-picker-modal',
   templateUrl: './picker-modal.component.html',
   styleUrls: ['./picker-modal.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     FormsModule,
     ReactiveFormsModule,
@@ -3397,7 +3402,7 @@ export interface LookupAsyncDemoSearchResults {
 
 ```typescript
 import { CommonModule } from '@angular/common';
-import { Component, OnDestroy, OnInit, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SkyIdModule } from '@skyux/core';
 import { SkyInputBoxModule } from '@skyux/forms';
@@ -3423,6 +3428,7 @@ import { Person } from './person';
 @Component({
   selector: 'app-lookup-add-item-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CommonModule, FormsModule, ReactiveFormsModule, SkyIdModule, SkyInputBoxModule, SkyLookupModule],
 })
 export class LookupAddItemExampleComponent implements OnInit, OnDestroy {
@@ -3524,7 +3530,7 @@ export class LookupAddItemExampleComponent implements OnInit, OnDestroy {
 #### add-item-modal.component.ts
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { SkyInputBoxModule } from '@skyux/forms';
 import { SkyModalInstance, SkyModalModule } from '@skyux/modals';
@@ -3534,6 +3540,7 @@ let nextId = 21;
 @Component({
   selector: 'app-add-item-modal',
   templateUrl: './add-item-modal.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, ReactiveFormsModule, SkyInputBoxModule, SkyModalModule],
 })
 export class AddItemModalComponent {

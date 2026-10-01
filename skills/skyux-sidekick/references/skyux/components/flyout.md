@@ -226,8 +226,7 @@ Follow these guidelines to ensure that people can use flyouts with assistive tec
 
 NPM package
 
-`@skyux/flyout`[View in NPM](https://www.npmjs.com/package/@skyux/flyout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/flyout/src/lib/modules/flyout/flyout.service.ts#L36)
+`@skyux/flyout`[View in NPM](https://www.npmjs.com/package/@skyux/flyout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/flyout/src/lib/modules/flyout/flyout.service.ts#L36)
 
 Install with NPM
 
@@ -697,7 +696,7 @@ Returns a child test element or null if not found.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { SkyFlyoutInstance, SkyFlyoutService } from '@skyux/flyout';
 
 import { FlyoutComponent } from './flyout.component';
@@ -707,6 +706,7 @@ import { FlyoutComponent } from './flyout.component';
  */
 @Component({
   selector: 'app-flyout-basic-example',
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
 })
 export class FlyoutBasicExampleComponent {
@@ -812,10 +812,11 @@ describe('Basic flyout example', () => {
 #### flyout.component.ts
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'app-flyout',
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div class="sky-theme-padding-inset-balanced-xl">
       <h2>Sample flyout</h2>
@@ -836,7 +837,7 @@ export class FlyoutComponent {}
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { SkyFlyoutInstance, SkyFlyoutService } from '@skyux/flyout';
 
 import { FlyoutComponent } from './flyout.component';
@@ -846,6 +847,7 @@ import { FlyoutComponent } from './flyout.component';
  */
 @Component({
   selector: 'app-flyout-custom-headers-example',
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
 })
 export class FlyoutCustomHeadersExampleComponent {
@@ -1046,10 +1048,11 @@ describe('Custom headers flyout example', () => {
 #### flyout.component.ts
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'app-flyout',
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div class="sky-theme-padding-inset-balanced-xl">
       <h2>Sample flyout</h2>

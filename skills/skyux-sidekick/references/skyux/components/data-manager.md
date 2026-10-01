@@ -11,8 +11,7 @@ The data manager component and service manage the exploration of a data set acro
 
 NPM package
 
-`@skyux/data-manager`[View in NPM](https://www.npmjs.com/package/@skyux/data-manager) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/data-manager/src/lib/modules/data-manager/data-manager.module.ts#L36)
+`@skyux/data-manager`[View in NPM](https://www.npmjs.com/package/@skyux/data-manager) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/data-manager/src/lib/modules/data-manager/data-manager.module.ts#L36)
 
 Install with NPM
 
@@ -1890,7 +1889,7 @@ Gets the text of the column title.
 
 #### `isDisabled(): Promise<boolean>`
 
-Whether a selectable repeater item is disabled.
+Whether a selectable repeater item is disabled, either via a checkbox's disabled state, or, for a single-select repeater item, via the `aria-disabled` attribute on the item's row.
 
 #### Returns
 
@@ -2219,6 +2218,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SkyDataManagerHarness } from '@skyux/data-manager/testing';
 import { SkyRepeaterHarness } from '@skyux/lists/testing';
 
+import { provideSkyAgGridTesting } from '@skyux/ag-grid/testing';
 import { DataManagerBasicExampleComponent } from './example.component';
 
 describe('Data manager basic example', () => {
@@ -2229,6 +2229,7 @@ describe('Data manager basic example', () => {
   }> {
     await TestBed.configureTestingModule({
       imports: [DataManagerBasicExampleComponent],
+      providers: [provideSkyAgGridTesting()],
     }).compileComponents();
 
     const fixture = TestBed.createComponent(DataManagerBasicExampleComponent);
@@ -2390,7 +2391,7 @@ export function filterItems(
 #### orange-modal.component.ts
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { SkyFilterItemModal, SkyFilterItemModalInstance } from '@skyux/filter-bar';
 import { SkyCheckboxModule } from '@skyux/forms';
@@ -2399,6 +2400,7 @@ import { SkyModalModule } from '@skyux/modals';
 @Component({
   selector: 'app-orange-modal',
   templateUrl: './orange-modal.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ReactiveFormsModule, SkyCheckboxModule, SkyModalModule],
 })
 export class OrangeModalComponent implements SkyFilterItemModal {
@@ -2541,6 +2543,7 @@ export class ViewGridComponent {
       iconName: 'table',
       searchEnabled: true,
       columnPickerEnabled: true,
+      sortEnabled: true,
       columnOptions: this.#columnDefs.map(
         (colDef): SkyDataManagerColumnPickerOption => ({
           id: colDef.colId!,
@@ -2557,13 +2560,9 @@ export class ViewGridComponent {
 
 ```html
 <sky-data-view [viewId]="viewId">
-  <sky-repeater expandMode="none">
+  <sky-repeater expandMode="none" selectionMode="multiple">
     @for (item of displayedItems(); track item.id) {
-    <sky-repeater-item
-      [selectable]="true"
-      [isSelected]="selectedItems().includes(item.id)"
-      (isSelectedChange)="onItemSelect($event, item)"
-    >
+    <sky-repeater-item [isSelected]="selectedItems().includes(item.id)" (isSelectedChange)="onItemSelect($event, item)">
       <sky-repeater-item-title> {{ item.name }} </sky-repeater-item-title>
       <sky-repeater-item-content> {{ item.description }} </sky-repeater-item-content>
     </sky-repeater-item>
@@ -2703,7 +2702,7 @@ export class ViewRepeaterComponent {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyPageModule } from '@skyux/pages';
 
 import { ListPageContentComponent } from './list-page-content.component';
@@ -2715,6 +2714,7 @@ import { ListPageContentComponent } from './list-page-content.component';
 @Component({
   selector: 'app-pages-page-list-page-list-layout-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ListPageContentComponent, SkyPageModule],
 })
 export class PagesPageListPageListLayoutExampleComponent {}
@@ -2773,7 +2773,7 @@ export class DashboardLinkCellRendererComponent implements ICellRendererAngularC
 #### dashboards-grid-context-menu.component.ts
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyDropdownModule } from '@skyux/popovers';
 
 import { ICellRendererAngularComp } from 'ag-grid-angular';
@@ -2784,6 +2784,7 @@ import { Item } from './item';
 @Component({
   selector: 'app-dashboards-grid-context-menu',
   templateUrl: './dashboards-grid-context-menu.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyDropdownModule],
 })
 export class DashboardGridContextMenuComponent implements ICellRendererAngularComp {
@@ -2818,6 +2819,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SkyHelpTestingController, SkyHelpTestingModule } from '@skyux/core/testing';
 import { SkyPageHarness } from '@skyux/pages/testing';
 
+import { provideSkyAgGridTesting } from '@skyux/ag-grid/testing';
 import { PagesPageListPageListLayoutExampleComponent } from './example.component';
 
 describe('List page list layout example', () => {
@@ -2838,6 +2840,7 @@ describe('List page list layout example', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [PagesPageListPageListLayoutExampleComponent, SkyHelpTestingModule],
+      providers: [provideSkyAgGridTesting()],
     });
   });
 
@@ -2901,7 +2904,7 @@ export interface Item {
 #### list-page-content.component.ts
 
 ```typescript
-import { Component, effect, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, effect, inject, signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { SkyAgGridModule, SkyAgGridService } from '@skyux/ag-grid';
 import {
@@ -2927,6 +2930,7 @@ ModuleRegistry.registerModules([AllCommunityModule]);
   selector: 'app-list-page-content',
   templateUrl: './list-page-content.component.html',
   providers: [SkyDataManagerService],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [AgGridAngular, SkyAgGridModule, SkyDataManagerModule, SkyIconModule, SkyListSummaryModule],
 })
 export class ListPageContentComponent {
@@ -3042,7 +3046,7 @@ export class ListPageContentComponent {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, OnInit, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SkySummaryActionBarModule } from '@skyux/action-bars';
 import {
@@ -3086,6 +3090,7 @@ interface DemoForm {
     SkySplitViewModule,
     SkySummaryActionBarModule,
   ],
+  changeDetection: ChangeDetectionStrategy.Eager,
   providers: [SkyDataManagerService],
 })
 export class PagesPageDataManagerSplitViewFitLayoutExampleComponent implements OnInit {

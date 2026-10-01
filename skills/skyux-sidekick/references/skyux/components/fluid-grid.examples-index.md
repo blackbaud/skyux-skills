@@ -2,7 +2,7 @@
 
 component: fluid-grid
 source: ./fluid-grid.md
-example_count: 1
+example_count: 2
 
 ---
 
@@ -10,6 +10,7 @@ example_count: 1
 
 Read only the slice you need. Each entry below gives the exact `Read` arguments to load one example from `fluid-grid.md`.
 
-| #   | Example                     | Lines   | Read invocation                                       |
-| --- | --------------------------- | ------- | ----------------------------------------------------- |
-| 1   | Fluid grid with basic setup | 427–672 | `Read file_path=./fluid-grid.md offset=427 limit=246` |
+| #   | Example                       | Lines   | Read invocation                                       |
+| --- | ----------------------------- | ------- | ----------------------------------------------------- |
+| 1   | Fluid grid with basic setup   | 438–671 | `Read file_path=./fluid-grid.md offset=438 limit=234` |
+| 2   | Fluid grid with inset margins | 672–755 | `Read file_path=./fluid-grid.md offset=672 limit=84`  |

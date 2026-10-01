@@ -12,6 +12,6 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                      | Lines     | Read invocation                                        |
 | --- | ---------------------------- | --------- | ------------------------------------------------------ |
-| 1   | Datepicker with basic setup  | 1006–1164 | `Read file_path=./datepicker.md offset=1006 limit=159` |
-| 2   | Datepicker with custom dates | 1165–1294 | `Read file_path=./datepicker.md offset=1165 limit=130` |
-| 3   | Fuzzy datepicker             | 1295–1410 | `Read file_path=./datepicker.md offset=1295 limit=116` |
+| 1   | Datepicker with basic setup  | 1035–1194 | `Read file_path=./datepicker.md offset=1035 limit=160` |
+| 2   | Datepicker with custom dates | 1195–1325 | `Read file_path=./datepicker.md offset=1195 limit=131` |
+| 3   | Fuzzy datepicker             | 1326–1442 | `Read file_path=./datepicker.md offset=1326 limit=117` |

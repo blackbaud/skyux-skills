@@ -12,5 +12,5 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                          | Lines   | Read invocation                                            |
 | --- | -------------------------------- | ------- | ---------------------------------------------------------- |
-| 1   | File attachment with basic setup | 624–805 | `Read file_path=./file-attachment.md offset=624 limit=182` |
-| 2   | File attachment with help key    | 806–894 | `Read file_path=./file-attachment.md offset=806 limit=89`  |
+| 1   | File attachment with basic setup | 613–795 | `Read file_path=./file-attachment.md offset=613 limit=183` |
+| 2   | File attachment with help key    | 796–885 | `Read file_path=./file-attachment.md offset=796 limit=90`  |

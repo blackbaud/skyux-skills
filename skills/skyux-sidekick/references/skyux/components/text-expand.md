@@ -11,8 +11,7 @@ The text expand component truncates long blocks of text with an ellipsis and a l
 
 NPM package
 
-`@skyux/layout`[View in NPM](https://www.npmjs.com/package/@skyux/layout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/layout/src/lib/modules/text-expand/text-expand.module.ts#L9)
+`@skyux/layout`[View in NPM](https://www.npmjs.com/package/@skyux/layout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/layout/src/lib/modules/text-expand/text-expand.module.ts#L9)
 
 Install with NPM
 
@@ -187,7 +186,7 @@ Gets the expanded text in the modal.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyTextExpandModule } from '@skyux/layout';
 
 /**
@@ -196,6 +195,7 @@ import { SkyTextExpandModule } from '@skyux/layout';
 @Component({
   selector: 'app-layout-text-expand-inline-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyTextExpandModule],
 })
 export class LayoutTextExpandInlineExampleComponent {
@@ -274,7 +274,7 @@ describe('Text expand inline example', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyTextExpandModule } from '@skyux/layout';
 
 /**
@@ -283,6 +283,7 @@ import { SkyTextExpandModule } from '@skyux/layout';
 @Component({
   selector: 'app-layout-text-expand-modal-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyTextExpandModule],
 })
 export class LayoutTextExpandModalExampleComponent {
@@ -364,7 +365,7 @@ describe('Text expand modal example', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyTextExpandModule } from '@skyux/layout';
 
 /**
@@ -373,6 +374,7 @@ import { SkyTextExpandModule } from '@skyux/layout';
 @Component({
   selector: 'app-layout-text-expand-newline-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyTextExpandModule],
 })
 export class LayoutTextExpandNewlineExampleComponent {

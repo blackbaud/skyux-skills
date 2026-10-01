@@ -128,8 +128,7 @@ When users attach a file, the file name displays as a link beside the replace fi
 
 NPM package
 
-`@skyux/forms`[View in NPM](https://www.npmjs.com/package/@skyux/forms) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/forms/src/lib/modules/file-attachment/file-attachment/file-attachment.module.ts#L16)
+`@skyux/forms`[View in NPM](https://www.npmjs.com/package/@skyux/forms) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/forms/src/lib/modules/file-attachment/file-attachment/file-attachment.module.ts#L11)
 
 Install with NPM
 
@@ -232,16 +231,6 @@ Fires when users add or remove files.
 #### `fileClick: EventEmitter<SkyFileAttachmentClick>`
 
 Fires when users select the file name link. Make sure to bind the event. If you do not, the file name link will be a dead link.
-
-## SkyFileAttachmentLabelComponent
-
-Type: Component
-
-Selector: `sky-file-attachment-label`
-
-Warning: **Deprecated.** Use the `labelText` input on the single file attachment component instead.
-
-Displays a label above the file attachment element. To display a help button beside the label, include a help button element, such as `sky-help-inline`, in the `sky-file-attachment-label` element and a `sky-control-help` CSS class on that help button element.
 
 ## SkyFormErrorComponent
 
@@ -626,7 +615,7 @@ The name of the error.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
@@ -654,6 +643,7 @@ function customValidator(control: AbstractControl<SkyFileItem | null | undefined
 @Component({
   selector: 'app-forms-file-attachment-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, ReactiveFormsModule, SkyFileAttachmentModule],
 })
 export class FormsFileAttachmentBasicExampleComponent {
@@ -808,7 +798,7 @@ describe('Basic file attachment example', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
@@ -836,6 +826,7 @@ function customValidator(control: AbstractControl<SkyFileItem | null | undefined
 @Component({
   selector: 'app-forms-file-attachment-help-key-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, ReactiveFormsModule, SkyFileAttachmentModule],
 })
 export class FormsFileAttachmentHelpKeyExampleComponent {

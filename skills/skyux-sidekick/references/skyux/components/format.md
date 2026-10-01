@@ -11,8 +11,7 @@ The format module provides a component that allows you to place formatted text i
 
 NPM package
 
-`@skyux/layout`[View in NPM](https://www.npmjs.com/package/@skyux/layout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/layout/src/lib/modules/format/format.module.ts#L11)
+`@skyux/layout`[View in NPM](https://www.npmjs.com/package/@skyux/layout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/layout/src/lib/modules/format/format.module.ts#L11)
 
 Install with NPM
 
@@ -65,7 +64,7 @@ Type: Service
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyFormatModule } from '@skyux/layout';
 
 /**
@@ -75,6 +74,7 @@ import { SkyFormatModule } from '@skyux/layout';
   selector: 'app-layout-format-example',
   templateUrl: './example.component.html',
   styleUrls: ['./example.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyFormatModule],
 })
 export class LayoutFormatExampleComponent {}

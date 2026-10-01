@@ -104,8 +104,7 @@ Don't use `stacked` when the country field:
 
 NPM package
 
-`@skyux/lookup`[View in NPM](https://www.npmjs.com/package/@skyux/lookup) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/lookup/src/lib/modules/country-field/country-field.module.ts#L25)
+`@skyux/lookup`[View in NPM](https://www.npmjs.com/package/@skyux/lookup) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/lookup/src/lib/modules/country-field/country-field.module.ts#L25)
 
 Install with NPM
 
@@ -584,13 +583,31 @@ Clicks the help inline button.
 
 `Promise<void>`
 
+#### `getCharacterCount(): Promise<number>`
+
+Gets the current character count, or throws an error if the input box does not set the `characterLimit` input.
+
+#### Returns
+
+`Promise<number>`
+
 #### `getCharacterCounter(): Promise<SkyCharacterCounterIndicatorHarness>`
+
+Warning: **Deprecated.** Use `getCharacterCount()`, `getCharacterLimit()`, and `isOverCharacterLimit()` instead. Those methods require the `characterLimit` input, so an input box that projects a `sky-character-counter-indicator` component must migrate to that input first.
 
 Gets the character counter indicator for the input box or throws an error if a character limit is not specified.
 
 #### Returns
 
 `Promise<SkyCharacterCounterIndicatorHarness>`
+
+#### `getCharacterLimit(): Promise<number>`
+
+Gets the character limit, or throws an error if the input box does not set the `characterLimit` input.
+
+#### Returns
+
+`Promise<number>`
 
 #### `getCustomErrors(): Promise<SkyStatusIndicatorHarness[]>`
 
@@ -760,6 +777,14 @@ Whether the field is set to an invalid URL.
 
 `Promise<boolean>`
 
+#### `isOverCharacterLimit(): Promise<boolean>`
+
+Whether the character count has exceeded the character limit. Throws an error if the input box does not set the `characterLimit` input.
+
+#### Returns
+
+`Promise<boolean>`
+
 #### `queryHarness(query: HarnessQuery<T>): Promise<T>`
 
 Returns a child harness or throws an error if not found.
@@ -867,7 +892,7 @@ Only find instances whose `data-sky-id` attribute matches the given value.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
@@ -895,6 +920,7 @@ function validateCountry(control: AbstractControl<SkyCountryFieldCountry | undef
 @Component({
   selector: 'app-lookup-country-field-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, ReactiveFormsModule, SkyCountryFieldModule, SkyInputBoxModule],
 })
 export class LookupCountryFieldBasicExampleComponent {

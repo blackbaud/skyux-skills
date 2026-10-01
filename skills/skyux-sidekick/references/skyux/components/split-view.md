@@ -71,7 +71,7 @@ Summary action bar  (optional)
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/split-view/split-view-options-list-type-tree.3a6d859ce8728dc3d2c36b5e80b213af.png)
 
-We recommend against using [grids](./grid.md) if possible. They do not scale well at the typically small width of the list.
+We recommend against using [grids](./grids.md) if possible. They do not scale well at the typically small width of the list.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/split-view/split-view-options-list-type-grid.739474e419ae9663ebf38a231d8a5faf.png)
 
@@ -143,8 +143,7 @@ Don't place content below the split view.
 
 NPM package
 
-`@skyux/split-view`[View in NPM](https://www.npmjs.com/package/@skyux/split-view) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/split-view/src/lib/modules/split-view/split-view.module.ts#L28)
+`@skyux/split-view`[View in NPM](https://www.npmjs.com/package/@skyux/split-view) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/split-view/src/lib/modules/split-view/split-view.module.ts#L28)
 
 Install with NPM
 
@@ -737,7 +736,7 @@ Returns a child test element or null if not found.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SkySummaryActionBarModule } from '@skyux/action-bars';
 import { SkyInputBoxModule } from '@skyux/forms';
@@ -762,6 +761,7 @@ interface DemoForm {
 @Component({
   selector: 'app-split-view-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     FormsModule,
     ReactiveFormsModule,
@@ -1004,7 +1004,7 @@ export interface Record {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SkySummaryActionBarModule } from '@skyux/action-bars';
 import { SkyInputBoxModule } from '@skyux/forms';
@@ -1032,6 +1032,7 @@ interface DemoForm {
   selector: 'app-split-view-page-bound-example',
   templateUrl: './example.component.html',
   styleUrls: ['./example.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     FormsModule,
     ReactiveFormsModule,
@@ -1473,7 +1474,7 @@ export interface Record {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, OnInit, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SkySummaryActionBarModule } from '@skyux/action-bars';
 import {
@@ -1517,6 +1518,7 @@ interface DemoForm {
     SkySplitViewModule,
     SkySummaryActionBarModule,
   ],
+  changeDetection: ChangeDetectionStrategy.Eager,
   providers: [SkyDataManagerService],
 })
 export class PagesPageDataManagerSplitViewFitLayoutExampleComponent implements OnInit {

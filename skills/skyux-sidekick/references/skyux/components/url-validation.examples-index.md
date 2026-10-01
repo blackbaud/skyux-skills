@@ -12,5 +12,5 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                                  | Lines   | Read invocation                                          |
 | --- | ---------------------------------------- | ------- | -------------------------------------------------------- |
-| 1   | URL validation using input directive     | 95–135  | `Read file_path=./url-validation.md offset=95 limit=41`  |
-| 2   | URL validation on reactive form controls | 136–193 | `Read file_path=./url-validation.md offset=136 limit=58` |
+| 1   | URL validation using input directive     | 108–149 | `Read file_path=./url-validation.md offset=108 limit=42` |
+| 2   | URL validation on reactive form controls | 150–208 | `Read file_path=./url-validation.md offset=150 limit=59` |

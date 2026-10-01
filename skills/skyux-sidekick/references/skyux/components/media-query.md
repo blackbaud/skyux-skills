@@ -15,8 +15,7 @@ The media queries service subscribes to screen size changes at different breakpo
 
 NPM package
 
-`@skyux/core`[View in NPM](https://www.npmjs.com/package/@skyux/core) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/core/src/lib/modules/media-query/media-query.service.ts#L21)
+`@skyux/core`[View in NPM](https://www.npmjs.com/package/@skyux/core) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/core/src/lib/modules/media-query/media-query.service.ts#L21)
 
 Install with NPM
 
@@ -170,7 +169,7 @@ Emits the provided breakpoint to all subscribers.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { SkyMediaQueryService } from '@skyux/core';
 import { SkyIconModule } from '@skyux/icon';
@@ -181,6 +180,7 @@ import { SkyIconModule } from '@skyux/icon';
 @Component({
   imports: [SkyIconModule],
   selector: 'app-core-media-query-basic-example',
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
 })
 export class CoreMediaQueryBasicExampleComponent {
@@ -263,7 +263,7 @@ describe('Media query example', () => {
 
 ```typescript
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { SkyMediaQueryService, SkyResponsiveHostDirective } from '@skyux/core';
 import { SkyIconModule } from '@skyux/icon';
@@ -278,6 +278,7 @@ import { DemoContainerComponent } from './container.component';
   imports: [CommonModule, DemoChildComponent, DemoContainerComponent, SkyResponsiveHostDirective, SkyIconModule],
   selector: 'app-core-media-query-responsive-host-example',
   styleUrl: './example.component.scss',
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
 })
 export class CoreMediaQueryResponsiveHostExampleComponent {
@@ -288,12 +289,13 @@ export class CoreMediaQueryResponsiveHostExampleComponent {
 #### child.component.ts
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { SkyMediaQueryService } from '@skyux/core';
 
 @Component({
   selector: 'app-child',
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `<p>Breakpoint for child: {{ breakpoint() }}</p>`,
 })
 export class DemoChildComponent {
@@ -304,7 +306,7 @@ export class DemoChildComponent {
 #### container.component.ts
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { SkyMediaQueryService, SkyResponsiveHostDirective } from '@skyux/core';
 
@@ -319,6 +321,7 @@ import { SkyMediaQueryService, SkyResponsiveHostDirective } from '@skyux/core';
       max-width: 800px;
     }
   `,
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <p>Breakpoint within container: {{ breakpoint() }}</p>
     <ng-content />

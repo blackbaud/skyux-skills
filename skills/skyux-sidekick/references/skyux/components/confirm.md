@@ -103,8 +103,7 @@ Use labels that clearly indicate what happens when users select buttons. For exa
 
 NPM package
 
-`@skyux/modals`[View in NPM](https://www.npmjs.com/package/@skyux/modals) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/modals/src/lib/modules/confirm/confirm.service.ts#L17)
+`@skyux/modals`[View in NPM](https://www.npmjs.com/package/@skyux/modals) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/modals/src/lib/modules/confirm/confirm.service.ts#L17)
 
 Install with NPM
 
@@ -506,7 +505,7 @@ Closes the confirm dialog with the "ok" action.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { SkyConfirmService } from '@skyux/modals';
 
 /**
@@ -514,6 +513,7 @@ import { SkyConfirmService } from '@skyux/modals';
  */
 @Component({
   selector: 'app-modals-confirm-basic-with-controller-example',
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `<button aria-haspopup="dialog" class="sky-btn sky-btn-default" type="button" (click)="launchConfirm()">
     Open confirm
   </button>`,
@@ -599,7 +599,7 @@ describe('Testing with SkyConfirmTestingController', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { SkyConfirmButtonConfig, SkyConfirmInstance, SkyConfirmService, SkyConfirmType } from '@skyux/modals';
 
 /**
@@ -607,6 +607,7 @@ import { SkyConfirmButtonConfig, SkyConfirmInstance, SkyConfirmService, SkyConfi
  */
 @Component({
   selector: 'app-modals-confirm-basic-with-harness-example',
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
 })
 export class ModalsConfirmBasicWithHarnessExampleComponent {

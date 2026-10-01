@@ -1767,8 +1767,7 @@ Icons must meet [WCAG contrast standards](https://www.w3.org/WAI/WCAG21/Techniqu
 
 NPM package
 
-`@skyux/icon`[View in NPM](https://www.npmjs.com/package/@skyux/icon) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/icon/src/lib/modules/icon/icon.module.ts#L12)
+`@skyux/icon`[View in NPM](https://www.npmjs.com/package/@skyux/icon) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/icon/src/lib/modules/icon/icon.module.ts#L12)
 
 Install with NPM
 
@@ -1887,7 +1886,7 @@ Loading complete.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyIconModule } from '@skyux/icon';
 
 /**
@@ -1896,6 +1895,7 @@ import { SkyIconModule } from '@skyux/icon';
 @Component({
   selector: 'app-icon-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyIconModule],
 })
 export class IconBasicExampleComponent {}
@@ -1972,7 +1972,7 @@ describe('Basic icon', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyIconModule } from '@skyux/icon';
 
 /**
@@ -1981,6 +1981,7 @@ import { SkyIconModule } from '@skyux/icon';
 @Component({
   selector: 'app-icon-icon-button-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyIconModule],
 })
 export class IconIconButtonExampleComponent {

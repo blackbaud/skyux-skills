@@ -11,8 +11,7 @@ Tokens display a series of specified objects that users can interact with. They 
 
 NPM package
 
-`@skyux/indicators`[View in NPM](https://www.npmjs.com/package/@skyux/indicators) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/indicators/src/lib/modules/tokens/tokens.module.ts#L22)
+`@skyux/indicators`[View in NPM](https://www.npmjs.com/package/@skyux/indicators) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/indicators/src/lib/modules/tokens/tokens.module.ts#L22)
 
 Install with NPM
 
@@ -387,7 +386,7 @@ Only find instances whose text content matches the given value.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyToken, SkyTokensModule } from '@skyux/indicators';
 
 /**
@@ -396,6 +395,7 @@ import { SkyToken, SkyTokensModule } from '@skyux/indicators';
 @Component({
   selector: 'app-indicators-tokens-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyTokensModule],
 })
 export class IndicatorsTokensBasicExampleComponent {
@@ -493,7 +493,7 @@ describe('Tokens basic example', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, OnDestroy } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnDestroy } from '@angular/core';
 import {
   SkyToken,
   SkyTokenSelectedEventArgs,
@@ -514,6 +514,7 @@ interface TokenItem {
 @Component({
   selector: 'app-indicators-tokens-custom-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyTokensModule],
 })
 export class IndicatorsTokensCustomExampleComponent implements OnDestroy {

@@ -5,7 +5,7 @@ Reference: https://developer.blackbaud.com/skyux/learn/develop/deprecation/grid
 
 # Grid
 
-The [grid](../../../components/grid.md) component is deprecated in favor of the [data grid](../../../components/data-grid-component.md) component. Data grid is a simpler, declarative alternative for the common use cases that grid previously served.
+The grid component is deprecated in favor of the [data grid](../../../components/data-grid-component.md) component. Data grid is a simpler, declarative alternative for the common use cases that grid previously served. To view development documentation for the grid component, see the SKY UX 14 docs.
 
 ## How to migrate
 
@@ -17,4 +17,4 @@ Bash
 
 The schematic rewrites your markup, swaps the module import, and adds `@skyux/data-grid` to your project as a dependency. It's honest about its limits: a handful of inputs and outputs have no direct equivalent, a few event payloads change shape, and every migrated column lands with a text data type until you confirm otherwise. Review its output carefully.
 
-If your grid lives inside a [list builder](../../../components/list.md) view rather than as a standalone `<sky-grid>`, hold off converting. That path is tied to `@skyux/data-manager` integration, which hasn't shipped yet.
+If your grid lives inside a [list builder](./list.md) view rather than as a standalone `<sky-grid>`, hold off converting. That path is tied to `@skyux/data-manager` integration, which hasn't shipped yet.

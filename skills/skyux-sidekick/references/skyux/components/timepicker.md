@@ -138,8 +138,7 @@ Use 1/2- or 1/3-width columns for individual timepicker fields inside [modals](.
 
 NPM package
 
-`@skyux/datetime`[View in NPM](https://www.npmjs.com/package/@skyux/datetime) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/datetime/src/lib/modules/timepicker/timepicker.module.ts#L16)
+`@skyux/datetime`[View in NPM](https://www.npmjs.com/package/@skyux/datetime) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/datetime/src/lib/modules/timepicker/timepicker.module.ts#L16)
 
 Install with NPM
 
@@ -192,12 +191,6 @@ Default: `false`
 #### `returnFormat: string | undefined`
 
 The custom time format. For examples, see the [moment.js](https://momentjs.com/docs/#/displaying/format/) docs.
-
-#### `skyTimepickerRetainInvalidValues: InputSignalWithTransform<boolean, unknown>`
-
-Whether to retain invalid entries in the input when it loses focus. When set to `true`, an invalid value remains in the field and the associated form control is flagged with a `skyTime` error, matching the behavior of the datepicker.
-
-Default: `false`
 
 #### `timeFormat: SkyTimepickerTimeFormatType`
 
@@ -398,7 +391,7 @@ Gets the current calendar mode.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
@@ -432,6 +425,7 @@ function validateTime(control: AbstractControl<SkyTimepickerTimeOutput | string>
 @Component({
   selector: 'app-datetime-timepicker-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, ReactiveFormsModule, SkyInputBoxModule, SkyTimepickerModule],
 })
 export class DatetimeTimepickerBasicExampleComponent {

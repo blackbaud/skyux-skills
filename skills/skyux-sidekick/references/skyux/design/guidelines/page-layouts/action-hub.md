@@ -63,7 +63,7 @@ You can include up to three secondary buttons to provide quick access to common 
 
 ### Needs attention
 
-Display actions that users must perform based on business requirements or best practices, and link users to the place where they can complete the action, such as a [modal](../../../components/modal.md), [split view page](./split-view-page.md), or [record page](./record-page.md).
+In the needs attention section, display actions that users must perform based on business requirements or best practices, and link users to the place where they can complete the action, such as a [modal](../../../components/modal.md), [split view page](./split-view-page.md), or [record page](./record-page.md). If no needs attention items are available, the section is hidden and no empty state message is necessary.
 
 Start each item in the list with a verb that communicates the action to perform. After the verb, include the number of items that require attention and a succinct description.
 
@@ -155,9 +155,7 @@ Link needs attention items to the place where users can complete the action, suc
 
 #### Empty state
 
-When no needs attention items are available, an [empty state message](../user-assistance.md#empty-state-help) indicates that users are caught up.
-
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/action-hub/needs-attention-empty-600.5f5e9218db5b27300f26c925381b1343.png)
+When no needs attention items are available, the needs attention section is hidden.
 
 #### Columns
 

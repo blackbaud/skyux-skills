@@ -90,8 +90,7 @@ On smaller viewports, the date fields that appear when users select "Specific ra
 
 NPM package
 
-`@skyux/datetime`[View in NPM](https://www.npmjs.com/package/@skyux/datetime) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/datetime/src/lib/modules/date-range-picker/date-range-picker.module.ts#L10)
+`@skyux/datetime`[View in NPM](https://www.npmjs.com/package/@skyux/datetime) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/datetime/src/lib/modules/date-range-picker/date-range-picker.module.ts#L10)
 
 Install with NPM
 
@@ -829,7 +828,7 @@ The name of the error.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
@@ -861,6 +860,7 @@ function dateRangeExcludesWeekend(control: AbstractControl<SkyDateRangeCalculati
 @Component({
   selector: 'app-datetime-date-range-picker-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, ReactiveFormsModule, SkyDateRangePickerModule],
 })
 export class DatetimeDateRangePickerBasicExampleComponent {
@@ -978,7 +978,7 @@ describe('Basic date range picker example', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SkyDateRangeCalculation, SkyDateRangeCalculatorId, SkyDateRangePickerModule } from '@skyux/datetime';
 
@@ -988,6 +988,7 @@ import { SkyDateRangeCalculation, SkyDateRangeCalculatorId, SkyDateRangePickerMo
 @Component({
   selector: 'app-datetime-date-range-picker-help-key-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, ReactiveFormsModule, SkyDateRangePickerModule],
 })
 export class DatetimeDateRangePickerHelpKeyExampleComponent {
@@ -1094,7 +1095,7 @@ describe('Basic date range picker example', () => {
 
 ```typescript
 import { CommonModule } from '@angular/common';
-import { Component, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormBuilder, FormControl, FormsModule, ReactiveFormsModule, ValidationErrors } from '@angular/forms';
 import {
@@ -1112,6 +1113,7 @@ import {
 @Component({
   selector: 'app-datetime-date-range-picker-custom-calculator-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CommonModule, FormsModule, ReactiveFormsModule, SkyDateRangePickerModule],
 })
 export class DatetimeDateRangePickerCustomCalculatorExampleComponent {

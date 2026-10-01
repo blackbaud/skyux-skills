@@ -11,8 +11,7 @@ The autonumeric directive automatically formats currency and other numbers that 
 
 NPM package
 
-`@skyux/autonumeric`[View in NPM](https://www.npmjs.com/package/@skyux/autonumeric) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/autonumeric/src/lib/modules/autonumeric/autonumeric.module.ts#L9)
+`@skyux/autonumeric`[View in NPM](https://www.npmjs.com/package/@skyux/autonumeric) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/autonumeric/src/lib/modules/autonumeric/autonumeric.module.ts#L9)
 
 Install with NPM
 
@@ -69,7 +68,7 @@ The value for a settings object to pass to the AutoNumeric library. This overrid
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { SkyAutonumericModule, SkyAutonumericOptions } from '@skyux/autonumeric';
 import { SkyInputBoxModule } from '@skyux/forms';
@@ -80,6 +79,7 @@ import { SkyInputBoxModule } from '@skyux/forms';
 @Component({
   selector: 'app-autonumeric-preset-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ReactiveFormsModule, SkyAutonumericModule, SkyInputBoxModule],
 })
 export class AutonumericPresetExampleComponent {
@@ -110,7 +110,7 @@ export class AutonumericPresetExampleComponent {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { SkyAutonumericModule, SkyAutonumericOptions } from '@skyux/autonumeric';
 import { SkyInputBoxModule } from '@skyux/forms';
@@ -121,6 +121,7 @@ import { SkyInputBoxModule } from '@skyux/forms';
 @Component({
   selector: 'app-autonumeric-currency-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ReactiveFormsModule, SkyAutonumericModule, SkyInputBoxModule],
 })
 export class AutonumericCurrencyExampleComponent {
@@ -159,7 +160,7 @@ export class AutonumericCurrencyExampleComponent {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { SkyAutonumericModule, SkyAutonumericOptions } from '@skyux/autonumeric';
 import { SkyInputBoxModule } from '@skyux/forms';
@@ -170,6 +171,7 @@ import { SkyInputBoxModule } from '@skyux/forms';
 @Component({
   selector: 'app-autonumeric-international-formatting-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ReactiveFormsModule, SkyAutonumericModule, SkyInputBoxModule],
 })
 export class AutonumericInternationalFormattingExampleComponent {
@@ -206,7 +208,7 @@ export class AutonumericInternationalFormattingExampleComponent {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { SkyAutonumericModule, SkyAutonumericOptions, SkyAutonumericOptionsProvider } from '@skyux/autonumeric';
 import { SkyInputBoxModule } from '@skyux/forms';
@@ -225,6 +227,7 @@ import { DemoAutonumericOptionsProvider } from './options-provider';
       useClass: DemoAutonumericOptionsProvider,
     },
   ],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ReactiveFormsModule, SkyAutonumericModule, SkyInputBoxModule],
 })
 export class AutonumericOptionsProviderExampleComponent {

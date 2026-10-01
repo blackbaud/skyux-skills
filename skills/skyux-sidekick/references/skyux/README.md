@@ -94,6 +94,7 @@ Blackbaud's open source user experience framework to build web applications that
 
 ### Previous versions
 
+- SKY UX 14
 - SKY UX 13
 
 [](https://www.blackbaud.com/) © 2026 Blackbaud, Inc. All Rights Reserved.

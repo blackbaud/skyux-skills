@@ -128,8 +128,7 @@ Don't use `stacked` when the text editor:
 
 NPM package
 
-`@skyux/text-editor`[View in NPM](https://www.npmjs.com/package/@skyux/text-editor) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/text-editor/src/lib/modules/text-editor/text-editor.module.ts#L10)
+`@skyux/text-editor`[View in NPM](https://www.npmjs.com/package/@skyux/text-editor) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/text-editor/src/lib/modules/text-editor/text-editor.module.ts#L10)
 
 Install with NPM
 
@@ -383,7 +382,7 @@ Type: Type alias
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
@@ -406,6 +405,7 @@ function validateText(control: AbstractControl<string>): ValidationErrors | null
 @Component({
   selector: 'app-text-editor-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, ReactiveFormsModule, SkyTextEditorModule],
 })
 export class TextEditorExampleComponent {
@@ -452,7 +452,7 @@ export class TextEditorExampleComponent {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
@@ -475,6 +475,7 @@ function validateText(control: AbstractControl<string>): ValidationErrors | null
 @Component({
   selector: 'app-text-editor-help-key-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, ReactiveFormsModule, SkyTextEditorModule],
 })
 export class TextEditorHelpKeyExampleComponent {

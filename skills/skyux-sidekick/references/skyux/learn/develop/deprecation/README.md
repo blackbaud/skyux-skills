@@ -25,9 +25,9 @@ After we remove a feature, projects that rely on the feature need to move to an 
 
 ## Deprecated components
 
-Card
+Character count
 
-Deprecated, but with plans to develop a new version.
+Deprecated in favor of the input box component's characterLimit input.
 
 Definition list
 
@@ -37,9 +37,9 @@ Grid
 
 Deprecated in favor of the data grid component.
 
-Icon
+Jasmine matchers
 
-The icon input was removed in favor of iconName.
+Deprecated in favor of the @skyux-sdk/vitest matchers.
 
 List
 
@@ -64,10 +64,6 @@ Deprecated in favor of the page header component.
 Progress indicator wizard
 
 Deprecated in favor of the tabs wizard component.
-
-Select field
-
-Deprecated in favor of the lookup component.
 
 Stache action buttons
 

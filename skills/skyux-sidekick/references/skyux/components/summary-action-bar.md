@@ -102,8 +102,7 @@ When the viewport width changes, summary information re-flows based on the avail
 
 NPM package
 
-`@skyux/action-bars`[View in NPM](https://www.npmjs.com/package/@skyux/action-bars) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/action-bars/src/lib/modules/summary-action-bar/summary-action-bar.module.ts#L31)
+`@skyux/action-bars`[View in NPM](https://www.npmjs.com/package/@skyux/action-bars) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/action-bars/src/lib/modules/summary-action-bar/summary-action-bar.module.ts#L31)
 
 Install with NPM
 
@@ -734,7 +733,7 @@ Only find instances whose `data-sky-id` attribute matches the given value.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkySummaryActionBarModule } from '@skyux/action-bars';
 import { SkyKeyInfoModule } from '@skyux/indicators';
 
@@ -745,6 +744,7 @@ import { SkyKeyInfoModule } from '@skyux/indicators';
 @Component({
   selector: 'app-action-bars-summary-action-bar-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyKeyInfoModule, SkySummaryActionBarModule],
 })
 export class ActionBarsSummaryActionBarBasicExampleComponent {
@@ -876,7 +876,7 @@ describe('Basic summary action bar example', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { FormBuilder, FormControl, ReactiveFormsModule } from '@angular/forms';
 import { SkySummaryActionBarError, SkySummaryActionBarModule } from '@skyux/action-bars';
@@ -896,6 +896,7 @@ interface donationSummary {
 @Component({
   selector: 'app-action-bars-summary-action-bar-error-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyKeyInfoModule, SkySummaryActionBarModule, ReactiveFormsModule],
 })
 export class ActionBarsSummaryActionBarErrorExampleComponent {
@@ -1053,7 +1054,7 @@ describe('Error summary action bar example', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { SkyModalService } from '@skyux/modals';
 
 import { ModalComponent } from './modal.component';
@@ -1063,6 +1064,7 @@ import { ModalComponent } from './modal.component';
  */
 @Component({
   selector: 'app-action-bars-summary-action-bar-modal-example',
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
 })
 export class ActionBarsSummaryActionBarModalExampleComponent {
@@ -1204,7 +1206,7 @@ describe('Modal summary action bar example', () => {
 #### modal.component.ts
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { SkySummaryActionBarModule } from '@skyux/action-bars';
 import { SkyKeyInfoModule } from '@skyux/indicators';
 import { SkyModalInstance, SkyModalModule } from '@skyux/modals';
@@ -1212,6 +1214,7 @@ import { SkyModalInstance, SkyModalModule } from '@skyux/modals';
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyKeyInfoModule, SkyModalModule, SkySummaryActionBarModule],
 })
 export class ModalComponent {
@@ -1240,7 +1243,7 @@ export class ModalComponent {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkySummaryActionBarModule } from '@skyux/action-bars';
 import { SkyKeyInfoModule } from '@skyux/indicators';
 import { SkyTabsModule } from '@skyux/tabs';
@@ -1252,6 +1255,7 @@ import { SkyTabsModule } from '@skyux/tabs';
 @Component({
   selector: 'app-action-bars-summary-action-bar-tab-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyKeyInfoModule, SkySummaryActionBarModule, SkyTabsModule],
 })
 export class ActionBarsSummaryActionBarTabExampleComponent {

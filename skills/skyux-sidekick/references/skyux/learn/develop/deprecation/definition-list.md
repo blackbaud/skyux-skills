@@ -5,7 +5,7 @@ Reference: https://developer.blackbaud.com/skyux/learn/develop/deprecation/defin
 
 # Definition list
 
-The [definition list](../../../components/definition-list.md) component is deprecated in favor of the [description list](../../../components/description-list.md) component.
+The definition list component is deprecated in favor of the [description list](../../../components/description-list.md) component. To view development documentation for the definition list component, see the SKY UX 14 docs.
 
 ## How to migrate
 

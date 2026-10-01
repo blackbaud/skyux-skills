@@ -2,7 +2,7 @@
 
 component: repeater
 source: ./repeater.md
-section_count: 13
+section_count: 14
 
 ---
 
@@ -14,16 +14,17 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 
 | #   | Section                             | Tab         | Lines    | Read invocation                                     |
 | --- | ----------------------------------- | ----------- | -------- | --------------------------------------------------- |
-| 1   | Installation                        | development | 10–20    | `Read file_path=./repeater.md offset=10 limit=11`   |
-| 2   | SkyRepeaterModule                   | development | 21–26    | `Read file_path=./repeater.md offset=21 limit=6`    |
-| 3   | SkyRepeaterComponent                | development | 27–72    | `Read file_path=./repeater.md offset=27 limit=46`   |
-| 4   | SkyRepeaterItemComponent            | development | 73–144   | `Read file_path=./repeater.md offset=73 limit=72`   |
-| 5   | SkyRepeaterItemTitleComponent       | development | 145–152  | `Read file_path=./repeater.md offset=145 limit=8`   |
-| 6   | SkyRepeaterItemContentComponent     | development | 153–160  | `Read file_path=./repeater.md offset=153 limit=8`   |
-| 7   | SkyRepeaterItemContextMenuComponent | development | 161–168  | `Read file_path=./repeater.md offset=161 limit=8`   |
-| 8   | SkyRepeaterExpandModeType           | development | 169–176  | `Read file_path=./repeater.md offset=169 limit=8`   |
-| 9   | SkyRepeaterHarness                  | testing     | 177–234  | `Read file_path=./repeater.md offset=177 limit=58`  |
-| 10  | SkyRepeaterHarnessFilters           | testing     | 235–250  | `Read file_path=./repeater.md offset=235 limit=16`  |
-| 11  | SkyRepeaterItemHarness              | testing     | 251–484  | `Read file_path=./repeater.md offset=251 limit=234` |
-| 12  | SkyRepeaterItemHarnessFilters       | testing     | 485–510  | `Read file_path=./repeater.md offset=485 limit=26`  |
-| 13  | Code Examples                       | examples    | 511–1296 | `Read file_path=./repeater.md offset=511 limit=786` |
+| 1   | Installation                        | development | 10–19    | `Read file_path=./repeater.md offset=10 limit=10`   |
+| 2   | SkyRepeaterModule                   | development | 20–25    | `Read file_path=./repeater.md offset=20 limit=6`    |
+| 3   | SkyRepeaterComponent                | development | 26–81    | `Read file_path=./repeater.md offset=26 limit=56`   |
+| 4   | SkyRepeaterItemComponent            | development | 82–153   | `Read file_path=./repeater.md offset=82 limit=72`   |
+| 5   | SkyRepeaterItemTitleComponent       | development | 154–161  | `Read file_path=./repeater.md offset=154 limit=8`   |
+| 6   | SkyRepeaterItemContentComponent     | development | 162–169  | `Read file_path=./repeater.md offset=162 limit=8`   |
+| 7   | SkyRepeaterItemContextMenuComponent | development | 170–177  | `Read file_path=./repeater.md offset=170 limit=8`   |
+| 8   | SkyRepeaterExpandModeType           | development | 178–183  | `Read file_path=./repeater.md offset=178 limit=6`   |
+| 9   | SkyRepeaterSelectionModeType        | development | 184–191  | `Read file_path=./repeater.md offset=184 limit=8`   |
+| 10  | SkyRepeaterHarness                  | testing     | 192–249  | `Read file_path=./repeater.md offset=192 limit=58`  |
+| 11  | SkyRepeaterHarnessFilters           | testing     | 250–265  | `Read file_path=./repeater.md offset=250 limit=16`  |
+| 12  | SkyRepeaterItemHarness              | testing     | 266–499  | `Read file_path=./repeater.md offset=266 limit=234` |
+| 13  | SkyRepeaterItemHarnessFilters       | testing     | 500–525  | `Read file_path=./repeater.md offset=500 limit=26`  |
+| 14  | Code Examples                       | examples    | 526–1310 | `Read file_path=./repeater.md offset=526 limit=785` |

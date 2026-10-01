@@ -37,8 +37,7 @@ If a toast is the only place users can see a message, display the toast until us
 
 NPM package
 
-`@skyux/toast`[View in NPM](https://www.npmjs.com/package/@skyux/toast) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/toast/src/lib/modules/toast/toast.service.ts#L27)
+`@skyux/toast`[View in NPM](https://www.npmjs.com/package/@skyux/toast) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/toast/src/lib/modules/toast/toast.service.ts#L27)
 
 Install with NPM
 
@@ -378,7 +377,7 @@ Finds toasts with the matching text.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { SkyToastService, SkyToastType } from '@skyux/toast';
 
 /**
@@ -386,6 +385,7 @@ import { SkyToastService, SkyToastType } from '@skyux/toast';
  */
 @Component({
   selector: 'app-toast-basic-example',
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
 })
 export class ToastBasicExampleComponent {
@@ -476,7 +476,7 @@ describe('Basic toast example', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { SkyToastService, SkyToastType } from '@skyux/toast';
 
 import { CustomToastContext } from './custom-context';
@@ -487,6 +487,7 @@ import { CustomToastComponent } from './custom-toast.component';
  */
 @Component({
   selector: 'app-toast-custom-component-example',
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
 })
 export class ToastCustomComponentExampleComponent {
@@ -549,13 +550,14 @@ export class CustomToastHarness extends ComponentHarness {
 #### custom-toast.component.ts
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { SkyToastInstance } from '@skyux/toast';
 
 import { CustomToastContext } from './custom-context';
 
 @Component({
   selector: 'app-toast-content-example',
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './custom-toast.component.html',
 })
 export class CustomToastComponent {

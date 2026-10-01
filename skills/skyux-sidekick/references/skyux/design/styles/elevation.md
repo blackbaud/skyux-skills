@@ -5,8 +5,6 @@ Reference: https://developer.blackbaud.com/skyux/design/styles/elevation
 
 # Elevation
 
-This API was significantly updated in SKY UX 14. For the previous version, see the SKY UX 13 docs.
-
 ## Raised elevation
 
 Use the raised elevation to subtly emphasize elements on page backgrounds and to give the impression that they rise off the page. This elevation is built into SKY UX components, such as [alerts](../../components/alert.md), [avatars](../../components/avatar.md), and [boxes](../../components/box.md).

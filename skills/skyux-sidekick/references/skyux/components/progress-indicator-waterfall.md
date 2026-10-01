@@ -160,8 +160,7 @@ Do use waterfall progress indicators as the only content on a page while users c
 
 NPM package
 
-`@skyux/progress-indicator`[View in NPM](https://www.npmjs.com/package/@skyux/progress-indicator) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/progress-indicator/src/lib/modules/progress-indicator/progress-indicator.module.ts#L48)
+`@skyux/progress-indicator`[View in NPM](https://www.npmjs.com/package/@skyux/progress-indicator) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/progress-indicator/src/lib/modules/progress-indicator/progress-indicator.module.ts#L48)
 
 Install with NPM
 
@@ -891,7 +890,7 @@ export class ModalContext {
 #### modal.component.ts
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { SkyModalInstance, SkyModalModule } from '@skyux/modals';
 
 import { ModalContext } from './modal-context';
@@ -899,6 +898,7 @@ import { ModalContext } from './modal-context';
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyModalModule],
 })
 export class ModalComponent {

@@ -7,6 +7,14 @@ Reference: https://developer.blackbaud.com/skyux/learn/preview
 
 Monitor this page for updates to the SKY UX API that are not yet fully documented. In the developer docs, a preview tag will highlight these updates and indicate that features aren't yet represented in the design docs, demo, and code examples. This helps facilitate far-reaching changes that span multiple iterations and affect multiple components. It can also highlight breaking changes in minor versions, but the SKY UX team strives to avoid those.
 
+## September 2026
+
+### New Vitest matchers
+
+To help projects that run unit tests with Vitest, we added the [`@skyux-sdk/vitest` matchers](./develop/testing/vitest-matchers.md), which is the Vitest equivalent of our existing Jasmine matchers for accessibility, visibility, styling, text, and resource strings.
+
+These new matchers are currently in preview and not yet fully implemented and documented. We plan to officially release them after the SKY UX v15 release.
+
 ## August 2026
 
 ### New bar chart component

@@ -5,7 +5,7 @@ Reference: https://developer.blackbaud.com/skyux/learn/develop/deprecation/list
 
 # List
 
-The [list](../../../components/list.md) components and their features are deprecated in favor of [data manager](../../../components/data-manager.md) and an appropriate view such as [data grid](../../../components/data-grid.md) or [repeater](../../../components/repeater.md), but SKY UX plans to develop a new version of this feature after identifying value in a simplified approach for lists.
+The list components and their features are deprecated in favor of [data manager](../../../components/data-manager.md) and an appropriate view such as [data grid](../../../components/data-grid.md) or [repeater](../../../components/repeater.md), but SKY UX plans to develop a new version of this feature after identifying value in a simplified approach for lists. To view development documentation for the list component, see the SKY UX 14 docs.
 
 ## How to migrate
 

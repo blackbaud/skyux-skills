@@ -20,10 +20,17 @@ In addition to harnesses (`Sky*Harness`), this list includes the other testing u
 ## `@skyux/ag-grid/testing`
 
 - `SkyAgGridWrapperHarness`
+- `provideSkyAgGridTesting`
 
 ## `@skyux/avatar/testing`
 
 - `SkyAvatarHarness`
+
+## `@skyux/charts/testing`
+
+- `SkyChartBarHarness`
+- `SkyChartHarness`
+- `SkyChartTableModalHarness`
 
 ## `@skyux/colorpicker/testing`
 
@@ -37,11 +44,18 @@ In addition to harnesses (`Sky*Harness`), this list includes the other testing u
 - `SkyHelpTestingController`
 - `SkyHelpTestingModule`
 - `SkyInputHarness`
+- `SkyInstrumentationTestingController`
 - `SkyMediaQueryTestingController`
 - `SkyOverlayHarness`
 - `SkyQueryableComponentHarness`
 - `provideSkyFileReaderTesting`
+- `provideSkyInstrumentationTesting`
 - `provideSkyMediaQueryTesting`
+
+## `@skyux/data-grid/testing`
+
+- `SkyDataGridHarness`
+- `provideSkyDataGridTesting`
 
 ## `@skyux/data-manager/testing`
 
@@ -84,6 +98,7 @@ In addition to harnesses (`Sky*Harness`), this list includes the other testing u
 
 ## `@skyux/forms/testing`
 
+- `SkyButtonHarness`
 - `SkyCharacterCounterIndicatorHarness`
 - `SkyCheckboxGroupHarness`
 - `SkyCheckboxHarness`

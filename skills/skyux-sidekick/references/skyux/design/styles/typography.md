@@ -5,8 +5,6 @@ Reference: https://developer.blackbaud.com/skyux/design/styles/typography
 
 # Typography
 
-This API was significantly updated in SKY UX 14. For the previous version, see the SKY UX 13 docs.
-
 ## Headings
 
 Use `<h1>` through `<h5>` headings to introduce pages and sections of content within pages. Headings contrast with body text and other elements to create a visual hierarchy that guides the eye. They orient users and provide structure so that users can scan pages to quickly understand the structure.

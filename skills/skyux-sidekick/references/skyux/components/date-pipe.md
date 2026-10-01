@@ -11,8 +11,7 @@ The date pipe formats date values according to locale rules. The fuzzy date pipe
 
 NPM package
 
-`@skyux/datetime`[View in NPM](https://www.npmjs.com/package/@skyux/datetime) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/datetime/src/lib/modules/date-pipe/date-pipe.module.ts#L13)
+`@skyux/datetime`[View in NPM](https://www.npmjs.com/package/@skyux/datetime) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/datetime/src/lib/modules/date-pipe/date-pipe.module.ts#L13)
 
 Install with NPM
 
@@ -127,7 +126,7 @@ The year in a fuzzy date.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyDatePipeModule } from '@skyux/datetime';
 
 /**
@@ -136,6 +135,7 @@ import { SkyDatePipeModule } from '@skyux/datetime';
 @Component({
   selector: 'app-datetime-date-pipe-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyDatePipeModule],
 })
 export class DatetimeDatePipeBasicExampleComponent {

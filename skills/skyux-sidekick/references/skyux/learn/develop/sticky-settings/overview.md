@@ -5,7 +5,7 @@ Reference: https://developer.blackbaud.com/skyux/learn/develop/sticky-settings/o
 
 # Overview
 
-Sticky settings save user preferences across sessions in data managers, flyouts, grids, and tile dashboards. Sticky settings preserve the [current data state of data managers](../../../components/data-manager.md), [width of flyouts](../../../components/flyout.md), the [column order and the sorting of columns in grids](../../../components/grid.md), and the [layout and collapsed state of tiles in tile dashboards](../../../components/tile.md).
+Sticky settings save user preferences across sessions in data managers, flyouts, and tile dashboards. Sticky settings preserve the [current data state of data managers](../../../components/data-manager.md), [width of flyouts](../../../components/flyout.md), and the [layout and collapsed state of tiles in tile dashboards](../../../components/tile.md).
 
 To implement sticky settings, you must provide a class for `SkyUIConfigService` in your SPA's root module.
 
@@ -63,4 +63,4 @@ TypeScript
       }
     }
 
-The [data manager](../../../components/data-manager.md), [flyout](../../../components/flyout.md), [grid](../../../components/grid.md), and [tile](../../../components/tile.md) components support a `settingsKey` property for sticky settings. When you provide this property, the components automatically call the `SkyUIConfigService` stub to retrieve stored settings during appropriate actions. This is why you provide your own implementation as shown above.
+The [data manager](../../../components/data-manager.md), [flyout](../../../components/flyout.md), and [tile](../../../components/tile.md) components support a `settingsKey` property for sticky settings. When you provide this property, the components automatically call the `SkyUIConfigService` stub to retrieve stored settings during appropriate actions. This is why you provide your own implementation as shown above.

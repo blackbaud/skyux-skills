@@ -127,6 +127,10 @@ Don't use `stacked` when the datepicker:
 
 ## Behavior and states
 
+### Keyboard shortcut for current date
+
+To populate the current date, users can press `F3` on the keyboard. Focus must be on the datepicker's input, picker button, or calendar. For fuzzy dates, focus must be on the input. The current date must also be selectable, and the shortcut doesn't work if the current date is disabled or if it is outside the minimum and maximum dates.
+
 ### Month string conversion for fuzzy dates
 
 If users enter months as text instead of numbers, the datepicker converts the text to numbers when the datepicker loses focus.
@@ -151,8 +155,7 @@ If users enter months as text instead of numbers, the datepicker converts the te
 
 NPM package
 
-`@skyux/datetime`[View in NPM](https://www.npmjs.com/package/@skyux/datetime) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/datetime/src/lib/modules/datepicker/datepicker.module.ts#L36)
+`@skyux/datetime`[View in NPM](https://www.npmjs.com/package/@skyux/datetime) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/datetime/src/lib/modules/datepicker/datepicker.module.ts#L36)
 
 Install with NPM
 
@@ -741,13 +744,31 @@ Clicks the help inline button.
 
 `Promise<void>`
 
+#### `getCharacterCount(): Promise<number>`
+
+Gets the current character count, or throws an error if the input box does not set the `characterLimit` input.
+
+#### Returns
+
+`Promise<number>`
+
 #### `getCharacterCounter(): Promise<SkyCharacterCounterIndicatorHarness>`
+
+Warning: **Deprecated.** Use `getCharacterCount()`, `getCharacterLimit()`, and `isOverCharacterLimit()` instead. Those methods require the `characterLimit` input, so an input box that projects a `sky-character-counter-indicator` component must migrate to that input first.
 
 Gets the character counter indicator for the input box or throws an error if a character limit is not specified.
 
 #### Returns
 
 `Promise<SkyCharacterCounterIndicatorHarness>`
+
+#### `getCharacterLimit(): Promise<number>`
+
+Gets the character limit, or throws an error if the input box does not set the `characterLimit` input.
+
+#### Returns
+
+`Promise<number>`
 
 #### `getCustomErrors(): Promise<SkyStatusIndicatorHarness[]>`
 
@@ -917,6 +938,14 @@ Whether the field is set to an invalid URL.
 
 `Promise<boolean>`
 
+#### `isOverCharacterLimit(): Promise<boolean>`
+
+Whether the character count has exceeded the character limit. Throws an error if the input box does not set the `characterLimit` input.
+
+#### Returns
+
+`Promise<boolean>`
+
 #### `queryHarness(query: HarnessQuery<T>): Promise<T>`
 
 Returns a child harness or throws an error if not found.
@@ -1009,7 +1038,7 @@ Gets a `HarnessPredicate` that can be used to search for a `SkyInputBoxHarness` 
 
 ```typescript
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
@@ -1047,6 +1076,7 @@ function validateDate(control: AbstractControl<Date | string | null>): Validatio
 @Component({
   selector: 'app-datetime-datepicker-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CommonModule, FormsModule, ReactiveFormsModule, SkyDatepickerModule, SkyInputBoxModule],
 })
 export class DatetimeDatepickerBasicExampleComponent {
@@ -1168,7 +1198,7 @@ describe('Basic datepicker example', () => {
 
 ```typescript
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SkyDatepickerCalendarChange, SkyDatepickerCustomDate, SkyDatepickerModule } from '@skyux/datetime';
 import { SkyInputBoxModule } from '@skyux/forms';
@@ -1182,6 +1212,7 @@ import { delay } from 'rxjs/operators';
 @Component({
   selector: 'app-datetime-datepicker-custom-dates-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CommonModule, FormsModule, ReactiveFormsModule, SkyDatepickerModule, SkyInputBoxModule],
 })
 export class DatetimeDatepickerCustomDatesExampleComponent {
@@ -1297,7 +1328,7 @@ export class DatetimeDatepickerCustomDatesExampleComponent {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { SkyDatepickerModule } from '@skyux/datetime';
 import { SkyInputBoxModule } from '@skyux/forms';
@@ -1308,6 +1339,7 @@ import { SkyInputBoxModule } from '@skyux/forms';
 @Component({
   selector: 'app-datetime-datepicker-fuzzy-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, ReactiveFormsModule, SkyDatepickerModule, SkyInputBoxModule],
 })
 export class DatetimeDatepickerFuzzyExampleComponent {

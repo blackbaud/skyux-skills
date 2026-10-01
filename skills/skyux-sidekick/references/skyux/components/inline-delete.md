@@ -68,8 +68,7 @@ The inline delete confirmation uses the `sky-btn-danger` (red) style for the Del
 
 NPM package
 
-`@skyux/layout`[View in NPM](https://www.npmjs.com/package/@skyux/layout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/layout/src/lib/modules/inline-delete/inline-delete.module.ts#L18)
+`@skyux/layout`[View in NPM](https://www.npmjs.com/package/@skyux/layout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/layout/src/lib/modules/inline-delete/inline-delete.module.ts#L18)
 
 Install with NPM
 
@@ -176,7 +175,7 @@ Only find instances whose `data-sky-id` attribute matches the given value.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyInlineDeleteModule } from '@skyux/layout';
 import { SkyRepeaterModule } from '@skyux/lists';
 import { SkyDropdownModule } from '@skyux/popovers';
@@ -193,6 +192,7 @@ interface InlineRepeaterDemoItem {
 @Component({
   selector: 'app-layout-inline-delete-repeater-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyDropdownModule, SkyInlineDeleteModule, SkyRepeaterModule],
 })
 export class LayoutInlineDeleteRepeaterExampleComponent {
@@ -321,7 +321,7 @@ describe('Custom component inline delete example', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyIconModule } from '@skyux/icon';
 import { SkyInlineDeleteModule } from '@skyux/layout';
 
@@ -332,6 +332,7 @@ import { SkyInlineDeleteModule } from '@skyux/layout';
   selector: 'app-layout-inline-delete-custom-example',
   templateUrl: './example.component.html',
   styleUrls: ['./example.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyIconModule, SkyInlineDeleteModule],
 })
 export class LayoutInlineDeleteCustomExampleComponent {

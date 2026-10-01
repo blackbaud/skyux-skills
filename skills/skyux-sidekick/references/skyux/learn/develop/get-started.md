@@ -17,7 +17,7 @@ If you are building your first Angular application, follow the [instructions for
 
 ### Angular CLI
 
-SKY UX requires Angular CLI version 21. To check your version, run `ng version` from the command line. To install Angular CLI version 21, run `npm install -g @angular/cli@21`.
+SKY UX requires Angular CLI version 22. To check your version, run `ng version` from the command line. To install Angular CLI version 22, run `npm install -g @angular/cli@22`.
 
 ### Node.js
 

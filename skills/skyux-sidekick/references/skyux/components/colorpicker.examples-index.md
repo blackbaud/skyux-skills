@@ -12,6 +12,6 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                                      | Lines     | Read invocation                                         |
 | --- | -------------------------------------------- | --------- | ------------------------------------------------------- |
-| 1   | Basic example                                | 989–1143  | `Read file_path=./colorpicker.md offset=989 limit=155`  |
-| 2   | Interact with a colorpicker programmatically | 1144–1254 | `Read file_path=./colorpicker.md offset=1144 limit=111` |
-| 3   | Colorpicker with help key                    | 1255–1407 | `Read file_path=./colorpicker.md offset=1255 limit=153` |
+| 1   | Basic example                                | 988–1143  | `Read file_path=./colorpicker.md offset=988 limit=156`  |
+| 2   | Interact with a colorpicker programmatically | 1144–1255 | `Read file_path=./colorpicker.md offset=1144 limit=112` |
+| 3   | Colorpicker with help key                    | 1256–1409 | `Read file_path=./colorpicker.md offset=1256 limit=154` |

@@ -31,8 +31,7 @@ Don't use rich text display anywhere users enter or edit rich text. Use the [tex
 
 NPM package
 
-`@skyux/text-editor`[View in NPM](https://www.npmjs.com/package/@skyux/text-editor) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/text-editor/src/lib/modules/rich-text-display/rich-text-display.module.ts#L9)
+`@skyux/text-editor`[View in NPM](https://www.npmjs.com/package/@skyux/text-editor) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/text-editor/src/lib/modules/rich-text-display/rich-text-display.module.ts#L9)
 
 Install with NPM
 
@@ -63,7 +62,7 @@ The rich text to display.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyRichTextDisplayModule } from '@skyux/text-editor';
 
 /**
@@ -72,6 +71,7 @@ import { SkyRichTextDisplayModule } from '@skyux/text-editor';
 @Component({
   selector: 'app-text-editor-rich-text-display-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyRichTextDisplayModule],
 })
 export class TextEditorRichTextDisplayExampleComponent {

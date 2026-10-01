@@ -11,8 +11,7 @@ The text expand repeater component truncates a list and displays a limited numbe
 
 NPM package
 
-`@skyux/layout`[View in NPM](https://www.npmjs.com/package/@skyux/layout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/layout/src/lib/modules/text-expand-repeater/text-expand-repeater.module.ts#L18)
+`@skyux/layout`[View in NPM](https://www.npmjs.com/package/@skyux/layout) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/layout/src/lib/modules/text-expand-repeater/text-expand-repeater.module.ts#L18)
 
 Install with NPM
 
@@ -217,7 +216,7 @@ Returns a child test element or null if not found.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyTextExpandRepeaterModule } from '@skyux/layout';
 
 /**
@@ -226,6 +225,7 @@ import { SkyTextExpandRepeaterModule } from '@skyux/layout';
 @Component({
   selector: 'app-layout-text-expand-repeater-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyTextExpandRepeaterModule],
 })
 export class LayoutTextExpandRepeaterExampleComponent {

@@ -2,7 +2,7 @@
 
 component: chart-bar
 source: ./chart-bar.md
-section_count: 22
+section_count: 24
 
 ---
 
@@ -12,27 +12,29 @@ Tabs mirror the SPA navigation: `design` (purpose / when-to-use / anatomy / opti
 
 Read only the section you need. Each entry below gives the exact `Read` arguments to load it.
 
-| #   | Section                   | Tab         | Lines   | Read invocation                                      |
-| --- | ------------------------- | ----------- | ------- | ---------------------------------------------------- |
-| 1   | Usage                     | design      | 12–118  | `Read file_path=./chart-bar.md offset=12 limit=107`  |
-| 2   | Anatomy                   | design      | 119–210 | `Read file_path=./chart-bar.md offset=119 limit=92`  |
-| 3   | Options                   | design      | 211–301 | `Read file_path=./chart-bar.md offset=211 limit=91`  |
-| 4   | Behavior and states       | design      | 302–316 | `Read file_path=./chart-bar.md offset=302 limit=15`  |
-| 5   | Installation              | development | 317–327 | `Read file_path=./chart-bar.md offset=317 limit=11`  |
-| 6   | SkyChart                  | development | 328–379 | `Read file_path=./chart-bar.md offset=328 limit=52`  |
-| 7   | SkyChartAxisCategory      | development | 380–401 | `Read file_path=./chart-bar.md offset=380 limit=22`  |
-| 8   | SkyChartAxisValue         | development | 402–447 | `Read file_path=./chart-bar.md offset=402 limit=46`  |
-| 9   | SkyChartBar               | development | 448–469 | `Read file_path=./chart-bar.md offset=448 limit=22`  |
-| 10  | SkyChartBarSeries         | development | 470–491 | `Read file_path=./chart-bar.md offset=470 limit=22`  |
-| 11  | SkyChartBarOrientation    | development | 492–499 | `Read file_path=./chart-bar.md offset=492 limit=8`   |
-| 12  | SkyChartBarSeriesLayout   | development | 500–507 | `Read file_path=./chart-bar.md offset=500 limit=8`   |
-| 13  | SkyChartBarSeriesValue    | development | 508–515 | `Read file_path=./chart-bar.md offset=508 limit=8`   |
-| 14  | SkyChartHeadingLevel      | development | 516–523 | `Read file_path=./chart-bar.md offset=516 limit=8`   |
-| 15  | SkyChartHeadingStyle      | development | 524–531 | `Read file_path=./chart-bar.md offset=524 limit=8`   |
-| 16  | SkyChartValueFormat       | development | 532–539 | `Read file_path=./chart-bar.md offset=532 limit=8`   |
-| 17  | SkyChartValueScaleType    | development | 540–549 | `Read file_path=./chart-bar.md offset=540 limit=10`  |
-| 18  | SkyChartBarHarness        | testing     | 550–579 | `Read file_path=./chart-bar.md offset=550 limit=30`  |
-| 19  | SkyChartBarHarnessFilters | testing     | 580–595 | `Read file_path=./chart-bar.md offset=580 limit=16`  |
-| 20  | SkyChartHarness           | testing     | 596–769 | `Read file_path=./chart-bar.md offset=596 limit=174` |
-| 21  | SkyChartHarnessFilters    | testing     | 770–790 | `Read file_path=./chart-bar.md offset=770 limit=21`  |
-| 22  | SkyChartTableModalHarness | testing     | 791–840 | `Read file_path=./chart-bar.md offset=791 limit=50`  |
+| #   | Section                   | Tab         | Lines    | Read invocation                                       |
+| --- | ------------------------- | ----------- | -------- | ----------------------------------------------------- |
+| 1   | Usage                     | design      | 10–108   | `Read file_path=./chart-bar.md offset=10 limit=99`    |
+| 2   | Anatomy                   | design      | 109–200  | `Read file_path=./chart-bar.md offset=109 limit=92`   |
+| 3   | Options                   | design      | 201–224  | `Read file_path=./chart-bar.md offset=201 limit=24`   |
+| 4   | Content                   | design      | 225–252  | `Read file_path=./chart-bar.md offset=225 limit=28`   |
+| 5   | Behavior and states       | design      | 253–276  | `Read file_path=./chart-bar.md offset=253 limit=24`   |
+| 6   | Installation              | development | 277–286  | `Read file_path=./chart-bar.md offset=277 limit=10`   |
+| 7   | SkyChart                  | development | 287–338  | `Read file_path=./chart-bar.md offset=287 limit=52`   |
+| 8   | SkyChartAxisCategory      | development | 339–360  | `Read file_path=./chart-bar.md offset=339 limit=22`   |
+| 9   | SkyChartAxisValue         | development | 361–406  | `Read file_path=./chart-bar.md offset=361 limit=46`   |
+| 10  | SkyChartBar               | development | 407–428  | `Read file_path=./chart-bar.md offset=407 limit=22`   |
+| 11  | SkyChartBarSeries         | development | 429–450  | `Read file_path=./chart-bar.md offset=429 limit=22`   |
+| 12  | SkyChartBarOrientation    | development | 451–458  | `Read file_path=./chart-bar.md offset=451 limit=8`    |
+| 13  | SkyChartBarSeriesLayout   | development | 459–466  | `Read file_path=./chart-bar.md offset=459 limit=8`    |
+| 14  | SkyChartBarSeriesValue    | development | 467–474  | `Read file_path=./chart-bar.md offset=467 limit=8`    |
+| 15  | SkyChartHeadingLevel      | development | 475–482  | `Read file_path=./chart-bar.md offset=475 limit=8`    |
+| 16  | SkyChartHeadingStyle      | development | 483–490  | `Read file_path=./chart-bar.md offset=483 limit=8`    |
+| 17  | SkyChartValueFormat       | development | 491–498  | `Read file_path=./chart-bar.md offset=491 limit=8`    |
+| 18  | SkyChartValueScaleType    | development | 499–508  | `Read file_path=./chart-bar.md offset=499 limit=10`   |
+| 19  | SkyChartBarHarness        | testing     | 509–538  | `Read file_path=./chart-bar.md offset=509 limit=30`   |
+| 20  | SkyChartBarHarnessFilters | testing     | 539–554  | `Read file_path=./chart-bar.md offset=539 limit=16`   |
+| 21  | SkyChartHarness           | testing     | 555–728  | `Read file_path=./chart-bar.md offset=555 limit=174`  |
+| 22  | SkyChartHarnessFilters    | testing     | 729–749  | `Read file_path=./chart-bar.md offset=729 limit=21`   |
+| 23  | SkyChartTableModalHarness | testing     | 750–799  | `Read file_path=./chart-bar.md offset=750 limit=50`   |
+| 24  | Code Examples             | examples    | 800–2077 | `Read file_path=./chart-bar.md offset=800 limit=1278` |

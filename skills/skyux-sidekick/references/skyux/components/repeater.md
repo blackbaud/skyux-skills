@@ -11,8 +11,7 @@ Repeaters display information in containers for a list of objects. Repeater list
 
 NPM package
 
-`@skyux/lists`[View in NPM](https://www.npmjs.com/package/@skyux/lists) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/lists/src/lib/modules/repeater/repeater.module.ts#L45)
+`@skyux/lists`[View in NPM](https://www.npmjs.com/package/@skyux/lists) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/lists/src/lib/modules/repeater/repeater.module.ts#L45)
 
 Install with NPM
 
@@ -60,6 +59,16 @@ Whether users can change the order of items in the repeater list. Each repeater 
 
 Default: `false`
 
+#### `selectionMode: InputSignalWithTransform<SkyRepeaterSelectionModeType, SkyRepeaterSelectionModeType | undefined>`
+
+The selection interaction to apply to repeater items. The valid options are `none`, `single`, and `multiple`.
+
+- `none` (the default) does not add any selection interaction.
+- `single` lets users select one repeater item at a time. Clicking anywhere on a repeater item, or pressing the Space or Enter key while it has focus, selects it and clears any previously-selected item. Users can move focus between repeater items with the arrow keys, Home, and End [to support accessibility](../learn/accessibility/README.md).
+- `multiple` displays a checkbox on each repeater item so users can select multiple items at a time. The checkbox on a disabled repeater item is disabled.
+
+Default: `"none"`
+
 ### Outputs
 
 #### `activeIndexChange: EventEmitter<number>`
@@ -100,7 +109,7 @@ Default: `true`
 
 #### `isSelected: boolean | undefined`
 
-Whether the repeater item's checkbox is selected. When users select the repeater item, the specified property on your model is updated accordingly.
+Whether the repeater item is selected, either via its own checkbox or via the repeater's `selectionMode` property. When users select the repeater item, the specified property on your model is updated accordingly.
 
 Default: `false`
 
@@ -110,9 +119,9 @@ The human-readable name for the repeater item that is available for multiple pur
 
 #### `selectable: boolean | undefined`
 
-Whether to display a checkbox in the left of the repeater item.
+Warning: **Deprecated.** Set the repeater's `selectionMode` property to `multiple` instead.
 
-Default: `false`
+Whether to display a checkbox in the left of the repeater item. This property never displays a checkbox when the repeater's `selectionMode` property is set to `single`.
 
 #### `showInlineForm: boolean | undefined`
 
@@ -164,13 +173,19 @@ Type: Component
 
 Selector: `sky-repeater-item-context-menu`
 
-Wraps and styles a [`sky-dropdown` component](./dropdown.md).
+Wraps a dropdown menu or a single button in a context menu to display actions that users can perform on repeater items. For multiple actions, display the actions in a [dropdown component](./dropdown.md). The context menu styles the dropdown and provides its contextual accessibility name. For a single action, such as edit or delete, use a [button](./button.md) with the `sky-btn sky-btn-icon-borderless` class.
 
 ## SkyRepeaterExpandModeType
 
 Type: Type alias
 
     type SkyRepeaterExpandModeType = "single" | "multiple" | "none"
+
+## SkyRepeaterSelectionModeType
+
+Type: Type alias
+
+    type SkyRepeaterSelectionModeType = "none" | "single" | "multiple"
 
 SKY UX test harnesses are built upon Angular CDK component harnesses. For more information see the [Angular CDK component harness documentation](https://material.angular.io/cdk/test-harnesses/overview).
 
@@ -276,7 +291,7 @@ Collapses the repeater item, or does nothing if already collapsed.
 
 #### `deselect(): Promise<void>`
 
-Deselects the repeater item.
+Deselects the repeater item. Throws an error if the item belongs to a single-select repeater, since a single-select item can only be replaced by selecting a different item, not cleared directly.
 
 #### Returns
 
@@ -344,7 +359,7 @@ Whether the repeater item is collapsible.
 
 #### `isDisabled(): Promise<boolean>`
 
-Whether a selectable repeater item is disabled.
+Whether a selectable repeater item is disabled, either via a checkbox's disabled state, or, for a single-select repeater item, via the `aria-disabled` attribute on the item's row.
 
 #### Returns
 
@@ -368,7 +383,7 @@ Whether the repeater item is reorderable.
 
 #### `isSelectable(): Promise<boolean>`
 
-Whether a repeater item has selection enabled.
+Whether a repeater item has selection enabled, either via a checkbox (the repeater's `selectionMode` property set to `multiple` or the item's deprecated `selectable` property) or via the repeater's `selectionMode` property set to `single`.
 
 #### Returns
 
@@ -456,7 +471,7 @@ Returns a child test element or null if not found.
 
 #### `select(): Promise<void>`
 
-Selects the repeater item.
+Selects the repeater item. For a checkbox-selectable item, checks its checkbox. For a single-select repeater item, clicks the item, which also clears any previously selected item.
 
 #### Returns
 
@@ -515,7 +530,7 @@ Only find instances whose title matches the given value.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyRepeaterModule } from '@skyux/lists';
 import { SkyDropdownModule } from '@skyux/popovers';
 
@@ -526,6 +541,7 @@ import { SkyDropdownModule } from '@skyux/popovers';
   selector: 'app-lists-repeater-basic-example',
   templateUrl: './example.component.html',
   styleUrls: ['./example.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyDropdownModule, SkyRepeaterModule],
 })
 export class ListsRepeaterBasicExampleComponent {
@@ -702,7 +718,7 @@ describe('Repeater basic example', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyRepeaterModule } from '@skyux/lists';
 import { SkyDropdownModule } from '@skyux/popovers';
 
@@ -717,6 +733,7 @@ let nextId = 0;
   selector: 'app-lists-repeater-add-remove-example',
   templateUrl: './example.component.html',
   styleUrls: ['./example.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyDropdownModule, SkyRepeaterModule],
 })
 export class ListsRepeaterAddRemoveExampleComponent {
@@ -777,17 +794,13 @@ export class ListsRepeaterAddRemoveExampleComponent {
 <div class="sky-theme-margin-bottom-l">
   <sky-repeater
     data-sky-id="repeater-example"
+    selectionMode="multiple"
     [expandMode]="'single'"
     [reorderable]="true"
     (orderChange)="changeItems($event)"
   >
     @for (item of items; track item) {
-    <sky-repeater-item
-      [selectable]="true"
-      [tag]="item.note"
-      [disabled]="item.isDisabled"
-      [(isSelected)]="item.isSelected"
-    >
+    <sky-repeater-item [tag]="item.note" [disabled]="item.isDisabled" [(isSelected)]="item.isSelected">
       <sky-repeater-item-title class="example-repeater-flex">
         <div class="example-repeater-item-title">{{ item.title }}</div>
         <div>{{ item.status }}</div>
@@ -996,7 +1009,7 @@ export interface Item {
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SkyInputBoxModule } from '@skyux/forms';
 import { SkyIconModule } from '@skyux/icon';
@@ -1021,6 +1034,7 @@ interface Item {
 @Component({
   selector: 'app-lists-repeater-inline-form-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, ReactiveFormsModule, SkyIconModule, SkyInputBoxModule, SkyRepeaterModule],
 })
 export class ListsRepeaterInlineFormExampleComponent {

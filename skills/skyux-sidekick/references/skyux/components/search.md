@@ -11,8 +11,7 @@ The search input lets users enter search criteria.
 
 NPM package
 
-`@skyux/lookup`[View in NPM](https://www.npmjs.com/package/@skyux/lookup) | [View in GitHub](https://github.com/blackbaud/skyux/blob/14.x.x
-/libs/components/lookup/src/lib/modules/search/search.module.ts#L27)
+`@skyux/lookup`[View in NPM](https://www.npmjs.com/package/@skyux/lookup) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/lookup/src/lib/modules/search/search.module.ts#L27)
 
 Install with NPM
 
@@ -253,7 +252,7 @@ Only find instances whose `data-sky-id` attribute matches the given value.
 #### example.component.ts (primary file)
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyToolbarModule } from '@skyux/layout';
 import { SkyRepeaterModule } from '@skyux/lists';
 import { SkySearchModule } from '@skyux/lookup';
@@ -266,6 +265,7 @@ import { Item } from './item';
 @Component({
   selector: 'app-lookup-search-basic-example',
   templateUrl: './example.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SkyRepeaterModule, SkySearchModule, SkyToolbarModule],
 })
 export class LookupSearchBasicExampleComponent {
