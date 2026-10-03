@@ -1,15 +1,11 @@
 ---
-Title: Jasmine matchers (deprecated)
+Title: Jasmine matchers
 Reference: https://developer.blackbaud.com/skyux/learn/develop/testing/jasmine-matchers
 ---
 
-# Jasmine matchers (deprecated)
+# Jasmine matchers
 
 The `@skyux-sdk/testing` package provides matchers for Karma and Jasmine unit tests.
-
-Important warning:
-
-The Jasmine matchers are deprecated in favor of the [Vitest matchers](./vitest-matchers.md). For migration steps, see [Convert to Vitest matchers](../migrations/convert-to-vitest-matchers.md).
 
 ## expect
 

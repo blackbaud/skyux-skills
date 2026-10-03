@@ -1,9 +1,11 @@
 ---
-Title: Vitest matchers
+Title: Vitest matchers (preview)
 Reference: https://developer.blackbaud.com/skyux/learn/develop/testing/vitest-matchers
 ---
 
-# Vitest matchers
+# Vitest matchers (preview)
+
+The `@skyux-sdk/vitest` matchers are currently in [preview mode](../../preview.md) and aren't fully implemented or documented. We plan to officially release them after the SKY UX v15 release, and support for the Vite builder and Vitest test runner is rolling out soon for Blackbaud teams.
 
 The `@skyux-sdk/vitest` package provides matchers for Vitest unit tests.
 

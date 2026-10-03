@@ -5,11 +5,11 @@ Reference: https://developer.blackbaud.com/skyux/learn/develop/migrations/conver
 
 # Convert to Vitest matchers
 
-Our custom [Jasmine matchers](../testing/jasmine-matchers.md) in the `@skyux-sdk/testing` package are deprecated in favor of Vitest and [@skyux-sdk/vitest matchers](../testing/vitest-matchers.md).
+Our custom [Jasmine matchers](../testing/jasmine-matchers.md) in the `@skyux-sdk/testing` package can be replaced with the preview [`@skyux-sdk/vitest` matchers](../testing/vitest-matchers.md) if your project already runs its tests with Vitest.
 
-## Why this is deprecated
+## Why you should migrate
 
-Karma is no longer maintained by its authors, and Angular has moved to Vitest as the recommended unit test runner. Because SKY UX testing utilities are built on top of the runner that Angular supports, the Jasmine matchers in `@skyux-sdk/testing` are deprecated alongside Karma.
+Karma is no longer maintained by its authors, and Angular has moved to Vitest as the recommended unit test runner. SKY UX provides the `@skyux-sdk/vitest` matchers, currently in [preview](../../preview.md), as the Vitest equivalent of the Jasmine matchers in `@skyux-sdk/testing`. Support for the Vite builder and Vitest test runner is rolling out soon for Blackbaud teams, and when your project switches to run on Vitest, migrating will let you drop the Karma-only testing package.
 
 ## How to migrate
 

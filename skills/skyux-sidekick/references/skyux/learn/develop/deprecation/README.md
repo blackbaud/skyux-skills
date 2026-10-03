@@ -37,10 +37,6 @@ Grid
 
 Deprecated in favor of the data grid component.
 
-Jasmine matchers
-
-Deprecated in favor of the @skyux-sdk/vitest matchers.
-
 List
 
 Deprecated, but with plans to develop a new version.
