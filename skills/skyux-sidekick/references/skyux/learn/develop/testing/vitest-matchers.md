@@ -32,7 +32,7 @@ angular.json JSON
             "test": {
               "builder": "@angular/build:unit-test",
               "options": {
-                "setupFiles": ["node_modules/@skyux-sdk/vitest/matchers-setup.mjs"]
+                "setupFiles": ["node_modules/@skyux-sdk/vitest/matchers-setup.ts"]
               }
             }
           }

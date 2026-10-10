@@ -210,6 +210,10 @@ Creates an action hub to direct user attention to important actions and provide 
 
 ### Inputs
 
+#### `helpKey: InputSignal<string | undefined>`
+
+A help key that identifies the page's default [global help](../learn/develop/global-help.md) content to display.
+
 #### `needsAttention: InputSignal<SkyActionHubNeedsAttentionInput | undefined>`
 
 The list of actions that users must perform based on business requirements or best practices, or `"loading"` to display a wait indicator.

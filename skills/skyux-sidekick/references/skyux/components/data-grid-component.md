@@ -235,6 +235,10 @@ Whether to visually hide `headingText` while keeping it available to assistive t
 
 Default: `false`
 
+#### `helpKey: InputSignal<string | undefined>`
+
+A help key that identifies the global help content to display. When specified, a [help inline](./help-inline.md) button is added to the column header. Clicking the button invokes [global help](../learn/develop/global-help.md) as configured by the application.
+
 #### `helpPopoverContent: InputSignal<string | TemplateRef<unknown> | undefined>`
 
 The content of the help popover. When specified, a [help inline](./help-inline.md) button is added to the column header. The help inline button displays a [popover](./popover.md) when clicked using the specified content and optional title.

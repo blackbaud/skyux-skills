@@ -1161,6 +1161,20 @@ Harness for interacting with SKY UX AG Grid components in tests. Add `provideSky
 
 ### Methods
 
+#### `getDisplayedCellValues(columnId: string): Promise<string[]>`
+
+Retrieves the formatted values of a column for the rows the grid currently displays, in display order.
+
+#### Parameters
+
+##### `columnId: string`
+
+The ID of the column.
+
+#### Returns
+
+`Promise<string[]>`
+
 #### `getDisplayedColumnHeaderNames(): Promise<string[]>`
 
 Retrieves the header names of the currently displayed columns.
@@ -1184,6 +1198,20 @@ Checks whether the grid is ready.
 #### Returns
 
 `Promise<boolean>`
+
+#### `waitUntilRendered(action?: () => void | Promise<void>): Promise<void>`
+
+Waits until the grid finishes rendering. Use this instead of `fixture.whenStable()`, since AG Grid renders outside the Angular zone. Requires `provideSkyAgGridTesting()`; without it, this resolves without waiting.
+
+#### Parameters
+
+##### `action?: () => void | Promise<void>`
+
+An action that causes the grid to render again, such as entering search text. When provided, the action runs first, and this waits for the render it causes.
+
+#### Returns
+
+`Promise<void>`
 
 #### `SkyAgGridWrapperHarness.with(filters: SkyAgGridWrapperHarnessFilters): HarnessPredicate<SkyAgGridWrapperHarness>`
 
