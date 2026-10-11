@@ -199,9 +199,11 @@ Disabled buttons prevent user interactions. The most common use case is to disab
 
 ### Button labels
 
-For buttons with only one possible direct object, such as **New** buttons in record list toolbars, use the following format for labels:
+For buttons with only one possible direct object, such as the buttons in record list toolbars, use the following format for labels:
 
 **<Verb>**
+
+Labels for buttons that open modals to create something use **New** instead of a verb.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/button/buttons-usage-1-modern.1a3709b6f28b9886b4f2a63577e93aa5.png)
 
