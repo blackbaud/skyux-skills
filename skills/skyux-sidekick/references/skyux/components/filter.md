@@ -11,7 +11,7 @@ Expandable inline filters allow users to access the filter options that they nee
 
 ### Use when
 
-Use expandable inline filters when users need up to four simple filter controls for lists that appear within containers, such as [boxes](./box.md), [modals](./modal.md), and [pages](./page/README.md). Simple filters include checkboxes and HTML select inputs.
+Use expandable inline filters when users need up to four simple filter controls for lists that appear within containers, such as [boxes](./box.md), [modals](./modal.md), and [pages](./page.md). Simple filters include checkboxes and HTML select inputs.
 
 Filter controls are hidden by default and accessed through a **Filter** button, so they are especially useful for controls that users don't need frequently or that don't have significant impact. If users need more filters or more complex filtering, use a dedicated list view with a [filter bar](./filter-bar.md) instead, and allow users to navigate to the dedicated list from the container to complete their filtering tasks.
 
@@ -76,7 +76,7 @@ Place the filter button in a [toolbar](./toolbar.md) above a list.
 - [Box](./box.md)
 - [Filter bar](./filter-bar.md)
 - [Modal](./modal.md)
-- [Page](./page/README.md)
+- [Page](./page.md)
 - [Toolbar](./toolbar.md)
 
 ### Guidelines

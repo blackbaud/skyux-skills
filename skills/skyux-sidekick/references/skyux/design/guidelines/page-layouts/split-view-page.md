@@ -25,7 +25,7 @@ Don't use split view pages when users need to take action on only a small number
 
 1
 
-[Page](../../../components/page/README.md) using fit layout
+[Page](../../../components/page.md) using fit layout
 
 2
 
@@ -85,7 +85,7 @@ The summary action bar can contain one primary action, multiple secondary action
 
 ## Layout
 
-For the split view page layout, use the [page](../../../components/page/README.md) component.
+For the split view page layout, use the [page](../../../components/page.md) component.
 
 ## Related information
 
@@ -93,7 +93,7 @@ For the split view page layout, use the [page](../../../components/page/README.m
 
 - [Button](../../../components/button.md)
 - [Flyout](../../../components/flyout.md)
-- [Page](../../../components/page/README.md)
+- [Page](../../../components/page.md)
 - [Repeater](../../../components/repeater.md)
 - [Split view](../../../components/split-view.md)
 - [Summary action bar](../../../components/summary-action-bar.md)

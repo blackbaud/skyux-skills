@@ -2,7 +2,7 @@
 
 component: data-grid-component
 source: ./data-grid-component.md
-example_count: 4
+example_count: 5
 
 ---
 
@@ -10,9 +10,10 @@ example_count: 4
 
 Read only the slice you need. Each entry below gives the exact `Read` arguments to load one example from `data-grid-component.md`.
 
-| #   | Example                                             | Lines     | Read invocation                                                 |
-| --- | --------------------------------------------------- | --------- | --------------------------------------------------------------- |
-| 1   | Basic data grid                                     | 503–869   | `Read file_path=./data-grid-component.md offset=503 limit=367`  |
-| 2   | Data grid with a server-side resource data source   | 870–1323  | `Read file_path=./data-grid-component.md offset=870 limit=454`  |
-| 3   | Data grid with paging using router query parameters | 1324–1616 | `Read file_path=./data-grid-component.md offset=1324 limit=293` |
-| 4   | Data grid with two-way sort binding                 | 1617–1791 | `Read file_path=./data-grid-component.md offset=1617 limit=175` |
+| #   | Example                                                | Lines     | Read invocation                                                 |
+| --- | ------------------------------------------------------ | --------- | --------------------------------------------------------------- |
+| 1   | Basic data grid                                        | 557–996   | `Read file_path=./data-grid-component.md offset=557 limit=440`  |
+| 2   | Data grid with a data manager column picker and search | 997–1166  | `Read file_path=./data-grid-component.md offset=997 limit=170`  |
+| 3   | Data grid with a server-side resource data source      | 1167–1620 | `Read file_path=./data-grid-component.md offset=1167 limit=454` |
+| 4   | Data grid with paging using router query parameters    | 1621–1919 | `Read file_path=./data-grid-component.md offset=1621 limit=299` |
+| 5   | Data grid with two-way sort binding                    | 1920–2094 | `Read file_path=./data-grid-component.md offset=1920 limit=175` |

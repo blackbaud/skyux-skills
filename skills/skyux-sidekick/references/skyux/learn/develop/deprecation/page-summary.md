@@ -5,7 +5,7 @@ Reference: https://developer.blackbaud.com/skyux/learn/develop/deprecation/page-
 
 # Page summary
 
-The page summary component is deprecated in favor of the [page](../../../components/page/README.md) component's `sky-page-header` component. For page templates and techniques to summarize page content, see the [page design guidelines](../../../design/guidelines/page-layouts/README.md). To view development documentation for the page summary component, see the SKY UX 14 docs.
+The page summary component is deprecated in favor of the [page](../../../components/page.md) component's `sky-page-header` component. For page templates and techniques to summarize page content, see the [page design guidelines](../../../design/guidelines/page-layouts/README.md). To view development documentation for the page summary component, see the SKY UX 14 docs.
 
 ## How to migrate
 
@@ -20,7 +20,7 @@ Bash
 After running the migration script, you should review the following items in your project:
 
 - The `<sky-page-summary-key-info>` component that places key information to the right of the page summary is no longer supported. The content has been moved to `<sky-page-header-details>`. Please review the changes and the design guidelines below to update your code accordingly.
-- The migration script uses the `<sky-page-header>` component but does not use `<sky-page>`. Review the [page component](../../../components/page/README.md) documentation and consider using the `<sky-page>` component. The page component provides additional features such as a page title and layout options.
+- The migration script uses the `<sky-page-header>` component but does not use `<sky-page>`. Review the [page component](../../../components/page.md) documentation and consider using the `<sky-page>` component. The page component provides additional features such as a page title and layout options.
 
 ## Design guidelines
 
@@ -62,7 +62,7 @@ Do use list summary details to display counts or totals on a list page.
 
 ### Page actions
 
-The [page header](../../../components/page/README.md) component includes dedicated space for page-level actions. For a record page, put page actions in the `<sky-page-header-actions>` component instead of a [toolbar](../../../components/toolbar.md) component unless you need the toolbar's `<sky-toolbar-view-actions>` component for view controls such as "Expand all/Collapse all" for tile dashboards. If a toolbar is necessary, put it underneath the page header.
+The [page header](../../../components/page.md) component includes dedicated space for page-level actions. For a record page, put page actions in the `<sky-page-header-actions>` component instead of a [toolbar](../../../components/toolbar.md) component unless you need the toolbar's `<sky-toolbar-view-actions>` component for view controls such as "Expand all/Collapse all" for tile dashboards. If a toolbar is necessary, put it underneath the page header.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/deprecation/page-summary/toolbar-1.b0e4e92d15ce428ba25ea4894378a527.png)
 

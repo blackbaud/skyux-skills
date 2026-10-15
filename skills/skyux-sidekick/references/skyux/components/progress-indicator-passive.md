@@ -129,7 +129,7 @@ Selector: `sky-progress-indicator`
 
 Warning: **Deprecated.** The property was designed to create wizards by setting `displayMode="horizontal"` on progress indicators in modals, but this wizard implementation was replaced by the [wizard component that uses tabs](./tabs-wizard.md).
 
-The orientation of the progress indicator, which can be vertical or horizontal. For [passive progress indicators](./progress-indicator-passive.md) and [waterfall progress indicators](./progress-indicator-waterfall.md), use the vertical display mode. For [modal wizards](./progress-indicator-wizard.md), use the horizontal display mode.
+The orientation of the progress indicator, which can be vertical or horizontal. For [passive progress indicators](./progress-indicator-passive.md) and [waterfall progress indicators](./progress-indicator-waterfall.md), use the vertical display mode. For modal wizards, use the horizontal display mode.
 
 Default: `"vertical"`
 

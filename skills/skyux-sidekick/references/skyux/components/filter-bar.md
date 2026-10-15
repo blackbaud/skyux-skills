@@ -143,7 +143,7 @@ When displaying filters in the filter bar by default, organize them in descendin
 ### Guidelines
 
 - [Filtering lists](../design/guidelines/filtering-lists.md)
-- [List page](../design/guidelines/page-design/list-page.md)
+- List page
 
 ## Installation
 

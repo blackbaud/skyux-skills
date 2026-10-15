@@ -5,7 +5,7 @@ Reference: https://developer.blackbaud.com/skyux/learn/develop/recently-accessed
 
 # Recently accessed links
 
-Both the [sky-action-hub](../../components/action-hub.md#class-skyactionhubcomponent) and the [sky-link-list-recently-accessed](../../components/page/README.md#class-skypagelinkscomponent) components support displaying a list of recently accessed links.
+Both the [sky-action-hub](../../components/action-hub.md#class-skyactionhubcomponent) and the [sky-link-list-recently-accessed](../../components/page.md#class-skypagelinkscomponent) components support displaying a list of recently accessed links.
 
 ## Overview
 
@@ -89,4 +89,4 @@ With the service in place, a small amount of code is needed to display the list 
       [recentLinks]="{ requestedRoutes: [{ app:'example', route: '/opportunities' }] }"
     />
 
-More complete code examples are available for both [sky-action-hub](../../components/action-hub.md) and [sky-link-list-recently-accessed](../../components/page/README.md) components.
+More complete code examples are available for both [sky-action-hub](../../components/action-hub.md) and [sky-link-list-recently-accessed](../../components/page.md) components.

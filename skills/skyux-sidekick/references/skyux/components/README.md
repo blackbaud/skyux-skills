@@ -55,7 +55,7 @@ SKY UX components, available as Angular components, services, and modules, allow
 - [Modal](./modal.md) - The modal service launches modals in a consistent way in SKY UX applications.
 - [Navbar](./navbar.md) - The navbar component displays a list of top-level navigation items.
 - [Numeric](./numeric.md) - The numeric pipe shortens long numbers and can format as currency.
-- [Page](./page/README.md) - The page component provides consistent, responsive layouts for common page layouts.
+- [Page](./page.md) - The page component provides consistent, responsive layouts for common page layouts.
 - [Paging](./paging.md) - The paging component displays a SKY UX-themed pagination control.
 - [Passive progress indicator](./progress-indicator-passive.md) - The passive progress indicator represents sequential steps in processes outside of user control.
 - [Phone field](./phone-field.md) - The phone field module creates a button, search input, and text input for entering and validating phone numbers.

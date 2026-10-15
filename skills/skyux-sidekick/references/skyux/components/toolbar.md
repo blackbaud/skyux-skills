@@ -290,7 +290,7 @@ Do include a border separator between the toolbars.
 
 - [List page](../design/guidelines/page-layouts/list-page.md)
 - [Record page](../design/guidelines/page-layouts/record-page.md)
-- [Terminology](../design/guidelines/terminology.md)
+- Terminology
 
 ## Installation
 

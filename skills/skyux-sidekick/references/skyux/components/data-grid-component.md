@@ -77,7 +77,7 @@ To provide a text equivalent for screen readers [to support accessibility](../le
 
 NPM package
 
-`@skyux/data-grid`[View in NPM](https://www.npmjs.com/package/@skyux/data-grid) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/data-grid/src/lib/modules/data-grid/data-grid.ts#L132)
+`@skyux/data-grid`[View in NPM](https://www.npmjs.com/package/@skyux/data-grid) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/data-grid/src/lib/modules/data-grid/data-grid.ts#L164)
 
 Install with NPM
 
@@ -167,6 +167,16 @@ The number of items to display per page. Setting a value greater than zero enabl
 
 The total number of rows to page through, used to calculate how many pages the paging controls display. Required when `pageSize` is greater than zero and `autoPage` is `false`; ignored when `autoPage` is `true` because the length of `data` is used instead.
 
+#### `rowDeleteIds: ModelSignal<string[]>`
+
+The IDs of the rows that display an inline delete confirmation. This is two-way bindable: an ID is removed when the user cancels the deletion of its row, or when its row is no longer in the grid.
+
+Default: `[]`
+
+#### `selectedColumnIds: ModelSignal<string[] | undefined>`
+
+The IDs of the columns to display, in display order. Columns that are not included are hidden. An ID that does not match a column is ignored until a column with that ID is declared. This is two-way bindable: once set, it emits a new value when the user reorders columns. When `undefined`, every column displays in declaration order except those marked `columnHidden`. Displayed locked columns come first.
+
 #### `selectedRowIds: ModelSignal<string[]>`
 
 The set of IDs for the rows to select in a multiselect grid. Rows with IDs that are not included are de-selected in the grid. This is two-way bindable: it emits the updated set of IDs when the user changes the selection.
@@ -189,6 +199,16 @@ Whether to move the horizontal scrollbar to just below the header row. This prop
 
 Default: `false`
 
+### Outputs
+
+#### `rowDeleteCancel: OutputEmitterRef<SkyDataGridRowDeleteArgs>`
+
+Fires when the user cancels the deletion of a row.
+
+#### `rowDeleteConfirm: OutputEmitterRef<SkyDataGridRowDeleteArgs>`
+
+Fires when the user confirms the deletion of a row. To complete the deletion, remove the row from `data`.
+
 ## SkyDataGridColumn
 
 Type: Component Preview
@@ -207,7 +227,7 @@ Text to display in the column header.
 
 #### `columnHidden: InputSignalWithTransform<boolean, unknown>`
 
-Whether the column is hidden.
+Whether the column is hidden. When the grid's `selectedColumnIds` is set, it determines which columns display instead. In a data manager's column picker, the column starts hidden and users can choose to display it.
 
 Default: `false`
 
@@ -220,6 +240,10 @@ The unique ID for the column. You must provide either the `columnId` or `field` 
 The data type of the column used for sorting and rendering when a template is not provided.
 
 Default: `'text'`
+
+#### `description: InputSignal<string | undefined>`
+
+The text to display beneath the column's `headingText` in a data manager's column picker.
 
 #### `field: InputSignal<string | undefined>`
 
@@ -249,7 +273,7 @@ The title of the help popover. This property only applies when `helpPopoverConte
 
 #### `locked: InputSignalWithTransform<boolean, unknown>`
 
-Whether the column is locked. The intent is to display locked columns first on the left side of the grid. If set to `true`, then users cannot drag the column to another position or drag other columns before it.
+Whether the column is locked. The intent is to display locked columns first on the left side of the grid. If set to `true`, then users cannot drag the column to another position or drag other columns before it. In a data manager's column picker, a locked column always displays and is not offered as an option.
 
 Default: `false`
 
@@ -278,6 +302,22 @@ The width of the column in pixels. Used as the column's initial width; the colum
 Whether text in this column should wrap to multiple lines.
 
 Default: `false`
+
+## SkyDataGridRowDeleteArgs
+
+Type: Interface Preview
+
+Information regarding a row whose deletion has been cancelled or confirmed.
+
+    interface SkyDataGridRowDeleteArgs {
+      id: string;
+    }
+
+### Properties
+
+#### `id: string`
+
+The ID of the row whose deletion has been cancelled or confirmed.
 
 ## SkyDataGridSort
 
@@ -363,6 +403,20 @@ Gets the paging harness for the data grid, or `null` if the grid is not paged.
 #### Returns
 
 `Promise<SkyPagingHarness | null>`
+
+#### `getRowInlineDelete(rowId: string): Promise<SkyInlineDeleteHarness | null>`
+
+Gets the inline delete confirmation shown for a row whose ID is in the data grid's `rowDeleteIds`, or `null` if the row is not showing one.
+
+#### Parameters
+
+##### `rowId: string`
+
+The ID of the row.
+
+#### Returns
+
+`Promise<SkyInlineDeleteHarness | null>`
 
 #### `getWait(): Promise<SkyWaitHarness>`
 
@@ -506,7 +560,7 @@ Loading complete.
 
 ```typescript
 import { ChangeDetectionStrategy, Component, computed, model, signal } from '@angular/core';
-import { SkyDataGrid, SkyDataGridColumn } from '@skyux/data-grid';
+import { SkyDataGrid, SkyDataGridColumn, SkyDataGridRowDeleteArgs } from '@skyux/data-grid';
 import { SkyBoxModule } from '@skyux/layout';
 import { SkyDropdownModule } from '@skyux/popovers';
 
@@ -523,6 +577,7 @@ import { DATA_GRID_DEMO_DATA, DataGridDemoRow } from './data';
 })
 export class DataGridBasicExampleComponent {
   protected readonly gridData = signal<DataGridDemoRow[]>(DATA_GRID_DEMO_DATA);
+  protected readonly rowDeleteIds = signal<string[]>([]);
   protected readonly selectedRowIds = model<string[]>([]);
 
   protected readonly selectedNames = computed(() => {
@@ -536,6 +591,15 @@ export class DataGridBasicExampleComponent {
 
   public actionClicked(row: DataGridDemoRow, action: string): void {
     alert(`${action} clicked for ${row.name}`);
+  }
+
+  protected deleteRow(row: DataGridDemoRow): void {
+    this.rowDeleteIds.update((ids) => [...ids, row.id]);
+  }
+
+  protected onRowDeleteConfirm(args: SkyDataGridRowDeleteArgs): void {
+    // Removing the row from the data also removes its ID from `rowDeleteIds`.
+    this.gridData.update((rows) => rows.filter((row) => row.id !== args.id));
   }
 }
 ```
@@ -715,7 +779,14 @@ export const DATA_GRID_DEMO_DATA = [
   </sky-box-content>
 </sky-box>
 
-<sky-data-grid data-sky-id="example-data-grid" multiselect [data]="gridData()" [(selectedRowIds)]="selectedRowIds">
+<sky-data-grid
+  data-sky-id="example-data-grid"
+  multiselect
+  [data]="gridData()"
+  [(rowDeleteIds)]="rowDeleteIds"
+  [(selectedRowIds)]="selectedRowIds"
+  (rowDeleteConfirm)="onRowDeleteConfirm($event)"
+>
   <sky-data-grid-column
     columnId="context"
     headingText="Context menu"
@@ -734,7 +805,7 @@ export const DATA_GRID_DEMO_DATA = [
     helpPopoverTitle="Age"
     helpPopoverContent="The team member's current age, in years."
   />
-  <sky-data-grid-column field="startDate" headingText="Start date" dataType="date" />
+  <sky-data-grid-column field="startDate" headingText="Start date" dataType="date" helpKey="start-date-help" />
   <sky-data-grid-column field="endDate" headingText="End date" dataType="date" />
   <sky-data-grid-column field="department" headingText="Department">
     <ng-template let-row="row">{{ row.department?.name }}</ng-template>
@@ -769,6 +840,9 @@ export const DATA_GRID_DEMO_DATA = [
           More info
         </button>
       </sky-dropdown-item>
+      <sky-dropdown-item>
+        <button type="button" [attr.aria-label]="`Delete ${row?.name}`" (click)="deleteRow(row)">Delete</button>
+      </sky-dropdown-item>
     </sky-dropdown-menu>
   </sky-dropdown>
 </ng-template>
@@ -781,6 +855,7 @@ import { HarnessLoader } from '@angular/cdk/testing';
 import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SkyDataGridHarness, provideSkyDataGridTesting } from '@skyux/data-grid/testing';
+import { SkyInlineDeleteHarness } from '@skyux/layout/testing';
 import { SkyDropdownHarness, SkyDropdownMenuHarness } from '@skyux/popovers/testing';
 
 import { DataGridBasicExampleComponent } from './example.component';
@@ -863,6 +938,228 @@ describe('Basic data grid example', () => {
     const moreInfoActionSpy = spyOn(window, 'alert').and.stub();
     await moreInfoButton?.click();
     expect(moreInfoActionSpy).toHaveBeenCalledWith('More info clicked for Jane Deere');
+  });
+
+  describe('row delete', () => {
+    async function showRowDelete(): Promise<{
+      gridHarness: SkyDataGridHarness;
+      inlineDeleteHarness: SkyInlineDeleteHarness;
+    }> {
+      const { loader } = await setupTest();
+      const gridHarness = await loader.getHarness(
+        SkyDataGridHarness.with({
+          dataSkyId: 'example-data-grid',
+        }),
+      );
+      await expectAsync(gridHarness.getRowInlineDelete('2')).toBeResolvedTo(null);
+
+      const menuButtonHarness = await gridHarness.queryHarness(
+        SkyDropdownHarness.with({
+          dataSkyId: 'context-menu-2',
+        }),
+      );
+      await menuButtonHarness.clickDropdownButton();
+      const menuHarness = await menuButtonHarness.getDropdownMenu();
+      const deleteItem = await menuHarness.getItem({ text: 'Delete' });
+      await deleteItem.click();
+
+      const inlineDeleteHarness = await gridHarness.getRowInlineDelete('2');
+      if (!inlineDeleteHarness) {
+        throw new Error('Expected an inline delete for row 2.');
+      }
+
+      return { gridHarness, inlineDeleteHarness };
+    }
+
+    it('should remove the row when the deletion is confirmed', async () => {
+      const { gridHarness, inlineDeleteHarness } = await showRowDelete();
+      await expectAsync(gridHarness.getDisplayedRowCount()).toBeResolvedTo(7);
+      await expectAsync(inlineDeleteHarness.isPending()).toBeResolvedTo(false);
+
+      await inlineDeleteHarness.clickDeleteButton();
+
+      await expectAsync(gridHarness.getDisplayedRowCount()).toBeResolvedTo(6);
+      await expectAsync(gridHarness.getRowInlineDelete('2')).toBeResolvedTo(null);
+    });
+
+    it('should keep the row when the deletion is cancelled', async () => {
+      const { gridHarness, inlineDeleteHarness } = await showRowDelete();
+
+      await inlineDeleteHarness.clickCancelButton();
+
+      await expectAsync(gridHarness.getDisplayedRowCount()).toBeResolvedTo(7);
+      await expectAsync(gridHarness.getRowInlineDelete('2')).toBeResolvedTo(null);
+    });
+  });
+});
+```
+
+### Data grid with a data manager column picker and search
+
+#### example.ts (primary file)
+
+```typescript
+import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { SkyDataGrid, SkyDataGridColumn } from '@skyux/data-grid';
+import { SkyDataManagerModule, SkyDataManagerService, SkyDataManagerState } from '@skyux/data-manager';
+
+import { map } from 'rxjs';
+
+import { DATA_GRID_DEMO_DATA } from './data';
+
+/**
+ * @title Data grid with a data manager column picker and search
+ */
+@Component({
+  selector: 'app-data-grid-data-manager-example',
+  templateUrl: './example.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [SkyDataGrid, SkyDataGridColumn, SkyDataManagerModule],
+  providers: [SkyDataManagerService],
+})
+export class DataGridDataManagerExample {
+  protected readonly viewId = 'gridView';
+
+  readonly #dataManagerSvc = inject(SkyDataManagerService);
+  readonly #searchText = toSignal(
+    this.#dataManagerSvc.getDataStateUpdates(this.viewId).pipe(map((state) => state.searchText ?? '')),
+    { initialValue: '' },
+  );
+
+  protected readonly data = computed(() => {
+    const searchText = this.#searchText().toLowerCase();
+    return DATA_GRID_DEMO_DATA.filter(({ name, type, color }) =>
+      [name, type, color].some((value) => value.toLowerCase().includes(searchText)),
+    );
+  });
+
+  constructor() {
+    this.#dataManagerSvc.initDataManager({
+      activeViewId: this.viewId,
+      dataManagerConfig: {},
+      defaultDataState: new SkyDataManagerState({}),
+    });
+
+    this.#dataManagerSvc.initDataView({
+      id: this.viewId,
+      name: 'Grid View',
+      columnPickerEnabled: true,
+      searchEnabled: true,
+    });
+  }
+}
+```
+
+#### data.ts
+
+```typescript
+export const DATA_GRID_DEMO_DATA = [
+  { id: '1', name: 'Apple', type: 'Pome', color: 'Red', quantity: 12 },
+  { id: '2', name: 'Banana', type: 'Berry', color: 'Yellow', quantity: 8 },
+  { id: '3', name: 'Cherry', type: 'Drupe', color: 'Red', quantity: 45 },
+  { id: '4', name: 'Date', type: 'Drupe', color: 'Brown', quantity: 3 },
+  { id: '5', name: 'Elderberry', type: 'Berry', color: 'Purple', quantity: 22 },
+  { id: '6', name: 'Fig', type: 'Syconium', color: 'Purple', quantity: 17 },
+  { id: '7', name: 'Grape', type: 'Berry', color: 'Green', quantity: 60 },
+];
+```
+
+#### example.html
+
+```html
+<sky-data-manager>
+  <sky-data-manager-toolbar />
+  <sky-data-view [viewId]="viewId">
+    <sky-data-grid skyDataManagerViewController labelText="Fruit" [data]="data()">
+      <sky-data-grid-column field="name" flexWidth="2" headingText="Name" />
+      <sky-data-grid-column
+        description="The botanical classification of the fruit."
+        field="type"
+        flexWidth="4"
+        headingText="Type"
+      />
+      <sky-data-grid-column field="color" flexWidth="4" headingText="Color" />
+      <sky-data-grid-column columnHidden dataType="number" field="quantity" flexWidth="1" headingText="Quantity" />
+    </sky-data-grid>
+  </sky-data-view>
+</sky-data-manager>
+```
+
+#### example.spec.ts
+
+```typescript
+import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
+import { TestBed } from '@angular/core/testing';
+import { provideNoopSkyAnimations } from '@skyux/core';
+import { SkyDataGridHarness } from '@skyux/data-grid/testing';
+import { SkyDataManagerHarness } from '@skyux/data-manager/testing';
+
+import { DataGridDataManagerExample } from './example';
+
+describe('Data grid data manager example', () => {
+  async function setupTest(): Promise<{
+    dataManagerHarness: SkyDataManagerHarness;
+    gridHarness: SkyDataGridHarness;
+  }> {
+    TestBed.configureTestingModule({
+      imports: [DataGridDataManagerExample],
+      providers: [provideNoopSkyAnimations()],
+    });
+
+    const fixture = TestBed.createComponent(DataGridDataManagerExample);
+    const loader = TestbedHarnessEnvironment.loader(fixture);
+
+    return {
+      dataManagerHarness: await loader.getHarness(SkyDataManagerHarness),
+      gridHarness: await loader.getHarness(SkyDataGridHarness),
+    };
+  }
+
+  it('should hide the column marked columnHidden', async () => {
+    const { gridHarness } = await setupTest();
+
+    await expectAsync(gridHarness.getDisplayedColumnIds()).toBeResolvedTo(['name', 'type', 'color']);
+  });
+
+  it('should show and hide columns using the column picker', async () => {
+    const { dataManagerHarness, gridHarness } = await setupTest();
+
+    const toolbarHarness = await dataManagerHarness.getToolbar();
+    const columnPickerHarness = await toolbarHarness.openColumnPicker();
+
+    await (await columnPickerHarness.getColumn({ titleText: 'Color' })).deselect();
+    await (await columnPickerHarness.getColumn({ titleText: 'Quantity' })).select();
+    await columnPickerHarness.saveAndClose();
+
+    await expectAsync(gridHarness.getDisplayedColumnIds()).toBeResolvedTo(['name', 'type', 'quantity']);
+  });
+
+  it('should filter the rows using the search', async () => {
+    const { dataManagerHarness, gridHarness } = await setupTest();
+
+    const toolbarHarness = await dataManagerHarness.getToolbar();
+    const searchHarness = await toolbarHarness.getSearch();
+    if (!searchHarness) {
+      throw new Error('Expected the toolbar to display a search.');
+    }
+
+    await expectAsync(gridHarness.getDisplayedRowCount()).toBeResolvedTo(7);
+
+    await searchHarness.enterText('purple');
+    await expectAsync(gridHarness.getDisplayedRowCount()).toBeResolvedTo(2);
+
+    await searchHarness.enterText('DRUPE');
+    await expectAsync(gridHarness.getDisplayedRowCount()).toBeResolvedTo(2);
+
+    await searchHarness.enterText('fig');
+    await expectAsync(gridHarness.getDisplayedRowCount()).toBeResolvedTo(1);
+
+    await searchHarness.enterText('kiwi');
+    await expectAsync(gridHarness.getDisplayedRowCount()).toBeResolvedTo(0);
+
+    await searchHarness.clear();
+    await expectAsync(gridHarness.getDisplayedRowCount()).toBeResolvedTo(7);
   });
 });
 ```
@@ -1158,7 +1455,7 @@ export function getServerPage(options: {
     helpPopoverTitle="Age"
     helpPopoverContent="The team member's current age, in years."
   />
-  <sky-data-grid-column field="startDate" headingText="Start date" dataType="date" />
+  <sky-data-grid-column field="startDate" headingText="Start date" dataType="date" helpKey="start-date-help" />
 </sky-data-grid>
 ```
 
@@ -1521,7 +1818,13 @@ export const DATA_GRID_DEMO_DATA = [
     helpPopoverTitle="Age"
     helpPopoverContent="The team member's current age, in years."
   />
-  <sky-data-grid-column field="startDate" headingText="Start date" dataType="date" flexWidth="2" />
+  <sky-data-grid-column
+    field="startDate"
+    headingText="Start date"
+    dataType="date"
+    helpKey="start-date-help"
+    flexWidth="2"
+  />
   <sky-data-grid-column field="endDate" headingText="End date" dataType="date" flexWidth="2" />
   <sky-data-grid-column field="department" headingText="Department" flexWidth="3">
     <ng-template let-value="value">{{ value?.name ?? '' }}</ng-template>
@@ -1710,7 +2013,7 @@ export const DATA_GRID_DEMO_DATA: DataGridSortingRow[] = [
     helpPopoverTitle="Age"
     helpPopoverContent="The team member's current age, in years."
   />
-  <sky-data-grid-column field="startDate" headingText="Start date" dataType="date" />
+  <sky-data-grid-column field="startDate" headingText="Start date" dataType="date" helpKey="start-date-help" />
 </sky-data-grid>
 ```
 

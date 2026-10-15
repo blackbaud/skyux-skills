@@ -2,7 +2,7 @@
 
 component: data-manager
 source: ./data-manager.md
-section_count: 47
+section_count: 48
 
 ---
 
@@ -25,39 +25,40 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 9   | SkyDataManagerToolbarPrimaryItemComponent      | development | 270–277   | `Read file_path=./data-manager.md offset=270 limit=8`     |
 | 10  | SkyDataManagerToolbarLeftItemComponent         | development | 278–285   | `Read file_path=./data-manager.md offset=278 limit=8`     |
 | 11  | SkyDataManagerToolbarRightItemComponent        | development | 286–293   | `Read file_path=./data-manager.md offset=286 limit=8`     |
-| 12  | SkyDataManagerFilterControllerDirective        | development | 294–301   | `Read file_path=./data-manager.md offset=294 limit=8`     |
-| 13  | SkyDataViewComponent                           | development | 302–317   | `Read file_path=./data-manager.md offset=302 limit=16`    |
-| 14  | SkyDataViewConfig                              | development | 318–422   | `Read file_path=./data-manager.md offset=318 limit=105`   |
-| 15  | SkyDataViewColumnWidths                        | development | 423–441   | `Read file_path=./data-manager.md offset=423 limit=19`    |
-| 16  | SkyDataViewState                               | development | 442–483   | `Read file_path=./data-manager.md offset=442 limit=42`    |
-| 17  | SkyDataViewStateOptions                        | development | 484–517   | `Read file_path=./data-manager.md offset=484 limit=34`    |
-| 18  | SkyDataManagerConfig                           | development | 518–550   | `Read file_path=./data-manager.md offset=518 limit=33`    |
-| 19  | SkyDataManagerDockType                         | development | 551–556   | `Read file_path=./data-manager.md offset=551 limit=6`     |
-| 20  | SkyDataManagerFilterData                       | development | 557–575   | `Read file_path=./data-manager.md offset=557 limit=19`    |
-| 21  | SkyDataManagerInitArgs                         | development | 576–604   | `Read file_path=./data-manager.md offset=576 limit=29`    |
-| 22  | SkyDataManagerSortOption                       | development | 605–633   | `Read file_path=./data-manager.md offset=605 limit=29`    |
-| 23  | SkyDataManagerState                            | development | 634–713   | `Read file_path=./data-manager.md offset=634 limit=80`    |
-| 24  | SkyDataManagerStateOptions                     | development | 714–757   | `Read file_path=./data-manager.md offset=714 limit=44`    |
-| 25  | SkyDataManagerStateUpdateFilterArgs            | development | 758–778   | `Read file_path=./data-manager.md offset=758 limit=21`    |
-| 26  | SkyDataManagerColumnPickerOption               | development | 779–814   | `Read file_path=./data-manager.md offset=779 limit=36`    |
-| 27  | SkyDataManagerColumnPickerSortStrategy         | development | 815–835   | `Read file_path=./data-manager.md offset=815 limit=21`    |
-| 28  | SkyDataManagerFilterModalContext               | development | 836–847   | `Read file_path=./data-manager.md offset=836 limit=12`    |
-| 29  | SkyDataManagerSummary                          | development | 848–870   | `Read file_path=./data-manager.md offset=848 limit=23`    |
-| 30  | SkyDataManagerHarness                          | testing     | 871–940   | `Read file_path=./data-manager.md offset=871 limit=70`    |
-| 31  | SkyDataManagerHarnessFilters                   | testing     | 941–956   | `Read file_path=./data-manager.md offset=941 limit=16`    |
-| 32  | SkyDataManagerToolbarHarness                   | testing     | 957–1156  | `Read file_path=./data-manager.md offset=957 limit=200`   |
-| 33  | SkyDataManagerToolbarHarnessFilters            | testing     | 1157–1172 | `Read file_path=./data-manager.md offset=1157 limit=16`   |
-| 34  | SkyDataManagerToolbarSectionHarness            | testing     | 1173–1266 | `Read file_path=./data-manager.md offset=1173 limit=94`   |
-| 35  | SkyDataManagerToolbarSectionHarnessFilters     | testing     | 1267–1282 | `Read file_path=./data-manager.md offset=1267 limit=16`   |
-| 36  | SkyDataManagerToolbarPrimaryItemHarness        | testing     | 1283–1376 | `Read file_path=./data-manager.md offset=1283 limit=94`   |
-| 37  | SkyDataManagerToolbarPrimaryItemHarnessFilters | testing     | 1377–1392 | `Read file_path=./data-manager.md offset=1377 limit=16`   |
-| 38  | SkyDataManagerToolbarLeftItemHarness           | testing     | 1393–1486 | `Read file_path=./data-manager.md offset=1393 limit=94`   |
-| 39  | SkyDataManagerToolbarLeftItemHarnessFilters    | testing     | 1487–1502 | `Read file_path=./data-manager.md offset=1487 limit=16`   |
-| 40  | SkyDataManagerToolbarRightItemHarness          | testing     | 1503–1596 | `Read file_path=./data-manager.md offset=1503 limit=94`   |
-| 41  | SkyDataManagerToolbarRightItemHarnessFilters   | testing     | 1597–1612 | `Read file_path=./data-manager.md offset=1597 limit=16`   |
-| 42  | SkyDataViewHarness                             | testing     | 1613–1706 | `Read file_path=./data-manager.md offset=1613 limit=94`   |
-| 43  | SkyDataViewHarnessFilters                      | testing     | 1707–1725 | `Read file_path=./data-manager.md offset=1707 limit=19`   |
-| 44  | SkyDataManagerColumnPickerHarness              | testing     | 1726–1827 | `Read file_path=./data-manager.md offset=1726 limit=102`  |
-| 45  | SkyDataManagerColumnPickerColumnHarness        | testing     | 1828–1997 | `Read file_path=./data-manager.md offset=1828 limit=170`  |
-| 46  | SkyDataManagerColumnPickerColumnHarnessFilters | testing     | 1998–2023 | `Read file_path=./data-manager.md offset=1998 limit=26`   |
-| 47  | Code Examples                                  | examples    | 2024–3569 | `Read file_path=./data-manager.md offset=2024 limit=1546` |
+| 12  | SkyDataManagerViewControllerDirective          | development | 294–301   | `Read file_path=./data-manager.md offset=294 limit=8`     |
+| 13  | SkyDataManagerFilterControllerDirective        | development | 302–309   | `Read file_path=./data-manager.md offset=302 limit=8`     |
+| 14  | SkyDataViewComponent                           | development | 310–325   | `Read file_path=./data-manager.md offset=310 limit=16`    |
+| 15  | SkyDataViewConfig                              | development | 326–430   | `Read file_path=./data-manager.md offset=326 limit=105`   |
+| 16  | SkyDataViewColumnWidths                        | development | 431–449   | `Read file_path=./data-manager.md offset=431 limit=19`    |
+| 17  | SkyDataViewState                               | development | 450–491   | `Read file_path=./data-manager.md offset=450 limit=42`    |
+| 18  | SkyDataViewStateOptions                        | development | 492–525   | `Read file_path=./data-manager.md offset=492 limit=34`    |
+| 19  | SkyDataManagerConfig                           | development | 526–558   | `Read file_path=./data-manager.md offset=526 limit=33`    |
+| 20  | SkyDataManagerDockType                         | development | 559–564   | `Read file_path=./data-manager.md offset=559 limit=6`     |
+| 21  | SkyDataManagerFilterData                       | development | 565–583   | `Read file_path=./data-manager.md offset=565 limit=19`    |
+| 22  | SkyDataManagerInitArgs                         | development | 584–612   | `Read file_path=./data-manager.md offset=584 limit=29`    |
+| 23  | SkyDataManagerSortOption                       | development | 613–641   | `Read file_path=./data-manager.md offset=613 limit=29`    |
+| 24  | SkyDataManagerState                            | development | 642–721   | `Read file_path=./data-manager.md offset=642 limit=80`    |
+| 25  | SkyDataManagerStateOptions                     | development | 722–765   | `Read file_path=./data-manager.md offset=722 limit=44`    |
+| 26  | SkyDataManagerStateUpdateFilterArgs            | development | 766–786   | `Read file_path=./data-manager.md offset=766 limit=21`    |
+| 27  | SkyDataManagerColumnPickerOption               | development | 787–822   | `Read file_path=./data-manager.md offset=787 limit=36`    |
+| 28  | SkyDataManagerColumnPickerSortStrategy         | development | 823–843   | `Read file_path=./data-manager.md offset=823 limit=21`    |
+| 29  | SkyDataManagerFilterModalContext               | development | 844–855   | `Read file_path=./data-manager.md offset=844 limit=12`    |
+| 30  | SkyDataManagerSummary                          | development | 856–878   | `Read file_path=./data-manager.md offset=856 limit=23`    |
+| 31  | SkyDataManagerHarness                          | testing     | 879–948   | `Read file_path=./data-manager.md offset=879 limit=70`    |
+| 32  | SkyDataManagerHarnessFilters                   | testing     | 949–964   | `Read file_path=./data-manager.md offset=949 limit=16`    |
+| 33  | SkyDataManagerToolbarHarness                   | testing     | 965–1164  | `Read file_path=./data-manager.md offset=965 limit=200`   |
+| 34  | SkyDataManagerToolbarHarnessFilters            | testing     | 1165–1180 | `Read file_path=./data-manager.md offset=1165 limit=16`   |
+| 35  | SkyDataManagerToolbarSectionHarness            | testing     | 1181–1274 | `Read file_path=./data-manager.md offset=1181 limit=94`   |
+| 36  | SkyDataManagerToolbarSectionHarnessFilters     | testing     | 1275–1290 | `Read file_path=./data-manager.md offset=1275 limit=16`   |
+| 37  | SkyDataManagerToolbarPrimaryItemHarness        | testing     | 1291–1384 | `Read file_path=./data-manager.md offset=1291 limit=94`   |
+| 38  | SkyDataManagerToolbarPrimaryItemHarnessFilters | testing     | 1385–1400 | `Read file_path=./data-manager.md offset=1385 limit=16`   |
+| 39  | SkyDataManagerToolbarLeftItemHarness           | testing     | 1401–1494 | `Read file_path=./data-manager.md offset=1401 limit=94`   |
+| 40  | SkyDataManagerToolbarLeftItemHarnessFilters    | testing     | 1495–1510 | `Read file_path=./data-manager.md offset=1495 limit=16`   |
+| 41  | SkyDataManagerToolbarRightItemHarness          | testing     | 1511–1604 | `Read file_path=./data-manager.md offset=1511 limit=94`   |
+| 42  | SkyDataManagerToolbarRightItemHarnessFilters   | testing     | 1605–1620 | `Read file_path=./data-manager.md offset=1605 limit=16`   |
+| 43  | SkyDataViewHarness                             | testing     | 1621–1714 | `Read file_path=./data-manager.md offset=1621 limit=94`   |
+| 44  | SkyDataViewHarnessFilters                      | testing     | 1715–1733 | `Read file_path=./data-manager.md offset=1715 limit=19`   |
+| 45  | SkyDataManagerColumnPickerHarness              | testing     | 1734–1835 | `Read file_path=./data-manager.md offset=1734 limit=102`  |
+| 46  | SkyDataManagerColumnPickerColumnHarness        | testing     | 1836–2005 | `Read file_path=./data-manager.md offset=1836 limit=170`  |
+| 47  | SkyDataManagerColumnPickerColumnHarnessFilters | testing     | 2006–2031 | `Read file_path=./data-manager.md offset=2006 limit=26`   |
+| 48  | Code Examples                                  | examples    | 2032–3540 | `Read file_path=./data-manager.md offset=2032 limit=1509` |

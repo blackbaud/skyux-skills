@@ -33,7 +33,7 @@ Selector: `sky-avatar`
 
 #### `canChange: boolean`
 
-Whether users can change the image. To select a different image, users click the image or drag another image on top of it, much like the `sky-file-drop` component in the [file attachment module](./file-attachments/file-attachment.md).
+Whether users can change the image. To select a different image, users click the image or drag another image on top of it, much like the `sky-file-drop` component in the file attachment module.
 
 Default: `false`
 

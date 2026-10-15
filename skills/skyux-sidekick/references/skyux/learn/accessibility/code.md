@@ -26,5 +26,5 @@ To build an accessible application, you must leverage the technical tools and fe
   - `helpPopoverContent` — Adds a [help inline button](../../components/help-inline.md) to the component's label or heading and supplies assistive technology support for the contents in the popover.
   - `hintText` — Provides persistent hint text that is visibly related to the input.
 
-- Use the [page](../../components/page/README.md) component to provide consistent layouts with built-in semantic markup.
+- Use the [page](../../components/page.md) component to provide consistent layouts with built-in semantic markup.
 - Use the [field group](../../components/field-group.md) component on forms to automatically provide HTML field sets for related inputs.

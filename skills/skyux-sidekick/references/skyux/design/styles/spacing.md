@@ -13,7 +13,7 @@ Components handle spacing intrinsically wherever possible so that common pattern
 
 ## Page-level spacing
 
-The [page component](../../components/page/README.md) supports standardized layouts and spacing for the main page elements. This creates a consistent, harmonious visual display when users navigate between pages.
+The [page component](../../components/page.md) supports standardized layouts and spacing for the main page elements. This creates a consistent, harmonious visual display when users navigate between pages.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/page-blocks-layout.f7860be5c278dda0278b434cb0de2dec.png)
 

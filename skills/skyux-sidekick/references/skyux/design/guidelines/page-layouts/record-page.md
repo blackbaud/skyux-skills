@@ -25,7 +25,7 @@ Don't use record pages when you can predict the actions that users need to take 
 
 1
 
-[Page](../../../components/page/README.md)
+[Page](../../../components/page.md)
 
 2
 
@@ -132,7 +132,7 @@ Finally, place common platform tabs last in the following order:
 
 ## Layout
 
-For the record page layout, use the [page](../../../components/page/README.md) component.
+For the record page layout, use the [page](../../../components/page.md) component.
 
 ### Content area layout
 
@@ -146,5 +146,5 @@ Use a columnar layout with 1:1:1, 1:2, 2:1, or full-width sections as appropriat
 - [Box](../../../components/box.md)
 - [Button](../../../components/button.md)
 - [Fluid grid](../../../components/fluid-grid.md)
-- [Page](../../../components/page/README.md)
+- [Page](../../../components/page.md)
 - [Tabs](../../../components/tabs.md)

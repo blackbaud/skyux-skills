@@ -79,7 +79,7 @@ Blackbaud SKY Developer enables developers to code for good. We provide a toolse
 
 ## Help us improve SKY UX!
 
-We highly encourage [contributions](./contribute.md) from all SKY UX users. These community efforts help ensure that the design system meets the needs of end users in Blackbaud solutions. We just ask that contributors follow our [contribution guidelines](https://github.com/blackbaud/skyux/blob/main/CONTRIBUTING.md).
+We highly encourage contributions from all SKY UX users. These community efforts help ensure that the design system meets the needs of end users in Blackbaud solutions. We just ask that contributors follow our [contribution guidelines](https://github.com/blackbaud/skyux/blob/main/CONTRIBUTING.md).
 
 ## SKY UX
 
@@ -90,7 +90,7 @@ Blackbaud's open source user experience framework to build web applications that
 - [Learn](./learn/README.md)
 - [Components](./components/README.md)
 - [Design](./design/README.md)
-- [Contribute](./contribute.md)
+- Contribute
 
 ### Previous versions
 

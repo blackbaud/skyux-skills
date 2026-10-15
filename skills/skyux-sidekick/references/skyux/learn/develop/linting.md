@@ -143,4 +143,4 @@ JavaScript
 
 ## Contributions
 
-The source code for [`eslint-config-skyux`](https://github.com/blackbaud/skyux/tree/main/libs/sdk/eslint-config-skyux) and [`stylelint-config-skyux`](https://github.com/blackbaud/skyux/tree/main/libs/sdk/stylelint-config-skyux) is available on GitHub. You can [file an issue](https://github.com/blackbaud/skyux/issues) or [review our contribution process](../../contribute.md).
+The source code for [`eslint-config-skyux`](https://github.com/blackbaud/skyux/tree/main/libs/sdk/eslint-config-skyux) and [`stylelint-config-skyux`](https://github.com/blackbaud/skyux/tree/main/libs/sdk/stylelint-config-skyux) is available on GitHub. You can [file an issue](https://github.com/blackbaud/skyux/issues) or review our contribution process.

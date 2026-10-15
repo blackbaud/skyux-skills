@@ -1020,11 +1020,11 @@ Type: FunctionBuilds a column definition whose `cellEditorParams` and `cellRende
       cellRendererParams: { skyComponentProperties: { validator: ... } },
     })
 
-    function defineSkyAgGridColDef(colDef: C & Omit<ColDef<any, any>, "type" | "cellEditorParams" | "cellRendererParams"> & { cellEditorParams?: UnionToIntersection<<a class="sky-docs-codespan-anchor" href="https://developer.blackbaud.com/skyux/components/data-entry-grid?docs-active-tab=design#interface_sky-cell-editor-params-by-type">SkyCellEditorParamsByType</a>[T]> | ((params: ICellEditorParams<any, any>) => UnionToIntersection<<a class="sky-docs-codespan-anchor" href="https://developer.blackbaud.com/skyux/components/data-entry-grid?docs-active-tab=design#interface_sky-cell-editor-params-by-type">SkyCellEditorParamsByType</a>[T]>); cellRendererParams?: UnionToIntersection<<a class="sky-docs-codespan-anchor" href="https://developer.blackbaud.com/skyux/components/data-entry-grid?docs-active-tab=design#interface_sky-cell-renderer-params-by-type">SkyCellRendererParamsByType</a><any, any>[T]> | ((params: ICellRendererParams<any, any>) => UnionToIntersection<<a class="sky-docs-codespan-anchor" href="https://developer.blackbaud.com/skyux/components/data-entry-grid?docs-active-tab=design#interface_sky-cell-renderer-params-by-type">SkyCellRendererParamsByType</a><any, any>[T]>); type: T | T[] } & { field?: F } & Record<Exclude<keyof C, "sort" | "filter" | "width" | "type" | "hide" | "context" | "comparator" | "initialHide" | "suppressAutoSize" | "singleClickEdit" | "loadingCellRenderer" | "loadingCellRendererParams" | "loadingCellRendererSelector" | "rowDragText" | "sortingOrder" | "unSortIcon" | "icons" | "onCellValueChanged" | "onCellClicked" | "onCellDoubleClicked" | "onCellContextMenu" | "cellEditor" | "rowGroup" | "pivot" | "colId" | "field" | "cellDataType" | "allowFormula" | "calculatedExpression" | "valueGetter" | "valueFormatter" | "refData" | "keyCreator" | "equals" | "tooltipField" | "tooltipValueGetter" | "tooltipComponentSelector" | "checkboxSelection" | "showDisabledCheckboxes" | "suppressNavigable" | "suppressNoteActions" | "suppressKeyboardEvent" | "suppressPaste" | "suppressFillHandle" | "lockVisible" | "lockPosition" | "suppressMovable" | "useValueFormatterForExport" | "editable" | "groupRowEditable" | "groupRowValueSetter" | "valueSetter" | "valueParser" | "cellEditorParams" | "cellEditorSelector" | "cellEditorPopup" | "cellEditorPopupPosition" | "useValueParserForImport" | "getQuickFilterText" | "filterValueGetter" | "floatingFilter" | "suppressFloatingFilterButton" | "dateComponent" | "dateComponentParams" | "getFindText" | "headerComponent" | "headerComponentParams" | "menuTabs" | "columnChooserParams" | "suppressHeaderMenuButton" | "suppressHeaderFilterButton" | "mainMenuItems" | "columnMenuItems" | "contextMenuItems" | "headerCheckboxSelection" | "headerCheckboxSelectionFilteredOnly" | "headerCheckboxSelectionCurrentPageOnly" | "chartDataType" | "pinned" | "initialPinned" | "lockPinned" | "initialPivot" | "pivotIndex" | "initialPivotIndex" | "pivotComparator" | "pivotSort" | "initialPivotSort" | "enablePivot" | "cellStyle" | "cellClass" | "cellClassRules" | "cellRenderer" | "cellRendererParams" | "cellRendererSelector" | "autoHeight" | "wrapText" | "enableCellChangeFlash" | "rowDrag" | "dndSource" | "dndSourceOnRowDrag" | "initialRowGroup" | "rowGroupIndex" | "initialRowGroupIndex" | "enableRowGroup" | "enableValue" | "aggFunc" | "initialAggFunc" | "valueIndex" | "initialValueIndex" | "defaultAggFunc" | "allowedAggFuncs" | "showValuesAs" | "initialShowValuesAs" | "showValuesAsDef" | "enableShowValuesAs" | "rowGroupingHierarchy" | "groupHierarchy" | "showRowGroup" | "sortable" | "initialSort" | "sortIndex" | "initialSortIndex" | "colSpan" | "rowSpan" | "spanRows" | "initialWidth" | "minWidth" | "maxWidth" | "flex" | "initialFlex" | "resizable" | "suppressSizeToFit" | "pivotValueColumn" | "pivotTotalColumnIds" | "suppressSpanHeaderHeight" | "headerName" | "headerNameEditable" | "headerValueGetter" | "headerTooltip" | "headerTooltipValueGetter" | "headerStyle" | "headerClass" | "suppressHeaderKeyboardEvent" | "columnGroupShow" | "toolPanelClass" | "suppressColumnsToolPanel" | "suppressFiltersToolPanel" | "tooltipComponent" | "tooltipComponentParams" | "pivotKeys" | "cellAriaRole" | "wrapHeaderText" | "autoHeaderHeight" | "suppressHeaderContextMenu" | "filterParams" | "floatingFilterComponent" | "floatingFilterComponentParams">, never>): C & { field?: F }
+    function defineSkyAgGridColDef(colDef: C & Omit<ColDef<any, any>, "type" | "cellEditorParams" | "cellRendererParams"> & { cellEditorParams?: UnionToIntersection<<a class="sky-docs-codespan-anchor" href="https://developer.blackbaud.com/skyux/components/data-entry-grid?docs-active-tab=design#interface_sky-cell-editor-params-by-type">SkyCellEditorParamsByType</a>[T]> | ((params: ICellEditorParams<any, any>) => UnionToIntersection<<a class="sky-docs-codespan-anchor" href="https://developer.blackbaud.com/skyux/components/data-entry-grid?docs-active-tab=design#interface_sky-cell-editor-params-by-type">SkyCellEditorParamsByType</a>[T]>); cellRendererParams?: UnionToIntersection<<a class="sky-docs-codespan-anchor" href="https://developer.blackbaud.com/skyux/components/data-entry-grid?docs-active-tab=design#interface_sky-cell-renderer-params-by-type">SkyCellRendererParamsByType</a><any, any>[T]> | ((params: ICellRendererParams<any, any>) => UnionToIntersection<<a class="sky-docs-codespan-anchor" href="https://developer.blackbaud.com/skyux/components/data-entry-grid?docs-active-tab=design#interface_sky-cell-renderer-params-by-type">SkyCellRendererParamsByType</a><any, any>[T]>); type: T | T[] } & { field?: F } & Record<Exclude<keyof C, "sort" | "filter" | "width" | "type" | "hide" | "context" | "comparator" | "initialHide" | "field" | "suppressAutoSize" | "singleClickEdit" | "loadingCellRenderer" | "loadingCellRendererParams" | "loadingCellRendererSelector" | "rowDragText" | "sortingOrder" | "unSortIcon" | "icons" | "onCellValueChanged" | "onCellClicked" | "onCellDoubleClicked" | "onCellContextMenu" | "cellEditor" | "rowGroup" | "pivot" | "colId" | "cellDataType" | "allowFormula" | "calculatedExpression" | "valueGetter" | "valueFormatter" | "refData" | "keyCreator" | "equals" | "tooltipField" | "tooltipValueGetter" | "tooltipComponentSelector" | "checkboxSelection" | "showDisabledCheckboxes" | "suppressNavigable" | "suppressNoteActions" | "suppressKeyboardEvent" | "suppressPaste" | "suppressFillHandle" | "lockVisible" | "lockPosition" | "suppressMovable" | "useValueFormatterForExport" | "editable" | "groupRowEditable" | "groupRowValueSetter" | "valueSetter" | "valueParser" | "cellEditorParams" | "cellEditorSelector" | "cellEditorPopup" | "cellEditorPopupPosition" | "useValueParserForImport" | "getQuickFilterText" | "filterValueGetter" | "floatingFilter" | "suppressFloatingFilterButton" | "dateComponent" | "dateComponentParams" | "getFindText" | "headerComponent" | "headerComponentParams" | "menuTabs" | "columnChooserParams" | "suppressHeaderMenuButton" | "suppressHeaderFilterButton" | "mainMenuItems" | "columnMenuItems" | "contextMenuItems" | "headerCheckboxSelection" | "headerCheckboxSelectionFilteredOnly" | "headerCheckboxSelectionCurrentPageOnly" | "chartDataType" | "pinned" | "initialPinned" | "lockPinned" | "initialPivot" | "pivotIndex" | "initialPivotIndex" | "pivotComparator" | "pivotSort" | "initialPivotSort" | "enablePivot" | "cellStyle" | "cellClass" | "cellClassRules" | "cellRenderer" | "cellRendererParams" | "cellRendererSelector" | "autoHeight" | "wrapText" | "enableCellChangeFlash" | "rowDrag" | "dndSource" | "dndSourceOnRowDrag" | "initialRowGroup" | "rowGroupIndex" | "initialRowGroupIndex" | "enableRowGroup" | "enableValue" | "aggFunc" | "initialAggFunc" | "valueIndex" | "initialValueIndex" | "defaultAggFunc" | "allowedAggFuncs" | "showValuesAs" | "initialShowValuesAs" | "showValuesAsDef" | "enableShowValuesAs" | "rowGroupingHierarchy" | "groupHierarchy" | "showRowGroup" | "sortable" | "initialSort" | "sortIndex" | "initialSortIndex" | "colSpan" | "rowSpan" | "spanRows" | "initialWidth" | "minWidth" | "maxWidth" | "flex" | "initialFlex" | "resizable" | "suppressSizeToFit" | "pivotValueColumn" | "pivotTotalColumnIds" | "suppressSpanHeaderHeight" | "headerName" | "headerNameEditable" | "headerValueGetter" | "headerTooltip" | "headerTooltipValueGetter" | "headerStyle" | "headerClass" | "suppressHeaderKeyboardEvent" | "columnGroupShow" | "toolPanelClass" | "suppressColumnsToolPanel" | "suppressFiltersToolPanel" | "tooltipComponent" | "tooltipComponentParams" | "pivotKeys" | "cellAriaRole" | "wrapHeaderText" | "autoHeaderHeight" | "suppressHeaderContextMenu" | "filterParams" | "floatingFilterComponent" | "floatingFilterComponentParams">, never>): C & { field?: F }
 
 ### Parameters
 
-#### `colDef: C & Omit<ColDef<any, any>, "type" | "cellEditorParams" | "cellRendererParams"> & { cellEditorParams?: UnionToIntersection<SkyCellEditorParamsByType[T]> | ((params: ICellEditorParams<any, any>) => UnionToIntersection<SkyCellEditorParamsByType[T]>); cellRendererParams?: UnionToIntersection<SkyCellRendererParamsByType<any, any>[T]> | ((params: ICellRendererParams<any, any>) => UnionToIntersection<SkyCellRendererParamsByType<any, any>[T]>); type: T | T[] } & { field?: F } & Record<Exclude<keyof C, "sort" | "filter" | "width" | "type" | "hide" | "context" | "comparator" | "initialHide" | "suppressAutoSize" | "singleClickEdit" | "loadingCellRenderer" | "loadingCellRendererParams" | "loadingCellRendererSelector" | "rowDragText" | "sortingOrder" | "unSortIcon" | "icons" | "onCellValueChanged" | "onCellClicked" | "onCellDoubleClicked" | "onCellContextMenu" | "cellEditor" | "rowGroup" | "pivot" | "colId" | "field" | "cellDataType" | "allowFormula" | "calculatedExpression" | "valueGetter" | "valueFormatter" | "refData" | "keyCreator" | "equals" | "tooltipField" | "tooltipValueGetter" | "tooltipComponentSelector" | "checkboxSelection" | "showDisabledCheckboxes" | "suppressNavigable" | "suppressNoteActions" | "suppressKeyboardEvent" | "suppressPaste" | "suppressFillHandle" | "lockVisible" | "lockPosition" | "suppressMovable" | "useValueFormatterForExport" | "editable" | "groupRowEditable" | "groupRowValueSetter" | "valueSetter" | "valueParser" | "cellEditorParams" | "cellEditorSelector" | "cellEditorPopup" | "cellEditorPopupPosition" | "useValueParserForImport" | "getQuickFilterText" | "filterValueGetter" | "floatingFilter" | "suppressFloatingFilterButton" | "dateComponent" | "dateComponentParams" | "getFindText" | "headerComponent" | "headerComponentParams" | "menuTabs" | "columnChooserParams" | "suppressHeaderMenuButton" | "suppressHeaderFilterButton" | "mainMenuItems" | "columnMenuItems" | "contextMenuItems" | "headerCheckboxSelection" | "headerCheckboxSelectionFilteredOnly" | "headerCheckboxSelectionCurrentPageOnly" | "chartDataType" | "pinned" | "initialPinned" | "lockPinned" | "initialPivot" | "pivotIndex" | "initialPivotIndex" | "pivotComparator" | "pivotSort" | "initialPivotSort" | "enablePivot" | "cellStyle" | "cellClass" | "cellClassRules" | "cellRenderer" | "cellRendererParams" | "cellRendererSelector" | "autoHeight" | "wrapText" | "enableCellChangeFlash" | "rowDrag" | "dndSource" | "dndSourceOnRowDrag" | "initialRowGroup" | "rowGroupIndex" | "initialRowGroupIndex" | "enableRowGroup" | "enableValue" | "aggFunc" | "initialAggFunc" | "valueIndex" | "initialValueIndex" | "defaultAggFunc" | "allowedAggFuncs" | "showValuesAs" | "initialShowValuesAs" | "showValuesAsDef" | "enableShowValuesAs" | "rowGroupingHierarchy" | "groupHierarchy" | "showRowGroup" | "sortable" | "initialSort" | "sortIndex" | "initialSortIndex" | "colSpan" | "rowSpan" | "spanRows" | "initialWidth" | "minWidth" | "maxWidth" | "flex" | "initialFlex" | "resizable" | "suppressSizeToFit" | "pivotValueColumn" | "pivotTotalColumnIds" | "suppressSpanHeaderHeight" | "headerName" | "headerNameEditable" | "headerValueGetter" | "headerTooltip" | "headerTooltipValueGetter" | "headerStyle" | "headerClass" | "suppressHeaderKeyboardEvent" | "columnGroupShow" | "toolPanelClass" | "suppressColumnsToolPanel" | "suppressFiltersToolPanel" | "tooltipComponent" | "tooltipComponentParams" | "pivotKeys" | "cellAriaRole" | "wrapHeaderText" | "autoHeaderHeight" | "suppressHeaderContextMenu" | "filterParams" | "floatingFilterComponent" | "floatingFilterComponentParams">, never>`
+#### `colDef: C & Omit<ColDef<any, any>, "type" | "cellEditorParams" | "cellRendererParams"> & { cellEditorParams?: UnionToIntersection<SkyCellEditorParamsByType[T]> | ((params: ICellEditorParams<any, any>) => UnionToIntersection<SkyCellEditorParamsByType[T]>); cellRendererParams?: UnionToIntersection<SkyCellRendererParamsByType<any, any>[T]> | ((params: ICellRendererParams<any, any>) => UnionToIntersection<SkyCellRendererParamsByType<any, any>[T]>); type: T | T[] } & { field?: F } & Record<Exclude<keyof C, "sort" | "filter" | "width" | "type" | "hide" | "context" | "comparator" | "initialHide" | "field" | "suppressAutoSize" | "singleClickEdit" | "loadingCellRenderer" | "loadingCellRendererParams" | "loadingCellRendererSelector" | "rowDragText" | "sortingOrder" | "unSortIcon" | "icons" | "onCellValueChanged" | "onCellClicked" | "onCellDoubleClicked" | "onCellContextMenu" | "cellEditor" | "rowGroup" | "pivot" | "colId" | "cellDataType" | "allowFormula" | "calculatedExpression" | "valueGetter" | "valueFormatter" | "refData" | "keyCreator" | "equals" | "tooltipField" | "tooltipValueGetter" | "tooltipComponentSelector" | "checkboxSelection" | "showDisabledCheckboxes" | "suppressNavigable" | "suppressNoteActions" | "suppressKeyboardEvent" | "suppressPaste" | "suppressFillHandle" | "lockVisible" | "lockPosition" | "suppressMovable" | "useValueFormatterForExport" | "editable" | "groupRowEditable" | "groupRowValueSetter" | "valueSetter" | "valueParser" | "cellEditorParams" | "cellEditorSelector" | "cellEditorPopup" | "cellEditorPopupPosition" | "useValueParserForImport" | "getQuickFilterText" | "filterValueGetter" | "floatingFilter" | "suppressFloatingFilterButton" | "dateComponent" | "dateComponentParams" | "getFindText" | "headerComponent" | "headerComponentParams" | "menuTabs" | "columnChooserParams" | "suppressHeaderMenuButton" | "suppressHeaderFilterButton" | "mainMenuItems" | "columnMenuItems" | "contextMenuItems" | "headerCheckboxSelection" | "headerCheckboxSelectionFilteredOnly" | "headerCheckboxSelectionCurrentPageOnly" | "chartDataType" | "pinned" | "initialPinned" | "lockPinned" | "initialPivot" | "pivotIndex" | "initialPivotIndex" | "pivotComparator" | "pivotSort" | "initialPivotSort" | "enablePivot" | "cellStyle" | "cellClass" | "cellClassRules" | "cellRenderer" | "cellRendererParams" | "cellRendererSelector" | "autoHeight" | "wrapText" | "enableCellChangeFlash" | "rowDrag" | "dndSource" | "dndSourceOnRowDrag" | "initialRowGroup" | "rowGroupIndex" | "initialRowGroupIndex" | "enableRowGroup" | "enableValue" | "aggFunc" | "initialAggFunc" | "valueIndex" | "initialValueIndex" | "defaultAggFunc" | "allowedAggFuncs" | "showValuesAs" | "initialShowValuesAs" | "showValuesAsDef" | "enableShowValuesAs" | "rowGroupingHierarchy" | "groupHierarchy" | "showRowGroup" | "sortable" | "initialSort" | "sortIndex" | "initialSortIndex" | "colSpan" | "rowSpan" | "spanRows" | "initialWidth" | "minWidth" | "maxWidth" | "flex" | "initialFlex" | "resizable" | "suppressSizeToFit" | "pivotValueColumn" | "pivotTotalColumnIds" | "suppressSpanHeaderHeight" | "headerName" | "headerNameEditable" | "headerValueGetter" | "headerTooltip" | "headerTooltipValueGetter" | "headerStyle" | "headerClass" | "suppressHeaderKeyboardEvent" | "columnGroupShow" | "toolPanelClass" | "suppressColumnsToolPanel" | "suppressFiltersToolPanel" | "tooltipComponent" | "tooltipComponentParams" | "pivotKeys" | "cellAriaRole" | "wrapHeaderText" | "autoHeaderHeight" | "suppressHeaderContextMenu" | "filterParams" | "floatingFilterComponent" | "floatingFilterComponentParams">, never>`
 
 ## SkyAgGridColDef
 
@@ -1191,6 +1191,20 @@ Retrieves the IDs of the currently displayed columns.
 
 `Promise<string[]>`
 
+#### `getRowInlineDelete(rowId: string): Promise<SkyInlineDeleteHarness | null>`
+
+Gets the inline delete confirmation shown for a row by the `skyAgGridRowDelete` directive, or `null` if the row is not showing one.
+
+#### Parameters
+
+##### `rowId: string`
+
+The ID of the row.
+
+#### Returns
+
+`Promise<SkyInlineDeleteHarness | null>`
+
 #### `isGridReady(): Promise<boolean>`
 
 Checks whether the grid is ready.
@@ -1260,14 +1274,15 @@ Configures every grid built through `SkyAgGridService` to disable AG Grid's row/
 #### example.component.ts (primary file)
 
 ```typescript
-import { ChangeDetectionStrategy, Component, effect, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { SkyAgGridModule, SkyAgGridService, SkyCellType, defineSkyAgGridColDef } from '@skyux/ag-grid';
+import { SkyButton } from '@skyux/forms';
 import { SkyToolbarModule } from '@skyux/layout';
 import { SkySearchModule } from '@skyux/lookup';
 import { SkyModalConfigurationInterface, SkyModalService } from '@skyux/modals';
 
 import { AgGridAngular } from 'ag-grid-angular';
-import { AllCommunityModule, ColDef, GridApi, ModuleRegistry, ValueFormatterParams } from 'ag-grid-community';
+import { AllCommunityModule, ColDef, ModuleRegistry, ValueFormatterParams } from 'ag-grid-community';
 import { of } from 'rxjs';
 
 import { ContextMenuComponent } from './context-menu.component';
@@ -1284,10 +1299,12 @@ ModuleRegistry.registerModules([AllCommunityModule]);
   selector: 'app-ag-grid-data-entry-grid-basic-example',
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [AgGridAngular, SkyAgGridModule, SkySearchModule, SkyToolbarModule],
+  imports: [AgGridAngular, SkyButton, SkyAgGridModule, SkySearchModule, SkyToolbarModule],
 })
 export class AgGridDataEntryGridBasicExampleComponent {
-  protected readonly gridData = signal<AgGridDemoRow[]>(AG_GRID_DEMO_DATA);
+  // Copy the rows because the row selector writes the `selected` field back to each row.
+  protected readonly gridData = signal<AgGridDemoRow[]>(AG_GRID_DEMO_DATA.map((row) => ({ ...row })));
+  protected readonly searchText = signal('');
 
   readonly #columnDefs: ColDef[] = [
     defineSkyAgGridColDef({
@@ -1374,26 +1391,12 @@ export class AgGridDataEntryGridBasicExampleComponent {
   ];
 
   readonly #modalSvc = inject(SkyModalService);
-  readonly #gridApi = signal<GridApi | undefined>(undefined);
 
   protected gridOptions = inject(SkyAgGridService).getGridOptions({
     gridOptions: {
       columnDefs: this.#columnDefs,
-      onGridReady: (params) => {
-        this.#gridApi.set(params.api);
-      },
-      onGridPreDestroyed: () => {
-        this.#gridApi.set(undefined);
-      },
     },
   });
-
-  constructor() {
-    effect(() => {
-      const rowData = this.gridData();
-      this.#gridApi()?.setGridOption('rowData', rowData);
-    });
-  }
 
   protected openModal(): void {
     const context = new EditModalContext();
@@ -1421,7 +1424,7 @@ export class AgGridDataEntryGridBasicExampleComponent {
   }
 
   protected searchApplied(searchText: string | void): void {
-    this.#gridApi()?.setGridOption('quickFilterText', searchText ?? '');
+    this.searchText.set(searchText ?? '');
   }
 
   #endDateFormatter(params: ValueFormatterParams<AgGridDemoRow, Date>): string {
@@ -1597,7 +1600,7 @@ export interface AgGridDemoRow {
   age: number;
   startDate: Date;
   endDate?: Date;
-  department: AutocompleteOption;
+  department?: AutocompleteOption;
   jobTitle?: AutocompleteOption;
   validationCurrency?: number;
   validationDate?: Date;
@@ -1677,15 +1680,20 @@ export class EditModalContext {
 #### edit-modal.component.html
 
 ```html
-<sky-modal headingText="Edit employee information">
+<sky-modal data-sky-id="edit-modal" headingText="Edit employee information">
   <sky-modal-content>
-    <sky-ag-grid-wrapper>
+    <sky-ag-grid-wrapper data-sky-id="edit-grid">
       <ag-grid-angular class="sky-ag-grid-editable" [gridOptions]="gridOptions" [rowData]="gridData" />
     </sky-ag-grid-wrapper>
   </sky-modal-content>
   <sky-modal-footer>
-    <button class="sky-btn sky-btn-primary" type="button" (click)="instance.save(gridData)">Save</button>
-    <button class="sky-btn sky-btn-link" type="button" (click)="instance.cancel()">Cancel</button>
+    <sky-button
+      buttonStyle="primary"
+      data-sky-id="save-button"
+      labelText="Save"
+      (buttonClick)="instance.save(gridData)"
+    />
+    <sky-button buttonStyle="link" data-sky-id="cancel-button" labelText="Cancel" (buttonClick)="instance.cancel()" />
   </sky-modal-footer>
 </sky-modal>
 <ng-template #markInactiveAction let-value="value" let-row="row">
@@ -1696,7 +1704,7 @@ export class EditModalContext {
 #### edit-modal.component.ts
 
 ```typescript
-import { ChangeDetectionStrategy, Component, TemplateRef, inject, signal, viewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, TemplateRef, inject, viewChild } from '@angular/core';
 import {
   SkyAgGridAutocompleteProperties,
   SkyAgGridDatepickerProperties,
@@ -1705,20 +1713,13 @@ import {
   SkyCellType,
   defineSkyAgGridColDef,
 } from '@skyux/ag-grid';
-import { SkyAutocompleteSelectionChange } from '@skyux/lookup';
+import { SkyButton } from '@skyux/forms';
 import { SkyModalInstance, SkyModalModule } from '@skyux/modals';
 
 import { AgGridAngular } from 'ag-grid-angular';
-import {
-  AllCommunityModule,
-  GridApi,
-  ICellEditorParams,
-  IRowNode,
-  ModuleRegistry,
-  NewValueParams,
-} from 'ag-grid-community';
+import { AllCommunityModule, ICellEditorParams, ModuleRegistry, ValueSetterParams } from 'ag-grid-community';
 
-import { AgGridDemoRow, DEPARTMENTS, JOB_TITLES } from './data';
+import { AgGridDemoRow, AutocompleteOption, DEPARTMENTS, JOB_TITLES } from './data';
 import { EditModalContext } from './edit-modal-context';
 import { MarkInactiveComponent } from './mark-inactive.component';
 
@@ -1728,7 +1729,7 @@ ModuleRegistry.registerModules([AllCommunityModule]);
   selector: 'app-edit-modal',
   templateUrl: './edit-modal.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [AgGridAngular, SkyAgGridModule, SkyModalModule, MarkInactiveComponent],
+  imports: [AgGridAngular, SkyButton, SkyAgGridModule, SkyModalModule, MarkInactiveComponent],
 })
 export class EditModalComponent {
   protected readonly markInactiveAction = viewChild<TemplateRef<unknown>>('markInactiveAction');
@@ -1805,22 +1806,25 @@ export class EditModalComponent {
           headerName: 'Department',
           type: SkyCellType.Autocomplete,
           editable: true,
-          cellEditorParams: (
-            params: ICellEditorParams<AgGridDemoRow>,
-          ): { skyComponentProperties: SkyAgGridAutocompleteProperties } => {
-            return {
-              skyComponentProperties: {
-                data: DEPARTMENTS,
-                selectionChange: (change: SkyAutocompleteSelectionChange): void => {
-                  this.#departmentSelectionChange(change, params.node);
-                },
-              },
-            };
+          cellEditorParams: {
+            skyComponentProperties: {
+              data: DEPARTMENTS,
+            },
           },
-          onCellValueChanged: (event: NewValueParams): void => {
-            if (event.newValue !== event.oldValue) {
-              this.#clearJobTitle(event.node);
+          valueSetter: (params: ValueSetterParams<AgGridDemoRow, AutocompleteOption>): boolean => {
+            if (params.newValue?.name === params.oldValue?.name) {
+              return false;
             }
+
+            params.data.department = params.newValue ?? undefined;
+            // Job titles belong to a department, so clear the title when the
+            // department changes. This must happen here rather than in
+            // `onCellValueChanged`, because tabbing to the next cell starts
+            // the job title editor before that event fires.
+            params.data.jobTitle = undefined;
+            params.api.refreshCells({ columns: ['jobTitle'] });
+
+            return true;
           },
         }),
         defineSkyAgGridColDef({
@@ -1831,17 +1835,13 @@ export class EditModalComponent {
           cellEditorParams: (
             params: ICellEditorParams<AgGridDemoRow>,
           ): { skyComponentProperties: SkyAgGridAutocompleteProperties } => {
-            const selectedDepartment = params.data?.department?.name;
+            const department = params.data.department?.name;
 
-            const editParams: {
-              skyComponentProperties: SkyAgGridAutocompleteProperties;
-            } = { skyComponentProperties: { data: [] } };
-
-            if (selectedDepartment) {
-              editParams.skyComponentProperties.data = JOB_TITLES[selectedDepartment];
-            }
-
-            return editParams;
+            return {
+              skyComponentProperties: {
+                data: department ? JOB_TITLES[department] : [],
+              },
+            };
           },
         }),
         {
@@ -1865,31 +1865,11 @@ export class EditModalComponent {
           editable: true,
         }),
       ],
-      onGridReady: (gridReadyEvent): void => {
-        this.#gridApi.set(gridReadyEvent.api);
-      },
-      onGridPreDestroyed: (): void => {
-        this.#gridApi.set(undefined);
-      },
       stopEditingWhenCellsLoseFocus: true,
     },
   });
-  readonly #gridApi = signal<GridApi | undefined>(undefined);
 
   protected readonly instance = inject(SkyModalInstance);
-
-  #departmentSelectionChange(change: SkyAutocompleteSelectionChange, node: IRowNode<AgGridDemoRow>): void {
-    if (change.selectedItem && change.selectedItem !== node.data?.department) {
-      this.#clearJobTitle(node);
-    }
-  }
-
-  #clearJobTitle(node: IRowNode<AgGridDemoRow> | null): void {
-    if (node?.data) {
-      node.data.jobTitle = undefined;
-      this.#gridApi()?.applyTransaction({ update: [node.data] });
-    }
-  }
 }
 ```
 
@@ -1898,10 +1878,11 @@ export class EditModalComponent {
 ```html
 <sky-toolbar>
   <sky-toolbar-item>
-    <button class="sky-btn sky-btn-primary" type="button" (click)="openModal()">Edit</button>
+    <sky-button buttonStyle="primary" data-sky-id="edit-button" labelText="Edit" (buttonClick)="openModal()" />
   </sky-toolbar-item>
   <sky-toolbar-item>
     <sky-search
+      data-sky-id="employee-search"
       [debounceTime]="250"
       (searchApply)="searchApplied($event)"
       (searchChange)="searchApplied($event)"
@@ -1909,9 +1890,287 @@ export class EditModalComponent {
     />
   </sky-toolbar-item>
 </sky-toolbar>
-<sky-ag-grid-wrapper>
-  <ag-grid-angular [gridOptions]="gridOptions" />
+<sky-ag-grid-wrapper data-sky-id="employee-grid">
+  <ag-grid-angular [gridOptions]="gridOptions" [quickFilterText]="searchText()" [rowData]="gridData()" />
 </sky-ag-grid-wrapper>
+```
+
+#### example.component.spec.ts
+
+```typescript
+import { HarnessLoader } from '@angular/cdk/testing';
+import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { SkyAgGridWrapperHarness, provideSkyAgGridTesting } from '@skyux/ag-grid/testing';
+import { provideNoopSkyAnimations } from '@skyux/core';
+import { SkyCheckboxHarness } from '@skyux/forms/testing';
+import { SkyAutocompleteHarness, SkySearchHarness } from '@skyux/lookup/testing';
+import { SkyDropdownHarness } from '@skyux/popovers/testing';
+
+import { AgGridDataEntryGridBasicExampleComponent } from './example.component';
+import {
+  clickButton,
+  clickElement,
+  enterValue,
+  openEditModal,
+  pressTab,
+  startEditing,
+  typeIntoEditor,
+} from './spec-helpers';
+
+describe('AG Grid data entry grid basic example', () => {
+  async function setupTest(): Promise<{
+    docLoader: HarnessLoader;
+    fixture: ComponentFixture<AgGridDataEntryGridBasicExampleComponent>;
+    gridHarness: SkyAgGridWrapperHarness;
+    loader: HarnessLoader;
+  }> {
+    await TestBed.configureTestingModule({
+      imports: [AgGridDataEntryGridBasicExampleComponent],
+      providers: [provideSkyAgGridTesting(), provideNoopSkyAnimations()],
+    }).compileComponents();
+
+    const fixture = TestBed.createComponent(AgGridDataEntryGridBasicExampleComponent);
+    const loader = TestbedHarnessEnvironment.loader(fixture);
+    const docLoader = TestbedHarnessEnvironment.documentRootLoader(fixture);
+    fixture.detectChanges();
+
+    const gridHarness = await loader.getHarness(SkyAgGridWrapperHarness.with({ dataSkyId: 'employee-grid' }));
+
+    // AG Grid renders outside the Angular zone, so wait for the grid itself
+    // rather than relying on `fixture.whenStable()`.
+    await gridHarness.waitUntilRendered();
+
+    return { docLoader, fixture, gridHarness, loader };
+  }
+
+  function isCellInvalid(rowIndex: number, colId: string): boolean {
+    return !!document
+      .querySelector(`[data-sky-id="employee-grid"] .ag-row[row-index="${rowIndex}"] [col-id="${colId}"]`)
+      ?.classList.contains('sky-ag-grid-cell-invalid');
+  }
+
+  it('should render employees sorted by start date', async () => {
+    const { gridHarness } = await setupTest();
+
+    await expectAsync(gridHarness.getDisplayedColumnHeaderNames()).toBeResolvedTo([
+      '',
+      'Context menu',
+      'Name',
+      'Age',
+      'Start date',
+      'End date',
+      'Department',
+      'Title',
+      'Validation currency',
+      'Validation date',
+    ]);
+    await expectAsync(gridHarness.getDisplayedCellValues('name')).toBeResolvedTo([
+      'Billy Bob',
+      'Jane Deere',
+      'David Smith',
+      'Emily Johnson',
+      'John Doe',
+      'Nicole Davidson',
+      'Carl Roberts',
+    ]);
+    // Billy Bob has no end date.
+    const [billyBobEndDate] = await gridHarness.getDisplayedCellValues('endDate');
+    expect(billyBobEndDate).toBe('N/A');
+  });
+
+  it('should flag cells that fail validation', async () => {
+    await setupTest();
+
+    // "Billy Bob" is within the 10 character limit.
+    expect(isCellInvalid(0, 'name')).toBeFalse();
+    // "Nicole Davidson" exceeds the 10 character limit.
+    expect(isCellInvalid(5, 'name')).toBeTrue();
+    // No validation date has been entered yet.
+    expect(isCellInvalid(0, 'validationDate')).toBeTrue();
+  });
+
+  it('should toggle row selection', async () => {
+    const { loader } = await setupTest();
+
+    const billyBobCheckbox = await loader.getHarness(
+      SkyCheckboxHarness.with({
+        dataSkyId: 'row-checkbox',
+        ancestor: '.ag-row[row-index="0"]',
+      }),
+    );
+    await expectAsync(billyBobCheckbox.getLabelText()).toBeResolvedTo('Select Billy Bob');
+
+    await expectAsync(billyBobCheckbox.isChecked()).toBeResolvedTo(true);
+
+    await billyBobCheckbox.uncheck();
+    await expectAsync(billyBobCheckbox.isChecked()).toBeResolvedTo(false);
+  });
+
+  it('should filter rows using the search', async () => {
+    const { gridHarness, loader } = await setupTest();
+    const search = await loader.getHarness(SkySearchHarness.with({ dataSkyId: 'employee-search' }));
+
+    await gridHarness.waitUntilRendered(async () => {
+      await search.enterText('Billy');
+      await search.clickSubmitButton();
+    });
+
+    await expectAsync(gridHarness.getDisplayedCellValues('name')).toBeResolvedTo(['Billy Bob']);
+
+    await gridHarness.waitUntilRendered(() => search.clickClearButton());
+
+    const names = await gridHarness.getDisplayedCellValues('name');
+    expect(names.length).toBe(7);
+  });
+
+  it('should log the selected context menu action', async () => {
+    const { loader } = await setupTest();
+    const consoleSpy = spyOn(console, 'error');
+
+    const contextMenu = await loader.getHarness(
+      SkyDropdownHarness.with({
+        selector: '.ag-row[row-index="0"] sky-dropdown',
+      }),
+    );
+    await contextMenu.clickDropdownButton();
+    const menu = await contextMenu.getDropdownMenu();
+    const items = await menu.getItems();
+    await expectAsync(Promise.all(items.map((item) => item.getText()))).toBeResolvedTo([
+      'Delete',
+      'Mark inactive',
+      'More info',
+    ]);
+
+    await (await menu.getItem({ text: 'Mark inactive' })).click();
+
+    expect(consoleSpy).toHaveBeenCalledWith('Mark inactive clicked for Billy Bob');
+  });
+
+  describe('edit modal', () => {
+    let alertSpy: jasmine.Spy;
+
+    beforeEach(() => {
+      alertSpy = spyOn(window, 'alert');
+    });
+
+    it('should log when a row is marked inactive', async () => {
+      const { docLoader, fixture } = await setupTest();
+      const consoleSpy = spyOn(console, 'error');
+      await openEditModal(docLoader);
+
+      await clickElement(fixture, '[aria-label="Mark Billy Bob inactive"]');
+
+      expect(consoleSpy).toHaveBeenCalledWith('Mark inactive action clicked for Billy Bob');
+
+      await clickButton(docLoader, 'cancel-button');
+    });
+
+    it('should save edits to the grid', async () => {
+      const { docLoader, fixture, gridHarness } = await setupTest();
+      await openEditModal(docLoader);
+
+      await typeIntoEditor(fixture, await startEditing(fixture, 0, 'name'), 'Bobby');
+      await typeIntoEditor(fixture, await startEditing(fixture, 0, 'validationDate'), '01/01/2020');
+
+      await gridHarness.waitUntilRendered(() => clickButton(docLoader, 'save-button'));
+
+      const [billyBobName] = await gridHarness.getDisplayedCellValues('name');
+      expect(billyBobName).toBe('Bobby');
+      expect(isCellInvalid(0, 'validationDate')).toBeFalse();
+    });
+
+    it('should alert when edits are canceled or the modal is closed', async () => {
+      const { docLoader, fixture, gridHarness } = await setupTest();
+
+      await openEditModal(docLoader);
+      await typeIntoEditor(fixture, await startEditing(fixture, 0, 'name'), 'Discarded');
+      await clickButton(docLoader, 'cancel-button');
+
+      expect(alertSpy).toHaveBeenCalledOnceWith('Edits canceled!');
+      const [billyBobName] = await gridHarness.getDisplayedCellValues('name');
+      expect(billyBobName).toBe('Billy Bob');
+
+      await openEditModal(docLoader);
+      await clickElement(fixture, '.sky-modal-btn-close');
+
+      expect(alertSpy).toHaveBeenCalledTimes(2);
+    });
+
+    it('should not allow an end date before the start date', async () => {
+      const { docLoader, fixture } = await setupTest();
+      await openEditModal(docLoader);
+
+      // Billy Bob started on 12/1/1994.
+      const endDateEditor = await startEditing(fixture, 0, 'endDate');
+
+      await enterValue(fixture, endDateEditor, '01/01/1990');
+      expect(endDateEditor).toHaveClass('ng-invalid');
+
+      await enterValue(fixture, endDateEditor, '01/01/2000');
+      expect(endDateEditor).not.toHaveClass('ng-invalid');
+
+      await clickButton(docLoader, 'cancel-button');
+    });
+
+    it('should clear the job title when the department changes', async () => {
+      const { docLoader, fixture } = await setupTest();
+      const modalGridHarness = await openEditModal(docLoader);
+
+      await startEditing(fixture, 0, 'department');
+      const department = await docLoader.getHarness(SkyAutocompleteHarness);
+      await (await department.getControl()).setValue('Sales');
+      await department.selectSearchResult({ text: 'Sales' });
+      // Tab saves the department and starts editing the job title.
+      await modalGridHarness.waitUntilRendered(() => pressTab(fixture));
+
+      const [billyBobJobTitle] = await modalGridHarness.getDisplayedCellValues('jobTitle');
+      expect(billyBobJobTitle).toBe('');
+
+      // Job title options are limited to the selected department.
+      const jobTitle = await docLoader.getHarness(SkyAutocompleteHarness);
+      await (await jobTitle.getControl()).setValue('e');
+      await expectAsync(jobTitle.getSearchResultsText()).toBeResolvedTo([
+        'Business Development Representative',
+        'Account Executive',
+      ]);
+
+      await clickButton(docLoader, 'cancel-button');
+    });
+
+    it('should keep the job title when the department does not change', async () => {
+      const { docLoader, fixture } = await setupTest();
+      const modalGridHarness = await openEditModal(docLoader);
+
+      await startEditing(fixture, 0, 'department');
+      const department = await docLoader.getHarness(SkyAutocompleteHarness);
+      await (await department.getControl()).setValue('Customer Support');
+      await department.selectSearchResult({ text: 'Customer Support' });
+      await pressTab(fixture);
+
+      const [billyBobJobTitle] = await modalGridHarness.getDisplayedCellValues('jobTitle');
+      expect(billyBobJobTitle).toBe('Account Manager');
+
+      await clickButton(docLoader, 'cancel-button');
+    });
+
+    it('should not offer job titles when the department is cleared', async () => {
+      const { docLoader, fixture } = await setupTest();
+      const modalGridHarness = await openEditModal(docLoader);
+
+      await startEditing(fixture, 0, 'department');
+      const department = await docLoader.getHarness(SkyAutocompleteHarness);
+      await (await department.getControl()).clear();
+      await modalGridHarness.waitUntilRendered(() => pressTab(fixture));
+
+      const jobTitle = await docLoader.getHarness(SkyAutocompleteHarness);
+      await (await jobTitle.getControl()).setValue('e');
+      await expectAsync(jobTitle.getSearchResultsText()).toBeResolvedTo([]);
+
+      await clickButton(docLoader, 'cancel-button');
+    });
+  });
+});
 ```
 
 #### mark-inactive.component.html
@@ -1960,6 +2219,90 @@ export class MarkInactiveComponent {
 }
 ```
 
+#### spec-helpers.ts
+
+```typescript
+import { HarnessLoader } from '@angular/cdk/testing';
+import { ComponentFixture } from '@angular/core/testing';
+import { SkyAgGridWrapperHarness } from '@skyux/ag-grid/testing';
+import { SkyButtonHarness } from '@skyux/forms/testing';
+
+async function settle(fixture: ComponentFixture<unknown>): Promise<void> {
+  fixture.detectChanges();
+  await fixture.whenStable();
+}
+
+export async function clickButton(docLoader: HarnessLoader, dataSkyId: string): Promise<void> {
+  const button = await docLoader.getHarness(SkyButtonHarness.with({ dataSkyId }));
+  await button.click();
+}
+
+export async function openEditModal(docLoader: HarnessLoader): Promise<SkyAgGridWrapperHarness> {
+  await clickButton(docLoader, 'edit-button');
+
+  const modalGridHarness = await docLoader.getHarness(SkyAgGridWrapperHarness.with({ dataSkyId: 'edit-grid' }));
+  await modalGridHarness.waitUntilRendered();
+
+  return modalGridHarness;
+}
+
+/**
+ * Starts editing a modal grid cell the way a keyboard user would, by focusing
+ * the cell and pressing Enter, and returns the editor's input.
+ */
+export async function startEditing(
+  fixture: ComponentFixture<unknown>,
+  rowIndex: number,
+  colId: string,
+): Promise<HTMLInputElement> {
+  const cell = document.querySelector<HTMLElement>(
+    `[data-sky-id="edit-grid"] .ag-row[row-index="${rowIndex}"] [col-id="${colId}"]`,
+  )!;
+  cell.focus();
+  cell.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
+  await settle(fixture);
+
+  return document.activeElement as HTMLInputElement;
+}
+
+export async function enterValue(
+  fixture: ComponentFixture<unknown>,
+  editor: HTMLInputElement,
+  value: string,
+): Promise<void> {
+  editor.value = value;
+  editor.dispatchEvent(new Event('input', { bubbles: true }));
+  editor.dispatchEvent(new Event('change', { bubbles: true }));
+  await settle(fixture);
+}
+
+/**
+ * Types a value into a cell editor and presses Enter to save it.
+ */
+export async function typeIntoEditor(
+  fixture: ComponentFixture<unknown>,
+  editor: HTMLInputElement,
+  value: string,
+): Promise<void> {
+  await enterValue(fixture, editor, value);
+  editor.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
+  await settle(fixture);
+}
+
+export async function pressTab(fixture: ComponentFixture<unknown>): Promise<void> {
+  document.activeElement?.dispatchEvent(new KeyboardEvent('keydown', { key: 'Tab', bubbles: true }));
+  await settle(fixture);
+}
+
+/**
+ * Clicks an element that has no harness, such as the modal's close button.
+ */
+export async function clickElement(fixture: ComponentFixture<unknown>, selector: string): Promise<void> {
+  document.querySelector<HTMLElement>(selector)?.click();
+  await settle(fixture);
+}
+```
+
 ### Data manager setup
 
 #### example.component.ts (primary file)
@@ -1969,6 +2312,7 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, inject, signal }
 import { toSignal } from '@angular/core/rxjs-interop';
 import { SkyDataManagerModule, SkyDataManagerService, SkyDataManagerState } from '@skyux/data-manager';
 import { SkyFilterBarModule, SkyFilterItemLookupSearchAsyncArgs } from '@skyux/filter-bar';
+import { SkyButton } from '@skyux/forms';
 import { SkyListSummaryModule } from '@skyux/lists';
 import { SkyModalConfigurationInterface, SkyModalService } from '@skyux/modals';
 
@@ -1991,7 +2335,7 @@ const SOURCE_ID = 'data_entry_grid_data_manager_example_id';
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [SkyDataManagerService],
-  imports: [ViewGridComponent, SkyDataManagerModule, SkyFilterBarModule, SkyListSummaryModule],
+  imports: [ViewGridComponent, SkyButton, SkyDataManagerModule, SkyFilterBarModule, SkyListSummaryModule],
 })
 export class AgGridDataEntryGridDataManagerAddedExampleComponent {
   protected readonly items = signal<AgGridDemoRow[]>(AG_GRID_DEMO_DATA);
@@ -2233,7 +2577,7 @@ export interface AgGridDemoRow {
   age: number;
   startDate: Date;
   endDate?: Date;
-  department: AutocompleteOption;
+  department?: AutocompleteOption;
   jobTitle?: AutocompleteOption;
   validationCurrency?: number;
   validationDate?: Date;
@@ -2323,13 +2667,13 @@ export class EditModalContext {
 ```html
 <sky-modal headingText="Edit employee information">
   <sky-modal-content>
-    <sky-ag-grid-wrapper>
+    <sky-ag-grid-wrapper data-sky-id="edit-employees-grid">
       <ag-grid-angular class="sky-ag-grid-editable" [gridOptions]="gridOptions" />
     </sky-ag-grid-wrapper>
   </sky-modal-content>
   <sky-modal-footer>
-    <button class="sky-btn sky-btn-primary" type="button" (click)="saveData()">Save</button>
-    <button class="sky-btn sky-btn-link" type="button" (click)="instance.cancel()">Cancel</button>
+    <sky-button buttonStyle="primary" data-sky-id="save-button" labelText="Save" (buttonClick)="saveData()" />
+    <sky-button buttonStyle="link" data-sky-id="cancel-button" labelText="Cancel" (buttonClick)="instance.cancel()" />
   </sky-modal-footer>
 </sky-modal>
 ```
@@ -2337,7 +2681,7 @@ export class EditModalContext {
 #### edit-modal.component.ts
 
 ```typescript
-import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import {
   SkyAgGridAutocompleteProperties,
   SkyAgGridDatepickerProperties,
@@ -2346,13 +2690,13 @@ import {
   SkyCellType,
   defineSkyAgGridColDef,
 } from '@skyux/ag-grid';
-import { SkyAutocompleteSelectionChange } from '@skyux/lookup';
+import { SkyButton } from '@skyux/forms';
 import { SkyModalInstance, SkyModalModule } from '@skyux/modals';
 
 import { AgGridAngular } from 'ag-grid-angular';
-import { AllCommunityModule, GridApi, ICellEditorParams, IRowNode, ModuleRegistry } from 'ag-grid-community';
+import { AllCommunityModule, ICellEditorParams, ModuleRegistry, ValueSetterParams } from 'ag-grid-community';
 
-import { AgGridDemoRow, DEPARTMENTS, JOB_TITLES } from './data';
+import { AgGridDemoRow, AutocompleteOption, DEPARTMENTS, JOB_TITLES } from './data';
 import { EditModalContext } from './edit-modal-context';
 
 ModuleRegistry.registerModules([AllCommunityModule]);
@@ -2361,11 +2705,9 @@ ModuleRegistry.registerModules([AllCommunityModule]);
   selector: 'app-edit-modal',
   templateUrl: './edit-modal.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [AgGridAngular, SkyAgGridModule, SkyModalModule],
+  imports: [AgGridAngular, SkyButton, SkyAgGridModule, SkyModalModule],
 })
 export class EditModalComponent {
-  readonly #gridApi = signal<GridApi | undefined>(undefined);
-
   protected readonly gridData = inject(EditModalContext).gridData;
   protected readonly gridOptions = inject(SkyAgGridService).getEditableGridOptions<AgGridDemoRow>({
     gridOptions: {
@@ -2407,22 +2749,25 @@ export class EditModalComponent {
           headerName: 'Department',
           type: SkyCellType.Autocomplete,
           editable: true,
-          cellEditorParams: (
-            params: ICellEditorParams<AgGridDemoRow>,
-          ): { skyComponentProperties: SkyAgGridAutocompleteProperties } => {
-            return {
-              skyComponentProperties: {
-                data: DEPARTMENTS,
-                selectionChange: (change): void => {
-                  this.#departmentSelectionChange(change, params.node);
-                },
-              },
-            };
+          cellEditorParams: {
+            skyComponentProperties: {
+              data: DEPARTMENTS,
+            },
           },
-          onCellValueChanged: (event): void => {
-            if (event.newValue !== event.oldValue) {
-              this.#clearJobTitle(event.node);
+          valueSetter: (params: ValueSetterParams<AgGridDemoRow, AutocompleteOption>): boolean => {
+            if (params.newValue?.name === params.oldValue?.name) {
+              return false;
             }
+
+            params.data.department = params.newValue ?? undefined;
+            // Job titles belong to a department, so clear the title when the
+            // department changes. This must happen here rather than in
+            // `onCellValueChanged`, because tabbing to the next cell starts
+            // the job title editor before that event fires.
+            params.data.jobTitle = undefined;
+            params.api.refreshCells({ columns: ['jobTitle'] });
+
+            return true;
           },
         }),
         defineSkyAgGridColDef({
@@ -2433,17 +2778,13 @@ export class EditModalComponent {
           cellEditorParams: (
             params: ICellEditorParams<AgGridDemoRow>,
           ): { skyComponentProperties: SkyAgGridAutocompleteProperties } => {
-            const selectedDepartment = params.data?.department?.name;
+            const department = params.data.department?.name;
 
-            const editParams: {
-              skyComponentProperties: SkyAgGridAutocompleteProperties;
-            } = { skyComponentProperties: { data: [] } };
-
-            if (selectedDepartment) {
-              editParams.skyComponentProperties.data = JOB_TITLES[selectedDepartment];
-            }
-
-            return editParams;
+            return {
+              skyComponentProperties: {
+                data: department ? JOB_TITLES[department] : [],
+              },
+            };
           },
         }),
         {
@@ -2467,33 +2808,15 @@ export class EditModalComponent {
           editable: true,
         }),
       ],
-      onGridReady: (gridReadyEvent): void => {
-        this.#gridApi.set(gridReadyEvent.api);
-      },
-      onGridPreDestroyed: (): void => {
-        this.#gridApi.set(undefined);
-      },
       rowData: this.gridData,
       stopEditingWhenCellsLoseFocus: true,
     },
   });
+
   protected readonly instance = inject(SkyModalInstance);
 
   protected saveData(): void {
     this.instance.save(this.gridData);
-  }
-
-  #departmentSelectionChange(change: SkyAutocompleteSelectionChange, node: IRowNode<AgGridDemoRow>): void {
-    if (change.selectedItem && change.selectedItem !== node.data?.department) {
-      this.#clearJobTitle(node);
-    }
-  }
-
-  #clearJobTitle(node: IRowNode<AgGridDemoRow> | null): void {
-    if (node?.data) {
-      node.data.jobTitle = undefined;
-      this.#gridApi()?.applyTransaction({ update: [node.data] });
-    }
   }
 }
 ```
@@ -2501,12 +2824,12 @@ export class EditModalComponent {
 #### example.component.html
 
 ```html
-<sky-data-manager>
+<sky-data-manager data-sky-id="employees-data-manager">
   <sky-data-manager-toolbar>
     <sky-data-manager-toolbar-left-item>
-      <button class="sky-btn sky-btn-primary" type="button" (click)="openModal()">Edit</button>
+      <sky-button buttonStyle="primary" data-sky-id="edit-button" labelText="Edit" (buttonClick)="openModal()" />
     </sky-data-manager-toolbar-left-item>
-    <sky-filter-bar skyDataManagerFilterController>
+    <sky-filter-bar data-sky-id="employees-filter-bar" skyDataManagerFilterController>
       <sky-filter-item-modal
         filterId="hideSales"
         labelText="Hide sales"
@@ -2521,12 +2844,396 @@ export class EditModalComponent {
         (searchAsync)="onJobTitleSearchAsync($event)"
       />
     </sky-filter-bar>
-    <sky-list-summary>
+    <sky-list-summary data-sky-id="employees-list-summary">
       <sky-list-summary-item [labelText]="recordCount() === 1 ? 'Record' : 'Records'" [value]="recordCount()" />
     </sky-list-summary>
   </sky-data-manager-toolbar>
   <app-view-grid [items]="items()" />
 </sky-data-manager>
+```
+
+#### example.component.spec.ts
+
+```typescript
+import { HarnessLoader } from '@angular/cdk/testing';
+import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { SkyAgGridWrapperHarness, provideSkyAgGridTesting } from '@skyux/ag-grid/testing';
+import { provideNoopSkyAnimations } from '@skyux/core';
+import { SkyDataManagerHarness } from '@skyux/data-manager/testing';
+import { SkyFilterBarHarness } from '@skyux/filter-bar/testing';
+import { SkyCheckboxHarness } from '@skyux/forms/testing';
+import { SkyListSummaryHarness } from '@skyux/lists/testing';
+import { SkyAutocompleteHarness, SkySelectionModalHarness } from '@skyux/lookup/testing';
+import { SkyConfirmHarness } from '@skyux/modals/testing';
+import { SkyDropdownHarness } from '@skyux/popovers/testing';
+
+import { of } from 'rxjs';
+
+import { JOB_TITLES } from './data';
+import { AgGridDataEntryGridDataManagerAddedExampleComponent } from './example.component';
+import { ExampleService } from './example.service';
+import {
+  clickButton,
+  clickElement,
+  enterValue,
+  openEditModal,
+  pressTab,
+  startEditing,
+  typeIntoEditor,
+} from './spec-helpers';
+
+describe('AG Grid data entry grid data manager example', () => {
+  // The grid sorts rows by start date by default.
+  const DEFAULT_ORDER = [
+    'Billy Bob',
+    'Jane Deere',
+    'David Smith',
+    'Emily Johnson',
+    'John Doe',
+    'Nicole Davidson',
+    'Carl Roberts',
+  ];
+
+  async function setupTest(): Promise<{
+    fixture: ComponentFixture<AgGridDataEntryGridDataManagerAddedExampleComponent>;
+    loader: HarnessLoader;
+    docLoader: HarnessLoader;
+    dataManagerHarness: SkyDataManagerHarness;
+    gridHarness: SkyAgGridWrapperHarness;
+  }> {
+    await TestBed.configureTestingModule({
+      imports: [AgGridDataEntryGridDataManagerAddedExampleComponent],
+      providers: [provideSkyAgGridTesting(), provideNoopSkyAnimations()],
+    }).compileComponents();
+
+    const fixture = TestBed.createComponent(AgGridDataEntryGridDataManagerAddedExampleComponent);
+    const loader = TestbedHarnessEnvironment.loader(fixture);
+    const docLoader = TestbedHarnessEnvironment.documentRootLoader(fixture);
+    fixture.detectChanges();
+
+    const dataManagerHarness = await loader.getHarness(
+      SkyDataManagerHarness.with({ dataSkyId: 'employees-data-manager' }),
+    );
+    const gridHarness = await loader.getHarness(SkyAgGridWrapperHarness.with({ dataSkyId: 'employees-grid' }));
+
+    // AG Grid renders outside the Angular zone, so wait for the grid itself
+    // rather than relying on `fixture.whenStable()`.
+    await gridHarness.waitUntilRendered();
+
+    return { fixture, loader, docLoader, dataManagerHarness, gridHarness };
+  }
+
+  async function getFilterBar(loader: HarnessLoader): Promise<SkyFilterBarHarness> {
+    return await loader.getHarness(SkyFilterBarHarness.with({ dataSkyId: 'employees-filter-bar' }));
+  }
+
+  it('should render employees sorted by start date with a record count', async () => {
+    const { gridHarness, loader } = await setupTest();
+
+    await expectAsync(gridHarness.getDisplayedColumnHeaderNames()).toBeResolvedTo([
+      '',
+      'Context menu',
+      'Name',
+      'Age',
+      'Start date',
+      'End date',
+      'Department',
+      'Title',
+      'Validation currency',
+      'Validation date',
+    ]);
+    await expectAsync(gridHarness.getDisplayedCellValues('name')).toBeResolvedTo(DEFAULT_ORDER);
+    // Billy Bob has no end date.
+    const [billyBobEndDate] = await gridHarness.getDisplayedCellValues('endDate');
+    expect(billyBobEndDate).toBe('N/A');
+
+    const listSummary = await loader.getHarness(SkyListSummaryHarness.with({ dataSkyId: 'employees-list-summary' }));
+    const [recordCount] = await listSummary.getSummaryItems();
+    await expectAsync(recordCount.getValueText()).toBeResolvedTo('7');
+    await expectAsync(recordCount.getLabelText()).toBeResolvedTo('Records');
+  });
+
+  it('should alert the selected context menu action', async () => {
+    const { loader } = await setupTest();
+    const alertSpy = spyOn(window, 'alert');
+
+    const contextMenu = await loader.getHarness(
+      SkyDropdownHarness.with({
+        selector: '.ag-row[row-index="0"] sky-dropdown',
+      }),
+    );
+    await contextMenu.clickDropdownButton();
+    const menu = await contextMenu.getDropdownMenu();
+    const items = await menu.getItems();
+    await expectAsync(Promise.all(items.map((item) => item.getText()))).toBeResolvedTo([
+      'Delete',
+      'Mark inactive',
+      'More info',
+    ]);
+
+    await (await menu.getItem({ text: 'More info' })).click();
+
+    expect(alertSpy).toHaveBeenCalledWith('More info clicked for Billy Bob');
+  });
+
+  describe('data manager toolbar', () => {
+    it('should search rows by name', async () => {
+      const { dataManagerHarness, gridHarness } = await setupTest();
+      const search = await (await dataManagerHarness.getToolbar()).getSearch();
+
+      await gridHarness.waitUntilRendered(async () => {
+        await search?.enterText('john');
+        await search?.clickSubmitButton();
+      });
+
+      await expectAsync(gridHarness.getDisplayedCellValues('name')).toBeResolvedTo(['Emily Johnson', 'John Doe']);
+
+      await gridHarness.waitUntilRendered(async () => {
+        await search?.clickClearButton();
+      });
+
+      await expectAsync(gridHarness.getDisplayedCellValues('name')).toBeResolvedTo(DEFAULT_ORDER);
+    });
+
+    it('should show and hide columns using the column picker', async () => {
+      const { dataManagerHarness, gridHarness } = await setupTest();
+      const columnPicker = await (await dataManagerHarness.getToolbar()).openColumnPicker();
+
+      await columnPicker.clearAll();
+      await columnPicker.selectColumns({ titleText: 'Name' });
+      await gridHarness.waitUntilRendered(() => columnPicker.saveAndClose());
+
+      // Columns that are always displayed are not listed in the column picker.
+      await expectAsync(gridHarness.getDisplayedColumnIds()).toBeResolvedTo(['selected', 'context', 'name']);
+    });
+  });
+
+  describe('filter bar', () => {
+    it('should hide sales employees', async () => {
+      const { docLoader, gridHarness, loader } = await setupTest();
+      const filterBar = await getFilterBar(loader);
+
+      await (await filterBar.getItem({ filterId: 'hideSales' })).click();
+      await (await docLoader.getHarness(SkyCheckboxHarness.with({ dataSkyId: 'hide-sales-checkbox' }))).check();
+      await gridHarness.waitUntilRendered(() => clickButton(docLoader, 'apply-button'));
+
+      await expectAsync(filterBar.hasActiveFilters()).toBeResolvedTo(true);
+      await expectAsync(gridHarness.getDisplayedCellValues('name')).toBeResolvedTo(
+        DEFAULT_ORDER.filter((name) => name !== 'John Doe'),
+      );
+    });
+
+    it('should not change the filter when the sales modal is canceled', async () => {
+      const { docLoader, loader } = await setupTest();
+      const filterBar = await getFilterBar(loader);
+
+      await (await filterBar.getItem({ filterId: 'hideSales' })).click();
+      await (await docLoader.getHarness(SkyCheckboxHarness.with({ dataSkyId: 'hide-sales-checkbox' }))).check();
+      await clickButton(docLoader, 'cancel-button');
+
+      await expectAsync(filterBar.hasActiveFilters()).toBeResolvedTo(false);
+    });
+
+    it('should filter by job title and clear the filters', async () => {
+      const { docLoader, gridHarness, loader } = await setupTest();
+
+      // Avoid the service's simulated network latency. A real-world service
+      // would make a web request, which should be avoided in unit tests.
+      spyOn(TestBed.inject(ExampleService), 'search').and.callFake((searchText) => {
+        const items = Object.values(JOB_TITLES)
+          .flat()
+          .filter((job) => job.name.toLowerCase().includes(searchText.toLowerCase()));
+
+        return of({ hasMore: false, items, totalCount: items.length });
+      });
+
+      const filterBar = await getFilterBar(loader);
+      await (await filterBar.getItem({ filterId: 'jobTitle' })).click();
+
+      const selectionModal = await docLoader.getHarness(SkySelectionModalHarness);
+      await selectionModal.enterSearchText('software engineer');
+      await selectionModal.selectSearchResult({
+        contentText: 'Principal Software Engineer',
+      });
+      await selectionModal.selectSearchResult({
+        contentText: 'Software Engineer',
+      });
+      await gridHarness.waitUntilRendered(() => selectionModal.saveAndClose());
+
+      await expectAsync(gridHarness.getDisplayedCellValues('name')).toBeResolvedTo(['Jane Deere', 'Nicole Davidson']);
+
+      await filterBar.clickClearFilters();
+      const confirm = await docLoader.getHarness(SkyConfirmHarness);
+      await gridHarness.waitUntilRendered(() => confirm.clickCustomButton({ text: 'Clear values' }));
+
+      await expectAsync(filterBar.hasActiveFilters()).toBeResolvedTo(false);
+      await expectAsync(gridHarness.getDisplayedCellValues('name')).toBeResolvedTo(DEFAULT_ORDER);
+    });
+  });
+
+  describe('edit modal', () => {
+    let alertSpy: jasmine.Spy;
+
+    beforeEach(() => {
+      alertSpy = spyOn(window, 'alert');
+    });
+
+    it('should update the grid when edits are saved', async () => {
+      const { docLoader, fixture, gridHarness } = await setupTest();
+      await openEditModal(docLoader);
+
+      await typeIntoEditor(fixture, await startEditing(fixture, 0, 'age'), '56');
+      await gridHarness.waitUntilRendered(() => clickButton(docLoader, 'save-button'));
+
+      const [billyBobAge] = await gridHarness.getDisplayedCellValues('age');
+      expect(billyBobAge).toBe('56');
+    });
+
+    it('should alert when edits are canceled or the modal is closed', async () => {
+      const { docLoader, fixture } = await setupTest();
+
+      await openEditModal(docLoader);
+      await clickButton(docLoader, 'cancel-button');
+
+      expect(alertSpy).toHaveBeenCalledOnceWith('Edits canceled!');
+
+      await openEditModal(docLoader);
+      await clickElement(fixture, '.sky-modal-btn-close');
+
+      expect(alertSpy).toHaveBeenCalledTimes(2);
+    });
+
+    it('should not allow an end date before the start date', async () => {
+      const { docLoader, fixture } = await setupTest();
+      await openEditModal(docLoader);
+
+      // Billy Bob started on 12/1/1994.
+      const endDateEditor = await startEditing(fixture, 0, 'endDate');
+
+      await enterValue(fixture, endDateEditor, '01/01/1990');
+      expect(endDateEditor).toHaveClass('ng-invalid');
+
+      await enterValue(fixture, endDateEditor, '01/01/2000');
+      expect(endDateEditor).not.toHaveClass('ng-invalid');
+
+      await clickButton(docLoader, 'cancel-button');
+    });
+
+    it('should clear the job title when the department changes', async () => {
+      const { docLoader, fixture } = await setupTest();
+      const editGrid = await openEditModal(docLoader);
+
+      await startEditing(fixture, 0, 'department');
+      const department = await docLoader.getHarness(SkyAutocompleteHarness);
+      await (await department.getControl()).setValue('Sales');
+      await department.selectSearchResult({ text: 'Sales' });
+      // Tab saves the department and starts editing the job title.
+      await editGrid.waitUntilRendered(() => pressTab(fixture));
+
+      const [billyBobJobTitle] = await editGrid.getDisplayedCellValues('jobTitle');
+      expect(billyBobJobTitle).toBe('');
+
+      // Job title options are limited to the selected department.
+      const jobTitle = await docLoader.getHarness(SkyAutocompleteHarness);
+      await (await jobTitle.getControl()).setValue('e');
+      await expectAsync(jobTitle.getSearchResultsText()).toBeResolvedTo(JOB_TITLES['Sales'].map((title) => title.name));
+
+      await clickButton(docLoader, 'cancel-button');
+    });
+
+    it('should keep the job title when the department does not change', async () => {
+      const { docLoader, fixture } = await setupTest();
+      const editGrid = await openEditModal(docLoader);
+
+      await startEditing(fixture, 0, 'department');
+      const department = await docLoader.getHarness(SkyAutocompleteHarness);
+      await (await department.getControl()).setValue('Customer Support');
+      await department.selectSearchResult({ text: 'Customer Support' });
+      await pressTab(fixture);
+
+      const [billyBobJobTitle] = await editGrid.getDisplayedCellValues('jobTitle');
+      expect(billyBobJobTitle).toBe('Account Manager');
+
+      await clickButton(docLoader, 'cancel-button');
+    });
+
+    it('should not offer job titles when the department is cleared', async () => {
+      const { docLoader, fixture } = await setupTest();
+      const editGrid = await openEditModal(docLoader);
+
+      await startEditing(fixture, 0, 'department');
+      const department = await docLoader.getHarness(SkyAutocompleteHarness);
+      await (await department.getControl()).clear();
+      await editGrid.waitUntilRendered(() => pressTab(fixture));
+
+      const jobTitle = await docLoader.getHarness(SkyAutocompleteHarness);
+      await (await jobTitle.getControl()).setValue('e');
+      await expectAsync(jobTitle.getSearchResultsText()).toBeResolvedTo([]);
+
+      await clickButton(docLoader, 'cancel-button');
+    });
+
+    it('should flag validation dates that are not in the future', async () => {
+      const { docLoader, fixture, gridHarness } = await setupTest();
+      await openEditModal(docLoader);
+
+      await typeIntoEditor(fixture, await startEditing(fixture, 0, 'validationDate'), '01/01/1980');
+      await typeIntoEditor(fixture, await startEditing(fixture, 1, 'validationDate'), '01/01/2020');
+      await gridHarness.waitUntilRendered(() => clickButton(docLoader, 'save-button'));
+
+      const getValidationDateCell = (rowIndex: number): Element | null =>
+        (fixture.nativeElement as HTMLElement).querySelector(
+          `.ag-row[row-index="${rowIndex}"] [col-id="validationDate"]`,
+        );
+      expect(getValidationDateCell(0)).toHaveClass('sky-ag-grid-cell-invalid');
+      expect(getValidationDateCell(1)).not.toHaveClass('sky-ag-grid-cell-invalid');
+    });
+  });
+});
+```
+
+#### example.service.spec.ts
+
+```typescript
+import { TestBed, fakeAsync, tick } from '@angular/core/testing';
+import { SkyFilterItemLookupSearchAsyncResult } from '@skyux/filter-bar';
+
+import { ExampleService } from './example.service';
+
+describe('AG Grid data entry grid data manager example service', () => {
+  function search(searchText: string): SkyFilterItemLookupSearchAsyncResult | undefined {
+    let result: SkyFilterItemLookupSearchAsyncResult | undefined;
+
+    TestBed.inject(ExampleService)
+      .search(searchText)
+      .subscribe((value) => (result = value));
+
+    // The service simulates network latency of 800 milliseconds.
+    tick(800);
+
+    return result;
+  }
+
+  it('should return job titles that contain the search text, ignoring case', fakeAsync(() => {
+    expect(search('aCcOuNt')).toEqual({
+      hasMore: false,
+      items: [
+        { id: '5', name: 'Account Executive' },
+        { id: '12', name: 'Account Manager' },
+      ],
+      totalCount: 2,
+    });
+  }));
+
+  it('should return all job titles when the search text is empty', fakeAsync(() => {
+    expect(search('')?.totalCount).toBe(13);
+  }));
+
+  it('should return an empty result when nothing matches', fakeAsync(() => {
+    expect(search('astronaut')?.items).toEqual([]);
+  }));
+});
 ```
 
 #### example.service.ts
@@ -2577,11 +3284,11 @@ export interface Filters {
 ```html
 <sky-modal [headingText]="modalLabel">
   <sky-modal-content>
-    <sky-checkbox labelText="Hide Sales employees" [(ngModel)]="hideSales" />
+    <sky-checkbox data-sky-id="hide-sales-checkbox" labelText="Hide Sales employees" [(ngModel)]="hideSales" />
   </sky-modal-content>
   <sky-modal-footer>
-    <button class="sky-btn sky-btn-primary" type="button" (click)="applyFilters()">Apply</button>
-    <button class="sky-btn sky-btn-link" type="button" (click)="cancel()">Cancel</button>
+    <sky-button buttonStyle="primary" data-sky-id="apply-button" labelText="Apply" (buttonClick)="applyFilters()" />
+    <sky-button buttonStyle="link" data-sky-id="cancel-button" labelText="Cancel" (buttonClick)="cancel()" />
   </sky-modal-footer>
 </sky-modal>
 ```
@@ -2592,14 +3299,14 @@ export interface Filters {
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { SkyFilterBarFilterValue, SkyFilterItemModal, SkyFilterItemModalInstance } from '@skyux/filter-bar';
-import { SkyCheckboxModule } from '@skyux/forms';
+import { SkyButton, SkyCheckboxModule } from '@skyux/forms';
 import { SkyModalModule } from '@skyux/modals';
 
 @Component({
   selector: 'app-sales-modal',
   templateUrl: './sales-modal.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [FormsModule, SkyCheckboxModule, SkyModalModule],
+  imports: [FormsModule, SkyButton, SkyCheckboxModule, SkyModalModule],
 })
 export class SalesModalComponent implements SkyFilterItemModal {
   public readonly modalInstance = inject(SkyFilterItemModalInstance);
@@ -2639,11 +3346,97 @@ export class SalesModalComponent implements SkyFilterItemModal {
 }
 ```
 
+#### spec-helpers.ts
+
+```typescript
+import { HarnessLoader } from '@angular/cdk/testing';
+import { ComponentFixture } from '@angular/core/testing';
+import { SkyAgGridWrapperHarness } from '@skyux/ag-grid/testing';
+import { SkyButtonHarness } from '@skyux/forms/testing';
+
+async function settle(fixture: ComponentFixture<unknown>): Promise<void> {
+  fixture.detectChanges();
+  await fixture.whenStable();
+}
+
+export async function clickButton(docLoader: HarnessLoader, dataSkyId: string): Promise<void> {
+  const button = await docLoader.getHarness(SkyButtonHarness.with({ dataSkyId }));
+  await button.click();
+}
+
+export async function openEditModal(docLoader: HarnessLoader): Promise<SkyAgGridWrapperHarness> {
+  await clickButton(docLoader, 'edit-button');
+
+  const modalGridHarness = await docLoader.getHarness(
+    SkyAgGridWrapperHarness.with({ dataSkyId: 'edit-employees-grid' }),
+  );
+  await modalGridHarness.waitUntilRendered();
+
+  return modalGridHarness;
+}
+
+/**
+ * Starts editing a modal grid cell the way a keyboard user would, by focusing
+ * the cell and pressing Enter, and returns the editor's input.
+ */
+export async function startEditing(
+  fixture: ComponentFixture<unknown>,
+  rowIndex: number,
+  colId: string,
+): Promise<HTMLInputElement> {
+  const cell = document.querySelector<HTMLElement>(
+    `[data-sky-id="edit-employees-grid"] .ag-row[row-index="${rowIndex}"] [col-id="${colId}"]`,
+  )!;
+  cell.focus();
+  cell.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
+  await settle(fixture);
+
+  return document.activeElement as HTMLInputElement;
+}
+
+export async function enterValue(
+  fixture: ComponentFixture<unknown>,
+  editor: HTMLInputElement,
+  value: string,
+): Promise<void> {
+  editor.value = value;
+  editor.dispatchEvent(new Event('input', { bubbles: true }));
+  editor.dispatchEvent(new Event('change', { bubbles: true }));
+  await settle(fixture);
+}
+
+/**
+ * Types a value into a cell editor and presses Enter to save it.
+ */
+export async function typeIntoEditor(
+  fixture: ComponentFixture<unknown>,
+  editor: HTMLInputElement,
+  value: string,
+): Promise<void> {
+  await enterValue(fixture, editor, value);
+  editor.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
+  await settle(fixture);
+}
+
+export async function pressTab(fixture: ComponentFixture<unknown>): Promise<void> {
+  document.activeElement?.dispatchEvent(new KeyboardEvent('keydown', { key: 'Tab', bubbles: true }));
+  await settle(fixture);
+}
+
+/**
+ * Clicks an element that has no harness, such as the modal's close button.
+ */
+export async function clickElement(fixture: ComponentFixture<unknown>, selector: string): Promise<void> {
+  document.querySelector<HTMLElement>(selector)?.click();
+  await settle(fixture);
+}
+```
+
 #### view-grid.component.html
 
 ```html
 <sky-data-view skyAgGridDataManagerAdapter [viewId]="viewId">
-  <sky-ag-grid-wrapper>
+  <sky-ag-grid-wrapper data-sky-id="employees-grid">
     <ag-grid-angular [gridOptions]="gridOptions" [overlayNoRowsTemplate]="noRowsTemplate" />
   </sky-ag-grid-wrapper>
 </sky-data-view>
@@ -2866,7 +3659,7 @@ export class ViewGridComponent {
         : [];
 
       filteredItems = items.filter((item: AgGridDemoRow) => {
-        if (hideSales && item.department.name === 'Sales') {
+        if (hideSales && item.department?.name === 'Sales') {
           return false;
         }
         return !(selectedTypes.length && (!item.jobTitle || !selectedTypes.includes(item.jobTitle.id)));
@@ -3191,17 +3984,161 @@ export const AG_GRID_DEMO_DATA: AgGridDemoRow[] = [
 #### example.component.html
 
 ```html
-<sky-input-box labelText="Start here" helpPopoverContent="Then tab to the grid" stacked>
+<sky-input-box data-sky-id="focus-start-input" labelText="Start here" helpPopoverContent="Then tab to the grid" stacked>
   <input type="text" />
 </sky-input-box>
 <div class="sky-theme-margin-bottom-m">
-  <sky-ag-grid-wrapper>
+  <sky-ag-grid-wrapper data-sky-id="focus-grid">
     <ag-grid-angular class="sky-ag-grid-editable" [gridOptions]="gridOptions" />
   </sky-ag-grid-wrapper>
 </div>
-<sky-input-box labelText="Or start here" helpPopoverContent="Then tab backwards to the grid" stacked>
+<sky-input-box
+  data-sky-id="focus-end-input"
+  labelText="Or start here"
+  helpPopoverContent="Then tab backwards to the grid"
+  stacked
+>
   <input type="text" />
 </sky-input-box>
+```
+
+#### example.component.spec.ts
+
+```typescript
+import { HarnessLoader } from '@angular/cdk/testing';
+import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { SkyAgGridWrapperHarness, provideSkyAgGridTesting } from '@skyux/ag-grid/testing';
+import { provideNoopSkyAnimations } from '@skyux/core';
+import { SkyInputBoxHarness } from '@skyux/forms/testing';
+
+import { AgGridDataEntryGridFocusExampleComponent } from './example.component';
+
+describe('AG Grid data entry grid focus example', () => {
+  async function setupTest(): Promise<{
+    fixture: ComponentFixture<AgGridDataEntryGridFocusExampleComponent>;
+    loader: HarnessLoader;
+    gridHarness: SkyAgGridWrapperHarness;
+  }> {
+    await TestBed.configureTestingModule({
+      imports: [AgGridDataEntryGridFocusExampleComponent],
+      providers: [provideSkyAgGridTesting(), provideNoopSkyAnimations()],
+    }).compileComponents();
+
+    const fixture = TestBed.createComponent(AgGridDataEntryGridFocusExampleComponent);
+    const loader = TestbedHarnessEnvironment.loader(fixture);
+    fixture.detectChanges();
+
+    const gridHarness = await loader.getHarness(SkyAgGridWrapperHarness.with({ dataSkyId: 'focus-grid' }));
+    // AG Grid renders outside the Angular zone, so wait for it to finish.
+    await gridHarness.waitUntilRendered();
+
+    return { fixture, loader, gridHarness };
+  }
+
+  function getCell(fixture: ComponentFixture<unknown>, rowIndex: number, colId: string): HTMLElement {
+    return (fixture.nativeElement as HTMLElement).querySelector<HTMLElement>(
+      `.ag-row[row-index="${rowIndex}"] .ag-cell[col-id="${colId}"]`,
+    )!;
+  }
+
+  /**
+   * Edits a cell the way a keyboard user would: focus the cell, press Enter to
+   * open its editor, type a value, then press Enter to save it.
+   */
+  async function editCell(
+    fixture: ComponentFixture<unknown>,
+    rowIndex: number,
+    colId: string,
+    value: string,
+  ): Promise<void> {
+    const cell = getCell(fixture, rowIndex, colId);
+    cell.focus();
+    cell.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
+    fixture.detectChanges();
+    await fixture.whenStable();
+
+    const editor = document.activeElement as HTMLInputElement;
+    editor.value = value;
+    editor.dispatchEvent(new Event('input', { bubbles: true }));
+    editor.dispatchEvent(new Event('change', { bubbles: true }));
+    editor.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
+    fixture.detectChanges();
+    await fixture.whenStable();
+  }
+
+  it('should render the grid with editable columns', async () => {
+    const { fixture, gridHarness } = await setupTest();
+
+    await expectAsync(gridHarness.getDisplayedColumnHeaderNames()).toBeResolvedTo([
+      'Name',
+      'Age',
+      'Start date',
+      'End date',
+      'Department',
+      'Title',
+      'Validation currency',
+      'Validation date',
+    ]);
+
+    expect(getCell(fixture, 0, 'name')).toHaveClass('sky-ag-grid-cell-editable');
+  });
+
+  it('should flag validation dates that are not after October 26, 1985', async () => {
+    const { fixture } = await setupTest();
+
+    await editCell(fixture, 0, 'validationDate', '01/01/1980');
+    await editCell(fixture, 1, 'validationDate', '01/01/2000');
+
+    expect(getCell(fixture, 0, 'validationDate')).toHaveClass('sky-ag-grid-cell-invalid');
+    expect(getCell(fixture, 1, 'validationDate')).not.toHaveClass('sky-ag-grid-cell-invalid');
+  });
+
+  it('should flag names longer than 10 characters', async () => {
+    const { fixture } = await setupTest();
+
+    expect(getCell(fixture, 0, 'name')).not.toHaveClass('sky-ag-grid-cell-invalid');
+
+    await editCell(fixture, 0, 'name', 'Billy Bob Thornton');
+
+    expect(getCell(fixture, 0, 'name')).toHaveClass('sky-ag-grid-cell-invalid');
+  });
+
+  describe('surrounding input boxes', () => {
+    it('should direct users to tab into the grid', async () => {
+      const { loader } = await setupTest();
+
+      const startInputBox = await loader.getHarness(SkyInputBoxHarness.with({ dataSkyId: 'focus-start-input' }));
+      await expectAsync(startInputBox.getLabelText()).toBeResolvedTo('Start here');
+      await startInputBox.clickHelpInline();
+      await expectAsync(startInputBox.getHelpPopoverContent()).toBeResolvedTo('Then tab to the grid');
+
+      const endInputBox = await loader.getHarness(SkyInputBoxHarness.with({ dataSkyId: 'focus-end-input' }));
+      await expectAsync(endInputBox.getLabelText()).toBeResolvedTo('Or start here');
+      await endInputBox.clickHelpInline();
+      await expectAsync(endInputBox.getHelpPopoverContent()).toBeResolvedTo('Then tab backwards to the grid');
+    });
+  });
+
+  describe('initial focus', () => {
+    it('should start editing the first name cell when focus enters the grid', async () => {
+      const { fixture } = await setupTest();
+
+      expect((fixture.nativeElement as HTMLElement).querySelector('.ag-cell-inline-editing')).toBeNull();
+
+      // AG Grid calls `focusGridInnerElement` when its tab guard receives
+      // focus, which is what happens when a user tabs into the grid.
+      const tabGuard = (fixture.nativeElement as HTMLElement).querySelector<HTMLElement>(
+        'sky-ag-grid-wrapper .ag-tab-guard-top',
+      );
+      tabGuard?.focus();
+      await fixture.whenStable();
+
+      expect(getCell(fixture, 0, 'name')).toHaveClass('ag-cell-inline-editing');
+      expect(document.activeElement).toBe(getCell(fixture, 0, 'name').querySelector('input'));
+    });
+  });
+});
 ```
 
 ### Basic setup with inline help (without data manager)
@@ -3209,14 +4146,15 @@ export const AG_GRID_DEMO_DATA: AgGridDemoRow[] = [
 #### example.component.ts (primary file)
 
 ```typescript
-import { ChangeDetectionStrategy, Component, effect, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { SkyAgGridModule, SkyAgGridService, SkyCellType, defineSkyAgGridColDef } from '@skyux/ag-grid';
+import { SkyButton } from '@skyux/forms';
 import { SkyToolbarModule } from '@skyux/layout';
 import { SkySearchModule } from '@skyux/lookup';
 import { SkyModalConfigurationInterface, SkyModalService } from '@skyux/modals';
 
 import { AgGridAngular } from 'ag-grid-angular';
-import { AllCommunityModule, GridApi, GridOptions, ModuleRegistry, ValueFormatterParams } from 'ag-grid-community';
+import { AllCommunityModule, GridOptions, ModuleRegistry, ValueFormatterParams } from 'ag-grid-community';
 import { of } from 'rxjs';
 
 import { ContextMenuComponent } from './context-menu.component';
@@ -3234,7 +4172,7 @@ ModuleRegistry.registerModules([AllCommunityModule]);
   selector: 'app-ag-grid-data-entry-grid-inline-help-example',
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [AgGridAngular, SkyAgGridModule, SkySearchModule, SkyToolbarModule],
+  imports: [AgGridAngular, SkyButton, SkyAgGridModule, SkySearchModule, SkyToolbarModule],
 })
 export class AgGridDataEntryGridInlineHelpExampleComponent {
   protected readonly gridData = signal<AgGridDemoRow[]>(AG_GRID_DEMO_DATA);
@@ -3347,24 +4285,12 @@ export class AgGridDataEntryGridInlineHelpExampleComponent {
           },
         }),
       ],
-      onGridReady: (gridReadyEvent): void => {
-        this.#gridApi.set(gridReadyEvent.api);
-      },
-      onGridPreDestroyed: (): void => {
-        this.#gridApi.set(undefined);
-      },
     },
   });
 
-  readonly #gridApi = signal<GridApi | undefined>(undefined);
-  readonly #modalSvc = inject(SkyModalService);
+  protected readonly searchText = signal('');
 
-  constructor() {
-    effect(() => {
-      const rowData = this.gridData();
-      this.#gridApi()?.setGridOption('rowData', rowData);
-    });
-  }
+  readonly #modalSvc = inject(SkyModalService);
 
   protected openModal(): void {
     const context = new EditModalContext();
@@ -3392,7 +4318,7 @@ export class AgGridDataEntryGridInlineHelpExampleComponent {
   }
 
   protected searchApplied(searchText: string | void): void {
-    this.#gridApi()?.setGridOption('quickFilterText', searchText ?? '');
+    this.searchText.set(searchText ?? '');
   }
 
   #endDateFormatter(params: ValueFormatterParams<AgGridDemoRow, Date>): string {
@@ -3568,7 +4494,7 @@ export interface AgGridDemoRow {
   age: number;
   startDate: Date;
   endDate?: Date;
-  department: AutocompleteOption;
+  department?: AutocompleteOption;
   jobTitle?: AutocompleteOption;
   validationCurrency?: number;
   validationDate?: Date;
@@ -3648,15 +4574,15 @@ export class EditModalContext {
 #### edit-modal.component.html
 
 ```html
-<sky-modal headingText="Edit employee information">
+<sky-modal data-sky-id="edit-modal" headingText="Edit employee information">
   <sky-modal-content>
-    <sky-ag-grid-wrapper>
+    <sky-ag-grid-wrapper data-sky-id="edit-modal-grid">
       <ag-grid-angular class="sky-ag-grid-editable" [gridOptions]="gridOptions" [rowData]="gridData" />
     </sky-ag-grid-wrapper>
   </sky-modal-content>
   <sky-modal-footer>
-    <button class="sky-btn sky-btn-primary" type="button" (click)="saveData()">Save</button>
-    <button class="sky-btn sky-btn-link" type="button" (click)="instance.cancel()">Cancel</button>
+    <sky-button buttonStyle="primary" data-sky-id="save-button" labelText="Save" (buttonClick)="saveData()" />
+    <sky-button buttonStyle="link" data-sky-id="cancel-button" labelText="Cancel" (buttonClick)="instance.cancel()" />
   </sky-modal-footer>
 </sky-modal>
 ```
@@ -3664,7 +4590,7 @@ export class EditModalContext {
 #### edit-modal.component.ts
 
 ```typescript
-import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import {
   SkyAgGridAutocompleteProperties,
   SkyAgGridDatepickerProperties,
@@ -3673,13 +4599,13 @@ import {
   SkyCellType,
   defineSkyAgGridColDef,
 } from '@skyux/ag-grid';
-import { SkyAutocompleteSelectionChange } from '@skyux/lookup';
+import { SkyButton } from '@skyux/forms';
 import { SkyModalInstance, SkyModalModule } from '@skyux/modals';
 
 import { AgGridAngular } from 'ag-grid-angular';
-import { AllCommunityModule, ColDef, GridApi, ICellEditorParams, IRowNode, ModuleRegistry } from 'ag-grid-community';
+import { AllCommunityModule, ColDef, ICellEditorParams, ModuleRegistry, ValueSetterParams } from 'ag-grid-community';
 
-import { AgGridDemoRow, DEPARTMENTS, JOB_TITLES } from './data';
+import { AgGridDemoRow, AutocompleteOption, DEPARTMENTS, JOB_TITLES } from './data';
 import { EditModalContext } from './edit-modal-context';
 
 ModuleRegistry.registerModules([AllCommunityModule]);
@@ -3688,7 +4614,7 @@ ModuleRegistry.registerModules([AllCommunityModule]);
   selector: 'app-edit-modal',
   templateUrl: './edit-modal.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [AgGridAngular, SkyAgGridModule, SkyModalModule],
+  imports: [AgGridAngular, SkyButton, SkyAgGridModule, SkyModalModule],
 })
 export class EditModalComponent {
   protected gridData = inject(EditModalContext).gridData;
@@ -3754,22 +4680,25 @@ export class EditModalComponent {
           headerName: 'Department',
           type: SkyCellType.Autocomplete,
           editable: true,
-          cellEditorParams: (
-            params: ICellEditorParams<AgGridDemoRow>,
-          ): { skyComponentProperties: SkyAgGridAutocompleteProperties } => {
-            return {
-              skyComponentProperties: {
-                data: DEPARTMENTS,
-                selectionChange: (change): void => {
-                  this.#departmentSelectionChange(change, params.node);
-                },
-              },
-            };
+          cellEditorParams: {
+            skyComponentProperties: {
+              data: DEPARTMENTS,
+            },
           },
-          onCellValueChanged: (event): void => {
-            if (event.newValue !== event.oldValue) {
-              this.#clearJobTitle(event.node);
+          valueSetter: (params: ValueSetterParams<AgGridDemoRow, AutocompleteOption>): boolean => {
+            if (params.newValue?.name === params.oldValue?.name) {
+              return false;
             }
+
+            params.data.department = params.newValue ?? undefined;
+            // Job titles belong to a department, so clear the title when the
+            // department changes. This must happen here rather than in
+            // `onCellValueChanged`, because tabbing to the next cell starts
+            // the job title editor before that event fires.
+            params.data.jobTitle = undefined;
+            params.api.refreshCells({ columns: ['jobTitle'] });
+
+            return true;
           },
         }),
         defineSkyAgGridColDef({
@@ -3780,16 +4709,13 @@ export class EditModalComponent {
           cellEditorParams: (
             params: ICellEditorParams<AgGridDemoRow>,
           ): { skyComponentProperties: SkyAgGridAutocompleteProperties } => {
-            const selectedDepartment = params.data?.department?.name;
-            const editParams: {
-              skyComponentProperties: SkyAgGridAutocompleteProperties;
-            } = { skyComponentProperties: { data: [] } };
+            const department = params.data.department?.name;
 
-            if (selectedDepartment) {
-              editParams.skyComponentProperties.data = JOB_TITLES[selectedDepartment];
-            }
-
-            return editParams;
+            return {
+              skyComponentProperties: {
+                data: department ? JOB_TITLES[department] : [],
+              },
+            };
           },
         }),
         {
@@ -3813,34 +4739,14 @@ export class EditModalComponent {
           editable: true,
         }),
       ] as ColDef<AgGridDemoRow>[],
-      onGridReady: (gridReadyEvent): void => {
-        this.#gridApi.set(gridReadyEvent.api);
-      },
-      onGridPreDestroyed: (): void => {
-        this.#gridApi.set(undefined);
-      },
       stopEditingWhenCellsLoseFocus: true,
     },
   });
-  readonly #gridApi = signal<GridApi | undefined>(undefined);
 
   protected readonly instance = inject(SkyModalInstance);
 
   protected saveData(): void {
     this.instance.save(this.gridData);
-  }
-
-  #departmentSelectionChange(change: SkyAutocompleteSelectionChange, node: IRowNode<AgGridDemoRow>): void {
-    if (change.selectedItem && change.selectedItem !== node.data?.department) {
-      this.#clearJobTitle(node);
-    }
-  }
-
-  #clearJobTitle(node: IRowNode<AgGridDemoRow> | null): void {
-    if (node?.data) {
-      node.data.jobTitle = undefined;
-      this.#gridApi()?.applyTransaction({ update: [node.data] });
-    }
   }
 }
 ```
@@ -3850,10 +4756,11 @@ export class EditModalComponent {
 ```html
 <sky-toolbar>
   <sky-toolbar-item>
-    <button class="sky-btn sky-btn-primary" type="button" (click)="openModal()">Edit</button>
+    <sky-button buttonStyle="primary" data-sky-id="edit-button" labelText="Edit" (buttonClick)="openModal()" />
   </sky-toolbar-item>
   <sky-toolbar-item>
     <sky-search
+      data-sky-id="grid-search"
       [debounceTime]="250"
       (searchApply)="searchApplied($event)"
       (searchChange)="searchApplied($event)"
@@ -3862,9 +4769,241 @@ export class EditModalComponent {
   </sky-toolbar-item>
 </sky-toolbar>
 
-<sky-ag-grid-wrapper>
-  <ag-grid-angular [gridOptions]="gridOptions" />
+<sky-ag-grid-wrapper data-sky-id="inline-help-grid">
+  <ag-grid-angular [gridOptions]="gridOptions" [quickFilterText]="searchText()" [rowData]="gridData()" />
 </sky-ag-grid-wrapper>
+```
+
+#### example.component.spec.ts
+
+```typescript
+import { HarnessLoader } from '@angular/cdk/testing';
+import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { SkyAgGridWrapperHarness, provideSkyAgGridTesting } from '@skyux/ag-grid/testing';
+import { provideNoopSkyAnimations } from '@skyux/core';
+import { SkyHelpInlineHarness } from '@skyux/help-inline/testing';
+import { SkyAutocompleteHarness, SkySearchHarness } from '@skyux/lookup/testing';
+import { SkyDropdownHarness } from '@skyux/popovers/testing';
+
+import { AgGridDataEntryGridInlineHelpExampleComponent } from './example.component';
+import {
+  clickButton,
+  clickElement,
+  enterValue,
+  openEditModal,
+  pressTab,
+  startEditing,
+  typeIntoEditor,
+} from './spec-helpers';
+
+describe('AG Grid data entry grid inline help example', () => {
+  async function setupTest(): Promise<{
+    fixture: ComponentFixture<AgGridDataEntryGridInlineHelpExampleComponent>;
+    loader: HarnessLoader;
+    docLoader: HarnessLoader;
+    gridHarness: SkyAgGridWrapperHarness;
+  }> {
+    await TestBed.configureTestingModule({
+      imports: [AgGridDataEntryGridInlineHelpExampleComponent],
+      providers: [provideSkyAgGridTesting(), provideNoopSkyAnimations()],
+    }).compileComponents();
+
+    const fixture = TestBed.createComponent(AgGridDataEntryGridInlineHelpExampleComponent);
+    const loader = TestbedHarnessEnvironment.loader(fixture);
+    const docLoader = TestbedHarnessEnvironment.documentRootLoader(fixture);
+    fixture.detectChanges();
+
+    const gridHarness = await loader.getHarness(SkyAgGridWrapperHarness.with({ dataSkyId: 'inline-help-grid' }));
+
+    // AG Grid renders outside the Angular zone, so wait for the grid itself
+    // rather than relying on `fixture.whenStable()`.
+    await gridHarness.waitUntilRendered();
+
+    return { fixture, loader, docLoader, gridHarness };
+  }
+
+  it('should render the grid', async () => {
+    const { gridHarness } = await setupTest();
+
+    await expectAsync(gridHarness.getDisplayedColumnHeaderNames()).toBeResolvedTo([
+      '',
+      'Context menu',
+      'Name',
+      'Age',
+      'Start date',
+      'End date',
+      'Department',
+      'Title',
+      'Validation currency',
+      'Validation date',
+    ]);
+    // Billy Bob, who started first, has no end date.
+    const [billyBobEndDate] = await gridHarness.getDisplayedCellValues('endDate');
+    expect(billyBobEndDate).toBe('N/A');
+  });
+
+  it('should show inline help in the column headers', async () => {
+    const { loader } = await setupTest();
+    const alertSpy = spyOn(window, 'alert');
+
+    const helpButtons = await loader.getAllHarnesses(SkyHelpInlineHarness);
+    await expectAsync(Promise.all(helpButtons.map((helpButton) => helpButton.getAriaLabel()))).toBeResolvedTo([
+      'Information about Name',
+      'Information about Age',
+      'Information about Start date',
+      'Information about End date',
+      'Information about Department',
+      'Information about Title',
+      'Information about Validation currency',
+      'Information about Validation date',
+    ]);
+
+    await helpButtons[0].click();
+
+    expect(alertSpy).toHaveBeenCalledWith('Help was clicked for Name.');
+  });
+
+  it('should alert the selected context menu action', async () => {
+    const { loader } = await setupTest();
+    const alertSpy = spyOn(window, 'alert');
+
+    const contextMenu = await loader.getHarness(
+      SkyDropdownHarness.with({
+        selector: '.ag-row[row-index="0"] sky-dropdown',
+      }),
+    );
+    await contextMenu.clickDropdownButton();
+    const menu = await contextMenu.getDropdownMenu();
+    const items = await menu.getItems();
+    await expectAsync(Promise.all(items.map((item) => item.getText()))).toBeResolvedTo([
+      'Delete',
+      'Mark inactive',
+      'More info',
+    ]);
+
+    await (await menu.getItem({ text: 'More info' })).click();
+
+    expect(alertSpy).toHaveBeenCalledWith('More info clicked for Billy Bob');
+  });
+
+  it('should filter rows using the search', async () => {
+    const { gridHarness, loader } = await setupTest();
+    const search = await loader.getHarness(SkySearchHarness.with({ dataSkyId: 'grid-search' }));
+
+    await gridHarness.waitUntilRendered(async () => {
+      await search.enterText('Jane');
+      await search.clickSubmitButton();
+    });
+
+    await expectAsync(gridHarness.getDisplayedCellValues('name')).toBeResolvedTo(['Jane Deere']);
+
+    await gridHarness.waitUntilRendered(() => search.clickClearButton());
+
+    const names = await gridHarness.getDisplayedCellValues('name');
+    expect(names.length).toBe(7);
+  });
+
+  describe('edit modal', () => {
+    let alertSpy: jasmine.Spy;
+
+    beforeEach(() => {
+      alertSpy = spyOn(window, 'alert');
+    });
+
+    it('should alert when edits are canceled or the modal is closed', async () => {
+      const { fixture, docLoader } = await setupTest();
+
+      await openEditModal(docLoader);
+      await clickButton(docLoader, 'cancel-button');
+
+      expect(alertSpy).toHaveBeenCalledOnceWith('Edits canceled!');
+
+      await openEditModal(docLoader);
+      await clickElement(fixture, '.sky-modal-btn-close');
+
+      expect(alertSpy).toHaveBeenCalledTimes(2);
+    });
+
+    it('should update the grid with saved edits', async () => {
+      const { fixture, docLoader, gridHarness } = await setupTest();
+      const modalGridHarness = await openEditModal(docLoader);
+
+      // Jane Deere is the second row, sorted by start date.
+      await startEditing(fixture, 1, 'department');
+      const department = await docLoader.getHarness(SkyAutocompleteHarness);
+      await (await department.getControl()).setValue('Mark');
+      await department.selectSearchResult({ text: 'Marketing' });
+      // Tab saves the department and starts editing the job title.
+      await modalGridHarness.waitUntilRendered(() => pressTab(fixture));
+
+      // Job title options are limited to the selected department.
+      const jobTitle = await docLoader.getHarness(SkyAutocompleteHarness);
+      await (await jobTitle.getControl()).setValue('Manager');
+      await expectAsync(jobTitle.getSearchResultsText()).toBeResolvedTo(['Blog Manager', 'Events Manager']);
+
+      await typeIntoEditor(fixture, await startEditing(fixture, 1, 'validationDate'), '01/01/2020');
+
+      await gridHarness.waitUntilRendered(() => clickButton(docLoader, 'save-button'));
+
+      const departments = await gridHarness.getDisplayedCellValues('department');
+      const jobTitles = await gridHarness.getDisplayedCellValues('jobTitle');
+      const validationDates = await gridHarness.getDisplayedCellValues('validationDate');
+      expect(departments[1]).toBe('Marketing');
+      // Changing the department clears the job title.
+      expect(jobTitles[1]).toBe('');
+      expect(validationDates[1]).toBe('1/1/2020');
+    });
+
+    it('should not allow an end date before the start date', async () => {
+      const { fixture, docLoader } = await setupTest();
+      await openEditModal(docLoader);
+
+      // Billy Bob started on 12/1/1994.
+      const endDateEditor = await startEditing(fixture, 0, 'endDate');
+
+      await enterValue(fixture, endDateEditor, '01/01/1990');
+      expect(endDateEditor).toHaveClass('ng-invalid');
+
+      await enterValue(fixture, endDateEditor, '01/01/2000');
+      expect(endDateEditor).not.toHaveClass('ng-invalid');
+
+      await clickButton(docLoader, 'cancel-button');
+    });
+
+    it('should keep the job title when the department does not change', async () => {
+      const { fixture, docLoader } = await setupTest();
+      const modalGridHarness = await openEditModal(docLoader);
+
+      await startEditing(fixture, 0, 'department');
+      const department = await docLoader.getHarness(SkyAutocompleteHarness);
+      await (await department.getControl()).setValue('Customer Support');
+      await department.selectSearchResult({ text: 'Customer Support' });
+      await pressTab(fixture);
+
+      const [billyBobJobTitle] = await modalGridHarness.getDisplayedCellValues('jobTitle');
+      expect(billyBobJobTitle).toBe('Account Manager');
+
+      await clickButton(docLoader, 'cancel-button');
+    });
+
+    it('should not offer job titles when the department is cleared', async () => {
+      const { fixture, docLoader } = await setupTest();
+      const modalGridHarness = await openEditModal(docLoader);
+
+      await startEditing(fixture, 0, 'department');
+      const department = await docLoader.getHarness(SkyAutocompleteHarness);
+      await (await department.getControl()).clear();
+      await modalGridHarness.waitUntilRendered(() => pressTab(fixture));
+
+      const jobTitle = await docLoader.getHarness(SkyAutocompleteHarness);
+      await (await jobTitle.getControl()).setValue('e');
+      await expectAsync(jobTitle.getSearchResultsText()).toBeResolvedTo([]);
+
+      await clickButton(docLoader, 'cancel-button');
+    });
+  });
+});
 ```
 
 #### inline-help.component.html
@@ -3909,5 +5048,89 @@ export class InlineHelpComponent {
   protected onHelpClick(): void {
     alert(`Help was clicked for ${this.displayName}.`);
   }
+}
+```
+
+#### spec-helpers.ts
+
+```typescript
+import { HarnessLoader } from '@angular/cdk/testing';
+import { ComponentFixture } from '@angular/core/testing';
+import { SkyAgGridWrapperHarness } from '@skyux/ag-grid/testing';
+import { SkyButtonHarness } from '@skyux/forms/testing';
+
+async function settle(fixture: ComponentFixture<unknown>): Promise<void> {
+  fixture.detectChanges();
+  await fixture.whenStable();
+}
+
+export async function clickButton(docLoader: HarnessLoader, dataSkyId: string): Promise<void> {
+  const button = await docLoader.getHarness(SkyButtonHarness.with({ dataSkyId }));
+  await button.click();
+}
+
+export async function openEditModal(docLoader: HarnessLoader): Promise<SkyAgGridWrapperHarness> {
+  await clickButton(docLoader, 'edit-button');
+
+  const modalGridHarness = await docLoader.getHarness(SkyAgGridWrapperHarness.with({ dataSkyId: 'edit-modal-grid' }));
+  await modalGridHarness.waitUntilRendered();
+
+  return modalGridHarness;
+}
+
+/**
+ * Starts editing a modal grid cell the way a keyboard user would, by focusing
+ * the cell and pressing Enter, and returns the editor's input.
+ */
+export async function startEditing(
+  fixture: ComponentFixture<unknown>,
+  rowIndex: number,
+  colId: string,
+): Promise<HTMLInputElement> {
+  const cell = document.querySelector<HTMLElement>(
+    `[data-sky-id="edit-modal-grid"] .ag-row[row-index="${rowIndex}"] [col-id="${colId}"]`,
+  )!;
+  cell.focus();
+  cell.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
+  await settle(fixture);
+
+  return document.activeElement as HTMLInputElement;
+}
+
+export async function enterValue(
+  fixture: ComponentFixture<unknown>,
+  editor: HTMLInputElement,
+  value: string,
+): Promise<void> {
+  editor.value = value;
+  editor.dispatchEvent(new Event('input', { bubbles: true }));
+  editor.dispatchEvent(new Event('change', { bubbles: true }));
+  await settle(fixture);
+}
+
+/**
+ * Types a value into a cell editor and presses Enter to save it.
+ */
+export async function typeIntoEditor(
+  fixture: ComponentFixture<unknown>,
+  editor: HTMLInputElement,
+  value: string,
+): Promise<void> {
+  await enterValue(fixture, editor, value);
+  editor.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
+  await settle(fixture);
+}
+
+export async function pressTab(fixture: ComponentFixture<unknown>): Promise<void> {
+  document.activeElement?.dispatchEvent(new KeyboardEvent('keydown', { key: 'Tab', bubbles: true }));
+  await settle(fixture);
+}
+
+/**
+ * Clicks an element that has no harness, such as the modal's close button.
+ */
+export async function clickElement(fixture: ComponentFixture<unknown>, selector: string): Promise<void> {
+  document.querySelector<HTMLElement>(selector)?.click();
+  await settle(fixture);
 }
 ```

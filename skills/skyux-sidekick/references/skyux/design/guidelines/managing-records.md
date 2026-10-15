@@ -11,7 +11,7 @@ When users users need to add, edit, or delete data, follow these SKY UX patterns
 
 ### Add items from a list
 
-When users can create items from lists or add existing items to lists, display a **New** or **Add** button in the list toolbar to open a [modal form](../../components/modal.md). For guidance on which label to use, see the [SKY UX terminology guidelines](./terminology.md).
+When users can create items from lists or add existing items to lists, display a **New** or **Add** button in the list toolbar to open a [modal form](../../components/modal.md). For guidance on which label to use, see the SKY UX terminology guidelines.
 
 ![Button to add a record from a list](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/managingrecords/list-add.1bc3418d8547fc6cc3a6fe6965008c2c.png)
 
@@ -77,7 +77,7 @@ To enable users to edit the data in a box, display a borderless icon button (`sk
 
 In lists where the items are not systemically important and the cost to re-create them is low, you can allow users to delete items. You can also allow users to remove items from lists without deleting the items. If users can also perform other actions on list items, display delete or remove actions in [context menus](../../components/dropdown.md) to the left of each item.
 
-When users can delete or remove items from lists, display a **Delete** or **Remove** action in the dropdown menu. For guidance on which label to use, see the [SKY UX terminology guidelines](./terminology.md).
+When users can delete or remove items from lists, display a **Delete** or **Remove** action in the dropdown menu. For guidance on which label to use, see the SKY UX terminology guidelines.
 
 ![Delete record from a list](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/managingrecords/delete-grid-row.a640402d4ef7d551e8348156ca99011d.png)
 

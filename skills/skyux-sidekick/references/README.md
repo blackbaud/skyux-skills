@@ -13,7 +13,7 @@ This is the entry point for AI-assisted Angular and SKY UX development. Read thi
 
 Common starting points that skip the search step:
 
-- **Creating a new page** → start at the [Page component](./skyux/components/page/README.md) and its [examples index](./skyux/components/page/examples-index.md). The page README ships **seven complete patterns** that cover almost every Blackbaud page shape:
+- **Creating a new page** → start at the [Page component](./skyux/components/page.md) and its [examples index](./skyux/components/page.examples-index.md). The page README ships **seven complete patterns** that cover almost every Blackbaud page shape:
   1. Home page with blocks layout, using tile dashboard and recently accessed links
   2. List page with list layout using data manager
   3. List page with tabs layout using data manager
@@ -25,7 +25,7 @@ Common starting points that skip the search step:
   Pick the pattern that matches your use case, copy the `Read file_path=… offset=… limit=…` invocation from the examples index, and pull only that example into context. The README itself covers when to use each layout, heading conventions, page links, and harnesses.
 
 - **Looking up a code example for any other component** → start at the [components examples index](./skyux/components/examples-index.md). It lists every component that has upstream code examples with line ranges; components without upstream examples (e.g. `button`) are flagged separately.
-- **Loading just one section of a component README** (just the API, just the harnesses, just the "when to use" guidance) → open the sibling `sections-index.md` (e.g. `./skyux/components/page/sections-index.md`, `./skyux/components/autocomplete.sections-index.md`). Each row is tagged `design` / `development` / `testing` / `examples` so you can pick the tab the SPA would have shown.
+- **Loading just one section of a component README** (just the API, just the harnesses, just the "when to use" guidance) → open the sibling `sections-index.md` (e.g. `./skyux/components/page.sections-index.md`, `./skyux/components/autocomplete.sections-index.md`). Each row is tagged `design` / `development` / `testing` / `examples` so you can pick the tab the SPA would have shown.
 
 If a component isn't in the examples index, its README is still the canonical reference for API, anatomy, and usage guidelines — and the sections index works regardless of whether the component ships code examples.
 

@@ -7,7 +7,7 @@ Reference: https://developer.blackbaud.com/skyux/design/guidelines
 
 SKY UX is more than a set of user interface components. Equally important for a consistent experience, it includes guidelines to describe how to apply components and the context for when to use them.
 
-- [Artificial intelligence]() - Internal-only guidance to incorporate AI capabilities into user experiences.
+- Artificial intelligence - Internal-only guidance to incorporate AI capabilities into user experiences.
 - [Buttons and links](./buttons-links.md) - Describes the contexts in which to use different types of buttons and hyperlinks.
 - [Call out information](./call-out-info.md) - SKY UX includes several options to highlight information and draw user attention.
 - [Content](./content/README.md) - UI text patterns reinforce design principles to create consistent, recognizable user experiences.

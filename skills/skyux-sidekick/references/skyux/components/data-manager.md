@@ -11,7 +11,7 @@ The data manager component and service manage the exploration of a data set acro
 
 NPM package
 
-`@skyux/data-manager`[View in NPM](https://www.npmjs.com/package/@skyux/data-manager) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/data-manager/src/lib/modules/data-manager/data-manager.module.ts#L36)
+`@skyux/data-manager`[View in NPM](https://www.npmjs.com/package/@skyux/data-manager) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/data-manager/src/lib/modules/data-manager/data-manager.module.ts#L39)
 
 Install with NPM
 
@@ -290,6 +290,14 @@ Type: Component
 Selector: `sky-data-manager-toolbar-right-item`
 
 A wrapper for an item to be rendered in `SkyDataManagerToolbarComponent`. The contents are rendered in `sky-toolbar-view-actions` on the right side of the toolbar and before the view switcher icons (if present). Each item should be wrapped in its own `sky-data-manager-toolbar-right-item`. The items render in the order they are in in the template.
+
+## SkyDataManagerViewControllerDirective
+
+Type: Directive Preview
+
+Selector: `[skyDataManagerViewController]`
+
+Connects a `sky-data-grid` to the data manager of the `sky-data-view` that contains it. The data manager's column picker offers the grid's columns and controls which of them display, and the columns users display, reorder, and resize are stored in the view state, so the view config does not need to supply `columnOptions`. Set `columnPickerEnabled` on the view config to display the column picker. The column users sort by and the rows they select are stored in the data state, including selected rows that a search or filter hides. The grid's sort comes from the data state, so set a default sort with the `activeSortOption` of the `defaultDataState` that initializes the data manager rather than with the grid's `sort` input. The data manager also keeps the grid's column headers visible beneath its toolbar while the page scrolls.
 
 ## SkyDataManagerFilterControllerDirective
 
@@ -2101,12 +2109,6 @@ export class DataManagerBasicExampleComponent {
             ],
           },
         },
-        views: [
-          {
-            viewId: 'gridView',
-            displayedColumnIds: ['selected', 'name', 'description'],
-          },
-        ],
       }),
     });
   }
@@ -2125,7 +2127,6 @@ export class DataManagerBasicExampleComponent {
 
 ```typescript
 export interface DataManagerDemoRow {
-  selected?: boolean;
   id: string;
   name: string;
   description: string;
@@ -2215,6 +2216,7 @@ export const DATA_MANAGER_DEMO_DATA: DataManagerDemoRow[] = [
 import { HarnessLoader } from '@angular/cdk/testing';
 import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { SkyDataGridHarness } from '@skyux/data-grid/testing';
 import { SkyDataManagerHarness } from '@skyux/data-manager/testing';
 import { SkyRepeaterHarness } from '@skyux/lists/testing';
 
@@ -2276,6 +2278,35 @@ describe('Data manager basic example', () => {
     const columnPicker = await toolbarHarness.openColumnPicker();
     const columns = await columnPicker.getColumns();
     expect(columns.length).toBe(2);
+  });
+
+  it('should remember a column that is deselected in the column picker', async () => {
+    const { dataManagerHarness, fixture } = await setupTest();
+
+    const toolbarHarness = await dataManagerHarness.getToolbar();
+    const viewActionsHarness = await toolbarHarness.getViewActions();
+    const views = await viewActionsHarness?.getRadioButtons();
+    await views?.[1].check();
+    fixture.detectChanges();
+    await fixture.whenStable();
+
+    const gridView = await dataManagerHarness.getView({ viewId: 'gridView' });
+    const gridHarness = await gridView.queryHarness(SkyDataGridHarness);
+    await expectAsync(gridHarness.isGridReady()).toBeResolvedTo(true);
+
+    const columnPicker = await toolbarHarness.openColumnPicker();
+    await (await columnPicker.getColumn({ titleText: 'Description' })).deselect();
+    await columnPicker.saveAndClose();
+
+    const updatedColumnPicker = await toolbarHarness.openColumnPicker();
+    const nameColumn = await updatedColumnPicker.getColumn({
+      titleText: 'Fruit name',
+    });
+    const descriptionColumn = await updatedColumnPicker.getColumn({
+      titleText: 'Description',
+    });
+    await expectAsync(nameColumn.isSelected()).toBeResolvedTo(true);
+    await expectAsync(descriptionColumn.isSelected()).toBeResolvedTo(false);
   });
 });
 ```
@@ -2431,77 +2462,41 @@ export class OrangeModalComponent implements SkyFilterItemModal {
 #### view-grid.component.html
 
 ```html
-<sky-data-view skyAgGridDataManagerAdapter [viewId]="viewId">
-  <sky-ag-grid-wrapper>
-    <ag-grid-angular [gridOptions]="gridOptions" />
-  </sky-ag-grid-wrapper>
+<sky-data-view [viewId]="viewId">
+  <sky-data-grid skyDataManagerViewController labelText="Fruit" multiselect [data]="displayedItems()">
+    <sky-data-grid-column field="name" headingText="Fruit name" width="150" />
+    <sky-data-grid-column field="description" headingText="Description" flexWidth="1" />
+  </sky-data-grid>
 </sky-data-view>
 ```
 
 #### view-grid.component.ts
 
 ```typescript
-import { ChangeDetectionStrategy, Component, computed, effect, inject, input, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, effect, inject, input } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { SkyAgGridModule, SkyAgGridService, SkyCellType } from '@skyux/ag-grid';
-import {
-  SkyDataManagerColumnPickerOption,
-  SkyDataManagerModule,
-  SkyDataManagerService,
-  SkyDataManagerState,
-} from '@skyux/data-manager';
+import { SkyDataGrid, SkyDataGridColumn } from '@skyux/data-grid';
+import { SkyDataManagerModule, SkyDataManagerService, SkyDataManagerState } from '@skyux/data-manager';
 import { SkyFilterBarFilterState } from '@skyux/filter-bar';
-
-import { AgGridAngular } from 'ag-grid-angular';
-import { AllCommunityModule, ColDef, GridApi, ModuleRegistry } from 'ag-grid-community';
-import { of } from 'rxjs';
 
 import { DataManagerDemoRow } from './data';
 import { filterItems } from './filters';
-
-ModuleRegistry.registerModules([AllCommunityModule]);
 
 @Component({
   selector: 'app-view-grid',
   templateUrl: './view-grid.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [AgGridAngular, SkyAgGridModule, SkyDataManagerModule],
+  imports: [SkyDataGrid, SkyDataGridColumn, SkyDataManagerModule],
 })
 export class ViewGridComponent {
   public readonly items = input<DataManagerDemoRow[]>([]);
 
   protected readonly viewId = 'gridView';
 
-  readonly #columnDefs: ColDef[] = [
-    {
-      colId: 'selected',
-      field: 'selected',
-      type: SkyCellType.RowSelector,
-      suppressMovable: true,
-      lockPosition: true,
-      lockVisible: true,
-      cellRendererParams: {
-        // Could be a SkyAppResourcesService.getString call that returns an observable.
-        label: (data: DataManagerDemoRow) => of(`Select ${data.name}`),
-      },
-    },
-    {
-      colId: 'name',
-      field: 'name',
-      headerName: 'Fruit name',
-      width: 150,
-    },
-    {
-      colId: 'description',
-      field: 'description',
-      headerName: 'Description',
-    },
-  ];
   readonly #dataManagerSvc = inject(SkyDataManagerService);
   readonly #dataState = toSignal(this.#dataManagerSvc.getDataStateUpdates(`${this.viewId}-data-state`), {
     initialValue: new SkyDataManagerState({}),
   });
-  readonly #gridApi = signal<GridApi | undefined>(undefined);
   protected readonly displayedItems = computed(() => {
     const dataState = this.#dataState();
     return filterItems(
@@ -2509,17 +2504,6 @@ export class ViewGridComponent {
       dataState.filterData?.filters as SkyFilterBarFilterState | undefined,
       dataState.searchText,
     );
-  });
-  protected readonly gridOptions = inject(SkyAgGridService).getGridOptions({
-    gridOptions: {
-      columnDefs: this.#columnDefs,
-      onGridReady: (params) => {
-        this.#gridApi.set(params.api);
-      },
-      onGridPreDestroyed: () => {
-        this.#gridApi.set(undefined);
-      },
-    },
   });
 
   constructor() {
@@ -2532,11 +2516,6 @@ export class ViewGridComponent {
         this.viewId,
       );
     });
-    effect(() => {
-      const gridApi = this.#gridApi();
-      const rowData = this.displayedItems();
-      gridApi?.setGridOption('rowData', rowData);
-    });
     this.#dataManagerSvc.initDataView({
       id: this.viewId,
       name: 'Grid View',
@@ -2544,13 +2523,6 @@ export class ViewGridComponent {
       searchEnabled: true,
       columnPickerEnabled: true,
       sortEnabled: true,
-      columnOptions: this.#columnDefs.map(
-        (colDef): SkyDataManagerColumnPickerOption => ({
-          id: colDef.colId!,
-          label: colDef.headerName ?? colDef.colId!,
-          alwaysDisplayed: !!colDef.lockVisible,
-        }),
-      ),
     });
   }
 }
@@ -2692,7 +2664,6 @@ export class ViewRepeaterComponent {
         return ids;
       });
     }
-    item.selected = isSelected;
   }
 }
 ```

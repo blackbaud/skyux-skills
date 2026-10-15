@@ -19,7 +19,7 @@ Do use fluid grids to visually align content and containers and to communicate r
 
 ### Don't use when
 
-Don't use fluid grids for padding on pages, including padding around page headers and other page content. Use the [page component](./page/README.md) instead.
+Don't use fluid grids for padding on pages, including padding around page headers and other page content. Use the [page component](./page.md) instead.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/fluid-grid/dont-page.afdfb34aaad458c3a0de0109b8c0061d.png)
 
@@ -49,7 +49,7 @@ Margin (optional)
 
 ### Margin
 
-When you use fluid grids in containers that already include padding, turn off the fluid grid's outer margin using `disableMargin` to avoid double padding. For example, turn off the margin for [boxes](./box.md), [modals](./modal.md), layouts in [pages](./page/README.md) and [tabs](./tabs.md), and [tiles](./tile.md).
+When you use fluid grids in containers that already include padding, turn off the fluid grid's outer margin using `disableMargin` to avoid double padding. For example, turn off the margin for [boxes](./box.md), [modals](./modal.md), layouts in [pages](./page.md) and [tabs](./tabs.md), and [tiles](./tile.md).
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/fluid-grid/disable-margin-tile.086d3b10a05feb4584c2d0dfb7f6caa4.png)
 
@@ -71,7 +71,7 @@ Use small gutters to separate input boxes in horizontal layouts. Inputs can use 
 
 #### Medium
 
-Use `medium` gutters to separate containers with visible borders within large content areas, such as [pages](./page/README.md). For example, use `medium` gutters to separate [boxes](./box.md) on pages.
+Use `medium` gutters to separate containers with visible borders within large content areas, such as [pages](./page.md). For example, use `medium` gutters to separate [boxes](./box.md) on pages.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/fluid-grid/size-m-containers.d38735cac659145b5ca9156fafd86032.png)
 
@@ -79,7 +79,7 @@ Use medium gutters to separate boxes within a page.
 
 #### Large
 
-Use `large` gutters to separate columns of content within containers and large content areas when the content doesn't have visible borders. For example, use `large` gutters to separate columns of content on [pages](./page/README.md) or [split view workspaces](./split-view.md).
+Use `large` gutters to separate columns of content within containers and large content areas when the content doesn't have visible borders. For example, use `large` gutters to separate columns of content on [pages](./page.md) or [split view workspaces](./split-view.md).
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/fluid-grid/size-l-content-groups.31e7a474dbd4b0d14c0353d2e54227c7.png)
 
@@ -89,7 +89,7 @@ Use large gutters to separate columns of content within content containers.
 
 Use large gutters to separate columns of content within containers.
 
-Use `large` gutters within [pages](./page/README.md) to separate columns of content from containers. This visual separation indicates that the columns of content and containers aren't grouped together.
+Use `large` gutters within [pages](./page.md) to separate columns of content from containers. This visual separation indicates that the columns of content and containers aren't grouped together.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/fluid-grid/size-l-border-non-border.1b1864db724671d3ab97daa3409bf9db.png)
 
@@ -133,7 +133,7 @@ Vertically stacked columns in a repeater at the extra small breakpoint.
 
 - [Box](./box.md)
 - [Modal](./modal.md)
-- [Page](./page/README.md)
+- [Page](./page.md)
 - [Split view](./split-view.md)
 - [Tabs](./tabs.md)
 - [Tile](./tile.md)

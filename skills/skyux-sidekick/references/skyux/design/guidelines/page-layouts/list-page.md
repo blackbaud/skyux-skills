@@ -25,7 +25,7 @@ Don't use list pages when you can predict what users need to do and can provide 
 
 1
 
-[Page](../../../components/page/README.md)
+[Page](../../../components/page.md)
 
 2
 
@@ -143,7 +143,7 @@ The tab should only include the descriptive label. Do not include the list count
 
 ## Layout
 
-For the list page layout, use the [page](../../../components/page/README.md) component.
+For the list page layout, use the [page](../../../components/page.md) component.
 
 ## Related information
 
@@ -153,7 +153,7 @@ For the list page layout, use the [page](../../../components/page/README.md) com
 - [Data manager](../../../components/data-manager.md)
 - [Filter bar](../../../components/filter-bar.md)
 - [List summary](../../../components/list-summary.md)
-- [Page](../../../components/page/README.md)
+- [Page](../../../components/page.md)
 - [Paging](../../../components/paging.md)
 - [Repeater](../../../components/repeater.md)
 - [Tabs](../../../components/tabs.md)

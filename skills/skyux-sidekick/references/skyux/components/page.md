@@ -35,11 +35,11 @@ Content area
 
 4
 
-[Alert](../alert.md) (optional)
+[Alert](./alert.md) (optional)
 
 5
 
-[Avatar](../avatar.md) (optional)
+[Avatar](./avatar.md) (optional)
 
 6
 
@@ -67,7 +67,7 @@ Content area
 
 4
 
-[Alert](../alert.md) (optional)
+[Alert](./alert.md) (optional)
 
 5
 
@@ -97,25 +97,25 @@ Page link list (optional)
 
 #### Blocks
 
-For [record pages](../../design/guidelines/page-layouts/record-page.md), use the `blocks` layout to organize content into modular blocks. For a wide range of possible layouts, place a [fluid grid](../fluid-grid.md) or another grid layout via flexbox or CSS grid in the content area.
+For [record pages](../design/guidelines/page-layouts/record-page.md), use the `blocks` layout to organize content into modular blocks. For a wide range of possible layouts, place a [fluid grid](./fluid-grid.md) or another grid layout via flexbox or CSS grid in the content area.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/page-blocks-layout.d3130deb0c8cba28a2b51c45033635bc.png)
 
 #### List
 
-For [list pages](../../design/guidelines/page-layouts/list-page.md), use the `list` layout to display lists of data.
+For [list pages](../design/guidelines/page-layouts/list-page.md), use the `list` layout to display lists of data.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/page-list-layout.9750148bfa438357acd2e4ba3e25c923.png)
 
 #### Tabs
 
-For [record pages](../../design/guidelines/page-layouts/record-page.md) or [list pages](../../design/guidelines/page-layouts/list-page.md), use the `tabs` layout to organize large amounts of content into tab panels. Each tab panel can have a different layout. For more information, see [tabs](../tabs.md).
+For [record pages](../design/guidelines/page-layouts/record-page.md) or [list pages](../design/guidelines/page-layouts/list-page.md), use the `tabs` layout to organize large amounts of content into tab panels. Each tab panel can have a different layout. For more information, see [tabs](./tabs.md).
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/page-tabs-layout.a6622d2e4f7c5c73b56ea77f26d108ad.png)
 
 #### Fit
 
-For [split view pages](../../design/guidelines/page-layouts/split-view-page.md), use the `fit` layout to fill the content area and anchor content to the edges.
+For [split view pages](../design/guidelines/page-layouts/split-view-page.md), use the `fit` layout to fill the content area and anchor content to the edges.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/page-fit-layout.cfb59c6c333f5a9d2d621265cecf6b33.png)
 
@@ -163,7 +163,7 @@ Hub and spoke headings only go one level deep to connect hub pages to their chil
 
 Don't go more than one level deep in hub and spoke headings.
 
-Don't use hub and spoke headings to navigate between a parent record page and its child pages. Use [tabs](../tabs.md) to group large amounts of content within a page.
+Don't use hub and spoke headings to navigate between a parent record page and its child pages. Use [tabs](./tabs.md) to group large amounts of content within a page.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/hub-record-dont.ce87f18a349fc58e9cf133cb03d4ff82.png)
 
@@ -171,27 +171,27 @@ Don't use the hub and spoke pattern to connect a record page to its child pages.
 
 ### Alert
 
-To highlight critical information that users absolutely must see when they visit the page, you can display an [alert](../alert.md) in the header. Avoid stacking multiple alerts because they quickly lose their impact and clutter the page. Try alternate methods to display the information, or consolidate messages into one alert.
+To highlight critical information that users absolutely must see when they visit the page, you can display an [alert](./alert.md) in the header. Avoid stacking multiple alerts because they quickly lose their impact and clutter the page. Try alternate methods to display the information, or consolidate messages into one alert.
 
 ### Avatar
 
-To help users recognize or identify records, you can display a large (100px) [avatar](../avatar.md) in the top left of [record pages](../../design/guidelines/page-layouts/record-page.md).
+To help users recognize or identify records, you can display a large (100px) [avatar](./avatar.md) in the top left of [record pages](../design/guidelines/page-layouts/record-page.md).
 
 ### Details
 
-To supplement page headings with content that is relevant across all views, you can display page details under the headings. For more information, see the [record page guidelines](../../design/guidelines/page-layouts/record-page.md).
+To supplement page headings with content that is relevant across all views, you can display page details under the headings. For more information, see the [record page guidelines](../design/guidelines/page-layouts/record-page.md).
 
 ### Actions
 
-To highlight the most important or most frequently used actions on a page, you can include page actions in the header. For more information, see the [record page guidelines](../../design/guidelines/page-layouts/record-page.md).
+To highlight the most important or most frequently used actions on a page, you can include page actions in the header. For more information, see the [record page guidelines](../design/guidelines/page-layouts/record-page.md).
 
 ### Page links
 
 #### Link lists
 
-For `blocks` layout pages, you can add link lists for navigation in a way that is similar to [action hubs](../../design/guidelines/page-layouts/action-hub.md). Always use headings to organize page links into groups and limit the number of links to 10 or fewer.
+For `blocks` layout pages, you can add link lists for navigation in a way that is similar to [action hubs](../design/guidelines/page-layouts/action-hub.md). Always use headings to organize page links into groups and limit the number of links to 10 or fewer.
 
-For groups of page links to add for action hubs, see the action hub's [Content guidelines](../../design/guidelines/page-layouts/action-hub.md#section-content).
+For groups of page links to add for action hubs, see the action hub's [Content guidelines](../design/guidelines/page-layouts/action-hub.md#section-content).
 
 #### Recently accessed link list
 
@@ -203,7 +203,7 @@ Page links provide navigation to other pages or tasks from a page.
 
 #### Layout
 
-Page links display to the right of the page content when space is available. In a smaller viewport, page links display under the page content. See responsiveness [behaviors](./README.md#section-behaviors-and-states) below.
+Page links display to the right of the page content when space is available. In a smaller viewport, page links display under the page content. See responsiveness [behaviors](./page.md#section-behaviors-and-states) below.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/page-page-links-layout.b22d6d87b0ba15518d15682fc93e2167.png)
 
@@ -227,20 +227,20 @@ Page layouts reflow content at the `xs` breakpoint of 767px.
 
 ### Guidelines
 
-- [Action hub](../../design/guidelines/page-layouts/action-hub.md)
-- [Buttons and links](../../design/guidelines/buttons-links.md)
-- [List page](../../design/guidelines/page-layouts/list-page.md)
-- [Record page](../../design/guidelines/page-layouts/record-page.md)
-- [Split view page](../../design/guidelines/page-layouts/split-view-page.md)
+- [Action hub](../design/guidelines/page-layouts/action-hub.md)
+- [Buttons and links](../design/guidelines/buttons-links.md)
+- [List page](../design/guidelines/page-layouts/list-page.md)
+- [Record page](../design/guidelines/page-layouts/record-page.md)
+- [Split view page](../design/guidelines/page-layouts/split-view-page.md)
 
 ### Components
 
-- [Alert](../alert.md)
-- [Avatar](../avatar.md)
-- [Buttons](../button.md)
-- [Fluid grid](../fluid-grid.md)
-- [Split view](../split-view.md)
-- [Tabs](../tabs.md)
+- [Alert](./alert.md)
+- [Avatar](./avatar.md)
+- [Buttons](./button.md)
+- [Fluid grid](./fluid-grid.md)
+- [Split view](./split-view.md)
+- [Tabs](./tabs.md)
 
 ## Installation
 
@@ -270,7 +270,7 @@ Displays a page using the specified layout. The page component is a responsive c
 
 #### `helpKey: string | undefined`
 
-A help key that identifies the page's default [global help](../../learn/develop/global-help.md) content to display.
+A help key that identifies the page's default [global help](../learn/develop/global-help.md) content to display.
 
 #### `layout: InputSignal<SkyPageLayoutType>`
 
@@ -546,7 +546,7 @@ Gets a `HarnessPredicate` that can be used to search for a `SkyPageHarness` that
 
 Type: Interface
 
-A set of criteria that can be used to filter a list of [SkyPageHarness](./README.md#class_sky-page-harness) instances.
+A set of criteria that can be used to filter a list of [SkyPageHarness](./page.md#class_sky-page-harness) instances.
 
     interface SkyPageHarnessFilters {
       dataSkyId?: string | RegExp;
@@ -600,7 +600,7 @@ Gets a `HarnessPredicate` that can be used to search for a `SkyPageHeaderHarness
 
 Type: Interface
 
-A set of criteria that can be used to filter a list of [SkyPageHeaderHarness](./README.md#class_sky-page-header-harness) instances.
+A set of criteria that can be used to filter a list of [SkyPageHeaderHarness](./page.md#class_sky-page-header-harness) instances.
 
     interface SkyPageHeaderHarnessFilters {
       dataSkyId?: string | RegExp;
@@ -690,7 +690,7 @@ Gets a `HarnessPredicate` that can be used to search for a `SkyLinkListHarness` 
 
 Type: Interface
 
-A set of criteria that can be used to filter a list of [SkyLinkListHarness](./README.md#class_sky-link-list-harness) instances.
+A set of criteria that can be used to filter a list of [SkyLinkListHarness](./page.md#class_sky-link-list-harness) instances.
 
     interface SkyLinkListHarnessFilters {
       dataSkyId?: string | RegExp;
@@ -744,7 +744,7 @@ Gets a `HarnessPredicate` that can be used to search for a `SkyLinkListItemHarne
 
 Type: Interface
 
-A set of criteria that can be used to filter a list of [SkyLinkListItemHarness](./README.md#class_sky-link-list-item-harness) instances.
+A set of criteria that can be used to filter a list of [SkyLinkListItemHarness](./page.md#class_sky-link-list-item-harness) instances.
 
     interface SkyLinkListItemHarnessFilters {
       dataSkyId?: string | RegExp;

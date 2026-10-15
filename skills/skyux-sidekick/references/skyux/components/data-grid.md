@@ -103,7 +103,7 @@ To let users select multiple rows in a data grid, use a [data manager](./data-ma
 
 Do use multiselect to let users select multiple rows.
 
-To let users perform actions on the multiple rows that they select in a data grid, include the [summary action bar](./summary-action-bar.md) at the bottom of the data grid's container. Only use multiselect with a summary action bar when the container is a [page](./page/README.md), [modal](./modal.md), [split view workspace](./split-view.md), or [flyout](./flyout.md). Don't use multiselect with a summary action bar when the data grid is in a container, such as a [tile](./tile.md) or [box](./box.md).
+To let users perform actions on the multiple rows that they select in a data grid, include the [summary action bar](./summary-action-bar.md) at the bottom of the data grid's container. Only use multiselect with a summary action bar when the container is a [page](./page.md), [modal](./modal.md), [split view workspace](./split-view.md), or [flyout](./flyout.md). Don't use multiselect with a summary action bar when the data grid is in a container, such as a [tile](./tile.md) or [box](./box.md).
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-multiselect-actions.c90ab344d72923f02e19803f9dd52180.png)
 
@@ -1119,11 +1119,11 @@ Type: FunctionBuilds a column definition whose `cellEditorParams` and `cellRende
       cellRendererParams: { skyComponentProperties: { validator: ... } },
     })
 
-    function defineSkyAgGridColDef(colDef: C & Omit<ColDef<any, any>, "type" | "cellEditorParams" | "cellRendererParams"> & { cellEditorParams?: UnionToIntersection<<a class="sky-docs-codespan-anchor" href="https://developer.blackbaud.com/skyux/components/data-grid?docs-active-tab=design#interface_sky-cell-editor-params-by-type">SkyCellEditorParamsByType</a>[T]> | ((params: ICellEditorParams<any, any>) => UnionToIntersection<<a class="sky-docs-codespan-anchor" href="https://developer.blackbaud.com/skyux/components/data-grid?docs-active-tab=design#interface_sky-cell-editor-params-by-type">SkyCellEditorParamsByType</a>[T]>); cellRendererParams?: UnionToIntersection<<a class="sky-docs-codespan-anchor" href="https://developer.blackbaud.com/skyux/components/data-grid?docs-active-tab=design#interface_sky-cell-renderer-params-by-type">SkyCellRendererParamsByType</a><any, any>[T]> | ((params: ICellRendererParams<any, any>) => UnionToIntersection<<a class="sky-docs-codespan-anchor" href="https://developer.blackbaud.com/skyux/components/data-grid?docs-active-tab=design#interface_sky-cell-renderer-params-by-type">SkyCellRendererParamsByType</a><any, any>[T]>); type: T | T[] } & { field?: F } & Record<Exclude<keyof C, "sort" | "filter" | "width" | "type" | "hide" | "context" | "comparator" | "initialHide" | "suppressAutoSize" | "singleClickEdit" | "loadingCellRenderer" | "loadingCellRendererParams" | "loadingCellRendererSelector" | "rowDragText" | "sortingOrder" | "unSortIcon" | "icons" | "onCellValueChanged" | "onCellClicked" | "onCellDoubleClicked" | "onCellContextMenu" | "cellEditor" | "rowGroup" | "pivot" | "colId" | "field" | "cellDataType" | "allowFormula" | "calculatedExpression" | "valueGetter" | "valueFormatter" | "refData" | "keyCreator" | "equals" | "tooltipField" | "tooltipValueGetter" | "tooltipComponentSelector" | "checkboxSelection" | "showDisabledCheckboxes" | "suppressNavigable" | "suppressNoteActions" | "suppressKeyboardEvent" | "suppressPaste" | "suppressFillHandle" | "lockVisible" | "lockPosition" | "suppressMovable" | "useValueFormatterForExport" | "editable" | "groupRowEditable" | "groupRowValueSetter" | "valueSetter" | "valueParser" | "cellEditorParams" | "cellEditorSelector" | "cellEditorPopup" | "cellEditorPopupPosition" | "useValueParserForImport" | "getQuickFilterText" | "filterValueGetter" | "floatingFilter" | "suppressFloatingFilterButton" | "dateComponent" | "dateComponentParams" | "getFindText" | "headerComponent" | "headerComponentParams" | "menuTabs" | "columnChooserParams" | "suppressHeaderMenuButton" | "suppressHeaderFilterButton" | "mainMenuItems" | "columnMenuItems" | "contextMenuItems" | "headerCheckboxSelection" | "headerCheckboxSelectionFilteredOnly" | "headerCheckboxSelectionCurrentPageOnly" | "chartDataType" | "pinned" | "initialPinned" | "lockPinned" | "initialPivot" | "pivotIndex" | "initialPivotIndex" | "pivotComparator" | "pivotSort" | "initialPivotSort" | "enablePivot" | "cellStyle" | "cellClass" | "cellClassRules" | "cellRenderer" | "cellRendererParams" | "cellRendererSelector" | "autoHeight" | "wrapText" | "enableCellChangeFlash" | "rowDrag" | "dndSource" | "dndSourceOnRowDrag" | "initialRowGroup" | "rowGroupIndex" | "initialRowGroupIndex" | "enableRowGroup" | "enableValue" | "aggFunc" | "initialAggFunc" | "valueIndex" | "initialValueIndex" | "defaultAggFunc" | "allowedAggFuncs" | "showValuesAs" | "initialShowValuesAs" | "showValuesAsDef" | "enableShowValuesAs" | "rowGroupingHierarchy" | "groupHierarchy" | "showRowGroup" | "sortable" | "initialSort" | "sortIndex" | "initialSortIndex" | "colSpan" | "rowSpan" | "spanRows" | "initialWidth" | "minWidth" | "maxWidth" | "flex" | "initialFlex" | "resizable" | "suppressSizeToFit" | "pivotValueColumn" | "pivotTotalColumnIds" | "suppressSpanHeaderHeight" | "headerName" | "headerNameEditable" | "headerValueGetter" | "headerTooltip" | "headerTooltipValueGetter" | "headerStyle" | "headerClass" | "suppressHeaderKeyboardEvent" | "columnGroupShow" | "toolPanelClass" | "suppressColumnsToolPanel" | "suppressFiltersToolPanel" | "tooltipComponent" | "tooltipComponentParams" | "pivotKeys" | "cellAriaRole" | "wrapHeaderText" | "autoHeaderHeight" | "suppressHeaderContextMenu" | "filterParams" | "floatingFilterComponent" | "floatingFilterComponentParams">, never>): C & { field?: F }
+    function defineSkyAgGridColDef(colDef: C & Omit<ColDef<any, any>, "type" | "cellEditorParams" | "cellRendererParams"> & { cellEditorParams?: UnionToIntersection<<a class="sky-docs-codespan-anchor" href="https://developer.blackbaud.com/skyux/components/data-grid?docs-active-tab=design#interface_sky-cell-editor-params-by-type">SkyCellEditorParamsByType</a>[T]> | ((params: ICellEditorParams<any, any>) => UnionToIntersection<<a class="sky-docs-codespan-anchor" href="https://developer.blackbaud.com/skyux/components/data-grid?docs-active-tab=design#interface_sky-cell-editor-params-by-type">SkyCellEditorParamsByType</a>[T]>); cellRendererParams?: UnionToIntersection<<a class="sky-docs-codespan-anchor" href="https://developer.blackbaud.com/skyux/components/data-grid?docs-active-tab=design#interface_sky-cell-renderer-params-by-type">SkyCellRendererParamsByType</a><any, any>[T]> | ((params: ICellRendererParams<any, any>) => UnionToIntersection<<a class="sky-docs-codespan-anchor" href="https://developer.blackbaud.com/skyux/components/data-grid?docs-active-tab=design#interface_sky-cell-renderer-params-by-type">SkyCellRendererParamsByType</a><any, any>[T]>); type: T | T[] } & { field?: F } & Record<Exclude<keyof C, "sort" | "filter" | "width" | "type" | "hide" | "context" | "comparator" | "initialHide" | "field" | "suppressAutoSize" | "singleClickEdit" | "loadingCellRenderer" | "loadingCellRendererParams" | "loadingCellRendererSelector" | "rowDragText" | "sortingOrder" | "unSortIcon" | "icons" | "onCellValueChanged" | "onCellClicked" | "onCellDoubleClicked" | "onCellContextMenu" | "cellEditor" | "rowGroup" | "pivot" | "colId" | "cellDataType" | "allowFormula" | "calculatedExpression" | "valueGetter" | "valueFormatter" | "refData" | "keyCreator" | "equals" | "tooltipField" | "tooltipValueGetter" | "tooltipComponentSelector" | "checkboxSelection" | "showDisabledCheckboxes" | "suppressNavigable" | "suppressNoteActions" | "suppressKeyboardEvent" | "suppressPaste" | "suppressFillHandle" | "lockVisible" | "lockPosition" | "suppressMovable" | "useValueFormatterForExport" | "editable" | "groupRowEditable" | "groupRowValueSetter" | "valueSetter" | "valueParser" | "cellEditorParams" | "cellEditorSelector" | "cellEditorPopup" | "cellEditorPopupPosition" | "useValueParserForImport" | "getQuickFilterText" | "filterValueGetter" | "floatingFilter" | "suppressFloatingFilterButton" | "dateComponent" | "dateComponentParams" | "getFindText" | "headerComponent" | "headerComponentParams" | "menuTabs" | "columnChooserParams" | "suppressHeaderMenuButton" | "suppressHeaderFilterButton" | "mainMenuItems" | "columnMenuItems" | "contextMenuItems" | "headerCheckboxSelection" | "headerCheckboxSelectionFilteredOnly" | "headerCheckboxSelectionCurrentPageOnly" | "chartDataType" | "pinned" | "initialPinned" | "lockPinned" | "initialPivot" | "pivotIndex" | "initialPivotIndex" | "pivotComparator" | "pivotSort" | "initialPivotSort" | "enablePivot" | "cellStyle" | "cellClass" | "cellClassRules" | "cellRenderer" | "cellRendererParams" | "cellRendererSelector" | "autoHeight" | "wrapText" | "enableCellChangeFlash" | "rowDrag" | "dndSource" | "dndSourceOnRowDrag" | "initialRowGroup" | "rowGroupIndex" | "initialRowGroupIndex" | "enableRowGroup" | "enableValue" | "aggFunc" | "initialAggFunc" | "valueIndex" | "initialValueIndex" | "defaultAggFunc" | "allowedAggFuncs" | "showValuesAs" | "initialShowValuesAs" | "showValuesAsDef" | "enableShowValuesAs" | "rowGroupingHierarchy" | "groupHierarchy" | "showRowGroup" | "sortable" | "initialSort" | "sortIndex" | "initialSortIndex" | "colSpan" | "rowSpan" | "spanRows" | "initialWidth" | "minWidth" | "maxWidth" | "flex" | "initialFlex" | "resizable" | "suppressSizeToFit" | "pivotValueColumn" | "pivotTotalColumnIds" | "suppressSpanHeaderHeight" | "headerName" | "headerNameEditable" | "headerValueGetter" | "headerTooltip" | "headerTooltipValueGetter" | "headerStyle" | "headerClass" | "suppressHeaderKeyboardEvent" | "columnGroupShow" | "toolPanelClass" | "suppressColumnsToolPanel" | "suppressFiltersToolPanel" | "tooltipComponent" | "tooltipComponentParams" | "pivotKeys" | "cellAriaRole" | "wrapHeaderText" | "autoHeaderHeight" | "suppressHeaderContextMenu" | "filterParams" | "floatingFilterComponent" | "floatingFilterComponentParams">, never>): C & { field?: F }
 
 ### Parameters
 
-#### `colDef: C & Omit<ColDef<any, any>, "type" | "cellEditorParams" | "cellRendererParams"> & { cellEditorParams?: UnionToIntersection<SkyCellEditorParamsByType[T]> | ((params: ICellEditorParams<any, any>) => UnionToIntersection<SkyCellEditorParamsByType[T]>); cellRendererParams?: UnionToIntersection<SkyCellRendererParamsByType<any, any>[T]> | ((params: ICellRendererParams<any, any>) => UnionToIntersection<SkyCellRendererParamsByType<any, any>[T]>); type: T | T[] } & { field?: F } & Record<Exclude<keyof C, "sort" | "filter" | "width" | "type" | "hide" | "context" | "comparator" | "initialHide" | "suppressAutoSize" | "singleClickEdit" | "loadingCellRenderer" | "loadingCellRendererParams" | "loadingCellRendererSelector" | "rowDragText" | "sortingOrder" | "unSortIcon" | "icons" | "onCellValueChanged" | "onCellClicked" | "onCellDoubleClicked" | "onCellContextMenu" | "cellEditor" | "rowGroup" | "pivot" | "colId" | "field" | "cellDataType" | "allowFormula" | "calculatedExpression" | "valueGetter" | "valueFormatter" | "refData" | "keyCreator" | "equals" | "tooltipField" | "tooltipValueGetter" | "tooltipComponentSelector" | "checkboxSelection" | "showDisabledCheckboxes" | "suppressNavigable" | "suppressNoteActions" | "suppressKeyboardEvent" | "suppressPaste" | "suppressFillHandle" | "lockVisible" | "lockPosition" | "suppressMovable" | "useValueFormatterForExport" | "editable" | "groupRowEditable" | "groupRowValueSetter" | "valueSetter" | "valueParser" | "cellEditorParams" | "cellEditorSelector" | "cellEditorPopup" | "cellEditorPopupPosition" | "useValueParserForImport" | "getQuickFilterText" | "filterValueGetter" | "floatingFilter" | "suppressFloatingFilterButton" | "dateComponent" | "dateComponentParams" | "getFindText" | "headerComponent" | "headerComponentParams" | "menuTabs" | "columnChooserParams" | "suppressHeaderMenuButton" | "suppressHeaderFilterButton" | "mainMenuItems" | "columnMenuItems" | "contextMenuItems" | "headerCheckboxSelection" | "headerCheckboxSelectionFilteredOnly" | "headerCheckboxSelectionCurrentPageOnly" | "chartDataType" | "pinned" | "initialPinned" | "lockPinned" | "initialPivot" | "pivotIndex" | "initialPivotIndex" | "pivotComparator" | "pivotSort" | "initialPivotSort" | "enablePivot" | "cellStyle" | "cellClass" | "cellClassRules" | "cellRenderer" | "cellRendererParams" | "cellRendererSelector" | "autoHeight" | "wrapText" | "enableCellChangeFlash" | "rowDrag" | "dndSource" | "dndSourceOnRowDrag" | "initialRowGroup" | "rowGroupIndex" | "initialRowGroupIndex" | "enableRowGroup" | "enableValue" | "aggFunc" | "initialAggFunc" | "valueIndex" | "initialValueIndex" | "defaultAggFunc" | "allowedAggFuncs" | "showValuesAs" | "initialShowValuesAs" | "showValuesAsDef" | "enableShowValuesAs" | "rowGroupingHierarchy" | "groupHierarchy" | "showRowGroup" | "sortable" | "initialSort" | "sortIndex" | "initialSortIndex" | "colSpan" | "rowSpan" | "spanRows" | "initialWidth" | "minWidth" | "maxWidth" | "flex" | "initialFlex" | "resizable" | "suppressSizeToFit" | "pivotValueColumn" | "pivotTotalColumnIds" | "suppressSpanHeaderHeight" | "headerName" | "headerNameEditable" | "headerValueGetter" | "headerTooltip" | "headerTooltipValueGetter" | "headerStyle" | "headerClass" | "suppressHeaderKeyboardEvent" | "columnGroupShow" | "toolPanelClass" | "suppressColumnsToolPanel" | "suppressFiltersToolPanel" | "tooltipComponent" | "tooltipComponentParams" | "pivotKeys" | "cellAriaRole" | "wrapHeaderText" | "autoHeaderHeight" | "suppressHeaderContextMenu" | "filterParams" | "floatingFilterComponent" | "floatingFilterComponentParams">, never>`
+#### `colDef: C & Omit<ColDef<any, any>, "type" | "cellEditorParams" | "cellRendererParams"> & { cellEditorParams?: UnionToIntersection<SkyCellEditorParamsByType[T]> | ((params: ICellEditorParams<any, any>) => UnionToIntersection<SkyCellEditorParamsByType[T]>); cellRendererParams?: UnionToIntersection<SkyCellRendererParamsByType<any, any>[T]> | ((params: ICellRendererParams<any, any>) => UnionToIntersection<SkyCellRendererParamsByType<any, any>[T]>); type: T | T[] } & { field?: F } & Record<Exclude<keyof C, "sort" | "filter" | "width" | "type" | "hide" | "context" | "comparator" | "initialHide" | "field" | "suppressAutoSize" | "singleClickEdit" | "loadingCellRenderer" | "loadingCellRendererParams" | "loadingCellRendererSelector" | "rowDragText" | "sortingOrder" | "unSortIcon" | "icons" | "onCellValueChanged" | "onCellClicked" | "onCellDoubleClicked" | "onCellContextMenu" | "cellEditor" | "rowGroup" | "pivot" | "colId" | "cellDataType" | "allowFormula" | "calculatedExpression" | "valueGetter" | "valueFormatter" | "refData" | "keyCreator" | "equals" | "tooltipField" | "tooltipValueGetter" | "tooltipComponentSelector" | "checkboxSelection" | "showDisabledCheckboxes" | "suppressNavigable" | "suppressNoteActions" | "suppressKeyboardEvent" | "suppressPaste" | "suppressFillHandle" | "lockVisible" | "lockPosition" | "suppressMovable" | "useValueFormatterForExport" | "editable" | "groupRowEditable" | "groupRowValueSetter" | "valueSetter" | "valueParser" | "cellEditorParams" | "cellEditorSelector" | "cellEditorPopup" | "cellEditorPopupPosition" | "useValueParserForImport" | "getQuickFilterText" | "filterValueGetter" | "floatingFilter" | "suppressFloatingFilterButton" | "dateComponent" | "dateComponentParams" | "getFindText" | "headerComponent" | "headerComponentParams" | "menuTabs" | "columnChooserParams" | "suppressHeaderMenuButton" | "suppressHeaderFilterButton" | "mainMenuItems" | "columnMenuItems" | "contextMenuItems" | "headerCheckboxSelection" | "headerCheckboxSelectionFilteredOnly" | "headerCheckboxSelectionCurrentPageOnly" | "chartDataType" | "pinned" | "initialPinned" | "lockPinned" | "initialPivot" | "pivotIndex" | "initialPivotIndex" | "pivotComparator" | "pivotSort" | "initialPivotSort" | "enablePivot" | "cellStyle" | "cellClass" | "cellClassRules" | "cellRenderer" | "cellRendererParams" | "cellRendererSelector" | "autoHeight" | "wrapText" | "enableCellChangeFlash" | "rowDrag" | "dndSource" | "dndSourceOnRowDrag" | "initialRowGroup" | "rowGroupIndex" | "initialRowGroupIndex" | "enableRowGroup" | "enableValue" | "aggFunc" | "initialAggFunc" | "valueIndex" | "initialValueIndex" | "defaultAggFunc" | "allowedAggFuncs" | "showValuesAs" | "initialShowValuesAs" | "showValuesAsDef" | "enableShowValuesAs" | "rowGroupingHierarchy" | "groupHierarchy" | "showRowGroup" | "sortable" | "initialSort" | "sortIndex" | "initialSortIndex" | "colSpan" | "rowSpan" | "spanRows" | "initialWidth" | "minWidth" | "maxWidth" | "flex" | "initialFlex" | "resizable" | "suppressSizeToFit" | "pivotValueColumn" | "pivotTotalColumnIds" | "suppressSpanHeaderHeight" | "headerName" | "headerNameEditable" | "headerValueGetter" | "headerTooltip" | "headerTooltipValueGetter" | "headerStyle" | "headerClass" | "suppressHeaderKeyboardEvent" | "columnGroupShow" | "toolPanelClass" | "suppressColumnsToolPanel" | "suppressFiltersToolPanel" | "tooltipComponent" | "tooltipComponentParams" | "pivotKeys" | "cellAriaRole" | "wrapHeaderText" | "autoHeaderHeight" | "suppressHeaderContextMenu" | "filterParams" | "floatingFilterComponent" | "floatingFilterComponentParams">, never>`
 
 ## SkyAgGridColDef
 
@@ -1289,6 +1289,20 @@ Retrieves the IDs of the currently displayed columns.
 #### Returns
 
 `Promise<string[]>`
+
+#### `getRowInlineDelete(rowId: string): Promise<SkyInlineDeleteHarness | null>`
+
+Gets the inline delete confirmation shown for a row by the `skyAgGridRowDelete` directive, or `null` if the row is not showing one.
+
+#### Parameters
+
+##### `rowId: string`
+
+The ID of the row.
+
+#### Returns
+
+`Promise<SkyInlineDeleteHarness | null>`
 
 #### `isGridReady(): Promise<boolean>`
 
@@ -1671,9 +1685,100 @@ export const AG_GRID_DEMO_DATA = [
 #### example.component.html
 
 ```html
-<sky-ag-grid-wrapper>
+<sky-ag-grid-wrapper data-sky-id="basic-grid">
   <ag-grid-angular [gridOptions]="gridOptions" [rowData]="gridData" />
 </sky-ag-grid-wrapper>
+```
+
+#### example.component.spec.ts
+
+```typescript
+import { HarnessLoader } from '@angular/cdk/testing';
+import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
+import { TestBed } from '@angular/core/testing';
+import { SkyAgGridWrapperHarness, provideSkyAgGridTesting } from '@skyux/ag-grid/testing';
+import { provideNoopSkyAnimations } from '@skyux/core';
+import { SkyDropdownHarness } from '@skyux/popovers/testing';
+
+import { AgGridDataGridBasicExampleComponent } from './example.component';
+
+describe('AG Grid data grid basic example', () => {
+  async function setupTest(): Promise<{
+    gridHarness: SkyAgGridWrapperHarness;
+    loader: HarnessLoader;
+  }> {
+    await TestBed.configureTestingModule({
+      imports: [AgGridDataGridBasicExampleComponent],
+      providers: [provideSkyAgGridTesting(), provideNoopSkyAnimations()],
+    }).compileComponents();
+
+    const fixture = TestBed.createComponent(AgGridDataGridBasicExampleComponent);
+    const loader = TestbedHarnessEnvironment.loader(fixture);
+    fixture.detectChanges();
+
+    const gridHarness = await loader.getHarness(SkyAgGridWrapperHarness.with({ dataSkyId: 'basic-grid' }));
+    // AG Grid renders outside the Angular zone, so wait on the harness rather than `whenStable()`.
+    await gridHarness.waitUntilRendered();
+
+    return { gridHarness, loader };
+  }
+
+  it('should render the grid sorted by start date', async () => {
+    const { gridHarness } = await setupTest();
+
+    await expectAsync(gridHarness.getDisplayedColumnHeaderNames()).toBeResolvedTo([
+      '',
+      'Name',
+      'Age',
+      'Start date',
+      'End date',
+      'Department',
+      'Title',
+    ]);
+    await expectAsync(gridHarness.getDisplayedCellValues('name')).toBeResolvedTo([
+      'Billy Bob',
+      'Jane Deere',
+      'David Smith',
+      'Emily Johnson',
+      'John Doe',
+      'Nicole Davidson',
+      'Carl Roberts',
+    ]);
+    await expectAsync(gridHarness.getDisplayedCellValues('endDate')).toBeResolvedTo([
+      'N/A',
+      'N/A',
+      '06/15/2018',
+      'N/A',
+      '09/30/2017',
+      'N/A',
+      'N/A',
+    ]);
+  });
+
+  it('should alert when a context menu action is clicked', async () => {
+    const { loader } = await setupTest();
+    const alertSpy = spyOn(window, 'alert');
+
+    const contextMenu = await loader.getHarness(
+      SkyDropdownHarness.with({
+        selector: '.ag-row[row-index="0"] sky-dropdown',
+      }),
+    );
+    await contextMenu.clickDropdownButton();
+
+    const menu = await contextMenu.getDropdownMenu();
+    const items = await menu.getItems();
+    await expectAsync(Promise.all(items.map((item) => item.getText()))).toBeResolvedTo([
+      'Delete',
+      'Mark inactive',
+      'More info',
+    ]);
+
+    await (await menu.getItem({ text: 'Delete' })).click();
+
+    expect(alertSpy).toHaveBeenCalledWith('Delete clicked for Billy Bob');
+  });
+});
 ```
 
 ### Basic multiselect setup (without data manager)
@@ -1703,7 +1808,8 @@ ModuleRegistry.registerModules([AllCommunityModule]);
   imports: [AgGridAngular, SkyAgGridModule],
 })
 export class AgGridDataGridBasicMultiselectExampleComponent {
-  protected gridData = AG_GRID_DEMO_DATA;
+  // Copy the rows because the row selector writes the `selected` field back to each row.
+  protected gridData = AG_GRID_DEMO_DATA.map((row) => ({ ...row }));
   protected gridOptions: GridOptions;
 
   #columnDefs: ColDef[] = [
@@ -2008,9 +2114,135 @@ export const AG_GRID_DEMO_DATA = [
 #### example.component.html
 
 ```html
-<sky-ag-grid-wrapper>
+<sky-ag-grid-wrapper data-sky-id="basic-multiselect-grid">
   <ag-grid-angular [gridOptions]="gridOptions" [rowData]="gridData" />
 </sky-ag-grid-wrapper>
+```
+
+#### example.component.spec.ts
+
+```typescript
+import { HarnessLoader } from '@angular/cdk/testing';
+import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
+import { TestBed } from '@angular/core/testing';
+import { SkyAgGridWrapperHarness, provideSkyAgGridTesting } from '@skyux/ag-grid/testing';
+import { provideNoopSkyAnimations } from '@skyux/core';
+import { SkyCheckboxHarness } from '@skyux/forms/testing';
+import { SkyDropdownHarness } from '@skyux/popovers/testing';
+
+import { AgGridDataGridBasicMultiselectExampleComponent } from './example.component';
+
+describe('AG Grid basic multiselect example', () => {
+  async function setupTest(): Promise<{
+    gridHarness: SkyAgGridWrapperHarness;
+    loader: HarnessLoader;
+  }> {
+    await TestBed.configureTestingModule({
+      imports: [AgGridDataGridBasicMultiselectExampleComponent],
+      providers: [provideSkyAgGridTesting(), provideNoopSkyAnimations()],
+    }).compileComponents();
+
+    const fixture = TestBed.createComponent(AgGridDataGridBasicMultiselectExampleComponent);
+    const loader = TestbedHarnessEnvironment.loader(fixture);
+    fixture.detectChanges();
+
+    const gridHarness = await loader.getHarness(SkyAgGridWrapperHarness.with({ dataSkyId: 'basic-multiselect-grid' }));
+    // AG Grid renders outside the Angular zone, so wait on the harness rather than `whenStable()`.
+    await gridHarness.waitUntilRendered();
+
+    return { gridHarness, loader };
+  }
+
+  async function getRowCheckbox(loader: HarnessLoader, rowIndex: number): Promise<SkyCheckboxHarness> {
+    return await loader.getHarness(
+      SkyCheckboxHarness.with({
+        dataSkyId: 'row-checkbox',
+        ancestor: `.ag-row[row-index="${rowIndex}"]`,
+      }),
+    );
+  }
+
+  async function getCheckedRowLabels(loader: HarnessLoader): Promise<string[]> {
+    const rowCheckboxes = await loader.getAllHarnesses(SkyCheckboxHarness.with({ dataSkyId: 'row-checkbox' }));
+    const checkedLabels: string[] = [];
+
+    for (const checkbox of rowCheckboxes) {
+      if (await checkbox.isChecked()) {
+        checkedLabels.push((await checkbox.getLabelText()) ?? '');
+      }
+    }
+
+    return checkedLabels;
+  }
+
+  it('should render the grid sorted by start date', async () => {
+    const { gridHarness } = await setupTest();
+
+    await expectAsync(gridHarness.getDisplayedColumnHeaderNames()).toBeResolvedTo([
+      '',
+      '',
+      'Name',
+      'Age',
+      'Start date',
+      'End date',
+      'Department',
+      'Title',
+    ]);
+    await expectAsync(gridHarness.getDisplayedCellValues('name')).toBeResolvedTo([
+      'Billy Bob',
+      'Jane Deere',
+      'David Smith',
+      'Emily Johnson',
+      'John Doe',
+      'Nicole Davidson',
+      'Carl Roberts',
+    ]);
+  });
+
+  it('should select rows with the row and header checkboxes', async () => {
+    const { loader } = await setupTest();
+    const emilyCheckbox = await getRowCheckbox(loader, 3);
+    const johnCheckbox = await getRowCheckbox(loader, 4);
+
+    await expectAsync(emilyCheckbox.getLabelText()).toBeResolvedTo('Select Emily Johnson');
+    await expectAsync(emilyCheckbox.isChecked()).toBeResolvedTo(true);
+
+    await johnCheckbox.check();
+    await emilyCheckbox.uncheck();
+    await expectAsync(getCheckedRowLabels(loader)).toBeResolvedTo(['Select John Doe']);
+
+    const headerCheckbox = await loader.getHarness(SkyCheckboxHarness.with({ dataSkyId: 'header-row-selector' }));
+    await headerCheckbox.check();
+    expect((await getCheckedRowLabels(loader)).length).toBe(7);
+
+    await headerCheckbox.uncheck();
+    await expectAsync(getCheckedRowLabels(loader)).toBeResolvedTo([]);
+  });
+
+  it('should alert when a context menu action is clicked', async () => {
+    const { loader } = await setupTest();
+    const alertSpy = spyOn(window, 'alert');
+
+    const contextMenu = await loader.getHarness(
+      SkyDropdownHarness.with({
+        selector: '.ag-row[row-index="0"] sky-dropdown',
+      }),
+    );
+    await contextMenu.clickDropdownButton();
+
+    const menu = await contextMenu.getDropdownMenu();
+    const items = await menu.getItems();
+    await expectAsync(Promise.all(items.map((item) => item.getText()))).toBeResolvedTo([
+      'Delete',
+      'Mark inactive',
+      'More info',
+    ]);
+
+    await (await menu.getItem({ text: 'Delete' })).click();
+
+    expect(alertSpy).toHaveBeenCalledWith('Delete clicked for Billy Bob');
+  });
+});
 ```
 
 ### Data manager setup
@@ -2330,9 +2562,9 @@ export const AG_GRID_DEMO_DATA: AgGridDemoRow[] = [
 #### example.component.html
 
 ```html
-<sky-data-manager>
+<sky-data-manager data-sky-id="employees-data-manager">
   <sky-data-manager-toolbar>
-    <sky-filter-bar skyDataManagerFilterController>
+    <sky-filter-bar data-sky-id="employees-filter-bar" skyDataManagerFilterController>
       <sky-filter-item-modal
         filterId="hideSales"
         labelText="Hide sales"
@@ -2347,12 +2579,284 @@ export const AG_GRID_DEMO_DATA: AgGridDemoRow[] = [
         (searchAsync)="onJobTitleSearchAsync($event)"
       />
     </sky-filter-bar>
-    <sky-list-summary>
+    <sky-list-summary data-sky-id="employees-summary">
       <sky-list-summary-item [labelText]="recordCount() === 1 ? 'Record' : 'Records'" [value]="recordCount()" />
     </sky-list-summary>
   </sky-data-manager-toolbar>
   <app-view-grid [items]="items" />
 </sky-data-manager>
+```
+
+#### example.component.spec.ts
+
+```typescript
+import { HarnessLoader } from '@angular/cdk/testing';
+import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
+import { TestBed } from '@angular/core/testing';
+import { SkyAgGridWrapperHarness, provideSkyAgGridTesting } from '@skyux/ag-grid/testing';
+import { provideNoopSkyAnimations } from '@skyux/core';
+import { SkyDataManagerHarness, SkyDataManagerToolbarHarness } from '@skyux/data-manager/testing';
+import { SkyFilterBarHarness } from '@skyux/filter-bar/testing';
+import { SkyButtonHarness, SkyCheckboxHarness } from '@skyux/forms/testing';
+import { SkyListSummaryHarness } from '@skyux/lists/testing';
+import { SkySelectionModalHarness } from '@skyux/lookup/testing';
+import { SkyConfirmHarness } from '@skyux/modals/testing';
+import { SkyDropdownHarness } from '@skyux/popovers/testing';
+
+import { of } from 'rxjs';
+
+import { JOB_TITLES } from './data';
+import { AgGridDataGridDataManagerExampleComponent } from './example.component';
+import { ExampleService } from './example.service';
+
+describe('Data grid with data manager example', () => {
+  async function setupTest(): Promise<{
+    docLoader: HarnessLoader;
+    filterBarHarness: SkyFilterBarHarness;
+    gridHarness: SkyAgGridWrapperHarness;
+    loader: HarnessLoader;
+    toolbarHarness: SkyDataManagerToolbarHarness;
+  }> {
+    // In a real-world application the search service would make a web request,
+    // which should be avoided in unit tests.
+    const mockSvc = jasmine.createSpyObj<ExampleService>('ExampleService', ['search']);
+    mockSvc.search.and.callFake((searchText) => {
+      const items = Object.values(JOB_TITLES)
+        .flat()
+        .filter((job) => job.name.toUpperCase().includes(searchText.toUpperCase()));
+
+      return of({ hasMore: false, items, totalCount: items.length });
+    });
+
+    await TestBed.configureTestingModule({
+      imports: [AgGridDataGridDataManagerExampleComponent],
+      providers: [
+        provideSkyAgGridTesting(),
+        provideNoopSkyAnimations(),
+        { provide: ExampleService, useValue: mockSvc },
+      ],
+    }).compileComponents();
+
+    const fixture = TestBed.createComponent(AgGridDataGridDataManagerExampleComponent);
+    const loader = TestbedHarnessEnvironment.loader(fixture);
+    const docLoader = TestbedHarnessEnvironment.documentRootLoader(fixture);
+
+    const dataManagerHarness = await loader.getHarness(
+      SkyDataManagerHarness.with({ dataSkyId: 'employees-data-manager' }),
+    );
+    const dataViewHarness = await dataManagerHarness.getView({
+      viewId: 'dataGridWithDataManagerView',
+    });
+    const gridHarness = await dataViewHarness.queryHarness(
+      SkyAgGridWrapperHarness.with({ dataSkyId: 'employees-grid' }),
+    );
+
+    // AG Grid renders outside the Angular zone, so wait for its first render
+    // before inspecting the grid's cells.
+    await gridHarness.waitUntilRendered();
+
+    return {
+      docLoader,
+      filterBarHarness: await loader.getHarness(SkyFilterBarHarness.with({ dataSkyId: 'employees-filter-bar' })),
+      gridHarness,
+      loader,
+      toolbarHarness: await dataManagerHarness.getToolbar(),
+    };
+  }
+
+  async function getRecordCount(loader: HarnessLoader): Promise<string> {
+    const listSummaryHarness = await loader.getHarness(SkyListSummaryHarness.with({ dataSkyId: 'employees-summary' }));
+    const [summaryItem] = await listSummaryHarness.getSummaryItems();
+
+    return `${await summaryItem.getValueText()} ${await summaryItem.getLabelText()}`;
+  }
+
+  async function setHideSales(
+    docLoader: HarnessLoader,
+    filterBarHarness: SkyFilterBarHarness,
+    buttonDataSkyId: 'apply-button' | 'cancel-button',
+  ): Promise<void> {
+    await (await filterBarHarness.getItem({ filterId: 'hideSales' })).click();
+    await (await docLoader.getHarness(SkyCheckboxHarness.with({ dataSkyId: 'hide-sales-checkbox' }))).check();
+
+    await (await docLoader.getHarness(SkyButtonHarness.with({ dataSkyId: buttonDataSkyId }))).click();
+  }
+
+  it('should render employees sorted by start date', async () => {
+    const { gridHarness, loader } = await setupTest();
+
+    await expectAsync(gridHarness.getDisplayedColumnHeaderNames()).toBeResolvedTo([
+      '',
+      'Name',
+      'Age',
+      'Start date',
+      'End date',
+      'Department',
+      'Title',
+    ]);
+    await expectAsync(gridHarness.getDisplayedCellValues('name')).toBeResolvedTo([
+      'Billy Bob',
+      'Jane Deere',
+      'David Smith',
+      'Emily Johnson',
+      'John Doe',
+      'Nicole Davidson',
+      'Carl Roberts',
+    ]);
+    await expectAsync(getRecordCount(loader)).toBeResolvedTo('7 Records');
+  });
+
+  it('should alert when a context menu action is clicked', async () => {
+    const { loader } = await setupTest();
+    const alertSpy = spyOn(window, 'alert');
+
+    const contextMenu = await loader.getHarness(
+      SkyDropdownHarness.with({
+        selector: '.ag-row[row-index="0"] sky-dropdown',
+      }),
+    );
+    await contextMenu.clickDropdownButton();
+
+    const menu = await contextMenu.getDropdownMenu();
+    const items = await menu.getItems();
+    await expectAsync(Promise.all(items.map((item) => item.getText()))).toBeResolvedTo([
+      'Delete',
+      'Mark inactive',
+      'More info',
+    ]);
+
+    await (await menu.getItem({ text: 'Mark inactive' })).click();
+    expect(alertSpy).toHaveBeenCalledWith('Mark inactive clicked for Billy Bob');
+  });
+
+  it('should search employees by name', async () => {
+    const { gridHarness, loader, toolbarHarness } = await setupTest();
+    const searchHarness = await toolbarHarness.getSearch();
+
+    await gridHarness.waitUntilRendered(() => searchHarness?.enterText('JO'));
+
+    await expectAsync(gridHarness.getDisplayedCellValues('name')).toBeResolvedTo(['Emily Johnson', 'John Doe']);
+    await expectAsync(getRecordCount(loader)).toBeResolvedTo('2 Records');
+
+    await gridHarness.waitUntilRendered(() => searchHarness?.clear());
+
+    await expectAsync(getRecordCount(loader)).toBeResolvedTo('7 Records');
+  });
+
+  it('should hide columns deselected in the column picker', async () => {
+    const { gridHarness, toolbarHarness } = await setupTest();
+
+    const columnPicker = await toolbarHarness.openColumnPicker();
+    await (await columnPicker.getColumn({ titleText: 'Age' })).deselect();
+    await (await columnPicker.getColumn({ titleText: 'Department' })).deselect();
+    await gridHarness.waitUntilRendered(() => columnPicker.saveAndClose());
+
+    await expectAsync(gridHarness.getDisplayedColumnHeaderNames()).toBeResolvedTo([
+      '',
+      'Name',
+      'Start date',
+      'End date',
+      'Title',
+    ]);
+  });
+
+  describe('filters', () => {
+    it('should hide sales employees', async () => {
+      const { docLoader, filterBarHarness, gridHarness } = await setupTest();
+
+      await gridHarness.waitUntilRendered(() => setHideSales(docLoader, filterBarHarness, 'apply-button'));
+
+      await expectAsync(gridHarness.getDisplayedCellValues('name')).toBeResolvedTo([
+        'Billy Bob',
+        'Jane Deere',
+        'David Smith',
+        'Emily Johnson',
+        'Nicole Davidson',
+        'Carl Roberts',
+      ]);
+    });
+
+    it('should not apply the sales filter when the modal is cancelled', async () => {
+      const { docLoader, filterBarHarness, loader } = await setupTest();
+
+      await setHideSales(docLoader, filterBarHarness, 'cancel-button');
+
+      await expectAsync(filterBarHarness.hasActiveFilters()).toBeResolvedTo(false);
+      await expectAsync(getRecordCount(loader)).toBeResolvedTo('7 Records');
+    });
+
+    it('should filter employees by job title and clear filters', async () => {
+      const { docLoader, filterBarHarness, gridHarness, loader } = await setupTest();
+
+      await (await filterBarHarness.getItem({ filterId: 'jobTitle' })).click();
+
+      const selectionModal = await docLoader.getHarness(SkySelectionModalHarness);
+      await selectionModal.enterSearchText('software engineer');
+      await selectionModal.selectSearchResult({
+        contentText: /^(Software|Principal Software) Engineer$/,
+      });
+      await gridHarness.waitUntilRendered(() => selectionModal.saveAndClose());
+
+      await expectAsync(gridHarness.getDisplayedCellValues('name')).toBeResolvedTo(['Jane Deere', 'Nicole Davidson']);
+
+      await filterBarHarness.clickClearFilters();
+      const confirmHarness = await docLoader.getHarness(SkyConfirmHarness);
+      await gridHarness.waitUntilRendered(() => confirmHarness.clickCustomButton({ text: 'Clear values' }));
+
+      await expectAsync(filterBarHarness.hasActiveFilters()).toBeResolvedTo(false);
+      await expectAsync(getRecordCount(loader)).toBeResolvedTo('7 Records');
+    });
+  });
+});
+```
+
+#### example.service.spec.ts
+
+```typescript
+import { TestBed, fakeAsync, tick } from '@angular/core/testing';
+import { SkyFilterItemLookupSearchAsyncResult } from '@skyux/filter-bar';
+
+import { ExampleService } from './example.service';
+
+describe('Data grid data manager example service', () => {
+  function search(searchText: string): SkyFilterItemLookupSearchAsyncResult | undefined {
+    let result: SkyFilterItemLookupSearchAsyncResult | undefined;
+
+    TestBed.inject(ExampleService)
+      .search(searchText)
+      .subscribe((value) => (result = value));
+
+    // The service simulates network latency.
+    expect(result).toBeUndefined();
+    tick(800);
+
+    return result;
+  }
+
+  it('should return job titles that match the search text regardless of case', fakeAsync(() => {
+    expect(search('SOFTWARE engineer')).toEqual({
+      hasMore: false,
+      items: [
+        { id: '6', name: 'Software Engineer' },
+        { id: '7', name: 'Senior Software Engineer' },
+        { id: '8', name: 'Principal Software Engineer' },
+      ],
+      totalCount: 3,
+    });
+  }));
+
+  it('should return every job title when the search text is empty', fakeAsync(() => {
+    expect(search('')?.totalCount).toBe(13);
+  }));
+
+  it('should return no job titles when nothing matches', fakeAsync(() => {
+    expect(search('astronaut')).toEqual({
+      hasMore: false,
+      items: [],
+      totalCount: 0,
+    });
+  }));
+});
 ```
 
 #### example.service.ts
@@ -2401,13 +2905,13 @@ export interface Filters {
 #### sales-modal.component.html
 
 ```html
-<sky-modal [headingText]="modalLabel">
+<sky-modal data-sky-id="sales-modal" [headingText]="modalLabel">
   <sky-modal-content>
-    <sky-checkbox labelText="Hide Sales employees" [(ngModel)]="hideSales" />
+    <sky-checkbox data-sky-id="hide-sales-checkbox" labelText="Hide Sales employees" [(ngModel)]="hideSales" />
   </sky-modal-content>
   <sky-modal-footer>
-    <button class="sky-btn sky-btn-primary" type="button" (click)="applyFilters()">Apply</button>
-    <button class="sky-btn sky-btn-link" type="button" (click)="cancel()">Cancel</button>
+    <sky-button buttonStyle="primary" data-sky-id="apply-button" labelText="Apply" (buttonClick)="applyFilters()" />
+    <sky-button buttonStyle="link" data-sky-id="cancel-button" labelText="Cancel" (buttonClick)="cancel()" />
   </sky-modal-footer>
 </sky-modal>
 ```
@@ -2418,14 +2922,14 @@ export interface Filters {
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { SkyFilterBarFilterValue, SkyFilterItemModal, SkyFilterItemModalInstance } from '@skyux/filter-bar';
-import { SkyCheckboxModule } from '@skyux/forms';
+import { SkyButton, SkyCheckboxModule } from '@skyux/forms';
 import { SkyModalModule } from '@skyux/modals';
 
 @Component({
   selector: 'app-sales-modal',
   templateUrl: './sales-modal.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [FormsModule, SkyCheckboxModule, SkyModalModule],
+  imports: [FormsModule, SkyButton, SkyCheckboxModule, SkyModalModule],
 })
 export class SalesModalComponent implements SkyFilterItemModal {
   public readonly modalInstance = inject(SkyFilterItemModalInstance);
@@ -2469,7 +2973,7 @@ export class SalesModalComponent implements SkyFilterItemModal {
 
 ```html
 <sky-data-view skyAgGridDataManagerAdapter [viewId]="viewId">
-  <sky-ag-grid-wrapper>
+  <sky-ag-grid-wrapper data-sky-id="employees-grid">
     <ag-grid-angular [gridOptions]="gridOptions" />
   </sky-ag-grid-wrapper>
 </sky-data-view>
@@ -2714,7 +3218,8 @@ const SOURCE_ID = 'data_grid_data_manager_multiselect_example_id';
   imports: [SkyDataManagerModule, SkyFilterBarModule, SkyListSummaryModule, ViewGridComponent],
 })
 export class AgGridDataGridDataManagerMultiselectExampleComponent {
-  protected items = AG_GRID_DEMO_DATA;
+  // Copy the rows because the row selector writes the `selected` field back to each row.
+  protected items = AG_GRID_DEMO_DATA.map((row) => ({ ...row }));
   protected salesModal = SalesModalComponent;
 
   readonly #dataManagerSvc = inject(SkyDataManagerService);
@@ -3009,9 +3514,9 @@ export const AG_GRID_DEMO_DATA: AgGridDemoRow[] = [
 #### example.component.html
 
 ```html
-<sky-data-manager>
+<sky-data-manager data-sky-id="employees-data-manager">
   <sky-data-manager-toolbar>
-    <sky-filter-bar skyDataManagerFilterController>
+    <sky-filter-bar data-sky-id="employees-filter-bar" skyDataManagerFilterController>
       <sky-filter-item-modal
         filterId="hideSales"
         labelText="Hide sales"
@@ -3026,12 +3531,350 @@ export const AG_GRID_DEMO_DATA: AgGridDemoRow[] = [
         (searchAsync)="onJobTitleSearchAsync($event)"
       />
     </sky-filter-bar>
-    <sky-list-summary>
+    <sky-list-summary data-sky-id="employees-summary">
       <sky-list-summary-item [labelText]="recordCount() === 1 ? 'Record' : 'Records'" [value]="recordCount()" />
     </sky-list-summary>
   </sky-data-manager-toolbar>
   <app-view-grid [items]="items" />
 </sky-data-manager>
+```
+
+#### example.component.spec.ts
+
+```typescript
+import { HarnessLoader } from '@angular/cdk/testing';
+import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { SkyAgGridWrapperHarness, provideSkyAgGridTesting } from '@skyux/ag-grid/testing';
+import { provideNoopSkyAnimations } from '@skyux/core';
+import { SkyDataManagerService } from '@skyux/data-manager';
+import { SkyDataManagerHarness, SkyDataManagerToolbarHarness, SkyDataViewHarness } from '@skyux/data-manager/testing';
+import { SkyFilterBarHarness } from '@skyux/filter-bar/testing';
+import { SkyButtonHarness, SkyCheckboxHarness } from '@skyux/forms/testing';
+import { SkyListSummaryHarness } from '@skyux/lists/testing';
+import { SkySelectionModalHarness } from '@skyux/lookup/testing';
+import { SkyConfirmHarness } from '@skyux/modals/testing';
+import { SkyDropdownHarness } from '@skyux/popovers/testing';
+
+import { firstValueFrom, of } from 'rxjs';
+
+import { AG_GRID_DEMO_DATA, JOB_TITLES } from './data';
+import { AgGridDataGridDataManagerMultiselectExampleComponent } from './example.component';
+import { ExampleService } from './example.service';
+
+const EMILY_ID = '09b7da69-0272-4fe0-ace3-658a6d8f175c';
+const JANE_ID = 'aea50a38-aa1e-44e0-94b5-52d3f577767f';
+
+describe('AG Grid data manager multiselect example', () => {
+  async function setupTest(): Promise<{
+    dataViewHarness: SkyDataViewHarness;
+    docLoader: HarnessLoader;
+    filterBarHarness: SkyFilterBarHarness;
+    fixture: ComponentFixture<AgGridDataGridDataManagerMultiselectExampleComponent>;
+    gridHarness: SkyAgGridWrapperHarness;
+    loader: HarnessLoader;
+    toolbarHarness: SkyDataManagerToolbarHarness;
+  }> {
+    // In a real-world application the search service would make a web request,
+    // which should be avoided in unit tests.
+    const mockSvc = jasmine.createSpyObj<ExampleService>('ExampleService', ['search']);
+    mockSvc.search.and.callFake((searchText) => {
+      const items = Object.values(JOB_TITLES)
+        .flat()
+        .filter((job) => job.name.toUpperCase().includes(searchText.toUpperCase()));
+
+      return of({ hasMore: false, items, totalCount: items.length });
+    });
+
+    await TestBed.configureTestingModule({
+      imports: [AgGridDataGridDataManagerMultiselectExampleComponent],
+      providers: [
+        provideSkyAgGridTesting(),
+        provideNoopSkyAnimations(),
+        { provide: ExampleService, useValue: mockSvc },
+      ],
+    }).compileComponents();
+
+    const fixture = TestBed.createComponent(AgGridDataGridDataManagerMultiselectExampleComponent);
+    const loader = TestbedHarnessEnvironment.loader(fixture);
+    const docLoader = TestbedHarnessEnvironment.documentRootLoader(fixture);
+
+    const dataManagerHarness = await loader.getHarness(
+      SkyDataManagerHarness.with({ dataSkyId: 'employees-data-manager' }),
+    );
+    const dataViewHarness = await dataManagerHarness.getView({
+      viewId: 'dataGridMultiselectWithDataManagerView',
+    });
+    const gridHarness = await dataViewHarness.queryHarness(
+      SkyAgGridWrapperHarness.with({ dataSkyId: 'employees-grid' }),
+    );
+
+    // AG Grid renders outside the Angular zone, so `whenStable()` doesn't
+    // wait for it.
+    await gridHarness.waitUntilRendered();
+
+    return {
+      dataViewHarness,
+      docLoader,
+      filterBarHarness: await loader.getHarness(SkyFilterBarHarness.with({ dataSkyId: 'employees-filter-bar' })),
+      fixture,
+      gridHarness,
+      loader,
+      toolbarHarness: await dataManagerHarness.getToolbar(),
+    };
+  }
+
+  async function getRecordCount(loader: HarnessLoader): Promise<string> {
+    const summaryHarness = await loader.getHarness(SkyListSummaryHarness.with({ dataSkyId: 'employees-summary' }));
+    const [summaryItem] = await summaryHarness.getSummaryItems();
+
+    return `${await summaryItem.getValueText()} ${await summaryItem.getLabelText()}`;
+  }
+
+  async function getSelectedIds(fixture: ComponentFixture<unknown>): Promise<string[] | undefined> {
+    const dataState = await firstValueFrom(
+      fixture.debugElement.injector.get(SkyDataManagerService).getDataStateUpdates('spec'),
+    );
+
+    return dataState.selectedIds;
+  }
+
+  async function getRowSelector(dataViewHarness: SkyDataViewHarness, rowIndex: number): Promise<SkyCheckboxHarness> {
+    return await dataViewHarness.queryHarness(
+      SkyCheckboxHarness.with({
+        selector: `.ag-row[row-index="${rowIndex}"] sky-checkbox`,
+      }),
+    );
+  }
+
+  async function setHideSales(
+    docLoader: HarnessLoader,
+    filterBarHarness: SkyFilterBarHarness,
+    buttonDataSkyId: 'apply-button' | 'cancel-button',
+  ): Promise<void> {
+    await (await filterBarHarness.getItem({ filterId: 'hideSales' })).click();
+    await (await docLoader.getHarness(SkyCheckboxHarness.with({ dataSkyId: 'hide-sales-checkbox' }))).check();
+
+    await (await docLoader.getHarness(SkyButtonHarness.with({ dataSkyId: buttonDataSkyId }))).click();
+  }
+
+  it('should render employees sorted by start date', async () => {
+    const { gridHarness, loader } = await setupTest();
+
+    await expectAsync(gridHarness.getDisplayedColumnHeaderNames()).toBeResolvedTo([
+      '',
+      '',
+      'Name',
+      'Age',
+      'Start date',
+      'End date',
+      'Department',
+      'Title',
+    ]);
+    await expectAsync(gridHarness.getDisplayedCellValues('name')).toBeResolvedTo([
+      'Billy Bob',
+      'Jane Deere',
+      'David Smith',
+      'Emily Johnson',
+      'John Doe',
+      'Nicole Davidson',
+      'Carl Roberts',
+    ]);
+    await expectAsync(getRecordCount(loader)).toBeResolvedTo('7 Records');
+  });
+
+  it('should alert when a context menu action is clicked', async () => {
+    const { loader } = await setupTest();
+    const alertSpy = spyOn(window, 'alert');
+
+    const contextMenu = await loader.getHarness(
+      SkyDropdownHarness.with({
+        selector: '.ag-row[row-index="0"] sky-dropdown',
+      }),
+    );
+    await contextMenu.clickDropdownButton();
+
+    const menu = await contextMenu.getDropdownMenu();
+    const items = await menu.getItems();
+    await expectAsync(Promise.all(items.map((item) => item.getText()))).toBeResolvedTo([
+      'Delete',
+      'Mark inactive',
+      'More info',
+    ]);
+
+    await (await menu.getItem({ text: 'More info' })).click();
+    expect(alertSpy).toHaveBeenCalledWith('More info clicked for Billy Bob');
+  });
+
+  describe('multiselect', () => {
+    it('should sync row selection with the data manager state', async () => {
+      const { dataViewHarness, fixture } = await setupTest();
+      const janeSelector = await getRowSelector(dataViewHarness, 1);
+      const emilySelector = await getRowSelector(dataViewHarness, 3);
+
+      await expectAsync(emilySelector.isChecked()).toBeResolvedTo(true);
+      await expectAsync(getSelectedIds(fixture)).toBeResolvedTo([EMILY_ID]);
+
+      await janeSelector.check();
+      await emilySelector.uncheck();
+
+      await expectAsync(getSelectedIds(fixture)).toBeResolvedTo([JANE_ID]);
+    });
+
+    it('should select and clear all rows from the toolbar', async () => {
+      const { fixture, toolbarHarness } = await setupTest();
+
+      await toolbarHarness.clickSelectAll();
+
+      await expectAsync(getSelectedIds(fixture)).toBeResolvedTo(
+        jasmine.arrayWithExactContents(AG_GRID_DEMO_DATA.map((d) => d.id)),
+      );
+
+      await toolbarHarness.clickClearAll();
+
+      await expectAsync(getSelectedIds(fixture)).toBeResolvedTo([]);
+    });
+
+    it('should only show selected rows', async () => {
+      const { dataViewHarness, gridHarness, toolbarHarness } = await setupTest();
+
+      await (await getRowSelector(dataViewHarness, 1)).check();
+
+      const onlyShowSelected = await toolbarHarness.getOnlyShowSelected();
+      await gridHarness.waitUntilRendered(() => onlyShowSelected?.check());
+
+      await expectAsync(gridHarness.getDisplayedCellValues('name')).toBeResolvedTo(['Jane Deere', 'Emily Johnson']);
+    });
+  });
+
+  it('should search employees by name', async () => {
+    const { gridHarness, loader, toolbarHarness } = await setupTest();
+    const searchHarness = await toolbarHarness.getSearch();
+
+    await gridHarness.waitUntilRendered(() => searchHarness?.enterText('JO'));
+
+    await expectAsync(gridHarness.getDisplayedCellValues('name')).toBeResolvedTo(['Emily Johnson', 'John Doe']);
+
+    await gridHarness.waitUntilRendered(() => searchHarness?.clear());
+
+    await expectAsync(getRecordCount(loader)).toBeResolvedTo('7 Records');
+  });
+
+  it('should hide columns deselected in the column picker', async () => {
+    const { gridHarness, toolbarHarness } = await setupTest();
+
+    const columnPicker = await toolbarHarness.openColumnPicker();
+    await (await columnPicker.getColumn({ titleText: 'Age' })).deselect();
+    await (await columnPicker.getColumn({ titleText: 'Title' })).deselect();
+    await gridHarness.waitUntilRendered(() => columnPicker.saveAndClose());
+
+    await expectAsync(gridHarness.getDisplayedColumnHeaderNames()).toBeResolvedTo([
+      '',
+      '',
+      'Name',
+      'Start date',
+      'End date',
+      'Department',
+    ]);
+  });
+
+  describe('filters', () => {
+    it('should hide sales employees', async () => {
+      const { docLoader, filterBarHarness, gridHarness } = await setupTest();
+
+      await gridHarness.waitUntilRendered(() => setHideSales(docLoader, filterBarHarness, 'apply-button'));
+
+      await expectAsync(gridHarness.getDisplayedCellValues('name')).toBeResolvedTo([
+        'Billy Bob',
+        'Jane Deere',
+        'David Smith',
+        'Emily Johnson',
+        'Nicole Davidson',
+        'Carl Roberts',
+      ]);
+    });
+
+    it('should not apply the sales filter when the modal is cancelled', async () => {
+      const { docLoader, filterBarHarness, loader } = await setupTest();
+
+      await setHideSales(docLoader, filterBarHarness, 'cancel-button');
+
+      await expectAsync(filterBarHarness.hasActiveFilters()).toBeResolvedTo(false);
+      await expectAsync(getRecordCount(loader)).toBeResolvedTo('7 Records');
+    });
+
+    it('should filter employees by job title and clear filters', async () => {
+      const { docLoader, filterBarHarness, gridHarness, loader } = await setupTest();
+
+      await (await filterBarHarness.getItem({ filterId: 'jobTitle' })).click();
+
+      const selectionModal = await docLoader.getHarness(SkySelectionModalHarness);
+      await selectionModal.enterSearchText('software engineer');
+      await selectionModal.selectSearchResult({
+        contentText: /^(Software|Principal Software) Engineer$/,
+      });
+      await gridHarness.waitUntilRendered(() => selectionModal.saveAndClose());
+
+      await expectAsync(gridHarness.getDisplayedCellValues('name')).toBeResolvedTo(['Jane Deere', 'Nicole Davidson']);
+
+      await filterBarHarness.clickClearFilters();
+      const confirmHarness = await docLoader.getHarness(SkyConfirmHarness);
+      await gridHarness.waitUntilRendered(() => confirmHarness.clickCustomButton({ text: 'Clear values' }));
+
+      await expectAsync(filterBarHarness.hasActiveFilters()).toBeResolvedTo(false);
+      await expectAsync(getRecordCount(loader)).toBeResolvedTo('7 Records');
+    });
+  });
+});
+```
+
+#### example.service.spec.ts
+
+```typescript
+import { TestBed, fakeAsync, tick } from '@angular/core/testing';
+import { SkyFilterItemLookupSearchAsyncResult } from '@skyux/filter-bar';
+
+import { ExampleService } from './example.service';
+
+describe('Data manager multiselect example service', () => {
+  function search(searchText: string): SkyFilterItemLookupSearchAsyncResult | undefined {
+    let result: SkyFilterItemLookupSearchAsyncResult | undefined;
+
+    TestBed.inject(ExampleService)
+      .search(searchText)
+      .subscribe((value) => (result = value));
+
+    // The service simulates network latency.
+    expect(result).toBeUndefined();
+    tick(800);
+
+    return result;
+  }
+
+  it('should return job titles that match the search text regardless of case', fakeAsync(() => {
+    expect(search('SOFTWARE engineer')).toEqual({
+      hasMore: false,
+      items: [
+        { id: '6', name: 'Software Engineer' },
+        { id: '7', name: 'Senior Software Engineer' },
+        { id: '8', name: 'Principal Software Engineer' },
+      ],
+      totalCount: 3,
+    });
+  }));
+
+  it('should return every job title when the search text is empty', fakeAsync(() => {
+    expect(search('')?.totalCount).toBe(13);
+  }));
+
+  it('should return no job titles when nothing matches', fakeAsync(() => {
+    expect(search('astronaut')).toEqual({
+      hasMore: false,
+      items: [],
+      totalCount: 0,
+    });
+  }));
+});
 ```
 
 #### example.service.ts
@@ -3080,13 +3923,13 @@ export interface Filters {
 #### sales-modal.component.html
 
 ```html
-<sky-modal [headingText]="modalLabel">
+<sky-modal data-sky-id="sales-modal" [headingText]="modalLabel">
   <sky-modal-content>
-    <sky-checkbox labelText="Hide Sales employees" [(ngModel)]="hideSales" />
+    <sky-checkbox data-sky-id="hide-sales-checkbox" labelText="Hide Sales employees" [(ngModel)]="hideSales" />
   </sky-modal-content>
   <sky-modal-footer>
-    <button class="sky-btn sky-btn-primary" type="button" (click)="applyFilters()">Apply</button>
-    <button class="sky-btn sky-btn-link" type="button" (click)="cancel()">Cancel</button>
+    <sky-button buttonStyle="primary" data-sky-id="apply-button" labelText="Apply" (buttonClick)="applyFilters()" />
+    <sky-button buttonStyle="link" data-sky-id="cancel-button" labelText="Cancel" (buttonClick)="cancel()" />
   </sky-modal-footer>
 </sky-modal>
 ```
@@ -3097,14 +3940,14 @@ export interface Filters {
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { SkyFilterBarFilterValue, SkyFilterItemModal, SkyFilterItemModalInstance } from '@skyux/filter-bar';
-import { SkyCheckboxModule } from '@skyux/forms';
+import { SkyButton, SkyCheckboxModule } from '@skyux/forms';
 import { SkyModalModule } from '@skyux/modals';
 
 @Component({
   selector: 'app-sales-modal',
   templateUrl: './sales-modal.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [FormsModule, SkyCheckboxModule, SkyModalModule],
+  imports: [FormsModule, SkyButton, SkyCheckboxModule, SkyModalModule],
 })
 export class SalesModalComponent implements SkyFilterItemModal {
   public readonly modalInstance = inject(SkyFilterItemModalInstance);
@@ -3148,7 +3991,7 @@ export class SalesModalComponent implements SkyFilterItemModal {
 
 ```html
 <sky-data-view skyAgGridDataManagerAdapter [viewId]="viewId">
-  <sky-ag-grid-wrapper>
+  <sky-ag-grid-wrapper data-sky-id="employees-grid">
     <ag-grid-angular [gridOptions]="gridOptions" [overlayNoRowsTemplate]="noRowsTemplate" />
   </sky-ag-grid-wrapper>
 </sky-data-view>
@@ -3237,12 +4080,16 @@ export class ViewGridComponent {
     },
   ];
   readonly #dataManagerSvc = inject(SkyDataManagerService);
-  readonly #dataState = toSignal(this.#dataManagerSvc.getDataStateUpdates(this.viewId), {
+  // The grid adapter publishes row selection changes using the view ID as its
+  // source, so subscribe with a different ID to receive them.
+  readonly #dataState = toSignal(this.#dataManagerSvc.getDataStateUpdates('viewGrid'), {
     initialValue: new SkyDataManagerState({}),
   });
   readonly #gridApi = signal<GridApi | undefined>(undefined);
 
-  protected readonly displayedItems = computed(() => this.#filterItems(this.#searchItems(this.items())));
+  protected readonly displayedItems = computed(() =>
+    this.#onlyShowSelectedItems(this.#filterItems(this.#searchItems(this.items()))),
+  );
   protected readonly gridOptions = inject(SkyAgGridService).getGridOptions({
     gridOptions: {
       columnDefs: this.#columnDefs,
@@ -3276,6 +4123,7 @@ export class ViewGridComponent {
       iconName: 'table',
       searchEnabled: true,
       columnPickerEnabled: true,
+      multiselectToolbarEnabled: true,
       columnOptions: [
         {
           id: 'selected',
@@ -3354,6 +4202,16 @@ export class ViewGridComponent {
     return filteredItems;
   }
 
+  #onlyShowSelectedItems(items: AgGridDemoRow[]): AgGridDemoRow[] {
+    const dataState = this.#dataState();
+
+    if (dataState.onlyShowSelected) {
+      return items.filter((item) => dataState.selectedIds?.includes(item.id));
+    }
+
+    return items;
+  }
+
   #searchItems(items: AgGridDemoRow[]): AgGridDemoRow[] {
     let searchedItems = items;
     const searchText = this.#dataState().searchText;
@@ -3384,7 +4242,7 @@ export class ViewGridComponent {
 #### example.component.ts (primary file)
 
 ```typescript
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { SkyAgGridModule, SkyAgGridService, SkyCellType, defineSkyAgGridColDef } from '@skyux/ag-grid';
 import { SkyToolbarModule } from '@skyux/layout';
 import { SkySearchModule } from '@skyux/lookup';
@@ -3393,9 +4251,8 @@ import { AgGridAngular } from 'ag-grid-angular';
 import {
   AllCommunityModule,
   ColDef,
-  GridApi,
   GridOptions,
-  GridReadyEvent,
+  ModelUpdatedEvent,
   ModuleRegistry,
   ValueFormatterParams,
 } from 'ag-grid-community';
@@ -3419,7 +4276,7 @@ ModuleRegistry.registerModules([AllCommunityModule]);
 export class AgGridDataGridInlineHelpExampleComponent {
   protected gridData = AG_GRID_DEMO_DATA;
   protected gridOptions: GridOptions;
-  protected searchText = '';
+  protected readonly searchText = signal('');
   protected noRowsTemplate: string;
 
   #columnDefs: ColDef[] = [
@@ -3489,10 +4346,7 @@ export class AgGridDataGridInlineHelpExampleComponent {
     },
   ];
 
-  #gridApi: GridApi | undefined;
-
   readonly #agGridSvc = inject(SkyAgGridService);
-  readonly #changeDetectorRef = inject(ChangeDetectorRef);
 
   constructor() {
     this.noRowsTemplate = `<div class="sky-theme-font-body-deemphasized-m">No results found.</div>`;
@@ -3500,33 +4354,19 @@ export class AgGridDataGridInlineHelpExampleComponent {
     this.gridOptions = this.#agGridSvc.getGridOptions({
       gridOptions: {
         columnDefs: this.#columnDefs,
-        onGridReady: this.onGridReady.bind(this),
       },
     });
-
-    this.#changeDetectorRef.markForCheck();
-  }
-
-  public onGridReady(gridReadyEvent: GridReadyEvent): void {
-    this.#gridApi = gridReadyEvent.api;
-    this.#changeDetectorRef.markForCheck();
   }
 
   protected searchApplied(searchText: string | void): void {
-    if (searchText) {
-      this.searchText = searchText;
-    } else {
-      this.searchText = '';
-    }
-    if (this.#gridApi) {
-      this.#gridApi.updateGridOptions({ quickFilterText: this.searchText });
-      const displayedRowCount = this.#gridApi.getDisplayedRowCount();
+    this.searchText.set(searchText ?? '');
+  }
 
-      if (displayedRowCount > 0) {
-        this.#gridApi.hideOverlay();
-      } else {
-        this.#gridApi.showNoRowsOverlay();
-      }
+  protected showOverlayWhenEmpty({ api }: ModelUpdatedEvent): void {
+    if (api.getDisplayedRowCount() > 0) {
+      api.hideOverlay();
+    } else {
+      api.showNoRowsOverlay();
     }
   }
 
@@ -3767,8 +4607,9 @@ export const AG_GRID_DEMO_DATA = [
 <sky-toolbar>
   <sky-toolbar-item>
     <sky-search
+      data-sky-id="inline-help-search"
       [debounceTime]="250"
-      [searchText]="searchText"
+      [searchText]="searchText()"
       (searchApply)="searchApplied($event)"
       (searchChange)="searchApplied($event)"
       (searchClear)="searchApplied($event)"
@@ -3776,9 +4617,142 @@ export const AG_GRID_DEMO_DATA = [
   </sky-toolbar-item>
 </sky-toolbar>
 
-<sky-ag-grid-wrapper>
-  <ag-grid-angular [gridOptions]="gridOptions" [overlayNoRowsTemplate]="noRowsTemplate" [rowData]="gridData" />
+<sky-ag-grid-wrapper data-sky-id="inline-help-grid">
+  <ag-grid-angular
+    [gridOptions]="gridOptions"
+    [overlayNoRowsTemplate]="noRowsTemplate"
+    [quickFilterText]="searchText()"
+    [rowData]="gridData"
+    (modelUpdated)="showOverlayWhenEmpty($event)"
+  />
 </sky-ag-grid-wrapper>
+```
+
+#### example.component.spec.ts
+
+```typescript
+import { HarnessLoader } from '@angular/cdk/testing';
+import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { SkyAgGridWrapperHarness, provideSkyAgGridTesting } from '@skyux/ag-grid/testing';
+import { provideNoopSkyAnimations } from '@skyux/core';
+import { SkyHelpInlineHarness } from '@skyux/help-inline/testing';
+import { SkySearchHarness } from '@skyux/lookup/testing';
+import { SkyDropdownHarness } from '@skyux/popovers/testing';
+
+import { AgGridDataGridInlineHelpExampleComponent } from './example.component';
+
+describe('AG Grid data grid inline help example', () => {
+  async function setupTest(): Promise<{
+    fixture: ComponentFixture<AgGridDataGridInlineHelpExampleComponent>;
+    gridHarness: SkyAgGridWrapperHarness;
+    loader: HarnessLoader;
+  }> {
+    await TestBed.configureTestingModule({
+      imports: [AgGridDataGridInlineHelpExampleComponent],
+      providers: [provideSkyAgGridTesting(), provideNoopSkyAnimations()],
+    }).compileComponents();
+
+    const fixture = TestBed.createComponent(AgGridDataGridInlineHelpExampleComponent);
+    const loader = TestbedHarnessEnvironment.loader(fixture);
+    fixture.detectChanges();
+
+    const gridHarness = await loader.getHarness(SkyAgGridWrapperHarness.with({ dataSkyId: 'inline-help-grid' }));
+    // AG Grid renders outside the Angular zone, so wait for it to finish.
+    await gridHarness.waitUntilRendered();
+
+    return { fixture, gridHarness, loader };
+  }
+
+  it('should render the grid sorted by start date', async () => {
+    const { gridHarness } = await setupTest();
+
+    await expectAsync(gridHarness.getDisplayedColumnHeaderNames()).toBeResolvedTo([
+      '',
+      '',
+      'Name',
+      'Age',
+      'Start date',
+      'End date',
+      'Department',
+      'Title',
+    ]);
+    await expectAsync(gridHarness.getDisplayedCellValues('name')).toBeResolvedTo([
+      'Billy Bob',
+      'Jane Deere',
+      'David Smith',
+      'Emily Johnson',
+      'John Doe',
+      'Nicole Davidson',
+      'Carl Roberts',
+    ]);
+  });
+
+  it('should alert when a column header inline help button is clicked', async () => {
+    const { loader } = await setupTest();
+    const alertSpy = spyOn(window, 'alert');
+    const helpInlineHarness = await loader.getHarness(
+      SkyHelpInlineHarness.with({
+        ancestor: '.ag-header-cell[col-id="startDate"]',
+      }),
+    );
+
+    await expectAsync(helpInlineHarness.getAriaLabel()).toBeResolvedTo('Information about Start date');
+    await helpInlineHarness.click();
+
+    expect(alertSpy).toHaveBeenCalledWith('Help was clicked for Start date.');
+  });
+
+  it('should filter rows when a search is applied and restore them when cleared', async () => {
+    const { loader, gridHarness } = await setupTest();
+    const searchHarness = await loader.getHarness(SkySearchHarness.with({ dataSkyId: 'inline-help-search' }));
+
+    await gridHarness.waitUntilRendered(() => searchHarness.enterText('son'));
+
+    await expectAsync(gridHarness.getDisplayedCellValues('name')).toBeResolvedTo(['Emily Johnson', 'Nicole Davidson']);
+
+    await gridHarness.waitUntilRendered(() => searchHarness.clickClearButton());
+
+    expect((await gridHarness.getDisplayedCellValues('name')).length).toBe(7);
+  });
+
+  it('should show a message when no rows match the search', async () => {
+    const { fixture, gridHarness, loader } = await setupTest();
+    const searchHarness = await loader.getHarness(SkySearchHarness.with({ dataSkyId: 'inline-help-search' }));
+
+    await gridHarness.waitUntilRendered(() => searchHarness.enterText('xyz'));
+
+    await expectAsync(gridHarness.getDisplayedCellValues('name')).toBeResolvedTo([]);
+    // The no-rows overlay has no harness, so check its text directly.
+    expect((fixture.nativeElement as HTMLElement).querySelector('.ag-overlay')?.textContent?.trim()).toBe(
+      'No results found.',
+    );
+  });
+
+  it('should alert when a context menu action is clicked', async () => {
+    const { loader } = await setupTest();
+    const alertSpy = spyOn(window, 'alert');
+
+    const contextMenu = await loader.getHarness(
+      SkyDropdownHarness.with({
+        selector: '.ag-row[row-index="0"] sky-dropdown',
+      }),
+    );
+    await contextMenu.clickDropdownButton();
+
+    const menu = await contextMenu.getDropdownMenu();
+    const items = await menu.getItems();
+    await expectAsync(Promise.all(items.map((item) => item.getText()))).toBeResolvedTo([
+      'Delete',
+      'Mark inactive',
+      'More info',
+    ]);
+
+    await (await menu.getItem({ text: 'Delete' })).click();
+
+    expect(alertSpy).toHaveBeenCalledWith('Delete clicked for Billy Bob');
+  });
+});
 ```
 
 #### inline-help.component.html
@@ -4202,16 +5176,163 @@ export const AG_GRID_DEMO_DATA = [
 #### example.component.html
 
 ```html
-<sky-ag-grid-wrapper>
+<sky-ag-grid-wrapper data-sky-id="paging-grid">
   <ag-grid-angular [gridOptions]="gridOptions" [rowData]="gridData" />
 </sky-ag-grid-wrapper>
 
 <sky-paging
+  data-sky-id="paging-grid-paging"
   [currentPage]="currentPage"
   [itemCount]="gridData.length"
   [pageSize]="pageSize"
   (currentPageChange)="onPageChange($event)"
 />
+```
+
+#### example.component.spec.ts
+
+```typescript
+import { HarnessLoader } from '@angular/cdk/testing';
+import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
+import { TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
+import { RouterTestingHarness } from '@angular/router/testing';
+import { SkyAgGridWrapperHarness, provideSkyAgGridTesting } from '@skyux/ag-grid/testing';
+import { provideNoopSkyAnimations } from '@skyux/core';
+import { SkyPagingHarness } from '@skyux/lists/testing';
+import { SkyDropdownHarness } from '@skyux/popovers/testing';
+
+import { AgGridDataGridPagingExampleComponent } from './example.component';
+
+describe('AG Grid data grid paging example', () => {
+  async function setupTest(route?: { path: string; url: string }): Promise<{
+    gridHarness: SkyAgGridWrapperHarness;
+    loader: HarnessLoader;
+    pagingHarness: SkyPagingHarness;
+  }> {
+    TestBed.configureTestingModule({
+      imports: [AgGridDataGridPagingExampleComponent],
+      providers: [
+        provideRouter(
+          route
+            ? [
+                {
+                  path: route.path,
+                  component: AgGridDataGridPagingExampleComponent,
+                },
+              ]
+            : [],
+        ),
+        provideSkyAgGridTesting(),
+        provideNoopSkyAnimations(),
+      ],
+    });
+
+    // Route tests navigate to the example so it can read the page from the URL.
+    const fixture = route
+      ? (await RouterTestingHarness.create(route.url)).fixture
+      : TestBed.createComponent(AgGridDataGridPagingExampleComponent);
+    const loader = TestbedHarnessEnvironment.loader(fixture);
+    fixture.detectChanges();
+
+    const gridHarness = await loader.getHarness(SkyAgGridWrapperHarness.with({ dataSkyId: 'paging-grid' }));
+    // AG Grid renders outside the Angular zone, so wait on the harness rather than `whenStable()`.
+    await gridHarness.waitUntilRendered();
+
+    const pagingHarness = await loader.getHarness(SkyPagingHarness.with({ dataSkyId: 'paging-grid-paging' }));
+
+    return { gridHarness, loader, pagingHarness };
+  }
+
+  it('should render the first page of the grid', async () => {
+    const { gridHarness, pagingHarness } = await setupTest();
+
+    await expectAsync(gridHarness.getDisplayedColumnHeaderNames()).toBeResolvedTo([
+      '',
+      'Name',
+      'Age',
+      'Start date',
+      'End date',
+      'Department',
+      'Title',
+    ]);
+    await expectAsync(pagingHarness.getCurrentPage()).toBeResolvedTo(1);
+    await expectAsync(gridHarness.getDisplayedCellValues('name')).toBeResolvedTo([
+      'Billy Bob',
+      'Jane Deere',
+      'David Smith',
+    ]);
+    await expectAsync(gridHarness.getDisplayedCellValues('endDate')).toBeResolvedTo(['N/A', 'N/A', '06/15/2018']);
+  });
+
+  it('should page through the grid rows', async () => {
+    const { gridHarness, pagingHarness } = await setupTest();
+
+    await pagingHarness.clickNextButton();
+    await expectAsync(pagingHarness.getCurrentPage()).toBeResolvedTo(2);
+    await expectAsync(gridHarness.getDisplayedCellValues('name')).toBeResolvedTo([
+      'Emily Johnson',
+      'John Doe',
+      'Nicole Davidson',
+    ]);
+
+    await pagingHarness.clickPreviousButton();
+    await expectAsync(pagingHarness.getCurrentPage()).toBeResolvedTo(1);
+    await expectAsync(gridHarness.getDisplayedCellValues('name')).toBeResolvedTo([
+      'Billy Bob',
+      'Jane Deere',
+      'David Smith',
+    ]);
+  });
+
+  it('should open the page specified by the "page" query parameter', async () => {
+    const { gridHarness, pagingHarness } = await setupTest({
+      path: '',
+      url: '/?page=3',
+    });
+
+    await expectAsync(pagingHarness.getCurrentPage()).toBeResolvedTo(3);
+    await expectAsync(gridHarness.getDisplayedCellValues('name')).toBeResolvedTo(['Carl Roberts']);
+  });
+
+  it('should open the page specified by the "page" route parameter', async () => {
+    const { gridHarness, pagingHarness } = await setupTest({
+      path: ':page',
+      url: '/2',
+    });
+
+    await expectAsync(pagingHarness.getCurrentPage()).toBeResolvedTo(2);
+    await expectAsync(gridHarness.getDisplayedCellValues('name')).toBeResolvedTo([
+      'Emily Johnson',
+      'John Doe',
+      'Nicole Davidson',
+    ]);
+  });
+
+  it('should alert when a context menu action is clicked', async () => {
+    const { loader } = await setupTest();
+    const alertSpy = spyOn(window, 'alert');
+
+    const contextMenu = await loader.getHarness(
+      SkyDropdownHarness.with({
+        selector: '.ag-row[row-index="0"] sky-dropdown',
+      }),
+    );
+    await contextMenu.clickDropdownButton();
+
+    const menu = await contextMenu.getDropdownMenu();
+    const items = await menu.getItems();
+    await expectAsync(Promise.all(items.map((item) => item.getText()))).toBeResolvedTo([
+      'Delete',
+      'Mark inactive',
+      'More info',
+    ]);
+
+    await (await menu.getItem({ text: 'Delete' })).click();
+
+    expect(alertSpy).toHaveBeenCalledWith('Delete clicked for Billy Bob');
+  });
+});
 ```
 
 ### Basic setup with template ref column type (without data manager)
@@ -4356,9 +5477,67 @@ export const AG_GRID_DEMO_DATA = [
   }
   <em>{{ value }}</em>
 </ng-template>
-<sky-ag-grid-wrapper>
+<sky-ag-grid-wrapper data-sky-id="template-ref-column-grid">
   <ag-grid-angular [gridOptions]="gridOptions" />
 </sky-ag-grid-wrapper>
+```
+
+#### example.component.spec.ts
+
+```typescript
+import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
+import { TestBed } from '@angular/core/testing';
+import { SkyAgGridWrapperHarness, provideSkyAgGridTesting } from '@skyux/ag-grid/testing';
+import { provideNoopSkyAnimations } from '@skyux/core';
+
+import { AgGridDataGridTemplateRefColumnExampleComponent } from './example.component';
+
+describe('AG Grid data grid template ref column example', () => {
+  async function setupTest(): Promise<{
+    gridHarness: SkyAgGridWrapperHarness;
+    gridElement: HTMLElement;
+  }> {
+    await TestBed.configureTestingModule({
+      imports: [AgGridDataGridTemplateRefColumnExampleComponent],
+      providers: [provideSkyAgGridTesting(), provideNoopSkyAnimations()],
+    }).compileComponents();
+
+    const fixture = TestBed.createComponent(AgGridDataGridTemplateRefColumnExampleComponent);
+    const loader = TestbedHarnessEnvironment.loader(fixture);
+    fixture.detectChanges();
+
+    const gridHarness = await loader.getHarness(
+      SkyAgGridWrapperHarness.with({ dataSkyId: 'template-ref-column-grid' }),
+    );
+    // AG Grid renders outside the Angular zone, so wait on the harness rather than `whenStable()`.
+    await gridHarness.waitUntilRendered();
+    fixture.detectChanges();
+
+    return { gridHarness, gridElement: fixture.nativeElement as HTMLElement };
+  }
+
+  it('should render the grid with the expected columns', async () => {
+    const { gridHarness } = await setupTest();
+
+    await expectAsync(gridHarness.getDisplayedColumnHeaderNames()).toBeResolvedTo([
+      'Name',
+      'Age',
+      'Department',
+      'Title',
+    ]);
+  });
+
+  it('should render cells using the template ref columns', async () => {
+    const { gridElement } = await setupTest();
+    // The templates' markup has no harness, so query the first row's cells directly.
+    const departmentCell = gridElement.querySelector('.ag-row[row-index="0"] [col-id="department"]');
+    const jobTitleCell = gridElement.querySelector('.ag-row[row-index="0"] [col-id="jobTitle"]');
+
+    expect(departmentCell?.querySelector('strong')?.textContent?.trim()).toBe('Customer Support');
+    expect(jobTitleCell?.querySelector('em')?.textContent?.trim()).toBe('Customer Support Representative');
+    expect(jobTitleCell?.querySelector('.sky-pull-right')?.textContent?.trim()).toBe('🥈');
+  });
+});
 ```
 
 ### Basic setup with top scrollbar (without data manager)
@@ -4366,7 +5545,7 @@ export const AG_GRID_DEMO_DATA = [
 #### example.component.ts (primary file)
 
 ```typescript
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { SkyAgGridModule, SkyAgGridService, SkyCellType, defineSkyAgGridColDef } from '@skyux/ag-grid';
 import { SkyToolbarModule } from '@skyux/layout';
 import { SkySearchModule } from '@skyux/lookup';
@@ -4375,9 +5554,8 @@ import { AgGridAngular } from 'ag-grid-angular';
 import {
   AllCommunityModule,
   ColDef,
-  GridApi,
   GridOptions,
-  GridReadyEvent,
+  ModelUpdatedEvent,
   ModuleRegistry,
   ValueFormatterParams,
 } from 'ag-grid-community';
@@ -4400,7 +5578,7 @@ ModuleRegistry.registerModules([AllCommunityModule]);
 export class AgGridDataGridTopScrollExampleComponent {
   protected gridData = AG_GRID_DEMO_DATA;
   protected gridOptions: GridOptions;
-  protected searchText = '';
+  protected readonly searchText = signal('');
   protected noRowsTemplate = `<div class="sky-theme-font-body-deemphasized-m">No results found.</div>`;
 
   #columnDefs: ColDef[] = [
@@ -4452,17 +5630,12 @@ export class AgGridDataGridTopScrollExampleComponent {
     },
   ];
 
-  #gridApi: GridApi | undefined;
-
   readonly #agGridSvc = inject(SkyAgGridService);
 
   constructor() {
     this.gridOptions = this.#agGridSvc.getGridOptions({
       gridOptions: {
         columnDefs: this.#columnDefs,
-        onGridReady: (gridReadyEvent): void => {
-          this.onGridReady(gridReadyEvent);
-        },
         context: {
           enableTopScroll: true,
         },
@@ -4470,21 +5643,15 @@ export class AgGridDataGridTopScrollExampleComponent {
     });
   }
 
-  public onGridReady(gridReadyEvent: GridReadyEvent): void {
-    this.#gridApi = gridReadyEvent.api;
+  protected searchApplied(searchText: string | void): void {
+    this.searchText.set(searchText ?? '');
   }
 
-  protected searchApplied(searchText: string | void): void {
-    this.searchText = searchText ?? '';
-
-    if (this.#gridApi) {
-      this.#gridApi.updateGridOptions({ quickFilterText: this.searchText });
-      const displayedRowCount = this.#gridApi.getDisplayedRowCount();
-      if (displayedRowCount > 0) {
-        this.#gridApi.hideOverlay();
-      } else {
-        this.#gridApi.showNoRowsOverlay();
-      }
+  protected showOverlayWhenEmpty({ api }: ModelUpdatedEvent): void {
+    if (api.getDisplayedRowCount() > 0) {
+      api.hideOverlay();
+    } else {
+      api.showNoRowsOverlay();
     }
   }
 
@@ -4732,15 +5899,141 @@ export const AG_GRID_DEMO_DATA = [
 <sky-toolbar>
   <sky-toolbar-item>
     <sky-search
+      data-sky-id="top-scroll-search"
       [debounceTime]="250"
-      [searchText]="searchText"
+      [searchText]="searchText()"
       (searchApply)="searchApplied($event)"
       (searchChange)="searchApplied($event)"
       (searchClear)="searchApplied($event)"
     />
   </sky-toolbar-item>
 </sky-toolbar>
-<sky-ag-grid-wrapper>
-  <ag-grid-angular [gridOptions]="gridOptions" [overlayNoRowsTemplate]="noRowsTemplate" [rowData]="gridData" />
+<sky-ag-grid-wrapper data-sky-id="top-scroll-grid">
+  <ag-grid-angular
+    [gridOptions]="gridOptions"
+    [overlayNoRowsTemplate]="noRowsTemplate"
+    [quickFilterText]="searchText()"
+    [rowData]="gridData"
+    (modelUpdated)="showOverlayWhenEmpty($event)"
+  />
 </sky-ag-grid-wrapper>
+```
+
+#### example.component.spec.ts
+
+```typescript
+import { HarnessLoader } from '@angular/cdk/testing';
+import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { SkyAgGridWrapperHarness, provideSkyAgGridTesting } from '@skyux/ag-grid/testing';
+import { provideNoopSkyAnimations } from '@skyux/core';
+import { SkySearchHarness } from '@skyux/lookup/testing';
+import { SkyDropdownHarness } from '@skyux/popovers/testing';
+
+import { AgGridDataGridTopScrollExampleComponent } from './example.component';
+
+describe('AG Grid data grid top scroll example', () => {
+  async function setupTest(): Promise<{
+    fixture: ComponentFixture<AgGridDataGridTopScrollExampleComponent>;
+    loader: HarnessLoader;
+    gridHarness: SkyAgGridWrapperHarness;
+  }> {
+    await TestBed.configureTestingModule({
+      imports: [AgGridDataGridTopScrollExampleComponent],
+      providers: [provideSkyAgGridTesting(), provideNoopSkyAnimations()],
+    }).compileComponents();
+
+    const fixture = TestBed.createComponent(AgGridDataGridTopScrollExampleComponent);
+    const loader = TestbedHarnessEnvironment.loader(fixture);
+    fixture.detectChanges();
+
+    const gridHarness = await loader.getHarness(SkyAgGridWrapperHarness.with({ dataSkyId: 'top-scroll-grid' }));
+    // AG Grid renders outside the Angular zone, so wait for it to finish.
+    await gridHarness.waitUntilRendered();
+
+    return { fixture, loader, gridHarness };
+  }
+
+  it('should render the grid sorted by start date', async () => {
+    const { gridHarness } = await setupTest();
+
+    await expectAsync(gridHarness.getDisplayedColumnHeaderNames()).toBeResolvedTo([
+      '',
+      '',
+      'Name',
+      'Age',
+      'Start date',
+      'End date',
+      'Department',
+      'Title',
+    ]);
+    await expectAsync(gridHarness.getDisplayedCellValues('name')).toBeResolvedTo([
+      'Billy Bob',
+      'Jane Deere',
+      'David Smith',
+      'Emily Johnson',
+      'John Doe',
+      'Nicole Davidson',
+      'Carl Roberts',
+    ]);
+  });
+
+  it('should show a scrollbar at the top of the grid', async () => {
+    const { fixture } = await setupTest();
+
+    expect(
+      (fixture.nativeElement as HTMLElement).querySelector('[data-sky-id="top-scroll-grid"] .sky-ag-grid'),
+    ).toHaveClass('sky-ag-grid-top-scrollbar');
+  });
+
+  it('should filter rows when a search is applied and restore them when cleared', async () => {
+    const { loader, gridHarness } = await setupTest();
+    const searchHarness = await loader.getHarness(SkySearchHarness.with({ dataSkyId: 'top-scroll-search' }));
+
+    await gridHarness.waitUntilRendered(() => searchHarness.enterText('son'));
+
+    await expectAsync(gridHarness.getDisplayedCellValues('name')).toBeResolvedTo(['Emily Johnson', 'Nicole Davidson']);
+
+    await gridHarness.waitUntilRendered(() => searchHarness.clickClearButton());
+
+    expect((await gridHarness.getDisplayedCellValues('name')).length).toBe(7);
+  });
+
+  it('should show a message when no rows match the search', async () => {
+    const { fixture, gridHarness, loader } = await setupTest();
+    const searchHarness = await loader.getHarness(SkySearchHarness.with({ dataSkyId: 'top-scroll-search' }));
+
+    await gridHarness.waitUntilRendered(() => searchHarness.enterText('xyz'));
+
+    await expectAsync(gridHarness.getDisplayedCellValues('name')).toBeResolvedTo([]);
+    // The no-rows overlay has no harness, so check its text directly.
+    expect((fixture.nativeElement as HTMLElement).querySelector('.ag-overlay')?.textContent?.trim()).toBe(
+      'No results found.',
+    );
+  });
+
+  it('should alert when a context menu action is clicked', async () => {
+    const { loader } = await setupTest();
+    const alertSpy = spyOn(window, 'alert');
+
+    const contextMenu = await loader.getHarness(
+      SkyDropdownHarness.with({
+        selector: '.ag-row[row-index="0"] sky-dropdown',
+      }),
+    );
+    await contextMenu.clickDropdownButton();
+
+    const menu = await contextMenu.getDropdownMenu();
+    const items = await menu.getItems();
+    await expectAsync(Promise.all(items.map((item) => item.getText()))).toBeResolvedTo([
+      'Delete',
+      'Mark inactive',
+      'More info',
+    ]);
+
+    await (await menu.getItem({ text: 'Delete' })).click();
+
+    expect(alertSpy).toHaveBeenCalledWith('Delete clicked for Billy Bob');
+  });
+});
 ```

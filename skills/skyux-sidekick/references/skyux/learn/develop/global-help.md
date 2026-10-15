@@ -71,4 +71,4 @@ The following example specifies the help key `my-help-topic.html` on a [SKY UX i
 
 ## Testing
 
-SKY UX provides a testing controller to assist with unit tests for global help. For examples of this controller in unit tests, see the code examples for the [page component](../../components/page/README.md).
+SKY UX provides a testing controller to assist with unit tests for global help. For examples of this controller in unit tests, see the code examples for the [page component](../../components/page.md).

@@ -2,7 +2,7 @@
 
 # Code examples — all components
 
-83 of 88 components have a `## Code Examples` section in their source docs.
+83 of 87 components have a `## Code Examples` section in their source docs.
 
 ## Components with code examples
 
@@ -25,7 +25,7 @@
 | country-field                | 1        | [country-field.examples-index.md](./country-field.examples-index.md)                               |
 | data-entry-grid              | 4        | [data-entry-grid.examples-index.md](./data-entry-grid.examples-index.md)                           |
 | data-grid                    | 8        | [data-grid.examples-index.md](./data-grid.examples-index.md)                                       |
-| data-grid-component          | 4        | [data-grid-component.examples-index.md](./data-grid-component.examples-index.md)                   |
+| data-grid-component          | 5        | [data-grid-component.examples-index.md](./data-grid-component.examples-index.md)                   |
 | data-manager                 | 3        | [data-manager.examples-index.md](./data-manager.examples-index.md)                                 |
 | date-pipe                    | 1        | [date-pipe.examples-index.md](./date-pipe.examples-index.md)                                       |
 | date-range-picker            | 3        | [date-range-picker.examples-index.md](./date-range-picker.examples-index.md)                       |
@@ -59,7 +59,7 @@
 | modal                        | 5        | [modal.examples-index.md](./modal.examples-index.md)                                               |
 | navbar                       | 1        | [navbar.examples-index.md](./navbar.examples-index.md)                                             |
 | numeric                      | 1        | [numeric.examples-index.md](./numeric.examples-index.md)                                           |
-| page                         | 7        | [page/examples-index.md](./page/examples-index.md)                                                 |
+| page                         | 7        | [page.examples-index.md](./page.examples-index.md)                                                 |
 | paging                       | 2        | [paging.examples-index.md](./paging.examples-index.md)                                             |
 | phone-field                  | 1        | [phone-field.examples-index.md](./phone-field.examples-index.md)                                   |
 | popover                      | 2        | [popover.examples-index.md](./popover.examples-index.md)                                           |
@@ -99,5 +99,4 @@ These components do not include a `## Code Examples` section upstream. No index 
 - button ([button.md](./button.md))
 - charts ([charts.md](./charts.md))
 - grids ([grids.md](./grids.md))
-- progress-indicator-wizard ([progress-indicator-wizard.md](./progress-indicator-wizard.md))
 - window ([window.md](./window.md))
