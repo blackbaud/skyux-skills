@@ -101,7 +101,7 @@ For these common starting points, jump straight to the cited file instead of sea
 
 The full routing table lives in `references/README.md`. The high-level shape:
 
-- `references/skills/` — process guides (migration, debugging, modernization, TDD, verification, known v14 fixes). These are **rigid**; follow them exactly.
+- `references/skills/` — process guides (migration, debugging, modernization, TDD, verification, known v14 and v15 fixes). These are **rigid**; follow them exactly.
 - `references/skyux/components/` — one file per component. Lookup table at `references/skyux/components/README.md`.
 - `references/skyux/components/examples-index.md` and the per-component `*examples-index.md` siblings — line-range cheatsheets for code examples.
 - The per-component `*sections-index.md` siblings — line-range cheatsheets for _every_ `## ` section in the README, tagged by tab (`design` / `development` / `testing` / `examples`). Use this when you need anything other than a code example.

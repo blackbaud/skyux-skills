@@ -36,11 +36,14 @@
 
 ## SKY UX Component Migrations
 
-| Deprecated Component                     | Modern Replacement           | Schematic Available?                                                   |
-| ---------------------------------------- | ---------------------------- | ---------------------------------------------------------------------- |
-| `<sky-definition-list>`                  | `<sky-description-list>`     | Yes: `@skyux/packages:convert-definition-list-to-description-list`     |
-| `<sky-page-summary>`                     | `<sky-page-header>`          | Yes: `@skyux/packages:convert-page-summary-to-page-header`             |
-| `<sky-progress-indicator>` (wizard mode) | `<sky-tabset>` (wizard mode) | Yes: `@skyux/packages:convert-progress-indicator-wizard-to-tab-wizard` |
+| Deprecated Component                                       | Modern Replacement           | Schematic Available?                                                   |
+| ---------------------------------------------------------- | ---------------------------- | ---------------------------------------------------------------------- |
+| `<sky-definition-list>`                                    | `<sky-description-list>`     | Yes: `@skyux/packages:convert-definition-list-to-description-list`     |
+| `<sky-page-summary>`                                       | `<sky-page-header>`          | Yes: `@skyux/packages:convert-page-summary-to-page-header`             |
+| `<sky-progress-indicator>` (wizard mode)                   | `<sky-tabset>` (wizard mode) | Yes: `@skyux/packages:convert-progress-indicator-wizard-to-tab-wizard` |
+| `<sky-box-header>`, `<sky-modal-header>`                   | `headingText` on the parent  | No: see [migrate-label-components.md](./migrate-label-components.md)   |
+| `<sky-file-attachment-label>`, `<sky-toggle-switch-label>` | `labelText` on the parent    | No: see [migrate-label-components.md](./migrate-label-components.md)   |
+| `<sky-select-field>`                                       | `<sky-lookup>`               | No: see [migrate-select-field.md](./migrate-select-field.md)           |
 
 ## How to Fix: Test Infrastructure Examples
 

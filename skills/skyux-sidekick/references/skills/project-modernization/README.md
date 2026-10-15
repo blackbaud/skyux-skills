@@ -36,6 +36,7 @@ Do NOT run multiple schematics at once. If one breaks the build, you won't know 
 - Tests query internal CSS classes (`.sky-modal-content`, etc.) instead of harnesses
 - Templates use `*ngIf`/`*ngFor` instead of `@if`/`@for`
 - Templates use `[ngClass]` instead of class bindings
+- Templates use `<sky-box-header>`, `<sky-file-attachment-label>`, `<sky-modal-header>`, `<sky-toggle-switch-label>`, or `<sky-select-field>`, which SKY UX 15 removes
 - Test coverage is low or missing for key components
 - Asked to "clean up", "modernize", "bring up to date", or "fix technical debt"
 
@@ -274,6 +275,8 @@ These references are available in this directory:
 
 - [Complete list of SKY UX and Angular schematics with commands and verification steps](./available-schematics.md)
 - [Lookup table of deprecated patterns and their modern replacements](./deprecated-patterns.md)
+- [Replace label components removed in SKY UX 15](./migrate-label-components.md)
+- [Migrate `sky-select-field` to `sky-lookup`](./migrate-select-field.md)
 
 **Related skills:**
 

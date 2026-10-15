@@ -31,6 +31,7 @@ If a component isn't in the examples index, its README is still the canonical re
 
 ## Skills
 
+- [Known SKY UX 15 update fixes](./skills/known-skyux-v15-update-fixes.md) — use IMMEDIATELY before, during, or after a SKY UX 14 to 15 update: checking whether a project is ready for SKY UX 15, or troubleshooting migration/update/upgrade issues on a SKY UX 15 update branch.
 - [Known SKY UX 14 update fixes](./skills/known-skyux-v14-update-fixes.md) — use IMMEDIATELY when troubleshooting migration/update/upgrade issues in a SKY UX 14 update.
 - [Migration & debugging](./skills/migration-debugger/README.md) — use IMMEDIATELY for any "migration", "update", "upgrade", or "skyux update" request; also use when encountering any bug, test failure, build error, compilation failure, or unexpected behavior in Angular or SKY UX code, before proposing fixes
 - [Project modernization](./skills/project-modernization/README.md) — use only when the application already builds and tests pass, and the user wants to modernize patterns (NgModule to standalone, deprecated APIs, test coverage, anti-patterns); do NOT use for migration/update/upgrade troubleshooting

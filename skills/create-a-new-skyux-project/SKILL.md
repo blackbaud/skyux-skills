@@ -1,6 +1,6 @@
 ---
 name: create-a-new-skyux-project
-description: Use when scaffolding a new SKY UX 14 / Angular 21 project from scratch — covers Angular CLI invocation, build/test configuration, ESLint setup, and installation of the SKY UX package suite as a ready-to-extend baseline.
+description: Use when scaffolding a new SKY UX 15 / Angular 22 project from scratch — covers Angular CLI invocation, build/test configuration, ESLint setup, and installation of the SKY UX package suite as a ready-to-extend baseline.
 metadata:
   license: MIT
 ---
@@ -21,8 +21,8 @@ applies organization-specific defaults this skill does not.
 
 ## Overview
 
-Walk through the canonical scaffolding for a new SKY UX 14 application on
-Angular 21. The goal is a buildable, lintable, test-runnable project with
+Walk through the canonical scaffolding for a new SKY UX 15 application on
+Angular 22. The goal is a buildable, lintable, test-runnable project with
 the full `@skyux/*` package family installed and zero application code
 beyond what `ng new` produces — a clean slate ready for feature work.
 
@@ -52,9 +52,9 @@ On `PATH`: `node` (v22+), `npm`, `npx`, `jq`.
 The project pins:
 
 ```
-Angular CLI: ^21
-SKY UX:      ^14
-TypeScript:  ~5.9
+Angular CLI: ^22
+SKY UX:      ^15
+TypeScript:  ~6.0
 Node:        whatever you ran `ng new` with (captured into .nvmrc)
 ```
 
@@ -72,7 +72,7 @@ Pick a project name once and reuse it; the rest of the snippets call it
 ## Step 1 — Create the Angular project
 
 ```bash
-npx -y @angular/cli@^21 new "$PROJECT_NAME" \
+npx -y @angular/cli@^22 new "$PROJECT_NAME" \
   --no-ssr \
   --no-zoneless \
   --ai-config copilot \
@@ -86,7 +86,7 @@ cd "$PROJECT_NAME"
 
 **Why these flags:**
 
-- `--no-ssr` — SKY UX 14 targets SPA workloads; SSR adds setup the
+- `--no-ssr` — SKY UX 15 targets SPA workloads; SSR adds setup the
   skill suite doesn't exercise.
 - `--no-zoneless` — SKY UX components still rely on Zone.js change
   detection; opting into zoneless will break runtime behavior.
@@ -153,7 +153,7 @@ runs. (For Vitest, see the variant section.)
 ## Step 6 — Set up `angular-eslint`
 
 ```bash
-npx ng add angular-eslint@^21 --skip-confirmation
+npx ng add angular-eslint@^22 --skip-confirmation
 ```
 
 **Why:** Adds the Angular-aware ESLint rules and registers an `ng lint`
@@ -245,7 +245,7 @@ goes wrong in subsequent steps.
 
 ```bash
 npm install -D '@eslint/js@^9' "@types/node@^$(node --version | sed -e 's/^v//' | cut -d . -f 1)"
-npx ng add eslint-config-skyux@^14 --skip-confirmation --no-interactive
+npx ng add eslint-config-skyux@^15 --skip-confirmation --no-interactive
 npx prettier -w .
 ```
 
@@ -264,7 +264,7 @@ Install the framework metapackage, which provides additional
 schematics and handles updates:
 
 ```bash
-npx ng add "@skyux/packages@^14" --project "$PROJECT_NAME" --skip-confirmation
+npx ng add "@skyux/packages@^15" --project "$PROJECT_NAME" --skip-confirmation
 ```
 
 ## Step 12 — Initialize the SKY UX theme
@@ -323,15 +323,15 @@ npm run lint
 npm run test:ci
 ```
 
-If all three pass you have a known-good SKY UX 14 baseline.
+If all three pass you have a known-good SKY UX 15 baseline.
 
 ## Quick Reference
 
 | Concern             | Setting                                                                    |
 |---------------------|----------------------------------------------------------------------------|
-| Angular CLI version | `^21`                                                                      |
-| SKY UX major        | `^14`                                                                      |
-| TypeScript          | `~5.9.0`                                                                   |
+| Angular CLI version | `^22`                                                                      |
+| SKY UX major        | `^15`                                                                      |
+| TypeScript          | `~6.0.0`                                                                   |
 | Test runner         | Karma + Jasmine 6                                                          |
 | Test browser (CI)   | `ChromeHeadlessNoSandbox` (custom launcher), `--no-watch`, `--no-progress` |
 | Bundle error budget | `2mb`                                                                      |
@@ -380,7 +380,7 @@ npm pkg set scripts.test:ci='ng test --browsers=ChromiumHeadless --no-progress -
 
 ```bash
 npm install -D \
-  @skyux-sdk/testing@^14 \
+  @skyux-sdk/testing@^15 \
   @vitest/browser-playwright@^4 \
   @vitest/browser-preview@^4 \
   @vitest/coverage-v8@^4 \
@@ -398,5 +398,5 @@ sed -E \
 mv tsconfig.spec.json.tmp tsconfig.spec.json
 ```
 
-Vitest support in SKY UX 14 is functional but newer than the karma path;
+Vitest support in SKY UX 15 is functional but newer than the karma path;
 prefer karma unless you specifically need Vitest features.
