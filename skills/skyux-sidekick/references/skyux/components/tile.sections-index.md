@@ -15,32 +15,32 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | #   | Section                             | Tab         | Lines    | Read invocation                                 |
 | --- | ----------------------------------- | ----------- | -------- | ----------------------------------------------- |
 | 1   | Usage                               | design      | 10–43    | `Read file_path=./tile.md offset=10 limit=34`   |
-| 2   | Anatomy                             | design      | 44–75    | `Read file_path=./tile.md offset=44 limit=32`   |
-| 3   | Options                             | design      | 76–85    | `Read file_path=./tile.md offset=76 limit=10`   |
-| 4   | Content                             | design      | 86–91    | `Read file_path=./tile.md offset=86 limit=6`    |
-| 5   | Related information                 | design      | 92–103   | `Read file_path=./tile.md offset=92 limit=12`   |
-| 6   | Installation                        | development | 104–113  | `Read file_path=./tile.md offset=104 limit=10`  |
-| 7   | SkyTilesModule                      | development | 114–119  | `Read file_path=./tile.md offset=114 limit=6`   |
-| 8   | SkyTileComponent                    | development | 120–175  | `Read file_path=./tile.md offset=120 limit=56`  |
-| 9   | SkyTileTitleComponent               | development | 176–183  | `Read file_path=./tile.md offset=176 limit=8`   |
-| 10  | SkyTileSummaryComponent             | development | 184–191  | `Read file_path=./tile.md offset=184 limit=8`   |
-| 11  | SkyTileContentComponent             | development | 192–199  | `Read file_path=./tile.md offset=192 limit=8`   |
-| 12  | SkyTileContentSectionComponent      | development | 200–207  | `Read file_path=./tile.md offset=200 limit=8`   |
-| 13  | SkyTileDashboardComponent           | development | 208–237  | `Read file_path=./tile.md offset=208 limit=30`  |
-| 14  | SkyTileDashboardService             | development | 238–313  | `Read file_path=./tile.md offset=238 limit=76`  |
-| 15  | SkyTileDashboardConfig              | development | 314–337  | `Read file_path=./tile.md offset=314 limit=24`  |
-| 16  | SkyTileDashboardConfigLayout        | development | 338–356  | `Read file_path=./tile.md offset=338 limit=19`  |
-| 17  | SkyTileDashboardConfigLayoutColumn  | development | 357–370  | `Read file_path=./tile.md offset=357 limit=14`  |
-| 18  | SkyTileDashboardConfigLayoutTile    | development | 371–389  | `Read file_path=./tile.md offset=371 limit=19`  |
-| 19  | SkyTileDashboardConfigTile          | development | 390–413  | `Read file_path=./tile.md offset=390 limit=24`  |
-| 20  | SkyTileDashboardConfigReorderData   | development | 414–437  | `Read file_path=./tile.md offset=414 limit=24`  |
-| 21  | SkyTileDashboardMessage             | development | 438–453  | `Read file_path=./tile.md offset=438 limit=16`  |
-| 22  | SkyTileDashboardMessageType         | development | 454–476  | `Read file_path=./tile.md offset=454 limit=23`  |
-| 23  | SkyTileHarness                      | testing     | 477–578  | `Read file_path=./tile.md offset=477 limit=102` |
-| 24  | SkyTileHarnessFilters               | testing     | 579–599  | `Read file_path=./tile.md offset=579 limit=21`  |
-| 25  | SkyTileContentHarness               | testing     | 600–709  | `Read file_path=./tile.md offset=600 limit=110` |
-| 26  | SkyTileContentSectionHarness        | testing     | 710–803  | `Read file_path=./tile.md offset=710 limit=94`  |
-| 27  | SkyTileContentSectionHarnessFilters | testing     | 804–819  | `Read file_path=./tile.md offset=804 limit=16`  |
-| 28  | SkyTileDashboardHarness             | testing     | 820–949  | `Read file_path=./tile.md offset=820 limit=130` |
-| 29  | SkyTileDashboardHarnessFilters      | testing     | 950–965  | `Read file_path=./tile.md offset=950 limit=16`  |
-| 30  | Code Examples                       | examples    | 966–1185 | `Read file_path=./tile.md offset=966 limit=220` |
+| 2   | Anatomy                             | design      | 44–79    | `Read file_path=./tile.md offset=44 limit=36`   |
+| 3   | Options                             | design      | 80–93    | `Read file_path=./tile.md offset=80 limit=14`   |
+| 4   | Content                             | design      | 94–99    | `Read file_path=./tile.md offset=94 limit=6`    |
+| 5   | Related information                 | design      | 100–111  | `Read file_path=./tile.md offset=100 limit=12`  |
+| 6   | Installation                        | development | 112–121  | `Read file_path=./tile.md offset=112 limit=10`  |
+| 7   | SkyTilesModule                      | development | 122–127  | `Read file_path=./tile.md offset=122 limit=6`   |
+| 8   | SkyTileComponent                    | development | 128–183  | `Read file_path=./tile.md offset=128 limit=56`  |
+| 9   | SkyTileTitleComponent               | development | 184–191  | `Read file_path=./tile.md offset=184 limit=8`   |
+| 10  | SkyTileSummaryComponent             | development | 192–199  | `Read file_path=./tile.md offset=192 limit=8`   |
+| 11  | SkyTileContentComponent             | development | 200–207  | `Read file_path=./tile.md offset=200 limit=8`   |
+| 12  | SkyTileContentSectionComponent      | development | 208–215  | `Read file_path=./tile.md offset=208 limit=8`   |
+| 13  | SkyTileDashboardComponent           | development | 216–245  | `Read file_path=./tile.md offset=216 limit=30`  |
+| 14  | SkyTileDashboardService             | development | 246–321  | `Read file_path=./tile.md offset=246 limit=76`  |
+| 15  | SkyTileDashboardConfig              | development | 322–345  | `Read file_path=./tile.md offset=322 limit=24`  |
+| 16  | SkyTileDashboardConfigLayout        | development | 346–364  | `Read file_path=./tile.md offset=346 limit=19`  |
+| 17  | SkyTileDashboardConfigLayoutColumn  | development | 365–378  | `Read file_path=./tile.md offset=365 limit=14`  |
+| 18  | SkyTileDashboardConfigLayoutTile    | development | 379–397  | `Read file_path=./tile.md offset=379 limit=19`  |
+| 19  | SkyTileDashboardConfigTile          | development | 398–421  | `Read file_path=./tile.md offset=398 limit=24`  |
+| 20  | SkyTileDashboardConfigReorderData   | development | 422–445  | `Read file_path=./tile.md offset=422 limit=24`  |
+| 21  | SkyTileDashboardMessage             | development | 446–461  | `Read file_path=./tile.md offset=446 limit=16`  |
+| 22  | SkyTileDashboardMessageType         | development | 462–484  | `Read file_path=./tile.md offset=462 limit=23`  |
+| 23  | SkyTileHarness                      | testing     | 485–586  | `Read file_path=./tile.md offset=485 limit=102` |
+| 24  | SkyTileHarnessFilters               | testing     | 587–607  | `Read file_path=./tile.md offset=587 limit=21`  |
+| 25  | SkyTileContentHarness               | testing     | 608–717  | `Read file_path=./tile.md offset=608 limit=110` |
+| 26  | SkyTileContentSectionHarness        | testing     | 718–811  | `Read file_path=./tile.md offset=718 limit=94`  |
+| 27  | SkyTileContentSectionHarnessFilters | testing     | 812–827  | `Read file_path=./tile.md offset=812 limit=16`  |
+| 28  | SkyTileDashboardHarness             | testing     | 828–957  | `Read file_path=./tile.md offset=828 limit=130` |
+| 29  | SkyTileDashboardHarnessFilters      | testing     | 958–973  | `Read file_path=./tile.md offset=958 limit=16`  |
+| 30  | Code Examples                       | examples    | 974–1193 | `Read file_path=./tile.md offset=974 limit=220` |

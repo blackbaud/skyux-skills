@@ -12,4 +12,4 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                         | Lines    | Read invocation                                 |
 | --- | ------------------------------- | -------- | ----------------------------------------------- |
-| 1   | Tile dashboard with basic setup | 968–1185 | `Read file_path=./tile.md offset=968 limit=218` |
+| 1   | Tile dashboard with basic setup | 976–1193 | `Read file_path=./tile.md offset=976 limit=218` |

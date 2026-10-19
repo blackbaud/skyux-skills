@@ -15,7 +15,7 @@ Use tiles to display content or features from external sources on the Add-ins ta
 
 For more information, see the [SKY Add-ins documentation for tiles](https://developer.blackbaud.com/skyapi/docs/addins/get-started/skyux-tile?svcid=skyux) .
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/tiles/img/guidelines/tiles-usage-1.8cfebaaf2bd0bb54cdd108b801a9fb21.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tile/tiles-usage-1.8cfebaaf2bd0bb54cdd108b801a9fb21.png)
 
 Do use tiles to display content from external sources.
 
@@ -23,21 +23,21 @@ Do use tiles to display content from external sources.
 
 Don't use tiles to organize native Blackbaud content and features or to define content categories within SKY UX applications. On [record pages](../design/guidelines/page-layouts/record-page.md) use [boxes](./box.md) within [fluid grids](./fluid-grid.md) instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/tiles/img/guidelines/tiles-usage-2.ff05c732fb3fe7b9df437da0a0ffa212.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tile/tiles-usage-2.ff05c732fb3fe7b9df437da0a0ffa212.png)
 
 Don't use tiles to organize native Blackbaud content and features.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/tiles/img/guidelines/tiles-usage-3.a7cb204592d8a4084b52e549f7814b78.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tile/tiles-usage-3.a7cb204592d8a4084b52e549f7814b78.png)
 
 Do use boxes to organize page content into categories.
 
 Don't use tiles to organize content within modals. For complex forms, use [sectioned forms](./sectioned-form.md) or [other form containers](../design/guidelines/form-design.md) instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/tiles/img/guidelines/tile-usage-4.97ec40dffe9483926bd8c97815b2f41e.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tile/tile-usage-4.97ec40dffe9483926bd8c97815b2f41e.png)
 
 Don't use tiles to divide modal content into sections.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/tiles/img/guidelines/tile-usage-5.c75e59139d4a170693363c57b857eeb2.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tile/tile-usage-5.c75e59139d4a170693363c57b857eeb2.png)
 
 Do use sectioned forms if you need to organize modal content into categories.
 
@@ -71,7 +71,11 @@ Help inline button (optional)
 
 Settings button (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/tiles/img/guidelines/tile-anatomy.79a477dc1287559bfee27684908bdd93.png)
+8
+
+Content section (optional)
+
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tile/tile-anatomy.e4470bbd00ca1c6b6a7002f2d3baaebd.png)
 
 ## Options
 
@@ -82,6 +86,10 @@ When you need to supplement a tile with additional information but don't require
 ### Settings button
 
 Show the settings button on a tile when users need to access add-in settings, authentication for connected services, or other configuration options. This button can launch whatever pattern is appropriate, such as opening a modal or a separate browser tab.
+
+### Content sections
+
+To ensure consistent spacing and layout within tiles, organize content into sections. Place content in a section even when the tile only has one section. Sections provide the correct spacing between tile headers and content areas and avoid the need for custom CSS.
 
 ## Content
 

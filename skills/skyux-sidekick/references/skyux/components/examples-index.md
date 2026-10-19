@@ -2,7 +2,7 @@
 
 # Code examples — all components
 
-83 of 87 components have a `## Code Examples` section in their source docs.
+83 of 89 components have a `## Code Examples` section in their source docs.
 
 ## Components with code examples
 
@@ -97,6 +97,8 @@
 These components do not include a `## Code Examples` section upstream. No index file is generated for them.
 
 - button ([button.md](./button.md))
+- button-classes ([button-classes.md](./button-classes.md))
+- button-component ([button-component.md](./button-component.md))
 - charts ([charts.md](./charts.md))
 - grids ([grids.md](./grids.md))
 - window ([window.md](./window.md))

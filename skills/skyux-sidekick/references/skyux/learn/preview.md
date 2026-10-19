@@ -7,6 +7,14 @@ Reference: https://developer.blackbaud.com/skyux/learn/preview
 
 Monitor this page for updates to the SKY UX API that are not yet fully documented. In the developer docs, a preview tag will highlight these updates and indicate that features aren't yet represented in the design docs, demo, and code examples. This helps facilitate far-reaching changes that span multiple iterations and affect multiple components. It can also highlight breaking changes in minor versions, but the SKY UX team strives to avoid those.
 
+## October 2026
+
+### New button component
+
+The [button component](../components/button-component.md) reduces the amount of code needed to display a button using SKY UX styles.
+
+This component is in preview and will be officially supported in an upcoming minor version of SKY UX v15.
+
 ## September 2026
 
 ### New Vitest matchers

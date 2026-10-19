@@ -15,7 +15,7 @@ SKY UX components, available as Angular components, services, and modules, allow
 - [Avatar](./avatar.md) - The avatar component displays an image to identify a record and allows users to change the image.
 - [Back to top](./back-to-top.md) - The back to top directive creates a button for users to easily access the top of long lists.
 - [Box](./box.md) - The box module provides a container for related content and actions.
-- [Button](./button.md) - The button classes create buttons to trigger actions from within an interface.
+- [Buttons](./button.md) - Buttons trigger actions from within an interface.
 - [Card](./card.md) - The card module creates a small container to highlight important information.
 - [Charts (preview)](./charts.md) - Charts visualize data to help users compare values and spot trends at a glance.
 - [Checkbox](./checkbox.md) - The checkbox component renders a SKY UX-themed checkbox.
