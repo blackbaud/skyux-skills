@@ -12,4 +12,4 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                   | Lines   | Read invocation                                     |
 | --- | ------------------------- | ------- | --------------------------------------------------- |
-| 1   | Dropdown with basic setup | 619–763 | `Read file_path=./dropdown.md offset=619 limit=145` |
+| 1   | Dropdown with basic setup | 626–770 | `Read file_path=./dropdown.md offset=626 limit=145` |

@@ -189,6 +189,13 @@ For buttons that use icons without labels and buttons that aren't intuitive, you
 
 Tooltip text needs to be clear and concise, and it doesn't need to use complete sentences. Don't restate labels or provide extraneous details. Create tooltips with the `title` attribute of the button; don't use [popovers](./popover.md).
 
+### Hide or disable buttons
+
+When actions aren't available, you can hide or disable buttons.
+
+- Hide buttons when users can't do anything to make their actions relevant in the current state. For example, hide buttons that users can't select while other mutually exclusive buttons are active.
+- Disable buttons when you want to make sure users are aware of actions that aren't currently available, especially when users should take steps to enable those buttons as part of intended workflows.
+
 ## Behavior and states
 
 ### Disabled states

@@ -16,25 +16,25 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | --- | ------------------------------ | ----------- | ------- | --------------------------------------------------- |
 | 1   | Usage                          | design      | 10–41   | `Read file_path=./dropdown.md offset=10 limit=32`   |
 | 2   | Anatomy                        | design      | 42–57   | `Read file_path=./dropdown.md offset=42 limit=16`   |
-| 3   | Options                        | design      | 58–63   | `Read file_path=./dropdown.md offset=58 limit=6`    |
-| 4   | Behavior and states            | design      | 64–73   | `Read file_path=./dropdown.md offset=64 limit=10`   |
-| 5   | Content                        | design      | 74–107  | `Read file_path=./dropdown.md offset=74 limit=34`   |
-| 6   | Layout                         | design      | 108–123 | `Read file_path=./dropdown.md offset=108 limit=16`  |
-| 7   | Accessibility                  | design      | 124–131 | `Read file_path=./dropdown.md offset=124 limit=8`   |
-| 8   | Related information            | design      | 132–142 | `Read file_path=./dropdown.md offset=132 limit=11`  |
-| 9   | Installation                   | development | 143–152 | `Read file_path=./dropdown.md offset=143 limit=10`  |
-| 10  | SkyDropdownModule              | development | 153–158 | `Read file_path=./dropdown.md offset=153 limit=6`   |
-| 11  | SkyDropdownComponent           | development | 159–212 | `Read file_path=./dropdown.md offset=159 limit=54`  |
-| 12  | SkyDropdownButtonComponent     | development | 213–220 | `Read file_path=./dropdown.md offset=213 limit=8`   |
-| 13  | SkyDropdownMenuComponent       | development | 221–240 | `Read file_path=./dropdown.md offset=221 limit=20`  |
-| 14  | SkyDropdownItemComponent       | development | 241–256 | `Read file_path=./dropdown.md offset=241 limit=16`  |
-| 15  | SkyDropdownButtonType          | development | 257–262 | `Read file_path=./dropdown.md offset=257 limit=6`   |
-| 16  | SkyDropdownHorizontalAlignment | development | 263–270 | `Read file_path=./dropdown.md offset=263 limit=8`   |
-| 17  | SkyDropdownTriggerType         | development | 271–280 | `Read file_path=./dropdown.md offset=271 limit=10`  |
-| 18  | SkyDropdownHarness             | testing     | 281–366 | `Read file_path=./dropdown.md offset=281 limit=86`  |
-| 19  | SkyDropdownHarnessFilters      | testing     | 367–382 | `Read file_path=./dropdown.md offset=367 limit=16`  |
-| 20  | SkyDropdownItemHarness         | testing     | 383–428 | `Read file_path=./dropdown.md offset=383 limit=46`  |
-| 21  | SkyDropdownItemHarnessFilters  | testing     | 429–454 | `Read file_path=./dropdown.md offset=429 limit=26`  |
-| 22  | SkyDropdownMenuHarness         | testing     | 455–600 | `Read file_path=./dropdown.md offset=455 limit=146` |
-| 23  | SkyDropdownMenuHarnessFilters  | testing     | 601–616 | `Read file_path=./dropdown.md offset=601 limit=16`  |
-| 24  | Code Examples                  | examples    | 617–763 | `Read file_path=./dropdown.md offset=617 limit=147` |
+| 3   | Options                        | design      | 58–70   | `Read file_path=./dropdown.md offset=58 limit=13`   |
+| 4   | Behavior and states            | design      | 71–80   | `Read file_path=./dropdown.md offset=71 limit=10`   |
+| 5   | Content                        | design      | 81–114  | `Read file_path=./dropdown.md offset=81 limit=34`   |
+| 6   | Layout                         | design      | 115–130 | `Read file_path=./dropdown.md offset=115 limit=16`  |
+| 7   | Accessibility                  | design      | 131–138 | `Read file_path=./dropdown.md offset=131 limit=8`   |
+| 8   | Related information            | design      | 139–149 | `Read file_path=./dropdown.md offset=139 limit=11`  |
+| 9   | Installation                   | development | 150–159 | `Read file_path=./dropdown.md offset=150 limit=10`  |
+| 10  | SkyDropdownModule              | development | 160–165 | `Read file_path=./dropdown.md offset=160 limit=6`   |
+| 11  | SkyDropdownComponent           | development | 166–219 | `Read file_path=./dropdown.md offset=166 limit=54`  |
+| 12  | SkyDropdownButtonComponent     | development | 220–227 | `Read file_path=./dropdown.md offset=220 limit=8`   |
+| 13  | SkyDropdownMenuComponent       | development | 228–247 | `Read file_path=./dropdown.md offset=228 limit=20`  |
+| 14  | SkyDropdownItemComponent       | development | 248–263 | `Read file_path=./dropdown.md offset=248 limit=16`  |
+| 15  | SkyDropdownButtonType          | development | 264–269 | `Read file_path=./dropdown.md offset=264 limit=6`   |
+| 16  | SkyDropdownHorizontalAlignment | development | 270–277 | `Read file_path=./dropdown.md offset=270 limit=8`   |
+| 17  | SkyDropdownTriggerType         | development | 278–287 | `Read file_path=./dropdown.md offset=278 limit=10`  |
+| 18  | SkyDropdownHarness             | testing     | 288–373 | `Read file_path=./dropdown.md offset=288 limit=86`  |
+| 19  | SkyDropdownHarnessFilters      | testing     | 374–389 | `Read file_path=./dropdown.md offset=374 limit=16`  |
+| 20  | SkyDropdownItemHarness         | testing     | 390–435 | `Read file_path=./dropdown.md offset=390 limit=46`  |
+| 21  | SkyDropdownItemHarnessFilters  | testing     | 436–461 | `Read file_path=./dropdown.md offset=436 limit=26`  |
+| 22  | SkyDropdownMenuHarness         | testing     | 462–607 | `Read file_path=./dropdown.md offset=462 limit=146` |
+| 23  | SkyDropdownMenuHarnessFilters  | testing     | 608–623 | `Read file_path=./dropdown.md offset=608 limit=16`  |
+| 24  | Code Examples                  | examples    | 624–770 | `Read file_path=./dropdown.md offset=624 limit=147` |

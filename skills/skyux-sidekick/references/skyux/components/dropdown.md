@@ -61,6 +61,13 @@ Action
 
 Dropdown buttons can use the default or primary styles inherited from [SKY UX buttons](./button.md). For details about when to use the primary style, see the [primary action guidelines](../design/guidelines/page-layouts/README.md).
 
+### Hide or disable actions
+
+When actions aren't available, you can hide or disable them.
+
+- Hide actions when users can't do anything to make the actions relevant in the current state. For example, hide actions that users can't select while other mutually exclusive actions are active.
+- Disable actions when you want to make sure users are aware of actions that aren't currently available, especially when users should take steps to enable those actions as part of intended workflows.
+
 ## Behavior and states
 
 ### Behavior
