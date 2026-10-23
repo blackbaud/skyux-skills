@@ -253,6 +253,7 @@ Only find instances whose `data-sky-id` attribute matches the given value.
 
 ```typescript
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { SkyButton } from '@skyux/forms';
 import { SkyToolbarModule } from '@skyux/layout';
 import { SkyRepeaterModule } from '@skyux/lists';
 import { SkySearchModule } from '@skyux/lookup';
@@ -266,7 +267,7 @@ import { Item } from './item';
   selector: 'app-lookup-search-basic-example',
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [SkyRepeaterModule, SkySearchModule, SkyToolbarModule],
+  imports: [SkyButton, SkyRepeaterModule, SkySearchModule, SkyToolbarModule],
 })
 export class LookupSearchBasicExampleComponent {
   protected displayedItems: Item[];
@@ -332,9 +333,7 @@ export class LookupSearchBasicExampleComponent {
 ```html
 <sky-toolbar>
   <sky-toolbar-item>
-    <button class="sky-btn sky-btn-default" type="button" (click)="searchApplied('Robert')">
-      Predefined search text
-    </button>
+    <sky-button labelText="Predefined search text" (buttonClick)="searchApplied('Robert')" />
   </sky-toolbar-item>
   <sky-toolbar-item>
     <sky-search

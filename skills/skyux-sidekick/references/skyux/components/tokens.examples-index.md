@@ -13,4 +13,4 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 | #   | Example                 | Lines   | Read invocation                                   |
 | --- | ----------------------- | ------- | ------------------------------------------------- |
 | 1   | Tokens with basic setup | 384–490 | `Read file_path=./tokens.md offset=384 limit=107` |
-| 2   | Code Example            | 491–745 | `Read file_path=./tokens.md offset=491 limit=255` |
+| 2   | Code Example            | 491–747 | `Read file_path=./tokens.md offset=491 limit=257` |

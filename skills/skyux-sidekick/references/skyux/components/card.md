@@ -96,7 +96,7 @@ Specifies an action that users can perform on the card.
 ```typescript
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { SkyCheckboxModule } from '@skyux/forms';
+import { SkyButton, SkyCheckboxModule } from '@skyux/forms';
 import { SkyCardModule } from '@skyux/layout';
 import { SkyDropdownModule } from '@skyux/popovers';
 
@@ -107,7 +107,7 @@ import { SkyDropdownModule } from '@skyux/popovers';
   selector: 'app-layout-card-basic-example',
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [FormsModule, SkyCardModule, SkyCheckboxModule, SkyDropdownModule],
+  imports: [FormsModule, SkyButton, SkyCardModule, SkyCheckboxModule, SkyDropdownModule],
 })
 export class LayoutCardBasicExampleComponent {
   protected showAction = true;
@@ -135,7 +135,7 @@ export class LayoutCardBasicExampleComponent {
   </sky-card-content>
   } @if (showAction) {
   <sky-card-actions>
-    <button class="sky-btn sky-btn-default" type="button" (click)="triggerAlert()">Action</button>
+    <sky-button labelText="Action" (buttonClick)="triggerAlert()" />
   </sky-card-actions>
   }
 </sky-card>

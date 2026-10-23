@@ -794,7 +794,7 @@ describe('Filter bar with modal filter', () => {
 ```typescript
 import { HarnessPredicate } from '@angular/cdk/testing';
 import { SkyComponentHarness } from '@skyux/core/testing';
-import { SkyRadioGroupHarness, SkyRadioHarness } from '@skyux/forms/testing';
+import { SkyButtonHarness, SkyRadioGroupHarness, SkyRadioHarness } from '@skyux/forms/testing';
 
 /**
  * Custom harness for interacting with the filter modal component in tests.
@@ -802,8 +802,8 @@ import { SkyRadioGroupHarness, SkyRadioHarness } from '@skyux/forms/testing';
 export class FilterModalHarness extends SkyComponentHarness {
   public static hostSelector = '.filter-modal-demo-form';
 
-  #getSaveButton = this.locatorFor('button.sky-btn-primary');
-  #getCancelButton = this.locatorFor('button.sky-btn-link');
+  #getSaveButton = this.locatorFor(SkyButtonHarness.with({ dataSkyId: 'save-button' }));
+  #getCancelButton = this.locatorFor(SkyButtonHarness.with({ dataSkyId: 'cancel-button' }));
   #getRadioGroup = this.locatorFor(SkyRadioGroupHarness);
 
   public static with(): HarnessPredicate<FilterModalHarness> {
@@ -894,8 +894,13 @@ export class FilterModalHarness extends SkyComponentHarness {
       </sky-radio-group>
     </sky-modal-content>
     <sky-modal-footer>
-      <button class="sky-btn sky-btn-primary" type="button" (click)="save()">Save</button>
-      <button class="sky-btn sky-btn-link" type="button" (click)="modalInstance.cancel()">Cancel</button>
+      <sky-button buttonStyle="primary" data-sky-id="save-button" labelText="Save" (buttonClick)="save()" />
+      <sky-button
+        buttonStyle="link"
+        data-sky-id="cancel-button"
+        labelText="Cancel"
+        (buttonClick)="modalInstance.cancel()"
+      />
     </sky-modal-footer>
   </sky-modal>
 </form>
@@ -907,13 +912,13 @@ export class FilterModalHarness extends SkyComponentHarness {
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SkyFilterItemModal, SkyFilterItemModalInstance } from '@skyux/filter-bar';
-import { SkyInputBoxModule, SkyRadioModule } from '@skyux/forms';
+import { SkyButton, SkyInputBoxModule, SkyRadioModule } from '@skyux/forms';
 import { SkyModalModule } from '@skyux/modals';
 
 @Component({
   selector: 'app-filter-modal',
   templateUrl: './filter-modal.component.html',
-  imports: [FormsModule, ReactiveFormsModule, SkyInputBoxModule, SkyModalModule, SkyRadioModule],
+  imports: [FormsModule, ReactiveFormsModule, SkyButton, SkyInputBoxModule, SkyModalModule, SkyRadioModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FilterModalComponent implements SkyFilterItemModal {
@@ -1154,8 +1159,13 @@ export class FilterBarSelectableExampleComponent {
       </sky-radio-group>
     </sky-modal-content>
     <sky-modal-footer>
-      <button class="sky-btn sky-btn-primary" type="button" (click)="save()">Save</button>
-      <button class="sky-btn sky-btn-link" type="button" (click)="modalInstance.cancel()">Cancel</button>
+      <sky-button buttonStyle="primary" data-sky-id="save-button" labelText="Save" (buttonClick)="save()" />
+      <sky-button
+        buttonStyle="link"
+        data-sky-id="cancel-button"
+        labelText="Cancel"
+        (buttonClick)="modalInstance.cancel()"
+      />
     </sky-modal-footer>
   </sky-modal>
 </form>
@@ -1167,13 +1177,13 @@ export class FilterBarSelectableExampleComponent {
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SkyFilterItemModal, SkyFilterItemModalInstance } from '@skyux/filter-bar';
-import { SkyInputBoxModule, SkyRadioModule } from '@skyux/forms';
+import { SkyButton, SkyInputBoxModule, SkyRadioModule } from '@skyux/forms';
 import { SkyModalModule } from '@skyux/modals';
 
 @Component({
   selector: 'app-application-fee-filter-modal',
   templateUrl: './application-fee-filter-modal.component.html',
-  imports: [FormsModule, ReactiveFormsModule, SkyInputBoxModule, SkyModalModule, SkyRadioModule],
+  imports: [FormsModule, ReactiveFormsModule, SkyButton, SkyInputBoxModule, SkyModalModule, SkyRadioModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ApplicationFeeFilterModalComponent implements SkyFilterItemModal {
@@ -1345,7 +1355,7 @@ describe('Filter bar with selectable filters', () => {
 ```typescript
 import { HarnessPredicate } from '@angular/cdk/testing';
 import { SkyComponentHarness } from '@skyux/core/testing';
-import { SkyRadioGroupHarness, SkyRadioHarness } from '@skyux/forms/testing';
+import { SkyButtonHarness, SkyRadioGroupHarness, SkyRadioHarness } from '@skyux/forms/testing';
 
 /**
  * Custom harness for interacting with the filter modal component in tests.
@@ -1353,8 +1363,8 @@ import { SkyRadioGroupHarness, SkyRadioHarness } from '@skyux/forms/testing';
 export class FilterModalHarness extends SkyComponentHarness {
   public static hostSelector = '.filter-modal-demo-form';
 
-  #getSaveButton = this.locatorFor('button.sky-btn-primary');
-  #getCancelButton = this.locatorFor('button.sky-btn-link');
+  #getSaveButton = this.locatorFor(SkyButtonHarness.with({ dataSkyId: 'save-button' }));
+  #getCancelButton = this.locatorFor(SkyButtonHarness.with({ dataSkyId: 'cancel-button' }));
   #getRadioGroup = this.locatorFor(SkyRadioGroupHarness);
 
   public static with(): HarnessPredicate<FilterModalHarness> {

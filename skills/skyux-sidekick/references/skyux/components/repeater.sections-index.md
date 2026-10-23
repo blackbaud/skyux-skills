@@ -27,4 +27,4 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 11  | SkyRepeaterHarnessFilters           | testing     | 250–265  | `Read file_path=./repeater.md offset=250 limit=16`  |
 | 12  | SkyRepeaterItemHarness              | testing     | 266–499  | `Read file_path=./repeater.md offset=266 limit=234` |
 | 13  | SkyRepeaterItemHarnessFilters       | testing     | 500–525  | `Read file_path=./repeater.md offset=500 limit=26`  |
-| 14  | Code Examples                       | examples    | 526–1310 | `Read file_path=./repeater.md offset=526 limit=785` |
+| 14  | Code Examples                       | examples    | 526–1302 | `Read file_path=./repeater.md offset=526 limit=777` |

@@ -77,7 +77,7 @@ To provide a text equivalent for screen readers [to support accessibility](../le
 
 NPM package
 
-`@skyux/data-grid`[View in NPM](https://www.npmjs.com/package/@skyux/data-grid) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/data-grid/src/lib/modules/data-grid/data-grid.ts#L164)
+`@skyux/data-grid`[View in NPM](https://www.npmjs.com/package/@skyux/data-grid) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/data-grid/src/lib/modules/data-grid/data-grid.ts#L168)
 
 Install with NPM
 
@@ -127,6 +127,12 @@ Default: `false`
 
 The data for the grid. Each item must implement `SkyDataGridRowData`, and other properties should map to a `field` of the grid columns. When `data` is `null` or `undefined`, the grid will show a loading indicator, and when `data` is an empty array, the grid will show a "no rows" message.
 
+#### `dock: InputSignal<SkyDataGridDockType>`
+
+How the data grid docks to the page. Use `fill` to dock the data grid to the container's size where the container is a `sky-page` component with its `layout` set to `fit`, or where the container is another element with a relative or absolute position and a fixed size. This property is applied when the grid initializes; changes after initialization are not reflected.
+
+Default: `"none"`
+
 #### `labelText: InputSignal<string | undefined>`
 
 The text to read to screen readers to describe the grid. This sets the `aria-label` attribute on the grid container.
@@ -139,7 +145,7 @@ Default: `false`
 
 #### `minHeight: InputSignalWithTransform<number, unknown>`
 
-The minimum height of the grid in pixels.
+The minimum height of the grid in pixels. This property does not apply when `dock` is set to `fill`.
 
 Default: `50`
 
@@ -189,7 +195,7 @@ The current sort applied to the grid. This is two-way bindable: it emits a new v
 
 #### `stacked: InputSignalWithTransform<boolean, unknown>`
 
-Whether the data grid is stacked with another element below it. When specified, the appropriate vertical spacing is automatically added to the data grid.
+Whether the data grid is stacked with another element below it. When specified, the appropriate vertical spacing is automatically added to the data grid. This property does not apply when `dock` is set to `fill`.
 
 Default: `false`
 
@@ -303,6 +309,14 @@ Whether text in this column should wrap to multiple lines.
 
 Default: `false`
 
+## SkyDataGridDockType
+
+Type: Type alias Preview
+
+How a `SkyDataGrid` docks to its container.
+
+    type SkyDataGridDockType = "none" | "fill"
+
 ## SkyDataGridRowDeleteArgs
 
 Type: Interface Preview
@@ -352,6 +366,20 @@ Harness for interacting with SKY UX data grid components in tests. Add `provideS
 
 ### Methods
 
+#### `clickColumnHelpInline(column: string): Promise<void>`
+
+Clicks the help inline button in a column header.
+
+#### Parameters
+
+##### `column: string`
+
+The column's `columnId`, or its `field` if no `columnId` is set.
+
+#### Returns
+
+`Promise<void>`
+
 #### `clickColumnSortButton(column: string): Promise<void>`
 
 Clicks the column header sort button and waits for the grid to re-render the sorted rows, and for a consumer's own `[(sort)]` binding to reflect the change, before resolving.
@@ -360,9 +388,39 @@ Clicks the column header sort button and waits for the grid to re-render the sor
 
 ##### `column: string`
 
+The column's `columnId`, or its `field` if no `columnId` is set.
+
 #### Returns
 
 `Promise<void>`
+
+#### `getColumnHelpPopoverContent(column: string): Promise<string | undefined>`
+
+Gets the help popover content for a column header.
+
+#### Parameters
+
+##### `column: string`
+
+The column's `columnId`, or its `field` if no `columnId` is set.
+
+#### Returns
+
+`Promise<string | undefined>`
+
+#### `getColumnHelpPopoverTitle(column: string): Promise<string | undefined>`
+
+Gets the help popover title for a column header.
+
+#### Parameters
+
+##### `column: string`
+
+The column's `columnId`, or its `field` if no `columnId` is set.
+
+#### Returns
+
+`Promise<string | undefined>`
 
 #### `getDisplayedColumnHeaderNames(): Promise<string[]>`
 
@@ -387,6 +445,14 @@ Retrieves the total number of displayed rows.
 #### Returns
 
 `Promise<number>`
+
+#### `getDockType(): Promise<SkyDataGridDockType>`
+
+Gets the type of dock style on the data grid.
+
+#### Returns
+
+`Promise<SkyDataGridDockType>`
 
 #### `getPaging(): Promise<SkyPagingHarness>`
 
@@ -1180,6 +1246,7 @@ import {
   signal,
 } from '@angular/core';
 import { SkyDataGrid, SkyDataGridColumn, SkyDataGridSort } from '@skyux/data-grid';
+import { SkyButton } from '@skyux/forms';
 
 import { DATA_LOADER, DemoBehavior } from './data';
 
@@ -1190,7 +1257,7 @@ import { DATA_LOADER, DemoBehavior } from './data';
   selector: 'app-data-grid-loading-example',
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [SkyDataGrid, SkyDataGridColumn],
+  imports: [SkyButton, SkyDataGrid, SkyDataGridColumn],
 })
 export class DataGridLoadingExampleComponent {
   // Simulate network latency.
@@ -1403,30 +1470,24 @@ export function getServerPage(options: {
 
 ```html
 <div class="sky-theme-margin-bottom-l">
-  <button
-    class="sky-btn sky-btn-default sky-theme-margin-right-s"
-    type="button"
+  <sky-button
+    class="sky-theme-margin-right-s"
     data-sky-id="show-data-button"
-    (click)="showData()"
-  >
-    Show data
-  </button>
-  <button
-    class="sky-btn sky-btn-default sky-theme-margin-right-s"
-    type="button"
+    labelText="Show data"
+    (buttonClick)="showData()"
+  />
+  <sky-button
+    class="sky-theme-margin-right-s"
     data-sky-id="show-empty-button"
-    (click)="showEmpty()"
-  >
-    Show empty state
-  </button>
-  <button
-    class="sky-btn sky-btn-default sky-theme-margin-right-s"
-    type="button"
+    labelText="Show empty state"
+    (buttonClick)="showEmpty()"
+  />
+  <sky-button
+    class="sky-theme-margin-right-s"
     data-sky-id="show-loading-button"
-    (click)="showLoading()"
-  >
-    Show loading state
-  </button>
+    labelText="Show loading state"
+    (buttonClick)="showLoading()"
+  />
 </div>
 
 <sky-data-grid
@@ -1466,6 +1527,7 @@ import { HarnessLoader, manualChangeDetection } from '@angular/cdk/testing';
 import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideSkyDataGridTesting, SkyDataGridHarness } from '@skyux/data-grid/testing';
+import { SkyButtonHarness } from '@skyux/forms/testing';
 
 import { Provider, ResourceLoader } from '@angular/core';
 import { DATA_LOADER, DataGridServerPage, DataGridServerParams } from './data';
@@ -1508,9 +1570,11 @@ describe('Data grid loading example', () => {
 
   async function clickButton(
     fixture: ComponentFixture<DataGridLoadingExampleComponent>,
+    loader: HarnessLoader,
     dataSkyId: string,
   ): Promise<void> {
-    (fixture.nativeElement as HTMLElement).querySelector<HTMLButtonElement>(`[data-sky-id="${dataSkyId}"]`)?.click();
+    const button = await loader.getHarness(SkyButtonHarness.with({ dataSkyId }));
+    await button.click();
     await settle(fixture);
   }
 
@@ -1538,8 +1602,8 @@ describe('Data grid loading example', () => {
   });
 
   it('should clear rows and hide paging for the empty state', async () => {
-    const { fixture, gridHarness } = await setupTest();
-    await clickButton(fixture, 'show-empty-button');
+    const { fixture, loader, gridHarness } = await setupTest();
+    await clickButton(fixture, loader, 'show-empty-button');
     expect(await gridHarness.getDisplayedRowCount()).toBe(0);
     await expectAsync(gridHarness.getPagingOrNull()).toBeResolvedTo(null);
   });
@@ -1557,7 +1621,7 @@ describe('Data grid loading example', () => {
           })
         : Promise.resolve(emptyPage),
     );
-    const { fixture, gridHarness } = await setupTest({ dataLoader: loader });
+    const { fixture, gridHarness, loader: harnessLoader } = await setupTest({ dataLoader: loader });
 
     // Confirm the grid's render-readiness handshake has already completed
     // before introducing a load that never resolves. The data grid also
@@ -1570,6 +1634,10 @@ describe('Data grid loading example', () => {
     const readyWait = await gridHarness.getWait();
     await expectAsync(readyWait.isWaiting()).toBeResolvedTo(false);
 
+    const showLoadingButton = await harnessLoader.getHarness(
+      SkyButtonHarness.with({ dataSkyId: 'show-loading-button' }),
+    );
+
     // The "loading" behavior's resource load never resolves, so it leaves
     // an Angular `PendingTasks` entry open indefinitely. `fixture.whenStable()`
     // - used by `clickButton`/`settle`, and internally by every CDK harness
@@ -1578,9 +1646,7 @@ describe('Data grid loading example', () => {
     // harness environment's automatic stabilization for its duration, so
     // change detection must be driven manually below.
     await manualChangeDetection(async () => {
-      (fixture.nativeElement as HTMLElement)
-        .querySelector<HTMLButtonElement>('[data-sky-id="show-loading-button"]')
-        ?.click();
+      await showLoadingButton.click();
       fixture.detectChanges();
 
       // AG Grid mounts its loading overlay component outside the Angular
@@ -1608,11 +1674,11 @@ describe('Data grid loading example', () => {
   });
 
   it('should restore rows when data is shown again', async () => {
-    const { fixture, gridHarness } = await setupTest();
-    await clickButton(fixture, 'show-empty-button');
+    const { fixture, loader, gridHarness } = await setupTest();
+    await clickButton(fixture, loader, 'show-empty-button');
     expect(await gridHarness.getDisplayedRowCount()).toBe(0);
 
-    await clickButton(fixture, 'show-data-button');
+    await clickButton(fixture, loader, 'show-data-button');
     expect(await gridHarness.getDisplayedRowCount()).toBe(5);
   });
 });
@@ -1924,6 +1990,7 @@ describe('Data grid paging example', () => {
 ```typescript
 import { ChangeDetectionStrategy, Component, computed, signal } from '@angular/core';
 import { SkyDataGrid, SkyDataGridColumn, SkyDataGridSort } from '@skyux/data-grid';
+import { SkyButton } from '@skyux/forms';
 import { SkyBoxModule } from '@skyux/layout';
 
 import { DATA_GRID_DEMO_DATA, DataGridSortingRow } from './data';
@@ -1935,7 +2002,7 @@ import { DATA_GRID_DEMO_DATA, DataGridSortingRow } from './data';
   selector: 'app-data-grid-sorting-example',
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [SkyBoxModule, SkyDataGrid, SkyDataGridColumn],
+  imports: [SkyBoxModule, SkyButton, SkyDataGrid, SkyDataGridColumn],
 })
 export class DataGridSortingExampleComponent {
   protected readonly data: DataGridSortingRow[] = DATA_GRID_DEMO_DATA;
@@ -1989,17 +2056,13 @@ export const DATA_GRID_DEMO_DATA: DataGridSortingRow[] = [
   <sky-box-content>
     Current sort:
     <strong data-sky-id="current-sort" class="sky-theme-margin-right-s">{{ sortDescription() }}</strong>
-    <button
-      class="sky-btn sky-btn-default sky-theme-margin-right-s"
-      type="button"
+    <sky-button
+      class="sky-theme-margin-right-s"
       data-sky-id="sort-by-age-button"
-      (click)="sortByAgeDescending()"
-    >
-      Sort by age (descending)
-    </button>
-    <button class="sky-btn sky-btn-default" type="button" data-sky-id="clear-sort-button" (click)="clearSort()">
-      Clear sort
-    </button>
+      labelText="Sort by age (descending)"
+      (buttonClick)="sortByAgeDescending()"
+    />
+    <sky-button data-sky-id="clear-sort-button" labelText="Clear sort" (buttonClick)="clearSort()" />
   </sky-box-content>
 </sky-box>
 
@@ -2024,6 +2087,7 @@ import { HarnessLoader } from '@angular/cdk/testing';
 import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideSkyDataGridTesting, SkyDataGridHarness } from '@skyux/data-grid/testing';
+import { SkyButtonHarness } from '@skyux/forms/testing';
 
 import { DataGridSortingExampleComponent } from './example.component';
 
@@ -2056,10 +2120,9 @@ describe('Data grid sorting example', () => {
   });
 
   it('should update the bound sort when the button is clicked', async () => {
-    const { fixture } = await setupTest();
-    (fixture.nativeElement as HTMLElement)
-      .querySelector<HTMLButtonElement>('[data-sky-id="sort-by-age-button"]')
-      ?.click();
+    const { fixture, loader } = await setupTest();
+    const sortByAgeButton = await loader.getHarness(SkyButtonHarness.with({ dataSkyId: 'sort-by-age-button' }));
+    await sortByAgeButton.click();
     await fixture.whenStable();
     fixture.detectChanges();
     expect(getSortText(fixture)).toContain('age (descending)');
@@ -2079,15 +2142,225 @@ describe('Data grid sorting example', () => {
   });
 
   it('should clear the bound sort when the clear button is clicked', async () => {
-    const { fixture } = await setupTest();
+    const { fixture, loader } = await setupTest();
     expect(getSortText(fixture)).toContain('name (ascending)');
 
-    (fixture.nativeElement as HTMLElement)
-      .querySelector<HTMLButtonElement>('[data-sky-id="clear-sort-button"]')
-      ?.click();
+    const clearSortButton = await loader.getHarness(SkyButtonHarness.with({ dataSkyId: 'clear-sort-button' }));
+    await clearSortButton.click();
     await fixture.whenStable();
     fixture.detectChanges();
     expect(getSortText(fixture)).toContain('no sort applied');
+  });
+});
+```
+
+### Data grid with data manager in a fit layout page for large datasets
+
+#### example.ts (primary file)
+
+```typescript
+import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { SkyDataGrid, SkyDataGridColumn } from '@skyux/data-grid';
+import { SkyDataManagerModule, SkyDataManagerService, SkyDataManagerState } from '@skyux/data-manager';
+import { SkyPageModule } from '@skyux/pages';
+
+import { map } from 'rxjs';
+
+import { TRANSACTIONS } from './data';
+
+/**
+ * Docking the data grid to fill a fit layout page lets the grid render only the
+ * rows in view, so it can load a large dataset at once instead of paging
+ * through it. This requires the grid to be the predominant element on the page.
+ * @title Data grid with data manager in a fit layout page for large datasets
+ * @docsDemoHidden
+ */
+@Component({
+  selector: 'app-pages-page-data-manager-data-grid-fit-layout-example',
+  templateUrl: './example.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [SkyDataGrid, SkyDataGridColumn, SkyDataManagerModule, SkyPageModule],
+  providers: [SkyDataManagerService],
+})
+export class PagesPageDataManagerDataGridFitLayoutExample {
+  protected readonly viewId = 'gridView';
+
+  readonly #dataManagerSvc = inject(SkyDataManagerService);
+  readonly #searchText = toSignal(
+    this.#dataManagerSvc.getDataStateUpdates(this.viewId).pipe(map((state) => state.searchText ?? '')),
+    { initialValue: '' },
+  );
+
+  protected readonly data = computed(() => {
+    const searchText = this.#searchText().toLowerCase();
+    return TRANSACTIONS.filter(({ vendor, category, reference }) =>
+      [vendor, category, reference].some((value) => value.toLowerCase().includes(searchText)),
+    );
+  });
+
+  constructor() {
+    this.#dataManagerSvc.initDataManager({
+      activeViewId: this.viewId,
+      dataManagerConfig: {},
+      defaultDataState: new SkyDataManagerState({}),
+    });
+
+    this.#dataManagerSvc.initDataView({
+      id: this.viewId,
+      name: 'Grid View',
+      columnPickerEnabled: true,
+      searchEnabled: true,
+    });
+  }
+}
+```
+
+#### data.ts
+
+```typescript
+const VENDORS = ['Acme Office Supply', 'Blue Ridge Catering', 'City Print Shop', 'Delta Travel', 'Evergreen Utilities'];
+
+const CATEGORIES = ['Catering', 'Office', 'Printing', 'Travel', 'Utilities'];
+
+export const TRANSACTIONS = Array.from({ length: 1000 }, (_, i) => ({
+  id: String(i + 1),
+  date: `2026-${String((i % 12) + 1).padStart(2, '0')}-${String((i % 28) + 1).padStart(2, '0')}`,
+  vendor: VENDORS[i % VENDORS.length],
+  category: CATEGORIES[(i * 3) % CATEGORIES.length],
+  amount: ((i * 37) % 2000) + 0.99,
+  reference: `TXN-${String(i + 1).padStart(5, '0')}`,
+}));
+```
+
+#### example.html
+
+```html
+<sky-page layout="fit">
+  <sky-page-header pageTitle="Transactions">
+    <sky-page-header-details>
+      All 1,000 transactions load at once. The grid fills the page and renders only the rows in view, so no paging is
+      needed.
+    </sky-page-header-details>
+  </sky-page-header>
+  <sky-page-content>
+    <sky-data-manager dock="fill">
+      <sky-data-manager-toolbar />
+      <sky-data-view [viewId]="viewId">
+        <sky-data-grid
+          data-sky-id="transactions-grid"
+          dock="fill"
+          skyDataManagerViewController
+          labelText="Transactions"
+          [data]="data()"
+        >
+          <sky-data-grid-column dataType="date" field="date" flexWidth="1" headingText="Date" />
+          <sky-data-grid-column field="vendor" flexWidth="2" headingText="Vendor" />
+          <sky-data-grid-column field="category" flexWidth="1" headingText="Category" />
+          <sky-data-grid-column dataType="number" field="amount" flexWidth="1" headingText="Amount" />
+          <sky-data-grid-column columnHidden field="reference" flexWidth="1" headingText="Reference" />
+        </sky-data-grid>
+      </sky-data-view>
+    </sky-data-manager>
+  </sky-page-content>
+</sky-page>
+```
+
+#### example.spec.ts
+
+```typescript
+import { HarnessLoader } from '@angular/cdk/testing';
+import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
+import { TestBed } from '@angular/core/testing';
+import { provideNoopSkyAnimations } from '@skyux/core';
+import { SkyDataGridHarness } from '@skyux/data-grid/testing';
+import { SkyDataManagerHarness } from '@skyux/data-manager/testing';
+import { SkyPageHarness } from '@skyux/pages/testing';
+
+import { PagesPageDataManagerDataGridFitLayoutExample } from './example';
+
+describe('Data grid with data manager in a fit layout page example', () => {
+  async function setupTest(): Promise<{
+    dataManagerHarness: SkyDataManagerHarness;
+    gridHarness: SkyDataGridHarness;
+    loader: HarnessLoader;
+  }> {
+    TestBed.configureTestingModule({
+      imports: [PagesPageDataManagerDataGridFitLayoutExample],
+      providers: [provideNoopSkyAnimations()],
+    });
+
+    const fixture = TestBed.createComponent(PagesPageDataManagerDataGridFitLayoutExample);
+    const loader = TestbedHarnessEnvironment.loader(fixture);
+
+    return {
+      dataManagerHarness: await loader.getHarness(SkyDataManagerHarness),
+      gridHarness: await loader.getHarness(SkyDataGridHarness.with({ dataSkyId: 'transactions-grid' })),
+      loader,
+    };
+  }
+
+  it('should dock the data manager and grid to fill a fit layout page', async () => {
+    const { dataManagerHarness, gridHarness, loader } = await setupTest();
+
+    const pageHarness = await loader.getHarness(SkyPageHarness);
+
+    await expectAsync(pageHarness.getLayout()).toBeResolvedTo('fit');
+    await expectAsync(dataManagerHarness.getDockType()).toBeResolvedTo('fill');
+    await expectAsync(gridHarness.getDockType()).toBeResolvedTo('fill');
+  });
+
+  it('should load every row without paging', async () => {
+    const { gridHarness } = await setupTest();
+
+    await expectAsync(gridHarness.isGridReady()).toBeResolvedTo(true);
+    await expectAsync(gridHarness.isLoading()).toBeResolvedTo(false);
+    await expectAsync(gridHarness.getDisplayedRowCount()).toBeResolvedTo(1000);
+    await expectAsync(gridHarness.getPagingOrNull()).toBeResolvedTo(null);
+  });
+
+  it('should hide the column marked columnHidden', async () => {
+    const { gridHarness } = await setupTest();
+
+    await expectAsync(gridHarness.getDisplayedColumnIds()).toBeResolvedTo(['date', 'vendor', 'category', 'amount']);
+    await expectAsync(gridHarness.getDisplayedColumnHeaderNames()).toBeResolvedTo([
+      'Date',
+      'Vendor',
+      'Category',
+      'Amount',
+    ]);
+  });
+
+  it('should show and hide columns using the column picker', async () => {
+    const { dataManagerHarness, gridHarness } = await setupTest();
+
+    const toolbarHarness = await dataManagerHarness.getToolbar();
+    const columnPickerHarness = await toolbarHarness.openColumnPicker();
+
+    await (await columnPickerHarness.getColumn({ titleText: 'Category' })).deselect();
+    await (await columnPickerHarness.getColumn({ titleText: 'Reference' })).select();
+    await columnPickerHarness.saveAndClose();
+
+    await expectAsync(gridHarness.getDisplayedColumnIds()).toBeResolvedTo(['date', 'vendor', 'amount', 'reference']);
+  });
+
+  it('should filter the rows using the search', async () => {
+    const { dataManagerHarness, gridHarness } = await setupTest();
+
+    const toolbarHarness = await dataManagerHarness.getToolbar();
+    const searchHarness = await toolbarHarness.getSearch();
+    if (!searchHarness) {
+      throw new Error('Expected the toolbar to display a search.');
+    }
+
+    await searchHarness.enterText('delta');
+    await expectAsync(gridHarness.getDisplayedRowCount()).toBeResolvedTo(200);
+
+    await searchHarness.enterText('TXN-00001');
+    await expectAsync(gridHarness.getDisplayedRowCount()).toBeResolvedTo(1);
+
+    await searchHarness.clear();
+    await expectAsync(gridHarness.getDisplayedRowCount()).toBeResolvedTo(1000);
   });
 });
 ```

@@ -639,6 +639,7 @@ describe('Basic popover', () => {
 
 ```typescript
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { SkyButton } from '@skyux/forms';
 import { SkyHelpInlineModule } from '@skyux/help-inline';
 import { SkyPopoverMessage, SkyPopoverMessageType, SkyPopoverModule } from '@skyux/popovers';
 
@@ -651,7 +652,7 @@ import { Subject } from 'rxjs';
   selector: 'app-popovers-popover-programmatic-example',
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [SkyHelpInlineModule, SkyPopoverModule],
+  imports: [SkyButton, SkyHelpInlineModule, SkyPopoverModule],
 })
 export class PopoversPopoverProgrammaticExampleComponent {
   protected popoverController = new Subject<SkyPopoverMessage>();
@@ -684,9 +685,11 @@ export class PopoversPopoverProgrammaticExampleComponent {
   [skyPopoverMessageStream]="popoverController"
 />
 
-<button class="sky-btn sky-btn-default sky-theme-margin-right-s" type="button" (click)="openPopover()">
-  Open popover with message stream
-</button>
+<sky-button
+  class="sky-theme-margin-right-s"
+  labelText="Open popover with message stream"
+  (buttonClick)="openPopover()"
+/>
 
 <sky-popover #myPopover (popoverClosed)="onPopoverStateChange(false)" (popoverOpened)="onPopoverStateChange(true)">
   This is a popover.

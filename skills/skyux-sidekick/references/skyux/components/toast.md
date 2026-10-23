@@ -378,6 +378,7 @@ Finds toasts with the matching text.
 
 ```typescript
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { SkyButton } from '@skyux/forms';
 import { SkyToastService, SkyToastType } from '@skyux/toast';
 
 /**
@@ -387,6 +388,7 @@ import { SkyToastService, SkyToastType } from '@skyux/toast';
   selector: 'app-toast-basic-example',
   changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
+  imports: [SkyButton],
 })
 export class ToastBasicExampleComponent {
   readonly #toastSvc = inject(SkyToastService);
@@ -406,8 +408,8 @@ export class ToastBasicExampleComponent {
 #### example.component.html
 
 ```html
-<button class="sky-btn sky-btn-primary sky-theme-margin-right-s" type="button" (click)="openToast()">Open toast</button>
-<button class="sky-btn sky-btn-default" type="button" (click)="closeAll()">Close all</button>
+<sky-button buttonStyle="primary" class="sky-theme-margin-right-s" labelText="Open toast" (buttonClick)="openToast()" />
+<sky-button labelText="Close all" (buttonClick)="closeAll()" />
 ```
 
 #### example.component.spec.ts
@@ -477,6 +479,7 @@ describe('Basic toast example', () => {
 
 ```typescript
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { SkyButton } from '@skyux/forms';
 import { SkyToastService, SkyToastType } from '@skyux/toast';
 
 import { CustomToastContext } from './custom-context';
@@ -489,6 +492,7 @@ import { CustomToastComponent } from './custom-toast.component';
   selector: 'app-toast-custom-component-example',
   changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
+  imports: [SkyButton],
 })
 export class ToastCustomComponentExampleComponent {
   readonly #toastSvc = inject(SkyToastService);
@@ -573,8 +577,8 @@ export class CustomToastComponent {
 #### example.component.html
 
 ```html
-<button class="sky-btn sky-btn-primary sky-theme-margin-right-s" type="button" (click)="openToast()">Open toast</button>
-<button class="sky-btn sky-btn-default" type="button" (click)="closeAll()">Close all</button>
+<sky-button buttonStyle="primary" class="sky-theme-margin-right-s" labelText="Open toast" (buttonClick)="openToast()" />
+<sky-button labelText="Close all" (buttonClick)="closeAll()" />
 ```
 
 #### example.component.spec.ts

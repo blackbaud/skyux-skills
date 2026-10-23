@@ -724,7 +724,7 @@ Returns a child test element or null if not found.
 
 ```typescript
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { SkyIconModule } from '@skyux/icon';
+import { SkyButton } from '@skyux/forms';
 import { SkyToolbarModule } from '@skyux/layout';
 
 /**
@@ -734,7 +734,7 @@ import { SkyToolbarModule } from '@skyux/layout';
   selector: 'app-layout-toolbar-basic-example',
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [SkyIconModule, SkyToolbarModule],
+  imports: [SkyButton, SkyToolbarModule],
 })
 export class LayoutToolbarBasicExampleComponent {
   public onButtonClicked(buttonText: string): void {
@@ -748,28 +748,30 @@ export class LayoutToolbarBasicExampleComponent {
 ```html
 <sky-toolbar data-sky-id="basic-toolbar">
   <sky-toolbar-item data-sky-id="toolbar-item-1">
-    <button class="sky-btn sky-btn-primary" type="button" (click)="onButtonClicked('Button 1')">Button 1</button>
+    <sky-button
+      buttonStyle="primary"
+      data-sky-id="toolbar-button-1"
+      labelText="Button 1"
+      (buttonClick)="onButtonClicked('Button 1')"
+    />
   </sky-toolbar-item>
   <sky-toolbar-item data-sky-id="toolbar-item-2">
-    <button class="sky-btn sky-btn-default" type="button" (click)="onButtonClicked('Button 2')">Button 2</button>
+    <sky-button labelText="Button 2" (buttonClick)="onButtonClicked('Button 2')" />
   </sky-toolbar-item>
   <sky-toolbar-view-actions>
-    <button
-      class="sky-btn sky-btn-default sky-btn-icon"
-      title="Sort descending"
-      type="button"
-      (click)="onButtonClicked('Expand')"
-    >
-      <sky-icon iconName="chevron-double-down" />
-    </button>
-    <button
-      class="sky-btn sky-btn-default sky-btn-icon"
-      title="Sort ascending"
-      type="button"
-      (click)="onButtonClicked('Collapse')"
-    >
-      <sky-icon iconName="chevron-double-up" />
-    </button>
+    <sky-button
+      data-sky-id="expand-button"
+      iconName="chevron-double-down"
+      labelHidden
+      labelText="Sort descending"
+      (buttonClick)="onButtonClicked('Expand')"
+    />
+    <sky-button
+      iconName="chevron-double-up"
+      labelHidden
+      labelText="Sort ascending"
+      (buttonClick)="onButtonClicked('Collapse')"
+    />
   </sky-toolbar-view-actions>
 </sky-toolbar>
 ```
@@ -779,6 +781,7 @@ export class LayoutToolbarBasicExampleComponent {
 ```typescript
 import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { SkyButtonHarness } from '@skyux/forms/testing';
 import { SkyToolbarHarness } from '@skyux/layout/testing';
 
 import { LayoutToolbarBasicExampleComponent } from './example.component';
@@ -816,10 +819,10 @@ describe('Basic toolbar example', () => {
     const toolbarItem1 = await toolbarHarness.getItem({
       dataSkyId: 'toolbar-item-1',
     });
-    const toolbarButton = await toolbarItem1.querySelector('button');
+    const toolbarButton = await toolbarItem1.queryHarness(SkyButtonHarness.with({ dataSkyId: 'toolbar-button-1' }));
 
     const viewActionsHarness = await toolbarHarness.getViewActions();
-    const expandButton = (await viewActionsHarness.querySelectorAll('button'))[0];
+    const expandButton = await viewActionsHarness.queryHarness(SkyButtonHarness.with({ dataSkyId: 'expand-button' }));
 
     const clickSpy = spyOn(fixture.componentInstance, 'onButtonClicked');
     await toolbarButton.click();
@@ -835,7 +838,7 @@ describe('Basic toolbar example', () => {
 
 ```typescript
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { SkyIconModule } from '@skyux/icon';
+import { SkyButton } from '@skyux/forms';
 import { SkyToolbarModule } from '@skyux/layout';
 
 /**
@@ -845,7 +848,7 @@ import { SkyToolbarModule } from '@skyux/layout';
   selector: 'app-layout-toolbar-sectioned-example',
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [SkyIconModule, SkyToolbarModule],
+  imports: [SkyButton, SkyToolbarModule],
 })
 export class LayoutToolbarSectionedExampleComponent {
   public onButtonClicked(buttonText: string): void {
@@ -860,40 +863,38 @@ export class LayoutToolbarSectionedExampleComponent {
 <sky-toolbar data-sky-id="sectioned-toolbar">
   <sky-toolbar-section data-sky-id="top-section">
     <sky-toolbar-item data-sky-id="toolbar-item-1">
-      <button class="sky-btn sky-btn-primary" type="button" (click)="onButtonClicked('Button 1')">Button 1</button>
+      <sky-button
+        buttonStyle="primary"
+        data-sky-id="toolbar-button-1"
+        labelText="Button 1"
+        (buttonClick)="onButtonClicked('Button 1')"
+      />
     </sky-toolbar-item>
     <sky-toolbar-item data-sky-id="toolbar-item-2">
-      <button class="sky-btn sky-btn-default" type="button" (click)="onButtonClicked('Button 2')">Button 2</button>
+      <sky-button labelText="Button 2" (buttonClick)="onButtonClicked('Button 2')" />
     </sky-toolbar-item>
     <sky-toolbar-view-actions>
-      <button
-        class="sky-btn sky-btn-default sky-btn-icon"
-        title="Sort descending"
-        type="button"
-        (click)="onButtonClicked('Expand')"
-      >
-        <sky-icon iconName="chevron-double-down" />
-      </button>
-      <button
-        class="sky-btn sky-btn-default sky-btn-icon"
-        title="Sort ascending"
-        type="button"
-        (click)="onButtonClicked('Collapse')"
-      >
-        <sky-icon iconName="chevron-double-up" />
-      </button>
+      <sky-button
+        data-sky-id="expand-button"
+        iconName="chevron-double-down"
+        labelHidden
+        labelText="Sort descending"
+        (buttonClick)="onButtonClicked('Expand')"
+      />
+      <sky-button
+        iconName="chevron-double-up"
+        labelHidden
+        labelText="Sort ascending"
+        (buttonClick)="onButtonClicked('Collapse')"
+      />
     </sky-toolbar-view-actions>
   </sky-toolbar-section>
   <sky-toolbar-section data-sky-id="bottom-section">
     <sky-toolbar-item data-sky-id="sort-button">
-      <button class="sky-btn sky-btn-default" type="button" (click)="onButtonClicked('Sort')">
-        <sky-icon iconName="arrow-sort" /> Sort
-      </button>
+      <sky-button iconName="arrow-sort" labelText="Sort" (buttonClick)="onButtonClicked('Sort')" />
     </sky-toolbar-item>
     <sky-toolbar-item data-sky-id="filter-button">
-      <button class="sky-btn sky-btn-default" type="button" (click)="onButtonClicked('Filter')">
-        <sky-icon iconName="filter" /> Filter
-      </button>
+      <sky-button iconName="filter" labelText="Filter" (buttonClick)="onButtonClicked('Filter')" />
     </sky-toolbar-item>
   </sky-toolbar-section>
 </sky-toolbar>
@@ -904,6 +905,7 @@ export class LayoutToolbarSectionedExampleComponent {
 ```typescript
 import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { SkyButtonHarness } from '@skyux/forms/testing';
 import { SkyToolbarHarness } from '@skyux/layout/testing';
 
 import { LayoutToolbarSectionedExampleComponent } from './example.component';
@@ -945,10 +947,10 @@ describe('Sectioned toolbar example', () => {
     const toolbarItem1 = await toolbarSectionHarness.getItem({
       dataSkyId: 'toolbar-item-1',
     });
-    const toolbarButton = await toolbarItem1.querySelector('button');
+    const toolbarButton = await toolbarItem1.queryHarness(SkyButtonHarness.with({ dataSkyId: 'toolbar-button-1' }));
 
     const viewActionsHarness = await toolbarSectionHarness.getViewActions();
-    const expandButton = (await viewActionsHarness.querySelectorAll('button'))[0];
+    const expandButton = await viewActionsHarness.queryHarness(SkyButtonHarness.with({ dataSkyId: 'expand-button' }));
 
     const clickSpy = spyOn(fixture.componentInstance, 'onButtonClicked');
     await toolbarButton.click();

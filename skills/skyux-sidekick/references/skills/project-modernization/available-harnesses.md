@@ -30,6 +30,7 @@ In addition to harnesses (`Sky*Harness`), this list includes the other testing u
 
 - `SkyChartBarHarness`
 - `SkyChartHarness`
+- `SkyChartLineHarness`
 - `SkyChartTableModalHarness`
 
 ## `@skyux/colorpicker/testing`
@@ -109,6 +110,7 @@ In addition to harnesses (`Sky*Harness`), this list includes the other testing u
 - `SkyFileItemHarness`
 - `SkyFormErrorHarness`
 - `SkyFormErrorsHarness`
+- `SkyInputBoxButtonHarness`
 - `SkyInputBoxHarness`
 - `SkyRadioGroupHarness`
 - `SkyRadioHarness`

@@ -993,7 +993,7 @@ Only find instances whose `data-sky-id` attribute matches the given value.
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, ValidationErrors } from '@angular/forms';
 import { SkyColorpickerModule, SkyColorpickerOutput } from '@skyux/colorpicker';
-import { SkyFormErrorModule } from '@skyux/forms';
+import { SkyButton, SkyFormErrorModule } from '@skyux/forms';
 
 interface DemoForm {
   favoriteColor: FormControl<SkyColorpickerOutput | string>;
@@ -1010,7 +1010,7 @@ function isColorpickerOutput(value: unknown): value is SkyColorpickerOutput {
   selector: 'app-colorpicker-basic-example',
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [ReactiveFormsModule, SkyColorpickerModule, SkyFormErrorModule],
+  imports: [ReactiveFormsModule, SkyButton, SkyColorpickerModule, SkyFormErrorModule],
 })
 export class ColorpickerBasicExampleComponent {
   protected favoriteColor: FormControl<SkyColorpickerOutput | string>;
@@ -1064,7 +1064,7 @@ export class ColorpickerBasicExampleComponent {
     }
   </sky-colorpicker>
 
-  <button class="sky-btn sky-btn-primary" type="submit">Submit</button>
+  <sky-button buttonStyle="primary" buttonType="submit" labelText="Submit" />
 </form>
 ```
 
@@ -1161,7 +1161,7 @@ import {
   SkyColorpickerModule,
   SkyColorpickerOutput,
 } from '@skyux/colorpicker';
-import { SkyFormErrorModule } from '@skyux/forms';
+import { SkyButton, SkyFormErrorModule } from '@skyux/forms';
 
 import { Subject } from 'rxjs';
 
@@ -1180,7 +1180,7 @@ function isColorpickerOutput(value: unknown): value is SkyColorpickerOutput {
   selector: 'app-colorpicker-programmatic-example',
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [FormsModule, ReactiveFormsModule, SkyColorpickerModule, SkyFormErrorModule],
+  imports: [FormsModule, ReactiveFormsModule, SkyButton, SkyColorpickerModule, SkyFormErrorModule],
 })
 export class ColorpickerProgrammaticExampleComponent {
   protected colorpickerController = new Subject<SkyColorpickerMessage>();
@@ -1240,17 +1240,11 @@ export class ColorpickerProgrammaticExampleComponent {
   </sky-colorpicker>
 </form>
 
-<button class="sky-btn sky-btn-default sky-theme-margin-right-s" type="button" (click)="openColorpicker()">
-  Open colorpicker
-</button>
+<sky-button class="sky-theme-margin-right-s" labelText="Open colorpicker" (buttonClick)="openColorpicker()" />
 
-<button class="sky-btn sky-btn-default sky-theme-margin-right-s" type="button" (click)="resetColorpicker()">
-  Reset colorpicker
-</button>
+<sky-button class="sky-theme-margin-right-s" labelText="Reset colorpicker" (buttonClick)="resetColorpicker()" />
 
-<button class="sky-btn sky-btn-default sky-theme-margin-right-s" type="button" (click)="toggleResetButton()">
-  Toggle reset button
-</button>
+<sky-button class="sky-theme-margin-right-s" labelText="Toggle reset button" (buttonClick)="toggleResetButton()" />
 ```
 
 ### Colorpicker with help key
@@ -1261,7 +1255,7 @@ export class ColorpickerProgrammaticExampleComponent {
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, ValidationErrors } from '@angular/forms';
 import { SkyColorpickerModule, SkyColorpickerOutput } from '@skyux/colorpicker';
-import { SkyFormErrorModule } from '@skyux/forms';
+import { SkyButton, SkyFormErrorModule } from '@skyux/forms';
 
 interface DemoForm {
   favoriteColor: FormControl<SkyColorpickerOutput | string>;
@@ -1278,7 +1272,7 @@ function isColorpickerOutput(value: unknown): value is SkyColorpickerOutput {
   selector: 'app-colorpicker-help-key-example',
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [ReactiveFormsModule, SkyColorpickerModule, SkyFormErrorModule],
+  imports: [ReactiveFormsModule, SkyButton, SkyColorpickerModule, SkyFormErrorModule],
 })
 export class ColorpickerHelpKeyExampleComponent {
   protected favoriteColor: FormControl<SkyColorpickerOutput | string>;
@@ -1333,7 +1327,7 @@ export class ColorpickerHelpKeyExampleComponent {
     }
   </sky-colorpicker>
 
-  <button class="sky-btn sky-btn-primary" type="submit">Submit</button>
+  <sky-button buttonStyle="primary" buttonType="submit" labelText="Submit" />
 </form>
 ```
 

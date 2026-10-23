@@ -37,4 +37,4 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 21  | SkyModalHarnessFilters         | testing     | 577–592  | `Read file_path=./modal.md offset=577 limit=16`   |
 | 22  | SkyModalTestingModule          | testing     | 593–600  | `Read file_path=./modal.md offset=593 limit=8`    |
 | 23  | SkyModalTestingController      | testing     | 601–654  | `Read file_path=./modal.md offset=601 limit=54`   |
-| 24  | Code Examples                  | examples    | 655–1744 | `Read file_path=./modal.md offset=655 limit=1090` |
+| 24  | Code Examples                  | examples    | 655–1753 | `Read file_path=./modal.md offset=655 limit=1099` |

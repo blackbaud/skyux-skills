@@ -866,7 +866,7 @@ import {
   ReactiveFormsModule,
   ValidationErrors,
 } from '@angular/forms';
-import { SkyCheckboxModule } from '@skyux/forms';
+import { SkyButton, SkyCheckboxModule } from '@skyux/forms';
 
 /**
  * @title Standard checkboxes
@@ -875,7 +875,7 @@ import { SkyCheckboxModule } from '@skyux/forms';
   selector: 'app-forms-checkbox-basic-example',
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [FormsModule, ReactiveFormsModule, SkyCheckboxModule],
+  imports: [FormsModule, ReactiveFormsModule, SkyButton, SkyCheckboxModule],
 })
 export class FormsCheckboxBasicExampleComponent {
   #formBuilder: FormBuilder = inject(FormBuilder);
@@ -945,7 +945,7 @@ export class FormsCheckboxBasicExampleComponent {
     [required]="true"
     [stacked]="true"
   />
-  <button class="sky-btn sky-btn-primary" type="submit">Submit</button>
+  <sky-button buttonStyle="primary" buttonType="submit" labelText="Submit" />
 </form>
 ```
 
@@ -1068,7 +1068,7 @@ import {
   ReactiveFormsModule,
   ValidationErrors,
 } from '@angular/forms';
-import { SkyCheckboxModule } from '@skyux/forms';
+import { SkyButton, SkyCheckboxModule } from '@skyux/forms';
 
 /**
  * @title Checkboxes with help key
@@ -1077,7 +1077,7 @@ import { SkyCheckboxModule } from '@skyux/forms';
   selector: 'app-forms-checkbox-help-key-example',
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [FormsModule, ReactiveFormsModule, SkyCheckboxModule],
+  imports: [FormsModule, ReactiveFormsModule, SkyButton, SkyCheckboxModule],
 })
 export class FormsCheckboxHelpKeyExampleComponent {
   #formBuilder: FormBuilder = inject(FormBuilder);
@@ -1148,7 +1148,7 @@ export class FormsCheckboxHelpKeyExampleComponent {
     [required]="true"
     [stacked]="true"
   />
-  <button class="sky-btn sky-btn-primary" type="submit">Submit</button>
+  <sky-button buttonStyle="primary" buttonType="submit" labelText="Submit" />
 </form>
 ```
 
@@ -1287,7 +1287,7 @@ describe('Basic checkbox group example', () => {
 ```typescript
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SkyCheckboxModule } from '@skyux/forms';
+import { SkyButton, SkyCheckboxModule } from '@skyux/forms';
 
 /**
  * @title Icon checkbox group
@@ -1296,7 +1296,7 @@ import { SkyCheckboxModule } from '@skyux/forms';
   selector: 'app-forms-checkbox-icon-group-example',
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [FormsModule, ReactiveFormsModule, SkyCheckboxModule],
+  imports: [FormsModule, ReactiveFormsModule, SkyButton, SkyCheckboxModule],
 })
 export class FormsCheckboxIconGroupExampleComponent {
   protected formGroup: FormGroup;
@@ -1324,6 +1324,6 @@ export class FormsCheckboxIconGroupExampleComponent {
     <sky-checkbox formControlName="italic" iconName="text-italic" labelHidden="true" labelText="Italic" />
     <sky-checkbox formControlName="underline" iconName="text-underline" labelHidden="true" labelText="Underline" />
   </sky-checkbox-group>
-  <button class="sky-btn sky-btn-primary" type="submit">Submit</button>
+  <sky-button buttonStyle="primary" buttonType="submit" labelText="Submit" />
 </form>
 ```

@@ -23,4 +23,4 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 | 9   | Bar chart with a logarithmic value scale                | 1568–1670 | `Read file_path=./chart-bar.md offset=1568 limit=103` |
 | 10  | Bar chart with fixed value bounds                       | 1671–1769 | `Read file_path=./chart-bar.md offset=1671 limit=99`  |
 | 11  | Bar chart value formats (number, currency, and percent) | 1770–1917 | `Read file_path=./chart-bar.md offset=1770 limit=148` |
-| 12  | Bar chart with asynchronously loaded data               | 1918–2077 | `Read file_path=./chart-bar.md offset=1918 limit=160` |
+| 12  | Bar chart with asynchronously loaded data               | 1918–2076 | `Read file_path=./chart-bar.md offset=1918 limit=159` |

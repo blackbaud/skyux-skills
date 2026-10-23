@@ -39,4 +39,4 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 23  | SkyTabContentHarnessFilters      | testing     | 642–657  | `Read file_path=./tabs-wizard.md offset=642 limit=16`  |
 | 24  | SkyTabsetNavButtonHarness        | testing     | 658–711  | `Read file_path=./tabs-wizard.md offset=658 limit=54`  |
 | 25  | SkyTabsetNavButtonHarnessFilters | testing     | 712–732  | `Read file_path=./tabs-wizard.md offset=712 limit=21`  |
-| 26  | Code Examples                    | examples    | 733–1022 | `Read file_path=./tabs-wizard.md offset=733 limit=290` |
+| 26  | Code Examples                    | examples    | 733–1025 | `Read file_path=./tabs-wizard.md offset=733 limit=293` |

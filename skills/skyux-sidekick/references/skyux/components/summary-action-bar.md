@@ -1055,6 +1055,7 @@ describe('Error summary action bar example', () => {
 
 ```typescript
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { SkyButton } from '@skyux/forms';
 import { SkyModalService } from '@skyux/modals';
 
 import { ModalComponent } from './modal.component';
@@ -1066,6 +1067,7 @@ import { ModalComponent } from './modal.component';
   selector: 'app-action-bars-summary-action-bar-modal-example',
   changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
+  imports: [SkyButton],
 })
 export class ActionBarsSummaryActionBarModalExampleComponent {
   readonly #modalSvc = inject(SkyModalService);
@@ -1081,7 +1083,7 @@ export class ActionBarsSummaryActionBarModalExampleComponent {
 #### example.component.html
 
 ```html
-<button class="sky-btn sky-btn-primary" type="button" (click)="openModal()">Open modal</button>
+<sky-button buttonStyle="primary" ariaHasPopup="dialog" labelText="Open modal" (buttonClick)="openModal()" />
 ```
 
 #### modal.component.html

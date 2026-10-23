@@ -12,5 +12,5 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                            | Lines   | Read invocation                                 |
 | --- | ---------------------------------- | ------- | ----------------------------------------------- |
-| 1   | Embed error within the page markup | 541–615 | `Read file_path=./error.md offset=541 limit=75` |
-| 2   | Show an error inside a modal       | 616–650 | `Read file_path=./error.md offset=616 limit=35` |
+| 1   | Embed error within the page markup | 541–616 | `Read file_path=./error.md offset=541 limit=76` |
+| 2   | Show an error inside a modal       | 617–653 | `Read file_path=./error.md offset=617 limit=37` |

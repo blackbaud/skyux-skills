@@ -738,6 +738,7 @@ Only find instances whose `data-sky-id` attribute matches the given value.
 
 ```typescript
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { SkyButton } from '@skyux/forms';
 import { SkyModalService } from '@skyux/modals';
 
 import { ModalComponent } from './modal.component';
@@ -749,6 +750,7 @@ import { ModalComponent } from './modal.component';
   selector: 'app-tabs-wizard-basic-example',
   changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
+  imports: [SkyButton],
 })
 export class TabsWizardBasicExampleComponent {
   readonly #modalSvc = inject(SkyModalService);
@@ -764,7 +766,7 @@ export class TabsWizardBasicExampleComponent {
 #### example.component.html
 
 ```html
-<button type="button" class="sky-btn sky-btn-default" (click)="openWizard()">Open Wizard</button>
+<sky-button ariaHasPopup="dialog" labelText="Open Wizard" (buttonClick)="openWizard()" />
 ```
 
 #### modal.component.html
@@ -837,7 +839,7 @@ export class TabsWizardBasicExampleComponent {
       <sky-tabset-nav-button buttonType="previous" [tabset]="wizardDemo" />
       <sky-tabset-nav-button buttonType="next" [tabset]="wizardDemo" />
       <sky-tabset-nav-button buttonType="finish" [tabset]="wizardDemo" [disabled]="isSaveDisabled" />
-      <button class="sky-btn sky-btn-link" type="button" (click)="onCancelClick()">Cancel</button>
+      <sky-button buttonStyle="link" labelText="Cancel" (buttonClick)="onCancelClick()" />
     </sky-modal-footer>
   </sky-modal>
 </form>
@@ -950,7 +952,7 @@ describe('Wizard tabset demo', () => {
 ```typescript
 import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { SkyCheckboxModule, SkyInputBoxModule } from '@skyux/forms';
+import { SkyButton, SkyCheckboxModule, SkyInputBoxModule } from '@skyux/forms';
 import { SkyFluidGridModule } from '@skyux/layout';
 import { SkyModalInstance, SkyModalModule } from '@skyux/modals';
 import { SkyPhoneFieldModule } from '@skyux/phone-field';
@@ -962,6 +964,7 @@ import { SkyTabIndex, SkyTabsModule } from '@skyux/tabs';
   changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     ReactiveFormsModule,
+    SkyButton,
     SkyCheckboxModule,
     SkyFluidGridModule,
     SkyInputBoxModule,

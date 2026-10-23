@@ -865,6 +865,7 @@ Only find instances whose text content matches the given value.
 
 ```typescript
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { SkyButton } from '@skyux/forms';
 import { SkyActionHubModule, SkyPageModalLinksInput } from '@skyux/pages';
 
 import { MODAL_TITLE } from './modal-title-token';
@@ -884,7 +885,7 @@ const pastHours = Array.from(Array(5).keys()).map((i) => {
   selector: 'app-pages-action-hub-example',
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [SkyActionHubModule],
+  imports: [SkyActionHubModule, SkyButton],
 })
 export class PagesActionHubExampleComponent {
   public buttons = [
@@ -1086,13 +1087,12 @@ export class PagesActionHubExampleComponent {
 >
   <sky-action-hub-buttons>
     @for (button of buttons; track button) {
-    <a
-      class="sky-btn sky-btn-default sky-theme-margin-right-s"
-      [attr.aria-label]="button.ariaLabel"
-      [href]="button.permalink.url"
-    >
-      {{ button.label }}
-    </a>
+    <sky-button
+      class="sky-theme-margin-right-s"
+      [ariaLabel]="button.ariaLabel"
+      [labelText]="button.label"
+      [permalink]="{ url: button.permalink.url }"
+    />
     }
   </sky-action-hub-buttons>
 
@@ -1234,8 +1234,14 @@ export const MODAL_TITLE = new InjectionToken<string>('MODAL_TITLE');
       }
     </sky-modal-content>
     <sky-modal-footer>
-      <button class="sky-btn sky-btn-primary sky-theme-margin-right-s" type="submit">Save</button>
-      <button class="sky-btn sky-btn-link" type="button" (click)="modalInstance.close()">Close</button>
+      <sky-button
+        buttonStyle="primary"
+        buttonType="submit"
+        class="sky-theme-margin-right-s"
+        data-sky-id="settings-save-button"
+        labelText="Save"
+      />
+      <sky-button buttonStyle="link" labelText="Close" (buttonClick)="modalInstance.close()" />
     </sky-modal-footer>
   </sky-modal>
 </form>
@@ -1247,6 +1253,7 @@ export const MODAL_TITLE = new InjectionToken<string>('MODAL_TITLE');
 import { HarnessLoader } from '@angular/cdk/testing';
 import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { SkyButtonHarness } from '@skyux/forms/testing';
 import { SkyModalHarness } from '@skyux/modals/testing';
 import { SkyActionHubHarness } from '@skyux/pages/testing';
 
@@ -1297,11 +1304,13 @@ describe('SettingsModalComponent', () => {
     );
     expect(await modalHarness.getHeadingText()).toBe('Color');
     const consoleSpy = spyOn(console, 'log').and.stub();
-    const modalElement = TestbedHarnessEnvironment.getNativeElement(await modalHarness.host());
-    const submit = modalElement.querySelector('button[type="submit"]');
-    expect(submit).toBeTruthy();
-    expect(submit?.textContent?.trim()).toBe('Save');
-    (submit as HTMLButtonElement).click();
+    const submit = await rootLoader.getHarness(
+      SkyButtonHarness.with({
+        dataSkyId: 'settings-save-button',
+      }),
+    );
+    await expectAsync(submit.getLabelText()).toBeResolvedTo('Save');
+    await submit.click();
     expect(consoleSpy).toHaveBeenCalledWith({
       'Color 1': '',
       'Color 2': '',
@@ -1319,7 +1328,7 @@ describe('SettingsModalComponent', () => {
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SkyColorpickerModule } from '@skyux/colorpicker';
-import { SkyInputBoxModule } from '@skyux/forms';
+import { SkyButton, SkyInputBoxModule } from '@skyux/forms';
 import { SkyModalInstance, SkyModalModule } from '@skyux/modals';
 
 import { MODAL_TITLE } from './modal-title-token';
@@ -1328,7 +1337,7 @@ import { MODAL_TITLE } from './modal-title-token';
   selector: 'app-settings-modal',
   templateUrl: './settings-modal.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [FormsModule, ReactiveFormsModule, SkyColorpickerModule, SkyInputBoxModule, SkyModalModule],
+  imports: [FormsModule, ReactiveFormsModule, SkyButton, SkyColorpickerModule, SkyInputBoxModule, SkyModalModule],
 })
 export class SettingsModalComponent {
   protected formGroup: FormGroup;

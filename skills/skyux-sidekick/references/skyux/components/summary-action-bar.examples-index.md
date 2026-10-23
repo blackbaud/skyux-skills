@@ -14,5 +14,5 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 | --- | ------------------------------ | --------- | -------------------------------------------------------------- |
 | 1   | Basic summary action bar       | 731–873   | `Read file_path=./summary-action-bar.md offset=731 limit=143`  |
 | 2   | Summary action bar with errors | 874–1051  | `Read file_path=./summary-action-bar.md offset=874 limit=178`  |
-| 3   | Modal with summary action bar  | 1052–1240 | `Read file_path=./summary-action-bar.md offset=1052 limit=189` |
-| 4   | Tab with summary action bar    | 1241–1394 | `Read file_path=./summary-action-bar.md offset=1241 limit=154` |
+| 3   | Modal with summary action bar  | 1052–1242 | `Read file_path=./summary-action-bar.md offset=1052 limit=191` |
+| 4   | Tab with summary action bar    | 1243–1396 | `Read file_path=./summary-action-bar.md offset=1243 limit=154` |

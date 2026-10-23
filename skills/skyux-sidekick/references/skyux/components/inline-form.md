@@ -551,8 +551,7 @@ Returns a child test element or null if not found.
 ```typescript
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SkyInputBoxModule } from '@skyux/forms';
-import { SkyIconModule } from '@skyux/icon';
+import { SkyButton, SkyInputBoxModule } from '@skyux/forms';
 import {
   SkyInlineFormButtonLayout,
   SkyInlineFormCloseArgs,
@@ -571,7 +570,7 @@ interface DemoForm {
   selector: 'app-inline-form-basic-example',
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [FormsModule, ReactiveFormsModule, SkyIconModule, SkyInlineFormModule, SkyInputBoxModule],
+  imports: [FormsModule, ReactiveFormsModule, SkyButton, SkyInlineFormModule, SkyInputBoxModule],
 })
 export class InlineFormBasicExampleComponent {
   protected firstName = 'Jane';
@@ -624,9 +623,14 @@ export class InlineFormBasicExampleComponent {
       <th>First name:</th>
       <td>{{ firstName }}</td>
       <td>
-        <button aria-label="Edit" class="sky-btn sky-btn-icon-borderless" type="button" (click)="onInlineFormOpen()">
-          <sky-icon iconName="edit" />
-        </button>
+        <sky-button
+          buttonStyle="icon-borderless"
+          data-sky-id="edit-button"
+          iconName="edit"
+          labelHidden
+          labelText="Edit"
+          (buttonClick)="onInlineFormOpen()"
+        />
       </td>
     </tr>
   </table>
@@ -647,6 +651,7 @@ export class InlineFormBasicExampleComponent {
 import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideNoopSkyAnimations } from '@skyux/core';
+import { SkyButtonHarness } from '@skyux/forms/testing';
 import { SkyInlineFormHarness } from '@skyux/inline-form/testing';
 
 import { InlineFormBasicExampleComponent } from './example.component';
@@ -673,7 +678,7 @@ describe('Inline form basic demo', () => {
     });
 
     // You can query components inside the inline form when closed.
-    const editButton = await harness.querySelector('button.sky-btn');
+    const editButton = await harness.queryHarness(SkyButtonHarness.with({ dataSkyId: 'edit-button' }));
     await editButton.click();
 
     await expectAsync(harness.isFormExpanded()).toBeResolvedTo(true);
@@ -708,8 +713,7 @@ describe('Inline form basic demo', () => {
 ```typescript
 import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SkyInputBoxModule } from '@skyux/forms';
-import { SkyIconModule } from '@skyux/icon';
+import { SkyButton, SkyInputBoxModule } from '@skyux/forms';
 import {
   SkyInlineFormButtonLayout,
   SkyInlineFormCloseArgs,
@@ -728,7 +732,7 @@ interface DemoForm {
   selector: 'app-inline-form-custom-buttons-example',
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [FormsModule, ReactiveFormsModule, SkyIconModule, SkyInlineFormModule, SkyInputBoxModule],
+  imports: [FormsModule, ReactiveFormsModule, SkyButton, SkyInlineFormModule, SkyInputBoxModule],
 })
 export class InlineFormCustomButtonsExampleComponent implements OnInit {
   protected firstName = 'Jane';
@@ -822,9 +826,14 @@ export class InlineFormCustomButtonsExampleComponent implements OnInit {
       <th>First name:</th>
       <td>{{ firstName }}</td>
       <td>
-        <button aria-label="Edit" class="sky-btn sky-btn-icon-borderless" type="button" (click)="onInlineFormOpen()">
-          <sky-icon iconName="edit" />
-        </button>
+        <sky-button
+          buttonStyle="icon-borderless"
+          data-sky-id="edit-button"
+          iconName="edit"
+          labelHidden
+          labelText="Edit"
+          (buttonClick)="onInlineFormOpen()"
+        />
       </td>
     </tr>
   </table>
@@ -845,6 +854,7 @@ export class InlineFormCustomButtonsExampleComponent implements OnInit {
 import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideNoopSkyAnimations } from '@skyux/core';
+import { SkyButtonHarness } from '@skyux/forms/testing';
 import { SkyInlineFormHarness } from '@skyux/inline-form/testing';
 
 import { InlineFormCustomButtonsExampleComponent } from './example.component';
@@ -871,7 +881,7 @@ describe('Inline form custom button demo', () => {
     });
 
     // You can query components inside the inline form when closed.
-    const editButton = await harness.querySelector('button.sky-btn');
+    const editButton = await harness.queryHarness(SkyButtonHarness.with({ dataSkyId: 'edit-button' }));
     await editButton.click();
 
     await expectAsync(harness.isFormExpanded()).toBeResolvedTo(true);
@@ -906,8 +916,7 @@ describe('Inline form custom button demo', () => {
 ```typescript
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SkyInputBoxModule } from '@skyux/forms';
-import { SkyIconModule } from '@skyux/icon';
+import { SkyButton, SkyInputBoxModule } from '@skyux/forms';
 import { SkyInlineFormButtonLayout, SkyInlineFormCloseArgs, SkyInlineFormConfig } from '@skyux/inline-form';
 import { SkyRepeaterModule } from '@skyux/lists';
 
@@ -930,7 +939,7 @@ interface Item {
   selector: 'app-inline-form-repeaters-example',
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [FormsModule, ReactiveFormsModule, SkyIconModule, SkyInputBoxModule, SkyRepeaterModule],
+  imports: [FormsModule, ReactiveFormsModule, SkyButton, SkyInputBoxModule, SkyRepeaterModule],
 })
 export class InlineFormRepeatersExampleComponent {
   protected activeInlineFormId: string | undefined;
@@ -1015,9 +1024,14 @@ export class InlineFormRepeatersExampleComponent {
       <div class="sky-theme-font-body-emphasized-m">{{ item.title }}</div>
     </sky-repeater-item-title>
     <sky-repeater-item-context-menu>
-      <button aria-label="Edit" class="sky-btn sky-btn-icon-borderless" type="button" (click)="showInlineForm(item)">
-        <sky-icon iconName="edit" />
-      </button>
+      <sky-button
+        buttonStyle="icon-borderless"
+        data-sky-id="edit-button"
+        iconName="edit"
+        labelHidden
+        labelText="Edit"
+        (buttonClick)="showInlineForm(item)"
+      />
     </sky-repeater-item-context-menu>
 
     <sky-repeater-item-content> {{ item.note }} </sky-repeater-item-content>
@@ -1043,6 +1057,7 @@ export class InlineFormRepeatersExampleComponent {
 import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideNoopSkyAnimations } from '@skyux/core';
+import { SkyButtonHarness } from '@skyux/forms/testing';
 import { SkyInlineFormHarness } from '@skyux/inline-form/testing';
 import { SkyRepeaterHarness } from '@skyux/lists/testing';
 
@@ -1072,8 +1087,8 @@ describe('Inline form with repeater demo', () => {
     const { inlineFormHarness } = await setupTest({
       itemId: 1,
     });
-    const editButton = await inlineFormHarness?.querySelector('button.sky-btn');
-    await editButton?.click();
+    const editButton = await inlineFormHarness.queryHarness(SkyButtonHarness.with({ dataSkyId: 'edit-button' }));
+    await editButton.click();
     await expectAsync(inlineFormHarness?.isFormExpanded()).toBeResolvedTo(true);
 
     // You can query inline form buttons when the form is open.

@@ -12,7 +12,7 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                                             | Lines     | Read invocation                                              |
 | --- | --------------------------------------------------- | --------- | ------------------------------------------------------------ |
-| 1   | Basic setup (without data manager)                  | 1272–2305 | `Read file_path=./data-entry-grid.md offset=1272 limit=1034` |
-| 2   | Data manager setup                                  | 2306–3696 | `Read file_path=./data-entry-grid.md offset=2306 limit=1391` |
-| 3   | Setting initial focus for keyboard navigation       | 3697–4143 | `Read file_path=./data-entry-grid.md offset=3697 limit=447`  |
-| 4   | Basic setup with inline help (without data manager) | 4144–5137 | `Read file_path=./data-entry-grid.md offset=4144 limit=994`  |
+| 1   | Basic setup (without data manager)                  | 1272–2316 | `Read file_path=./data-entry-grid.md offset=1272 limit=1045` |
+| 2   | Data manager setup                                  | 2317–3713 | `Read file_path=./data-entry-grid.md offset=2317 limit=1397` |
+| 3   | Setting initial focus for keyboard navigation       | 3714–4160 | `Read file_path=./data-entry-grid.md offset=3714 limit=447`  |
+| 4   | Basic setup with inline help (without data manager) | 4161–5160 | `Read file_path=./data-entry-grid.md offset=4161 limit=1000` |

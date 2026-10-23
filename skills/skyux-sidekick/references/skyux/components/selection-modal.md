@@ -824,6 +824,7 @@ Only find instances whose `data-sky-id` attribute matches the given value.
 
 ```typescript
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { SkyButton } from '@skyux/forms';
 import { SkySelectionModalSearchResult, SkySelectionModalService } from '@skyux/lookup';
 
 import { map } from 'rxjs/operators';
@@ -838,6 +839,7 @@ import { Person } from './person';
   selector: 'app-lookup-selection-modal-basic-example',
   changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
+  imports: [SkyButton],
 })
 export class LookupSelectionModalBasicExampleComponent {
   protected selectedPeople: Person[] | undefined;
@@ -876,9 +878,12 @@ export class LookupSelectionModalBasicExampleComponent {
 
 ```html
 <div class="sky-theme-margin-bottom-xl">
-  <button type="button" class="sky-btn sky-btn-default selection-modal-example-show-btn" (click)="showSelectionModal()">
-    Select a value
-  </button>
+  <sky-button
+    ariaHasPopup="dialog"
+    data-sky-id="show-selection-modal-button"
+    labelText="Select a value"
+    (buttonClick)="showSelectionModal()"
+  />
 </div>
 
 @if (selectedPeople?.length) {
@@ -898,6 +903,7 @@ export class LookupSelectionModalBasicExampleComponent {
 ```typescript
 import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { SkyButtonHarness } from '@skyux/forms/testing';
 import { SkySelectionModalHarness } from '@skyux/lookup/testing';
 
 import { of } from 'rxjs';
@@ -915,12 +921,14 @@ describe('Selection modal example', () => {
   }> {
     const fixture = TestBed.createComponent(LookupSelectionModalBasicExampleComponent);
     const el = fixture.nativeElement as HTMLElement;
-    const openBtn = el.querySelector<HTMLButtonElement>('.selection-modal-example-show-btn');
-
-    openBtn?.click();
-    fixture.detectChanges();
-
+    const loader = TestbedHarnessEnvironment.loader(fixture);
     const rootLoader = TestbedHarnessEnvironment.documentRootLoader(fixture);
+
+    const openButtonHarness = await loader.getHarness(
+      SkyButtonHarness.with({ dataSkyId: 'show-selection-modal-button' }),
+    );
+
+    await openButtonHarness.click();
 
     const harness = await rootLoader.getHarness(SkySelectionModalHarness);
     return { harness, el, fixture };
@@ -1073,6 +1081,7 @@ export interface SearchResults {
 
 ```typescript
 import { ChangeDetectionStrategy, Component, OnDestroy, inject } from '@angular/core';
+import { SkyButton } from '@skyux/forms';
 import {
   SkySelectionModalAddClickEventArgs,
   SkySelectionModalCloseArgs,
@@ -1095,6 +1104,7 @@ import { Person } from './person';
   selector: 'app-lookup-selection-modal-add-item-example',
   changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
+  imports: [SkyButton],
 })
 export class LookupSelectionModalAddItemExampleComponent implements OnDestroy {
   protected selectedPeople: Person[] | undefined;
@@ -1163,8 +1173,8 @@ export class LookupSelectionModalAddItemExampleComponent implements OnDestroy {
       </sky-input-box>
     </sky-modal-content>
     <sky-modal-footer>
-      <button class="sky-btn sky-btn-primary" type="submit">Add</button>
-      <button class="sky-btn sky-btn-link" type="button" (click)="close()">Cancel</button>
+      <sky-button buttonStyle="primary" buttonType="submit" labelText="Add" />
+      <sky-button buttonStyle="link" labelText="Cancel" (buttonClick)="close()" />
     </sky-modal-footer>
   </sky-modal>
 </form>
@@ -1175,7 +1185,7 @@ export class LookupSelectionModalAddItemExampleComponent implements OnDestroy {
 ```typescript
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { SkyInputBoxModule } from '@skyux/forms';
+import { SkyButton, SkyInputBoxModule } from '@skyux/forms';
 import { SkyModalInstance, SkyModalModule } from '@skyux/modals';
 
 let nextId = 21;
@@ -1184,7 +1194,7 @@ let nextId = 21;
   selector: 'app-add-item-modal',
   templateUrl: './add-item-modal.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [ReactiveFormsModule, SkyInputBoxModule, SkyModalModule],
+  imports: [ReactiveFormsModule, SkyButton, SkyInputBoxModule, SkyModalModule],
 })
 export class AddItemModalComponent {
   protected readonly formGroup: FormGroup;
@@ -1216,9 +1226,12 @@ export class AddItemModalComponent {
 
 ```html
 <div class="sky-theme-margin-bottom-xl">
-  <button class="sky-btn sky-btn-default selection-modal-example-show-btn" type="button" (click)="showSelectionModal()">
-    Select a value
-  </button>
+  <sky-button
+    ariaHasPopup="dialog"
+    data-sky-id="show-selection-modal-button"
+    labelText="Select a value"
+    (buttonClick)="showSelectionModal()"
+  />
 </div>
 
 @if (selectedPeople?.length) {
@@ -1238,6 +1251,7 @@ export class AddItemModalComponent {
 ```typescript
 import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { SkyButtonHarness } from '@skyux/forms/testing';
 import { SkySelectionModalHarness } from '@skyux/lookup/testing';
 
 import { of } from 'rxjs';
@@ -1256,12 +1270,14 @@ describe('Selection modal example', () => {
     const fixture = TestBed.createComponent(LookupSelectionModalAddItemExampleComponent);
     const el = fixture.nativeElement as HTMLElement;
 
-    const openBtn = el.querySelector<HTMLButtonElement>('.selection-modal-example-show-btn');
-
-    openBtn?.click();
-    fixture.detectChanges();
-
+    const loader = TestbedHarnessEnvironment.loader(fixture);
     const rootLoader = TestbedHarnessEnvironment.documentRootLoader(fixture);
+
+    const openButtonHarness = await loader.getHarness(
+      SkyButtonHarness.with({ dataSkyId: 'show-selection-modal-button' }),
+    );
+
+    await openButtonHarness.click();
 
     const harness = await rootLoader.getHarness(SkySelectionModalHarness);
     return { harness, el, fixture };

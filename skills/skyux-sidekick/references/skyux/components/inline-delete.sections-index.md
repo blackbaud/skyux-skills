@@ -23,4 +23,4 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 7   | SkyInlineDeleteComponent      | development | 83–108  | `Read file_path=./inline-delete.md offset=83 limit=26`   |
 | 8   | SkyInlineDeleteHarness        | testing     | 109–154 | `Read file_path=./inline-delete.md offset=109 limit=46`  |
 | 9   | SkyInlineDeleteHarnessFilters | testing     | 155–170 | `Read file_path=./inline-delete.md offset=155 limit=16`  |
-| 10  | Code Examples                 | examples    | 171–442 | `Read file_path=./inline-delete.md offset=171 limit=272` |
+| 10  | Code Examples                 | examples    | 171–449 | `Read file_path=./inline-delete.md offset=171 limit=279` |

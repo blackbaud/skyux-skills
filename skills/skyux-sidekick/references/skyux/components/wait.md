@@ -222,6 +222,7 @@ Only find blocking or non-blocking instances created by the `SkyWaitService`.
 
 ```typescript
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { SkyButton } from '@skyux/forms';
 import { SkyWaitModule } from '@skyux/indicators';
 
 /**
@@ -238,7 +239,7 @@ import { SkyWaitModule } from '@skyux/indicators';
   `,
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [SkyWaitModule],
+  imports: [SkyButton, SkyWaitModule],
 })
 export class IndicatorsWaitElementExampleComponent {
   protected isWaiting = false;
@@ -248,7 +249,7 @@ export class IndicatorsWaitElementExampleComponent {
 #### example.component.html
 
 ```html
-<button class="sky-btn sky-btn-default" type="button" (click)="isWaiting = !isWaiting">Toggle wait</button>
+<sky-button data-sky-id="toggle-wait-button" labelText="Toggle wait" (buttonClick)="isWaiting = !isWaiting" />
 
 <div class="wrapper">
   The <code>sky-wait</code> directive can apply to a large area.
@@ -260,7 +261,8 @@ export class IndicatorsWaitElementExampleComponent {
 
 ```typescript
 import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
+import { SkyButtonHarness } from '@skyux/forms/testing';
 import { SkyWaitHarness } from '@skyux/indicators/testing';
 
 import { IndicatorsWaitElementExampleComponent } from './example.component';
@@ -268,13 +270,14 @@ import { IndicatorsWaitElementExampleComponent } from './example.component';
 describe('Basic wait', () => {
   async function setupTest(): Promise<{
     waitHarness: SkyWaitHarness;
-    fixture: ComponentFixture<IndicatorsWaitElementExampleComponent>;
+    toggleButtonHarness: SkyButtonHarness;
   }> {
     const fixture = TestBed.createComponent(IndicatorsWaitElementExampleComponent);
     const loader = TestbedHarnessEnvironment.loader(fixture);
     const waitHarness = await loader.getHarness(SkyWaitHarness.with({ dataSkyId: 'wait-example' }));
+    const toggleButtonHarness = await loader.getHarness(SkyButtonHarness.with({ dataSkyId: 'toggle-wait-button' }));
 
-    return { waitHarness, fixture };
+    return { waitHarness, toggleButtonHarness };
   }
 
   beforeEach(() => {
@@ -284,11 +287,9 @@ describe('Basic wait', () => {
   });
 
   it('should show the wait component when the user performs an action', async () => {
-    const { waitHarness, fixture } = await setupTest();
+    const { waitHarness, toggleButtonHarness } = await setupTest();
 
-    (fixture.nativeElement as HTMLElement).querySelector<HTMLButtonElement>('.sky-btn')?.click();
-
-    fixture.detectChanges();
+    await toggleButtonHarness.click();
 
     await expectAsync(waitHarness.isWaiting()).toBeResolvedTo(true);
     await expectAsync(waitHarness.isFullPage()).toBeResolvedTo(false);
@@ -303,6 +304,7 @@ describe('Basic wait', () => {
 
 ```typescript
 import { ChangeDetectionStrategy, Component, OnDestroy, inject } from '@angular/core';
+import { SkyButton } from '@skyux/forms';
 import { SkyWaitService } from '@skyux/indicators';
 
 /**
@@ -312,6 +314,7 @@ import { SkyWaitService } from '@skyux/indicators';
   selector: 'app-indicators-wait-page-example',
   changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
+  imports: [SkyButton],
 })
 export class IndicatorsWaitPageExampleComponent implements OnDestroy {
   protected isWaiting = false;
@@ -343,13 +346,19 @@ export class IndicatorsWaitPageExampleComponent implements OnDestroy {
 #### example.component.html
 
 ```html
-<button class="sky-btn sky-btn-default sky-theme-margin-right-s" type="button" (click)="togglePageWait(true)">
-  Show page wait
-</button>
+<sky-button
+  class="sky-theme-margin-right-s"
+  data-sky-id="show-page-wait-button"
+  labelText="Show page wait"
+  (buttonClick)="togglePageWait(true)"
+/>
 
-<button class="sky-btn sky-btn-default sky-theme-margin-right-s" type="button" (click)="togglePageWait(false)">
-  Show non-blocking page wait
-</button>
+<sky-button
+  class="sky-theme-margin-right-s"
+  data-sky-id="show-non-blocking-page-wait-button"
+  labelText="Show non-blocking page wait"
+  (buttonClick)="togglePageWait(false)"
+/>
 ```
 
 #### example.component.spec.ts
@@ -357,22 +366,22 @@ export class IndicatorsWaitPageExampleComponent implements OnDestroy {
 ```typescript
 import { HarnessLoader } from '@angular/cdk/testing';
 import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
+import { SkyButtonHarness } from '@skyux/forms/testing';
 import { SkyWaitHarness } from '@skyux/indicators/testing';
 
 import { IndicatorsWaitPageExampleComponent } from './example.component';
 
 describe('Page wait', () => {
   function setupTest(): {
+    loader: HarnessLoader;
     rootLoader: HarnessLoader;
-    el: HTMLElement;
-    fixture: ComponentFixture<IndicatorsWaitPageExampleComponent>;
   } {
     const fixture = TestBed.createComponent(IndicatorsWaitPageExampleComponent);
+    const loader = TestbedHarnessEnvironment.loader(fixture);
     const rootLoader = TestbedHarnessEnvironment.documentRootLoader(fixture);
-    const el = fixture.nativeElement as HTMLElement;
 
-    return { rootLoader, el, fixture };
+    return { loader, rootLoader };
   }
 
   beforeEach(() => {
@@ -382,11 +391,11 @@ describe('Page wait', () => {
   });
 
   it('should show the page wait component when the user performs an action', async () => {
-    const { rootLoader, el } = setupTest();
+    const { loader, rootLoader } = setupTest();
 
-    const buttons = el.querySelectorAll<HTMLButtonElement>('.sky-btn');
+    const buttonHarness = await loader.getHarness(SkyButtonHarness.with({ dataSkyId: 'show-page-wait-button' }));
 
-    buttons[0].click();
+    await buttonHarness.click();
 
     const waitHarness = await rootLoader.getHarness(SkyWaitHarness.with({ servicePageWaitType: 'blocking' }));
 
@@ -396,11 +405,15 @@ describe('Page wait', () => {
   });
 
   it('should show the non-blocking page wait component when the user performs an action', async () => {
-    const { rootLoader, el } = setupTest();
+    const { loader, rootLoader } = setupTest();
 
-    const buttons = el.querySelectorAll<HTMLButtonElement>('.sky-btn');
+    const buttonHarness = await loader.getHarness(
+      SkyButtonHarness.with({
+        dataSkyId: 'show-non-blocking-page-wait-button',
+      }),
+    );
 
-    buttons[1].click();
+    await buttonHarness.click();
 
     const waitHarness = await rootLoader.getHarness(SkyWaitHarness.with({ servicePageWaitType: 'non-blocking' }));
 

@@ -40,4 +40,4 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 24  | SkyFilterBarHarnessFilters           | testing     | 587–602  | `Read file_path=./filter-bar.md offset=587 limit=16`  |
 | 25  | SkyFilterItemHarness                 | testing     | 603–648  | `Read file_path=./filter-bar.md offset=603 limit=46`  |
 | 26  | SkyFilterItemHarnessFilters          | testing     | 649–669  | `Read file_path=./filter-bar.md offset=649 limit=21`  |
-| 27  | Code Examples                        | examples    | 670–1517 | `Read file_path=./filter-bar.md offset=670 limit=848` |
+| 27  | Code Examples                        | examples    | 670–1527 | `Read file_path=./filter-bar.md offset=670 limit=858` |

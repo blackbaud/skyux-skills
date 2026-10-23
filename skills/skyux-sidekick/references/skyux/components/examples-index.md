@@ -25,8 +25,8 @@
 | country-field                | 1        | [country-field.examples-index.md](./country-field.examples-index.md)                               |
 | data-entry-grid              | 4        | [data-entry-grid.examples-index.md](./data-entry-grid.examples-index.md)                           |
 | data-grid                    | 8        | [data-grid.examples-index.md](./data-grid.examples-index.md)                                       |
-| data-grid-component          | 5        | [data-grid-component.examples-index.md](./data-grid-component.examples-index.md)                   |
-| data-manager                 | 3        | [data-manager.examples-index.md](./data-manager.examples-index.md)                                 |
+| data-grid-component          | 6        | [data-grid-component.examples-index.md](./data-grid-component.examples-index.md)                   |
+| data-manager                 | 4        | [data-manager.examples-index.md](./data-manager.examples-index.md)                                 |
 | date-pipe                    | 1        | [date-pipe.examples-index.md](./date-pipe.examples-index.md)                                       |
 | date-range-picker            | 3        | [date-range-picker.examples-index.md](./date-range-picker.examples-index.md)                       |
 | datepicker                   | 3        | [datepicker.examples-index.md](./datepicker.examples-index.md)                                     |
@@ -49,7 +49,7 @@
 | infinite-scroll              | 1        | [infinite-scroll.examples-index.md](./infinite-scroll.examples-index.md)                           |
 | inline-delete                | 2        | [inline-delete.examples-index.md](./inline-delete.examples-index.md)                               |
 | inline-form                  | 3        | [inline-form.examples-index.md](./inline-form.examples-index.md)                                   |
-| input-box                    | 8        | [input-box.examples-index.md](./input-box.examples-index.md)                                       |
+| input-box                    | 9        | [input-box.examples-index.md](./input-box.examples-index.md)                                       |
 | instrumentation              | 2        | [instrumentation.examples-index.md](./instrumentation.examples-index.md)                           |
 | key-info                     | 2        | [key-info.examples-index.md](./key-info.examples-index.md)                                         |
 | label                        | 1        | [label.examples-index.md](./label.examples-index.md)                                               |
@@ -59,7 +59,7 @@
 | modal                        | 5        | [modal.examples-index.md](./modal.examples-index.md)                                               |
 | navbar                       | 1        | [navbar.examples-index.md](./navbar.examples-index.md)                                             |
 | numeric                      | 1        | [numeric.examples-index.md](./numeric.examples-index.md)                                           |
-| page                         | 7        | [page.examples-index.md](./page.examples-index.md)                                                 |
+| page                         | 8        | [page.examples-index.md](./page.examples-index.md)                                                 |
 | paging                       | 2        | [paging.examples-index.md](./paging.examples-index.md)                                             |
 | phone-field                  | 1        | [phone-field.examples-index.md](./phone-field.examples-index.md)                                   |
 | popover                      | 2        | [popover.examples-index.md](./popover.examples-index.md)                                           |

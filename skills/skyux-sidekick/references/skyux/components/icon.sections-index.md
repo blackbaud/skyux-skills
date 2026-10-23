@@ -26,4 +26,4 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 10  | SkyIconSize           | development | 1810–1817 | `Read file_path=./icon.md offset=1810 limit=8`   |
 | 11  | SkyIconHarness        | testing     | 1818–1863 | `Read file_path=./icon.md offset=1818 limit=46`  |
 | 12  | SkyIconHarnessFilters | testing     | 1864–1881 | `Read file_path=./icon.md offset=1864 limit=18`  |
-| 13  | Code Examples         | examples    | 1882–2063 | `Read file_path=./icon.md offset=1882 limit=182` |
+| 13  | Code Examples         | examples    | 1882–2073 | `Read file_path=./icon.md offset=1882 limit=192` |

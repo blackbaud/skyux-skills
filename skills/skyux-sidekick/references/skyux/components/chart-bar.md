@@ -1922,6 +1922,7 @@ describe('Value format bar chart example', () => {
 ```typescript
 import { ChangeDetectionStrategy, Component, input, resource } from '@angular/core';
 import { SkyChart, SkyChartAxisCategory, SkyChartAxisValue, SkyChartBar, SkyChartBarSeries } from '@skyux/charts';
+import { SkyButton } from '@skyux/forms';
 
 interface ChartBarAsyncData {
   categories: string[];
@@ -1935,7 +1936,7 @@ interface ChartBarAsyncData {
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-chart-bar-async-example',
   templateUrl: './example.html',
-  imports: [SkyChart, SkyChartAxisCategory, SkyChartAxisValue, SkyChartBar, SkyChartBarSeries],
+  imports: [SkyButton, SkyChart, SkyChartAxisCategory, SkyChartAxisValue, SkyChartBar, SkyChartBarSeries],
 })
 export class ChartsChartBarAsyncExample {
   // Simulate network latency.
@@ -1966,14 +1967,12 @@ async function fetchDonationsFromServer(delay: number): Promise<ChartBarAsyncDat
 #### example.html
 
 ```html
-<button
-  class="sky-btn sky-btn-default sky-theme-margin-bottom-s"
-  type="button"
+<sky-button
+  class="sky-theme-margin-bottom-s"
+  labelText="Reload data"
   [disabled]="donations.isLoading()"
-  (click)="donations.reload()"
->
-  Reload data
-</button>
+  (buttonClick)="donations.reload()"
+/>
 <sky-chart data-sky-id="donations-by-quarter" headingText="Donations by quarter" [loading]="donations.isLoading()">
   @if (donations.value(); as data) {
   <sky-chart-bar>

@@ -61,4 +61,4 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 45  | SkyDataManagerColumnPickerHarness              | testing     | 1734–1835 | `Read file_path=./data-manager.md offset=1734 limit=102`  |
 | 46  | SkyDataManagerColumnPickerColumnHarness        | testing     | 1836–2005 | `Read file_path=./data-manager.md offset=1836 limit=170`  |
 | 47  | SkyDataManagerColumnPickerColumnHarnessFilters | testing     | 2006–2031 | `Read file_path=./data-manager.md offset=2006 limit=26`   |
-| 48  | Code Examples                                  | examples    | 2032–3540 | `Read file_path=./data-manager.md offset=2032 limit=1509` |
+| 48  | Code Examples                                  | examples    | 2032–3748 | `Read file_path=./data-manager.md offset=2032 limit=1717` |

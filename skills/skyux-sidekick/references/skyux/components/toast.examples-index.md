@@ -12,5 +12,5 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                             | Lines   | Read invocation                                  |
 | --- | ----------------------------------- | ------- | ------------------------------------------------ |
-| 1   | Toast with basic setup              | 375–473 | `Read file_path=./toast.md offset=375 limit=99`  |
-| 2   | Toast with custom content component | 474–640 | `Read file_path=./toast.md offset=474 limit=167` |
+| 1   | Toast with basic setup              | 375–475 | `Read file_path=./toast.md offset=375 limit=101` |
+| 2   | Toast with custom content component | 476–644 | `Read file_path=./toast.md offset=476 limit=169` |

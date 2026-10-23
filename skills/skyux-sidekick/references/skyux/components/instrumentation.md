@@ -378,6 +378,7 @@ import {
   SkyInstrumentationTestingController,
   provideSkyInstrumentationTesting,
 } from '@skyux/core/testing';
+import { SkyButtonHarness } from '@skyux/forms/testing';
 import { SkyModalHarness } from '@skyux/modals/testing';
 
 import { CoreInstrumentationModalExample } from './example';
@@ -386,6 +387,7 @@ describe('Instrumentation context forwarded to a modal', () => {
   function setupTest(): {
     controller: SkyInstrumentationTestingController;
     fixture: ComponentFixture<CoreInstrumentationModalExample>;
+    loader: HarnessLoader;
     rootLoader: HarnessLoader;
   } {
     TestBed.configureTestingModule({
@@ -400,16 +402,17 @@ describe('Instrumentation context forwarded to a modal', () => {
     return {
       controller: TestBed.inject(SkyInstrumentationTestingController),
       fixture,
+      loader: TestbedHarnessEnvironment.loader(fixture),
       rootLoader: TestbedHarnessEnvironment.documentRootLoader(fixture),
     };
   }
 
   it('should track when a user requests help from the edit gift modal', async () => {
-    const { controller, fixture, rootLoader } = setupTest();
+    const { controller, fixture, loader, rootLoader } = setupTest();
 
-    const launchButton = (fixture.nativeElement as HTMLElement).querySelector('button');
+    const launchButton = await loader.getHarness(SkyButtonHarness.with({ dataSkyId: 'edit-gift-button' }));
 
-    launchButton?.click();
+    await launchButton.click();
 
     fixture.detectChanges();
     await fixture.whenStable();
@@ -432,13 +435,22 @@ describe('Instrumentation context forwarded to a modal', () => {
 ```typescript
 import { Component, Injector, inject } from '@angular/core';
 import { provideSkyInstrumentationContextFrom } from '@skyux/core';
+import { SkyButton } from '@skyux/forms';
 import { SkyModalService } from '@skyux/modals';
 
 import { CoreInstrumentationModalContent } from './modal';
 
 @Component({
   selector: 'app-core-instrumentation-modal-launch-button',
-  template: ` <button class="sky-btn sky-btn-default" type="button" (click)="openModal()">Edit gift</button> `,
+  imports: [SkyButton],
+  template: `
+    <sky-button
+      ariaHasPopup="dialog"
+      data-sky-id="edit-gift-button"
+      labelText="Edit gift"
+      (buttonClick)="openModal()"
+    />
+  `,
 })
 export class CoreInstrumentationModalLaunchButton {
   readonly #injector = inject(Injector);
@@ -462,7 +474,7 @@ export class CoreInstrumentationModalLaunchButton {
     <p>The help button in this modal reports the context from the page that opened it.</p>
   </sky-modal-content>
   <sky-modal-footer>
-    <button class="sky-btn sky-btn-link" type="button" (click)="modal.close()">Close</button>
+    <sky-button buttonStyle="link" labelText="Close" (buttonClick)="modal.close()" />
   </sky-modal-footer>
 </sky-modal>
 ```
@@ -471,11 +483,12 @@ export class CoreInstrumentationModalLaunchButton {
 
 ```typescript
 import { Component, inject } from '@angular/core';
+import { SkyButton } from '@skyux/forms';
 import { SkyModalInstance, SkyModalModule } from '@skyux/modals';
 
 @Component({
   selector: 'app-core-instrumentation-modal-content',
-  imports: [SkyModalModule],
+  imports: [SkyButton, SkyModalModule],
   templateUrl: './modal.html',
 })
 export class CoreInstrumentationModalContent {

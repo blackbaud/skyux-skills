@@ -2413,8 +2413,8 @@ export function filterItems(
     <sky-checkbox labelText="Hide orange fruits" [formControl]="hideOrange" />
   </sky-modal-content>
   <sky-modal-footer>
-    <button class="sky-btn sky-btn-primary" type="button" (click)="applyFilters()">Apply</button>
-    <button class="sky-btn sky-btn-link" type="button" (click)="cancel()">Cancel</button>
+    <sky-button buttonStyle="primary" labelText="Apply" (buttonClick)="applyFilters()" />
+    <sky-button buttonStyle="link" labelText="Cancel" (buttonClick)="cancel()" />
   </sky-modal-footer>
 </sky-modal>
 ```
@@ -2425,14 +2425,14 @@ export function filterItems(
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { SkyFilterItemModal, SkyFilterItemModalInstance } from '@skyux/filter-bar';
-import { SkyCheckboxModule } from '@skyux/forms';
+import { SkyButton, SkyCheckboxModule } from '@skyux/forms';
 import { SkyModalModule } from '@skyux/modals';
 
 @Component({
   selector: 'app-orange-modal',
   templateUrl: './orange-modal.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [ReactiveFormsModule, SkyCheckboxModule, SkyModalModule],
+  imports: [ReactiveFormsModule, SkyButton, SkyCheckboxModule, SkyModalModule],
 })
 export class OrangeModalComponent implements SkyFilterItemModal {
   public readonly modalInstance = inject(SkyFilterItemModalInstance);
@@ -2854,10 +2854,7 @@ export interface Item {
   <div class="sky-theme-margin-bottom-xs">
     <sky-data-manager-toolbar>
       <sky-data-manager-toolbar-primary-item>
-        <button aria-label="New dashboard" class="sky-btn sky-btn-default" type="button">
-          <sky-icon iconName="add" />
-          New
-        </button>
+        <sky-button ariaLabel="New dashboard" iconName="add" labelText="New" />
       </sky-data-manager-toolbar-primary-item>
       <sky-list-summary>
         <sky-list-summary-item labelText="Dashboards" [value]="items.length" />
@@ -2884,7 +2881,7 @@ import {
   SkyDataManagerState,
   SkyDataViewConfig,
 } from '@skyux/data-manager';
-import { SkyIconModule } from '@skyux/icon';
+import { SkyButton } from '@skyux/forms';
 import { SkyListSummaryModule } from '@skyux/lists';
 
 import { AgGridAngular } from 'ag-grid-angular';
@@ -2902,7 +2899,7 @@ ModuleRegistry.registerModules([AllCommunityModule]);
   templateUrl: './list-page-content.component.html',
   providers: [SkyDataManagerService],
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [AgGridAngular, SkyAgGridModule, SkyDataManagerModule, SkyIconModule, SkyListSummaryModule],
+  imports: [AgGridAngular, SkyAgGridModule, SkyButton, SkyDataManagerModule, SkyListSummaryModule],
 })
 export class ListPageContentComponent {
   protected items: Item[] = [
@@ -3536,4 +3533,215 @@ export interface Record {
   approvedAmount: number;
   comments: string;
 }
+```
+
+### Data grid with data manager in a fit layout page for large datasets
+
+#### example.ts (primary file)
+
+```typescript
+import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { SkyDataGrid, SkyDataGridColumn } from '@skyux/data-grid';
+import { SkyDataManagerModule, SkyDataManagerService, SkyDataManagerState } from '@skyux/data-manager';
+import { SkyPageModule } from '@skyux/pages';
+
+import { map } from 'rxjs';
+
+import { TRANSACTIONS } from './data';
+
+/**
+ * Docking the data grid to fill a fit layout page lets the grid render only the
+ * rows in view, so it can load a large dataset at once instead of paging
+ * through it. This requires the grid to be the predominant element on the page.
+ * @title Data grid with data manager in a fit layout page for large datasets
+ * @docsDemoHidden
+ */
+@Component({
+  selector: 'app-pages-page-data-manager-data-grid-fit-layout-example',
+  templateUrl: './example.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [SkyDataGrid, SkyDataGridColumn, SkyDataManagerModule, SkyPageModule],
+  providers: [SkyDataManagerService],
+})
+export class PagesPageDataManagerDataGridFitLayoutExample {
+  protected readonly viewId = 'gridView';
+
+  readonly #dataManagerSvc = inject(SkyDataManagerService);
+  readonly #searchText = toSignal(
+    this.#dataManagerSvc.getDataStateUpdates(this.viewId).pipe(map((state) => state.searchText ?? '')),
+    { initialValue: '' },
+  );
+
+  protected readonly data = computed(() => {
+    const searchText = this.#searchText().toLowerCase();
+    return TRANSACTIONS.filter(({ vendor, category, reference }) =>
+      [vendor, category, reference].some((value) => value.toLowerCase().includes(searchText)),
+    );
+  });
+
+  constructor() {
+    this.#dataManagerSvc.initDataManager({
+      activeViewId: this.viewId,
+      dataManagerConfig: {},
+      defaultDataState: new SkyDataManagerState({}),
+    });
+
+    this.#dataManagerSvc.initDataView({
+      id: this.viewId,
+      name: 'Grid View',
+      columnPickerEnabled: true,
+      searchEnabled: true,
+    });
+  }
+}
+```
+
+#### data.ts
+
+```typescript
+const VENDORS = ['Acme Office Supply', 'Blue Ridge Catering', 'City Print Shop', 'Delta Travel', 'Evergreen Utilities'];
+
+const CATEGORIES = ['Catering', 'Office', 'Printing', 'Travel', 'Utilities'];
+
+export const TRANSACTIONS = Array.from({ length: 1000 }, (_, i) => ({
+  id: String(i + 1),
+  date: `2026-${String((i % 12) + 1).padStart(2, '0')}-${String((i % 28) + 1).padStart(2, '0')}`,
+  vendor: VENDORS[i % VENDORS.length],
+  category: CATEGORIES[(i * 3) % CATEGORIES.length],
+  amount: ((i * 37) % 2000) + 0.99,
+  reference: `TXN-${String(i + 1).padStart(5, '0')}`,
+}));
+```
+
+#### example.html
+
+```html
+<sky-page layout="fit">
+  <sky-page-header pageTitle="Transactions">
+    <sky-page-header-details>
+      All 1,000 transactions load at once. The grid fills the page and renders only the rows in view, so no paging is
+      needed.
+    </sky-page-header-details>
+  </sky-page-header>
+  <sky-page-content>
+    <sky-data-manager dock="fill">
+      <sky-data-manager-toolbar />
+      <sky-data-view [viewId]="viewId">
+        <sky-data-grid
+          data-sky-id="transactions-grid"
+          dock="fill"
+          skyDataManagerViewController
+          labelText="Transactions"
+          [data]="data()"
+        >
+          <sky-data-grid-column dataType="date" field="date" flexWidth="1" headingText="Date" />
+          <sky-data-grid-column field="vendor" flexWidth="2" headingText="Vendor" />
+          <sky-data-grid-column field="category" flexWidth="1" headingText="Category" />
+          <sky-data-grid-column dataType="number" field="amount" flexWidth="1" headingText="Amount" />
+          <sky-data-grid-column columnHidden field="reference" flexWidth="1" headingText="Reference" />
+        </sky-data-grid>
+      </sky-data-view>
+    </sky-data-manager>
+  </sky-page-content>
+</sky-page>
+```
+
+#### example.spec.ts
+
+```typescript
+import { HarnessLoader } from '@angular/cdk/testing';
+import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
+import { TestBed } from '@angular/core/testing';
+import { provideNoopSkyAnimations } from '@skyux/core';
+import { SkyDataGridHarness } from '@skyux/data-grid/testing';
+import { SkyDataManagerHarness } from '@skyux/data-manager/testing';
+import { SkyPageHarness } from '@skyux/pages/testing';
+
+import { PagesPageDataManagerDataGridFitLayoutExample } from './example';
+
+describe('Data grid with data manager in a fit layout page example', () => {
+  async function setupTest(): Promise<{
+    dataManagerHarness: SkyDataManagerHarness;
+    gridHarness: SkyDataGridHarness;
+    loader: HarnessLoader;
+  }> {
+    TestBed.configureTestingModule({
+      imports: [PagesPageDataManagerDataGridFitLayoutExample],
+      providers: [provideNoopSkyAnimations()],
+    });
+
+    const fixture = TestBed.createComponent(PagesPageDataManagerDataGridFitLayoutExample);
+    const loader = TestbedHarnessEnvironment.loader(fixture);
+
+    return {
+      dataManagerHarness: await loader.getHarness(SkyDataManagerHarness),
+      gridHarness: await loader.getHarness(SkyDataGridHarness.with({ dataSkyId: 'transactions-grid' })),
+      loader,
+    };
+  }
+
+  it('should dock the data manager and grid to fill a fit layout page', async () => {
+    const { dataManagerHarness, gridHarness, loader } = await setupTest();
+
+    const pageHarness = await loader.getHarness(SkyPageHarness);
+
+    await expectAsync(pageHarness.getLayout()).toBeResolvedTo('fit');
+    await expectAsync(dataManagerHarness.getDockType()).toBeResolvedTo('fill');
+    await expectAsync(gridHarness.getDockType()).toBeResolvedTo('fill');
+  });
+
+  it('should load every row without paging', async () => {
+    const { gridHarness } = await setupTest();
+
+    await expectAsync(gridHarness.isGridReady()).toBeResolvedTo(true);
+    await expectAsync(gridHarness.isLoading()).toBeResolvedTo(false);
+    await expectAsync(gridHarness.getDisplayedRowCount()).toBeResolvedTo(1000);
+    await expectAsync(gridHarness.getPagingOrNull()).toBeResolvedTo(null);
+  });
+
+  it('should hide the column marked columnHidden', async () => {
+    const { gridHarness } = await setupTest();
+
+    await expectAsync(gridHarness.getDisplayedColumnIds()).toBeResolvedTo(['date', 'vendor', 'category', 'amount']);
+    await expectAsync(gridHarness.getDisplayedColumnHeaderNames()).toBeResolvedTo([
+      'Date',
+      'Vendor',
+      'Category',
+      'Amount',
+    ]);
+  });
+
+  it('should show and hide columns using the column picker', async () => {
+    const { dataManagerHarness, gridHarness } = await setupTest();
+
+    const toolbarHarness = await dataManagerHarness.getToolbar();
+    const columnPickerHarness = await toolbarHarness.openColumnPicker();
+
+    await (await columnPickerHarness.getColumn({ titleText: 'Category' })).deselect();
+    await (await columnPickerHarness.getColumn({ titleText: 'Reference' })).select();
+    await columnPickerHarness.saveAndClose();
+
+    await expectAsync(gridHarness.getDisplayedColumnIds()).toBeResolvedTo(['date', 'vendor', 'amount', 'reference']);
+  });
+
+  it('should filter the rows using the search', async () => {
+    const { dataManagerHarness, gridHarness } = await setupTest();
+
+    const toolbarHarness = await dataManagerHarness.getToolbar();
+    const searchHarness = await toolbarHarness.getSearch();
+    if (!searchHarness) {
+      throw new Error('Expected the toolbar to display a search.');
+    }
+
+    await searchHarness.enterText('delta');
+    await expectAsync(gridHarness.getDisplayedRowCount()).toBeResolvedTo(200);
+
+    await searchHarness.enterText('TXN-00001');
+    await expectAsync(gridHarness.getDisplayedRowCount()).toBeResolvedTo(1);
+
+    await searchHarness.clear();
+    await expectAsync(gridHarness.getDisplayedRowCount()).toBeResolvedTo(1000);
+  });
+});
 ```

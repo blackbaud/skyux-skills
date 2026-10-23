@@ -256,7 +256,171 @@ Required
 
 The error message to display.
 
+## SkyInputBoxButton
+
+Type: Component Preview
+
+Selector: `sky-input-box-button`
+
+Specifies a button to display next to the input in an input box.
+
+### Inputs
+
+#### `iconName: InputSignal<string>`
+
+Required
+
+The name of the icon to display.
+
+#### `labelText: InputSignal<string>`
+
+Required
+
+The text to use as the button's ARIA label.
+
+#### `buttonStyle: InputSignal<SkyInputBoxButtonStyle>`
+
+The display style of the button. Display style must be set statically; binding its value to a dynamic value will fall back to the default button style.
+
+Default: `"default"`
+
+#### `disabled: InputSignalWithTransform<boolean, unknown>`
+
+Whether the button is disabled.
+
+Default: `false`
+
+#### `position: InputSignal<"left" | "right">`
+
+The position in the input box to display the button. Position must be set statically; binding its value to a dynamic value will fall back to the default position.
+
+Default: `"right"`
+
+### Outputs
+
+#### `buttonClick: OutputEmitterRef<PointerEvent>`
+
+Fires when the button is clicked.
+
+## SkyInputBoxButtonStyle
+
+Type: Type alias Preview
+
+The display style of the button.
+
+    type SkyInputBoxButtonStyle = "default" | "inset"
+
 SKY UX test harnesses are built upon Angular CDK component harnesses. For more information see the [Angular CDK component harness documentation](https://material.angular.io/cdk/test-harnesses/overview).
+
+## SkyInputBoxButtonHarness
+
+Type: Class
+
+`import { SkyInputBoxButtonHarness } from '@skyux/forms/testing';`
+
+Harness for interacting with an input box button component in tests.
+
+### Methods
+
+#### `blur(): Promise<void>`
+
+Blurs the button.
+
+#### Returns
+
+`Promise<void>`
+
+#### `click(): Promise<void>`
+
+Clicks the button.
+
+#### Returns
+
+`Promise<void>`
+
+#### `focus(): Promise<void>`
+
+Focuses the button.
+
+#### Returns
+
+`Promise<void>`
+
+#### `getButtonStyle(): Promise<SkyInputBoxButtonStyle>`
+
+Gets the button's display style.
+
+#### Returns
+
+`Promise<SkyInputBoxButtonStyle>`
+
+#### `getIconName(): Promise<string | undefined>`
+
+Gets the name of the displayed icon.
+
+#### Returns
+
+`Promise<string | undefined>`
+
+#### `getLabelText(): Promise<string | null>`
+
+Gets the button's label text, which is used as its ARIA label.
+
+#### Returns
+
+`Promise<string | null>`
+
+#### `getPosition(): Promise<"left" | "right">`
+
+Gets the button's position in the input box.
+
+#### Returns
+
+`Promise<"left" | "right">`
+
+#### `isDisabled(): Promise<boolean>`
+
+Whether the button is disabled.
+
+#### Returns
+
+`Promise<boolean>`
+
+#### `isFocused(): Promise<boolean>`
+
+Whether the button is focused.
+
+#### Returns
+
+`Promise<boolean>`
+
+#### `SkyInputBoxButtonHarness.with(filters: SkyInputBoxButtonHarnessFilters): HarnessPredicate<SkyInputBoxButtonHarness>`
+
+Gets a `HarnessPredicate` that can be used to search for a `SkyInputBoxButtonHarness` that meets certain criteria.
+
+#### Parameters
+
+##### `filters: SkyInputBoxButtonHarnessFilters`
+
+#### Returns
+
+`HarnessPredicate<SkyInputBoxButtonHarness>`
+
+## SkyInputBoxButtonHarnessFilters
+
+Type: Interface
+
+A set of criteria that can be used to filter a list of `SkyInputBoxButtonHarness` instances.
+
+    interface SkyInputBoxButtonHarnessFilters {
+      dataSkyId?: string | RegExp;
+    }
+
+### Properties
+
+#### `dataSkyId?: string | RegExp`
+
+Only find instances whose `data-sky-id` attribute matches the given value.
 
 ## SkyInputBoxHarness
 
@@ -1088,6 +1252,137 @@ describe('Input box character limit example', () => {
 });
 ```
 
+### Input box with custom button
+
+#### example.ts (primary file)
+
+```typescript
+import { Component, inject, signal } from '@angular/core';
+import { SkyInputBoxButton, SkyInputBoxModule } from '@skyux/forms';
+import { FormsInputBoxNumberGenerator } from './number-generator';
+
+/**
+ * @title Input box with custom button
+ */
+@Component({
+  selector: 'app-forms-input-box-custom-button-example',
+  templateUrl: './example.html',
+  imports: [SkyInputBoxButton, SkyInputBoxModule],
+})
+export class FormsInputBoxWithCustomButtonExample {
+  readonly #generator = inject(FormsInputBoxNumberGenerator);
+
+  protected readonly randomNumber = signal(this.#generator.generate());
+
+  protected regenerate(): void {
+    this.randomNumber.set(this.#generator.generate());
+  }
+}
+```
+
+#### example.html
+
+```html
+<sky-input-box data-sky-id="number" labelText="Number">
+  <input type="text" [value]="randomNumber()" />
+  <sky-input-box-button
+    data-sky-id="number-generate"
+    iconName="arrow-sync"
+    labelText="Generate a random number"
+    (buttonClick)="regenerate()"
+  />
+</sky-input-box>
+```
+
+#### example.spec.ts
+
+```typescript
+import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
+import { TestBed } from '@angular/core/testing';
+import { SkyInputBoxButtonHarness, SkyInputBoxHarness } from '@skyux/forms/testing';
+import { FormsInputBoxWithCustomButtonExample } from './example';
+import { FormsInputBoxNumberGenerator } from './number-generator';
+
+describe('Input box with custom button example', () => {
+  const initialValue = 123;
+
+  async function setupTest(options: { inputBoxDataSkyId: string; inputBoxButtonDataSkyId: string }): Promise<{
+    inputBoxHarness: SkyInputBoxHarness;
+    inputBoxButtonHarness: SkyInputBoxButtonHarness;
+    mockGenerator: jasmine.SpyObj<FormsInputBoxNumberGenerator>;
+  }> {
+    const mockGenerator = jasmine.createSpyObj<FormsInputBoxNumberGenerator>('FormsInputBoxNumberGenerator', [
+      'generate',
+    ]);
+
+    mockGenerator.generate.and.returnValue(initialValue);
+
+    TestBed.configureTestingModule({
+      providers: [{ provide: FormsInputBoxNumberGenerator, useValue: mockGenerator }],
+    });
+
+    const fixture = TestBed.createComponent(FormsInputBoxWithCustomButtonExample);
+
+    fixture.detectChanges();
+    await fixture.whenStable();
+
+    const loader = TestbedHarnessEnvironment.loader(fixture);
+
+    const inputBoxHarness = await loader.getHarness(SkyInputBoxHarness.with({ dataSkyId: options.inputBoxDataSkyId }));
+
+    const inputBoxButtonHarness = await loader.getHarness(
+      SkyInputBoxButtonHarness.with({
+        dataSkyId: options.inputBoxButtonDataSkyId,
+      }),
+    );
+
+    return { inputBoxHarness, inputBoxButtonHarness, mockGenerator };
+  }
+
+  it('should configure the generate button', async () => {
+    const { inputBoxButtonHarness } = await setupTest({
+      inputBoxButtonDataSkyId: 'number-generate',
+      inputBoxDataSkyId: 'number',
+    });
+
+    await expectAsync(inputBoxButtonHarness.getIconName()).toBeResolvedTo('arrow-sync');
+    await expectAsync(inputBoxButtonHarness.getLabelText()).toBeResolvedTo('Generate a random number');
+  });
+
+  it('should update the input with a new number when the generate button is clicked', async () => {
+    const { inputBoxHarness, inputBoxButtonHarness, mockGenerator } = await setupTest({
+      inputBoxButtonDataSkyId: 'number-generate',
+      inputBoxDataSkyId: 'number',
+    });
+
+    const input = await inputBoxHarness.querySelector('input');
+
+    await expectAsync(input.getProperty('value')).toBeResolvedTo(initialValue.toString(10));
+
+    mockGenerator.generate.and.returnValue(456);
+
+    await inputBoxButtonHarness.click();
+
+    await expectAsync(input.getProperty('value')).toBeResolvedTo('456');
+  });
+});
+```
+
+#### number-generator.ts
+
+```typescript
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class FormsInputBoxNumberGenerator {
+  public generate(): number {
+    return Math.floor(Math.random() * 1000000);
+  }
+}
+```
+
 ### Input box with custom errors
 
 #### example.component.ts (primary file)
@@ -1534,7 +1829,7 @@ import {
   ReactiveFormsModule,
   ValidationErrors,
 } from '@angular/forms';
-import { SkyFormErrorModule, SkyInputBoxModule } from '@skyux/forms';
+import { SkyButton, SkyFormErrorModule, SkyInputBoxModule } from '@skyux/forms';
 import { SkyWaitService } from '@skyux/indicators';
 import {
   SkyAutocompleteSearchAsyncArgs,
@@ -1555,7 +1850,15 @@ import { Person } from './person';
   selector: 'app-lookup-single-select-example',
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, SkyFormErrorModule, SkyInputBoxModule, SkyLookupModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    SkyButton,
+    SkyFormErrorModule,
+    SkyInputBoxModule,
+    SkyLookupModule,
+  ],
 })
 export class LookupSingleSelectExampleComponent implements OnInit {
   public favoritesForm: FormGroup<{
@@ -1660,7 +1963,7 @@ export class LookupSingleSelectExampleComponent implements OnInit {
     <strong>Form model:</strong>
     <pre>{{ favoritesForm.value | json }}</pre>
   </div>
-  <button class="sky-btn sky-btn-default" type="submit">Submit</button>
+  <sky-button buttonType="submit" labelText="Submit" />
 </form>
 ```
 

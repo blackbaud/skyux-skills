@@ -482,6 +482,7 @@ Only find instances whose `data-sky-id` attribute matches the given value.
 
 ```typescript
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { SkyButton } from '@skyux/forms';
 import { SkyModalCloseArgs, SkyModalService } from '@skyux/modals';
 
 import { ModalComponent } from './modal.component';
@@ -493,6 +494,7 @@ import { ModalComponent } from './modal.component';
   selector: 'app-tabs-sectioned-form-modal-example',
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [SkyButton],
 })
 export class TabsSectionedFormModalExampleComponent {
   readonly #modalSvc = inject(SkyModalService);
@@ -529,7 +531,7 @@ export class AddressFormComponent {}
 #### example.component.html
 
 ```html
-<button class="sky-btn sky-btn-default" type="button" (click)="openModal()">Open sectioned form</button>
+<sky-button ariaHasPopup="dialog" labelText="Open sectioned form" (buttonClick)="openModal()" />
 ```
 
 #### example.component.spec.ts
@@ -723,13 +725,10 @@ export class InformationFormComponent implements OnInit {
   </sky-modal-content>
   <sky-modal-footer>
     @if (tabsHidden) {
-    <button class="sky-btn sky-btn-default" type="button" (click)="showTabs()">
-      <sky-icon iconName="chevron-left" />
-      Show sections
-    </button>
+    <sky-button iconName="chevron-left" labelText="Show sections" (buttonClick)="showTabs()" />
     }
-    <button class="sky-btn sky-btn-primary" type="button" (click)="modalInstance.save()">Save</button>
-    <button class="sky-btn sky-btn-link" type="button" (click)="modalInstance.cancel()">Cancel</button>
+    <sky-button buttonStyle="primary" labelText="Save" (buttonClick)="modalInstance.save()" />
+    <sky-button buttonStyle="link" labelText="Cancel" (buttonClick)="modalInstance.cancel()" />
   </sky-modal-footer>
 </sky-modal>
 ```
@@ -738,7 +737,7 @@ export class InformationFormComponent implements OnInit {
 
 ```typescript
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, inject } from '@angular/core';
-import { SkyIconModule } from '@skyux/icon';
+import { SkyButton } from '@skyux/forms';
 import { SkyModalInstance, SkyModalModule } from '@skyux/modals';
 import { SkySectionedFormMessage, SkySectionedFormMessageType, SkySectionedFormModule } from '@skyux/tabs';
 
@@ -756,7 +755,7 @@ import { PhoneFormComponent } from './phone-form.component';
     AddressFormComponent,
     InformationFormComponent,
     PhoneFormComponent,
-    SkyIconModule,
+    SkyButton,
     SkyModalModule,
     SkySectionedFormModule,
   ],

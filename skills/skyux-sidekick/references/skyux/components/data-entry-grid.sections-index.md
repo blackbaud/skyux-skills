@@ -61,4 +61,4 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 45  | SkyAgGridWrapperHarness                  | testing     | 1154–1241 | `Read file_path=./data-entry-grid.md offset=1154 limit=88`   |
 | 46  | SkyAgGridWrapperHarnessFilters           | testing     | 1242–1257 | `Read file_path=./data-entry-grid.md offset=1242 limit=16`   |
 | 47  | provideSkyAgGridTesting                  | testing     | 1258–1269 | `Read file_path=./data-entry-grid.md offset=1258 limit=12`   |
-| 48  | Code Examples                            | examples    | 1270–5137 | `Read file_path=./data-entry-grid.md offset=1270 limit=3868` |
+| 48  | Code Examples                            | examples    | 1270–5160 | `Read file_path=./data-entry-grid.md offset=1270 limit=3891` |

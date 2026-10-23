@@ -643,6 +643,7 @@ Only find instances whose `data-sky-id` attribute matches the given value.
 
 ```typescript
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, inject } from '@angular/core';
+import { SkyButton } from '@skyux/forms';
 import { SkyModalCloseArgs, SkyModalService } from '@skyux/modals';
 import {
   SkyProgressIndicatorChange,
@@ -664,7 +665,7 @@ import { ModalComponent } from './modal.component';
   selector: 'app-progress-indicator-waterfall-indicator-basic-example',
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [SkyProgressIndicatorModule],
+  imports: [SkyButton, SkyProgressIndicatorModule],
 })
 export class ProgressIndicatorWaterfallIndicatorBasicExampleComponent {
   protected activeIndex: number | undefined = 0;
@@ -757,11 +758,19 @@ export class ProgressIndicatorWaterfallIndicatorBasicExampleComponent {
   >
     <div>
       @if (activeIndex === 0) {
-      <button class="sky-btn sky-btn-primary" type="button" (click)="configureConnection(true)">
-        Set up connection
-      </button>
+      <sky-button
+        buttonStyle="primary"
+        ariaHasPopup="dialog"
+        labelText="Set up connection"
+        (buttonClick)="configureConnection(true)"
+      />
       } @if (activeIndex && activeIndex > 0) {
-      <button class="sky-btn sky-btn-link" type="button" (click)="configureConnection(false)">Edit connection</button>
+      <sky-button
+        buttonStyle="link"
+        ariaHasPopup="dialog"
+        labelText="Edit connection"
+        (buttonClick)="configureConnection(false)"
+      />
       }
     </div>
   </sky-progress-indicator-item>
@@ -774,9 +783,14 @@ export class ProgressIndicatorWaterfallIndicatorBasicExampleComponent {
     @if (activeIndex && activeIndex >= 1) {
     <div>
       @if (activeIndex === 1) {
-      <button class="sky-btn sky-btn-primary" type="button" (click)="setServer(true)">Select server</button>
+      <sky-button
+        buttonStyle="primary"
+        ariaHasPopup="dialog"
+        labelText="Select server"
+        (buttonClick)="setServer(true)"
+      />
       } @else {
-      <button class="sky-btn sky-btn-link" type="button" (click)="setServer(false)">Change server</button>
+      <sky-button buttonStyle="link" ariaHasPopup="dialog" labelText="Change server" (buttonClick)="setServer(false)" />
       }
     </div>
     }
@@ -786,9 +800,19 @@ export class ProgressIndicatorWaterfallIndicatorBasicExampleComponent {
     @if (activeIndex && activeIndex >= 2) {
     <div>
       @if (activeIndex === 2) {
-      <button class="sky-btn sky-btn-primary" type="button" (click)="testConnection(true)">Test connection</button>
+      <sky-button
+        buttonStyle="primary"
+        ariaHasPopup="dialog"
+        labelText="Test connection"
+        (buttonClick)="testConnection(true)"
+      />
       } @else {
-      <button class="sky-btn sky-btn-link" type="button" (click)="testConnection(false)">Retest connection</button>
+      <sky-button
+        buttonStyle="link"
+        ariaHasPopup="dialog"
+        labelText="Retest connection"
+        (buttonClick)="testConnection(false)"
+      />
       }
     </div>
     }
@@ -798,7 +822,7 @@ export class ProgressIndicatorWaterfallIndicatorBasicExampleComponent {
     @if (activeIndex && activeIndex >= 3) {
     <div>
       @if (activeIndex === 3) {
-      <button class="sky-btn sky-btn-primary" type="button" (click)="alertMessage('Form completed')">Turn on</button>
+      <sky-button buttonStyle="primary" labelText="Turn on" (buttonClick)="alertMessage('Form completed')" />
       }
     </div>
     }
@@ -882,7 +906,7 @@ export class ModalContext {
     <br />
   </sky-modal-content>
   <sky-modal-footer>
-    <button class="sky-btn sky-btn-primary" type="button" (click)="submit()">{{ context.buttonText }}</button>
+    <sky-button buttonStyle="primary" [labelText]="context.buttonText" (buttonClick)="submit()" />
   </sky-modal-footer>
 </sky-modal>
 ```
@@ -891,6 +915,7 @@ export class ModalContext {
 
 ```typescript
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { SkyButton } from '@skyux/forms';
 import { SkyModalInstance, SkyModalModule } from '@skyux/modals';
 
 import { ModalContext } from './modal-context';
@@ -899,7 +924,7 @@ import { ModalContext } from './modal-context';
   selector: 'app-modal',
   templateUrl: './modal.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [SkyModalModule],
+  imports: [SkyButton, SkyModalModule],
 })
 export class ModalComponent {
   protected readonly context = inject(ModalContext);

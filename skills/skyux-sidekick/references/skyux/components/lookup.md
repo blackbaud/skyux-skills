@@ -1613,7 +1613,7 @@ import {
   ReactiveFormsModule,
   ValidationErrors,
 } from '@angular/forms';
-import { SkyFormErrorModule, SkyInputBoxModule } from '@skyux/forms';
+import { SkyButton, SkyFormErrorModule, SkyInputBoxModule } from '@skyux/forms';
 import { SkyWaitService } from '@skyux/indicators';
 import {
   SkyAutocompleteSearchAsyncArgs,
@@ -1634,7 +1634,15 @@ import { Person } from './person';
   selector: 'app-lookup-single-select-example',
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, SkyFormErrorModule, SkyInputBoxModule, SkyLookupModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    SkyButton,
+    SkyFormErrorModule,
+    SkyInputBoxModule,
+    SkyLookupModule,
+  ],
 })
 export class LookupSingleSelectExampleComponent implements OnInit {
   public favoritesForm: FormGroup<{
@@ -1739,7 +1747,7 @@ export class LookupSingleSelectExampleComponent implements OnInit {
     <strong>Form model:</strong>
     <pre>{{ favoritesForm.value | json }}</pre>
   </div>
-  <button class="sky-btn sky-btn-default" type="submit">Submit</button>
+  <sky-button buttonType="submit" labelText="Submit" />
 </form>
 ```
 
@@ -1947,7 +1955,7 @@ import {
   ReactiveFormsModule,
   ValidationErrors,
 } from '@angular/forms';
-import { SkyFormErrorModule, SkyInputBoxModule } from '@skyux/forms';
+import { SkyButton, SkyFormErrorModule, SkyInputBoxModule } from '@skyux/forms';
 import { SkyWaitService } from '@skyux/indicators';
 import {
   SkyAutocompleteSearchAsyncArgs,
@@ -1968,7 +1976,15 @@ import { Person } from './person';
   selector: 'app-lookup-multi-select-example',
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, SkyFormErrorModule, SkyInputBoxModule, SkyLookupModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    SkyButton,
+    SkyFormErrorModule,
+    SkyInputBoxModule,
+    SkyLookupModule,
+  ],
 })
 export class LookupMultiSelectExampleComponent implements OnInit {
   public favoritesForm: FormGroup<{
@@ -2072,7 +2088,7 @@ export class LookupMultiSelectExampleComponent implements OnInit {
     <strong>Form model:</strong>
     <pre>{{ favoritesForm.value | json }}</pre>
   </div>
-  <button class="sky-btn sky-btn-default" type="submit">Submit</button>
+  <sky-button buttonType="submit" labelText="Submit" />
 </form>
 ```
 
@@ -2275,7 +2291,7 @@ export interface LookupAsyncDemoSearchResults {
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, OnInit, TemplateRef, ViewChild, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SkyInputBoxModule } from '@skyux/forms';
+import { SkyButton, SkyInputBoxModule } from '@skyux/forms';
 import { SkyWaitService } from '@skyux/indicators';
 import {
   SkyAutocompleteSearchAsyncArgs,
@@ -2296,7 +2312,7 @@ import { Person } from './person';
   selector: 'app-lookup-result-templates-example',
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, SkyInputBoxModule, SkyLookupModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, SkyButton, SkyInputBoxModule, SkyLookupModule],
 })
 export class LookupResultTemplatesExampleComponent implements OnInit {
   public favoritesForm: FormGroup<{
@@ -2403,7 +2419,7 @@ export class LookupResultTemplatesExampleComponent implements OnInit {
     <strong>Form model:</strong>
     <pre>{{ favoritesForm.value | json }}</pre>
   </div>
-  <button class="sky-btn sky-btn-default" type="submit">Submit</button>
+  <sky-button buttonType="submit" labelText="Submit" />
 </form>
 
 <ng-template #dropdownItemTemplate let-item="item">
@@ -2761,7 +2777,7 @@ export interface LookupAsyncDemoSearchResults {
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SkyInputBoxModule } from '@skyux/forms';
+import { SkyButton, SkyInputBoxModule } from '@skyux/forms';
 import { SkyWaitService } from '@skyux/indicators';
 import {
   SkyAutocompleteSearchAsyncArgs,
@@ -2785,7 +2801,7 @@ import { PickerModalComponent } from './picker-modal.component';
   selector: 'app-lookup-custom-picker-example',
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, SkyInputBoxModule, SkyLookupModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, SkyButton, SkyInputBoxModule, SkyLookupModule],
 })
 export class LookupCustomPickerExampleComponent implements OnInit {
   public favoritesForm: FormGroup<{
@@ -2901,7 +2917,7 @@ export class LookupCustomPickerExampleComponent implements OnInit {
     <strong>Form model:</strong>
     <pre>{{ favoritesForm.value | json }}</pre>
   </div>
-  <button class="sky-btn sky-btn-default" type="submit">Submit</button>
+  <sky-button buttonType="submit" labelText="Submit" />
 </form>
 ```
 
@@ -3243,7 +3259,7 @@ export interface Person {
 
 ```typescript
 import { ComponentHarness } from '@angular/cdk/testing';
-import { SkyCheckboxHarness } from '@skyux/forms/testing';
+import { SkyButtonHarness, SkyCheckboxHarness } from '@skyux/forms/testing';
 
 export class PickerHarness extends ComponentHarness {
   /**
@@ -3252,7 +3268,7 @@ export class PickerHarness extends ComponentHarness {
   public static hostSelector = '.lookup-custom-picker-modal';
 
   #getCheckboxes = this.locatorForAll(SkyCheckboxHarness);
-  #getSaveButton = this.locatorFor('.lookup-custom-picker-save-button');
+  #getSaveButton = this.locatorFor(SkyButtonHarness.with({ dataSkyId: 'custom-picker-save-button' }));
 
   public async checkItemAt(index: number): Promise<void> {
     await (await this.#getCheckboxes())[index].check();
@@ -3293,9 +3309,7 @@ export class PickerHarness extends ComponentHarness {
     }
   </sky-modal-content>
   <sky-modal-footer>
-    <button class="sky-btn sky-btn-primary lookup-custom-picker-save-button" type="button" (click)="save()">
-      Save
-    </button>
+    <sky-button buttonStyle="primary" data-sky-id="custom-picker-save-button" labelText="Save" (buttonClick)="save()" />
   </sky-modal-footer>
 </sky-modal>
 ```
@@ -3313,7 +3327,7 @@ export class PickerHarness extends ComponentHarness {
 ```typescript
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, inject } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SkyCheckboxModule, SkySelectionBoxModule } from '@skyux/forms';
+import { SkyButton, SkyCheckboxModule, SkySelectionBoxModule } from '@skyux/forms';
 import { SkyIconModule } from '@skyux/icon';
 import { SkyWaitModule } from '@skyux/indicators';
 import { SkyLookupShowMoreCustomPickerContext } from '@skyux/lookup';
@@ -3332,6 +3346,7 @@ import { Person } from './person';
   imports: [
     FormsModule,
     ReactiveFormsModule,
+    SkyButton,
     SkyCheckboxModule,
     SkyIconModule,
     SkyModalModule,
@@ -3405,7 +3420,7 @@ import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SkyIdModule } from '@skyux/core';
-import { SkyInputBoxModule } from '@skyux/forms';
+import { SkyButton, SkyInputBoxModule } from '@skyux/forms';
 import { SkyWaitService } from '@skyux/indicators';
 import {
   SkyAutocompleteSearchAsyncArgs,
@@ -3429,7 +3444,7 @@ import { Person } from './person';
   selector: 'app-lookup-add-item-example',
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, SkyIdModule, SkyInputBoxModule, SkyLookupModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, SkyButton, SkyIdModule, SkyInputBoxModule, SkyLookupModule],
 })
 export class LookupAddItemExampleComponent implements OnInit, OnDestroy {
   public favoritesForm: FormGroup<{
@@ -3520,8 +3535,8 @@ export class LookupAddItemExampleComponent implements OnInit, OnDestroy {
       </sky-input-box>
     </sky-modal-content>
     <sky-modal-footer>
-      <button class="sky-btn sky-btn-default" type="button" (click)="close()">Cancel</button>
-      <button class="sky-btn sky-btn-primary" type="submit">Add</button>
+      <sky-button labelText="Cancel" (buttonClick)="close()" />
+      <sky-button buttonStyle="primary" buttonType="submit" labelText="Add" />
     </sky-modal-footer>
   </sky-modal>
 </form>
@@ -3532,7 +3547,7 @@ export class LookupAddItemExampleComponent implements OnInit, OnDestroy {
 ```typescript
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { SkyInputBoxModule } from '@skyux/forms';
+import { SkyButton, SkyInputBoxModule } from '@skyux/forms';
 import { SkyModalInstance, SkyModalModule } from '@skyux/modals';
 
 let nextId = 21;
@@ -3541,7 +3556,7 @@ let nextId = 21;
   selector: 'app-add-item-modal',
   templateUrl: './add-item-modal.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [FormsModule, ReactiveFormsModule, SkyInputBoxModule, SkyModalModule],
+  imports: [FormsModule, ReactiveFormsModule, SkyButton, SkyInputBoxModule, SkyModalModule],
 })
 export class AddItemModalComponent {
   protected readonly formGroup: FormGroup;
@@ -3596,7 +3611,7 @@ export class AddItemModalComponent {
     <strong>Form model:</strong>
     <pre>{{ favoritesForm.value | json }}</pre>
   </div>
-  <button class="sky-btn sky-btn-default" type="submit">Submit</button>
+  <sky-button buttonType="submit" labelText="Submit" />
 </form>
 ```
 

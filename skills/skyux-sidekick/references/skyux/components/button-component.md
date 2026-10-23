@@ -262,7 +262,7 @@ This guidance applies to button labels and also to the headings on the pages or 
 
 NPM package
 
-`@skyux/forms`[View in NPM](https://www.npmjs.com/package/@skyux/forms) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/forms/src/lib/modules/button/button.ts#L25)
+`@skyux/forms`[View in NPM](https://www.npmjs.com/package/@skyux/forms) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/forms/src/lib/modules/button/button.ts#L28)
 
 Install with NPM
 
@@ -283,6 +283,22 @@ Buttons provide interactive elements for users to trigger actions in the system.
 Required
 
 The text to display as the button's label.
+
+#### `ariaControls: InputSignal<string | undefined>`
+
+The ID of the element that the button controls, such as a popup or a collapsible region.
+
+#### `ariaExpanded: InputSignal<boolean | undefined>`
+
+Whether the popup that the button controls is expanded. Only specify this when the button shows and hides a popup or other element, and update it as the element expands and collapses.
+
+#### `ariaHasPopup: InputSignal<SkyButtonAriaHasPopup | undefined>`
+
+The type of popup that the button opens. Use this when the button opens a menu, listbox, tree, grid, or dialog.
+
+#### `ariaLabel: InputSignal<string | undefined>`
+
+The accessible label for the button. Only specify this when the accessible label differs from the text specified for `labelText`. To specify an accessible label when no text is visible, use `labelText`, and set `labelHidden` to `true`.
 
 #### `block: InputSignalWithTransform<boolean, unknown>`
 
@@ -314,7 +330,7 @@ The name of the icon to display.
 
 #### `labelHidden: InputSignalWithTransform<boolean, unknown>`
 
-Whether to hide the button's label. When the label is hidden, `labelText` is used as the button's ARIA label.
+Whether to hide the button's label. When the label is hidden, `labelText` is used as the button's accessible label unless `ariaLabel` is also specified.
 
 Default: `false`
 
@@ -411,6 +427,38 @@ Focuses the button.
 #### Returns
 
 `Promise<void>`
+
+#### `getAriaControls(): Promise<string | null>`
+
+Gets the ID of the element the button controls, or `null` if `ariaControls` is not specified.
+
+#### Returns
+
+`Promise<string | null>`
+
+#### `getAriaExpanded(): Promise<boolean | null>`
+
+Gets the button's ARIA expanded state, or `null` if `ariaExpanded` is not specified.
+
+#### Returns
+
+`Promise<boolean | null>`
+
+#### `getAriaHasPopup(): Promise<SkyButtonAriaHasPopup | null>`
+
+Gets the button's ARIA has-popup value, or `null` if `ariaHasPopup` is not specified.
+
+#### Returns
+
+`Promise<SkyButtonAriaHasPopup | null>`
+
+#### `getAriaLabel(): Promise<string | null>`
+
+Gets the button's ARIA label, or `null` if `ariaLabel` is not specified.
+
+#### Returns
+
+`Promise<string | null>`
 
 #### `getButtonStyle(): Promise<SkyButtonStyle>`
 

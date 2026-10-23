@@ -34,4 +34,4 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 18  | SkyErrorHarnessFilters       | testing     | 359–374 | `Read file_path=./error.md offset=359 limit=16`  |
 | 19  | SkyErrorActionHarness        | testing     | 375–456 | `Read file_path=./error.md offset=375 limit=82`  |
 | 20  | SkyErrorImageHarness         | testing     | 457–538 | `Read file_path=./error.md offset=457 limit=82`  |
-| 21  | Code Examples                | examples    | 539–650 | `Read file_path=./error.md offset=539 limit=112` |
+| 21  | Code Examples                | examples    | 539–653 | `Read file_path=./error.md offset=539 limit=115` |

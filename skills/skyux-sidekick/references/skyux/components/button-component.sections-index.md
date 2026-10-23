@@ -22,9 +22,9 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 6   | Content                   | design      | 205–245 | `Read file_path=./button-component.md offset=205 limit=41`  |
 | 7   | Related information       | design      | 246–260 | `Read file_path=./button-component.md offset=246 limit=15`  |
 | 8   | Installation              | development | 261–270 | `Read file_path=./button-component.md offset=261 limit=10`  |
-| 9   | SkyButton                 | development | 271–336 | `Read file_path=./button-component.md offset=271 limit=66`  |
-| 10  | SkyButtonPermalink        | development | 337–362 | `Read file_path=./button-component.md offset=337 limit=26`  |
-| 11  | SkyButtonStyle            | development | 363–370 | `Read file_path=./button-component.md offset=363 limit=8`   |
-| 12  | SkyButtonType             | development | 371–380 | `Read file_path=./button-component.md offset=371 limit=10`  |
-| 13  | SkyButtonHarness          | testing     | 381–506 | `Read file_path=./button-component.md offset=381 limit=126` |
-| 14  | SkyButtonHarnessFilters   | testing     | 507–522 | `Read file_path=./button-component.md offset=507 limit=16`  |
+| 9   | SkyButton                 | development | 271–352 | `Read file_path=./button-component.md offset=271 limit=82`  |
+| 10  | SkyButtonPermalink        | development | 353–378 | `Read file_path=./button-component.md offset=353 limit=26`  |
+| 11  | SkyButtonStyle            | development | 379–386 | `Read file_path=./button-component.md offset=379 limit=8`   |
+| 12  | SkyButtonType             | development | 387–396 | `Read file_path=./button-component.md offset=387 limit=10`  |
+| 13  | SkyButtonHarness          | testing     | 397–554 | `Read file_path=./button-component.md offset=397 limit=158` |
+| 14  | SkyButtonHarnessFilters   | testing     | 555–570 | `Read file_path=./button-component.md offset=555 limit=16`  |

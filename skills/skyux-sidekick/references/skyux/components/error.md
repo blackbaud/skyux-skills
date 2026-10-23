@@ -545,6 +545,7 @@ Returns a child test element or null if not found.
 ```typescript
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyErrorModule } from '@skyux/errors';
+import { SkyButton } from '@skyux/forms';
 
 /**
  * @title Embed error within the page markup
@@ -553,7 +554,7 @@ import { SkyErrorModule } from '@skyux/errors';
   selector: 'app-errors-error-embedded-example',
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [SkyErrorModule],
+  imports: [SkyButton, SkyErrorModule],
 })
 export class ErrorsErrorEmbeddedExampleComponent {
   protected customAction(): void {
@@ -567,25 +568,25 @@ export class ErrorsErrorEmbeddedExampleComponent {
 ```html
 <sky-error errorType="broken">
   <sky-error-action>
-    <button class="sky-btn sky-btn-link" type="button" (click)="customAction()">Try again</button>
+    <sky-button buttonStyle="link" labelText="Try again" (buttonClick)="customAction()" />
   </sky-error-action>
 </sky-error>
 
 <sky-error errorType="notfound">
   <sky-error-action>
-    <button class="sky-btn sky-btn-link" type="button" (click)="customAction()">Go back</button>
+    <sky-button buttonStyle="link" labelText="Go back" (buttonClick)="customAction()" />
   </sky-error-action>
 </sky-error>
 
 <sky-error errorType="construction">
   <sky-error-action>
-    <button class="sky-btn sky-btn-link" type="button" (click)="customAction()">Go back</button>
+    <sky-button buttonStyle="link" labelText="Go back" (buttonClick)="customAction()" />
   </sky-error-action>
 </sky-error>
 
 <sky-error errorType="security">
   <sky-error-action>
-    <button class="sky-btn sky-btn-link" type="button" (click)="customAction()">Go back</button>
+    <sky-button buttonStyle="link" labelText="Go back" (buttonClick)="customAction()" />
   </sky-error-action>
 </sky-error>
 
@@ -600,7 +601,7 @@ export class ErrorsErrorEmbeddedExampleComponent {
   <sky-error-title> Custom error with a custom image. </sky-error-title>
   <sky-error-description> Custom description. </sky-error-description>
   <sky-error-action>
-    <button class="sky-btn sky-btn-link" type="button" (click)="customAction()">Custom action</button>
+    <sky-button buttonStyle="link" labelText="Custom action" (buttonClick)="customAction()" />
   </sky-error-action>
 </sky-error>
 
@@ -608,7 +609,7 @@ export class ErrorsErrorEmbeddedExampleComponent {
   <sky-error-title [replaceDefaultTitle]="true"> Custom error with a default image. </sky-error-title>
   <sky-error-description [replaceDefaultDescription]="true"> Custom description. </sky-error-description>
   <sky-error-action>
-    <button class="sky-btn sky-btn-link" type="button" (click)="customAction()">Custom action</button>
+    <sky-button buttonStyle="link" labelText="Custom action" (buttonClick)="customAction()" />
   </sky-error-action>
 </sky-error>
 ```
@@ -620,6 +621,7 @@ export class ErrorsErrorEmbeddedExampleComponent {
 ```typescript
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { SkyErrorModalService } from '@skyux/errors';
+import { SkyButton } from '@skyux/forms';
 
 /**
  * @title Show an error inside a modal
@@ -628,6 +630,7 @@ import { SkyErrorModalService } from '@skyux/errors';
   selector: 'app-errors-error-modal-example',
   changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
+  imports: [SkyButton],
 })
 export class ErrorsErrorModalExampleComponent {
   readonly #errorSvc = inject(SkyErrorModalService);
@@ -645,5 +648,5 @@ export class ErrorsErrorModalExampleComponent {
 #### example.component.html
 
 ```html
-<button class="sky-btn sky-btn-default" type="button" (click)="openErrorModal()">Open error modal</button>
+<sky-button ariaHasPopup="dialog" labelText="Open error modal" (buttonClick)="openErrorModal()" />
 ```

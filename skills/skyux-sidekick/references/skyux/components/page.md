@@ -769,7 +769,7 @@ Only find instances whose text content matches the given value.
 
 ```typescript
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { SkyIconModule } from '@skyux/icon';
+import { SkyButton } from '@skyux/forms';
 import { SkyPageModule, SkyRecentLink } from '@skyux/pages';
 
 import { HomePageContentComponent } from './home-page-content.component';
@@ -782,7 +782,7 @@ import { HomePageContentComponent } from './home-page-content.component';
   selector: 'app-pages-page-home-page-blocks-layout-example',
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [HomePageContentComponent, SkyIconModule, SkyPageModule],
+  imports: [HomePageContentComponent, SkyButton, SkyPageModule],
 })
 export class PagesPageHomePageBlocksLayoutExampleComponent {
   protected readonly recentLinks: SkyRecentLink[] = [
@@ -806,7 +806,7 @@ export class PagesPageHomePageBlocksLayoutExampleComponent {
 <sky-page layout="blocks">
   <sky-page-header pageTitle="Home">
     <sky-page-header-actions>
-      <button type="button" class="sky-btn sky-btn-default"><sky-icon iconName="add" /> New</button>
+      <sky-button iconName="add" labelText="New" />
     </sky-page-header-actions>
   </sky-page-header>
   <sky-page-content>
@@ -1292,10 +1292,7 @@ export interface Item {
   <div class="sky-theme-margin-bottom-xs">
     <sky-data-manager-toolbar>
       <sky-data-manager-toolbar-primary-item>
-        <button aria-label="New dashboard" class="sky-btn sky-btn-default" type="button">
-          <sky-icon iconName="add" />
-          New
-        </button>
+        <sky-button ariaLabel="New dashboard" iconName="add" labelText="New" />
       </sky-data-manager-toolbar-primary-item>
       <sky-list-summary>
         <sky-list-summary-item labelText="Dashboards" [value]="items.length" />
@@ -1322,7 +1319,7 @@ import {
   SkyDataManagerState,
   SkyDataViewConfig,
 } from '@skyux/data-manager';
-import { SkyIconModule } from '@skyux/icon';
+import { SkyButton } from '@skyux/forms';
 import { SkyListSummaryModule } from '@skyux/lists';
 
 import { AgGridAngular } from 'ag-grid-angular';
@@ -1340,7 +1337,7 @@ ModuleRegistry.registerModules([AllCommunityModule]);
   templateUrl: './list-page-content.component.html',
   providers: [SkyDataManagerService],
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [AgGridAngular, SkyAgGridModule, SkyDataManagerModule, SkyIconModule, SkyListSummaryModule],
+  imports: [AgGridAngular, SkyAgGridModule, SkyButton, SkyDataManagerModule, SkyListSummaryModule],
 })
 export class ListPageContentComponent {
   protected items: Item[] = [
@@ -1634,10 +1631,7 @@ describe('List page tabs layout example', () => {
   <div class="sky-theme-margin-bottom-xs">
     <sky-data-manager-toolbar>
       <sky-data-manager-toolbar-primary-item>
-        <button aria-label="New contact" class="sky-btn sky-btn-default" type="button">
-          <sky-icon iconName="add" />
-          New
-        </button>
+        <sky-button ariaLabel="New contact" iconName="add" labelText="New" />
       </sky-data-manager-toolbar-primary-item>
       <sky-list-summary>
         <sky-list-summary-item labelText="Contacts" [value]="contacts.length" />
@@ -1663,7 +1657,7 @@ import {
   SkyDataManagerState,
   SkyDataViewConfig,
 } from '@skyux/data-manager';
-import { SkyIconModule } from '@skyux/icon';
+import { SkyButton } from '@skyux/forms';
 import { SkyListSummaryModule } from '@skyux/lists';
 
 import { AgGridAngular } from 'ag-grid-angular';
@@ -1685,7 +1679,7 @@ interface Contact {
   templateUrl: './list-page-contacts-grid.component.html',
   providers: [SkyDataManagerService],
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [AgGridAngular, SkyAgGridModule, SkyDataManagerModule, SkyIconModule, SkyListSummaryModule],
+  imports: [AgGridAngular, SkyAgGridModule, SkyButton, SkyDataManagerModule, SkyListSummaryModule],
 })
 export class ListPageContactsGridComponent implements OnInit {
   @Input()
@@ -1963,9 +1957,7 @@ describe('Record page blocks layout example', () => {
     <sky-column [screenMedium]="4" [screenSmall]="12">
       <sky-box class="sky-theme-margin-bottom-xl" headingText="Details">
         <sky-box-controls>
-          <button aria-label="Edit button for details" class="sky-btn sky-btn-icon-borderless" type="button">
-            <sky-icon iconName="edit" />
-          </button>
+          <sky-button buttonStyle="icon-borderless" iconName="edit" labelHidden labelText="Edit button for details" />
         </sky-box-controls>
         <sky-box-content>
           <sky-description-list mode="vertical">
@@ -2056,7 +2048,7 @@ describe('Record page blocks layout example', () => {
 ```typescript
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { SkyIconModule } from '@skyux/icon';
+import { SkyButton } from '@skyux/forms';
 import { SkyKeyInfoModule } from '@skyux/indicators';
 import { SkyBoxModule, SkyDescriptionListModule, SkyFluidGridModule } from '@skyux/layout';
 import { SkyRepeaterModule } from '@skyux/lists';
@@ -2069,9 +2061,9 @@ import { SkyRepeaterModule } from '@skyux/lists';
   imports: [
     CommonModule,
     SkyBoxModule,
+    SkyButton,
     SkyDescriptionListModule,
     SkyFluidGridModule,
-    SkyIconModule,
     SkyKeyInfoModule,
     SkyRepeaterModule,
   ],
@@ -2158,6 +2150,7 @@ export class RecordPageContentComponent {
 ```typescript
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkyAvatarModule } from '@skyux/avatar';
+import { SkyButton } from '@skyux/forms';
 import { SkyAlertModule, SkyLabelModule } from '@skyux/indicators';
 import { SkyPageModule } from '@skyux/pages';
 
@@ -2171,7 +2164,7 @@ import { RecordPageContentComponent } from './record-page-content.component';
   selector: 'app-pages-page-record-page-tabs-layout-example',
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [RecordPageContentComponent, SkyAlertModule, SkyAvatarModule, SkyLabelModule, SkyPageModule],
+  imports: [RecordPageContentComponent, SkyAlertModule, SkyAvatarModule, SkyButton, SkyLabelModule, SkyPageModule],
 })
 export class PagesPageRecordPageTabsLayoutExampleComponent {}
 ```
@@ -2288,8 +2281,8 @@ export interface Detail {
       <sky-label labelType="info" descriptionType="important-info"> VIP </sky-label>
     </sky-page-header-details>
     <sky-page-header-actions>
-      <button class="sky-btn sky-btn-default" type="button">Email contact</button>
-      <button class="sky-btn sky-btn-default" type="button">Add to my contacts</button>
+      <sky-button labelText="Email contact" />
+      <sky-button labelText="Add to my contacts" />
     </sky-page-header-actions>
   </sky-page-header>
   <sky-page-content>
@@ -2363,10 +2356,7 @@ describe('Record page tabs layout example', () => {
   <div class="sky-theme-margin-bottom-xs">
     <sky-data-manager-toolbar>
       <sky-data-manager-toolbar-primary-item>
-        <button aria-label="New attachment" class="sky-btn sky-btn-default" type="button">
-          <sky-icon iconName="add" />
-          New
-        </button>
+        <sky-button ariaLabel="New attachment" iconName="add" labelText="New" />
       </sky-data-manager-toolbar-primary-item>
     </sky-data-manager-toolbar>
   </div>
@@ -2395,7 +2385,7 @@ import {
   SkyDataManagerState,
   SkyDataViewConfig,
 } from '@skyux/data-manager';
-import { SkyIconModule } from '@skyux/icon';
+import { SkyButton } from '@skyux/forms';
 import { SkyKeyInfoModule } from '@skyux/indicators';
 
 import { AgGridAngular } from 'ag-grid-angular';
@@ -2412,7 +2402,7 @@ ModuleRegistry.registerModules([AllCommunityModule]);
   templateUrl: './record-page-attachments-tab.component.html',
   providers: [SkyDataManagerService],
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [AgGridAngular, SkyAgGridModule, SkyDataManagerModule, SkyKeyInfoModule, SkyIconModule],
+  imports: [AgGridAngular, SkyAgGridModule, SkyButton, SkyDataManagerModule, SkyKeyInfoModule],
 })
 export class RecordPageAttachmentsTabComponent implements OnInit {
   protected items: Attachment[] = [
@@ -2549,10 +2539,7 @@ export class RecordPageContentComponent {
 <div class="sky-theme-margin-bottom-xs">
   <sky-toolbar>
     <sky-toolbar-item>
-      <button class="sky-btn sky-btn-default" type="button" aria-label="New note">
-        <sky-icon iconName="add" />
-        New
-      </button>
+      <sky-button ariaLabel="New note" iconName="add" labelText="New" />
     </sky-toolbar-item>
     <sky-toolbar-item>
       <sky-sort [showButtonText]="true">
@@ -2565,10 +2552,7 @@ export class RecordPageContentComponent {
       </sky-sort>
     </sky-toolbar-item>
     <sky-toolbar-item>
-      <button class="sky-btn sky-btn-default" type="button" aria-label="Export notes">
-        <sky-icon iconName="document-xls" />
-        Export
-      </button>
+      <sky-button ariaLabel="Export notes" iconName="document-xls" labelText="Export" />
     </sky-toolbar-item>
     <sky-toolbar-item>
       <sky-search placeholderText="Find in notes" />
@@ -2628,7 +2612,7 @@ export class RecordPageContentComponent {
 
 ```typescript
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { SkyIconModule } from '@skyux/icon';
+import { SkyButton } from '@skyux/forms';
 import { SkyKeyInfoModule } from '@skyux/indicators';
 import { SkyToolbarModule } from '@skyux/layout';
 import { SkyRepeaterModule, SkySortModule } from '@skyux/lists';
@@ -2640,8 +2624,8 @@ import { SkyDropdownModule } from '@skyux/popovers';
   templateUrl: './record-page-notes-tab.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
+    SkyButton,
     SkyDropdownModule,
-    SkyIconModule,
     SkyKeyInfoModule,
     SkyRepeaterModule,
     SkySearchModule,
@@ -2673,9 +2657,7 @@ export class RecordPageNotesTabComponent {
     <sky-column [screenSmall]="4" [screenXSmall]="12">
       <sky-box class="sky-theme-margin-bottom-xl" headingText="Details">
         <sky-box-controls>
-          <button aria-label="Edit button for details" class="sky-btn sky-btn-icon-borderless" type="button">
-            <sky-icon iconName="edit" />
-          </button>
+          <sky-button buttonStyle="icon-borderless" iconName="edit" labelHidden labelText="Edit button for details" />
         </sky-box-controls>
         <sky-box-content>
           <sky-description-list mode="vertical">
@@ -2766,7 +2748,7 @@ export class RecordPageNotesTabComponent {
 ```typescript
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { SkyIconModule } from '@skyux/icon';
+import { SkyButton } from '@skyux/forms';
 import { SkyKeyInfoModule } from '@skyux/indicators';
 import { SkyBoxModule, SkyDescriptionListModule, SkyFluidGridModule } from '@skyux/layout';
 import { SkyRepeaterModule } from '@skyux/lists';
@@ -2781,9 +2763,9 @@ import { Detail } from './detail';
   imports: [
     CommonModule,
     SkyBoxModule,
+    SkyButton,
     SkyDescriptionListModule,
     SkyFluidGridModule,
-    SkyIconModule,
     SkyKeyInfoModule,
     SkyRepeaterModule,
   ],
@@ -2872,6 +2854,7 @@ export class RecordPageOverviewTabComponent {
 
 ```typescript
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { SkyButton } from '@skyux/forms';
 import { SkyAlertModule } from '@skyux/indicators';
 import { SkyPageModule } from '@skyux/pages';
 
@@ -2885,7 +2868,7 @@ import { SplitViewPageContentComponent } from './split-view-page-content.compone
   selector: 'app-pages-page-split-view-page-fit-layout-example',
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [SkyAlertModule, SkyPageModule, SplitViewPageContentComponent],
+  imports: [SkyAlertModule, SkyButton, SkyPageModule, SplitViewPageContentComponent],
 })
 export class PagesPageSplitViewPageFitLayoutExampleComponent {}
 ```
@@ -2911,7 +2894,7 @@ export class PagesPageSplitViewPageFitLayoutExampleComponent {}
       </sky-alert>
     </sky-page-header-alerts>
     <sky-page-header-actions>
-      <button class="sky-btn sky-btn-default" type="button">Approve all</button>
+      <sky-button labelText="Approve all" />
     </sky-page-header-actions>
   </sky-page-header>
   <sky-page-content>
@@ -3780,4 +3763,215 @@ export interface Record {
   approvedAmount: number;
   comments: string;
 }
+```
+
+### Data grid with data manager in a fit layout page for large datasets
+
+#### example.ts (primary file)
+
+```typescript
+import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { SkyDataGrid, SkyDataGridColumn } from '@skyux/data-grid';
+import { SkyDataManagerModule, SkyDataManagerService, SkyDataManagerState } from '@skyux/data-manager';
+import { SkyPageModule } from '@skyux/pages';
+
+import { map } from 'rxjs';
+
+import { TRANSACTIONS } from './data';
+
+/**
+ * Docking the data grid to fill a fit layout page lets the grid render only the
+ * rows in view, so it can load a large dataset at once instead of paging
+ * through it. This requires the grid to be the predominant element on the page.
+ * @title Data grid with data manager in a fit layout page for large datasets
+ * @docsDemoHidden
+ */
+@Component({
+  selector: 'app-pages-page-data-manager-data-grid-fit-layout-example',
+  templateUrl: './example.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [SkyDataGrid, SkyDataGridColumn, SkyDataManagerModule, SkyPageModule],
+  providers: [SkyDataManagerService],
+})
+export class PagesPageDataManagerDataGridFitLayoutExample {
+  protected readonly viewId = 'gridView';
+
+  readonly #dataManagerSvc = inject(SkyDataManagerService);
+  readonly #searchText = toSignal(
+    this.#dataManagerSvc.getDataStateUpdates(this.viewId).pipe(map((state) => state.searchText ?? '')),
+    { initialValue: '' },
+  );
+
+  protected readonly data = computed(() => {
+    const searchText = this.#searchText().toLowerCase();
+    return TRANSACTIONS.filter(({ vendor, category, reference }) =>
+      [vendor, category, reference].some((value) => value.toLowerCase().includes(searchText)),
+    );
+  });
+
+  constructor() {
+    this.#dataManagerSvc.initDataManager({
+      activeViewId: this.viewId,
+      dataManagerConfig: {},
+      defaultDataState: new SkyDataManagerState({}),
+    });
+
+    this.#dataManagerSvc.initDataView({
+      id: this.viewId,
+      name: 'Grid View',
+      columnPickerEnabled: true,
+      searchEnabled: true,
+    });
+  }
+}
+```
+
+#### data.ts
+
+```typescript
+const VENDORS = ['Acme Office Supply', 'Blue Ridge Catering', 'City Print Shop', 'Delta Travel', 'Evergreen Utilities'];
+
+const CATEGORIES = ['Catering', 'Office', 'Printing', 'Travel', 'Utilities'];
+
+export const TRANSACTIONS = Array.from({ length: 1000 }, (_, i) => ({
+  id: String(i + 1),
+  date: `2026-${String((i % 12) + 1).padStart(2, '0')}-${String((i % 28) + 1).padStart(2, '0')}`,
+  vendor: VENDORS[i % VENDORS.length],
+  category: CATEGORIES[(i * 3) % CATEGORIES.length],
+  amount: ((i * 37) % 2000) + 0.99,
+  reference: `TXN-${String(i + 1).padStart(5, '0')}`,
+}));
+```
+
+#### example.html
+
+```html
+<sky-page layout="fit">
+  <sky-page-header pageTitle="Transactions">
+    <sky-page-header-details>
+      All 1,000 transactions load at once. The grid fills the page and renders only the rows in view, so no paging is
+      needed.
+    </sky-page-header-details>
+  </sky-page-header>
+  <sky-page-content>
+    <sky-data-manager dock="fill">
+      <sky-data-manager-toolbar />
+      <sky-data-view [viewId]="viewId">
+        <sky-data-grid
+          data-sky-id="transactions-grid"
+          dock="fill"
+          skyDataManagerViewController
+          labelText="Transactions"
+          [data]="data()"
+        >
+          <sky-data-grid-column dataType="date" field="date" flexWidth="1" headingText="Date" />
+          <sky-data-grid-column field="vendor" flexWidth="2" headingText="Vendor" />
+          <sky-data-grid-column field="category" flexWidth="1" headingText="Category" />
+          <sky-data-grid-column dataType="number" field="amount" flexWidth="1" headingText="Amount" />
+          <sky-data-grid-column columnHidden field="reference" flexWidth="1" headingText="Reference" />
+        </sky-data-grid>
+      </sky-data-view>
+    </sky-data-manager>
+  </sky-page-content>
+</sky-page>
+```
+
+#### example.spec.ts
+
+```typescript
+import { HarnessLoader } from '@angular/cdk/testing';
+import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
+import { TestBed } from '@angular/core/testing';
+import { provideNoopSkyAnimations } from '@skyux/core';
+import { SkyDataGridHarness } from '@skyux/data-grid/testing';
+import { SkyDataManagerHarness } from '@skyux/data-manager/testing';
+import { SkyPageHarness } from '@skyux/pages/testing';
+
+import { PagesPageDataManagerDataGridFitLayoutExample } from './example';
+
+describe('Data grid with data manager in a fit layout page example', () => {
+  async function setupTest(): Promise<{
+    dataManagerHarness: SkyDataManagerHarness;
+    gridHarness: SkyDataGridHarness;
+    loader: HarnessLoader;
+  }> {
+    TestBed.configureTestingModule({
+      imports: [PagesPageDataManagerDataGridFitLayoutExample],
+      providers: [provideNoopSkyAnimations()],
+    });
+
+    const fixture = TestBed.createComponent(PagesPageDataManagerDataGridFitLayoutExample);
+    const loader = TestbedHarnessEnvironment.loader(fixture);
+
+    return {
+      dataManagerHarness: await loader.getHarness(SkyDataManagerHarness),
+      gridHarness: await loader.getHarness(SkyDataGridHarness.with({ dataSkyId: 'transactions-grid' })),
+      loader,
+    };
+  }
+
+  it('should dock the data manager and grid to fill a fit layout page', async () => {
+    const { dataManagerHarness, gridHarness, loader } = await setupTest();
+
+    const pageHarness = await loader.getHarness(SkyPageHarness);
+
+    await expectAsync(pageHarness.getLayout()).toBeResolvedTo('fit');
+    await expectAsync(dataManagerHarness.getDockType()).toBeResolvedTo('fill');
+    await expectAsync(gridHarness.getDockType()).toBeResolvedTo('fill');
+  });
+
+  it('should load every row without paging', async () => {
+    const { gridHarness } = await setupTest();
+
+    await expectAsync(gridHarness.isGridReady()).toBeResolvedTo(true);
+    await expectAsync(gridHarness.isLoading()).toBeResolvedTo(false);
+    await expectAsync(gridHarness.getDisplayedRowCount()).toBeResolvedTo(1000);
+    await expectAsync(gridHarness.getPagingOrNull()).toBeResolvedTo(null);
+  });
+
+  it('should hide the column marked columnHidden', async () => {
+    const { gridHarness } = await setupTest();
+
+    await expectAsync(gridHarness.getDisplayedColumnIds()).toBeResolvedTo(['date', 'vendor', 'category', 'amount']);
+    await expectAsync(gridHarness.getDisplayedColumnHeaderNames()).toBeResolvedTo([
+      'Date',
+      'Vendor',
+      'Category',
+      'Amount',
+    ]);
+  });
+
+  it('should show and hide columns using the column picker', async () => {
+    const { dataManagerHarness, gridHarness } = await setupTest();
+
+    const toolbarHarness = await dataManagerHarness.getToolbar();
+    const columnPickerHarness = await toolbarHarness.openColumnPicker();
+
+    await (await columnPickerHarness.getColumn({ titleText: 'Category' })).deselect();
+    await (await columnPickerHarness.getColumn({ titleText: 'Reference' })).select();
+    await columnPickerHarness.saveAndClose();
+
+    await expectAsync(gridHarness.getDisplayedColumnIds()).toBeResolvedTo(['date', 'vendor', 'amount', 'reference']);
+  });
+
+  it('should filter the rows using the search', async () => {
+    const { dataManagerHarness, gridHarness } = await setupTest();
+
+    const toolbarHarness = await dataManagerHarness.getToolbar();
+    const searchHarness = await toolbarHarness.getSearch();
+    if (!searchHarness) {
+      throw new Error('Expected the toolbar to display a search.');
+    }
+
+    await searchHarness.enterText('delta');
+    await expectAsync(gridHarness.getDisplayedRowCount()).toBeResolvedTo(200);
+
+    await searchHarness.enterText('TXN-00001');
+    await expectAsync(gridHarness.getDisplayedRowCount()).toBeResolvedTo(1);
+
+    await searchHarness.clear();
+    await expectAsync(gridHarness.getDisplayedRowCount()).toBeResolvedTo(1000);
+  });
+});
 ```

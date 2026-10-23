@@ -32,4 +32,4 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 16  | SkyConfirmButtonHarnessFilters | testing     | 416–436 | `Read file_path=./confirm.md offset=416 limit=21`  |
 | 17  | SkyConfirmTestingModule        | testing     | 437–444 | `Read file_path=./confirm.md offset=437 limit=8`   |
 | 18  | SkyConfirmTestingController    | testing     | 445–500 | `Read file_path=./confirm.md offset=445 limit=56`  |
-| 19  | Code Examples                  | examples    | 501–823 | `Read file_path=./confirm.md offset=501 limit=323` |
+| 19  | Code Examples                  | examples    | 501–820 | `Read file_path=./confirm.md offset=501 limit=320` |

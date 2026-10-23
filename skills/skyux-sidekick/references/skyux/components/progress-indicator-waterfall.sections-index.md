@@ -39,4 +39,4 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 23  | SkyProgressIndicatorFilters                    | testing     | 544–559 | `Read file_path=./progress-indicator-waterfall.md offset=544 limit=16`  |
 | 24  | SkyProgressIndicatorItemHarness                | testing     | 560–621 | `Read file_path=./progress-indicator-waterfall.md offset=560 limit=62`  |
 | 25  | SkyProgressIndicatorItemFilters                | testing     | 622–637 | `Read file_path=./progress-indicator-waterfall.md offset=622 limit=16`  |
-| 26  | Code Examples                                  | examples    | 638–913 | `Read file_path=./progress-indicator-waterfall.md offset=638 limit=276` |
+| 26  | Code Examples                                  | examples    | 638–938 | `Read file_path=./progress-indicator-waterfall.md offset=638 limit=301` |

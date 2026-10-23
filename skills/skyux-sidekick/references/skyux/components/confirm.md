@@ -506,6 +506,7 @@ Closes the confirm dialog with the "ok" action.
 
 ```typescript
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { SkyButton } from '@skyux/forms';
 import { SkyConfirmService } from '@skyux/modals';
 
 /**
@@ -514,9 +515,8 @@ import { SkyConfirmService } from '@skyux/modals';
 @Component({
   selector: 'app-modals-confirm-basic-with-controller-example',
   changeDetection: ChangeDetectionStrategy.Eager,
-  template: `<button aria-haspopup="dialog" class="sky-btn sky-btn-default" type="button" (click)="launchConfirm()">
-    Open confirm
-  </button>`,
+  imports: [SkyButton],
+  template: `<sky-button ariaHasPopup="dialog" labelText="Open confirm" (buttonClick)="launchConfirm()" />`,
 })
 export class ModalsConfirmBasicWithControllerExampleComponent {
   public selectedAction: string | undefined;
@@ -600,6 +600,7 @@ describe('Testing with SkyConfirmTestingController', () => {
 
 ```typescript
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { SkyButton } from '@skyux/forms';
 import { SkyConfirmButtonConfig, SkyConfirmInstance, SkyConfirmService, SkyConfirmType } from '@skyux/modals';
 
 /**
@@ -609,6 +610,7 @@ import { SkyConfirmButtonConfig, SkyConfirmInstance, SkyConfirmService, SkyConfi
   selector: 'app-modals-confirm-basic-with-harness-example',
   changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
+  imports: [SkyButton],
 })
 export class ModalsConfirmBasicWithHarnessExampleComponent {
   protected selectedAction: string | undefined;
@@ -707,41 +709,35 @@ export class ModalsConfirmBasicWithHarnessExampleComponent {
 #### example.component.html
 
 ```html
-<button
-  aria-haspopup="dialog"
-  class="sky-btn sky-btn-default sky-theme-margin-right-s ok-confirm-btn"
-  type="button"
-  (click)="openOKConfirm()"
->
-  OK confirm
-</button>
+<sky-button
+  ariaHasPopup="dialog"
+  class="sky-theme-margin-right-s"
+  data-sky-id="ok-confirm-button"
+  labelText="OK confirm"
+  (buttonClick)="openOKConfirm()"
+/>
 
-<button
-  aria-haspopup="dialog"
-  class="sky-btn sky-btn-default sky-theme-margin-right-s two-action-confirm-btn"
-  type="button"
-  (click)="openTwoActionConfirm()"
->
-  Confirm with two actions
-</button>
+<sky-button
+  ariaHasPopup="dialog"
+  class="sky-theme-margin-right-s"
+  data-sky-id="two-action-confirm-button"
+  labelText="Confirm with two actions"
+  (buttonClick)="openTwoActionConfirm()"
+/>
 
-<button
-  aria-haspopup="dialog"
-  class="sky-btn sky-btn-default sky-theme-margin-right-s"
-  type="button"
-  (click)="openThreeActionConfirm()"
->
-  Confirm with three actions
-</button>
+<sky-button
+  ariaHasPopup="dialog"
+  class="sky-theme-margin-right-s"
+  labelText="Confirm with three actions"
+  (buttonClick)="openThreeActionConfirm()"
+/>
 
-<button
-  aria-haspopup="dialog"
-  class="sky-btn sky-btn-default sky-theme-margin-right-s"
-  type="button"
-  (click)="openDeleteConfirm()"
->
-  Confirm with delete button
-</button>
+<sky-button
+  ariaHasPopup="dialog"
+  class="sky-theme-margin-right-s"
+  labelText="Confirm with delete button"
+  (buttonClick)="openDeleteConfirm()"
+/>
 
 @if (selectedAction) { @if (selectedText) {
 <p class="displayed-text">
@@ -757,20 +753,21 @@ export class ModalsConfirmBasicWithHarnessExampleComponent {
 ```typescript
 import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { SkyButtonHarness } from '@skyux/forms/testing';
 import { SkyConfirmHarness } from '@skyux/modals/testing';
 
 import { ModalsConfirmBasicWithHarnessExampleComponent } from './example.component';
 
 describe('Testing with SkyConfirmHarness', () => {
-  async function setupTest(confirmBtnClass: string): Promise<{
+  async function setupTest(openButtonDataSkyId: string): Promise<{
     confirmHarness: SkyConfirmHarness;
     fixture: ComponentFixture<ModalsConfirmBasicWithHarnessExampleComponent>;
   }> {
     const fixture = TestBed.createComponent(ModalsConfirmBasicWithHarnessExampleComponent);
-    const el = fixture.nativeElement as HTMLElement;
-    const openBtn = el.querySelector<HTMLButtonElement>(confirmBtnClass);
+    const loader = TestbedHarnessEnvironment.loader(fixture);
+    const openButton = await loader.getHarness(SkyButtonHarness.with({ dataSkyId: openButtonDataSkyId }));
 
-    openBtn?.click();
+    await openButton.click();
 
     const rootLoader = TestbedHarnessEnvironment.documentRootLoader(fixture);
     const confirmHarness = await rootLoader.getHarness(SkyConfirmHarness);
@@ -794,7 +791,7 @@ describe('Testing with SkyConfirmHarness', () => {
   });
 
   it('should show the correct text when OK is clicked on an OK confirm', async () => {
-    const { confirmHarness, fixture } = await setupTest('.ok-confirm-btn');
+    const { confirmHarness, fixture } = await setupTest('ok-confirm-button');
 
     await confirmHarness.clickOkButton();
 
@@ -806,7 +803,7 @@ describe('Testing with SkyConfirmHarness', () => {
   });
 
   it('should show the correct text when "Finalize" is clicked on a custom confirm', async () => {
-    const { confirmHarness, fixture } = await setupTest('.two-action-confirm-btn');
+    const { confirmHarness, fixture } = await setupTest('two-action-confirm-button');
 
     await confirmHarness.clickCustomButton({ text: 'Finalize' });
 

@@ -698,6 +698,7 @@ Returns a child test element or null if not found.
 ```typescript
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { SkyFlyoutInstance, SkyFlyoutService } from '@skyux/flyout';
+import { SkyButton } from '@skyux/forms';
 
 import { FlyoutComponent } from './flyout.component';
 
@@ -708,6 +709,7 @@ import { FlyoutComponent } from './flyout.component';
   selector: 'app-flyout-basic-example',
   changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
+  imports: [SkyButton],
 })
 export class FlyoutBasicExampleComponent {
   #flyout: SkyFlyoutInstance<FlyoutComponent> | undefined;
@@ -725,7 +727,6 @@ export class FlyoutBasicExampleComponent {
   public openFlyoutWithCustomWidth(): void {
     this.#flyout = this.#flyoutSvc.open(FlyoutComponent, {
       ariaLabelledBy: 'flyout-title',
-      ariaRole: 'dialog',
       defaultWidth: 350,
       maxWidth: 500,
       minWidth: 200,
@@ -739,7 +740,6 @@ export class FlyoutBasicExampleComponent {
   protected openSimpleFlyout(): void {
     this.#flyout = this.#flyoutSvc.open(FlyoutComponent, {
       ariaLabelledBy: 'flyout-title',
-      ariaRole: 'dialog',
     });
 
     this.#flyout.closed.subscribe(() => {
@@ -752,17 +752,21 @@ export class FlyoutBasicExampleComponent {
 #### example.component.html
 
 ```html
-<button class="sky-btn sky-btn-default sky-theme-margin-right-s" type="button" (click)="openSimpleFlyout()">
-  Open flyout
-</button>
+<sky-button
+  ariaHasPopup="dialog"
+  class="sky-theme-margin-right-s"
+  labelText="Open flyout"
+  (buttonClick)="openSimpleFlyout()"
+/>
 
-<button class="sky-btn sky-btn-default sky-theme-margin-right-s" type="button" (click)="openFlyoutWithCustomWidth()">
-  Open flyout with custom width
-</button>
+<sky-button
+  ariaHasPopup="dialog"
+  class="sky-theme-margin-right-s"
+  labelText="Open flyout with custom width"
+  (buttonClick)="openFlyoutWithCustomWidth()"
+/>
 
-<button class="sky-btn sky-btn-default" type="button" (click)="closeAndRemoveFlyout()">
-  Close flyout programmatically
-</button>
+<sky-button labelText="Close flyout programmatically" (buttonClick)="closeAndRemoveFlyout()" />
 ```
 
 #### example.component.spec.ts
@@ -799,7 +803,6 @@ describe('Basic flyout example', () => {
     const { flyoutHarness } = await setupTest();
 
     await expectAsync(flyoutHarness.getAriaLabelledBy()).toBeResolvedTo('flyout-title');
-    await expectAsync(flyoutHarness.getAriaRole()).toBeResolvedTo('dialog');
     await expectAsync(flyoutHarness.getFlyoutWidth()).toBeResolvedTo(350);
     await expectAsync(flyoutHarness.getFlyoutMinWidth()).toBeResolvedTo(200);
     await expectAsync(flyoutHarness.getFlyoutMaxWidth()).toBeResolvedTo(500);
@@ -839,6 +842,7 @@ export class FlyoutComponent {}
 ```typescript
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { SkyFlyoutInstance, SkyFlyoutService } from '@skyux/flyout';
+import { SkyButton } from '@skyux/forms';
 
 import { FlyoutComponent } from './flyout.component';
 
@@ -849,6 +853,7 @@ import { FlyoutComponent } from './flyout.component';
   selector: 'app-flyout-custom-headers-example',
   changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
+  imports: [SkyButton],
 })
 export class FlyoutCustomHeadersExampleComponent {
   public recordNumber = 0;
@@ -863,7 +868,6 @@ export class FlyoutCustomHeadersExampleComponent {
   public openFlyoutWithIterators(): void {
     this.#flyout = this.#flyoutSvc.open(FlyoutComponent, {
       ariaLabelledBy: 'flyout-title',
-      ariaRole: 'dialog',
       showIterator: true,
       iteratorNextButtonDisabled: this.#nextButtonDisabled(),
       iteratorPreviousButtonDisabled: this.#previousButtonDisabled(),
@@ -891,7 +895,6 @@ export class FlyoutCustomHeadersExampleComponent {
   public openFlyoutWithPrimaryAction(): void {
     this.#flyout = this.#flyoutSvc.open(FlyoutComponent, {
       ariaLabelledBy: 'flyout-title',
-      ariaRole: 'dialog',
       primaryAction: {
         label: 'Save',
         callback: () => {
@@ -904,7 +907,6 @@ export class FlyoutCustomHeadersExampleComponent {
   public openFlyoutWithRoutePermalink(): void {
     this.#flyout = this.#flyoutSvc.open(FlyoutComponent, {
       ariaLabelledBy: 'flyout-title',
-      ariaRole: 'dialog',
       permalink: {
         label: 'Go to Components page',
         route: {
@@ -927,7 +929,6 @@ export class FlyoutCustomHeadersExampleComponent {
   public openFlyoutWithUrlPermalink(): void {
     this.#flyout = this.#flyoutSvc.open(FlyoutComponent, {
       ariaLabelledBy: 'flyout-title',
-      ariaRole: 'dialog',
       permalink: {
         label: `Visit blackbaud.com`,
         url: 'http://www.blackbaud.com',
@@ -952,21 +953,33 @@ export class FlyoutCustomHeadersExampleComponent {
 #### example.component.html
 
 ```html
-<button class="sky-btn sky-btn-default sky-theme-margin-right-s" type="button" (click)="openFlyoutWithUrlPermalink()">
-  Open flyout with a URL permalink
-</button>
+<sky-button
+  ariaHasPopup="dialog"
+  class="sky-theme-margin-right-s"
+  labelText="Open flyout with a URL permalink"
+  (buttonClick)="openFlyoutWithUrlPermalink()"
+/>
 
-<button class="sky-btn sky-btn-default sky-theme-margin-right-s" type="button" (click)="openFlyoutWithRoutePermalink()">
-  Open flyout with an Angular routing permalink
-</button>
+<sky-button
+  ariaHasPopup="dialog"
+  class="sky-theme-margin-right-s"
+  labelText="Open flyout with an Angular routing permalink"
+  (buttonClick)="openFlyoutWithRoutePermalink()"
+/>
 
-<button class="sky-btn sky-btn-default sky-theme-margin-right-s" type="button" (click)="openFlyoutWithIterators()">
-  Open flyout with iterators
-</button>
+<sky-button
+  ariaHasPopup="dialog"
+  class="sky-theme-margin-right-s"
+  labelText="Open flyout with iterators"
+  (buttonClick)="openFlyoutWithIterators()"
+/>
 
-<button class="sky-btn sky-btn-default sky-theme-margin-right-s" type="button" (click)="openFlyoutWithPrimaryAction()">
-  Open flyout with primary action
-</button>
+<sky-button
+  ariaHasPopup="dialog"
+  class="sky-theme-margin-right-s"
+  labelText="Open flyout with primary action"
+  (buttonClick)="openFlyoutWithPrimaryAction()"
+/>
 ```
 
 #### example.component.spec.ts
@@ -1013,7 +1026,6 @@ describe('Custom headers flyout example', () => {
     const { flyoutHarness, fixture } = await setupTest();
 
     await expectAsync(flyoutHarness.getAriaLabelledBy()).toBeResolvedTo('flyout-title');
-    await expectAsync(flyoutHarness.getAriaRole()).toBeResolvedTo('dialog');
 
     expect(fixture.componentInstance.recordNumber).toBe(0);
     await flyoutHarness.clickNextIteratorButton();

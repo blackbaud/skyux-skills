@@ -13,4 +13,4 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 | #   | Example                         | Lines   | Read invocation                                    |
 | --- | ------------------------------- | ------- | -------------------------------------------------- |
 | 1   | Confirm, tested with controller | 503–596 | `Read file_path=./confirm.md offset=503 limit=94`  |
-| 2   | Confirm, tested with harness    | 597–823 | `Read file_path=./confirm.md offset=597 limit=227` |
+| 2   | Confirm, tested with harness    | 597–820 | `Read file_path=./confirm.md offset=597 limit=224` |

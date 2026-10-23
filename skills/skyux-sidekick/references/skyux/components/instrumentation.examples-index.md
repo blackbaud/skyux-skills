@@ -13,4 +13,4 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 | #   | Example                                      | Lines   | Read invocation                                            |
 | --- | -------------------------------------------- | ------- | ---------------------------------------------------------- |
 | 1   | Instrumentation context with basic setup     | 182–338 | `Read file_path=./instrumentation.md offset=182 limit=157` |
-| 2   | Instrumentation context forwarded to a modal | 339–485 | `Read file_path=./instrumentation.md offset=339 limit=147` |
+| 2   | Instrumentation context forwarded to a modal | 339–498 | `Read file_path=./instrumentation.md offset=339 limit=160` |

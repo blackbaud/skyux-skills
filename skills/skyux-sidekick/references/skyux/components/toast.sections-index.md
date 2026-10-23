@@ -28,4 +28,4 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 12  | SkyToasterHarness        | testing     | 203–238 | `Read file_path=./toast.md offset=203 limit=36`  |
 | 13  | SkyToastHarness          | testing     | 239–356 | `Read file_path=./toast.md offset=239 limit=118` |
 | 14  | SkyToastHarnessFilters   | testing     | 357–372 | `Read file_path=./toast.md offset=357 limit=16`  |
-| 15  | Code Examples            | examples    | 373–640 | `Read file_path=./toast.md offset=373 limit=268` |
+| 15  | Code Examples            | examples    | 373–644 | `Read file_path=./toast.md offset=373 limit=272` |

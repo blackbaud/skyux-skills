@@ -176,6 +176,7 @@ Only find instances whose `data-sky-id` attribute matches the given value.
 
 ```typescript
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { SkyButton } from '@skyux/forms';
 import { SkyInlineDeleteModule } from '@skyux/layout';
 import { SkyRepeaterModule } from '@skyux/lists';
 import { SkyDropdownModule } from '@skyux/popovers';
@@ -193,7 +194,7 @@ interface InlineRepeaterDemoItem {
   selector: 'app-layout-inline-delete-repeater-example',
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [SkyDropdownModule, SkyInlineDeleteModule, SkyRepeaterModule],
+  imports: [SkyButton, SkyDropdownModule, SkyInlineDeleteModule, SkyRepeaterModule],
 })
 export class LayoutInlineDeleteRepeaterExampleComponent {
   protected originalRepeaterDemoItems: InlineRepeaterDemoItem[] = [
@@ -271,7 +272,7 @@ export class LayoutInlineDeleteRepeaterExampleComponent {
   }
 </sky-repeater>
 
-<button class="sky-btn sky-btn-primary" type="button" (click)="onResetClick()">Reset Repeater</button>
+<sky-button buttonStyle="primary" labelText="Reset Repeater" (buttonClick)="onResetClick()" />
 ```
 
 #### example.component.spec.ts
@@ -322,7 +323,7 @@ describe('Custom component inline delete example', () => {
 
 ```typescript
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { SkyIconModule } from '@skyux/icon';
+import { SkyButton } from '@skyux/forms';
 import { SkyInlineDeleteModule } from '@skyux/layout';
 
 /**
@@ -333,7 +334,7 @@ import { SkyInlineDeleteModule } from '@skyux/layout';
   templateUrl: './example.component.html',
   styleUrls: ['./example.component.scss'],
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [SkyIconModule, SkyInlineDeleteModule],
+  imports: [SkyButton, SkyInlineDeleteModule],
 })
 export class LayoutInlineDeleteCustomExampleComponent {
   public deleting = false;
@@ -368,9 +369,15 @@ export class LayoutInlineDeleteCustomExampleComponent {
 <div class="inline-delete-container">
   <strong>Custom content</strong>
   <div>
-    <button class="sky-btn sky-btn-danger inline-delete-trigger" type="button" (click)="deleteItem()">
-      <sky-icon iconName="delete" />
-    </button>
+    <sky-button
+      buttonStyle="danger"
+      block
+      class="inline-delete-trigger"
+      iconName="delete"
+      labelHidden
+      labelText="Delete"
+      (buttonClick)="deleteItem()"
+    />
   </div>
   @if (deleting) {
   <sky-inline-delete

@@ -661,6 +661,7 @@ Throws if the given criteria does not match the topmost open modal.
 ```typescript
 import { ChangeDetectionStrategy, Component, OnDestroy, inject } from '@angular/core';
 import { SkyHelpService } from '@skyux/core';
+import { SkyButton } from '@skyux/forms';
 import { SkyModalError, SkyModalInstance, SkyModalService } from '@skyux/modals';
 
 import { MyHelpService } from './help.service';
@@ -673,7 +674,8 @@ import { ModalComponent } from './modal.component';
 @Component({
   selector: 'app-modals-modal-basic-with-controller-example',
   changeDetection: ChangeDetectionStrategy.Eager,
-  template: `<button class="sky-btn sky-btn-default" type="button" (click)="openModal()">Open modal</button>`,
+  imports: [SkyButton],
+  template: `<sky-button ariaHasPopup="dialog" labelText="Open modal" (buttonClick)="openModal()" />`,
 })
 export class ModalsModalBasicWithControllerExampleComponent implements OnDestroy {
   public hasErrors = false;
@@ -817,13 +819,13 @@ export class ModalContext {
 ```typescript
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SkyInputBoxModule } from '@skyux/forms';
+import { SkyButton, SkyInputBoxModule } from '@skyux/forms';
 import { SkyModalInstance, SkyModalModule } from '@skyux/modals';
 
 import { ModalContext } from './modal-context';
 
 @Component({
-  imports: [FormsModule, ReactiveFormsModule, SkyInputBoxModule, SkyModalModule],
+  imports: [FormsModule, ReactiveFormsModule, SkyButton, SkyInputBoxModule, SkyModalModule],
   changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <form [formGroup]="exampleForm" (submit)="saveForm()">
@@ -834,8 +836,8 @@ import { ModalContext } from './modal-context';
           </sky-input-box>
         </sky-modal-content>
         <sky-modal-footer>
-          <button class="sky-btn sky-btn-primary" type="submit">Save</button>
-          <button class="sky-btn sky-btn-link" type="button" (click)="cancelForm()">Cancel</button>
+          <sky-button buttonStyle="primary" buttonType="submit" labelText="Save" />
+          <sky-button buttonStyle="link" labelText="Cancel" (buttonClick)="cancelForm()" />
         </sky-modal-footer>
       </sky-modal>
     </form>
@@ -871,6 +873,7 @@ export class ModalComponent {
 
 ```typescript
 import { ChangeDetectionStrategy, Component, OnDestroy, inject } from '@angular/core';
+import { SkyButton } from '@skyux/forms';
 import { SkyWaitService } from '@skyux/indicators';
 import { SkyModalConfigurationInterface, SkyModalService } from '@skyux/modals';
 
@@ -889,6 +892,7 @@ import { ModalComponent } from './modal.component';
   selector: 'app-modals-modal-basic-with-harness-example',
   changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
+  imports: [SkyButton],
 })
 export class ModalsModalBasicWithHarnessExampleComponent implements OnDestroy {
   protected modalSize = 'medium';
@@ -988,7 +992,7 @@ export interface ModalDemoData {
 #### example.component.html
 
 ```html
-<button class="sky-btn sky-btn-default" type="button" (click)="onOpenModalClick()">Open modal example</button>
+<sky-button ariaHasPopup="dialog" labelText="Open modal example" (buttonClick)="onOpenModalClick()" />
 @if (exampleValue) {
 <div>The user entered {{ exampleValue }}</div>
 }
@@ -1080,8 +1084,8 @@ describe('Basic modal', () => {
       </sky-input-box>
     </sky-modal-content>
     <sky-modal-footer>
-      <button class="sky-btn sky-btn-primary" type="submit">Save</button>
-      <button class="sky-btn sky-btn-link" type="button" (click)="cancelForm()">Cancel</button>
+      <sky-button buttonStyle="primary" buttonType="submit" labelText="Save" />
+      <sky-button buttonStyle="link" labelText="Cancel" (buttonClick)="cancelForm()" />
     </sky-modal-footer>
   </sky-modal>
 </form>
@@ -1092,7 +1096,7 @@ describe('Basic modal', () => {
 ```typescript
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { SkyInputBoxModule } from '@skyux/forms';
+import { SkyButton, SkyInputBoxModule } from '@skyux/forms';
 import { SkyWaitService } from '@skyux/indicators';
 import { SkyModalInstance, SkyModalModule } from '@skyux/modals';
 
@@ -1103,7 +1107,7 @@ import { ModalDemoDataService } from './data.service';
   selector: 'app-modal',
   templateUrl: './modal.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [ReactiveFormsModule, SkyInputBoxModule, SkyModalModule],
+  imports: [ReactiveFormsModule, SkyButton, SkyInputBoxModule, SkyModalModule],
 })
 export class ModalComponent {
   protected exampleForm: FormGroup<{
@@ -1142,6 +1146,7 @@ export class ModalComponent {
 
 ```typescript
 import { ChangeDetectionStrategy, Component, OnDestroy, inject } from '@angular/core';
+import { SkyButton } from '@skyux/forms';
 import { SkyWaitService } from '@skyux/indicators';
 import { SkyModalConfigurationInterface, SkyModalService } from '@skyux/modals';
 
@@ -1160,6 +1165,7 @@ import { ModalComponent } from './modal.component';
   selector: 'app-modals-modal-basic-with-harness-help-key-example',
   changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
+  imports: [SkyButton],
 })
 export class ModalsModalBasicWithHarnessHelpKeyExampleComponent implements OnDestroy {
   protected modalSize = 'medium';
@@ -1259,7 +1265,7 @@ export interface ModalDemoData {
 #### example.component.html
 
 ```html
-<button class="sky-btn sky-btn-default" type="button" (click)="onOpenModalClick()">Open modal example</button>
+<sky-button ariaHasPopup="dialog" labelText="Open modal example" (buttonClick)="onOpenModalClick()" />
 @if (exampleValue) {
 <div>The user entered {{ exampleValue }}</div>
 }
@@ -1340,8 +1346,8 @@ describe('Basic modal', () => {
       </sky-input-box>
     </sky-modal-content>
     <sky-modal-footer>
-      <button class="sky-btn sky-btn-primary" type="submit">Save</button>
-      <button class="sky-btn sky-btn-link" type="button" (click)="cancelForm()">Cancel</button>
+      <sky-button buttonStyle="primary" buttonType="submit" labelText="Save" />
+      <sky-button buttonStyle="link" labelText="Cancel" (buttonClick)="cancelForm()" />
     </sky-modal-footer>
   </sky-modal>
 </form>
@@ -1352,7 +1358,7 @@ describe('Basic modal', () => {
 ```typescript
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { SkyInputBoxModule } from '@skyux/forms';
+import { SkyButton, SkyInputBoxModule } from '@skyux/forms';
 import { SkyWaitService } from '@skyux/indicators';
 import { SkyModalInstance, SkyModalModule } from '@skyux/modals';
 
@@ -1363,7 +1369,7 @@ import { ModalDemoDataService } from './data.service';
   selector: 'app-modal',
   templateUrl: './modal.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [ReactiveFormsModule, SkyInputBoxModule, SkyModalModule],
+  imports: [ReactiveFormsModule, SkyButton, SkyInputBoxModule, SkyModalModule],
 })
 export class ModalComponent {
   protected exampleForm: FormGroup<{
@@ -1402,6 +1408,7 @@ export class ModalComponent {
 
 ```typescript
 import { ChangeDetectionStrategy, Component, OnDestroy, inject } from '@angular/core';
+import { SkyButton } from '@skyux/forms';
 import { SkyWaitService } from '@skyux/indicators';
 import { SkyModalConfigurationInterface, SkyModalService } from '@skyux/modals';
 
@@ -1420,6 +1427,7 @@ import { ModalComponent } from './modal.component';
   selector: 'app-modals-modal-with-error-example',
   changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
+  imports: [SkyButton],
 })
 export class ModalsModalWithErrorExampleComponent implements OnDestroy {
   protected modalSize = 'medium';
@@ -1521,7 +1529,7 @@ export interface ModalDemoData {
 #### example.component.html
 
 ```html
-<button class="sky-btn sky-btn-default" type="button" (click)="onOpenModalClick()">Open modal example</button>
+<sky-button ariaHasPopup="dialog" labelText="Open modal example" (buttonClick)="onOpenModalClick()" />
 @if (exampleValue) {
 <div>The user entered {{ exampleValue }}</div>
 }
@@ -1601,11 +1609,9 @@ describe('Basic modal', () => {
       </sky-input-box>
     </sky-modal-content>
     <sky-modal-footer>
-      <button class="sky-btn sky-btn-primary" type="submit">Save</button>
-      <button class="sky-btn sky-btn-link" type="button" (click)="saveFormWithFormError()">
-        Save form with an error
-      </button>
-      <button class="sky-btn sky-btn-link" type="button" (click)="cancelForm()">Cancel</button>
+      <sky-button buttonStyle="primary" buttonType="submit" labelText="Save" />
+      <sky-button buttonStyle="link" labelText="Save form with an error" (buttonClick)="saveFormWithFormError()" />
+      <sky-button buttonStyle="link" labelText="Cancel" (buttonClick)="cancelForm()" />
     </sky-modal-footer>
   </sky-modal>
 </form>
@@ -1616,7 +1622,7 @@ describe('Basic modal', () => {
 ```typescript
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { SkyInputBoxModule } from '@skyux/forms';
+import { SkyButton, SkyInputBoxModule } from '@skyux/forms';
 import { SkyWaitService } from '@skyux/indicators';
 import { SkyModalError, SkyModalInstance, SkyModalModule } from '@skyux/modals';
 
@@ -1627,7 +1633,7 @@ import { ModalDemoDataService } from './data.service';
   selector: 'app-modal',
   templateUrl: './modal.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [ReactiveFormsModule, SkyInputBoxModule, SkyModalModule],
+  imports: [ReactiveFormsModule, SkyButton, SkyInputBoxModule, SkyModalModule],
 })
 export class ModalComponent {
   protected exampleForm: FormGroup<{
@@ -1676,6 +1682,7 @@ export class ModalComponent {
 
 ```typescript
 import { ChangeDetectionStrategy, Component, OnDestroy, inject } from '@angular/core';
+import { SkyButton } from '@skyux/forms';
 import { SkyModalInstance, SkyModalService } from '@skyux/modals';
 
 import { ModalComponent } from './modal.component';
@@ -1686,7 +1693,8 @@ import { ModalComponent } from './modal.component';
 @Component({
   selector: 'app-modals-modal-basic-with-controller-example',
   changeDetection: ChangeDetectionStrategy.Eager,
-  template: `<button class="sky-btn sky-btn-default" type="button" (click)="openModal()">Open modal example</button>`,
+  imports: [SkyButton],
+  template: `<sky-button ariaHasPopup="dialog" labelText="Open modal example" (buttonClick)="openModal()" />`,
 })
 export class ModalsModalBasicWithBannerExampleComponent implements OnDestroy {
   readonly #instances: SkyModalInstance[] = [];
@@ -1710,11 +1718,12 @@ export class ModalsModalBasicWithBannerExampleComponent implements OnDestroy {
 
 ```typescript
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { SkyButton } from '@skyux/forms';
 import { SkyIconModule } from '@skyux/icon';
 import { SkyModalInstance, SkyModalModule } from '@skyux/modals';
 
 @Component({
-  imports: [SkyIconModule, SkyModalModule],
+  imports: [SkyButton, SkyIconModule, SkyModalModule],
   changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <sky-modal headingHidden headingText="New feature: Modal with banner support">
@@ -1728,7 +1737,7 @@ import { SkyModalInstance, SkyModalModule } from '@skyux/modals';
         </div>
       </sky-modal-content>
       <sky-modal-footer>
-        <button class="sky-btn sky-btn-primary" type="button" (click)="closeForm()">Close</button>
+        <sky-button buttonStyle="primary" labelText="Close" (buttonClick)="closeForm()" />
       </sky-modal-footer>
     </sky-modal>
   `,

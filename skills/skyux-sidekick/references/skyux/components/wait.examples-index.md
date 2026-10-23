@@ -12,5 +12,5 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                    | Lines   | Read invocation                                 |
 | --- | -------------------------- | ------- | ----------------------------------------------- |
-| 1   | Wait applied to an element | 219–299 | `Read file_path=./wait.md offset=219 limit=81`  |
-| 2   | Wait applied to a page     | 300–413 | `Read file_path=./wait.md offset=300 limit=114` |
+| 1   | Wait applied to an element | 219–300 | `Read file_path=./wait.md offset=219 limit=82`  |
+| 2   | Wait applied to a page     | 301–426 | `Read file_path=./wait.md offset=301 limit=126` |

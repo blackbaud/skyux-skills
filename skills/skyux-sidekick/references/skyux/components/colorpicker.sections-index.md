@@ -39,4 +39,4 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 23  | SkyFormErrorHarnessFilters           | testing     | 903–923  | `Read file_path=./colorpicker.md offset=903 limit=21`  |
 | 24  | SkyIconHarness                       | testing     | 924–969  | `Read file_path=./colorpicker.md offset=924 limit=46`  |
 | 25  | SkyIconHarnessFilters                | testing     | 970–985  | `Read file_path=./colorpicker.md offset=970 limit=16`  |
-| 26  | Code Examples                        | examples    | 986–1409 | `Read file_path=./colorpicker.md offset=986 limit=424` |
+| 26  | Code Examples                        | examples    | 986–1403 | `Read file_path=./colorpicker.md offset=986 limit=418` |

@@ -12,6 +12,6 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                                    | Lines     | Read invocation                                        |
 | --- | ------------------------------------------ | --------- | ------------------------------------------------------ |
-| 1   | Filter bar with modal filter example       | 672–948   | `Read file_path=./filter-bar.md offset=672 limit=277`  |
-| 2   | Filter bar with lookup filter example      | 949–1099  | `Read file_path=./filter-bar.md offset=949 limit=151`  |
-| 3   | Filter bar with selectable filters example | 1100–1517 | `Read file_path=./filter-bar.md offset=1100 limit=418` |
+| 1   | Filter bar with modal filter example       | 672–953   | `Read file_path=./filter-bar.md offset=672 limit=282`  |
+| 2   | Filter bar with lookup filter example      | 954–1104  | `Read file_path=./filter-bar.md offset=954 limit=151`  |
+| 3   | Filter bar with selectable filters example | 1105–1527 | `Read file_path=./filter-bar.md offset=1105 limit=423` |

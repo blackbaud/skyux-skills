@@ -28,4 +28,4 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 12  | SkyFlyoutCloseArgs          | development | 456–471  | `Read file_path=./flyout.md offset=456 limit=16`  |
 | 13  | SkyFlyoutPermalink          | development | 472–497  | `Read file_path=./flyout.md offset=472 limit=26`  |
 | 14  | SkyFlyoutHarness            | testing     | 498–691  | `Read file_path=./flyout.md offset=498 limit=194` |
-| 15  | Code Examples               | examples    | 692–1070 | `Read file_path=./flyout.md offset=692 limit=379` |
+| 15  | Code Examples               | examples    | 692–1082 | `Read file_path=./flyout.md offset=692 limit=391` |

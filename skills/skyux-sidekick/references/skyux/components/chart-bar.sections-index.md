@@ -37,4 +37,4 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 21  | SkyChartHarness           | testing     | 555–728  | `Read file_path=./chart-bar.md offset=555 limit=174`  |
 | 22  | SkyChartHarnessFilters    | testing     | 729–749  | `Read file_path=./chart-bar.md offset=729 limit=21`   |
 | 23  | SkyChartTableModalHarness | testing     | 750–799  | `Read file_path=./chart-bar.md offset=750 limit=50`   |
-| 24  | Code Examples             | examples    | 800–2077 | `Read file_path=./chart-bar.md offset=800 limit=1278` |
+| 24  | Code Examples             | examples    | 800–2076 | `Read file_path=./chart-bar.md offset=800 limit=1277` |

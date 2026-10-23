@@ -719,6 +719,7 @@ describe('Repeater basic example', () => {
 
 ```typescript
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { SkyButton } from '@skyux/forms';
 import { SkyRepeaterModule } from '@skyux/lists';
 import { SkyDropdownModule } from '@skyux/popovers';
 
@@ -734,7 +735,7 @@ let nextId = 0;
   templateUrl: './example.component.html',
   styleUrls: ['./example.component.scss'],
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [SkyDropdownModule, SkyRepeaterModule],
+  imports: [SkyButton, SkyDropdownModule, SkyRepeaterModule],
 })
 export class ListsRepeaterAddRemoveExampleComponent {
   protected items: Item[] = [
@@ -823,23 +824,14 @@ export class ListsRepeaterAddRemoveExampleComponent {
   </sky-repeater>
 </div>
 
-<button
-  data-sky-id="add-button"
-  class="sky-btn sky-btn-default sky-theme-margin-right-s"
-  type="button"
-  (click)="addItem()"
->
-  Add item
-</button>
+<sky-button class="sky-theme-margin-right-s" data-sky-id="add-button" labelText="Add item" (buttonClick)="addItem()" />
 
-<button
+<sky-button
+  class="sky-theme-margin-right-s"
   data-sky-id="remove-button"
-  class="sky-btn sky-btn-default sky-theme-margin-right-s"
-  type="button"
-  (click)="removeItems()"
->
-  Remove selected items
-</button>
+  labelText="Remove selected items"
+  (buttonClick)="removeItems()"
+/>
 ```
 
 #### example.component.scss
@@ -858,17 +850,18 @@ export class ListsRepeaterAddRemoveExampleComponent {
 #### example.component.spec.ts
 
 ```typescript
+import { HarnessLoader } from '@angular/cdk/testing';
 import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 import { provideNoopSkyAnimations } from '@skyux/core';
+import { SkyButtonHarness } from '@skyux/forms/testing';
 import { SkyRepeaterHarness } from '@skyux/lists/testing';
 
 import { ListsRepeaterAddRemoveExampleComponent } from './example.component';
 
 describe('Repeater add remove example', () => {
   async function setupTest(): Promise<{
-    el: HTMLElement;
-    fixture: ComponentFixture<ListsRepeaterAddRemoveExampleComponent>;
+    loader: HarnessLoader;
     repeaterHarness: SkyRepeaterHarness;
   }> {
     const fixture = TestBed.createComponent(ListsRepeaterAddRemoveExampleComponent);
@@ -876,9 +869,7 @@ describe('Repeater add remove example', () => {
 
     const repeaterHarness = await loader.getHarness(SkyRepeaterHarness.with({ dataSkyId: 'repeater-example' }));
 
-    const el = fixture.nativeElement as HTMLElement;
-
-    return { el, fixture, repeaterHarness };
+    return { loader, repeaterHarness };
   }
 
   beforeEach(() => {
@@ -951,7 +942,7 @@ describe('Repeater add remove example', () => {
   });
 
   it('should allow items to be added and removed', async () => {
-    const { repeaterHarness, el, fixture } = await setupTest();
+    const { repeaterHarness, loader } = await setupTest();
 
     let repeaterItems = await repeaterHarness.getRepeaterItems();
 
@@ -962,12 +953,11 @@ describe('Repeater add remove example', () => {
       await expectAsync(item.isSelectable()).toBeResolvedTo(true);
     }
 
-    const addButton = el.querySelector<HTMLButtonElement>('[data-sky-id="add-button"]');
+    const addButton = await loader.getHarness(SkyButtonHarness.with({ dataSkyId: 'add-button' }));
 
-    const removeButton = el.querySelector<HTMLButtonElement>('[data-sky-id="remove-button"]');
+    const removeButton = await loader.getHarness(SkyButtonHarness.with({ dataSkyId: 'remove-button' }));
 
-    addButton?.click();
-    fixture.detectChanges();
+    await addButton.click();
 
     repeaterItems = await repeaterHarness.getRepeaterItems();
     expect(repeaterItems).toBeDefined();
@@ -982,8 +972,7 @@ describe('Repeater add remove example', () => {
     await repeaterItems[1].select();
     await expectAsync(repeaterItems[1].isSelected()).toBeResolvedTo(true);
 
-    removeButton?.click();
-    fixture.detectChanges();
+    await removeButton.click();
 
     repeaterItems = await repeaterHarness.getRepeaterItems();
     expect(repeaterItems).toBeDefined();
@@ -1011,8 +1000,7 @@ export interface Item {
 ```typescript
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SkyInputBoxModule } from '@skyux/forms';
-import { SkyIconModule } from '@skyux/icon';
+import { SkyButton, SkyInputBoxModule } from '@skyux/forms';
 import { SkyInlineFormButtonLayout, SkyInlineFormCloseArgs, SkyInlineFormConfig } from '@skyux/inline-form';
 import { SkyRepeaterModule } from '@skyux/lists';
 
@@ -1035,7 +1023,7 @@ interface Item {
   selector: 'app-lists-repeater-inline-form-example',
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [FormsModule, ReactiveFormsModule, SkyIconModule, SkyInputBoxModule, SkyRepeaterModule],
+  imports: [FormsModule, ReactiveFormsModule, SkyButton, SkyInputBoxModule, SkyRepeaterModule],
 })
 export class ListsRepeaterInlineFormExampleComponent {
   protected activeInlineFormId: string | undefined;
@@ -1119,9 +1107,13 @@ export class ListsRepeaterInlineFormExampleComponent {
       <div class="sky-theme-font-body-emphasized-m">{{ item.title }}</div>
     </sky-repeater-item-title>
     <sky-repeater-item-context-menu>
-      <button aria-label="Edit" class="sky-btn sky-btn-icon-borderless" type="button" (click)="showInlineForm(item)">
-        <sky-icon iconName="edit" />
-      </button>
+      <sky-button
+        buttonStyle="icon-borderless"
+        iconName="edit"
+        labelHidden
+        labelText="Edit"
+        (buttonClick)="showInlineForm(item)"
+      />
     </sky-repeater-item-context-menu>
 
     <sky-repeater-item-content> {{ item.note }} </sky-repeater-item-content>

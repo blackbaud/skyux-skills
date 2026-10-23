@@ -23,4 +23,4 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 7   | provideSkyInstrumentationContextFrom | development | 118–131 | `Read file_path=./instrumentation.md offset=118 limit=14`  |
 | 8   | provideSkyInstrumentationTesting     | development | 132–139 | `Read file_path=./instrumentation.md offset=132 limit=8`   |
 | 9   | SkyInstrumentationTestingController  | testing     | 140–179 | `Read file_path=./instrumentation.md offset=140 limit=40`  |
-| 10  | Code Examples                        | examples    | 180–485 | `Read file_path=./instrumentation.md offset=180 limit=306` |
+| 10  | Code Examples                        | examples    | 180–498 | `Read file_path=./instrumentation.md offset=180 limit=319` |

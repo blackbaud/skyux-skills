@@ -34,4 +34,4 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 18  | SkySelectionModalHarness                    | testing     | 382–563  | `Read file_path=./selection-modal.md offset=382 limit=182` |
 | 19  | SkySelectionModalSearchResultHarness        | testing     | 564–797  | `Read file_path=./selection-modal.md offset=564 limit=234` |
 | 20  | SkySelectionModalSearchResultHarnessFilters | testing     | 798–818  | `Read file_path=./selection-modal.md offset=798 limit=21`  |
-| 21  | Code Examples                               | examples    | 819–1414 | `Read file_path=./selection-modal.md offset=819 limit=596` |
+| 21  | Code Examples                               | examples    | 819–1430 | `Read file_path=./selection-modal.md offset=819 limit=612` |

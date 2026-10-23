@@ -49,4 +49,4 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 33  | SkyLookupShowMorePickerSearchResultHarness        | testing     | 1265–1498 | `Read file_path=./lookup.md offset=1265 limit=234`  |
 | 34  | SkyLookupShowMorePickerSearchResultHarnessFilters | testing     | 1499–1519 | `Read file_path=./lookup.md offset=1499 limit=21`   |
 | 35  | SkyAutocompleteInputHarness                       | testing     | 1520–1597 | `Read file_path=./lookup.md offset=1520 limit=78`   |
-| 36  | Code Examples                                     | examples    | 1598–3795 | `Read file_path=./lookup.md offset=1598 limit=2198` |
+| 36  | Code Examples                                     | examples    | 1598–3810 | `Read file_path=./lookup.md offset=1598 limit=2213` |

@@ -19,4 +19,4 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 3   | SkySearchComponent      | development | 26–85   | `Read file_path=./search.md offset=26 limit=60`   |
 | 4   | SkySearchHarness        | testing     | 86–231  | `Read file_path=./search.md offset=86 limit=146`  |
 | 5   | SkySearchHarnessFilters | testing     | 232–247 | `Read file_path=./search.md offset=232 limit=16`  |
-| 6   | Code Examples           | examples    | 248–427 | `Read file_path=./search.md offset=248 limit=180` |
+| 6   | Code Examples           | examples    | 248–426 | `Read file_path=./search.md offset=248 limit=179` |

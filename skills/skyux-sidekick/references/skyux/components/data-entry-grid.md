@@ -1878,7 +1878,13 @@ export class EditModalComponent {
 ```html
 <sky-toolbar>
   <sky-toolbar-item>
-    <sky-button buttonStyle="primary" data-sky-id="edit-button" labelText="Edit" (buttonClick)="openModal()" />
+    <sky-button
+      buttonStyle="primary"
+      ariaHasPopup="dialog"
+      data-sky-id="edit-button"
+      labelText="Edit"
+      (buttonClick)="openModal()"
+    />
   </sky-toolbar-item>
   <sky-toolbar-item>
     <sky-search
@@ -1903,7 +1909,7 @@ import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SkyAgGridWrapperHarness, provideSkyAgGridTesting } from '@skyux/ag-grid/testing';
 import { provideNoopSkyAnimations } from '@skyux/core';
-import { SkyCheckboxHarness } from '@skyux/forms/testing';
+import { SkyButtonHarness, SkyCheckboxHarness } from '@skyux/forms/testing';
 import { SkyAutocompleteHarness, SkySearchHarness } from '@skyux/lookup/testing';
 import { SkyDropdownHarness } from '@skyux/popovers/testing';
 
@@ -2055,11 +2061,15 @@ describe('AG Grid data entry grid basic example', () => {
     });
 
     it('should log when a row is marked inactive', async () => {
-      const { docLoader, fixture } = await setupTest();
+      const { docLoader } = await setupTest();
       const consoleSpy = spyOn(console, 'error');
       await openEditModal(docLoader);
 
-      await clickElement(fixture, '[aria-label="Mark Billy Bob inactive"]');
+      const markInactiveButton = await docLoader.getHarness(
+        SkyButtonHarness.with({ dataSkyId: 'mark-inactive-button' }),
+      );
+      await expectAsync(markInactiveButton.getAriaLabel()).toBeResolvedTo('Mark Billy Bob inactive');
+      await markInactiveButton.click();
 
       expect(consoleSpy).toHaveBeenCalledWith('Mark inactive action clicked for Billy Bob');
 
@@ -2176,25 +2186,26 @@ describe('AG Grid data entry grid basic example', () => {
 #### mark-inactive.component.html
 
 ```html
-<button
-  type="button"
-  class="sky-btn sky-btn-link-inline"
-  [attr.aria-label]="markInactiveAriaLabel"
-  (click)="markInactive()"
->
-  Mark inactive
-</button>
+<sky-button
+  buttonStyle="link-inline"
+  data-sky-id="mark-inactive-button"
+  labelText="Mark inactive"
+  [ariaLabel]="markInactiveAriaLabel"
+  (buttonClick)="markInactive()"
+/>
 ```
 
 #### mark-inactive.component.ts
 
 ```typescript
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { SkyButton } from '@skyux/forms';
 
 @Component({
   selector: 'app-mark-inactive',
   templateUrl: './mark-inactive.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [SkyButton],
 })
 export class MarkInactiveComponent {
   @Input()
@@ -2827,7 +2838,13 @@ export class EditModalComponent {
 <sky-data-manager data-sky-id="employees-data-manager">
   <sky-data-manager-toolbar>
     <sky-data-manager-toolbar-left-item>
-      <sky-button buttonStyle="primary" data-sky-id="edit-button" labelText="Edit" (buttonClick)="openModal()" />
+      <sky-button
+        buttonStyle="primary"
+        ariaHasPopup="dialog"
+        data-sky-id="edit-button"
+        labelText="Edit"
+        (buttonClick)="openModal()"
+      />
     </sky-data-manager-toolbar-left-item>
     <sky-filter-bar data-sky-id="employees-filter-bar" skyDataManagerFilterController>
       <sky-filter-item-modal
@@ -4756,7 +4773,13 @@ export class EditModalComponent {
 ```html
 <sky-toolbar>
   <sky-toolbar-item>
-    <sky-button buttonStyle="primary" data-sky-id="edit-button" labelText="Edit" (buttonClick)="openModal()" />
+    <sky-button
+      buttonStyle="primary"
+      ariaHasPopup="dialog"
+      data-sky-id="edit-button"
+      labelText="Edit"
+      (buttonClick)="openModal()"
+    />
   </sky-toolbar-item>
   <sky-toolbar-item>
     <sky-search
