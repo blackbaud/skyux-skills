@@ -26,7 +26,7 @@
 | data-entry-grid              | 4        | [data-entry-grid.examples-index.md](./data-entry-grid.examples-index.md)                           |
 | data-grid                    | 8        | [data-grid.examples-index.md](./data-grid.examples-index.md)                                       |
 | data-grid-component          | 6        | [data-grid-component.examples-index.md](./data-grid-component.examples-index.md)                   |
-| data-manager                 | 4        | [data-manager.examples-index.md](./data-manager.examples-index.md)                                 |
+| data-manager                 | 5        | [data-manager.examples-index.md](./data-manager.examples-index.md)                                 |
 | date-pipe                    | 1        | [date-pipe.examples-index.md](./date-pipe.examples-index.md)                                       |
 | date-range-picker            | 3        | [date-range-picker.examples-index.md](./date-range-picker.examples-index.md)                       |
 | datepicker                   | 3        | [datepicker.examples-index.md](./datepicker.examples-index.md)                                     |

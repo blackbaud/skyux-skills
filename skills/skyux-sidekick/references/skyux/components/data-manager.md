@@ -11,7 +11,7 @@ The data manager component and service manage the exploration of a data set acro
 
 NPM package
 
-`@skyux/data-manager`[View in NPM](https://www.npmjs.com/package/@skyux/data-manager) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/data-manager/src/lib/modules/data-manager/data-manager.module.ts#L39)
+`@skyux/data-manager`[View in NPM](https://www.npmjs.com/package/@skyux/data-manager) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/data-manager/src/lib/modules/data-manager/data-manager.module.ts#L45)
 
 Install with NPM
 
@@ -49,7 +49,7 @@ Type: Component
 
 Selector: `sky-data-manager`
 
-The top-level data manager component. Provide `SkyDataManagerService` at this level.
+The top-level data manager component. When `labelText` is set, the data manager provides its own `SkyDataManagerService` and configures itself from its inputs and models, so `initDataManager()` and `initDataView()` are not needed: each `sky-data-view` registers itself, and the first one registered becomes the active view. Otherwise, provide `SkyDataManagerService` at this level and configure the data manager with `initDataManager()`; the models then only reflect and push subsequent state changes.
 
 ### Inputs
 
@@ -59,13 +59,49 @@ How the data manager docks to the page. Use `fill` to dock the data manager to t
 
 Default: `"none"`
 
+#### `filters: ModelSignal<SkyFilterState | undefined>`
+
+The current filter state. Kept in sync with a `sky-filter-bar` that uses the `skyDataManagerFilterController` directive.
+
+#### `labelText: InputSignal<string | undefined>`
+
+The label for the list descriptor in `sky-data-manager-toolbar`. Setting it makes the data manager provide its own `SkyDataManagerService` and configure itself from its template, so do not also call `initDataManager()`. To configure the data manager with `initDataManager()`, set `listDescriptor` on its `SkyDataManagerConfig` instead.
+
+#### `searchText: ModelSignal<string>`
+
+The current search text.
+
+#### `selectedIds: ModelSignal<string[]>`
+
+The IDs of the currently selected rows or objects.
+
+#### `settingsKey: InputSignal<string | undefined>`
+
+The key to use for storing and retrieving the data state from `SkyUIConfigService`. Ignored unless `labelText` is set; otherwise, pass `settingsKey` to `initDataManager()` instead.
+
+#### `sort: ModelSignal<SkyDataManagerSortOption | undefined>`
+
+The current sort option.
+
+#### `totalCount: InputSignal<number>`
+
+The total number of items matching the current search, sort, and filters, used to announce the data summary to screen readers.
+
+Default: `0`
+
+### Outputs
+
+#### `stateChange: OutputEmitterRef<SkyDataManagerState>`
+
+Fires when the data state changes from any source.
+
 ## SkyDataManagerService
 
 Type: Service
 
 The data manager service provides ways for data views, toolbar items, and more to stay up to date with the active view ID, data manager config, registered views and their configs, and data state. There are methods to get current values, update values, and get subscriptions to the changing values.
 
-Provide this service at the component level for each instance of a data manager. Do not provide it at the module level or in `app-extras`. This allows multiple data managers to be used and self-contained.
+Provide this service at the component level for each instance of a data manager. Do not provide it at the module level or in `app-extras`. This allows multiple data managers to be used and self-contained. A `SkyDataManagerComponent` that sets `labelText` provides its own instance and configures itself from its inputs and models, so it does not need this service.
 
 ### Methods
 
@@ -147,7 +183,7 @@ The ID of the view config to get.
 
 #### `initDataManager(args: SkyDataManagerInitArgs): void`
 
-Initializes the data manager with the given settings and sets `isInitialized` to `true`. This must be called for the data manager to render.
+Initializes the data manager with the given settings and sets `isInitialized` to `true`. This must be called for the data manager to render, unless the data manager sets `labelText`. A data manager that sets `labelText` initializes itself from its template, so do not call this method for it.
 
 #### Parameters
 
@@ -161,7 +197,7 @@ The initial active view ID, data manager config, and state to use for the data m
 
 #### `initDataView(viewConfig: SkyDataViewConfig): void`
 
-Initializes a view within the data manager. This must be called for each view for the views to appear within the data manager.
+Initializes a view within the data manager. This must be called for each view for the views to appear within the data manager, unless the data manager sets `labelText`. A data manager that sets `labelText` registers each `sky-data-view` from its inputs, so do not call this method for it.
 
 #### Parameters
 
@@ -257,7 +293,7 @@ Type: Component
 
 Selector: `sky-data-manager-toolbar`
 
-Renders a `sky-toolbar` with the contents specified by the active view's `SkyDataViewConfig` and the `SkyDataManagerToolbarLeftItemComponent`, `SkyDataManagerToolbarRightItemComponent`, and `SkyDataManagerToolbarSectionComponent` wrappers.
+Renders a `sky-toolbar` with the contents specified by the active view's `SkyDataViewConfig` and the `SkyDataManagerToolbarLeftItemComponent`, `SkyDataManagerToolbarRightItemComponent`, and `SkyDataManagerToolbarSectionComponent` wrappers. Also renders the `sky-data-manager-sort-option` elements placed inside this toolbar.
 
 ## SkyDataManagerToolbarSectionComponent
 
@@ -266,6 +302,34 @@ Type: Component
 Selector: `sky-data-manager-toolbar-section`
 
 A wrapper for items to be rendered in `SkyDataManagerToolbarComponent`. The contents are rendered in an additional toolbar row beneath the primary toolbar and above the multiselect toolbar (if present).
+
+## SkyDataManagerSortOptionComponent
+
+Type: Component Preview
+
+Selector: `sky-data-manager-sort-option`
+
+Declares a single sort option for `SkyDataManagerToolbarComponent` to render, as an alternative to `SkyDataManagerConfig.sortOptions` for the signal-based toolbar API. Add one `sky-data-manager-sort-option` per option.
+
+### Inputs
+
+#### `descending: InputSignal<boolean>`
+
+Whether to apply the sort in descending order.
+
+Default: `false`
+
+#### `id: InputSignal<string>`
+
+A unique ID for the sort option.
+
+#### `labelText: InputSignal<string>`
+
+The label to display in the sort dropdown.
+
+#### `propertyName: InputSignal<string>`
+
+The data property to sort by.
 
 ## SkyDataManagerToolbarPrimaryItemComponent
 
@@ -323,11 +387,65 @@ Required
 
 The configuration for the view. See the `SkyDataViewConfig` interface.
 
+#### `columnPickerEnabled: InputSignalWithTransform<boolean, unknown>`
+
+Whether to display the column picker button for this view. Ignored unless the data manager sets `labelText`; otherwise, set `columnPickerEnabled` on the `SkyDataViewConfig` passed to `initDataView()` instead.
+
+#### `columnPickerSortStrategy: InputSignal<"none" | "selectedThenAlphabetical">`
+
+The strategy used to sort the options in the column picker. Use `none` to apply no sorting, or `selectedThenAlphabetical` to display the selected columns before the unselected columns and sort the unselected columns alphabetically. Ignored unless the data manager sets `labelText`; otherwise, set `columnPickerSortStrategy` on the `SkyDataViewConfig` passed to `initDataView()` instead.
+
+Default: `"none"`
+
+#### `iconName: InputSignal<string | undefined>`
+
+The name of the Blackbaud SVG icon to display for this view in the view switcher. Required if the data manager has more than one view. Ignored unless the data manager sets `labelText`; otherwise, set `iconName` on the `SkyDataViewConfig` passed to `initDataView()` instead.
+
+#### `multiselectEnabled: InputSignalWithTransform<boolean, unknown>`
+
+Whether to display the multiselect toolbar in `sky-data-manager-toolbar`. Ignored unless the data manager sets `labelText`; otherwise, set `multiselectToolbarEnabled` on the `SkyDataViewConfig` passed to `initDataView()` instead.
+
+#### `searchEnabled: InputSignalWithTransform<boolean, unknown>`
+
+Whether to display the search box in `sky-data-manager-toolbar`. Ignored unless the data manager sets `labelText`; otherwise, set `searchEnabled` on the `SkyDataViewConfig` passed to `initDataView()` instead.
+
+#### `searchExpandMode: InputSignal<"none" | "fit" | "responsive">`
+
+The `expandMode` of the search box in `sky-data-manager-toolbar`. See the [search component](./search.md) for valid options. Ignored unless the data manager sets `labelText`; otherwise, set `searchExpandMode` on the `SkyDataViewConfig` passed to `initDataView()` instead.
+
+Default: `"responsive"`
+
+#### `searchHighlightEnabled: InputSignalWithTransform<boolean, unknown>`
+
+Whether to highlight text that matches the search text using the text highlight directive. Ignored unless the data manager sets `labelText`; otherwise, set `searchHighlightEnabled` on the `SkyDataViewConfig` passed to `initDataView()` instead.
+
+#### `searchPlaceholderText: InputSignal<string | undefined>`
+
+Placeholder text for the search box in `sky-data-manager-toolbar`. Ignored unless the data manager sets `labelText`; otherwise, set `searchPlaceholderText` on the `SkyDataViewConfig` passed to `initDataView()` instead.
+
+#### `showSortButtonText: InputSignalWithTransform<boolean, unknown>`
+
+Whether to include the "Sort" text on the sort button in `sky-data-manager-toolbar`. Ignored unless the data manager sets `labelText`; otherwise, set `showSortButtonText` on the `SkyDataViewConfig` passed to `initDataView()` instead.
+
+#### `viewName: InputSignal<string | undefined>`
+
+The name of the view. This is used in the ARIA label for the view switcher. Defaults to `viewId` when not set. Ignored unless the data manager sets `labelText`; otherwise, set `name` on the `SkyDataViewConfig` passed to `initDataView()` instead.
+
+### Outputs
+
+#### `clearAll: OutputEmitterRef<void>`
+
+Fires when a user selects the "Clear all" button on the multiselect toolbar. Update your displayed data to indicate it is not selected. Does not fire unless the data manager sets `labelText`; otherwise, set `onClearAllClick` on the `SkyDataViewConfig` passed to `initDataView()` instead.
+
+#### `selectAll: OutputEmitterRef<void>`
+
+Fires when a user selects the "Select all" button on the multiselect toolbar. Update your displayed data to indicate it is selected. Does not fire unless the data manager sets `labelText`; otherwise, set `onSelectAllClick` on the `SkyDataViewConfig` passed to `initDataView()` instead.
+
 ## SkyDataViewConfig
 
 Type: Interface
 
-The data view config contains settings that apply to the specific view, such as column picker options and the buttons to display in the toolbar.
+The data view config contains settings that apply to the specific view, such as column picker options and the buttons to display in the toolbar. You do not need to provide a view config when the data manager sets `labelText`, because each `sky-data-view` builds its config from its inputs.
 
     interface SkyDataViewConfig {
       additionalOptions?: Record<string, unknown>;
@@ -2264,6 +2382,11 @@ describe('Data manager basic example', () => {
       await expectAsync(item.isSelected()).toBeResolvedTo(true);
     }
 
+    await toolbarHarness.clickClearAll();
+    for (const item of repeaterItems) {
+      await expectAsync(item.isSelected()).toBeResolvedTo(false);
+    }
+
     const viewActionsHarness = await toolbarHarness.getViewActions();
     expect(viewActionsHarness).not.toBeNull();
 
@@ -2666,6 +2789,267 @@ export class ViewRepeaterComponent {
     }
   }
 }
+```
+
+### Data manager with a server-side resource data source
+
+#### example.ts (primary file)
+
+```typescript
+import { ChangeDetectionStrategy, Component, computed, linkedSignal, resource, signal } from '@angular/core';
+import { SkyDataManagerModule, SkyDataManagerSortOption } from '@skyux/data-manager';
+
+import { FruitServerResult, getServerItems } from './data';
+
+/**
+ * @title Data manager with a server-side resource data source
+ */
+@Component({
+  selector: 'app-data-manager-resource-example',
+  templateUrl: './example.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [SkyDataManagerModule],
+})
+export class DataManagerResourceExample {
+  protected readonly searchText = signal('');
+  protected readonly sort = signal<SkyDataManagerSortOption | undefined>(undefined);
+
+  protected readonly data = resource({
+    params: () => ({ searchText: this.searchText(), sort: this.sort() }),
+    loader: async ({ params }) => {
+      // Simulates an asynchronous server request.
+      await Promise.resolve();
+
+      return getServerItems(params);
+    },
+  });
+
+  // A resource clears its value while it loads new params, so keep the last
+  // result to avoid flashing an empty list and announcing a count of zero.
+  readonly #lastResult = linkedSignal<FruitServerResult | undefined, FruitServerResult | undefined>({
+    source: this.data.value,
+    computation: (value, previous) => value ?? previous?.value,
+  });
+
+  protected readonly items = computed(() => this.#lastResult()?.items ?? []);
+  protected readonly totalCount = computed(() => this.#lastResult()?.totalCount ?? 0);
+}
+```
+
+#### data.ts
+
+```typescript
+export interface FruitServerItem {
+  id: string;
+  name: string;
+  color: string;
+}
+
+export interface FruitServerResult {
+  items: FruitServerItem[];
+  totalCount: number;
+}
+
+const ALL_FRUIT: FruitServerItem[] = [
+  { id: '1', name: 'Orange', color: 'orange' },
+  { id: '2', name: 'Mango', color: 'orange' },
+  { id: '3', name: 'Lime', color: 'green' },
+  { id: '4', name: 'Strawberry', color: 'red' },
+  { id: '5', name: 'Blueberry', color: 'blue' },
+  { id: '6', name: 'Banana', color: 'yellow' },
+];
+
+export interface FruitServerParams {
+  searchText?: string;
+  sort?: { propertyName: string; descending: boolean };
+}
+
+export function getServerItems(params: FruitServerParams): FruitServerResult {
+  let items = ALL_FRUIT;
+
+  if (params.searchText) {
+    const search = params.searchText.toLowerCase();
+    items = items.filter((item) => item.name.toLowerCase().includes(search));
+  }
+
+  if (params.sort) {
+    const { propertyName, descending } = params.sort;
+    items = [...items].sort((a, b) => {
+      const result = (a as unknown as Record<string, string>)[propertyName].localeCompare(
+        (b as unknown as Record<string, string>)[propertyName],
+      );
+      return descending ? -result : result;
+    });
+  }
+
+  return { items, totalCount: items.length };
+}
+```
+
+#### example.html
+
+```html
+<sky-data-manager labelText="fruit" [totalCount]="totalCount()" [(searchText)]="searchText" [(sort)]="sort">
+  <sky-data-manager-toolbar>
+    <sky-data-manager-sort-option propertyName="name" labelText="Name (A - Z)" [id]="'az'" />
+    <sky-data-manager-sort-option propertyName="name" labelText="Name (Z - A)" [id]="'za'" [descending]="true" />
+  </sky-data-manager-toolbar>
+  <sky-data-view viewId="list" viewName="List" searchEnabled>
+    <ul>
+      @for (item of items(); track item.id) {
+      <li>{{ item.name }}</li>
+      } @empty {
+      <li>No fruit found.</li>
+      }
+    </ul>
+  </sky-data-view>
+</sky-data-manager>
+```
+
+#### example.spec.ts
+
+```typescript
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { SkyLiveAnnouncerService, provideNoopSkyAnimations } from '@skyux/core';
+import { SkyDataManagerHarness } from '@skyux/data-manager/testing';
+import { SkySortHarness } from '@skyux/lists/testing';
+import { SkySearchHarness } from '@skyux/lookup/testing';
+
+import { HarnessLoader } from '@angular/cdk/testing';
+import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
+
+import { DataManagerResourceExample } from './example';
+
+async function setupTest(): Promise<{
+  fixture: ComponentFixture<DataManagerResourceExample>;
+  loader: HarnessLoader;
+}> {
+  await TestBed.configureTestingModule({
+    imports: [DataManagerResourceExample],
+    providers: [provideNoopSkyAnimations()],
+  }).compileComponents();
+
+  const fixture = TestBed.createComponent(DataManagerResourceExample);
+  const loader = TestbedHarnessEnvironment.loader(fixture);
+
+  return { fixture, loader };
+}
+
+describe('DataManagerResourceExample', () => {
+  it('registers a single list view from the template', async () => {
+    const { fixture, loader } = await setupTest();
+    fixture.detectChanges();
+    await fixture.whenStable();
+
+    const manager = await loader.getHarness(SkyDataManagerHarness);
+    expect((await manager.getViews()).length).toBe(1);
+    await expectAsync(manager.getView({ viewId: 'list' })).toBeResolved();
+
+    const toolbar = await manager.getToolbar();
+    expect(await toolbar.getSearch()).not.toBeNull();
+    expect(await toolbar.getViewActions()).toBeNull();
+  });
+
+  it('creates the component and renders all results', async () => {
+    const { fixture } = await setupTest();
+    fixture.detectChanges();
+    await fixture.whenStable();
+    fixture.detectChanges();
+    await fixture.whenStable();
+    fixture.detectChanges();
+
+    const el = fixture.nativeElement as HTMLElement;
+    const items = el.querySelectorAll('li');
+    expect(items.length).toBe(6);
+  });
+
+  it('filters results using the search box harness', async () => {
+    const { fixture, loader } = await setupTest();
+    fixture.detectChanges();
+    await fixture.whenStable();
+    fixture.detectChanges();
+    await fixture.whenStable();
+    fixture.detectChanges();
+
+    const search = await loader.getHarness(SkySearchHarness);
+    await search.enterText('lime');
+
+    const el = fixture.nativeElement as HTMLElement;
+    const items = el.querySelectorAll('li');
+    expect(items.length).toBe(1);
+    expect(items[0].textContent).toContain('Lime');
+  });
+
+  it('keeps the previous results while a search loads', async () => {
+    const { fixture, loader } = await setupTest();
+    fixture.detectChanges();
+    await fixture.whenStable();
+
+    const announceSpy = spyOn(TestBed.inject(SkyLiveAnnouncerService), 'announce');
+
+    const search = await loader.getHarness(SkySearchHarness);
+    await search.enterText('lime');
+
+    const announcements = announceSpy.calls.allArgs().map(([text]) => text);
+    expect(announcements).toContain('1 of 1 items meet criteria.');
+    expect(announcements).not.toContain('0 of 0 items meet criteria.');
+  });
+
+  it('sorts results using the sort harness', async () => {
+    const { fixture, loader } = await setupTest();
+    fixture.detectChanges();
+    await fixture.whenStable();
+    fixture.detectChanges();
+    await fixture.whenStable();
+    fixture.detectChanges();
+
+    const sort = await loader.getHarness(SkySortHarness);
+    await sort.click();
+    const item = await sort.getItem({ text: 'Name (Z - A)' });
+    await item.click();
+
+    const el = fixture.nativeElement as HTMLElement;
+    const items = el.querySelectorAll('li');
+    expect(items[0].textContent).toContain('Strawberry');
+  });
+
+  it('applies each sort option selected in turn', async () => {
+    const { fixture, loader } = await setupTest();
+    fixture.detectChanges();
+    await fixture.whenStable();
+
+    const sort = await loader.getHarness(SkySortHarness);
+    const el = fixture.nativeElement as HTMLElement;
+
+    for (const [label, first] of [
+      ['Name (Z - A)', 'Strawberry'],
+      ['Name (A - Z)', 'Banana'],
+      ['Name (Z - A)', 'Strawberry'],
+    ]) {
+      await sort.click();
+      await (await sort.getItem({ text: label })).click();
+      fixture.detectChanges();
+      await fixture.whenStable();
+
+      expect(el.querySelector('li')?.textContent).toContain(first);
+    }
+  });
+
+  it('shows an empty state when no fruit matches', async () => {
+    const { fixture, loader } = await setupTest();
+    fixture.detectChanges();
+    await fixture.whenStable();
+    fixture.detectChanges();
+    await fixture.whenStable();
+    fixture.detectChanges();
+
+    const search = await loader.getHarness(SkySearchHarness);
+    await search.enterText('nonexistent');
+
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.textContent).toContain('No fruit found.');
+  });
+});
 ```
 
 ### List page with list layout using data manager
