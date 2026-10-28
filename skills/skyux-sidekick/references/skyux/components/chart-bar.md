@@ -17,7 +17,7 @@ Bar charts support vertical or horizontal orientations, and they support grouped
   <tbody>
     <tr>
       <td>
-![Horizontal orientation thumbnail](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/bar-chart/horizontal-thumbnail.1d2ab7aefe0f347cc656000d44d97b63.png)
+![Horizontal orientation thumbnail](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/bar-chart/horizontal-thumbnail.1d2ab7ae.png)
 </td>
       <td>
 
@@ -30,7 +30,7 @@ Bar charts support vertical or horizontal orientations, and they support grouped
     </tr>
     <tr>
       <td>
-![Vertical orientation thumbnail](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/bar-chart/vertical-thumbnail.b8ead079fb5deffe6c421530c28ea0fe.png)
+![Vertical orientation thumbnail](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/bar-chart/vertical-thumbnail.b8ead079.png)
 </td>
       <td>
 
@@ -50,7 +50,7 @@ Bar charts support vertical or horizontal orientations, and they support grouped
   <tbody>
     <tr>
       <td>
-![Grouped layout thumbnail](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/bar-chart/grouped-thumbnail.0ef79d6b6b6ed743ead940ff43288c98.png)
+![Grouped layout thumbnail](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/bar-chart/grouped-thumbnail.0ef79d6b.png)
 </td>
       <td>
 
@@ -63,7 +63,7 @@ Bar charts support vertical or horizontal orientations, and they support grouped
     </tr>
     <tr>
       <td>
-![Stacked layout thumbnail](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/bar-chart/stacked-thumbnail.c5b12d491f7cc89a2f5a6fedeb0c5f35.png)
+![Stacked layout thumbnail](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/bar-chart/stacked-thumbnail.c5b12d49.png)
 </td>
       <td>
 
@@ -160,7 +160,7 @@ X and Y axis labels (optional)
 
 Legend (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/bar-chart/bar-chart-anatomy.66e8b12645ce3d9425f7bd688ce1de92.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/bar-chart/bar-chart-anatomy.66e8b126.png)
 
 ### Grouped bar chart anatomy
 
@@ -172,7 +172,7 @@ Category bar group
 
 Series bar
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/bar-chart/grouped-bar-chart-anatomy.793d0e6f9f6e9ec4486da0da816430b7.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/bar-chart/grouped-bar-chart-anatomy.793d0e6f.png)
 
 ### Stacked bar chart anatomy
 
@@ -180,7 +180,7 @@ Series bar
 
 Segment
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/bar-chart/stacked-bar-chart-anatomy.b21f27d79988ec75e632c4b64eef52d0.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/bar-chart/stacked-bar-chart-anatomy.b21f27d7.png)
 
 ### Tooltip anatomy
 
@@ -196,7 +196,7 @@ Category
 
 Label
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/bar-chart/bar-chart-tooltip-anatomy.90957cd39c1852ec05cb43f4c9350db9.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/bar-chart/bar-chart-tooltip-anatomy.90957cd3.png)
 
 ## Options
 

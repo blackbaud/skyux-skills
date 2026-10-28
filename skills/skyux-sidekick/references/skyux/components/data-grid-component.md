@@ -19,7 +19,7 @@ For guidance on choosing the appropriate data grid for your use case, see [Grids
 
 Use data grids to display large amounts of data when users need to compare values between rows or scan for specific values or outliers.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-do-use.fad6b74d8d400193ebcb4d2da75c6ca2.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-do-use.fad6b74d.png)
 
 Do use data grids to help users scan data and compare values.
 
@@ -27,7 +27,7 @@ Do use data grids to help users scan data and compare values.
 
 Don't use data grids to display content that requires a complex layout. To display multiple templated columns, visual content such as graphs or images, or content that users are likely to view in small viewports such as phones, use [repeaters](./repeater.md) instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-dont-use.f169e260ec769cfb825d70f245529441.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-dont-use.f169e260.png)
 
 Don't use data grids to display visual content or other complex layouts.
 

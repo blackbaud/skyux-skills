@@ -31,7 +31,7 @@ Help inline button (optional)
 
 Hint text (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/date-range-picker/date-range-picker-anatomy.cebe74bf5965b3081953025890d0a880.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/date-range-picker/date-range-picker-anatomy.cebe74bf.png)
 
 ## Options
 
@@ -57,7 +57,7 @@ Don't use `stacked` when the date range picker:
 - Is the last input on a form
 - Is followed by one or more conditional fields (use `sky-theme-margin-bottom-s` instead for closely related fields)
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/date-range-picker/date-range-picker-options-stacked.604bf70bc5ae47d40c028ebed82734cc.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/date-range-picker/date-range-picker-options-stacked.604bf70b.png)
 
 ## Behavior and states
 
@@ -65,13 +65,13 @@ Don't use `stacked` when the date range picker:
 
 When users select "Specific range," from and to date fields appear.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/date-range-picker/date-range-picker-behavior-specific-range.88feb132b1186e2c2d1104ef5323b499.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/date-range-picker/date-range-picker-behavior-specific-range.88feb132.png)
 
 ### Responsiveness
 
 On smaller viewports, the date fields that appear when users select "Specific range" reflow into a one-column layout.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/date-range-picker/date-range-picker-behavior-responsive.749272a53b84b7f42d55d96833e98e09.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/date-range-picker/date-range-picker-behavior-responsive.749272a5.png)
 
 ## Related information
 

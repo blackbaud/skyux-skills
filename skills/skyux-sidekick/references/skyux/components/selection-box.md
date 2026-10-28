@@ -13,13 +13,13 @@ Selection boxes present users with a choice to make or a question to answer befo
 
 Use selection boxes when users must make a choice or answer a standalone question before proceeding with a one-time process such as a setup or configuration task. Selection boxes represent the only decision on a page.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/selection-box/selection-box-usage-1.7992f55cbd8885d638b37deefe2eae6c.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/selection-box/selection-box-usage-1.7992f55c.png)
 
 Do use selection boxes to present standalone options during a one-time process such as onboarding.
 
 Use selection boxes when options are abstract or potentially unfamiliar to users. Use icons and descriptions to provide additional insight.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/selection-box/selection-box-usage-2.57ab3fd84077774719fc9849af65fa7b.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/selection-box/selection-box-usage-2.57ab3fd8.png)
 
 Do use selection boxes to present options or categories that are unfamiliar to users.
 
@@ -29,11 +29,11 @@ Don't use selection boxes for repeatable tasks such as data entry. Use other sel
 
 Don't use selection boxes for fewer than 3 options or more than 12 options. Use other selection controls instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/selection-box/selection-box-usage-3.4523aeceec1093423cdeb9899cda2f66.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/selection-box/selection-box-usage-3.4523aece.png)
 
 Don't use selection boxes in tasks or workflows that users complete repeatedly.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/selection-box/selection-box-usage-4.bbbda5099dbd2c0573ed30ea7f252cde.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/selection-box/selection-box-usage-4.bbbda509.png)
 
 Do use other selection inputs for data entry.
 
@@ -61,7 +61,7 @@ Icon (optional)
 
 Description (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/selection-box/selection-box-anatomy.e76a146668450413a44b1914bab24a35.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/selection-box/selection-box-anatomy.e76a1466.png)
 
 ## Options
 
@@ -88,7 +88,7 @@ Use descriptions to add meaning and help users distinguish between options.
 
 On smaller viewports, selection boxes hide their icons and use smaller typography and tighter spacing.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/selection-box/selection-box-behavior-1.8486ea0cedfa6305ba73599479bf4450.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/selection-box/selection-box-behavior-1.8486ea0c.png)
 
 ## Content
 
@@ -98,11 +98,11 @@ Keep headers and descriptions short and concise. Descriptions can be partial or 
 
 Selection boxes are center-aligned within a container based on the number of options and the container's width. Don't use other layouts with selection boxes.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/selection-box/selection-box-layout-1.f3ea4fa6bdfb155bc915c895db3fe7bc.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/selection-box/selection-box-layout-1.f3ea4fa6.png)
 
 Do center-align selection boxes and use matching heights.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/selection-box/selection-box-layout-2.e44da91aba638091edf68e7237d4a400.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/selection-box/selection-box-layout-2.e44da91a.png)
 
 Don't use custom layouts to arrange selection boxes.
 

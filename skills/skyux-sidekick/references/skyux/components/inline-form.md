@@ -49,7 +49,7 @@ Form field
 
 Form action buttons
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/inline-form/inline-form-anatomy-modern.e1eeb8de1f898f8e59d3dc92b8af8cd2.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/inline-form/inline-form-anatomy-modern.e1eeb8de.png)
 
 ## Behavior and states
 

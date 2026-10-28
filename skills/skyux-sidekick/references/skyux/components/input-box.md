@@ -13,19 +13,19 @@ Input boxes wrap data entry elements to provide styling, ordering, and positioni
 
 Use input boxes when users need to enter data on forms. Input boxes provide styling for data entry elements, such as basic text fields, text areas, and SKY UX components.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/input-box/input-box-usage-1.9ca7d4e41274caab88eb7dc65dc77191.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/input-box/input-box-usage-1.9ca7d4e4.png)
 
 Do use input boxes to style data entry elements.
 
 Use input boxes when forms include native HTML elements for text and selection, such as `<input>`, `<select>`, and `<textarea>`. To determine whether to use the HTML `<select>` element or a SKY UX component, see the [form design guidelines](../design/guidelines/form-design.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/input-box/input-box-usage-2.e36a2aa5fa708257b8f148f4a0f24924.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/input-box/input-box-usage-2.e36a2aa5.png)
 
 Do use input boxes to style HTML elements.
 
 Use input boxes when forms include SKY UX components, such as [country fields](./country-field.md), [datepickers](./datepicker.md), [lookup fields](./lookup.md), [phone fields](./phone-field.md), and [timepickers](./timepicker.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/input-box/input-box-usage-3.09f692aebca6c7bbd71fa82f334eed3a.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/input-box/input-box-usage-3.09f692ae.png)
 
 Do use input boxes to style SKY UX components.
 
@@ -51,7 +51,7 @@ Help inline button (optional)
 
 Hint text (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/input-box/input-box-anatomy.54376094501941eac71074c7adc57b24.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/input-box/input-box-anatomy.54376094.png)
 
 ## Options
 
@@ -59,13 +59,13 @@ Hint text (optional)
 
 When an input is required, a red asterisk appears to the right of the label. It includes the appropriate ARIA attributes to support users of assistive technologies. For more information about required fields, see the [form design guidelines](../design/guidelines/form-design.md#validation-and-error-handling).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/input-box/input-box-options-required.a56e43319fbbde7a3858c20d556886e0.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/input-box/input-box-options-required.a56e4331.png)
 
 ### Help inline button
 
 When you need to supplement an input box label with additional information but don't require persistent inline help, you can place a [help inline button](./help-inline.md) beside the label to invoke contextual user assistance.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/input-box/input-box-options-help-button.361ba22cebcd930dd1d8baebdeb4bada.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/input-box/input-box-options-help-button.361ba22c.png)
 
 ### Hint text
 
@@ -75,7 +75,7 @@ To highlight important considerations about an input, use hint text. This persis
 - Any constraints on the input
 - Additional instructions or context, such as how data is used
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/input-box/input-box-options-hint-text.236b96597d3f69586ab8c35caf98734e.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/input-box/input-box-options-hint-text.236b9659.png)
 
 Do use hint text to explain how to enter data.
 
@@ -83,7 +83,7 @@ Do use hint text to explain how to enter data.
 
 When users are likely to exceed a character limit, use a character count indicator. It displays the number of characters users enter, the character limit, and a danger icon if they exceed the limit. Indicators are useful when technical requirements lead to restrictive character limits and free-form user entries might be too long. If users are unlikely to reach character limits, don't use character count indicators.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/input-box/input-box-options-count.6742159929f2689848d03872f8016c22.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/input-box/input-box-options-count.67421599.png)
 
 Do use character count indicators when users are likely to exceed character limits.
 
@@ -97,7 +97,7 @@ Don't use `stacked` when the form input:
 - Is the last input on a form
 - Is followed by one or more conditional fields (use `sky-theme-margin-bottom-s` instead for closely related fields)
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/input-box/input-box-options-stacked.170f20ef8ed9b3d088316694a870cda1.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/input-box/input-box-options-stacked.170f20ef.png)
 
 ### Suggested text
 
@@ -115,11 +115,11 @@ When an input is in an error state, it provides visual indication with a red bor
 
 Make input labels succinct and descriptive. Use nouns for input labels. Don't use verbs or questions.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/input-box/input-box-content-1.ca49c946672ebf8f31aac988903a2f2b.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/input-box/input-box-content-1.ca49c946.png)
 
 Don't use full sentences or questions for input labels.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/input-box/input-box-content-2.483192c1386905976861756a7e4923d3.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/input-box/input-box-content-2.483192c1.png)
 
 Do use succinct input labels.
 

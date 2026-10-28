@@ -22,13 +22,13 @@ Use action buttons when they represent a decision point within a task where user
 
 Use action buttons immediately after users initiate tasks to differentiate the methods of completion.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/action-button/action-button-use-when-1.06c0d6b25c8157534c36a31074f337e4.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/action-button/action-button-use-when-1.06c0d6b2.png)
 
 Do use action buttons immediately after users initiate tasks.
 
 Use action buttons on pages or modals when tasks are underway and the only relevant choice for users is how to complete tasks. Do not display other inputs or choices until users select an action button. Then hide the action buttons or close the modals.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/action-button/action-button-use-when-2.e1ea6a60c31e25a2a424607f4164ee1f.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/action-button/action-button-use-when-2.e1ea6a60.png)
 
 Do use action buttons when the only relevant choice for users is how to complete tasks.
 
@@ -36,19 +36,19 @@ Do use action buttons when the only relevant choice for users is how to complete
 
 Don't use an action button by itself. Action buttons should not serve as primary calls-to-action on pages where other actions are available to users.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/action-button/action-button-dont-use-when-1.2180039e6baf95722227c4f2b85d42ac.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/action-button/action-button-dont-use-when-1.2180039e.png)
 
 Don't use an action button by itself.
 
 Do not use actions buttons to present different methods of completing tasks before users initiate the tasks. Action buttons should not compete against other content for user attention.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/action-button/action-button-dont-use-when-2.97b7c405ccb4c2cf947633fa5517d7ec.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/action-button/action-button-dont-use-when-2.97b7c405.png)
 
 Don't use action buttons to present different methods of completing tasks before users initiate the tasks.
 
 Do not use action buttons when consequential choices are not made at the beginning of tasks. Instead, use a different selection input and progressive disclosure to reveal additional content as necessary. Likewise, do not use action buttons when the methods of completion in tasks differ only in minor ways such as an extra field or two. Action buttons represent consequential decisions where the methods of completion can start and end differently and can include entirely different steps and requirements.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/action-button/action-button-dont-use-when-3.aa3304f56b7e44051d2a506208ab69a6.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/action-button/action-button-dont-use-when-3.aa3304f5.png)
 
 Don't use action buttons when choices are not made at the beginning of tasks.
 
@@ -68,7 +68,7 @@ Use action buttons inside modals when tasks mostly take place within modals. For
 
 - Always provide a "Cancel" action inside a modal with action buttons.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/action-button/action-button-behavior-1.1f4c1a8becf1d3890541718eca0c8e4c.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/action-button/action-button-behavior-1.1f4c1a8b.png)
 
 Use action buttons directly on pages or tabs that include add or configuration processes but no other tasks. Most add processes use the modal example above.
 
@@ -79,13 +79,13 @@ Use action buttons directly on pages or tabs that include add or configuration p
 
 - If it is useful to include an option for users to back out of configuration processes, place an explicit "Cancel" or "Delete" action under the action buttons.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/action-button/action-button-behavior-2.6fa389f7a2bc47e56d536b0967edb410.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/action-button/action-button-behavior-2.6fa389f7.png)
 
 Use action buttons directly inside tabs instead of modals when users add user-defined tabs and select how populate the content.
 
 - A "Cancel" action under the action buttons is not necessary because users can remove user-defined tabs on the tab control.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/action-button/action-button-behavior-3.02f7e64f1012a0f3748a1af7ea886258.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/action-button/action-button-behavior-3.02f7e64f.png)
 
 ## Installation
 

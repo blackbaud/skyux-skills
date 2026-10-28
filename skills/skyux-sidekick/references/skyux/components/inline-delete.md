@@ -15,7 +15,7 @@ Use the inline delete confirmation when users need to confirm that they want to 
 
 Keep in mind that you should not delete items from lists when they are complex enough to have their own record pages. For lists with such items, do not include delete actions in the [context-menu dropdowns](./dropdown.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/inline-delete/inline-delete-usage-1.5c68033daca05cdfa1b81dfe3c46b6d7.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/inline-delete/inline-delete-usage-1.5c68033d.png)
 
 Do use inline delete confirmation when deleting an item from a list.
 
@@ -23,11 +23,11 @@ Do use inline delete confirmation when deleting an item from a list.
 
 Don't use inline delete confirmation when users need to confirm that they want to delete an item outside of a list. Use a [confirm dialog](./confirm.md) instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/inline-delete/inline-delete-usage-2.1450df1653090b1bfb5a9c2e91c086c4.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/inline-delete/inline-delete-usage-2.1450df16.png)
 
 Don't use inline delete confirmation for an item outside of a list.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/inline-delete/inline-delete-usage-3.99e556579bf8d2211385e2349d2aaf66.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/inline-delete/inline-delete-usage-3.99e55657.png)
 
 Do use a confirm dialog when users need to confirm that they want to delete an item outside of a list.
 
@@ -45,7 +45,7 @@ Cancel button
 
 Overlay
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/inline-delete/inline-delete-anatomy.44c968caff3612b51bb533560258a2f9.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/inline-delete/inline-delete-anatomy.44c968ca.png)
 
 ## Behavior and states
 

@@ -15,11 +15,11 @@ Use the list summary to highlight important information about lists when users s
 
 To assist users with tasks and help them interpret lists, you can display up to two additional summary items to the right of the list count. For example, in a list of gifts, you can highlight the total value of all gifts.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/list-page/list-count.8378fb30e0a7146555fbb94e560aa67b.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/list-page/list-count.8378fb30.png)
 
 Do use the list summary to provide users with a list count and up to two additional items that summarize a list.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/list-page/list-count-summaries.a458ebdfe3ff80c93a95e8ec31df0dcb.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/list-page/list-count-summaries.a458ebdf.png)
 
 Don't use the list summary to display data that doesn't help users interpret the list.
 
@@ -27,13 +27,13 @@ Don't use the list summary to display data that doesn't help users interpret the
 
 Don't use the list summary when a list includes fewer than 15 items and is unlikely to change. In this scenario, the list count and other summary items are unlikely to help users.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/list-page/list-count-small-fixed-list.732b2a92852843beca2b09d4d0a6b513.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/list-page/list-count-small-fixed-list.732b2a92.png)
 
 Don't use the list summary to provide a list count on a small, static list.
 
 Don't use the list summary in contexts other than above a list.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/list-summary/list-summary-dont-use-context.57a0ba47dfae721fb10479ec64a91411.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/list-summary/list-summary-dont-use-context.57a0ba47.png)
 
 Don't display the list summary without a list.
 
@@ -51,7 +51,7 @@ Additional list summary item (optional)
 
 [Help inline button](./help-inline.md) (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/list-summary/list-summary-anatomy.8beb9172a9ce9d338bb5507e6f496ad7.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/list-summary/list-summary-anatomy.8beb9172.png)
 
 ## Options
 
@@ -59,7 +59,7 @@ Additional list summary item (optional)
 
 To assist users with tasks and help them interpret lists, you can display up to two additional list summary items to the right of the list count. For example, in a list of gifts, you can highlight the total value of all gifts.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/list-summary/list-summary-additional-items.aea7ff5ded64f667e161ff4c9d019f1e.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/list-summary/list-summary-additional-items.aea7ff5d.png)
 
 You can provide users with up to two additional summary items beside the list count.
 
@@ -67,7 +67,7 @@ You can provide users with up to two additional summary items beside the list co
 
 When you need to supplement a list summary item with additional information, such as how the data is calculated or what it represents, you can place a [help inline button](./help-inline.md) beside the label to invoke contextual user assistance.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/list-summary/list-summary-options-help-inline.3069e88f2ec645c20dbfe13284e55298.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/list-summary/list-summary-options-help-inline.3069e88f.png)
 
 A help inline button can open a popover or the help panel when users need more information about a list summary item.
 
@@ -77,7 +77,7 @@ A help inline button can open a popover or the help panel when users need more i
 
 When filters or search criteria are applied to a list, update the list summary to reflect the filtered list. Update both the list count and any additional summary items, and add "match" to the list count's label to indicate that the list is in a filtered state.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/list-summary/list-summary-behavior-update-details.aef6fa1fcb3e3a3a8b2cd1e4394bd03c.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/list-summary/list-summary-behavior-update-details.aef6fa1f.png)
 
 Do update the details in the list summary when filters or search criteria are applied to a list.
 
@@ -87,7 +87,7 @@ Do update the details in the list summary when filters or search criteria are ap
 
 Always display the list summary above the list and below the [toolbar](./toolbar.md) and [filter bar](./filter-bar.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/list-summary/list-summary-layout-repeater.c54bfa7160f97505279ee3f6d2df7eb0.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/list-summary/list-summary-layout-repeater.c54bfa71.png)
 
 Do place list summary after toolbar and filter bar and before the list of items.
 

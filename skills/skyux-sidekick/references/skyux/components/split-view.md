@@ -13,7 +13,7 @@ A split view displays a workspace beside a list to let users view details and ta
 
 Use split views when users need to work through a list of items with the intent of taking action on each item.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/split-view/split-view-usage.afb3ab9003e792c00e0722cbc9926601.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/split-view/split-view-usage.afb3ab90.png)
 
 Do use split views when users take the same action for each item in the list.
 
@@ -37,7 +37,7 @@ Workspace panel
 
 Summary action bar  (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/split-view/split-view-anatomy-desktop.16936f42d8425cb0da26dc195f9d2bac.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/split-view/split-view-anatomy-desktop.16936f42.png)
 
 ### Small viewport
 
@@ -57,7 +57,7 @@ Workspace panel
 
 Summary action bar  (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/split-view/split-view-anatomy-mobile.3895c8eb86059e0016d50573fe8f777f.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/split-view/split-view-anatomy-mobile.3895c8eb.png)
 
 ## Options
 
@@ -65,15 +65,15 @@ Summary action bar  (optional)
 
 [Repeaters](./repeater.md) are the most common list type because they enable flexible content layouts.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/split-view/split-view-usage.afb3ab9003e792c00e0722cbc9926601.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/split-view/split-view-usage.afb3ab90.png)
 
 [Tree views](./angular-tree.md) can be used when items are hierarchical. If items at different levels have different types, you can use multiple views in the workspace panel.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/split-view/split-view-options-list-type-tree.3a6d859ce8728dc3d2c36b5e80b213af.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/split-view/split-view-options-list-type-tree.3a6d859c.png)
 
 We recommend against using [grids](./grids.md) if possible. They do not scale well at the typically small width of the list.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/split-view/split-view-options-list-type-grid.739474e419ae9663ebf38a231d8a5faf.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/split-view/split-view-options-list-type-grid.739474e4.png)
 
 Use caution with grids because they do not perform well at narrow widths.
 
@@ -81,11 +81,11 @@ Use caution with grids because they do not perform well at narrow widths.
 
 If users need to search for specific items in the list or show and hide items with certain statuses, include a search input or status checkbox filter in the list panel.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/split-view/split-view-options-search-toggle.57e4d92e34dcad071de3a2c264419196.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/split-view/split-view-options-search-toggle.57e4d92e.png)
 
 When possible, pre-filter the list to relevant items and pre-sort it to the expected useful order. If you can't predict how users will use the list, include a [toolbar](./toolbar.md) to let them add items or filter, sort, and search the list.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/split-view/split-view-options-toolbar.5db281b0ab420f5e5d03c259bfecdc01.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/split-view/split-view-options-toolbar.5db281b0.png)
 
 Use caution when using a full toolbar with a split view. Automatically filter and sort the list when possible.
 
@@ -99,19 +99,19 @@ If users are likely to work through the list sequentially, remove the selected i
 
 When users select an item in the list, place focus on the first focusable element in the workspace so that users can start working immediately.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/split-view/split-view-behavior-focus.40ba0bd3b0a2551038a779ac8cbd71e2.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/split-view/split-view-behavior-focus.40ba0bd3.png)
 
 ### Change panel width
 
 Users can change the panel widths using drag-and-drop or keyboard interactions. If the list content is wider than the panel, a horizontal scrollbar appears.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/split-view/split-view-behavior-resize.e29d57c2edbdb8810598eb5ab46e1ceb.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/split-view/split-view-behavior-resize.e29d57c2.png)
 
 ### Responsiveness
 
 In smaller viewports, the split view automatically switches from a side-by-side view to a panel-switching interaction where users switch between the list and the workspace.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/split-view/split-view-behavior-responsive.954b906f00b8173adf28e9118eeb9bac.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/split-view/split-view-behavior-responsive.954b906f.png)
 
 ## Content
 
@@ -123,7 +123,7 @@ Use up to three pieces of data to identify the item. If additional content is ne
 
 A split view should be the last item on a page. Do not place additional content below it.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/split-view/split-view-layout-last-item.98ca0a4b1e52bb8d79d1aeb6a85623ca.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/split-view/split-view-layout-last-item.98ca0a4b.png)
 
 Don't place content below the split view.
 

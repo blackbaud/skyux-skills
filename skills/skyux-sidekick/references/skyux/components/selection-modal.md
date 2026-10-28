@@ -15,7 +15,7 @@ Use selection modals when users need to select options from a long or unpredicta
 
 Use buttons to open selection modals. After users select options, display selections in a format or pattern that supports the next interaction.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/selection-modal/selection-modal-usage-1.70e74c7217cf53412de714bf8a3efcac.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/selection-modal/selection-modal-usage-1.70e74c72.png)
 
 Do use selection modals when users select options and then immediately interact with the selections.
 
@@ -23,27 +23,27 @@ Do use selection modals when users select options and then immediately interact 
 
 Don't use selection modals when users only need to select options. Instead, use [lookup fields](./lookup.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/selection-modal/selection-modal-usage-3.5730deda4b2404d79ab27a78d7574b71.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/selection-modal/selection-modal-usage-3.5730deda.png)
 
 Don't use selection modals for basic selection tasks.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/selection-modal/selection-modal-usage-4.01c4abf55f24dce1b390d37ceddb530a.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/selection-modal/selection-modal-usage-4.01c4abf5.png)
 
 Do use lookup fields for basic selection tasks.
 
 Don't use selection modals for five or fewer options. Instead, use [checkboxes](./checkbox.md) or [radio buttons](./radio.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/selection-modal/selection-modal-usage-5.d10074a1b9a7b77338b5b370732b4fcc.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/selection-modal/selection-modal-usage-5.d10074a1.png)
 
 Don't use selection modals for a few options.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/radio-button/radio-button-usage-2.69522665a167662e83baec4d293f780b.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/radio-button/radio-button-usage-2.69522665.png)
 
 Do use checkboxes or radio buttons for small sets of options.
 
 Don't use selection modals when a list of options requires a format other than a simple selectable [repeater](./repeater.md). If a list requires a different format, such as a custom repeater template or a [tree view](./angular-tree.md), or if users require filters to find and select options, create a custom modal with the appropriate features.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/lookup/lookup-options-4.3c3c9a2ee3ec8628d6eba932c7beafda.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/lookup/lookup-options-4.3c3c9a2e.png)
 
 Do use other formats, such as custom modals with tree views, instead of selection modals when lists of options require filtering or special list formats.
 
@@ -73,7 +73,7 @@ Selected option
 
 New button (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/selection-modal/selection-modal-anatomy.9928b310687d9da55c02a7a5dec7710f.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/selection-modal/selection-modal-anatomy.9928b310.png)
 
 ## Options
 
@@ -81,7 +81,7 @@ New button (optional)
 
 Use single-select mode to limit users to a single option, and use multiselect mode to let them select multiple options.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/selection-modal/selection-modal-single.2bb24d37cc132acc591fc773270cef37.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/selection-modal/selection-modal-single.2bb24d37.png)
 
 Use single-select mode when users can only select one option.
 

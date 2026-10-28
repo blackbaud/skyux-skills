@@ -112,11 +112,11 @@ Use for partial or incomplete dates when the full date is unnecessary or unavail
 
 To avoid ambiguity, use the longest date format that space allows. For example, short dates are useful when space is limited, while long dates work better in display text and complete sentences
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/content/dates-times/do-shortdate-tabular.8b0a4e047af810d60d8c992da30175be.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/content/dates-times/do-shortdate-tabular.8b0a4e04.png)
 
 Do use short dates when space is limited, such as in grids and lists.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/content/dates-times/do-fuzzydate.0c54cb5501b2e18af2ae68d3ad68334f.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/content/dates-times/do-fuzzydate.0c54cb55.png)
 
 Do use long dates and fuzzy dates in display text, such as page headings.
 
@@ -336,7 +336,7 @@ Registration is open from June 7, 2026–July 18, 2026.
 
 In display text, don't abbreviate months or days of the week unless context makes the meaning clear. When necessary, abbreviate to the first three letters of the month or day with no period. For example, if a chart uses months as the x-axis, you can use three-letter abbreviations for consistent spacing across screen sizes because the sequence provides the necessary context to avoid confusion even if the text is translated to a language where some months start with the same three letters.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/content/dates-times/do-abbr-charts.d4b6cded474f31b3bd09443590bcebc8.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/content/dates-times/do-abbr-charts.d4b6cded.png)
 
 Do abbreviate months or days in areas such as charts where space is limited and context makes the meaning clear.
 
@@ -357,14 +357,14 @@ Do abbreviate months or days in areas such as charts where space is limited and 
     <tr>
       <td>
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/content/dates-times/do-abbr-full-date-review.5b8c3dc849a6d36c4fa0f450b43930b0.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/content/dates-times/do-abbr-full-date-review.5b8c3dc8.png)
 
 Do spell out months and days in display text to avoid ambiguity.
 
 </td>
       <td>
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/content/dates-times/dont-abbr-review.75614b16f75bfaa5af527b71c2b811d0.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/content/dates-times/dont-abbr-review.75614b16.png)
 
 Don't abbreviate in display text because this can cause localization issues.
 
@@ -373,14 +373,14 @@ Don't abbreviate in display text because this can cause localization issues.
     <tr>
       <td>
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/content/dates-times/do-abbr-full-date-heading.3060f3f9e224c5938d6f48875f47d819.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/content/dates-times/do-abbr-full-date-heading.3060f3f9.png)
 
 Do spell out months and days in headings.
 
 </td>
       <td>
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/content/dates-times/dont-abbr-heading.80b0ae1ecbf1aaabe3e16918369c8552.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/content/dates-times/dont-abbr-heading.80b0ae1e.png)
 
 Don't abbreviate in headings.
 
@@ -389,14 +389,14 @@ Don't abbreviate in headings.
     <tr>
       <td>
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/content/dates-times/do-abbr-full-date-label.92004c3215ee6d435f0f0ee78d1d23d2.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/content/dates-times/do-abbr-full-date-label.92004c32.png)
 
 Do spell out months and days in labels.
 
 </td>
       <td>
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/content/dates-times/dont-abbr-label.20ed2b6dd7a349e898680a3edf7de0dc.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/content/dates-times/dont-abbr-label.20ed2b6d.png)
 
 Don't abbreviate in labels.
 

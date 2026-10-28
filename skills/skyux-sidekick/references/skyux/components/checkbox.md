@@ -13,25 +13,25 @@ Checkboxes let users select multiple items from a short list of items.
 
 Use a checkbox when users need to make a yes/no decision about a single question and the changes don't take effect immediately. For example, use a checkbox in a modal where the user confirms the decision before changes take effect.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-usage-1.2ccbee78ed1195de5654aa725908d635.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-usage-1.2ccbee78.png)
 
 Do use a checkbox when users must make a single yes/no decision.
 
 Use checkbox groups when users must make multiple, related yes/no decisions.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-usage-3.772c7f4cf4b38525a592f3af8b484e3a.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-usage-3.772c7f4c.png)
 
 Do use a checkbox group for multiple, related checkboxes.
 
 Use icon checkboxes in a checkbox group when the icons are sufficient to clearly communicate the options.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-usage-2.b5beeddabfe59b96f97ed5ddf12a68f7.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-usage-2.b5beedda.png)
 
 Do use icon checkboxes when icons clearly communicate the options.
 
 Use checkboxes to enable conditional inputs as part of a task. For 1-3 inputs, disable the inputs until users select the checkbox. For more than 3 inputs, hide the inputs until users select the checkbox.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-usage-4.3435d079788bf4bbf82e8b02c3418b5a.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-usage-4.3435d079.png)
 
 Do use checkboxes to enable conditional inputs as part of a task.
 
@@ -39,27 +39,27 @@ Do use checkboxes to enable conditional inputs as part of a task.
 
 Don't use checkbox groups when users need to make multiple selections from homogenous lists of more than 5 items. Use a different [selection input](../design/guidelines/form-design.md), such as a [lookup field](./lookup.md), instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-usage-8.5.76e1e8659bc01c83e3988a8735b340f1.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-usage-8.5.76e1e865.png)
 
 Don't use a checkbox group for a homogenous list of more than 5 items.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-usage-8.75.b28d82a07fd6f474db0c993e31936af7.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-usage-8.75.b28d82a0.png)
 
 Do use a lookup field to let users select items from a long, homogenous list.
 
 However, checkbox groups can include more than 5 checkboxes when users need to make a series of yes/no decisions about heterogenous options.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-usage-8.6.01dca0c929ecf82b5b8a0f683ac1f9bf.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-usage-8.6.01dca0c9.png)
 
 Do use checkbox groups for more than 5 checkboxes when the choices represent distinct decisions.
 
 Don't use a checkbox when users can toggle between two states or options and changes take place immediately. Use [toggle switch](./toggle-switch.md) instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-usage-9.1.f043c6cc4a485287b9d9b24beb14b8a5.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-usage-9.1.f043c6cc.png)
 
 Don't use checkboxes to alternate between two states when changes take effect immediately.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-usage-9.2.f31c8d06ba6d9a953e27fa9eaa29ba0b.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-usage-9.2.f31c8d06.png)
 
 Do use toggle switches when changes take effect immediately.
 
@@ -67,19 +67,19 @@ Don't use a checkbox group for a lone checkbox in a form or [field group](./fiel
 
 However, if the form or field group contains both a checkbox group and a lone checkbox, use a checkbox group for the lone checkbox to differentiate it from the other checkboxes.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-usage-5.b06b9ee82f9d92319efa6e7bba4d35ac.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-usage-5.b06b9ee8.png)
 
 Don't use a checkbox group for a lone checkbox.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-usage-6.e7dc9ca88c4c9ddc46fc808d373234f2.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-usage-6.e7dc9ca8.png)
 
 Do use an ungrouped checkbox within a form or field group.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-usage-7.006dcb79da3b7168d9955fa05666c435.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-usage-7.006dcb79.png)
 
 Don't use an ungrouped checkbox next to a checkbox group.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-usage-8.24ec6cf356c263ec1e8a5cbb1bac97e5.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-usage-8.24ec6cf3.png)
 
 Do use a checkbox group for a lone checkbox next to a checkbox group.
 
@@ -107,7 +107,7 @@ Help inline button (optional)
 
 Hint text (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-anatomy.07fe9a203319f8db2cdedaf4bb35177e.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-anatomy.07fe9a20.png)
 
 ### Checkbox group
 
@@ -131,7 +131,7 @@ Help inline button (optional)
 
 Hint text (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-group-anatomy.7366139e6d55d56171fc04927f455984.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-group-anatomy.7366139e.png)
 
 ### Icon checkbox
 
@@ -143,7 +143,7 @@ Icon checkbox
 
 Icon
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-icon-anatomy.e8cf1789a28ac8e1edfa2a35b4744c2e.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-icon-anatomy.e8cf1789.png)
 
 ## Options
 
@@ -153,7 +153,7 @@ By default, the labels for checkbox groups aren't treated as HTML headings. To e
 
 In rare cases, you can hide a checkbox group label and use other text to present the checkboxes.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-options-heading.639f4268dc24869dcb3ceeba34c03f48.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-options-heading.639f4268.png)
 
 Checkbox group labels can be turned into HTML headings.
 
@@ -188,11 +188,11 @@ Don't use `stacked` when the checkbox group:
 
 Also use `stacked` when an individual checkbox is immediately followed by another form input. However, don't use `stacked` when the checkbox is followed by one or more conditional fields. Use `sky-theme-margin-bottom-s` instead for closely related fields.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-options-stacked-1.8589348a67334a785313ffff87a36842.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-options-stacked-1.8589348a.png)
 
 If a checkbox group uses `headingLevel`, use `stacked` when the checkbox group is followed by a [field group](./field-group.md) or another heading. The checkbox group automatically increases the size of the margin to fit the visual hierarchy.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-options-stacked-2.8232d9a4871fd76f1e2f3d1a2d4e029d.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-options-stacked-2.8232d9a4.png)
 
 ## Content
 
@@ -208,11 +208,11 @@ Don't wrap a checkbox group inside a [field group](./field-group.md) component w
 
 For example, if a form's "Supported credit cards" section only includes a checkbox group, don't use a field group. Instead, set the checkbox group's `headingLevel` and `headingStyle` to `3` to use the label as an `h3` heading with a `sky-theme-font-heading-3` visual style. An additional heading from a field group would be unnecessary and confusing.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-usage-9.853c1e673416762512b56d55cb925f36.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-usage-9.853c1e67.png)
 
 Don't use a field group with a lone checkbox group.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-usage-10.389b289ade7642e0e90cb5bd28b2d460.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/checkbox/checkbox-usage-10.389b289a.png)
 
 Do adjust the heading level and heading style of a checkbox group to match the hierarcy of field groups.
 

@@ -13,13 +13,13 @@ The confirm service launches simple confirmation dialogs that prompt users to co
 
 Use confirmation dialogs to focus user attention when actions are destructive or could be costly if performed by mistake. Prompt users to confirm an action with a single question and provide terminal actions to answer the question.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/confirm/confirm-usage-1.90c28a0beb69af121ab75415471ff5a5.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/confirm/confirm-usage-1.90c28a0b.png)
 
 Do use confirmation dialogs to inform users of consequences and to prompt them to confirm potentially costly actions.
 
 Use confirmation dialogs with a lone terminal action when users need to acknowledge important information but don't need to make a decision, such as when they need to know why they can't perform an action.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/confirm/confirm-usage-2.4323041c0e5da75f7edb16c7c82c4414.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/confirm/confirm-usage-2.4323041c.png)
 
 Do use confirmation dialogs to prompt users to ackowledge important information.
 
@@ -47,7 +47,7 @@ Actions
 
 Body text (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/confirm/confirm-anatomy.a52cf24c55ed8c0fe3343b0edac98e69.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/confirm/confirm-anatomy.a52cf24c.png)
 
 ## Options
 
@@ -64,11 +64,11 @@ Include up to three terminal actions to answer the question in the heading. And 
 
 When a confirmation dialog's primary action deletes existing data, such as records or settings, set the `SkyConfirmButtonConfig.styleType` to `danger` for a red background. Don't use this style for any other buttons, including actions that delete unsaved data and secondary actions that delete existing data.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/confirm/confirm-content-1.680e21b3d5d3c14ffc942e0f734cd449.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/confirm/confirm-content-1.680e21b3.png)
 
 Do use the red danger style when primary buttons delete existing content.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/confirm/confirm-content-2-.8761f622658c4d9f731d0fd1eeca1983.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/confirm/confirm-content-2-.8761f622.png)
 
 Don't use the red danger style when actions require confirmation but don't delete existing data.
 

@@ -11,19 +11,19 @@ SKY UX provides a consistent, cohesive user experience with a framework of compo
 
 ## Developing with Angular
 
-[![](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/learn/angular.5c69e565f1ae6d7717fb3ecd2be004ad.svg)](https://angular.io/)
+[![](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/learn/angular.5c69e565.svg)](https://angular.io/)
 
 [Angular](https://angular.io/) is at the heart of SKY UX, so developers need to be familiar with this technology. For training material, check out the [Angular resources.](https://angular.io/resources?category=education)
 
-[![](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/learn/design-guidelines-illustration.ebc52e153810f4466c39d3b182fac535.svg)](./get-started.md)
+[![](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/learn/design-guidelines-illustration.ebc52e15.svg)](./get-started.md)
 
 [Developer setup](./get-started.md) guides you through the initial setup and configuration and helps you display your first SKY UX component.
 
-[![](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/learn/style-illustration.3da36f2bb3cd7d014edacbee751ecd2a.svg)](../../design/styles/README.md)
+[![](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/learn/style-illustration.3da36f2b.svg)](../../design/styles/README.md)
 
 [Styles](../../design/styles/README.md) are atomic visual design elements, such as color, typography, and spacing, that we use to create elegant, consistent experiences.
 
-[![](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/learn/components-illustration.2a83f68acd702d19ba5f249c89398647.svg)](../../components/README.md)
+[![](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/learn/components-illustration.2a83f68a.svg)](../../components/README.md)
 
 [Components](../../components/README.md) are the building blocks that handle navigation, content organization, communication, and other interactions.
 

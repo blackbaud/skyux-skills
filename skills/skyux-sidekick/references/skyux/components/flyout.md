@@ -13,19 +13,19 @@ Flyouts display large quantities of supplementary information related to a task.
 
 Use flyouts to display large amounts of supplementary information related to user tasks. The flyout container slides out from the side of the page and lays over page content. It can contain lists, record views, graphs, or other information displays.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/flyout-skeleton.22e7ead38b4848c53e3a1a3531210cf8.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/flyout-skeleton.22e7ead3.png)
 
 Do use flyouts to display large amounts of supplementary information related to user tasks.
 
 Use flyouts to drill into analytical insights so that users can quickly glance into what makes up those insights without spawning new workflows.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/flyout-dashboard-view.af9c2ea6c5347a6f732651a6aab8486b.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/flyout-dashboard-view.af9c2ea6.png)
 
 Do use flyouts to let users drill into analytical insights.
 
 Use flyouts to drill into child records so that users can retain the context of the parent records. Flyouts only cover part of the page, so users can refer to the page for context.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/flyout-record-view.7c3e5928c36acbbb5f428f43db58306e.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/flyout-record-view.7c3e5928.png)
 
 Do use flyouts to drill into child records.
 
@@ -33,49 +33,49 @@ Do use flyouts to drill into child records.
 
 Don't use flyouts to navigate from one record to another instance of the same record type. For example, if users on a constituent record select a link to a different constituent record, navigate to the new record. Do not open it in a flyout.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/not-record-to-record.c3b3f69a2686ff233913219d73461b45.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/not-record-to-record.c3b3f69a.png)
 
 Don't use flyouts to navigate from one record to another instance of the same record type.
 
 Don't use flyouts to navigate from a child page to its parent page. For example, if users on a gift record select a link to return to a constituent record, navigate to a full-page view of the constituent record. Do not open it in a flyout.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/not-child-to-parent.31e12e0b31b8c69b74a44dede62b7588.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/not-child-to-parent.31e12e0b.png)
 
 Don't use flyouts to navigate from a child page to its parent page.
 
 Don't use flyouts when another flyout is already open. If users select a link in a flyout, close the flyout and navigate to the new link location. In other words, limit flyouts to a single drill-in. On further drilling, open a full page.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/not-double-panel.ec114a8badbbba34e6bccb32e7f6a5f2.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/not-double-panel.ec114a8b.png)
 
 Don't use flyouts when another flyout is already open.
 
 Don't use flyouts on pages that don't make sense when it closes. For example, on a page to enter grades for a class of students, displaying the names of students doesn't provide value without the grade entry form, so don't use a flyout to display the grade entry form.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/not-need-details.d00c606f932c7571857a4f915246fc59.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/not-need-details.d00c606f.png)
 
 Don't use flyouts to display essential information.
 
 Don't use flyouts to display small amounts of additional information. Flyouts are for large amounts of supplementary information. To display smaller amounts of information, use [a popover component](./popover.md) or [an expandable repeater](./repeater.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/not-small-content.c51eaa2872b342fb8f9d0b3e2694ffe6.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/not-small-content.c51eaa28.png)
 
 Don't use flyouts for small amounts of additional information.
 
 Don't use flyouts to display items that need a long time to load such as system-generated reports. Instead, let users continue to use the system, and use [toasts](./toast.md) to let them know when the content is available.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/not-long-load.1384bdfb7d805e18cd228c3ada554fb4.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/not-long-load.1384bdfb.png)
 
 Don't use flyouts for items that take a long time to load.
 
 Don't use flyouts to link to external sites. Open external sites in new tabs. For example, when users select a constituent address, a Google map of that address opens in a new tab.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/not-external.2515ad21661ea3c7067bc1d625046ef9.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/not-external.2515ad21.png)
 
 Don't use flyouts to display external content.
 
 Don't use flyouts for tasks where users require a full-screen view of details or where they take multiple actions within the view. Navigate to a full page instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/not-need-full.f523b4a4b239e6ceecfd68fb229d56a1.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/not-need-full.f523b4a4.png)
 
 Don't use flyouts for tasks that require a full-screen view.
 
@@ -92,17 +92,17 @@ When users select a non-interactive element on the background page, the flyout c
     <tr>
       <td>
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/ixn-bg-active-1.1594c9a3747a0b8d68ae46632e36a661.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/ixn-bg-active-1.1594c9a3.png)
 
 </td>
       <td>
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/ixn-bg-active-2.f4e230342b56ebc4332526ac69e664be.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/ixn-bg-active-2.f4e23034.png)
 
 </td>
       <td>
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/ixn-bg-active-3.73b3d6f8f55830a7024b8dc26c8d9b70.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/ixn-bg-active-3.73b3d6f8.png)
 
 </td>
     </tr>
@@ -118,17 +118,17 @@ The flyout and its background page scroll independently. When users touch, hover
     <tr>
       <td>
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/ixn-scroll-1.1594c9a3747a0b8d68ae46632e36a661.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/ixn-scroll-1.1594c9a3.png)
 
 </td>
       <td>
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/ixn-scroll-2.d617f36534374628900ecadf7491c542.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/ixn-scroll-2.d617f365.png)
 
 </td>
       <td>
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/ixn-scroll-3.a60818e7b8ee720e543f13648e11a4eb.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/ixn-scroll-3.a60818e7.png)
 
 </td>
     </tr>
@@ -144,17 +144,17 @@ Users can select the flyout's left border and drag it to adjust the size. The si
     <tr>
       <td>
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/ixn-resize-1.1594c9a3747a0b8d68ae46632e36a661.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/ixn-resize-1.1594c9a3.png)
 
 </td>
       <td>
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/ixn-resize-2.c5fce5bc61761490da48ed2a7bc7b89c.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/ixn-resize-2.c5fce5bc.png)
 
 </td>
       <td>
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/ixn-resize-3.a204523d01307cfaf03750609e68602a.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/ixn-resize-3.a204523d.png)
 
 </td>
     </tr>
@@ -170,12 +170,12 @@ The flyout covers the omnibar, but the help panel remains visible in the upper r
     <tr>
       <td>
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/ixn-help-1.1594c9a3747a0b8d68ae46632e36a661.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/ixn-help-1.1594c9a3.png)
 
 </td>
       <td>
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/ixn-help-2.9ea207f70cbb25f87ce49c2604cd9a8d.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/ixn-help-2.9ea207f7.png)
 
 </td>
     </tr>
@@ -186,13 +186,13 @@ The flyout covers the omnibar, but the help panel remains visible in the upper r
 
 When users perform actions in the flyout to launch modal dialogs, the modal dialogs should cover the entire page.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/ixn-modal.639f26e7da41ca5c32c6d68ee718914f.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/ixn-modal.639f26e7.png)
 
 ### Responsiveness
 
 Do not use a flyout when a screen is smaller than 480px. At smaller resolutions, the flyout covers too much of the screen and loses much of its value. For smaller screen sizes, navigate directly to the appropriate record or list.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/flyout-mobile.a4b616d47ea5acbef340d78f9e42ca85.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/flyout-mobile.a4b616d4.png)
 
 ## Options
 
@@ -200,13 +200,13 @@ Do not use a flyout when a screen is smaller than 480px. At smaller resolutions,
 
 When a flyout opens records in a list, you can include buttons in the toolbar to open the next record or previous record. For example, if users open a flyout on a constituent record to view the first gift in a list of gifts, the next button opens the second gift in the list. When you include the next and previous buttons in the flyout toolbar, a visual indicator highlights the currently selected row on the page.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/opt-arrows.12698a1f532dbe6dc25ccb81097d7bcb.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/opt-arrows.12698a1f.png)
 
 ### List toolbar
 
 When a flyout displays a list, you can include an option in the toolbar to leave the "preview" list and create a new list for further manipulation. The create list button navigates to a new page that contains the new list.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/opt-list.0017c6a8b67744dacfa075af6a868cf4.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/flyout/img/guidelines/flyout/opt-list.0017c6a8.png)
 
 ## Accessibility
 

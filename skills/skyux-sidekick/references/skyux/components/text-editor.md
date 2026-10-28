@@ -13,7 +13,7 @@ Text editors let users format and manipulate text.
 
 Use text editors when users need to create blocks of text that include formatted text, hyperlinks, or merge fields.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/text-editor/use-when.abd5ded03fcf063013f812b5658f8c69.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/text-editor/use-when.abd5ded0.png)
 
 Use text editors when users need to manipulate blocks of text.
 
@@ -51,7 +51,7 @@ Toolbar actions (optional)
 
 Hint text (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/text-editor/anatomy.74b3567cf032b00850ad0b8403a71f09.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/text-editor/anatomy.74b3567c.png)
 
 ## Options
 
@@ -90,7 +90,7 @@ Optional toolbar actions:
 - Undo/redo
 - Indentation
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/text-editor/option-menu-toolbar-items.44063b8d6a59b397e989c04692627b58.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/text-editor/option-menu-toolbar-items.44063b8d.png)
 
 Text editor with default options.
 
@@ -111,7 +111,7 @@ Don't use `stacked` when the text editor:
 - Is the last input before a [field group](./field-group.md)
 - Is the last input on a form
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/text-editor/options-stacked.3ea164ae2bd01b71f75966ddf6e11a91.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/text-editor/options-stacked.3ea164ae.png)
 
 ## Related information
 

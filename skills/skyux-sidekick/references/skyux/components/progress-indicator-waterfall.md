@@ -13,17 +13,17 @@ Waterfall progress indicators walk users through sequential steps in lengthy or 
 
 Use waterfall progress indicators for long or complex setup processes with at least three steps that users typically complete only once. Waterfall indicators are ideal when events outside of the system force users to complete tasks in multiple sittings or when users must enter large amounts of data.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/progress-indicator/img/guidelines/waterfall-progress-layout.cd2ac4482f3aaa2f3e897c791e147711.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/progress-indicator/img/guidelines/waterfall-progress-layout.cd2ac448.png)
 
 Do use waterfall progress indicators for complex configuration processes that users may complete in stages.
 
 Use waterfall progress indicators when the complexity of steps varies drastically. For example, one step may require a full-screen modal for complex interactions, while another step requires a small modal for a few simple inputs. Waterfall steps can open [wizards](./tabs-wizard.md) if necessary.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/progress-indicator/img/guidelines/waterfall-progress-usage-2.c1e2b02f55dae37bfcb869ed91166c54.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/progress-indicator/img/guidelines/waterfall-progress-usage-2.c1e2b02f.png)
 
 Do use modals of the appropriate size for the interactions in each waterfall step.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/progress-indicator/img/guidelines/waterfall-progress-usage-3.706665f05f9332d49ca4ba42f7956f73.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/progress-indicator/img/guidelines/waterfall-progress-usage-3.706665f0.png)
 
 Don't put inputs inside waterfall progress indicators.
 
@@ -31,27 +31,27 @@ Don't put inputs inside waterfall progress indicators.
 
 Don't use waterfall progress indicators when users monitor a sequence of events but are not responsible for completing the steps. Use [passive progress indicators](./progress-indicator-passive.md) instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/progress-indicator/img/guidelines/passive-progress-usage-6.17741d2d153355397f9e3b21fe6aaf48.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/progress-indicator/img/guidelines/passive-progress-usage-6.17741d2d.png)
 
 Don't use waterfall progress indicators for steps outside of user control.
 
 Don't use waterfall progress indicators when users perform tasks repeatedly or when tasks are best presented as multiple steps but only require a single sitting. Use [wizards](./tabs-wizard.md) instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/progress-indicator/img/guidelines/waterfall-progress-usage-4.975f1967e0d9a476cded4ffc26cee4eb.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/progress-indicator/img/guidelines/waterfall-progress-usage-4.975f1967.png)
 
 Don't use waterfall progress indicators for brief interactions, even when they are best divided into multiple steps.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/progress-indicator/img/guidelines/waterfall-progress-usage-5.be5f39c8ad75898ee2fdf988ca96f1bb.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/progress-indicator/img/guidelines/waterfall-progress-usage-5.be5f39c8.png)
 
 Do use wizards for multi-step tasks that users perform repeatedly or complete in a single sitting.
 
 Don't use waterfall progress indicators when processes include fewer than three steps or when the number or order of steps may change. If early decisions branch in different directions, arrange the workflow so that users make those decisions before the progress indicator.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/progress-indicator/img/guidelines/waterfall-progress-usage-6.3d9f16bce1415346c45c7f179ceba26c.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/progress-indicator/img/guidelines/waterfall-progress-usage-6.3d9f16bc.png)
 
 Don't present waterfall progress indicators before the extent of tasks is known.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/progress-indicator/img/guidelines/waterfall-progress-usage-7.fe42d36b6f0cf7bf55c7e01ffcc4bef1.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/progress-indicator/img/guidelines/waterfall-progress-usage-7.fe42d36b.png)
 
 Do present decisions that determine the number and order of steps before showing waterfall progress indicators.
 
@@ -59,11 +59,11 @@ Don't use waterfall progress indicators to edit properties after completing conf
 
 If configuration properties are interrelated and require users to reexamine all or most properties, then reframe the editing task as “starting over” and restart the waterfall process.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/progress-indicator/img/guidelines/waterfall-progress-usage-8.9ae76e34ee7a0df14d6e2030294ab6ae.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/progress-indicator/img/guidelines/waterfall-progress-usage-8.9ae76e34.png)
 
 Don't revert finished states to edit properties in waterfall progress indicators.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/progress-indicator/img/guidelines/waterfall-progress-usage-9.7f805c8f594ca907ec5ea3c466cfdcd1.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/progress-indicator/img/guidelines/waterfall-progress-usage-9.7f805c8f.png)
 
 Do group related properties and let users edit them in isolation after they complete waterfall progress indicators.
 
@@ -101,7 +101,7 @@ Help inline button  (optional)
 
 Start-over action  (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/progress-indicator/img/guidelines/waterfall-anatomy.cb453c37569e35a93d66f310a916c8b3.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/progress-indicator/img/guidelines/waterfall-anatomy.cb453c37.png)
 
 ## Options
 
@@ -139,7 +139,7 @@ Step action (button) labels closely follow step labels and use the same **<verb>
 
 Waterfall progress indicators are 400 pixels wide and centered inside the page. The waterfall title is the page title. Do not combine waterfall indicators with other content or actions. If waterfall indicators require extra context such as descriptions, links, or instructions, include it after the waterfall title and before the first step.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/progress-indicator/img/guidelines/waterfall-progress-layout.cd2ac4482f3aaa2f3e897c791e147711.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/progress-indicator/img/guidelines/waterfall-progress-layout.cd2ac448.png)
 
 Do use waterfall progress indicators as the only content on a page while users complete them.
 

@@ -13,7 +13,7 @@ The file attachment element lets users attach a single local file.
 
 Use the file attachment input when users need to upload a single local file.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/single-file-attach/use.866f878b055dccf47d296843fc5ea3c5.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/single-file-attach/use.866f878b.png)
 
 Do use the file attachment input to upload one file.
 
@@ -23,7 +23,7 @@ Don't use the file attachment input when users need to link to a URL to attach a
 
 Don't use the file attachment input to upload multiple local files. Use [the file drop component](./file-drop.md) instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/single-file-attach/dont-use-multi.8d94e340d046159a066151cc61748664.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/single-file-attach/dont-use-multi.8d94e340.png)
 
 Don't use file attachment inputs to upload more than one local file.
 
@@ -51,7 +51,7 @@ Help inline button (optional)
 
 Hint text (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/single-file-attach/anatomy-no-file.b9affec567368b11feca6d1a3a7204d7.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/single-file-attach/anatomy-no-file.b9affec5.png)
 
 ### After file is attached
 
@@ -67,7 +67,7 @@ File name
 
 Delete button
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/single-file-attach/anatomy-file.d0663c6f7601320208cdb052e10a26a1.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/single-file-attach/anatomy-file.d0663c6f.png)
 
 ## Options
 
@@ -97,7 +97,7 @@ Don't use `stacked` when the file attachment:
 - Is the last input on a form
 - Is followed by one or more conditional fields (use `sky-theme-margin-bottom-s` instead for closely related fields)
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/single-file-attach/options-stacked.3a5b567f8348f79be437e3406b134abc.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/single-file-attach/options-stacked.3a5b567f.png)
 
 ## Behavior and states
 
@@ -105,13 +105,13 @@ Don't use `stacked` when the file attachment:
 
 When users attach images, a small preview appears below the replace file button.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/single-file-attach/behavior-preview.62f187ec2f665ed9a682622fa67e52cd.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/single-file-attach/behavior-preview.62f187ec.png)
 
 ### File link
 
 When users attach a file, the file name displays as a link beside the replace file button. You must bind an action to the click event to prevent a dead link and to allow users to download the file.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/single-file-attach/behavior-file-link.5edddced7061fa48f874cd442c2bb5b3.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/single-file-attach/behavior-file-link.5edddced.png)
 
 ## Related information
 

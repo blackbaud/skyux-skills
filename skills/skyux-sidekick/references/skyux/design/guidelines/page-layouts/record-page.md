@@ -13,7 +13,7 @@ Record pages support all user tasks related to a record. They can contain differ
 
 Use record pages when users need to see information about an object aggregated in one place.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/record-page/modern-record-page.4d5577259667ab35dce988ef5ac653df.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/record-page/modern-record-page.4d557725.png)
 
 Do use record pages when users need information about an object in one place.
 
@@ -51,7 +51,7 @@ Page actions  (optional)
 
 [Tabs](../../../components/tabs.md) (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/record-page/modern-record-page-anatomy.6f8d9879c7a7629deab2f7f51174ab83.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/record-page/modern-record-page-anatomy.6f8d9879.png)
 
 ## Options
 
@@ -65,11 +65,11 @@ Record details supplement the page titles with content that is relevant across a
 
 Record details can include components such as a [description list](../../../components/description-list.md), [label](../../../components/label.md), or [status indicator](../../../components/status-indicator.md), but limit the number of elements so that they don't lose their impact or clutter the page. Don't use record details to provide a page summary because summary details about the record belong in a Summary box in the content area's Overview tab.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/record-page/record-details-content-modern.eaef8e6ebdbcdf907c7d080abfd25bfe.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/record-page/record-details-content-modern.eaef8e6e.png)
 
 Do provide content in the record details to help users understand the page.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/record-page/record-details-content-dont-modern.d52d8fc41dbc3551070d70ba38c624d8.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/record-page/record-details-content-dont-modern.d52d8fc4.png)
 
 Don't use the record details to provide a page summary.
 
@@ -85,13 +85,13 @@ Limit the number of page actions because they can create visual clutter and make
 
 For record pages with no primary action and no important or frequently used actions, collapse all page actions in a **Menu** button to give users a place to start when they take actions.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/record-page/modern-record-page-actions-menu.84ba71bb555ebe0477be3bd369ab663f.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/record-page/modern-record-page-actions-menu.84ba71bb.png)
 
 #### More button
 
 For record pages where you need to provide a mix of important or frequently used actions alongside less important or less frequently used actions, display primary and secondary actions in the page actions section and collapse less important or less frequently used actions in a **More** button.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/record-page/modern-record-page-actions-more.2ea858b8003dc736a7923476a394f28f.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/record-page/modern-record-page-actions-more.2ea858b8.png)
 
 #### Edit or delete records
 
@@ -107,15 +107,15 @@ The first tab on record pages displays [boxes](../../../components/box.md) with 
 
 The box on the top left contains basic details to identify the record, such as the name. For consistency, use "Details" as the label.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/record-page/modern-record-page-overview-tab-1.a8409033fcd4f13ada9c688c4ce64190.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/record-page/modern-record-page-overview-tab-1.a8409033.png)
 
 If it helps users to see current status of the record or summary information, you can display a Summary box directly above the Details box in the first column.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/record-page/modern-record-page-overview-tab-2.b6795b33f6690bcc79c66dd36d5c1bad.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/record-page/modern-record-page-overview-tab-2.b6795b33.png)
 
 If a record page benefits from an Overview tab but only requires two or three boxes, display the boxes horizontally instead of stacking them.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/record-page/modern-record-page-overview-tab-3.8b0fa1c140701cbf1b4d31d2061f0d52.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/record-page/modern-record-page-overview-tab-3.8b0fa1c1.png)
 
 Other tabs
 
@@ -128,7 +128,7 @@ Finally, place common platform tabs last in the following order:
 - Notes
 - Attachments
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/record-page/modern-record-tabs-diagram.a4b939abd390094b6cb6e83570acd83c.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/record-page/modern-record-tabs-diagram.a4b939ab.png)
 
 ## Layout
 

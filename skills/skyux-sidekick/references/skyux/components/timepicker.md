@@ -13,13 +13,13 @@ The timepicker module creates a SKY UX-themed input field and picker for users t
 
 Use timepickers when users need to specify the time of day.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/timepicker/timepicker-usage-1.aca9e6c4a7c5d376facf20a34fc8d360.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/timepicker/timepicker-usage-1.aca9e6c4.png)
 
 Do use timepickers when users specify times in 12-hour or 24-hour formats.
 
 Use two timepickers when users need to specify start and stop times.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/timepicker/timepicker-usage-2.afd8f0ce521915986503d1ad2874570c.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/timepicker/timepicker-usage-2.afd8f0ce.png)
 
 Do use two timepickers when users specify time ranges with start and stop times.
 
@@ -27,11 +27,11 @@ Do use two timepickers when users specify time ranges with start and stop times.
 
 Don't use timepickers when users need to specify general durations or time spans. Use [radio buttons](./radio.md) or HTML select fields instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/timepicker/timepicker-usage-3.6fdaccaeecf2f5d143c8c8dfaa72f96c.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/timepicker/timepicker-usage-3.6fdaccae.png)
 
 Don't use timepickers when users specify hours and minutes as lengths of time.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/timepicker/timepicker-usage-4.3553af59d99d6768e16ea0e5727e8287.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/timepicker/timepicker-usage-4.3553af59.png)
 
 Do use radio buttons or HTML select fields when users specify durations or time spans.
 
@@ -65,7 +65,7 @@ Help inline button  (optional)
 
 Hint text  (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/timepicker/timepicker-anatomy.bb37a758a26d5d101fee5c5837f50a8c.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/timepicker/timepicker-anatomy.bb37a758.png)
 
 ## Options
 
@@ -73,13 +73,13 @@ Hint text  (optional)
 
 Use the 12-hour option for regions and users that use 12-hour time designations. This allows users to select hours, minutes, and "AM" or "PM."
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/timepicker/timepicker-options-1.598d270148c625efee5b62984358ac7c.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/timepicker/timepicker-options-1.598d2701.png)
 
 ### 24-hour timepicker
 
 Use the 24-hour option for regions and users that use 24-hour time designations. This allows users to select hours and minutes.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/timepicker/timepicker-options-2.d5a547cf88b97e1dec3335a4f025ed2c.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/timepicker/timepicker-options-2.d5a547cf.png)
 
 ### Required field marker
 
@@ -107,7 +107,7 @@ Don't use `stacked` when the timepicker:
 - Is the last input on a form
 - Is followed by one or more conditional fields (use `sky-theme-margin-bottom-s` instead for closely related fields)
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/timepicker/timepicker-options-stacked.957275d934f8d329c569f48601d1a7e6.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/timepicker/timepicker-options-stacked.957275d9.png)
 
 ## Behavior and states
 

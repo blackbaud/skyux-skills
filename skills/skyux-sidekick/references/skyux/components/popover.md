@@ -13,7 +13,7 @@ Popovers display small chunks of contextual content on pages or modals. They are
 
 Use popovers to display additional contextual content that is valuable some of the time.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/popovers/img/guidelines/popover/popover-usage-1.5042464ef0915c66afd9a61118198795.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/popovers/img/guidelines/popover/popover-usage-1.5042464e.png)
 
 Do use popovers to provide more context that might be helpful.
 
@@ -21,23 +21,23 @@ Do use popovers to provide more context that might be helpful.
 
 Don't use popovers when the content is valuable most of the time. Use [persistent inline help](../design/guidelines/user-assistance.md#inline-help) instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/popovers/img/guidelines/popover/popover-usage-2.3a2d6eea9b772d920817575b7ad4d96b.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/popovers/img/guidelines/popover/popover-usage-2.3a2d6eea.png)
 
 Don't use popovers to display unfamiliar input requirements or important consequences.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/popovers/img/guidelines/popover/popover-usage-3.a5c676b7c4c818c4a1d6605d872dd6b0.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/popovers/img/guidelines/popover/popover-usage-3.a5c676b7.png)
 
 Do use persistent inline help to display requirements or call out consequences.
 
 Don't use popovers to display inputs or other interactions that are a necessary part of a workflow.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/popovers/img/guidelines/popover/popover-usage-4.a5c30825fccd20edda68af96f64a21f0.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/popovers/img/guidelines/popover/popover-usage-4.a5c30825.png)
 
 Don't use popovers as part of completing a task.
 
 Don't use popovers when a large amount of content is necessary. Use a [flyout](./flyout.md) instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/popovers/img/guidelines/popover/popover-usage-5.007b913663855392e0ebe54752eccbe9.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/popovers/img/guidelines/popover/popover-usage-5.007b9136.png)
 
 Don't use popovers for detailed record previews.
 
@@ -55,7 +55,7 @@ Highlight border
 
 Element pointer
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/popovers/img/guidelines/popover/popover-anatomy.6f8c9341b7b2452f007ec1c9072ae154.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/popovers/img/guidelines/popover/popover-anatomy.6f8c9341.png)
 
 ## Options
 
@@ -63,7 +63,7 @@ Element pointer
 
 You can specify the position of the popover in relation to the element it references. The default position is centered above that element.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/popovers/img/guidelines/popover/popover-option-position.e2770446b8d920e6f032e693ad8df20b.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/popovers/img/guidelines/popover/popover-option-position.e2770446.png)
 
 ### Trigger
 
@@ -81,23 +81,23 @@ Popovers close when users click elsewhere or focus on another element.
 
 If a popover doesn't fit in the viewport at its current position, it automatically repositions. If the popover doesn't fit at any position, it converts to a modal that overlays the page.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/popovers/img/guidelines/popover/popover-behavior-states.c648ae54d176161c08af7fc086b16fb6.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/popovers/img/guidelines/popover/popover-behavior-states.c648ae54.png)
 
 ## Content
 
 Limit popovers to small chunks of contextual content. The content can include plain text, formatted HTML, or Angular components.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/popovers/img/guidelines/popover/popover-content-simple.1975b621a1510106d296ace5238b1d7a.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/popovers/img/guidelines/popover/popover-content-simple.1975b621.png)
 
 Do use small chunks of plain text.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/popovers/img/guidelines/popover/popover-content-html.9b93fd253add42b32ba5d6a5557be9e8.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/popovers/img/guidelines/popover/popover-content-html.9b93fd25.png)
 
 Do use small chunks of formatted HTML.
 
 Don't include a large amount of content, form inputs, or complex interactions.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/popovers/img/guidelines/popover/popover-usage-5.007b913663855392e0ebe54752eccbe9.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/popovers/img/guidelines/popover/popover-usage-5.007b9136.png)
 
 Don't display large amounts of content in popovers.
 
@@ -107,7 +107,7 @@ In most cases, use the default placement for popovers to center them above the e
 
 However, when the referenced elements are near the edge of the display, use a different placement option to obscure as little content as possible.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/popovers/img/guidelines/popover/popover-layout.cd9a61e2942d8cde124346912e7f2499.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/popovers/img/guidelines/popover/popover-layout.cd9a61e2.png)
 
 ## Accessibility
 

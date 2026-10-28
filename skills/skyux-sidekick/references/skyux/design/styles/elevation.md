@@ -9,7 +9,7 @@ Reference: https://developer.blackbaud.com/skyux/design/styles/elevation
 
 Use the raised elevation to subtly emphasize elements on page backgrounds and to give the impression that they rise off the page. This elevation is built into SKY UX components, such as [alerts](../../components/alert.md), [avatars](../../components/avatar.md), and [boxes](../../components/box.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/elevation/raised-elevation.d5d5a58287db7a6b84729cc316a401e2.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/elevation/raised-elevation.d5d5a582.png)
 
 An alert uses the raised elevation to rise off the page background.
 
@@ -17,7 +17,7 @@ An alert uses the raised elevation to rise off the page background.
 
 Use the overflow elevation to lift elements that remain fixed during scrolling so that they appear to float above scrolling content. This elevation is built into SKY UX components, such as [back to top](../../components/back-to-top.md), [modal headers and footers](../../components/modal.md), and [summary action bar](../../components/summary-action-bar.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/elevation/overflow-elevation.3f85feeb9ff8619d7e10905b33349f44.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/elevation/overflow-elevation.3f85feeb.png)
 
 A modal header uses the overflow elevation to float above scrolling content.
 
@@ -27,19 +27,19 @@ Use overlay elevations to lift elements and give the impression that they are ab
 
 The overlay 100 elevation adds a shadow to small and temporary elements that are easily dismissed. This elevation is built into SKY UX components, such as [dropdown menus](../../components/dropdown.md), [popovers](../../components/popover.md), and picker menus on inputs such as [lookup](../../components/lookup.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/elevation/overlay-elevation-100.dd269db64bb9a02bd9a408fc75e4aebd.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/elevation/overlay-elevation-100.dd269db6.png)
 
 A dropdown menu uses the overlay 100 elevation.
 
 The overlay 200 elevation adds a shadow to large elements that are used in conjunction with a page. This elevation is built into SKY UX components that have their own interactions, such as [flyouts](../../components/flyout.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/elevation/overlay-elevation-200.ca602fda2c8b740a1d16f22d2bae262f.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/elevation/overlay-elevation-200.ca602fda.png)
 
 A flyout uses the overlay 200 elevation.
 
 The overlay 300 elevation adds a shadow to provide a clear visual separation to elements that command attention or interrupt users. This elevation is built into SKY UX components, such as [modals](../../components/modal.md) and [toasts](../../components/toast.md), to establish a context that is separate from a page.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/elevation/overlay-elevation-300.36ed13b18b186cb673d083dd902ed696.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/elevation/overlay-elevation-300.36ed13b1.png)
 
 A toast uses the overlay 300 elevation.
 

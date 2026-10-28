@@ -13,7 +13,7 @@ The toolbar component displays actions to manipulate a list or to manipulate the
 
 Use list toolbars to display actions that manipulate the contents of lists of records. Place frequently used actions directly in the toolbar, and place less-frequently used actions in the more actions menu. When multiple views are available, dock the view switcher on the right.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/toolbar/toolbar-usage-list.e71a0460a365e27f35cb77899e222bb7.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/toolbar/toolbar-usage-list.e71a0460.png)
 
 Do use toolbars to display actions that manipulate list items.
 
@@ -21,7 +21,7 @@ Use toolbars to display actions that manipulate lists within containers, such as
 
 For guidance on how to incorporate filters into lists within containers, see [filter lists guidelines](../design/guidelines/filtering-lists.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/toolbar/toolbar-usage-box.701e6cf04ebd428943e3cc3ec3400db7.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/toolbar/toolbar-usage-box.701e6cf0.png)
 
 Do use toolbars to display actions that manipulate lists in containers, such as boxes.
 
@@ -29,13 +29,13 @@ Do use toolbars to display actions that manipulate lists in containers, such as 
 
 Don't use toolbars on [record page](../design/guidelines/page-layouts/record-page.md) headers to display page actions. Instead, place page actions directly below the record details.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/toolbar/toolbar-usage-dont-record.6aee51ab4e5bd53de701c5a52b877032.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/toolbar/toolbar-usage-dont-record.6aee51ab.png)
 
 Do not use toolbars on record pages.
 
 Don't use toolbars in [action hub](../design/guidelines/page-layouts/action-hub.md) headers to display actions related to action hub content. Instead, place common action [buttons](./button.md) directly on the page below the page title.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/toolbar/toolbar-usage-dont-action-hub.628470fa20761dc882baa371f3c0aaa7.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/toolbar/toolbar-usage-dont-action-hub.628470fa.png)
 
 Do not use toolbars on action hub pages.
 
@@ -43,7 +43,7 @@ Do not use toolbars on action hub pages.
 
 Only include toolbar options that are relevant to a particular list, and organize them consistently in their designated locations.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/toolbar/anatomy.1a7bcaf736eaeae3761f04f37e3b9456.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/toolbar/anatomy.1a7bcaf7.png)
 
 ### Standard toolbar actions
 
@@ -187,7 +187,7 @@ In general, only use the more actions button for multiple actions. For a single 
 
 Place the search component to the right of the standard toolbar actions and the more actions button. Align the search field with the action buttons so that in large monitor resolutions, it appears on the left side of the screen.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/toolbar/toolbar-search-field.379e19a4dc3c6784852b023e9b584fe6.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/toolbar/toolbar-search-field.379e19a4.png)
 
 Text
 
@@ -233,7 +233,7 @@ Use expand/collapse all buttons to control multiple rows in a repeater list or n
 
 View switcher
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/toolbar/toolbar-view-switcher.dec8b3825a3862ecadf47f1f5cbe5054.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/toolbar/toolbar-view-switcher.dec8b382.png)
 
 Used in
 
@@ -255,11 +255,11 @@ Do not extend the standard actions and more actions menu beyond 50 percent of th
 
 If the standard actions extend beyond 50 percent of the toolbar, create a more actions menu for at least two of the rightmost actions.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/toolbar/toolbar-dont-missing-more-menu.2d29cd08faec5f2fbc9c2cf42ade2adb.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/toolbar/toolbar-dont-missing-more-menu.2d29cd08.png)
 
 Don't use toolbars with too many visible actions.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/toolbar/toolbar-with-more-menu.ff146255141a25b58292f3d1f1c1cc70.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/toolbar/toolbar-with-more-menu.ff146255.png)
 
 Do move the rightmost actions into the more actions menu.
 
@@ -267,13 +267,13 @@ Do move the rightmost actions into the more actions menu.
 
 On small screens, action buttons switch to icon-only buttons, the search field collapses into a search icon, and the view switcher collapses into a single icon. Buttons without icons go in the more actions menu, and the more actions button, view switcher, and any other buttons with dropdowns display their options when selected.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/toolbar/toolbar-small-form-factor.a96f29a3ef8b4e94d40a4ce9ef4b0d56.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/toolbar/toolbar-small-form-factor.a96f29a3.png)
 
 ## Layout
 
 When two toolbars are stacked, place a border separator between them.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/toolbar/double-toolbars-modern.c668ae8c515c08c7ad820e11b7e2fff0.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/toolbar/double-toolbars-modern.c668ae8c.png)
 
 Do include a border separator between the toolbars.
 

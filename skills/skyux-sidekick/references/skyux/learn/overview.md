@@ -15,7 +15,7 @@ Our flexible patterns for workflows and interactions ensure that user experience
 
 [Start designing](./design.md)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/learn/design-splash-image.2f12de27c1ba1e692a1023c5d1071e0b.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/learn/design-splash-image.2f12de27.png)
 
 ## Develop
 
@@ -23,4 +23,4 @@ Our open-source and extensible code resources enable robust applications. Levera
 
 [Start developing](./develop/README.md)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/learn/develop-splash-image.b02ece673b94e512824b2e22a7c14bc4.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/learn/develop-splash-image.b02ece67.png)

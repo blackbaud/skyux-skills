@@ -67,17 +67,17 @@ Don't use `stacked` when a form field:
 
 On small, medium, and large [modals](../../components/modal.md), form fields should generally extend the full width of the modal. The most common exception is closely related fields, such as first and last name fields, that can flow horizontally. For a horizontal flow, use a [fluid grid](../../components/fluid-grid.md) layout with `gutterSize=”small”` to provide horizontal margins and ensure that the form scales properly to smaller viewports.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/formdesign/form-design-form-layout-1.9c5fb738cc3acb80690aede56c460330.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/formdesign/form-design-form-layout-1.9c5fb738.png)
 
 The most common multi-column layouts are 1/2 width (6 [fluid grid](../../components/fluid-grid.md) columns) and 1/3 width (4 fluid grid columns). However, single-line inputs can use different column widths when the form fields are related and the expected length of user input is predictable.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/formdesign/form-design-form-layout-2.5.b204424deec6825c7dc012679d3432b2.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/formdesign/form-design-form-layout-2.5.b204424d.png)
 
 Inputs can use unbalanced column widths to match highly predictable lengths of user input.
 
 Checkboxes and radio buttons should generally be full width. However, when the labels are short and predictable, groups of checkboxes or radio buttons can be used in 1/2 or 1/3 width [fluid grids](../../components/fluid-grid.md) next to similar groups. Don't use this layout to display checkbox or radio button groups beside other types of form fields.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/formdesign/form-design-form-layout-2.75.e7972f2eae2fbe93610f354f98f01698.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/formdesign/form-design-form-layout-2.75.e7972f2e.png)
 
 Checkbox and radio button groups with short labels can be displayed horizontally.
 
@@ -87,11 +87,11 @@ To separate forms into groups or sections, use [field groups](../../components/f
 
 Don't use `stacked` when a field group is the last content on a form.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/formdesign/form-design-form-layout-2.db5179b8d1d56bae1058dea10359954a.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/formdesign/form-design-form-layout-2.db5179b8.png)
 
 When forms require subsections, you can nest field groups inside other field groups. Adjust the field group's `headingLevel` and `headingStyle` to make the heading maintain the semantic and visual hierarchy of the form.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/formdesign/form-design-form-layout-3.e88550cd29eb119a6e9c5cfbf1ca9050.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/formdesign/form-design-form-layout-3.e88550cd.png)
 
 Use heading level and heading style to maintain the form hierarchy when creating subsections with nested field groups.
 
@@ -113,7 +113,7 @@ Sometimes, forms include conditional fields that are only applicable when certai
 - If the majority of form content is conditional, use a different workflow. For example, you can start a workflow with [action buttons](../../components/action-button.md) and then present relevant content based on user selections.
 - Don't use `stacked` when a form field is followed by one or more conditional fields. Instead, add the `sky-theme-margin-bottom-s` class to follow spacing guidelines for closely related fields. To determine whether to use `stacked` between and below the conditional fields themselves, follow the component guidelines.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/formdesign/form-design-form-layout-4.a3540b808ac8ce2b4653f8b53d406f44.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/formdesign/form-design-form-layout-4.a3540b80.png)
 
 ## Field usability
 
@@ -126,11 +126,11 @@ All fields require labels to tell users what information to provide..
 - Use sentence-style capitalization.
 - Don't use colons or other punctuation at the end of labels.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/formdesign/usability-labels-do.8ff830479a6b92f29448ff413a49a723.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/formdesign/usability-labels-do.8ff83047.png)
 
 Do use labels to succinctly indicate the purpose of fields.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/formdesign/usability-labels-dont.dd122d91223981d3f55daa129ce11353.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/formdesign/usability-labels-dont.dd122d91.png)
 
 Don't use questions, commands, or other complete sentences as labels.
 
@@ -142,11 +142,11 @@ To highlight essential considerations about fields, use hint text. [Input box](.
 - Field constraints
 - Vital instructions or context
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/formdesign/form-design-field-usability-3.612ce9c0cf8721d262c169209cbe2798.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/formdesign/form-design-field-usability-3.612ce9c0.png)
 
 Do use hint text to highlight key details, such as required formats.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/formdesign/form-design-field-usability-4.36c6fadd9fcf5b4da1b6c85c7897ec57.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/formdesign/form-design-field-usability-4.36c6fadd.png)
 
 Do use hint text to inform users about field constraints.
 
@@ -159,11 +159,11 @@ Avoid overuse to ensure that hint text retains its impact and doesn't clutter fo
 
 To invoke inline help for form fields, use `helpKey` on [input box](../../components/input-box.md) and other SKY UX form field components. The components automatically handle the placement of a [help inline button](../../components/help-inline.md) next to the field label. Use help inline buttons when contextual user assistance is too long for hint text or provides supplementary information that doesn't require persistent inline help.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/formdesign/form-design-hint-text.a6138d8590dcdc6f180d720e2613035d.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/formdesign/form-design-hint-text.a6138d85.png)
 
 Don't use hint text for lengthy or supplementary user assistance.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/formdesign/usability-help-button-do.5ec20c098ac8d73c583b1574d6864393.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/formdesign/usability-help-button-do.5ec20c09.png)
 
 Do use a help inline button for lengthy or supplementary user assistance.
 
@@ -209,11 +209,11 @@ In rare cases, use live validation to provide immediate feedback that interrupts
 1.  When real-time feedback helps users meet field constraints such as password strength, availability, and character count.
 2.  When live validation can avoid unnecessary typing because user inputs definitely won't meet the required formats. You must determine the points after which to validate.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/formdesign/validation-do.f326599fd513672c300bf429e2e2c5da.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/formdesign/validation-do.f326599f.png)
 
 Do validate fields during typing when you can be certain that input is incorrect.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/formdesign/validation-dont.dd6f4d552b513b2d7365682c36e34b06.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/formdesign/validation-dont.dd6f4d55.png)
 
 Don't validate fields when users are typing if you can't be certain that input is incorrect.
 
@@ -243,7 +243,7 @@ Error messages are necessary to explain how to correct errors. Avoid generic mes
 
 Focus error messages on what users need to do instead of what they did wrong. For example, use "Limit \[item\] to 50 characters." instead of "\[Item\] text cannot exceed 50 characters." Avoid humor in error messages.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/formdesign/field-level-error.00f877631ebb43390c371a055ec10a21.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/formdesign/field-level-error.00f87763.png)
 
 The [sectioned form](../../components/sectioned-form.md) component includes a property to display a danger icon in the tab panel of tabs that contain fields with validation errors.
 
@@ -255,13 +255,13 @@ If form-level actions such as Save break, display an error message using `SkyMod
 
 If form-level actions make form fields invalid, place focus on the first invalid field. When the error isn't visible, this scrolls to ensure that users can see where to address the error.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/formdesign/form-errors.ccfc9d691197807c70967bc685974c14.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/formdesign/form-errors.ccfc9d69.png)
 
 ## Unsaved data
 
 If users close a form before saving their changes, warn them about the unsaved data with a [confirmation dialog](../../components/confirm.md). For modals, see the Development tab of the [component docs](../../components/modal.md) for details on how to use `SkyModalIsDirtyDirective`.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/formdesign/modal-close-confirm.f756192fa9878ff34249421a094c4aa3.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/formdesign/modal-close-confirm.f756192f.png)
 
 ## Related information
 

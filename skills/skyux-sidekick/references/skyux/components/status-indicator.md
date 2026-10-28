@@ -13,19 +13,19 @@ Status indicators highlight important status information that users need to addr
 
 Use status indicators when users must address or be aware of important information while completing tasks.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/status-indicator/status-indicator-usage-1.eafbc9953a9194deeb63c64620a3af89.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/status-indicator/status-indicator-usage-1.eafbc995.png)
 
 Do use status indicators to highlight important information.
 
 Use status indicators to call out important status information for items in a list or specific properties on a record.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/status-indicator/status-indicator-usage-2.497c426c43cffbcbc963475790c60602.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/status-indicator/status-indicator-usage-2.497c426c.png)
 
 Do use status indicators to draw attention to items in a list that require action.
 
 Use status indicators to highlight validation errors on input fields.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/status-indicator/status-indicator-usage-3.74cad9083da3668a4e5459ecc80e2f17.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/status-indicator/status-indicator-usage-3.74cad908.png)
 
 Do use status indicators for validation error messages.
 
@@ -33,21 +33,21 @@ Do use status indicators for validation error messages.
 
 Don't use status indicators to highlight statuses in the page summary. Use [labels](./label.md) instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/status-indicator/status-indicator-usage-4a.dc095d03affae4a41f39738435684a8d.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/status-indicator/status-indicator-usage-4a.dc095d03.png)
 
 Don't use status indicators for statuses in the page summary.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/status-indicator/status-indicator-usage-4b.4eb3d8f547e95e039fef695961e9468e.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/status-indicator/status-indicator-usage-4b.4eb3d8f5.png)
 
 Do use labels for statuses in the page summary.
 
 Don't use status indicators when no user action is necessary and status information is not important enough to highlight. Use plain text instead to avoid the overuse of status indicators.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/status-indicator/status-indicator-usage-5.3cecd3dbd29c942c293c59fb3d5dd991.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/status-indicator/status-indicator-usage-5.3cecd3db.png)
 
 Don't use status indicators when statuses do not convey critical information.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/status-indicator/status-indicator-usage-6.95cfc953393471238756e1395e782a84.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/status-indicator/status-indicator-usage-6.95cfc953.png)
 
 Do use statuses indicators to emphasize only important statuses.
 
@@ -65,7 +65,7 @@ Text label
 
 Help inline button (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/status-indicator/status-indicator-anatomy.31d131f9374779a095b277594a2d2abd.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/status-indicator/status-indicator-anatomy.31d131f9.png)
 
 ## Options
 

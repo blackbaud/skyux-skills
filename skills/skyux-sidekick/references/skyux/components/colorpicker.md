@@ -41,7 +41,7 @@ Reset button  (optional)
 
 Hint text  (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colorpicker/color-input-anatomy.b51be343614fc86c32f0700f13e4d3b5.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colorpicker/color-input-anatomy.b51be343.png)
 
 ### Colorpicker dropdown
 
@@ -77,7 +77,7 @@ Transparency slider (optional)
 
 Preset color swatches (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colorpicker/colorpicker-anatomy.ff9efcfe8608368b870cabbd21e66ac8.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colorpicker/colorpicker-anatomy.ff9efcfe.png)
 
 ## Options
 
@@ -117,7 +117,7 @@ Don't use `stacked` when the colorpicker:
 - Is the last input before a [field group](./field-group.md)
 - Is the last input on a form
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colorpicker/options-stacked.4dd5a37ce8069a633f188c959462ef07.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colorpicker/options-stacked.4dd5a37c.png)
 
 ## Related information
 

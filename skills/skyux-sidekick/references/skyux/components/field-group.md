@@ -17,13 +17,13 @@ Semantically, a field group creates an HTML `fieldset` element for its contents.
 
 Not every form requires field groups. Simple forms with a small number of inputs can use the modal title to establish context and don't require a field group.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/field-group/field-group-usage-1.9c5fb738cc3acb80690aede56c460330.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/field-group/field-group-usage-1.9c5fb738.png)
 
 Do use field groups to divide long forms into groups of related elements.
 
 Use nested field groups to organize related elements into subgroups in form sections. To communicate hierarchy, adjust heading tags and the visual style of field group labels. For example, you can nest two field groups with `h4` headings in a form section with an `h3` heading. For more details, see the [form design guidelines](../design/guidelines/form-design.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/field-group/field-group-usage-2.9d5c6a752d1582abe0109b3e141aac4d.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/field-group/field-group-usage-2.9d5c6a75.png)
 
 Do use nested field groups to create subgroups in form sections.
 
@@ -31,11 +31,11 @@ Do use nested field groups to create subgroups in form sections.
 
 Don't use field groups when short or simple forms contain a small number of elements and don't require groups.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/field-group/field-group-usage-3.2c8b9e2befabac4b99d1ae8f7fa947a7.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/field-group/field-group-usage-3.2c8b9e2b.png)
 
 Don't use field groups on short or simple forms that don't require groups.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/field-group/field-group-usage-4.fd2f6f7c180e0325938ad6f3aca13a38.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/field-group/field-group-usage-4.fd2f6f7c.png)
 
 Do create short, simple forms without using field groups.
 
@@ -57,7 +57,7 @@ Help inline button (optional)
 
 Hint text (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/field-group/field-group-anatomy.b2c9872f792c9bb6a30a47dc2e9bac3a.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/field-group/field-group-anatomy.b2c9872f.png)
 
 ## Options
 
@@ -81,7 +81,7 @@ To highlight important considerations about a field group, use hint text. This p
 
 To provide consistent vertical spacing between field groups, use `stacked`. This adds a bottom margin to visually separate a field group from another field group or other form content below it. For more information about spacing on forms, see the [form layout guidelines](../design/guidelines/form-design.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/field-group/field-group-stacked-margin.925715bfc9929d4e3b9fd4d4f7eca4ab.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/field-group/field-group-stacked-margin.925715bf.png)
 
 ## Content
 
@@ -91,11 +91,11 @@ Make field group headings succinct and descriptive. Use nouns for field group he
 
 For details about the styling for field group headings, see the "Heading level and style" section on this page.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/field-group/field-group-content-1.67c0a533653a193e500ed16961fc62bf.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/field-group/field-group-content-1.67c0a533.png)
 
 Don't use full sentences or questions for field group headings.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/field-group/field-group-content-2.6257780e012c55f65d8137e03fa86a92.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/field-group/field-group-content-2.6257780e.png)
 
 Do use succinct headings.
 
@@ -105,21 +105,21 @@ Don't use a field group when the only content is a lone checkbox group or radio 
 
 For example, if a "General" field group is followed by a "Supported credit cards" section that only includes a checkbox group, use the checkbox group's label to provide an `h3` heading with a `sky-theme-font-heading-3` visual style. An additional heading from a field group would be unnecessary and confusing.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/field-group/field-group-content-3.cda3119ef1124310e92465ec16b410c6.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/field-group/field-group-content-3.cda3119e.png)
 
 Don't use a field group with a lone checkbox group or radio button group.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/field-group/field-group-content-4.89ae1ef70d7f469b5185f490a8e4edf2.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/field-group/field-group-content-4.89ae1ef7.png)
 
 Do adjust the heading level and heading style of the label of a lone checkbox group or radio button group.
 
 Use a field group to organize multiple related checkbox groups or radio button groups and also to organize a checkbox group or radio button group with other form fields. To maintain visual hierarchy within the field group, use the label of the checkbox group or radio button group.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/field-group/field-group-content-5.06dea142be1d1fc3d03ff70344a33d61.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/field-group/field-group-content-5.06dea142.png)
 
 Do use a field group with multiple checkbox groups or radio button groups.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/field-group/field-group-content-6.da1778c68b08ba804d9629731ad9ffd6.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/field-group/field-group-content-6.da1778c6.png)
 
 Do use a field group with a checkbox group or radio button group and other fields, such as input boxes.
 

@@ -13,7 +13,7 @@ The phone field module creates a button, search input, and text input for enteri
 
 Use phone fields to validate phone numbers against the correct format for the selected country.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/phone-field/phone-field-usage.5de7ebbc7d6b95874466ae54580d8b01.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/phone-field/phone-field-usage.5de7ebbc.png)
 
 Do use phone fields to validate phone numbers.
 
@@ -49,7 +49,7 @@ Help inline button (optional)
 
 Additional hint text (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/phone-field/phone-field-anatomy.e357178a9d225fced616ee795ba6e838.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/phone-field/phone-field-anatomy.e357178a.png)
 
 ### Country selector
 
@@ -69,7 +69,7 @@ Search results
 
 Focused country
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/phone-field/phone-field-results-anatomy.2f2325f1b4bfa46340d74dcc23a3eb34.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/phone-field/phone-field-results-anatomy.2f2325f1.png)
 
 ## Options
 
@@ -103,7 +103,7 @@ Don't use `stacked` when the phone field:
 - Is the last input on a form
 - Is followed by one or more conditional fields (use `sky-theme-margin-bottom-s` instead for closely related fields)
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/phone-field/phone-field-options-stacked.8ea8739ffb15ebac1fcc7b930653df30.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/phone-field/phone-field-options-stacked.8ea8739f.png)
 
 ## Behavior and states
 
@@ -111,13 +111,13 @@ Don't use `stacked` when the phone field:
 
 The selected country determines the format to use to validate phone numbers. If users enter phone numbers from a different country, they must also select that country to validate phone numbers based on the correct format.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/phone-field/phone-field-country-picker.5bda8df90bb62f2864d7bf7018518a2b.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/phone-field/phone-field-country-picker.5bda8df9.png)
 
 ### Phone format validation
 
 The phone field input directive validates phone numbers based on the format for the selected country. You must specify an error message. In most cases, the error message should be "Enter a phone number matching the format for the selected country."
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/phone-field/phone-field-error.f5ad123c2f62a6da21136c589fec5089.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/phone-field/phone-field-error.f5ad123c.png)
 
 ## Related content
 

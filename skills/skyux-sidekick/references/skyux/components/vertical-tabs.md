@@ -13,13 +13,13 @@ Vertical tabs divide and categorize content on pages with a large number of cate
 
 Use vertical tabs when you expect horizontal tabs to exceed the available horizontal space because of the number of tabs or the length of tab labels.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/vertical-tabs/vertical-tabs-usage-1.ab5393b2909b93f5cd5ad333976989d4.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/vertical-tabs/vertical-tabs-usage-1.ab5393b2.png)
 
 Do use vertical tabs for a large number of tabs.
 
 Use collapsible groups to organize vertical tabs that fit naturally into multiple categories.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/vertical-tabs/vertical-tabs-usage-2.5c334f311d72443e51f3cbee081a5165.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/vertical-tabs/vertical-tabs-usage-2.5c334f31.png)
 
 Do use collapsible groups to organize vertical tabs into categories.
 
@@ -27,29 +27,29 @@ Do use collapsible groups to organize vertical tabs into categories.
 
 Don't use vertical tabs when [horizontal tabs](./tabs.md) are appropriate. If the expected number of tabs is small and grouping is not necessary, use horizontal tabs instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/vertical-tabs/vertical-tabs-usage-3.4c18c0e33181bf48fe71817e8d1c0584.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/vertical-tabs/vertical-tabs-usage-3.4c18c0e3.png)
 
 Don't use vertical tabs when you have enough space for horizontal tabs.
 
 Don't use vertical tabs as containers for other tabs. Change the workflow instead of nesting multiple sets of tabs.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/vertical-tabs/vertical-tabs-usage-4.89f91dc11851633a2c4bdfb9d8f052cf.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/vertical-tabs/vertical-tabs-usage-4.89f91dc1.png)
 
 Don't nest tabs within vertical tabs.
 
 Don't use vertical tabs when the workflow requires users to view and perform actions on each tab. Use [split views](./split-view.md) instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/vertical-tabs/vertical-tabs-usage-5.eecad7fcf0cae57e34af6bd96848292e.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/vertical-tabs/vertical-tabs-usage-5.eecad7fc.png)
 
 Don't use vertical tabs when users must interact with each tab.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/vertical-tabs/vertical-tabs-usage-6.4f3dff14b4c1fc472dfdf168db985996.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/vertical-tabs/vertical-tabs-usage-6.4f3dff14.png)
 
 Do use split views to display lists of items that users must work through.
 
 Don't use vertical tabs in modals. Use [sectioned forms](./sectioned-form.md) instead. The two approaches look similar, but sectioned forms have additional features, such as displaying validation errors in form sections.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/vertical-tabs/vertical-tabs-usage-7.c424c6cb2a74d31dadab66066035a778.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/vertical-tabs/vertical-tabs-usage-7.c424c6cb.png)
 
 Don't use vertical tabs in modals.
 
@@ -91,7 +91,7 @@ Unselected tab group (optional)
 
 Expand/collapse icon (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/vertical-tabs/vertical-tab-anatomy.d88df03d2b5b866fbec8d934524b282d.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/vertical-tabs/vertical-tab-anatomy.d88df03d.png)
 
 ## Options
 
@@ -103,7 +103,7 @@ You can organize vertical tabs into collapsible groups when the categories help 
 
 Vertical tabs are always the bottom-most content in their containers. Don't include additional content after vertical tabs.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/vertical-tabs/vertical-tabs-layout-1.0747aee525204c91557b6ac9aa39d131.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/vertical-tabs/vertical-tabs-layout-1.0747aee5.png)
 
 Don't include content after vertical tabs.
 

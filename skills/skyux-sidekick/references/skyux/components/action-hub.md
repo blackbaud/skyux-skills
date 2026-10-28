@@ -13,7 +13,7 @@ Action hubs direct user attention to important actions and provide quick access 
 
 Use action hubs to present prescriptive calls to action for things users must, should, or could do within an area of the system. They are often appropriate as landing pages for main navigation items but can also be descendant pages.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/action-hub/action-hub-use-when.f5702fcb50f8fd613b9c18faf8e951db.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/action-hub/action-hub-use-when.f5702fcb.png)
 
 Do use action hubs to present prescriptive calls to action.
 
@@ -51,7 +51,7 @@ Common actions (optional)
 
 Settings (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/action-hub/action-hub-anatomy.01bf467e0d29a369fc5f6fde6c5dbb07.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/action-hub/action-hub-anatomy.01bf467e.png)
 
 ## Options
 
@@ -71,15 +71,15 @@ Order the items by workflow order, or by importance if they are not part of the 
 
 Consider ways to operationalize strategic tasks by breaking them down into smaller, achievable chunks of work.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/action-hub/needs-attention-order-600.f7d13bf69af6b36c894d1486ed949008.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/action-hub/needs-attention-order-600.f7d13bf6.png)
 
 Do order items by workflow or importance.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/action-hub/needs-attention-achievable-600.33831790ebc533cf639cd485175b8628.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/action-hub/needs-attention-achievable-600.33831790.png)
 
 Do break tasks into achievable chunks.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/action-hub/needs-attention-unachievable-600.538420d9933d78ba6443e7a82bbe2500.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/action-hub/needs-attention-unachievable-600.538420d9.png)
 
 Don't present unrealistic or overly ambitious tasks.
 
@@ -115,17 +115,17 @@ Content that is strategic and tied to a needs attention item should:
 
 Use key information calls to action when the condition for prescribing an action can be distilled to a single piece of information.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/action-hub/content-section-keyinfo-cta-600.c4e74adf8329b1cf57c5a9ecb4583ba1.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/action-hub/content-section-keyinfo-cta-600.c4e74adf.png)
 
 #### Charts
 
 Action hubs are not intended for analytical tasks. If you include charts, scope the data set to the appropriate strategic or operational view for the user. You can use one filter if necessary to swap between relevant contexts.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/action-hub/content-section-chart-context-cta-600.81b09016cdbee106e4db7e19931c7ade.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/action-hub/content-section-chart-context-cta-600.81b09016.png)
 
 Do use charts to provide decision-making context for optional operational tasks.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/action-hub/content-section-chart-history-600.f07f06167f0c813d0325320dc20ff7a7.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/action-hub/content-section-chart-history-600.f07f0616.png)
 
 Do use charts to show categorical or time-based views of strategic information.
 
@@ -161,7 +161,7 @@ When no needs attention items are available, the needs attention section is hidd
 
 When more than six needs attention items are available in a viewpoint that is 768 pixels or larger, the content splits into two columns.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/action-hub/needs-attention-2-column.17b7274a54a89d6d2d5fb134ebe31acd.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/action-hub/needs-attention-2-column.17b7274a.png)
 
 ### Settings
 
@@ -171,7 +171,7 @@ Open settings forms in modals.
 
 Action hubs reflow content in small viewports.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/action-hub/action-hub-responsive-600.9b0cbf8ae4e49923d5d5cd9a8c68a4b8.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/action-hub/action-hub-responsive-600.9b0cbf8a.png)
 
 ## Related information
 

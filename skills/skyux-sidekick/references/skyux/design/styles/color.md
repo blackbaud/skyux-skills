@@ -9,43 +9,43 @@ Reference: https://developer.blackbaud.com/skyux/design/styles/color
 
 SKY UX uses text colors to communicate information hierarchy, state, and interaction. These colors are built into SKY UX components and typography classes, and in most cases, they should not be applied manually.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/text-color-1.64fb3c643c1e3341eaa16544057f8b14.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/text-color-1.64fb3c64.png)
 
 SKY UX uses text colors to convey information hierarchy, state, and interaction.
 
 SKY UX uses HTML headings to apply colors to headings for pages, containers, and sections. This subtly distinguishes the headings from other content. For more information, see [Typography](./typography.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/text-color-heading.359a5dd28ab8fe606a3d527ef3832fb4.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/text-color-heading.359a5dd2.png)
 
 Do use HTML headings to apply color to headings.
 
 SKY UX uses body and deemphasized text colors in [typography](./typography.md) classes to create a visual hierarchy. Use typography classes to control all text properties, including size and color.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/text-color-hierarchy.4e3a2ba17fd20d0429e5f8567f08d685.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/text-color-hierarchy.4e3a2ba1.png)
 
 Do use typography classes to control text properties, such as color.
 
 SKY UX uses an action text color for hyperlinked text and tertiary "link" button text. Use `<a>` elements or button classes instead of applying this color directly.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/text-color-links.25dbdd34725464cc192345dff8bd62eb.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/text-color-links.25dbdd34.png)
 
 Do use hyperlinks or SKY UX button classes to include the action text color.
 
 SKY UX uses inverse text on high-contrast backgrounds, such as [primary buttons](../../components/button.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/text-color-backgrounds.0cbf9bb05c60d726079e96bd288e48e8.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/text-color-backgrounds.0cbf9bb0.png)
 
 SKY UX button classes include inverse text color when appropriate.
 
 SKY UX uses the text on status background class on containers with status background colors, such as [alerts](../../components/alert.md), to maintain contrast across color modes. Don't use the default text color.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/on_status-text-color.7025940ab3a39180d6186cab981d0f36.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/on_status-text-color.7025940a.png)
 
 Do use the text on status background class in containers with status background colors. It maintains contrast in both light and dark mode.
 
 SKY UX uses the prominent header text class to emphasize heading text inside prominent containers. Prominent containers, such as chat panels, WYSIWYG editors, and help files, display tools or systems alongside the main page content but don't extend the page content. This style is specifically designed to visually emphasize headers in prominent containers. Don't use it for any other use cases.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/prominent-container-header-text-color.b202d91230e1a0c410d6659bb849580a.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/prominent-container-header-text-color.b202d912.png)
 
 Do use the prominent header text color inside headers for prominent containers, such as containers with widgets for WYSIWYG editors.
 
@@ -53,7 +53,7 @@ Do use the prominent header text color inside headers for prominent containers, 
 
 SKY UX uses icon colors to communicate hierarchy and interaction. These colors are built into SKY UX components, and in most cases, they should not be applied manually.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/icon-color.2b0033223aa92746e010a1fb987b98ce.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/icon-color.2b003322.png)
 
 SKY UX components, such as borderless icon buttons, control icon colors.
 
@@ -71,31 +71,31 @@ The page background color is the surface color for pages behind all content and 
 
 The default container background color is for content containers, such as [boxes](../../components/box.md), [data grids](../../components/data-grid.md), [modals](../../components/modal.md), and [tiles](../../components/tile.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/background-color-page.69856fc1df51b04696e1e56b3bba23c9.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/background-color-page.69856fc1.png)
 
 SKY UX components, such as page and box, control background colors.
 
 The dimmed container background color is a subdued background color for containers of content that is supplemental or supportive, such as [toolbar](../../components/toolbar.md) and [list summary](../../components/list-summary.md) on a [list page](../guidelines/page-layouts/list-page.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/background-color-container.618667955ef64b63cb4aeba4bb00211c.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/background-color-container.61866795.png)
 
 Do use the dimmed container background color for containers of supplemental or supportive content.
 
 The backdrop container background color is a neutral background color for use behind design canvases, WYSIWYG editors, and real-time previews. Use containers for text and other content inside canvases and previews. Don't put text directly on the backdrop container background color.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/background-color-backdrop.4d9d460334095de03c70ac9e8220e646.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/background-color-backdrop.4d9d4603.png)
 
 Do use the backdrop container color behind real-time previews or WYSIWYG editors.
 
 The prominent header background color emphasizes prominent containers. Prominent containers, such as chat panels, WYSIWYG editors, and help files, display tools or systems alongside the main page content but don't extend the page content. This style is specifically designed to visually emphasize headers in prominent containers. Don't use it for any other use cases.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/border/prominent-container-header-border-color.9f05790ca8b05900b7dc689a7cc77d33.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/border/prominent-container-header-border-color.9f05790c.png)
 
 Do use the prominent header background color on headers for prominent containers, such as containers with widgets for WYSIWYG editors.
 
 The prominent container background color sets the content of prominent containers apart from the rest of the page content. Prominent containers, such as chat panels, WYSIWYG editors, and help files, display tools or systems alongside the main page content but don't extend the page content. This style is specifically designed to set apart the content inside prominent containers. Don't use it for any other use cases.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/prominent-container-background.5d272f3db88c845a402da2c21d76cf07.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/prominent-container-background.5d272f3d.png)
 
 Do use the prominent container background color on prominent containers, such as chat panels.
 
@@ -107,7 +107,7 @@ SKY UX uses border colors to define containers, create sections inside them, and
 
 The container default border color is for containers of content, such as [boxes](../../components/box.md), [modals](../../components/modal.md), and [tiles](../../components/tile.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/border-color-default.69856fc1df51b04696e1e56b3bba23c9.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/border-color-default.69856fc1.png)
 
 Do use the container default border color for containers of content.
 
@@ -115,7 +115,7 @@ The divider default border color is for separating sections of an interface with
 
 The divider soft border color is for separating members of a homogenous set, such as rows in a grid or [repeater](../../components/repeater.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/border-color-divider.618667955ef64b63cb4aeba4bb00211c.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/border-color-divider.61866795.png)
 
 Do use the divider default border color to separate sections of a page. Use the divider soft border color to separate rows in a list.
 
@@ -125,7 +125,7 @@ The disabled border color is a consistent color for interactive objects that are
 
 In most cases, communicate status with SKY UX components, such as [label](../../components/label.md) and [status indicator](../../components/status-indicator.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/status-color.a184b6d959714e6f7796e94fa9b4542c.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/status-color.a184b6d9.png)
 
 Do use SKY UX components to communicate status when possible.
 
@@ -136,7 +136,7 @@ In rare cases, apply status colors directly to other objects or content. Don't r
     <tr>
       <td>
 
-![](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/status-danger.e69289134943278d47f83671a2c4dc30.png)
+![](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/status-danger.e6928913.png)
 
 </td>
       <td>
@@ -150,7 +150,7 @@ Use the danger color to represent statuses that require immediate attention.
     <tr>
       <td>
 
-![](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/status-info.bf8cb639378b68feb52b781213801122.png)
+![](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/status-info.bf8cb639.png)
 
 </td>
       <td>
@@ -164,7 +164,7 @@ Use the info color to represent statuses or content with high interest but neutr
     <tr>
       <td>
 
-![](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/status-success.a2e83aad62ae6c523201a0247ed6758e.png)
+![](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/status-success.a2e83aad.png)
 
 </td>
       <td>
@@ -178,7 +178,7 @@ Use the success color to represent statuses of positive completion.
     <tr>
       <td>
 
-![](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/status-warning.a43f8002df5528ca9c9e2f8faf69df9f.png)
+![](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/status-warning.a43f8002.png)
 
 </td>
       <td>
@@ -204,7 +204,7 @@ Use the text on status background class for all text content in containers with 
 
 To communicate a status on an icon, combine icon and icon matte colors of the appropriate status.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/status-color-icon.a91b12b2092320239c70eedb88b1ec4f.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/status-color-icon.a91b12b2.png)
 
 Do use icon and icon matte status colors to combine the meaning of a status with a specific icon.
 
@@ -220,7 +220,7 @@ Use classification background colors for container backgrounds. Use classificati
 
 Use default colors for text and icons in containers with classification background colors. Deemphasized colors don't have sufficient contrast.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/classification-color.a22be1cfc0ebfe0fce807c098b519a7c.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/classification-color.a22be1cf.png)
 
 Do use classification colors to color-code related content.
 
@@ -228,7 +228,7 @@ Do use classification colors to color-code related content.
 
 When an object needs to communicate both a classification and a status, you can combine both concepts. Use classification backgrounds and foregrounds in combination with status backgrounds, borders, and icon colors to represent both dimensions independently.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/classification-color-with-status-color.f1c3cd45fbcd244d1182d65cfec15339.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/classification-color-with-status-color.f1c3cd45.png)
 
 Do combine status and classification colors when necessary.
 
@@ -242,7 +242,7 @@ Use category colors in sequential order. They use different color families and a
 
 Avoid data visualizations with more than 8 categories. In rare cases where more than 8 categories are necessary, start the category palette over again, using the category 1 color for the ninth category and so on.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/viz-multi-series-data.594f868379d1ec4fac517792249db157.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/viz-multi-series-data.594f8683.png)
 
 Do use the category palette for multi-series data, such as bar charts.
 
@@ -250,7 +250,7 @@ Do use the category palette for multi-series data, such as bar charts.
 
 Use the category 1 color for single-series data visualizations with only one category or no category, such as line charts.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/viz-single-series-data.2e062d319f5d0fa9ebbeee36207c26f4.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/viz-single-series-data.2e062d31.png)
 
 Do use the category 1 color for single-series data.
 
@@ -260,7 +260,7 @@ Use the sequential palette to indicate different magnitudes in a range. When dat
 
 You can use a linear gradient from the first to the last color in the sequential palette to create a visualization with finer distinctions.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/viz-sequential-palette.0da975b86d61e7d888bd198ea6c86428.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/viz-sequential-palette.0da975b8.png)
 
 Do use the sequential palette colors to represent a range of magnitudes.
 
@@ -270,7 +270,7 @@ Use the diverging palettes to indicate positive and negative deviations from a c
 
 Always use the positive and negative diverging palettes together in data visualizations. Don't use them as alternatives for the sequential palette.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/viz-diverging-palette.20a2981ba20aa9c05159666e5e49b5db.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/viz-diverging-palette.20a2981b.png)
 
 Do use the diverging palette to represent positive and negative ranges at the same time.
 
@@ -282,7 +282,7 @@ SKY UX uses neutral colors for chart elements.
 - Axis lines use a heavier color with more contrast to define chart boundaries.
 - Chart markers use the heaviest color to contrast with the colors of data sets. These markers represent the basis of comparison for data in charts, such as thresholds, benchmarks, or goals.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/viz-chart-elements.6c1940ec3943f9fe2923d75eafc8705a.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/colors/viz-chart-elements.6c1940ec.png)
 
 Do use chart element colors for gridlines, axis lines, and chart markers.
 

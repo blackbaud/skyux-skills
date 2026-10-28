@@ -13,7 +13,7 @@ Wizards guide users through pre-defined steps in a particular order to represent
 
 Use wizards when a single task includes multiple steps that users must perform in a particular order. Wizards illustrate the step-by-step nature of tasks and reinforce progress toward final goals as users complete steps.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/wizard/wizard-usage-1.5f31ad737059741184e72544efc4295e.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/wizard/wizard-usage-1.5f31ad73.png)
 
 Do use wizards for tasks broken into multiple steps.
 
@@ -55,7 +55,7 @@ Step controls
 
 Disabled step indicator (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/wizard/wizard-anatomy.12d31babd2a932d712860da2f8d3d09e.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/wizard/wizard-anatomy.12d31bab.png)
 
 ## Options
 

@@ -31,7 +31,7 @@ Don't use help inline buttons when a small amount of persistent inline text can 
 
 Display help content in [popovers](./popover.md) when a small amount of user assistance content is valuable some of the time. For larger amounts of user assistance, use the `helpKey` option instead to display content in other containers, as described in the next section.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/help-inline-button/popover-content-simple.1975b621a1510106d296ace5238b1d7a.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/help-inline-button/popover-content-simple.1975b621.png)
 
 Do use popovers to display small chunks of plain text.
 
@@ -49,7 +49,7 @@ For complex tasks where users need comprehensive documentation, they invoke help
 
 Place the help inline button to the right of the label for the element that the help content supports.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/help-inline-button/element-level-help.9d2940497f412d424912381d61c497b1.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/help-inline-button/element-level-help.9d294049.png)
 
 Do use help inline buttons to invoke element-specific help content.
 

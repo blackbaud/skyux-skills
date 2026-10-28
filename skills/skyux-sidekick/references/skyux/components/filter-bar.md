@@ -13,7 +13,7 @@ The filter bar presents users with inline filter options to narrow lists. It all
 
 Use the filter bar when the main or only task on a page is to narrow a collection of items or manipulate a pre-filtered collection. Use a filter bar or tabs to support the [filtering tasks](../design/guidelines/filtering-lists.md) on dedicated full-page lists, such as [list pages](../design/guidelines/page-layouts/list-page.md) or in tabs on [record pages](../design/guidelines/page-layouts/record-page.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filteringrecords/full-page-context.9eb411599b85fa6f4db8d7bd047c56ca.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filteringrecords/full-page-context.9eb41159.png)
 
 Do use the filter bar with full-page lists on list pages.
 
@@ -22,7 +22,7 @@ Use the filter bar with pre-filtered lists where filters are already active when
 - Users need to adjust preset filter values or add additional filters to refine lists.
 - Users access lists through calls to action and need to further narrow the lists before taking action.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filteringrecords/pre-filtered-bar.f07731a9eaf12f820440ca81321a7e81.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filteringrecords/pre-filtered-bar.f07731a9.png)
 
 Do use the filter bar with pre-filtered lists to make workflows more efficient. Users can narrow lists further as necessary.
 
@@ -36,17 +36,17 @@ Don't use the filter bar when:
 
 Use pre-filtered lists in [tabs](./tabs.md) instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filteringrecords/tab-filters-do.a85b9657b36b424fb17d4181a0055b86.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filteringrecords/tab-filters-do.a85b9657.png)
 
 Do use tabs to support easy access to a few pre-filtered lists.
 
 Don't use the filter bar when lists need four or fewer simple filters that won't be used frequently because they don't have significant impact. Use [expandable inline filters](./filter.md) instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filter-bar/dont-use-filters2.cac165d6491515acb0cda145335d4211.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filter-bar/dont-use-filters2.cac165d6.png)
 
 Don't use the filter bar to display a few filters that won't be used frequently.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filter-bar/expandable-filters.91274c803dd781f6d795ec7ce0372617.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filter-bar/expandable-filters.91274c80.png)
 
 Do use expandable inline filters to hide simple filters behind a filter button.
 
@@ -76,7 +76,7 @@ Clear filters button
 
 Filter chooser button (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filter-bar/filter-bar-anatomy.2e8c9fa059ba767aa86d25f5ebbcfc97.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filter-bar/filter-bar-anatomy.2e8c9fa0.png)
 
 ## Options
 
@@ -86,7 +86,7 @@ When a list requires many filters to give users multiple ways to narrow the coll
 
 Within filter choosers, organize filters alphabetically. If some filters will be used most of the time, include them directly in the filter bar by default.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filter-bar/option-filter-chooser.791b82ee4c3464915407872ef65f3dda.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filter-bar/option-filter-chooser.791b82ee.png)
 
 The filter chooser button opens a modal to select the filters to enable in the filter bar.
 
@@ -116,13 +116,13 @@ Grouped filters
 
 When users select **Clear all values**, confirm their intention with a [confirmation dialog](./confirm.md) before removing the filter values. This avoids losing their work by mistake.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filter-bar/clearing-filters.89fc5ebcfc1f3a20bb14005cc221ae51.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filter-bar/clearing-filters.89fc5ebc.png)
 
 ### Updates to summary details
 
 When filters or search criteria are applied to a list that includes a [list summary](./list-summary.md), update the list count and any additional list summary items to reflect the filtered list. Add "match" to the list count's label to indicate that the list is in a filtered state.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/list-summary/filter-list-count.769d0cd8c574c061bb42292676159f41.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/list-summary/filter-list-count.769d0cd8.png)
 
 Do update the details in the list summary when filters or search criteria are applied to a list.
 

@@ -13,19 +13,19 @@ Radio buttons let users select one item from a short list of items.
 
 Use radio button groups when users must choose one option from a set of 2-5. Use radio buttons in modals where users confirm decisions before changes take effect.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/radio-button/radio-button-usage-1.0faf1ea491585986a7755c2ae094d652.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/radio-button/radio-button-usage-1.0faf1ea4.png)
 
 Do use radio button groups when users select a single item from a short list of options in a modal.
 
 Use icon radio button groups when icons clearly communicate the options.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/radio-button/radio-button-usage-4.253385ed82a0e6333979ce9bcf086f30.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/radio-button/radio-button-usage-4.253385ed.png)
 
 Do use icon radio button groups when icons clearly illustrate the options.
 
 Use radio buttons to enable conditional inputs. For options that enable 1-3 inputs, disable the inputs until users select the radio buttons. For options that enable more inputs, hide the inputs until users select the radio buttons. If all options in a radio button group enable conditional inputs or significantly change the workflow, consider using [action buttons](./action-button.md) instead. See the [form layout](../design/guidelines/form-design.md#form-layout) guidelines for more information.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/radio-button/radio-button-usage-5.6377ae12e3f2b2e54402a3cf867bd5f1.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/radio-button/radio-button-usage-5.6377ae12.png)
 
 Do use radio buttons to enable conditional inputs as part of a task.
 
@@ -33,31 +33,31 @@ Do use radio buttons to enable conditional inputs as part of a task.
 
 Don't use radio buttons when users must choose from more than five items. Use a different [selection input](../design/guidelines/form-design.md#selection-inputs) instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/radio-button/radio-button-usage-6.b5d15ab9095bf93f6a38244162ff6a7b.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/radio-button/radio-button-usage-6.b5d15ab9.png)
 
 Don't use radio buttons for a long list of options.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/radio-button/radio-button-usage-7.6918953b44ee81a622c16c675a76c1f8.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/radio-button/radio-button-usage-7.6918953b.png)
 
 Do use different selection controls for more than five choices.
 
 Don't use radio buttons for two options that are exact opposites. Use a [checkbox](./checkbox.md) instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/radio-button/radio-button-usage-8.bb1dced3921747be3200eb3fc0964cb4.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/radio-button/radio-button-usage-8.bb1dced3.png)
 
 Don't use radio buttons to represent exact opposites.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/radio-button/radio-button-usage-9.01937762fa8b73247dabd00f0b1631be.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/radio-button/radio-button-usage-9.01937762.png)
 
 Do use a checkbox to represent exact opposites.
 
 Don't use radio buttons when user selections significantly alter the workflow. Use [action buttons](./action-button.md) instead, and place them at the beginning of the task.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/radio-button/radio-button-usage-10.b03b6b3095bcaab8a3d5229d84942088.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/radio-button/radio-button-usage-10.b03b6b30.png)
 
 Don't use radio buttons for options that significantly alter the workflow.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/radio-button/radio-button-usage-11.16da7d131835d6e108ef4399b49773e4.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/radio-button/radio-button-usage-11.16da7d13.png)
 
 Do use action buttons for decisions that branch users into significantly different workflows.
 
@@ -81,7 +81,7 @@ Help inline button (optional)
 
 Hint text (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/radio-button/radio-button-anatomy.21f90955fe130bf661114e96db2f3beb.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/radio-button/radio-button-anatomy.21f90955.png)
 
 ### Radio button group
 
@@ -105,7 +105,7 @@ Help inline button (optional)
 
 Hint text (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/radio-button/radio-button-group-anatomy.7c8861e2e913d0b8b543c025fcd3f082.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/radio-button/radio-button-group-anatomy.7c8861e2.png)
 
 ### Icon radio button group
 
@@ -117,7 +117,7 @@ Icon radio button
 
 Icon
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/radio-button/radio-button-icon-radio-button-group-anatomy.d02cffe93d8037fcb903aad8ea8d9785.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/radio-button/radio-button-icon-radio-button-group-anatomy.d02cffe9.png)
 
 ## Options
 
@@ -127,7 +127,7 @@ By default, the labels for radio button groups aren't treated as HTML headings. 
 
 In rare cases, you can hide radio button group label text and use other text to present the radio buttons.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/radio-button/radio-button-heading-option.e8a1d1a3b06eb0c9ae2f35202bf68d1c.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/radio-button/radio-button-heading-option.e8a1d1a3.png)
 
 Radio button group labels can be turned into HTML headings.
 
@@ -157,11 +157,11 @@ Don't use `stacked` when the radio button group:
 - Is the last input inside a [field group](./field-group.md)
 - Is the last input on a form
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/radio-button/radio-button-stacked-option-1.26cce06c1b3a5b98e02f4ffccb3be907.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/radio-button/radio-button-stacked-option-1.26cce06c.png)
 
 If a radio button group uses `headingLevel`, use `stacked` when the radio button group is followed by a [field group](./field-group.md) or another heading. The radio button group automatically increases the size of the margin to fit the visual hierarchy.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/radio-button/radio-button-stacked-option-2.f42e7d466f28c5f366bc2051b5c7ec12.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/radio-button/radio-button-stacked-option-2.f42e7d46.png)
 
 ## Content
 
@@ -179,11 +179,11 @@ Don't wrap a radio button group inside a field group component if the radio butt
 
 In this example, “Payment processing mode” should be the heading of the radio button group, with `headingLevel` and `headingStyle` set to 3 in the component options. An additional field group and label around the radio button group is unnecessary and confusing.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/radio-button/radio-button-layout-1.23106409ac2d82070d48813123d08928.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/radio-button/radio-button-layout-1.23106409.png)
 
 Don't use a field group with a lone radio button group.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/radio-button/radio-button-layout-2.dc2ff66f192a36b10dc8bc64e4a8d23b.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/radio-button/radio-button-layout-2.dc2ff66f.png)
 
 Do adjust the heading level and heading style of a radio button group to match the hierarchy of field groups.
 

@@ -52,7 +52,7 @@ Help button (optional)
 
 Read-only cell (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-entry-grid/anatomy.1d30011d0909147c5dc28b47af1a27ce.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-entry-grid/anatomy.1d30011d.png)
 
 ## Options
 
@@ -60,7 +60,7 @@ Read-only cell (optional)
 
 To prevent users from editing the data in particular columns, disable the columns.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-entry-grid/options-disabled.b5acebc7cd358d14d1a2670ceb9c40c7.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-entry-grid/options-disabled.b5acebc7.png)
 
 ### Help button
 
@@ -70,7 +70,7 @@ When you need to supplement a data entry grid column header with additional info
 
 To call attention to incorrect formats in cells, such as incorrect dates or currency values, enable validation. The component handles the styling automatically, so you don't need to worry about rendering the styling, but you do need to provide validation messages.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-entry-grid/options-validation.3516b3b12310f005becf240cce76d1c6.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-entry-grid/options-validation.3516b3b1.png)
 
 ## Accessibility
 

@@ -15,11 +15,11 @@ Use to sort a list of items when there are templated columns in a list. This pro
 
 Use to sort a list of items when the list includes other views in addition to the data grid (e.g., repeater). This allows users to sort in these other views using the sort menu.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/sort/sort-multiple-view-sort.b7e9a8d84bf47c2056bc8eee44b8b1b9.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/sort/sort-multiple-view-sort.b7e9a8d8.png)
 
 Do use a sort button when there are other views of the data, in addition to a data grid, to support sorting in those views (without column headers).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/sort/sort-templated-sort.4f5b671e1bd43bcc34b1293f037edd54.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/sort/sort-templated-sort.4f5b671e.png)
 
 Do use a sort button when there are templated columns to provide sort options for multiple properties within a single templated column (e.g., First name and last name).
 
@@ -27,7 +27,7 @@ Do use a sort button when there are templated columns to provide sort options fo
 
 Do not include an additional sort button in the toolbar for a list when only data grid view is available. Column headers provide sorting in this case.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/sort/sort-double-sort.86c7a71865afdbd649cd0c88321a51c6.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/sort/sort-double-sort.86c7a718.png)
 
 Don't use a sort button if the list only uses data grid view and not templated columns. Rely on column headers for sorting.
 
@@ -49,7 +49,7 @@ Selected menu option
 
 Menu option
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/sort/sort-anatomy.0bb0172277fbc4eaeaf35ebca2b57957.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/sort/sort-anatomy.0bb01722.png)
 
 ## Related information
 

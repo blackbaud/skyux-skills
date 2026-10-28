@@ -19,7 +19,7 @@ For guidance on choosing the appropriate data grid for your use case, see [Grids
 
 Use data grids to display large amounts of data when users need to compare values between rows or scan for specific values or outliers.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-do-use.fad6b74d8d400193ebcb4d2da75c6ca2.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-do-use.fad6b74d.png)
 
 Do use data grids to help users scan data and compare values.
 
@@ -27,7 +27,7 @@ Do use data grids to help users scan data and compare values.
 
 Don't use data grids to display content that requires a complex layout. To display multiple templated columns, visual content such as graphs or images, or content that users are likely to view in small viewports such as phones, use [repeaters](./repeater.md) instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-dont-use.f169e260ec769cfb825d70f245529441.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-dont-use.f169e260.png)
 
 Don't use data grids to display visual content or other complex layouts.
 
@@ -81,7 +81,7 @@ Selected row (optional)
 
 [Summary action bar](./summary-action-bar.md) (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-anatomy.5b66888fcda4fff4c319b2d065ba4dd6.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-anatomy.5b66888f.png)
 
 ## Options
 
@@ -89,7 +89,7 @@ Selected row (optional)
 
 To present users with inline filter options that allow them to apply structured criteria that narrows down the list to the items they are interested in, use the [filter bar](./filter-bar.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-filter.367e29dd3e23371a33221348e648acd9.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-filter.367e29dd.png)
 
 ### List summary
 
@@ -99,13 +99,13 @@ To highlight important information that users should know at a glance, including
 
 To let users select multiple rows in a data grid, use a [data manager](./data-manager.md) and enable multiselect.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-multiselect.8ac8c32948c498574bac4462e2cd0b98.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-multiselect.8ac8c329.png)
 
 Do use multiselect to let users select multiple rows.
 
 To let users perform actions on the multiple rows that they select in a data grid, include the [summary action bar](./summary-action-bar.md) at the bottom of the data grid's container. Only use multiselect with a summary action bar when the container is a [page](./page.md), [modal](./modal.md), [split view workspace](./split-view.md), or [flyout](./flyout.md). Don't use multiselect with a summary action bar when the data grid is in a container, such as a [tile](./tile.md) or [box](./box.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-multiselect-actions.c90ab344d72923f02e19803f9dd52180.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-multiselect-actions.c90ab344.png)
 
 Do use multiselect to let users perform actions on multiple rows.
 
@@ -117,7 +117,7 @@ When you need to supplement a data grid column heading with additional informati
 
 To display actions that affect individual items in the data grid, use [context-menu dropdowns](./dropdown.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-context-menu.91ed3dcda87cfc85d5d950941e5c0df9.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-context-menu.91ed3dcd.png)
 
 ### Sorting
 
@@ -125,15 +125,15 @@ Make column headers sortable. Sort by the leftmost column or the primary record 
 
 Only include the [sort button](./sort.md) in the toolbar if the list includes other views in addition to the data grid (e.g., repeater) or it contains templated columns where users need to sort by another property in that column.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-double-sort.77632d7a87b0698940263e1fc0075e5c.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-double-sort.77632d7a.png)
 
 Don't use a sort button if the list only uses data grid view and not templated columns. Rely on column headers for sorting.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-multiple-view-sort.b3261ef07efece81bc2c16f4edbe78b4.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-multiple-view-sort.b3261ef0.png)
 
 Do use a sort button when there are other views of the data in addition to a data grid to supporting sorting in those views (without column headers).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-templated-sort.06353de653d2f2c63b6f11d725cde9ca.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-templated-sort.06353de6.png)
 
 Do use a sort button when there are templated columns to provide sort options for multiple properties within a single templated column (e.g., First name and last name).
 
@@ -141,7 +141,7 @@ Do use a sort button when there are templated columns to provide sort options fo
 
 To display composite information instead of single values, use templated columns.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-templated-items.98d8a20d65af6a50bcc3cf4922b96710.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-templated-items.98d8a20d.png)
 
 ## Behavior and states
 
@@ -151,7 +151,7 @@ The fit determines how to place data grids within their containers. If a contain
 
 The `scroll` option provides a horizontal scrollbar when data grids are wider than their containers, while the `width` option resizes data grid columns to fit in the fixed width of the container. The `scroll` option is useful for data grids with many columns, and the `width` option is useful for simple grids in small containers where content fits neatly in the allotted space.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-horizontal-scroll.3e5dbeb192f699b79bb04fc5d11d9e12.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-horizontal-scroll.3e5dbeb1.png)
 
 Data grids with many columns use horizontal scrollbars to fit in narrower containers.
 

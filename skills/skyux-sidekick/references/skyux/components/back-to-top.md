@@ -13,7 +13,7 @@ The back to top button in the bottom left of the page returns users to an elemen
 
 Use the back to top button when users need a quick way to access the top of [infinite scroll lists](./infinite-scroll.md) or other long lists.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/backtotop/backtotop-usage.1fac8fef1a83c38d1299788de071cc5d.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/backtotop/backtotop-usage.1fac8fef.png)
 
 Use the the back to top bar with infinite scroll lists.
 
@@ -27,7 +27,7 @@ Back to top button
 
 Button bar
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/backtotop/backtotop-anatomy.24bd9005bf359b41c87d26c4f8eb449f.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/backtotop/backtotop-anatomy.24bd9005.png)
 
 ## Related information
 

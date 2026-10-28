@@ -13,13 +13,13 @@ Tabs divide and categorize large amounts of content on a page.
 
 Use tabs when users require quick access to different slices of the same data.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tabs/tabs-usage-1.f1ae8612bac212d35c7d03c5a879a962.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tabs/tabs-usage-1.f1ae8612.png)
 
 Do use tabs to show different slices of the same data.
 
 Use tabs when users need to complete different tasks on a page and each task includes a significant amount of data.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tabs/tabs-usage-2.7f2854122d6462b231c4e305cbe5e229.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tabs/tabs-usage-2.7f285412.png)
 
 Do use tabs to group content for different tasks.
 
@@ -27,17 +27,17 @@ Do use tabs to group content for different tasks.
 
 Don't use tabs within another tab. Change the workflow instead of nesting multiple sets of tabs.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tabs/tabs-usage-3.f27513c44a2c15e605bf90030cd09bbe.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tabs/tabs-usage-3.f27513c4.png)
 
 Don't use multiple sets of tabs on a page.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tabs/tabs-usage-4.f159fd60cf85c5936d6cc647e5e61efc.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tabs/tabs-usage-4.f159fd60.png)
 
 Don't combine vertical tabs and horizontal tabs.
 
 Don't use tabs when they are likely to overflow the available horizontal space. The collapsed behavior of tabs will accommodate small screen resolutions or cases where users add many tabs themselves, but it is not intended as the default experience with a tabset. Use [vertical tabs](./vertical-tabs.md) instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tabs/tabs-usage-5.24a23cbec4d73f6c8e229c3db87074e6.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tabs/tabs-usage-5.24a23cbe.png)
 
 Don't use horizontal tabs when they are likely to overflow and collapse into a dropdown.
 
@@ -67,7 +67,7 @@ Close tab button (optional)
 
 Add tab button (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tabs/tabs-anatomy.60311045d00db31cf6a944e82312cd11.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tabs/tabs-anatomy.60311045.png)
 
 ## Options
 
@@ -77,7 +77,7 @@ If users need to work with a subset of tabs in a large tabset, let them add and 
 
 If a new tab includes multiple options on what to display, use [action buttons](./action-button.md) in the tab view to let users make selections.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tabs/tabs-options-2.c402d51d22a56a153dae23a4c99ff0a6.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tabs/tabs-options-2.c402d51d.png)
 
 ### Tab layouts
 
@@ -89,25 +89,25 @@ Use `blocks` tab layout for laying out blocks of content in a tab panel.
 
 Place a [fluid grid](./fluid-grid.md) or other grid layouts via flexbox or CSS grid in page content area to acheive a large range of content layouts.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tabs/tabs-layout-blocks.5ee71385e9fdc09a0576f7cbb917140b.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tabs/tabs-layout-blocks.5ee71385.png)
 
 #### List
 
 Use the `list` layout for lists of data.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tabs/tabs-layout-list.0fa4d3473687eb5bca352fb6bfa55b2e.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tabs/tabs-layout-list.0fa4d347.png)
 
 #### Fit
 
 Use the `fit` layout for content to fill the content area and be anchored to the edges of the tab panel.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tabs/tabs-layout-fit.0dade380ec90d197adbde4b3cd19ca21.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tabs/tabs-layout-fit.0dade380.png)
 
 #### None
 
 Use the `none` layout for custom layouts and content within a tab panel.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tabs/tabs-layout-none.b10d7057d276beaa815c611e0040784d.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tabs/tabs-layout-none.b10d7057.png)
 
 ## Behavior and states
 
@@ -115,7 +115,7 @@ Use the `none` layout for custom layouts and content within a tab panel.
 
 If the tabset includes too many tabs to fit in the tab bar's available horizontal space, the tabs collapse into a dropdown.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tabs/tabs-behavior-1.cfe4fc42fff057b65cf9b58a29010306.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tabs/tabs-behavior-1.cfe4fc42.png)
 
 ## Layout
 
@@ -128,7 +128,7 @@ Organize tabs according to the specific needs of the page or record, with the mo
 3.  SKY Add-in tabs (optional)
 4.  Common tabs (optional)
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tabs/tabs-content-record-page.8abef5147f291bdc6def74cfbecbe5fb.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tabs/tabs-content-record-page.8abef514.png)
 
 Record pages use a standard order for tabs.
 
@@ -136,23 +136,23 @@ Record pages use a standard order for tabs.
 
 Tabs are always the last (bottommost) content in their container. Don't put additional content under tabs.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tabs/tabs-layout-1.b988840b53bbb4bdfd2b46bf58952b22.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tabs/tabs-layout-1.b988840b.png)
 
 Don't put additional content under tabs.
 
 The tab border extends the full width of the container. Don't use left or right margins on the tab border, and ignore any padding that the container defines.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tabs/tabs-layout-2.45a3990dd7ea3f5a10b93e67d32c520d.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tabs/tabs-layout-2.45a3990d.png)
 
 Do extend the tab border to the full width of the container.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tabs/tabs-layout-3.a8dae2ce4b203aa629203948d2ca76e0.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tabs/tabs-layout-3.a8dae2ce.png)
 
 Don't apply the container's padding to the tab border.
 
 Tab content does not have additional left or right padding. The left and right gutters align with the gutters for content outside the tabs.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tabs/tabs-layout-4.7ffbff42564c6ec19dce8c8d3b81fcd9.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tabs/tabs-layout-4.7ffbff42.png)
 
 Don't apply additional left or right padding to tab content.
 
@@ -160,7 +160,7 @@ Don't apply additional left or right padding to tab content.
 
 Use short, straightforward labels to clearly communicate the purpose of tabs. For consistency, use “Overview” when the first tab displays summary information. For example, use an Overview tab on [record pages](../design/guidelines/page-layouts/record-page.md) to display primary or identifying data and inform users about the current state and history of the record.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tabs/tabs-content-1.a00795671908005b4239e86326931197.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/tabs/tabs-content-1.a0079567.png)
 
 ## Accessibility
 

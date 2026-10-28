@@ -13,19 +13,19 @@ The lookup text input lets users search a long list of options and make selectio
 
 Use lookup fields when users must choose one or more options from a very long list or from an unpredictable list with unfamiliar options. Lookup fields allow users to enter search criteria to narrow their options, so they are useful when lists are unique to the system. For example, use lookup fields for user-defined lists such as code tables where the options are unpredictable and for system-defined lists such as templates where the options are unique to the organization.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/lookup/lookup-usage-1.9b8ef00bec87fa95d9fdf58f7c42d22e.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/lookup/lookup-usage-1.9b8ef00b.png)
 
 Do use lookup fields when users choose from long lists of options.
 
 Use lookup fields when users can choose multiple options from a long list.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/lookup/lookup-usage-2.1188497927c1008d190619707be6c0a1.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/lookup/lookup-usage-2.11884979.png)
 
 Do use lookup fields when users may need to select multiple options.
 
 Use lookup fields when users can add options to the list during their tasks.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/lookup/lookup-usage-3.8c73bcb9d1334a18e6b7ea951a851a15.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/lookup/lookup-usage-3.8c73bcb9.png)
 
 Do use lookup fields when users may need to add options to the list.
 
@@ -33,31 +33,31 @@ Do use lookup fields when users may need to add options to the list.
 
 Don't use lookup fields when short lists include 5 options or fewer, especially if it is valuable for users to see all options at once. Use [checkboxes](./checkbox.md) or [radio buttons](./radio.md) instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/lookup/lookup-usage-4.e9e761a1ab1dfbd2d2289981cac6196e.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/lookup/lookup-usage-4.e9e761a1.png)
 
 Don't use lookup fields when users choose options from a short list.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/lookup/lookup-usage-5.f0ed25a1978a0f92bfda8bc65ebe1428.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/lookup/lookup-usage-5.f0ed25a1.png)
 
 Do use different selection inputs for a short list of options.
 
 Don't use lookup fields when options are highly predictable or when users can easily browse options in an expected order. Use HTML select fields instead. For example, while a list of states is long, it's predictable and most users are familiar with the options, so the native HTML select field is the preferable option.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/lookup/lookup-usage-6.ad9182c0cd0b13e88e232a1bf9c68b93.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/lookup/lookup-usage-6.ad9182c0.png)
 
 Don't use lookup fields when users likely know all the options.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/lookup/lookup-usage-7.5618c47a7022786903ea536788354594.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/lookup/lookup-usage-7.5618c47a.png)
 
 Do use HTML select fields for predictable or common sets of options.
 
 Don't use lookup fields when users need to interact with the selected options or when the options require more depth than lookup tokens provide. Instead, use a button to open a [selection modal](./selection-modal.md) where users can select options, and then display selections in whatever format is needed.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/lookup/lookup-usage-8.bae9529c2a3233a31aa74ad92a6613d2.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/lookup/lookup-usage-8.bae9529c.png)
 
 Don't use lookup fields for more than basic selection.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/lookup/selection-modal-usage-2.3ca3edb4987cf5b6e6dadcfe1edd98ae.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/lookup/selection-modal-usage-2.3ca3edb4.png)
 
 Do use selection modals to let users interact with selections.
 
@@ -87,7 +87,7 @@ Help inline button (optional)
 
 Hint text (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/lookup/lookup-anatomy.9bca7f20c0319232fb190098f59e72c4.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/lookup/lookup-anatomy.9bca7f20.png)
 
 ### Search results
 
@@ -107,7 +107,7 @@ Search results
 
 'New' button (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/lookup/lookup-anatomy-results.fc50658b4ff30153469d9cd2c2a4e5b1.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/lookup/lookup-anatomy-results.fc50658b.png)
 
 ## Options
 
@@ -115,7 +115,7 @@ Search results
 
 Use a single-select to let users select a single option and multi-select to let users select multiple options.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/lookup/lookup-options-1.c346a56f503b11132a34f75cba4d1e56.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/lookup/lookup-options-1.c346a56f.png)
 
 ### Required field marker
 
@@ -143,25 +143,25 @@ Don't use `stacked` when the lookup:
 - Is the last input on a form
 - Is followed by one or more conditional fields (use `sky-theme-margin-bottom-s` instead for closely related fields)
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/lookup/lookup-options-stacked.c1e7dd22a3ebb6529c3194eaa7804728.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/lookup/lookup-options-stacked.c1e7dd22.png)
 
 ### Button to view all options
 
 The 'Show all/matches' button in the lookup menu lets users open a picker that either displays all options or just the options that match their search string. This button is technically optional for backwards compatibility, but we strongly recommend that you enable it in all instances.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/lookup/lookup-options-2.db8d96f12788dc3771b260494b8d092a.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/lookup/lookup-options-2.db8d96f1.png)
 
 ### Custom results template
 
 Use a custom results template when users need more information in the search results to help them select the correct options.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/lookup/lookup-options-3.692ba41d40747c3b40af5343b9726127.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/lookup/lookup-options-3.692ba41d.png)
 
 ### Custom picker
 
 By default, the search and "Show all/matches" buttons display a [selection modal](./selection-modal.md) with a selectable [repeater](./repeater.md). When different presentations are valuable, use custom pickers, such as custom repeaters or [tree views](./angular-tree.md). By default, both the native picker and custom pickers format options based on the same template as the dropdown list, but you can specify a different template to format the picker options as necessary.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/lookup/lookup-options-4.3c3c9a2ee3ec8628d6eba932c7beafda.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/lookup/lookup-options-4.3c3c9a2e.png)
 
 ## Behavior and states
 

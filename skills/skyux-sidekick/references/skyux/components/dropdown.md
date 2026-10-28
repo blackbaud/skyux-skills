@@ -13,7 +13,7 @@ Dropdown buttons display menus that group sets of actions or functions.
 
 Use dropdowns when users require access to multiple, related actions or when users require access to multiple, unrelated actions and you do not have room for multiple buttons.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/dropdown/usage-actions.56f53001c5cd0e4d16185bcb24c73fc0.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/dropdown/usage-actions.56f53001.png)
 
 Do use dropdowns to let users access multiple actions.
 
@@ -21,13 +21,13 @@ Use context-menu dropdowns when actions affect individual items in a list.
 
 For details on when to include a delete action in a context-menu dropdown, see the [manage data guidelines](../design/guidelines/managing-records.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/dropdown/usage-context-menu.91a631070ee2694534359e47cce965dd.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/dropdown/usage-context-menu.91a63107.png)
 
 Do use context-menu dropdowns with items in a list.
 
 Use icon-only dropdowns when you do not have room for text labels. For example, use icon-only dropdowns in list toolbars when screen widths are narrow.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/dropdown/usage-icon-only-1.9ef33c2449a20807f180ea65f17fe68c.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/dropdown/usage-icon-only-1.9ef33c24.png)
 
 Do use icon-only dropdowns when you do not have space for labels.
 
@@ -35,7 +35,7 @@ Do use icon-only dropdowns when you do not have space for labels.
 
 Don't use dropdowns as form inputs. Use HTML `<select>` fields instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/dropdown/usage-dont-input.6f166a247c0e3b1dc2d96375fc6252c9.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/dropdown/usage-dont-input.6f166a24.png)
 
 Don't use dropdowns as form inputs.
 
@@ -53,7 +53,7 @@ Dropdown menu
 
 Action
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/dropdown/anatomy.c5cd72fff92e6f9eef4c76ec196cf6cc.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/dropdown/anatomy.c5cd72ff.png)
 
 ## Options
 
@@ -86,7 +86,7 @@ For actions that clearly apply to the object associated with the context menu, u
 
 <Verb>
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/dropdown/dropdown-content-1.392cfff3677a7a49aee4af8a0bec26be.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/dropdown/dropdown-content-1.392cfff3.png)
 
 For dropdown buttons with one type of action, use the following format:
 
@@ -94,7 +94,7 @@ Button text: <Verb>
 
 Menu item: <Direct object>
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/dropdown/dropdown-content-2.06f447f77141ae0290bb28b148000e20.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/dropdown/dropdown-content-2.06f447f7.png)
 
 For dropdown buttons with more than one type of action, use the following format:
 
@@ -104,7 +104,7 @@ Button text: More
 
 Menu item: <Verb> <direct object>
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/dropdown/dropdown-content-3.9c19df7ab01f66ea295e4209931cd560.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/dropdown/dropdown-content-3.9c19df7a.png)
 
 In addition, follow these guidelines for button text:
 
@@ -120,7 +120,7 @@ Place context-menu dropdowns to the left of all row-specific content but to the 
 
 Default dropdowns are positioned with the same alignment and margins as [SKY UX buttons](./button.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/dropdown/dropdown-layout.eeaaa066752bf9ad4e0fed4ec2797fcc.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/dropdown/dropdown-layout.eeaaa066.png)
 
 Do put context-menu dropdowns to the left of all row-specific content in lists.
 

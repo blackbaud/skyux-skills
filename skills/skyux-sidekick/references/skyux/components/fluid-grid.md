@@ -13,7 +13,7 @@ Fluid grids provide responsive 12-column layouts to organize content for all scr
 
 Use fluid grids to organize content and containers into uniform columns that fill space responsively at different screen sizes.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/fluid-grid/use-spacing.a6d3e499906ba0b18851096c54155bc2.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/fluid-grid/use-spacing.a6d3e499.png)
 
 Do use fluid grids to visually align content and containers and to communicate relationships.
 
@@ -21,7 +21,7 @@ Do use fluid grids to visually align content and containers and to communicate r
 
 Don't use fluid grids for padding on pages, including padding around page headers and other page content. Use the [page component](./page.md) instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/fluid-grid/dont-page.afdfb34aaad458c3a0de0109b8c0061d.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/fluid-grid/dont-page.afdfb34a.png)
 
 Don't use fluid grids for page padding. Use the page component instead.
 
@@ -43,7 +43,7 @@ Gutter
 
 Margin (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/fluid-grid/anatomy.0cd885c62ebd0e84a904a12e3f32754d.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/fluid-grid/anatomy.0cd885c6.png)
 
 ## Options
 
@@ -51,11 +51,11 @@ Margin (optional)
 
 When you use fluid grids in containers that already include padding, turn off the fluid grid's outer margin using `disableMargin` to avoid double padding. For example, turn off the margin for [boxes](./box.md), [modals](./modal.md), layouts in [pages](./page.md) and [tabs](./tabs.md), and [tiles](./tile.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/fluid-grid/disable-margin-tile.086d3b10a05feb4584c2d0dfb7f6caa4.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/fluid-grid/disable-margin-tile.086d3b10.png)
 
 Disable margins when fluid grids are in containers that include padding.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/fluid-grid/disable-margin-page.80010c9832febc49b40d87d77415f90c.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/fluid-grid/disable-margin-page.80010c98.png)
 
 Disable margins in blocks layouts where fluid grids display containers or other content.
 
@@ -65,7 +65,7 @@ Disable margins in blocks layouts where fluid grids display containers or other 
 
 Use `small` gutters to separate content with visible borders within containers. For example, use `small` gutters to separate side-by-side [input boxes](./input-box.md) in [modals](./modal.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/fluid-grid/size-s.b325e14fb584549a4ba56d75d260f9b4.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/fluid-grid/size-s.b325e14f.png)
 
 Use small gutters to separate input boxes in horizontal layouts. Inputs can use unbalanced column widths to match highly predictable lengths of user input.
 
@@ -73,7 +73,7 @@ Use small gutters to separate input boxes in horizontal layouts. Inputs can use 
 
 Use `medium` gutters to separate containers with visible borders within large content areas, such as [pages](./page.md). For example, use `medium` gutters to separate [boxes](./box.md) on pages.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/fluid-grid/size-m-containers.d38735cac659145b5ca9156fafd86032.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/fluid-grid/size-m-containers.d38735ca.png)
 
 Use medium gutters to separate boxes within a page.
 
@@ -81,17 +81,17 @@ Use medium gutters to separate boxes within a page.
 
 Use `large` gutters to separate columns of content within containers and large content areas when the content doesn't have visible borders. For example, use `large` gutters to separate columns of content on [pages](./page.md) or [split view workspaces](./split-view.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/fluid-grid/size-l-content-groups.31e7a474dbd4b0d14c0353d2e54227c7.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/fluid-grid/size-l-content-groups.31e7a474.png)
 
 Use large gutters to separate columns of content within content containers.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/fluid-grid/size-l-content-containers.eb8e8d6abd58819515419020458b766f.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/fluid-grid/size-l-content-containers.eb8e8d6a.png)
 
 Use large gutters to separate columns of content within containers.
 
 Use `large` gutters within [pages](./page.md) to separate columns of content from containers. This visual separation indicates that the columns of content and containers aren't grouped together.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/fluid-grid/size-l-border-non-border.1b1864db724671d3ab97daa3409bf9db.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/fluid-grid/size-l-border-non-border.1b1864db.png)
 
 Use large gutters within pages to separate columns of content from containers.
 
@@ -109,21 +109,21 @@ To create responsive layouts, use the column drop pattern. It starts with a mult
 
 For example, a page can have a fluid grid row with three columns where `screenXSmall="12"` and `screenSmall="4"`. At screen sizes larger than the extra small breakpoint, each column spans one-third of the row's width. And at the extra small breakpoint, each column spans the full width of the row and stacks vertically.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/page-three-column-full.0e711dadbb81c380800fc229f1a3ee7c.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/page-three-column-full.0e711dad.png)
 
 Horizontal columns at a viewport larger than the extra small breakpoint.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/page-three-column-mobile.433883ef6f1df0774b187030299c0f07.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/page-three-column-mobile.433883ef.png)
 
 Vertically stacked columns at the extra small breakpoint.
 
 Within containers, content in a fluid guid adjusts as the size of the viewport changes. For example, a container with a repeater can use a fluid grid to display horizontal columns at larger screen sizes and to stack columns vertically when the container hits the extra small breakpoint.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/repeater-content-full.c6445aecc38324a0a903bc9b2fd924e4.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/repeater-content-full.c6445aec.png)
 
 Horizontal columns in a repeater at larger screen sizes.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/repeater-content-mobile.9643ab3a79e8085539eb3537b1fb5fe5.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/repeater-content-mobile.9643ab3a.png)
 
 Vertically stacked columns in a repeater at the extra small breakpoint.
 

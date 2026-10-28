@@ -59,7 +59,7 @@ Key date popover (optional)
 
 Disabled date (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/datepicker/datepicker-anatomy.ff895423ee42690c816d1f7859e22753.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/datepicker/datepicker-anatomy.ff895423.png)
 
 ## Options
 
@@ -101,7 +101,7 @@ To direct users to dates that are highly relevant to their selections, you can h
 
 You can display details about key dates in a [popover](./popover.md) that appears when users hover over the dates. Use plain text, and be as concise as possible. If key dates are important for multiple reasons, summarize or stack the details.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/datepicker/datepicker-options-keydates.7de0268543b8f455792cb8c6ed6ded4e.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/datepicker/datepicker-options-keydates.7de02685.png)
 
 Do use key dates to alert users to highly relevant dates when they make selections.
 
@@ -109,7 +109,7 @@ Do use key dates to alert users to highly relevant dates when they make selectio
 
 You can disable dates to prevent users from selecting them. The datepicker calendar indicates disabled dates with grey, italic text. You can still highlight them as key dates and display key date details in a popover.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/datepicker/datepicker-options-disabled.c72636b3f07f56b91e59833dbb7c0e27.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/datepicker/datepicker-options-disabled.c72636b3.png)
 
 Do use disabled dates to prevent users from making invalid selections.
 
@@ -123,7 +123,7 @@ Don't use `stacked` when the datepicker:
 - Is the last input on a form
 - Is followed by one or more conditional fields (use `sky-theme-margin-bottom-s` instead for closely related fields)
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/datepicker/datepicker-options-stacked.a4f02d3b201170fa3b62dfb577b9c49a.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/datepicker/datepicker-options-stacked.a4f02d3b.png)
 
 ## Behavior and states
 
@@ -135,7 +135,7 @@ To populate the current date, users can press `F3` on the keyboard. Focus must b
 
 If users enter months as text instead of numbers, the datepicker converts the text to numbers when the datepicker loses focus.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/datepicker/datepicker-conversion.0cdcc1ce631eafe4cb43227b13290f34.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/datepicker/datepicker-conversion.0cdcc1ce.png)
 
 ## Related information
 

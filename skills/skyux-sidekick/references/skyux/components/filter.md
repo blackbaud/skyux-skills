@@ -17,7 +17,7 @@ Filter controls are hidden by default and accessed through a **Filter** button, 
 
 For more details about filtering lists, see the [filtering lists guidelines](../design/guidelines/filtering-lists.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filter/expandable-filters.8996914281905539abec0afe9f30b26d.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filter/expandable-filters.89969142.png)
 
 Do use expandable inline filters in containers for simple filter controls that won't be used frequently.
 
@@ -25,21 +25,21 @@ Do use expandable inline filters in containers for simple filter controls that w
 
 Don't use expandable inline filters when users only need one or two simple filter controls that can fit above the lists. Use [persistent inline filters](../design/guidelines/filtering-lists.md#contexts-for-filtering-lists) instead. Persistent inline filters are especially useful for controls that users will need frequently or that have significant impact.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filter/dont-use-for-frequent.753f576bc5784a577f1eaa5a8eec6c39.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filter/dont-use-for-frequent.753f576b.png)
 
 Don't use expandable inline filters for one or two simple filter controls that users need frequently.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filter/persistent-inline-filter.7402dc41d714d1b25e8bfeaeed58b6fe.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filter/persistent-inline-filter.7402dc41.png)
 
 Do use persistent inline filters for one or two simple filter controls that users need frequently.
 
 Don't use expandable inline filters for full-page lists when the main, or only, task for users is to narrow a collection of items or manipulate a pre-filtered collection. Use the [filter bar](./filter-bar.md) instead to make filters always available and directly selectable.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filter/full-page-expandable.c66b32c2b1ee9de459a449d71c2877ca.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filter/full-page-expandable.c66b32c2.png)
 
 Don't use expandable inline filters for full-page lists. Use the filter bar instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filter/full-page-filter-bar.dd98f064a90df703d7a34f12a02a38d9.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filter/full-page-filter-bar.dd98f064.png)
 
 Do use the filter bar for filtering on full-page lists.
 
@@ -61,13 +61,13 @@ Expandable filter section (transparent)
 
 Simple filters
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filter/anatomy-expandable-filter.0f18054fa66c30283ccbdb1e427735cb.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filter/anatomy-expandable-filter.0f18054f.png)
 
 ## Layout
 
 Place the filter button in a [toolbar](./toolbar.md) above a list.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filter/layout-expandable-filter.12f4dc40fab3160576246cc8549dce2c.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filter/layout-expandable-filter.12f4dc40.png)
 
 ## Related information
 

@@ -37,7 +37,7 @@ Other errors
 
 A variety of page-level errors can occur, usually due to system failures rather than user actions. [The error component](../../components/error.md) includes default content that applies to most scenarios, and the content can be customized if necessary to be more precise or prescriptive.
 
-![Full page with broken error image and message centered on page.](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/errorhandling/page-error.95b6c6b2bf5502566b31c316159634d4.png)
+![Full page with broken error image and message centered on page.](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/errorhandling/page-error.95b6c6b2.png)
 
 ## Page element errors
 
@@ -49,25 +49,25 @@ Modals
 
 Modals usually have plenty of space to display error messages, so use [the error component](../../components/error.md).
 
-![Modal with broken error image and message centered in modal.](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/errorhandling/modal-error.46d2f5a856380a7a370c8d9e8aafc1c7.png)
+![Modal with broken error image and message centered in modal.](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/errorhandling/modal-error.46d2f5a8.png)
 
 Tabs
 
 Tabs that are used as a secondary navigation usually have views with plenty of available space to display error messages, so use [the error component](../../components/error.md).
 
-![Tabs with broken error image and message centered on page under tabs.](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/errorhandling/tab-error.e5f8d520696b1592d2ed92fe4767d8f9.png)
+![Tabs with broken error image and message centered on page under tabs.](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/errorhandling/tab-error.e5f8d520.png)
 
 Boxes
 
 Boxes have limited space and may not be important to users' immediate tasks, so exclude the images and buttons and only display error messages in order to minimize the visual weight.
 
-![Box with error message under the box heading.](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/errorhandling/box-error.d4473eb70a162188657f5c9dfc44a533.png)
+![Box with error message under the box heading.](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/errorhandling/box-error.d4473eb7.png)
 
 ## Background process errors
 
 Since background processes run outside the current page context, use [toasts](../../components/toast.md) to notify the user of an error with a background process. Toasts appear regardless of which page users are on and persist as they navigate through the system.
 
-![Full page with error message in toast.](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/errorhandling/background-error.c2b0ca2ea9106d39b77819089f86d532.png)
+![Full page with error message in toast.](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/errorhandling/background-error.c2b0ca2e.png)
 
 ## Form errors
 

@@ -13,7 +13,7 @@ Passive progress indicators represent sequential steps in processes outside of u
 
 Use passive progress indicators when users must be aware of sequential progress that they are not responsible for.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/progress-indicator/img/guidelines/passive-progress-usage-1.41e44086e04148faddb18937f8243773.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/progress-indicator/img/guidelines/passive-progress-usage-1.41e44086.png)
 
 Do use passive progress indicators to track sequential steps that other users take.
 
@@ -21,23 +21,23 @@ Do use passive progress indicators to track sequential steps that other users ta
 
 Don't use passive progress indicators for tasks that require user interaction. Use [waterfall progress indicators](./progress-indicator-waterfall.md) or [wizards](./tabs-wizard.md) instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/progress-indicator/img/guidelines/passive-progress-usage-2.4fbcd6a40e83e29872557a5528e379e8.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/progress-indicator/img/guidelines/passive-progress-usage-2.4fbcd6a4.png)
 
 Don't use passive progress indicators when users must take action on any of the steps.
 
 Don't use passive progress indicators to represent independent steps or statuses that are not sequential.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/progress-indicator/img/guidelines/passive-progress-usage-3.2e9bb2c9ff623fce3cc88d49f1a68af3.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/progress-indicator/img/guidelines/passive-progress-usage-3.2e9bb2c9.png)
 
 Don't use passive progress to track steps that are not sequential.
 
 Don't use passive progress indicators simultaneously for multiple items in lists.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/progress-indicator/img/guidelines/passive-progress-usage-4.8d9ea53e6f001df134f0b2ce57a7d210.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/progress-indicator/img/guidelines/passive-progress-usage-4.8d9ea53e.png)
 
 Don't display multiple passive progress indicators in lists.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/progress-indicator/img/guidelines/passive-progress-usage-5.c5db87bca11fd46bd683200a59fdd32d.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/progress-indicator/img/guidelines/passive-progress-usage-5.c5db87bc.png)
 
 Do roll up steps into a single status in lists. Use containers such as flyouts or popovers to display details from passive progress indicators.
 
@@ -63,7 +63,7 @@ Help inline button  (optional)
 
 Step details  (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/progress-indicator/img/guidelines/passive-progress-anatomy.e69492945f4ab64dfc4b2139d6b1fb7e.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/progress-indicator/img/guidelines/passive-progress-anatomy.e6949294.png)
 
 ## Options
 

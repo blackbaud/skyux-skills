@@ -13,25 +13,25 @@ The modal component and service launch modals in a consistent way in SKY UX appl
 
 Use modals when tasks are functionally modal and users must finish them before doing anything else.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/modal/modal-usage1.9ba1a37900e8f2f9a75e2b2746a93067.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/modal/modal-usage1.9ba1a379.png)
 
 Do use modals when users must complete tasks before they proceed.
 
 Use modals when displaying forms inline would lead to substantial content shifting or require users to scroll to complete the forms.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/modal/modal-usage2.6171a0b37d729777dcd5cead689e9e5a.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/modal/modal-usage2.6171a0b3.png)
 
 Do use modals when displaying long forms.
 
 Use modals when users need to add records from paginated lists or infinite scroll lists.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/modal/modal-usage3.f079dc2a9c1d39ef940d879347045ea9.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/modal/modal-usage3.f079dc2a.png)
 
 Do use modals to add records from paginated lists or infinite scroll lists.
 
 Use large modals when housing a large component that best utilizes the horizontal space, such as [sectioned forms](./sectioned-form.md) or [wizards](./tabs-wizard.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/modal/modal-usage4.9576bb3d7e81f4c8249f73ebf8cf3e5a.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/modal/modal-usage4.9576bb3d.png)
 
 Do use large modals with sectioned forms and wizards.
 
@@ -71,7 +71,7 @@ Buttons
 
 Help inline button (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/modal/modal-anatomy.107b344c3d4e886d7214bc2500c20b4c.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/modal/modal-anatomy.107b344c.png)
 
 ## Options
 
@@ -85,7 +85,7 @@ When you need to supplement a modal header with additional information but don't
 
 If users close a modal before saving their changes, use `SkyModalIsDirtyDirective` to warn them about losing the unsaved data with a [confirmation dialog](./confirm.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/formdesign/modal-close-confirm.f756192fa9878ff34249421a094c4aa3.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/formdesign/modal-close-confirm.f756192f.png)
 
 ## Content
 
@@ -95,13 +95,13 @@ Modal headings use sentence-case capitalization and the following format:
 
 <Verb> <direct object> for <indirect object>
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/modal/modal-with-object.2c333b6186ad2d87652c5b2643e86e0f.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/modal/modal-with-object.2c333b61.png)
 
 If there is not an indirect object or the user is the implied indirect object, exclude it:
 
 <Verb> <direct object>
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/modal/modal-without-object.faba5d6e76fe17417ec29341cfbdc897.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/modal/modal-without-object.faba5d6e.png)
 
 ### Buttons in the modal action bar
 

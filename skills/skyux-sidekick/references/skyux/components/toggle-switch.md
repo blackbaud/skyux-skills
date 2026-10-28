@@ -13,11 +13,11 @@ The toggle switch lets users turn a SKY UX-themed switch "on" or "off." The chan
 
 Use toggles when users can toggle between two states or options, and the changes take effect immediately.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/toggle/toggle-usage-1.61d2cb7bd1e92a9dc4c356b4a7320f07.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/toggle/toggle-usage-1.61d2cb7b.png)
 
 Do use toggles to alternate between two states when changes take effect immediately.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/toggle/toggle-usage-2.4c44440b2409c060d19959053bfe28be.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/toggle/toggle-usage-2.4c44440b.png)
 
 Do use toggles to set binary states on multiple items.
 
@@ -25,13 +25,13 @@ Do use toggles to set binary states on multiple items.
 
 Don't use toggles when the options have significant consequences that the users need to confirm before changes take effect. Use a workflow where users must confirm the changes instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/toggle/toggle-usage-3.4c1495e3a7be8e239eb463cb050b2208.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/toggle/toggle-usage-3.4c1495e3.png)
 
 Don't use toggles for states with significant consequences.
 
 Don't use toggles when the input is presented in a modal. Use [checkboxes](./checkbox.md) instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/toggle/toggle-usage-4.15fa24e5454816606631f55b6fa5dd4d.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/toggle/toggle-usage-4.15fa24e5.png)
 
 Don't use toggles inside modals where they won't take effect immediately.
 
@@ -49,7 +49,7 @@ Label (optional)
 
 Help inline button (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/toggle/toggle-anatomy.65702983ae748f080b38f002c75578e9.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/toggle/toggle-anatomy.65702983.png)
 
 ## Options
 

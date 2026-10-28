@@ -19,7 +19,7 @@ Use a primary button to trigger the most important or most frequently used actio
 
 For example, use a primary button for a modal's terminal **Save** action. For more information, see the primary button guidelines below.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/button/button-use-primary.367ef6c1a734bacb281c52a8c4c85b81.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/button/button-use-primary.367ef6c1.png)
 
 The primary button uses a bold, saturated color to convey importance and drive user workflows.
 
@@ -29,7 +29,7 @@ Use secondary buttons to trigger important or common actions that aren't the mos
 
 For example, use secondary buttons for common page-level actions on [record pages](../design/guidelines/page-layouts/record-page.md) and [action hub pages](../design/guidelines/page-layouts/action-hub.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/button/button-use-secondary.6ea488097db757876cccf6240f6849f4.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/button/button-use-secondary.6ea48809.png)
 
 Secondary buttons use a style that stands out but draws less attention than a primary button.
 
@@ -39,7 +39,7 @@ Use link buttons to trigger infrequently used actions and actions that exit task
 
 For example, use link buttons for a modal's regressive **Cancel** action.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/button/button-use-link.eaff5ffe9584ff68ae93067620724a79.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/button/button-use-link.eaff5ffe.png)
 
 Link buttons use a lighter visual weight than secondary buttons but occupy the same amount of space.
 
@@ -49,15 +49,15 @@ Use block buttons to add emphasis to primary, secondary, and link buttons in lin
 
 For example, use block buttons in authentication workflows and checkout experiences. Block buttons are suitable for mobile experiences where workflows are typically narrow with limited paths. Always extend block buttons to fill their container.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/button/block-button-do.5cd1109480783340424b691a88489dd5.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/button/block-button-do.5cd11094.png)
 
 Use block buttons when workflows have few options, limited content, and linear objectives.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/button/block-button-do-not.d7f7dfb2c944d3a52a5b77a8bf1ced41.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/button/block-button-do-not.d7f7dfb2.png)
 
 Don't use block buttons when an action is just one of many tasks that users can start or when an action isn't relevant to all the surrounding content.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/button/block-button-mobile.d7762beb8c31cd53662c8b47a5a677e5.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/button/block-button-mobile.d7762beb.png)
 
 Use block buttons for mobile experiences with straightforward, linear workflows.
 
@@ -67,7 +67,7 @@ Use logo block buttons to include business logos within block buttons, even if s
 
 For example, use logo block buttons for options to sign in through specific companies.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/button/block-button-logo.4b1b1d8dbcbcf35f25c79038335b6988.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/button/block-button-logo.4b1b1d8d.png)
 
 Use logo block buttons when actions are specific to a company.
 
@@ -75,7 +75,7 @@ Use logo block buttons when actions are specific to a company.
 
 Use toolbar buttons to trigger actions that apply to list views or the items in list views. To group multiple actions, use a [dropdown button](./dropdown.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/button/button-use-toolbar.4f09d3e93440afd07db324fa2f0b1f77.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/button/button-use-toolbar.4f09d3e9.png)
 
 Toolbar buttons reduce the width of secondary buttons to allow more options in the toolbar.
 
@@ -85,7 +85,7 @@ Use borderless icon buttons to trigger common actions, such as edit and delete, 
 
 For example, use borderless icon buttons to invoke inline forms from repeater rows or to edit the contents of a box.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/button/button-use-borderless.ea258ed092e95878abb2175990adf968.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/button/button-use-borderless.ea258ed0.png)
 
 Borderless icon buttons use a visual weight that is noticeable but not attention-drawing.
 
@@ -95,7 +95,7 @@ Use inline links to navigate between pages and to link to external applications 
 
 For example, use inline links to create hyperlinks between street addresses and a map application.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/button/button-use-inline-link.ba2c1c94a8147c73cc26d36242c3ad9b.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/button/button-use-inline-link.ba2c1c94.png)
 
 Inline links use no padding or spacing and appear inline with text instead of in their own rectangular space.
 
@@ -105,7 +105,7 @@ Use danger buttons for primary actions that delete existing data, such as record
 
 The main use cases for danger buttons are [confirmation dialogs](./confirm.md) and [inline delete confirmations](./inline-delete.md) that appear when users delete existing data.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/confirm/confirm-content-1.680e21b3d5d3c14ffc942e0f734cd449.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/confirm/confirm-content-1.680e21b3.png)
 
 Confirmation dialogs use danger buttons for actions that delete existing data.
 
@@ -113,7 +113,7 @@ Confirmation dialogs use danger buttons for actions that delete existing data.
 
 Use prominent header borderless icon buttons inside prominent container headers. Prominent containers, such as chat panels, WYSIWYG editors, and help files, display tools or systems alongside the main page content but don't extend the page content.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/button/prominent-header-icon-button.31f85257d539c47a24f33b938a6ae6d9.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/button/prominent-header-icon-button.31f85257.png)
 
 Use prominent header borderless icon buttons for actions inside prominent container headers.
 
@@ -121,11 +121,11 @@ Use prominent header borderless icon buttons for actions inside prominent contai
 
 Don't use multiple buttons in a row for a similar, but distinct actions. To group multiple actions, use a [dropdown button](./dropdown.md) instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/button/button-dont-use-multiple.b11fb7bce11ae1f57b07bacb47f21215.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/button/button-dont-use-multiple.b11fb7bc.png)
 
 Don't place multiple similar actions in a row.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/button/button-use-multiple.de846b0bc55f2a434c8fd496eee996b2.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/button/button-use-multiple.de846b0b.png)
 
 Do group multiple similar actions in a dropdown button.
 
@@ -137,7 +137,7 @@ All SKY UX page layouts follow consistent guidelines for the placement and styli
 
 Use a primary button to trigger the most important or most frequently used action on a page or modal. If the action applies to an entire page, place the button in the page header. If the action applies to child content, place the button in the container for that content.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/primary-usage-page-level.d41f8d7366756aae876a6f206592774a.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/primary-usage-page-level.d41f8d73.png)
 
 Do use primary buttons in the containers that they directly impact.
 
@@ -145,19 +145,19 @@ Do use primary buttons in the containers that they directly impact.
 
 Don't use multiple primary actions on a page and modal. Only include one primary button to ensure that it draws user attention.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/primary-usage-dont-multiple-actions.f47781d38e22b21d45a75093975aa95e.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/primary-usage-dont-multiple-actions.f47781d3.png)
 
 Don't use multiple primary buttons.
 
 Don't use multiple primary buttons when users have multiple options to complete a primary action. Instead, use [action buttons](./action-button.md) to present the initial decision.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/primary-usage-dont-multiple-ways.d337e49da27f69f10ad9f66f2283a0ab.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/primary-usage-dont-multiple-ways.d337e49d.png)
 
 Don't use multiple primary buttons to present options.
 
 Don't use primary buttons when pages and modals don't have a most important or most frequently used action.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/primary-usage-no-primary.ae6fef2ce7f2041992af75fa7d0dba97.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/primary-usage-no-primary.ae6fef2c.png)
 
 Some pages don't have a primary button.
 
@@ -171,7 +171,7 @@ Label
 
 Icon (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/button/button-anatomy.b855af210b389ea6c8807b90a49bd817.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/button/button-anatomy.b855af21.png)
 
 ## Options
 
@@ -179,7 +179,7 @@ Icon (optional)
 
 Use meaningful icons alongside button labels to help users understand the purpose of buttons at a glance, but don't use icons solely for visual interest or decoration. For more details on when to use icons, see the [icon guidelines](./icon.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/button/button-options-icons.fdbaed406ead2d7504e151d416d56c60.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/button/button-options-icons.fdbaed40.png)
 
 Do use icons when they supplement button labels.
 
@@ -212,13 +212,13 @@ For buttons with only one possible direct object, such as the buttons in record 
 
 Labels for buttons that open modals to create something use **New** instead of a verb.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/button/buttons-usage-1-modern.1a3709b6f28b9886b4f2a63577e93aa5.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/button/buttons-usage-1-modern.1a3709b6.png)
 
 For buttons with multiple possible direct objects, such as **Edit goals** or **Email contact** buttons in page headers, use the following format for labels:
 
 **<Verb> <direct object>**
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/button/buttons-usage-2-modern.ebbf46797cdaff41eff0a33f1fb8ca4f.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/button/buttons-usage-2-modern.ebbf4679.png)
 
 #### Additional button label guidelines
 

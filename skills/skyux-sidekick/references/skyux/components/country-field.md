@@ -13,7 +13,7 @@ The country field lets users enter search criteria and then select a country fro
 
 Use country fields when users need to select countries.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/country-field/country-field-usage-form.71fd04415ddb7476b49042bbe7097722.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/country-field/country-field-usage-form.71fd0441.png)
 
 Use country fields when users need to select countries.
 
@@ -43,7 +43,7 @@ Selected country flag (optional)
 
 Hint text (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/country-field/country-field-anatomy.69739cfba2944db9c0508d5159482eab.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/country-field/country-field-anatomy.69739cfb.png)
 
 ### Search results
 
@@ -55,7 +55,7 @@ Search results
 
 Focused country
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/country-field/country-field-anatomy-results.bbc19513d7716fac7bf19211399e22b2.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/country-field/country-field-anatomy-results.bbc19513.png)
 
 ## Options
 
@@ -84,7 +84,7 @@ Don't use `stacked` when the country field:
 - Is the last input on a form
 - Is followed by one or more conditional fields (use `sky-theme-margin-bottom-s` instead for closely related fields)
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/country-field/country-field-options-stacked.875de1fb6bf9c6735cf36fa3bb481d88.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/country-field/country-field-options-stacked.875de1fb.png)
 
 ## Related information
 

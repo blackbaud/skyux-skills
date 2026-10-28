@@ -13,7 +13,7 @@ The email validation module validates the format of email addresses in input fie
 
 Use email validation when users must enter valid email addresses.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/email-validation/email-validation-usage1-modern.e5b1cc69c5833ca71b279d1bf1a714ea.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/email-validation/email-validation-usage1-modern.e5b1cc69.png)
 
 Do validate email addresses that users will store as data.
 
@@ -21,7 +21,7 @@ Do validate email addresses that users will store as data.
 
 Don't use email validation when users can enter multiple types of data in an input field.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/email-validation/email-validation-usage-2-modern.d1d87487aa583cdde25e42459f83ffb7.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/email-validation/email-validation-usage-2-modern.d1d87487.png)
 
 Don't validate email addresses in search fields or filters.
 
@@ -35,7 +35,7 @@ Input field
 
 [Status indicator](./status-indicator.md) (danger)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/email-validation/email-validation-anatomy-modern.e1a51c14e0ab5d637b702f81d37e3e7f.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/email-validation/email-validation-anatomy-modern.e1a51c14.png)
 
 ## Behavior and states
 

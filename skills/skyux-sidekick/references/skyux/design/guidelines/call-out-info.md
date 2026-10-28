@@ -33,7 +33,7 @@ Use [status indicators](../../components/status-indicator.md) inline to indicate
 
 Status presentation decision tree
 
-![](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/calloutinfo/status-decision-tree.73c3e3162f5669436bb38aa0eb4f28b2.png)
+![](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/calloutinfo/status-decision-tree.73c3e316.png)
 
 ## Process updates
 

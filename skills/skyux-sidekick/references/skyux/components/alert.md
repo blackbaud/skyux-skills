@@ -13,17 +13,17 @@ Alerts highlight critical information that users absolutely must see when they v
 
 Use alerts when information is important enough and exceptional enough that users should see it before the rest of the page.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/alert/alert-usage-1.d4dde6712ab50d1da8adb2288fcf23b3.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/alert/alert-usage-1.d4dde671.png)
 
 Do use alerts when users need to view information before the rest of the page.
 
 Use alerts when the state of a record or another capability within a user workflow requires a call to action or greatly benefits from one.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/alert/alert-usage-in-context.8ef80e64e8d5f228598bcd184fc111b9.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/alert/alert-usage-in-context.8ef80e64.png)
 
 Do use alerts for information that is important in the current context.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/alert/alert-usage-not-in-context.61ff313ce03c892a14e825b715edf2a6.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/alert/alert-usage-not-in-context.61ff313c.png)
 
 Don't use alerts for information or calls to action outside the current context.
 
@@ -31,21 +31,21 @@ Don't use alerts for information or calls to action outside the current context.
 
 Don't use alerts to convey the normal lifecycle statuses of records or pages. Use [labels](./label.md) or [status indicators](./status-indicator.md) instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/alert/alert-usage-3.bdc42b28c9af107cef15f9bf0691d805.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/alert/alert-usage-3.bdc42b28.png)
 
 Don't use alerts to highlight statuses on records or pages.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/alert/alert-usage-4.e0816af204ac2d256ca60bef587c0497.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/alert/alert-usage-4.e0816af2.png)
 
 Do use labels or status indicators to convey record statuses.
 
 Don't use alerts to display messages about the success or failure of user actions. Use [toasts](./toast.md) instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/alert/alert-usage-5.0fe0da1cca4028ddb4f62907ad4749b4.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/alert/alert-usage-5.0fe0da1c.png)
 
 Don't use alerts to highlight the outcomes of user actions.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/alert/alert-usage-6.6a56925c189da7b4e956d3ce75185562.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/alert/alert-usage-6.6a56925c.png)
 
 Do use toasts to call out the outcomes of user actions.
 
@@ -63,7 +63,7 @@ Text
 
 Close button  (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/alert/alert-anatomy.158c63abee874dd554878d5b40003f92.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/alert/alert-anatomy.158c63ab.png)
 
 ## Options
 
@@ -71,19 +71,19 @@ Close button  (optional)
 
 Use the `danger` alert for error messages or to notify users when a record or another capability within a workflow is in an unusable state.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/alert/alert-type-1.edbfaba1ba3baa2034c93d9f611c2202.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/alert/alert-type-1.edbfaba1.png)
 
 Use the `warning` alert for messages that users should know about and perhaps act on but that do not constitute error states or indicate that something is wrong.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/alert/alert-type-4.b0e9ef8f7fec6c6915c367543e31f8ba.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/alert/alert-type-4.b0e9ef8f.png)
 
 Use the `success` alert for messages that convey a positive or successful state.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/alert/alert-type-3.4e6037556c6b245753fbe9d92c3e5817.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/alert/alert-type-3.4e603755.png)
 
 Use the `info` alert for messages that provide helpful information or context but do not require user action.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/alert/alert-usage-1.d4dde6712ab50d1da8adb2288fcf23b3.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/alert/alert-usage-1.d4dde671.png)
 
 ### Description type
 
@@ -225,27 +225,27 @@ If users should be able to dismiss alerts from the page after reading, you can i
 
 Do not make alerts dismissible when it is important for users to see the alerts every time they access a page or when underlying data triggers the alerts.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/alert/alert-usage-1.d4dde6712ab50d1da8adb2288fcf23b3.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/alert/alert-usage-1.d4dde671.png)
 
 ## Content
 
 The text inside alerts can contain hyperlinks. For accessibility reasons, these links are not styled with blue text like other links.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/alert/alert-usage-2.1b4d2f22af8f1433b43e1a566c8a8fa5.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/alert/alert-usage-2.1b4d2f22.png)
 
 ## Layout
 
 Always place alerts at the top of the page above the page header.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/alert/alert-layout-1.07cb7c4c27072c6078a9e9cf43dee221.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/alert/alert-layout-1.07cb7c4c.png)
 
 Avoid stacking multiple alerts because they quickly lose their impact and clutter the page. Try alternate methods to display the information, or consolidate messages into one alert.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/alert/alert-layout-2.38bfa0f86fefb7397689d3630696ae17.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/alert/alert-layout-2.38bfa0f8.png)
 
 Don't accumulate multiple alerts at the top of a page.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/alert/alert-layout-3.89bcfce7c2f3c89c3d8cd41bef1bfac7.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/alert/alert-layout-3.89bcfce7.png)
 
 Do use a single alert to consolidate multiple messages when possible and use alternate display methods such as labels.
 

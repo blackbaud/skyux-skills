@@ -15,7 +15,7 @@ Blackbaud's spot illustration library is only available for internal Blackbaud c
 
 Use spot illustrations to focus user attention and shape visual hierarchy. Refer to the [spot illustration design guidelines](../design/guidelines/spot-illustrations.md) page to learn about their principles and role.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spot-illustrations/spot-illustration-sizing-do.dc83872c550eeee72c8e5022d59f535d.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spot-illustrations/spot-illustration-sizing-do.dc83872c.png)
 
 Do use spot illustrations for illustrative purposes.
 
@@ -23,7 +23,7 @@ Do use spot illustrations for illustrative purposes.
 
 Don't use spot illustrations as a visual shorthand to supplement action labels. Use [icons](./icon.md) instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spot-illustrations/spot-illustration-dont-use.c6aeb65e692fd36ef0fe5a28b74a3d9d.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spot-illustrations/spot-illustration-dont-use.c6aeb65e.png)
 
 Don't use spot illustrations in place of icons.
 
@@ -51,7 +51,7 @@ In large containers with lots of text, such as large [modals](./modal.md), use t
 
 In general, don't use the extra large size. But on pages with no other content, you can pair extra large spot illustrations with text to communicate important messages.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spot-illustrations/spot-illustration-sizing.be33d7ff2fbe2cea34535c95f2d63d74.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spot-illustrations/spot-illustration-sizing.be33d7ff.png)
 
 Spot illustrations have four size variations.
 
@@ -67,11 +67,11 @@ Spot illustrations are duotone and use Blackbaud's color palette. To ensure clar
 
 To maintain visual balance, align spot illustrations vertically or horizontally with other elements, such as text, in the components and patterns where they appear.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spot-illustrations/spot-illustration-alignment-horizontal.e1f8e5999292509bd40b64ee003d4be5.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spot-illustrations/spot-illustration-alignment-horizontal.e1f8e599.png)
 
 You can align spot illustrations horizontally to the left of other elements.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spot-illustrations/spot-illustration-alignment-vertical.e0e1542e240f73017ed1cfe79e85d217.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spot-illustrations/spot-illustration-alignment-vertical.e0e1542e.png)
 
 Illustrations can be centered vertically on top of accompanying text.
 
@@ -83,7 +83,7 @@ To maintain visual balance, use SKY UX spacing values to separate elements.
 
 Use small spot illustrations in this horizontal layout to draw user attention to important actions.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spot-illustrations/spot-illustration-spacing-left-aligned.22879bd63254f93821ec85b4c3df1354.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spot-illustrations/spot-illustration-spacing-left-aligned.22879bd6.png)
 
 Spacing for left-aligned illustrations and text.
 
@@ -91,7 +91,7 @@ Spacing for left-aligned illustrations and text.
 
 Use large spot illustrations within boxes to anchor content on page-level compositions.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spot-illustrations/spot-illustration-size-spacing-scaling.8462370322e06fb12012389e1c68093a.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spot-illustrations/spot-illustration-size-spacing-scaling.84623703.png)
 
 Spacing values should scale with illustration size.
 
@@ -99,7 +99,7 @@ Spacing values should scale with illustration size.
 
 Use medium spot illustrations in this vertical layout when split view lists include no remaining items.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spot-illustrations/spot-illustration-spacing-center-aligned.50099112cc57b6e8ccd7490c19368d87.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spot-illustrations/spot-illustration-spacing-center-aligned.50099112.png)
 
 Spacing for center-aligned illustrations and text.
 

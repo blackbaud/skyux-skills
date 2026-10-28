@@ -56,7 +56,7 @@ When the main, or only, task on a page is to narrow a collection of items or man
 
 Dedicated full-page lists can appear on [list pages](./page-layouts/list-page.md) or in tabs on [record pages](./page-layouts/record-page.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filteringrecords/full-page-context.9eb411599b85fa6f4db8d7bd047c56ca.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filteringrecords/full-page-context.9eb41159.png)
 
 On list pages, use the filter bar to apply search criteria to full-page lists\`.
 
@@ -70,11 +70,11 @@ When users only need one or two simple filters and containers have room to displ
 
 Persistent inline filters appear in a toolbar above lists and are applied immediately after users make selections.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filteringrecords/inline-context-select.56727e137a110fb2cb3f1d3edc39b354.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filteringrecords/inline-context-select.56727e13.png)
 
 Users can select filter criteria in HTML select fields.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filteringrecords/inline-context-checkbox.c195abade33b7027835df0e22a4794c1.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filteringrecords/inline-context-checkbox.c195abad.png)
 
 Users can toggle filter criteria with checkboxes.
 
@@ -84,7 +84,7 @@ When users need up to four simple filters for lists within containers, use [expa
 
 If users need more filters or more complex filtering, use a dedicated list view with a [filter bar](./filtering-lists.md#filter-bar-anatomy) instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filteringrecords/expandable-diagram.14572586e63325f731cc65d0bcf65f39.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filteringrecords/expandable-diagram.14572586.png)
 
 Expandable filters let users expand and collapse the filters. The filter button is highlighted when filters are set.
 
@@ -98,7 +98,7 @@ When users regularly need to access or work with collections of items, consider 
 - One list in a small group of lists needs priority or will be used most frequently.
 - A small number of lists have different tasks for users to complete.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filteringrecords/tab-filters-do.a85b9657b36b424fb17d4181a0055b86.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filteringrecords/tab-filters-do.a85b9657.png)
 
 Do use tabs to support easy access to a few pre-filtered lists.
 
@@ -108,7 +108,7 @@ Do use tabs to support easy access to a few pre-filtered lists.
 - Users don't need to access lists regularly.
 - Pre-filtered lists already exist in the system. Use call-to-action patterns, such as notifications or needs attention items in [action hubs](./page-layouts/action-hub.md), instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filteringrecords/tab-filters-dont.441ceda3f3c48f19dcf846f16d25cf0e.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filteringrecords/tab-filters-dont.441ceda3.png)
 
 Don't use tabs for a large set of pre-filtered lists.
 
@@ -117,7 +117,7 @@ Don't use tabs for a large set of pre-filtered lists.
 - Users need to adjust preset filter values or add additional filters to refine lists.
 - Users access lists through calls to action and need to further narrow the lists before taking action.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filteringrecords/pre-filtered-bar.f07731a9eaf12f820440ca81321a7e81.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/filteringrecords/pre-filtered-bar.f07731a9.png)
 
 Do use pre-filtered lists with filter bars to make user workflows more efficient. Users can narrow lists further as necessary.
 

@@ -49,7 +49,7 @@ Details (optional)
 
 Actions (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/page-anatomy-heading.0f513db7d271182cea483e6ecae854ca.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/page-anatomy-heading.0f513db7.png)
 
 ### Hub and spoke heading with page links
 
@@ -89,7 +89,7 @@ Recently accessed link list (optional)
 
 Page link list (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/page-anatomy-hub.f9e8a05879794ae622f087a03d19b4cd.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/page-anatomy-hub.f9e8a058.png)
 
 ## Options
 
@@ -99,31 +99,31 @@ Page link list (optional)
 
 For [record pages](../design/guidelines/page-layouts/record-page.md), use the `blocks` layout to organize content into modular blocks. For a wide range of possible layouts, place a [fluid grid](./fluid-grid.md) or another grid layout via flexbox or CSS grid in the content area.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/page-blocks-layout.d3130deb0c8cba28a2b51c45033635bc.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/page-blocks-layout.d3130deb.png)
 
 #### List
 
 For [list pages](../design/guidelines/page-layouts/list-page.md), use the `list` layout to display lists of data.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/page-list-layout.9750148bfa438357acd2e4ba3e25c923.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/page-list-layout.9750148b.png)
 
 #### Tabs
 
 For [record pages](../design/guidelines/page-layouts/record-page.md) or [list pages](../design/guidelines/page-layouts/list-page.md), use the `tabs` layout to organize large amounts of content into tab panels. Each tab panel can have a different layout. For more information, see [tabs](./tabs.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/page-tabs-layout.a6622d2e4f7c5c73b56ea77f26d108ad.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/page-tabs-layout.a6622d2e.png)
 
 #### Fit
 
 For [split view pages](../design/guidelines/page-layouts/split-view-page.md), use the `fit` layout to fill the content area and anchor content to the edges.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/page-fit-layout.cfb59c6c333f5a9d2d621265cecf6b33.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/page-fit-layout.cfb59c6c.png)
 
 #### None
 
 For custom content that doesn't work well with predefined layouts or spacing, use the `none` layout.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/page-none-layout.4a100252343c541041581837fd7b9eb4.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/page-none-layout.4a100252.png)
 
 ### Heading
 
@@ -133,7 +133,7 @@ Page headings uniquely identify page content for users. You can use a standard h
 
 Use headings to identify and describe the content of pages. When users arrive on a page, the heading confirms they are where they expect. Keep in mind that heading text may also identify the page for users in other contexts, such as links, buttons, and menus.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/page-heading.62580a83a844948a6b1e8e75d4f4b406.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/page-heading.62580a83.png)
 
 Page headings descibe the content on pages.
 
@@ -141,7 +141,7 @@ Page headings descibe the content on pages.
 
 Use hub and spoke headings when users can only navigate to child pages from a central hub page. The headings on child pages link back to the hub.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/hub-spoke.f706d1d121110c699ad87ab958a8d51c.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/hub-spoke.f706d1d1.png)
 
 Hub and spoke navigation connects child pages to a single parent hub page.
 
@@ -153,19 +153,19 @@ Spoke
 
 Spokes are child pages that users only navigate to from a hub. Don't use hub and spoke heading when users can navigate to a child page from multiple places.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/hub-spoke-diagram.4929796f70eeb8a3415c59e2ee377a42.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/hub-spoke-diagram.4929796f.png)
 
 The hub and spoke pattern connects a parent hub page to child spoke pages. Users navigate to spokes from the hub.
 
 Hub and spoke headings only go one level deep to connect hub pages to their child spoke pages. Don't use the headings to track browsing history.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/hub-breadcrumb-dont.458dc4831b8a02f26ad2b6fe293bede6.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/hub-breadcrumb-dont.458dc483.png)
 
 Don't go more than one level deep in hub and spoke headings.
 
 Don't use hub and spoke headings to navigate between a parent record page and its child pages. Use [tabs](./tabs.md) to group large amounts of content within a page.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/hub-record-dont.ce87f18a349fc58e9cf133cb03d4ff82.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/hub-record-dont.ce87f18a.png)
 
 Don't use the hub and spoke pattern to connect a record page to its child pages.
 
@@ -197,7 +197,7 @@ For groups of page links to add for action hubs, see the action hub's [Content g
 
 Use the recently accessed link list to display up to five items a user accessed most recently in reverse chronological order.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/page-links-home.072443de8a2e9e96b37fdd3706ada2d0.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/page-links-home.072443de.png)
 
 Page links provide navigation to other pages or tasks from a page.
 
@@ -205,7 +205,7 @@ Page links provide navigation to other pages or tasks from a page.
 
 Page links display to the right of the page content when space is available. In a smaller viewport, page links display under the page content. See responsiveness [behaviors](./page.md#section-behaviors-and-states) below.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/page-page-links-layout.b22d6d87b0ba15518d15682fc93e2167.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/page-page-links-layout.b22d6d87.png)
 
 Page link lists are positioned to the right of the page content.
 
@@ -215,13 +215,13 @@ Page link lists are positioned to the right of the page content.
 
 Page layouts reflow content at the `xs` breakpoint of 767px.
 
-![Blocks layout in small viewport](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/xs-page-layout-blocks.bc588a127d94b27ec442496fcf02f456.png)
+![Blocks layout in small viewport](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/xs-page-layout-blocks.bc588a12.png)
 
-![List layout in small viewport](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/xs-page-layout-list.d11e67ec7ac52ea211ee882b5acd0c28.png)
+![List layout in small viewport](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/xs-page-layout-list.d11e67ec.png)
 
-![Tabs layout in small viewport](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/xs-page-layout-tabs.a05d5c647e4c54d3e35ab4aead6e840d.png)
+![Tabs layout in small viewport](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/xs-page-layout-tabs.a05d5c64.png)
 
-![Fit layout in small viewport](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/xs-page-layout-fit.ed1a9f74d40c7a3d68321a70f62fef52.png)
+![Fit layout in small viewport](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/page/xs-page-layout-fit.ed1a9f74.png)
 
 ## Related information
 

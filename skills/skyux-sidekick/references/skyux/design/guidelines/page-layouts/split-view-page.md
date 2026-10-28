@@ -13,7 +13,7 @@ Split view pages allow users to work through a list of items.
 
 Use split view pages when users need to work through a list of items, taking action on each of the items.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/split-view-page/split-view-page-use-when.f3d946fcd814077dcf706260aef169cc.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/split-view-page/split-view-page-use-when.f3d946fc.png)
 
 Do use split view pages when users need to work through a list of items.
 
@@ -39,7 +39,7 @@ Page heading
 
 Bulk action  (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/split-view-page/split-view-page-anatomy.7e1a834e003490658eb6a65fedfa3dcb.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/split-view-page/split-view-page-anatomy.7e1a834e.png)
 
 ## Options
 
@@ -47,7 +47,7 @@ Bulk action  (optional)
 
 If users may need to take action on all items in the list at once, you can use a bulk action. Before including a bulk action, consider whether the workflow could be redesigned to focus users only on the subset of items that need individual attention.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/split-view-page/split-view-page-option-global.4f49f662f85f6f8d66abdefe3137e25d.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/split-view-page/split-view-page-option-global.4f49f662.png)
 
 You can use a global action if users may need to take action on all items in the list at once.
 
@@ -65,7 +65,7 @@ When users take action on an item, remove that item from the list and open the n
 
 If users need ancillary information about an item, use a hyperlink to open a [flyout](../../../components/flyout.md). Only display information that is specific to the task. Don't display an entire record in the flyout. For the hyperlink, use existing text in the workspace, such as a contact name, not a separate button.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/split-view-page/split-view-page-behavior-flyout.f1d453ab35a97dd55176c4314c3ed80f.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/pagelayout/split-view-page/split-view-page-behavior-flyout.f1d453ab.png)
 
 You can use flyouts to present ancillary information about an item.
 

@@ -13,23 +13,23 @@ Description lists display scannable data that pair terms with descriptions.
 
 Use description lists to display sets of simple data that are easy to scan and where the relationships between terms and descriptions are easy to understand.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-usage-1.cd9d25d4a6ff67708b3ad75201a39925.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-usage-1.cd9d25d4.png)
 
 Do use description lists to let users scan term-description pairs.
 
 Use description lists with unordered lists to associate terms with multiple descriptions. Use line breaks or comma-separated values depending on the layout and context.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-usage-2.afa3ae7a2e58335c03ea20c3aa99a351.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-usage-2.afa3ae7a.png)
 
 Do use unordered lists with line breaks where easy scanning is important.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-usage-2-5.ae4dc162d49ae7d3ec96c8a109e88f20.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-usage-2-5.ae4dc162.png)
 
 Do use unordered lists with commas where space is limited and scanning is less important.
 
 Use description lists in `longDescription` mode to display glossaries or other data where the descriptions are complete sentences or longer.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-usage-3.0cc3ac4cda974ca8558b19dad3af71bc.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-usage-3.0cc3ac4c.png)
 
 Do use long-description lists when descriptions are complete sentences.
 
@@ -37,21 +37,21 @@ Do use long-description lists when descriptions are complete sentences.
 
 Don't use description lists to highlight important data that the information hierarchy should emphasize. Use [key info](./key-info.md) or other methods [to call out information](../design/guidelines/call-out-info.md) instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-usage-4.44fa2b31fc7dbf8e6335b187afab4015.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-usage-4.44fa2b31.png)
 
 Don't use description lists to make important information stand out.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-usage-5.3dafa166f4532af8d6f95fd8d336d0e1.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-usage-5.3dafa166.png)
 
 Do use key info to highlight important information.
 
 Don't use description lists when users can understand data based on its context and don't need a label.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-usage-6.5408d327ec54dc2d7609ba534aac4ab5.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-usage-6.5408d327.png)
 
 Don't use description lists when labels are unnecessary because of context.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-usage-7.badaa4135e0081acd99f91e2ed97738c.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-usage-7.badaa413.png)
 
 Do use plain text values when labels are implied or obvious from context.
 
@@ -69,7 +69,7 @@ Description
 
 Help inline button (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-anatomy.47b57e315dba5ce15e155968e0ed3796.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-anatomy.47b57e31.png)
 
 ## Options
 
@@ -83,27 +83,27 @@ When you need to supplement a description list term with additional information 
 
 Horizontal description lists respond to the width of their containers. When containers hit the xs breakpoint, lists collapse into 2 columns within an evenly spaced grid. If containers narrow to a point where 2 columns no longer fit, definition lists further collapse into 1 column.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-behavior-1.2aa51f84b6d5e9318498d19645f743aa.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-behavior-1.2aa51f84.png)
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-behavior-2.483a627c8990dacf537722b94b48760a.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-behavior-2.483a627c.png)
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-behavior-3.b4f1d59c18f61239a6240b30de35ce89.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-behavior-3.b4f1d59c.png)
 
 ### Responsiveness (long-description lists)
 
 In long-description lists, the components respond to the width of their containers by wrapping text or stacking term-description pairs when appropriate.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-behavior-4.7c3bd00521df4b6608d6f62a5633dc1c.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-behavior-4.7c3bd005.png)
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-behavior-5.2fe43d9b5b07f13a1f73e3e7ad639ec8.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-behavior-5.2fe43d9b.png)
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-behavior-6.577b737ee2014bbc4271def28f89588a.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-behavior-6.577b737e.png)
 
 ## Content
 
 Don't use colons or other punctuation after description list terms.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-content-1.173ff0be49590c56d9073ac7bc281bfa.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-content-1.173ff0be.png)
 
 Don't use unnecessary punctuation after terms.
 
@@ -113,11 +113,11 @@ Don't use unnecessary punctuation after terms.
 
 Use `horizontal` mode to display up to 6 term-description pairs in description lists that stand alone.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-layout-1.861e6daa4995571dbbefe1cae667c5c9.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-layout-1.861e6daa.png)
 
 Do use horizontal lists to arrange term-description pairs horizontally with even spacing between them.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-layout-2.4fd29add38eeb19a950037cc0a960266.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-layout-2.4fd29add.png)
 
 Don't use fluid grids to arrange term-description pairs horizontally. This can cause uneven spacing and excess space between items.
 
@@ -127,11 +127,11 @@ Use `vertical` mode to make scanning easier when containers include multiple des
 
 Use descriptive headings to make scanning easier.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-layout-3.cd2bee08af2fa3d146c2701cb62324b7.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-layout-3.cd2bee08.png)
 
 Use vertical lists and a fluid grid for multiple description lists in a container.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-layout-4.5d69dc437e43b6188954bf3fa373d037.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/layout/img/guidelines/description-list/description-list-layout-4.5d69dc43.png)
 
 Don't use horizontal lists for multiple description lists in a container.
 

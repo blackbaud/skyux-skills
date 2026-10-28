@@ -45,7 +45,7 @@ Pages
 
 Next button
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/paging/anatomy-paging.f9c4f00494abd78c1da30d4ceda1cdc6.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/paging/anatomy-paging.f9c4f004.png)
 
 ## Options
 
@@ -53,7 +53,7 @@ Next button
 
 If users need to navigate frequently between pages, you can increase the number of pages to display. Keep in mind that the smallest mobile devices can only fit up to seven pages on one line.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/paging/option-num-pages.e53fa5d3ba28ef91eabe38beb4bf2c46.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/paging/option-num-pages.e53fa5d3.png)
 
 The number of pages to display can be adjusted.
 
@@ -79,7 +79,7 @@ When users navigate to a new set of items with the pagination controls, the focu
 
 When users navigate to a new set of items, the list is disabled and a [wait indicator](./wait.md) appears in the paging content area until the new items finish loading.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/paging/behavior-waiting.5648a36de13aa33137dc79bed85c23cb.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/paging/behavior-waiting.5648a36d.png)
 
 A wait indicator appears while new items load.
 

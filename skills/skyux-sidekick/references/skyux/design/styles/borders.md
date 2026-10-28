@@ -9,19 +9,19 @@ Reference: https://developer.blackbaud.com/skyux/design/styles/borders
 
 The default container border wraps content containers to separate them from their surroundings. It is built into SKY UX container components, such as [boxes](../../components/box.md), [modals](../../components/modal.md), and [tiles](../../components/tile.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/border/container-border.69856fc1df51b04696e1e56b3bba23c9.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/border/container-border.69856fc1.png)
 
 Use the default container border to separate content containers, such as boxes, from their surroundings.
 
 The prominent header border emphasizes prominent containers. Prominent containers, such as chat panels, WYSIWYG editors, and help files, display tools or systems alongside the main page content but don't extend the page content. This style is specifically designed to visually emphasize headers in prominent containers. Don't use it for any other use cases.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/border/prominent-container-header-border-color.9f05790ca8b05900b7dc689a7cc77d33.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/border/prominent-container-header-border-color.9f05790c.png)
 
 Do use the prominent header border on headers for prominent containers, such as containers with widgets for WYSIWYG editors.
 
 Use the overlay container border for elevated containers with uncertain or variable background colors. Pair this border style with [overlay elevations](./elevation.md). The combined styles define container boundaries. In light mode, they hide the border because a shadow is a sufficient boundary. In dark mode, the styles add the border to reinforce the boundary.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/border/overlay-border-style.ecadaea7332d2cee8936903fd3ab9942.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/border/overlay-border-style.ecadaea7.png)
 
 Do use the overlay border style with overlay elevations to define boundaries for elevated containers. In light mode, the styles hide the border. In dark mode, the border reinforces the shadow.
 
@@ -31,7 +31,7 @@ Use the default divider border to separate disparate sections or regions of a pa
 
 Use the soft divider border to separate related sections or rows in a container. Use this border style to define instances of content that repeat a pattern, such as items in a list. It is built into SKY UX components, such as [data grid](../../components/data-grid.md), [repeater](../../components/repeater.md), and [selection modal](../../components/selection-modal.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/border/divider.618667955ef64b63cb4aeba4bb00211c.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/border/divider.61866795.png)
 
 Do use the default divider border to separate sections of a page and the soft divider border to separate rows in a list.
 
@@ -39,7 +39,7 @@ Do use the default divider border to separate sections of a page and the soft di
 
 Border styles that communicate statuses are built into SKY UX components, such as [alerts](../../components/alert.md) and [toasts](../../components/toast.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/border/status-border.761d0cebb9b568296b758b05658cb38f.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/border/status-border.761d0ceb.png)
 
 Use alerts to communicate statuses.
 
@@ -51,13 +51,13 @@ Most SKY UX borders use a single pixel width. In rare cases, such as when using 
 
 Use the emphasized border width to add visual emphasis to elements.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/border/border-width-emphasized.db1df2c8664d7d6d48406d291df0e8aa.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/border/border-width-emphasized.db1df2c8.png)
 
 Use the emphasized border width to add emphasis to an element.
 
 Use the accent border width to increase the visual emphasis on elements that have a meaningful border color. Only apply the accent border width to one side of the elements.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/border/border-width-accent.5e2c0b44e057a48ee22c80cd48827fb4.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/border/border-width-accent.5e2c0b44.png)
 
 Use the accent border width to draw attention to an element, such as a status, that has a meaningful border color.
 
@@ -71,25 +71,25 @@ SKY UX uses different border radii for different interactive elements and contai
 
 SKY UX uses the extra small border radius for very small elements, such as [tokens](../../components/tokens.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/border/border-radii-xs.f5ecffb9edc56d27c0bd85384d01e4e7.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/border/border-radii-xs.f5ecffb9.png)
 
 Very small elements, such as tokens, use the extra small border radius.
 
 SKY UX uses the small border radius for most interactive elements, such as [buttons](../../components/button.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/border/border-radii-s.0cbf9bb05c60d726079e96bd288e48e8.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/border/border-radii-s.0cbf9bb0.png)
 
 Buttons and most other interactive elements in SKY UX use the small border radius.
 
 SKY UX uses the medium border radius for overlay containers, such as [dropdown menus](../../components/dropdown.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/border/border-radii-m.dd269db64bb9a02bd9a408fc75e4aebd.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/border/border-radii-m.dd269db6.png)
 
 Overlay containers, such as dropdown and input menus, use the medium border radius.
 
 SKY UX uses the pill border radius for rounded rectangles, such as [labels](../../components/label.md), and it uses the round border radius for circular elements, such as [avatars](../../components/avatar.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/border/border-radii-pill.963768c55807586c4acde0239714224b.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/border/border-radii-pill.963768c5.png)
 
 Rounded rectangles, such as labels, use the pill border radius, while circular elements, such as avatars, use the round border radius.
 

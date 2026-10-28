@@ -13,13 +13,13 @@ The key info component highlights important summary information.
 
 Use key info to highlight important summary information.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/key-info/key-info-usage-1.4ca5133df981810932455df8f2d46c7f.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/key-info/key-info-usage-1.4ca5133d.png)
 
 Do use key info to highlight important summary information.
 
 Use key info to show the total number of items in a list. Use the horizontal layout and place the key info at the top of the list.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/key-info/key-info-usage-2.c340f6c9461a57c27d0d7729d2398ac8.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/key-info/key-info-usage-2.c340f6c9.png)
 
 Do use key info to show the total number of items in a list.
 
@@ -27,21 +27,21 @@ Do use key info to show the total number of items in a list.
 
 Don't use key info when different data visualizations are more appropriate for large amounts of data. For example, don't group multiple key info components to track how data changes over time. Use alternative visualizations such as [data grids](./data-grid.md), bar charts, or line charts instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/key-info/key-info-usage-3.8a979a260f7c8fb1de19122782833725.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/key-info/key-info-usage-3.8a979a26.png)
 
 Don't use key info when other data visualizations are more appropriate.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/key-info/key-info-usage-4.12391db576c9b28d7840a8faf4f563b7.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/key-info/key-info-usage-4.12391db5.png)
 
 Do use different visualizations for large amounts of data.
 
 Don't use key info when data doesn't require user attention or doesn't drive user action. Use [description lists](./description-list.md) instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/key-info/key-info-usage-5.2bfd592e3c310e043337bcbc9441be59.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/key-info/key-info-usage-5.2bfd592e.png)
 
 Don't use key info for data that isn't important summary information.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/key-info/key-info-usage-6.a2ba2b1f02034fef59baa97ec4a76ea8.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/key-info/key-info-usage-6.a2ba2b1f.png)
 
 Do use description lists for content that doesn't require user attention.
 
@@ -59,7 +59,7 @@ Label
 
 Help inline button (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/key-info/key-info-anatomy.c25d5419f0904618d9f57f98a001183c.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/key-info/key-info-anatomy.c25d5419.png)
 
 ## Options
 
@@ -67,21 +67,21 @@ Help inline button (optional)
 
 Use the default vertical layout with the label under the value in most situations.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/key-info/key-info-vertical-layout.65a7566287387811f55f3e7acdc27d48.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/key-info/key-info-vertical-layout.65a75662.png)
 
 Use the horizontal layout with the label beside the value for scenarios where vertical space is at a premium. For example, use the horizontal layout and the small size to display the total number of items in a list.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/key-info/key-info-horizontal-layout.fee3df309d0205261686dfe456e1576e.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/key-info/key-info-horizontal-layout.fee3df30.png)
 
 ### Size
 
 Use the large key info when the values need to stand out in places such as data visualizations, dashboards, and landing pages.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/key-info/key-info-options-large.251ce89341a0d6e85fe1251adadb9bf8.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/key-info/key-info-options-large.251ce893.png)
 
 Use the small key info to highlight information that doesn't require the large size to stand out, such as the total number of items in a list.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/key-info/key-info-options-small.1c27b06a359905d6c73b99cdb09996b9.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/key-info/key-info-options-small.1c27b06a.png)
 
 ### Help inline button
 
@@ -102,11 +102,11 @@ When laying out key info components horizontally:
 - Use `"sky-theme-margin-right-xxl"` for consistent spacing between elements.
 - Don't overwhelm users with more than 6 elements without headings or grouping.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/key-info/key-info-usage-1.4ca5133df981810932455df8f2d46c7f.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/key-info/key-info-usage-1.4ca5133d.png)
 
 Do provide consistent space between horizontal key info components.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/key-info/key-info-layout-2.0bf51da7d8fa69ece61014b663ef7d27.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/key-info/key-info-layout-2.0bf51da7.png)
 
 Use caution with fluid grid to space key info components horizontally. This can cause uneven spacing and excessive gaps between elements.
 

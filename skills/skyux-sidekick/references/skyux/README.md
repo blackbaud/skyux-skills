@@ -9,7 +9,7 @@ Blackbaud's open source framework leverages reusable design patterns and compone
 
 [Get started](./learn/overview.md)  [View on GitHub](https://github.com/blackbaud/skyux)
 
-![](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/home/ui-illustration.33b8c106e80ac333afa2fe5d6a175c49.svg)
+![](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/home/ui-illustration.33b8c106.svg)
 
 ## Improved visual theme
 
@@ -19,7 +19,7 @@ Blackbaud is adopting SKY UX's modern theme across our solutions to improve the 
 
 ## Build and design purpose-driven experiences
 
-![](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/home/components-illustration.2a83f68acd702d19ba5f249c89398647.svg)
+![](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/home/components-illustration.2a83f68a.svg)
 
 ### Components
 
@@ -27,7 +27,7 @@ Our components help create design patterns for clean, cohesive experiences acros
 
 [Browse components](./components/README.md)
 
-![](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/home/design-guidelines-illustration.ebc52e153810f4466c39d3b182fac535.svg)
+![](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/home/design-guidelines-illustration.ebc52e15.svg)
 
 ### Design guidelines
 
@@ -35,7 +35,7 @@ Reliable, proven design strategies support scalability, empower users, and facil
 
 [Review guidelines](./design/guidelines/README.md)
 
-![](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/home/style-illustration.3da36f2bb3cd7d014edacbee751ecd2a.svg)
+![](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/home/style-illustration.3da36f2b.svg)
 
 ### Styles
 
@@ -67,7 +67,7 @@ SKY UX is proudly open sourced and provides third-party developers with the same
 
 ---
 
-![](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/home/sky-dev.eb3ec1e8cc96e76e2e92298b6b1f03e6.jpg)
+![](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/home/sky-dev.eb3ec1e8.jpg)
 
 ## Make good even better with Blackbaud SKY Developer
 

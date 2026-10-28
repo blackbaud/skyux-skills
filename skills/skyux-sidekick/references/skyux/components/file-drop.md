@@ -13,13 +13,13 @@ The file drop element lets users attach multiple local files or link to external
 
 Use the file drop element when users need to upload multiple files or attach files from URLs rather than from local devices.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/file-attach/use-multi.c01a33e902554ca64b00866d1d7e0b26.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/file-attach/use-multi.c01a33e9.png)
 
 Do use a file drop element to upload more than one file.
 
 Use the file drop element when users need to add metadata about uploaded files.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/file-attach/use-metadata.4be46c9f5ba23d84f61c37d44b30550b.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/file-attach/use-metadata.4be46c9f.png)
 
 Do use a file drop element to add metadata about uploaded files.
 
@@ -73,7 +73,7 @@ Hint text (optional)
 
 User-entered metadata (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/file-attach/anatomy.a3a96f9179ea916d3c36c5a02cf63757.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/file-attach/anatomy.a3a96f91.png)
 
 ## Options
 
@@ -107,7 +107,7 @@ Don't use `stacked` when the file drop:
 - Is the last input on a form
 - Is followed by one or more conditional fields (use `sky-theme-margin-bottom-s` instead for closely related fields)
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/file-attach/options-stacked.024ad5be28990b2b46d8d328f6ddda3d.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/file-attach/options-stacked.024ad5be.png)
 
 ### Metadata
 
@@ -123,13 +123,13 @@ You can specify parameters for valid files, including file types, minimum and ma
 
 After users attach files, summary information appears below the file drop options. For local files, the default summary includes the file name, file size, file preview, and a delete button. For external files, the default summary includes the URL and a delete button. You can include additional inputs to display user-entered metadata.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/file-attach/behavior-preview.857c6273dd7e820eec8fca5a981a9bcd.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/file-attach/behavior-preview.857c6273.png)
 
 ### Responsiveness
 
 The file drop element switches to a vertical layout in smaller viewports.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/file-attach/behavior-responsive.26059504579953417c202b84ac811b35.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/file-attach/behavior-responsive.26059504.png)
 
 ## Related information
 

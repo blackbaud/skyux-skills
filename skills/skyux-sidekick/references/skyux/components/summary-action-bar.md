@@ -15,19 +15,19 @@ Use summary action bars to hold actions and summary information related to the p
 
 Use summary action bars for actions that users can take on multiple items in a list of items. When used with a multiselect list, hide the summary action bar until users select an item in the list. After users select an item, the summary action bar should fly in from the bottom of the page.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/action-bars/img/use-multi-list.eca66302425efc4ede29bb33f7a6552f.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/action-bars/img/use-multi-list.eca66302.png)
 
 Do use summary action bars for actions on a list of items.
 
 Use summary action bars for actions that are taken on the selected record in [split views](./split-view.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/action-bars/img/use-split-view.a4756d40b3b5ab883c7e80f2741d0756.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/action-bars/img/use-split-view.a4756d40.png)
 
 Do use summary action bars for actions in split views.
 
 Use summary action bars when you need to show summary information related to the forms in [modals](./modal.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/action-bars/img/use-modal.f2d6e98c71020b71fc5f203960636524.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/action-bars/img/use-modal.f2d6e98c.png)
 
 Do use summary action bars for summary information in modals.
 
@@ -35,7 +35,7 @@ Do use summary action bars for summary information in modals.
 
 Don't use summary action bars to wrap a large amount of content because it eats into the vertical space on the page. Show the least amount of information that users need to inform their actions. Explore alternate layouts if you need to show a large amount of summary information.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/action-bars/img/dont-use-overload.f9d736e6da09879cf3a6bd8b389c8282.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/action-bars/img/dont-use-overload.f9d736e6.png)
 
 Don't use summary action bars for large amounts of content.
 
@@ -49,7 +49,7 @@ Actions
 
 Summary information (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/action-bars/img/anatomy.de4cf54c932033fda9a75bd01e8911a7.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/action-bars/img/anatomy.de4cf54c.png)
 
 ## Behavior and states
 
@@ -57,7 +57,7 @@ Summary information (optional)
 
 In smaller viewports, the summary information section becomes expandable/collapsible to allow more visible space for the main content.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/action-bars/img/behavior-collapse.1664d7953414f7a8fbcc8df83bf590c2.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/action-bars/img/behavior-collapse.1664d795.png)
 
 ## Options
 
@@ -65,25 +65,25 @@ In smaller viewports, the summary information section becomes expandable/collaps
 
 When users need summarized information about selected items in a list or data entered in a form as a confirmation before taking an action, put the relevant information in the summary information area.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/action-bars/img/responsive-wrap-summary.f015f5b8d79901092c13f702fff80b7b.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/action-bars/img/responsive-wrap-summary.f015f5b8.png)
 
 ### Conditional actions
 
 In multiselect lists, items may be in mixed states where certain actions can only be taken on certain items. Expose all the possible actions, and append the number of items that action will be taken on when invoked.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/action-bars/img/option-conditional-action.419a415cbcc6ce907504e7d57837bc1f.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/action-bars/img/option-conditional-action.419a415c.png)
 
 ### Secondary actions
 
 Secondary actions collapse into a context menu at small viewport widths.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/action-bars/img/responsive-context-menu.c8ab20b6d2fa3a6d7fe6861545df1950.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/action-bars/img/responsive-context-menu.c8ab20b6.png)
 
 ### Summary information
 
 When the viewport width changes, summary information re-flows based on the available width.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/action-bars/img/option-summary.a9ad346cca9114628894ee53578affa4.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/action-bars/img/option-summary.a9ad346c.png)
 
 ## Related information
 

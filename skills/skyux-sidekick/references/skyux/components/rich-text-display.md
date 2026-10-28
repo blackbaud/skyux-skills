@@ -13,7 +13,7 @@ The rich text display sanitizes HTML strings before displaying them. It searches
 
 Use rich text display to safely display read-only rich text.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/rich-text-display/rich-text-display-usage-1.e371e7c2e6d397d99593e3d51c1a7cb0.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/rich-text-display/rich-text-display-usage-1.e371e7c2.png)
 
 Do use rich text display to show rich text content in read-only contexts.
 

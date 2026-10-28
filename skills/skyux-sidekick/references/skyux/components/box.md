@@ -13,11 +13,11 @@ Boxes provide containers to group related content and actions.
 
 Use boxes as containers for related content and actions on pages such [action hubs](../design/guidelines/page-layouts/action-hub.md) and [record pages](../design/guidelines/page-layouts/record-page.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/box/box-use-action-hub.a7dc2ea0a0ef88f69bc928554455555b.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/box/box-use-action-hub.a7dc2ea0.png)
 
 Do use boxes to organize content on action hubs.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/box/box-use-record.068ff87e3820e394cd0872366dd81953.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/box/box-use-record.068ff87e.png)
 
 Do use boxes to organize content on record pages.
 
@@ -25,27 +25,27 @@ Do use boxes to organize content on record pages.
 
 Don't use boxes to separate individual items in a list. Use [repeaters](./repeater.md) or other layout approaches instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/box/box-dont-individual-element.b6d1ec98dbfb5079bc1b0f1e4ea506c8.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/box/box-dont-individual-element.b6d1ec98.png)
 
 Don't use boxes to separate individual items in a list.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/box/box-group-related.5e971bb0f37db91837ef2314fc8ec7c9.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/box/box-group-related.5e971bb0.png)
 
 Do use boxes to group related items in a section.
 
 Don't use boxes to organize form inputs in [modal forms](./modal.md) or [split view workspaces](./split-view.md). Use [field groups](./field-group.md) instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/box/box-dont-form.a9581d9c1df441bdee17ad0a578bed1a.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/box/box-dont-form.a9581d9c.png)
 
 Don't use boxes to organize content in forms.
 
 Don't add boxes to pre-defined sections of page layouts. For example, don't add boxes around lists on [list pages](../design/guidelines/page-layouts/list-page.md) or around related links on [action hubs](../design/guidelines/page-layouts/action-hub.md).
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/box/box-dont-related-recent.81c9b967deb8a7b56b484a85b39ee6e7.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/box/box-dont-related-recent.81c9b967.png)
 
 Don't add boxes to the sections in the top right of action hubs.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/box/box-dont-list.2820277b5388a62afda7b8cf0d4b0e31.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/box/box-dont-list.2820277b.png)
 
 Don't add boxes to list pages.
 
@@ -71,7 +71,7 @@ Help inline button (optional)
 
 Control button (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/box/box-anatomy.9eb66b7a31a94c8fd23955fc6bd0b2e2.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/box/box-anatomy.9eb66b7a.png)
 
 ## Options
 
@@ -89,17 +89,17 @@ When you need to supplement a box with additional information but don't require 
 
 You can include a borderless icon button (`sky-btn sky-btn-icon-borderless`) in the top right to provide a single edit action or a context menu when multiple actions apply.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/box/box-option-1.463354ca7f78665bc756df8e2f3aac7a.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/box/box-option-1.463354ca.png)
 
 Do include a borderless icon button for a single edit action.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/box/box-option-2.924d795b1d06d1015c6134c47e522d10.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/box/box-option-2.924d795b.png)
 
 Do include a context menu for multiple actions.
 
 Don't include multiple buttons in boxes. Instead, break up content so that boxes only contain related content that users can manage together.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/box/box-option-3.ecb483035999b094f378231f539ea79b.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/box/box-option-3.ecb48303.png)
 
 Don't include multiple buttons.
 
@@ -109,7 +109,7 @@ When you use boxes inside a page or a tab, set `layout="blocks"` on the page or 
 
 Follow the [spacing guidelines](../design/styles/spacing.md) to use proper spacing between boxes. Depending on your scenario, you can use [fluid grid](./fluid-grid.md), [CSS flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/), CSS Grid or SKY UX spacing classes. .
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/box/box-layout-example.13b68e2a7493ab39624b1af2dda83f27.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/box/box-layout-example.13b68e2a.png)
 
 Use proper spacing between boxes.
 

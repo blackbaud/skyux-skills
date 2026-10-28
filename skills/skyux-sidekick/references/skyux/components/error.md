@@ -13,13 +13,13 @@ The error component displays a SKY UX-themed error message.
 
 Use error messages to communicate system statuses to users when the system encounters unexpected errors.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/errors/img/guidelines/error/error-usage-1.57e72d1dfb5d65d471a62856c41aa88f.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/errors/img/guidelines/error/error-usage-1.57e72d1d.png)
 
 Do use error messages when system errors occur.
 
 Use error messages when the content inside modals fails to load.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/errors/img/guidelines/error/error-usage-8.87634b5baa62cd8637e9606d2479eac9.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/errors/img/guidelines/error/error-usage-8.87634b5b.png)
 
 Do use error messages when system errors occur when opening modals.
 
@@ -27,27 +27,27 @@ Do use error messages when system errors occur when opening modals.
 
 Don't use error messages to display information about background processes. Use [toasts](./toast.md) instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/errors/img/guidelines/error/error-usage-2.7d3fe9f62b8697b41827bcaa24379d7e.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/errors/img/guidelines/error/error-usage-2.7d3fe9f6.png)
 
 Don't use error messages for background processes.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/errors/img/guidelines/error/error-usage-7.340ee0d39e6d311d34ff5d7e9b19c3b7.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/errors/img/guidelines/error/error-usage-7.340ee0d3.png)
 
 Do use toasts to inform users about background processes.
 
 Don't use error messages when statuses on specific content require user attention but when no system errors occurred. To notify users of broken statuses on workflows or records, use [alerts](./alert.md) instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/errors/img/guidelines/error/error-usage-3.f9c12df24e5721a8ac8a7c1b9d9270b2.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/errors/img/guidelines/error/error-usage-3.f9c12df2.png)
 
 Don't use error messages to highlight content that users must address when no errors occurred.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/errors/img/guidelines/error/error-usage-4.d8fd8d5183c874e0c07944fe6b1a58dc.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/errors/img/guidelines/error/error-usage-4.d8fd8d51.png)
 
 Do use alerts to call attention to issues that require user interaction.
 
 Don't use security error messages when users lack permission to view portions of pages or modals such as tiles on record pages. Hide the content from view instead.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/errors/img/guidelines/error/error-usage-5.ced7a6f664144577cd006590b60c3b92.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/errors/img/guidelines/error/error-usage-5.ced7a6f6.png)
 
 Don't use security error messages in portions of pages or modals. Hide the restricted content instead.
 
@@ -69,7 +69,7 @@ Description (optional)
 
 Action (optional)
 
-![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/errors/img/guidelines/error/error-anatomy.1328aa284f223ca0b9b9d6466a315d8f.png)
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/errors/img/guidelines/error/error-anatomy.1328aa28.png)
 
 ## Options
 
@@ -77,25 +77,25 @@ Action (optional)
 
 Use the broken error type in situations when underlying content doesn't load or when issues such as 500 errors reach the server.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/errors/img/guidelines/error/error-option-broken.e6c8e4daae448da5583bc79cec8cfd9d.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/errors/img/guidelines/error/error-option-broken.e6c8e4da.png)
 
 Use the under construction error type when pages are under maintenance or experience known outages.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/errors/img/guidelines/error/error-option-construction.2a5473ae978c2d324876584357af89b8.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/errors/img/guidelines/error/error-option-construction.2a5473ae.png)
 
 Use the not found error type when pages fail to load because of 404 errors.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/errors/img/guidelines/error/error-option-notfound.a2880635383441067e601977c7913505.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/errors/img/guidelines/error/error-option-notfound.a2880635.png)
 
 Use the security error type when users don't have access to view content.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/errors/img/guidelines/error/error-option-security.19e3c113d809559d3d0cb40bdabb4924.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/errors/img/guidelines/error/error-option-security.19e3c113.png)
 
 ### Image
 
 Include images when error messages are the only content on pages. Tiles have limited space and may not be important to users' immediate tasks, so exclude images in tiles and only display the title and description.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/errors/img/guidelines/error/error-usage-6.9d0be3995cae0325cdf88d5ce9a0cd6b.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/errors/img/guidelines/error/error-usage-6.9d0be399.png)
 
 Exclude images and actions when error messages only affect portions of the content on pages and users can still complete other tasks.
 
