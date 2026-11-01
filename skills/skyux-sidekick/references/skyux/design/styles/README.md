@@ -10,6 +10,7 @@ SKY UX components are assembled from a small set of core design elements. These 
 - [Accessibility](./accessibility.md) - Accessibility classes help you deliver highly accessible experiences with SKY UX.
 - [Borders](./borders.md) - Line styles explain how to bound, divide, and highlight content and maintain visual hierarchy.
 - [Colors](./color.md) - Color styles provide base colors to convey meaning in backgrounds, borders, and text.
+- [Containers (preview)](./containers.md) - Container classes set the background, border, and text color of a section, and SKY UX components inside adjust to match.
 - [Elevation](./elevation.md) - Elevation levels create visual hierarchy and convey the relationship between elements using shadows.
 - [Motion](./motion.md) - Motion guidelines explain the principles and physics of how to use motion in SKY UX animations.
 - [Responsiveness](./responsiveness.md) - In addition to out-of-the-box responsive behavior, SKY UX supports options such as container mixins.

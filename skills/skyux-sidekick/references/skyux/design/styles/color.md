@@ -394,9 +394,9 @@ The color for icons on links and link buttons.
 
 `sky-theme-color-icon-action`
 
-Inverse icon
+Inverse icon (legacy)
 
-The color for icons on heavy background colors, such as primary and danger button labels.
+The legacy color for icons on heavy background colors. Use the icon on status matte or prominent container header icon color instead.
 
 `sky-theme-color-icon-inverse`
 
@@ -414,7 +414,7 @@ The color for icons on prominent container headers.
 
 ### Icon mattes
 
-Use icon matte colors for small backgrounds behind icons. For icons placed on icon mattes, use default, inverse, or action icon color so the icon has a high color contrast with the matte color.
+Use icon matte colors for small backgrounds behind icons. For icons placed on icon mattes, use default or action icon color so the icon has a high color contrast with the matte color.
 
 Action soft icon matte
 
@@ -642,6 +642,44 @@ The background color for disabled elements.
 
 Deprecated:`var(--sky-background-color-disabled)`
 
+### Action backgrounds
+
+Tertiary action background
+
+The background color for tertiary actions, such as link buttons and borderless buttons.
+
+`var(--sky-theme-color-background-action-tertiary-base)`
+
+Action background on prominent header
+
+The background color for tertiary actions on prominent container headers.
+
+`var(--sky-theme-color-background-action-tertiary-on_prominent-base)`
+
+Hover background for action on prominent header
+
+The background color for tertiary actions on prominent container headers when hovered.
+
+`var(--sky-theme-color-background-action-tertiary-on_prominent-hover)`
+
+Active background for action on prominent header
+
+The background color for tertiary actions on prominent container headers when active.
+
+`var(--sky-theme-color-background-action-tertiary-on_prominent-active)`
+
+Focus background for action on prominent header
+
+The background color for tertiary actions on prominent container headers when focused.
+
+`var(--sky-theme-color-background-action-tertiary-on_prominent-focus)`
+
+Disabled background for action on prominent header
+
+The background color for disabled tertiary actions on prominent container headers.
+
+`var(--sky-theme-color-background-action-tertiary-on_prominent-disabled)`
+
 ## Borders
 
 ### Container borders
@@ -676,13 +714,67 @@ Divider soft
 
 `var(--sky-theme-color-border-divider-soft)`
 
-### Other
+### Action borders
+
+Action border on status background
+
+The border color for tertiary actions on status backgrounds.
+
+`var(--sky-theme-color-border-action-on_status-base)`
+
+Hover border for action on status background
+
+The border color for tertiary actions on status backgrounds when hovered.
+
+`var(--sky-theme-color-border-action-on_status-hover)`
+
+Active border for action on status background
+
+The border color for tertiary actions on status backgrounds when active.
+
+`var(--sky-theme-color-border-action-on_status-active)`
 
 Focus border for action text on status background
 
 The color of a focus-visible border for action text on status backgrounds.
 
 `var(--sky-theme-color-border-action-on_status-focus)`
+
+Disabled border for action on status background
+
+The border color for disabled tertiary actions on status backgrounds.
+
+`var(--sky-theme-color-border-action-on_status-disabled)`
+
+Action border on prominent header
+
+The border color for tertiary actions on prominent container headers.
+
+`var(--sky-theme-color-border-action-tertiary-on_prominent-base)`
+
+Hover border for action on prominent header
+
+The border color for tertiary actions on prominent container headers when hovered.
+
+`var(--sky-theme-color-border-action-tertiary-on_prominent-hover)`
+
+Active border for action on prominent header
+
+The border color for tertiary actions on prominent container headers when active.
+
+`var(--sky-theme-color-border-action-tertiary-on_prominent-active)`
+
+Focus border for action on prominent header
+
+The color of a focus-visible border for tertiary actions on prominent container headers.
+
+`var(--sky-theme-color-border-action-tertiary-on_prominent-focus)`
+
+Disabled border for action on prominent header
+
+The border color for disabled tertiary actions on prominent container headers.
+
+`var(--sky-theme-color-border-action-tertiary-on_prominent-disabled)`
 
 ## Text
 
@@ -788,9 +880,9 @@ The color for icons on links and link buttons.
 
 `var(--sky-theme-color-icon-action)`
 
-Inverse icon
+Inverse icon (legacy)
 
-The color for icons on heavy background colors, such as primary and danger button labels.
+The legacy color for icons on heavy background colors. Use the icon on status matte or prominent container header icon color instead.
 
 `var(--sky-theme-color-icon-inverse)`
 
@@ -820,7 +912,7 @@ The color for icons in disabled buttons on prominent container headers.
 
 ### Icon mattes
 
-Use icon matte colors for the background of elements that an icon component is placed inside of. For icons placed on icon mattes, use default, inverse, or action icon color so the icon has a high color contrast with the matte color.
+Use icon matte colors for the background of elements that an icon component is placed inside of. For icons placed on icon mattes, use default or action icon color so the icon has a high color contrast with the matte color.
 
 Action soft icon matte
 
