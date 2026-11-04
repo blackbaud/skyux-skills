@@ -143,6 +143,12 @@ To display composite information instead of single values, use templated columns
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-templated-items.98d8a20d.png)
 
+### Top scrollbar
+
+When you use default vertical sizing to display all rows in a data grid instead of docking the grid to its container by setting `domLayout: 'normal'`, move the horizontal scrollbar to the top of the grid so that users don't need to scroll to the bottom to access it.
+
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-top-scrollbar.3bd89a32.png)
+
 ## Behavior and states
 
 ### Fit
@@ -157,11 +163,11 @@ Data grids with many columns use horizontal scrollbars to fit in narrower contai
 
 ### Reordering columns
 
-To reorder columns, users can drag and drop them.
+To reorder columns, users can drag and drop the columns, or they can hold down the shift key and use the left and right arrow keys when the column header is focused.
 
 ### Resizing columns
 
-To resize columns, users can select and drag.
+To resize columns, users can select and drag, or hold down alt or option and use the left and right arrow keys when the column header is focused.
 
 ### Responsiveness
 
@@ -191,7 +197,9 @@ To provide a text equivalent for screen readers [to support accessibility](../le
 ### Guidelines
 
 - [Filter lists](../design/guidelines/filtering-lists.md)
+- [Form design](../design/guidelines/form-design.md)
 - [List page](../design/guidelines/page-layouts/list-page.md)
+- [Page design](../design/guidelines/page-layouts/README.md)
 
 ## Installation
 
@@ -219,7 +227,7 @@ The `sky-ag-grid-wrapper` component provides WCAG-compliant keyboard navigation 
 
 ## Data manager directive
 
-If you use a data grid within a [data manager component](./data-manager.md), the `skyAgGridDataManagerAdapter` directive can manage some standard interactions between the data grid and the data manager service. Add the directive should to the `sky-data-view` element that contains the data grid to initialize properties from the data state and keep the data grid in sync with the data state. When the data grid changes, the data state is updated, and when the data state changes, the data grid responds to the changes. The directive manages:
+If you use a data grid within a [data manager component](./data-manager.md), the `skyAgGridDataManagerAdapter` directive can manage some standard interactions between the data grid and the data manager service. Add the directive to the `sky-data-view` element that contains the data grid to initialize properties from the data state and keep the data grid in sync with the data state. When the data grid changes, the data state is updated, and when the data state changes, the data grid responds to the changes. The directive manages:
 
 - column visibility and order
 - selected rows

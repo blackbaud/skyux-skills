@@ -116,7 +116,7 @@ The `sky-ag-grid-wrapper` component provides WCAG-compliant keyboard navigation 
 
 ## Data manager directive
 
-If you use a data entry grid within a [data manager component](./data-manager.md), the `skyAgGridDataManagerAdapter` directive can manage some standard interactions between the data entry grid and the data manager service. Add the directive should to the `sky-data-view` element that contains the data entry grid to initialize properties from the data state and keep the data entry grid in sync with the data state. When the data entry grid changes, the data state is updated, and when the data state changes, the data entry grid responds to the changes. The directive manages:
+If you use a data entry grid within a [data manager component](./data-manager.md), the `skyAgGridDataManagerAdapter` directive can manage some standard interactions between the data entry grid and the data manager service. Add the directive to the `sky-data-view` element that contains the data entry grid to initialize properties from the data state and keep the data entry grid in sync with the data state. When the data entry grid changes, the data state is updated, and when the data state changes, the data entry grid responds to the changes. The directive manages:
 
 - column visibility and order
 - selected rows

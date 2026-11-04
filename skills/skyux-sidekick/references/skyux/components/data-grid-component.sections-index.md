@@ -2,7 +2,7 @@
 
 component: data-grid-component
 source: ./data-grid-component.md
-section_count: 16
+section_count: 19
 
 ---
 
@@ -16,17 +16,20 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | --- | ---------------------------- | ----------- | -------- | --------------------------------------------------------------- |
 | 1   | Choosing the right data grid | design      | 12–15    | `Read file_path=./data-grid-component.md offset=12 limit=4`     |
 | 2   | Usage                        | design      | 16–33    | `Read file_path=./data-grid-component.md offset=16 limit=18`    |
-| 3   | Behavior and states          | design      | 34–47    | `Read file_path=./data-grid-component.md offset=34 limit=14`    |
-| 4   | Accessibility                | design      | 48–51    | `Read file_path=./data-grid-component.md offset=48 limit=4`     |
-| 5   | Related information          | design      | 52–75    | `Read file_path=./data-grid-component.md offset=52 limit=24`    |
-| 6   | Installation                 | development | 76–85    | `Read file_path=./data-grid-component.md offset=76 limit=10`    |
-| 7   | Setup                        | development | 86–91    | `Read file_path=./data-grid-component.md offset=86 limit=6`     |
-| 8   | SkyDataGrid                  | development | 92–217   | `Read file_path=./data-grid-component.md offset=92 limit=126`   |
-| 9   | SkyDataGridColumn            | development | 218–311  | `Read file_path=./data-grid-component.md offset=218 limit=94`   |
-| 10  | SkyDataGridDockType          | development | 312–319  | `Read file_path=./data-grid-component.md offset=312 limit=8`    |
-| 11  | SkyDataGridRowDeleteArgs     | development | 320–335  | `Read file_path=./data-grid-component.md offset=320 limit=16`   |
-| 12  | SkyDataGridSort              | development | 336–358  | `Read file_path=./data-grid-component.md offset=336 limit=23`   |
-| 13  | SkyDataGridHarness           | testing     | 359–594  | `Read file_path=./data-grid-component.md offset=359 limit=236`  |
-| 14  | SkyDataGridHarnessFilters    | testing     | 595–610  | `Read file_path=./data-grid-component.md offset=595 limit=16`   |
-| 15  | provideSkyDataGridTesting    | testing     | 611–620  | `Read file_path=./data-grid-component.md offset=611 limit=10`   |
-| 16  | Code Examples                | examples    | 621–2367 | `Read file_path=./data-grid-component.md offset=621 limit=1747` |
+| 3   | Anatomy                      | design      | 34–85    | `Read file_path=./data-grid-component.md offset=34 limit=52`    |
+| 4   | Options                      | design      | 86–151   | `Read file_path=./data-grid-component.md offset=86 limit=66`    |
+| 5   | Behavior and states          | design      | 152–175  | `Read file_path=./data-grid-component.md offset=152 limit=24`   |
+| 6   | Accessibility                | design      | 176–179  | `Read file_path=./data-grid-component.md offset=176 limit=4`    |
+| 7   | Related information          | design      | 180–203  | `Read file_path=./data-grid-component.md offset=180 limit=24`   |
+| 8   | Installation                 | development | 204–213  | `Read file_path=./data-grid-component.md offset=204 limit=10`   |
+| 9   | Setup                        | development | 214–219  | `Read file_path=./data-grid-component.md offset=214 limit=6`    |
+| 10  | Data manager directive       | development | 220–229  | `Read file_path=./data-grid-component.md offset=220 limit=10`   |
+| 11  | SkyDataGrid                  | development | 230–355  | `Read file_path=./data-grid-component.md offset=230 limit=126`  |
+| 12  | SkyDataGridColumn            | development | 356–449  | `Read file_path=./data-grid-component.md offset=356 limit=94`   |
+| 13  | SkyDataGridDockType          | development | 450–457  | `Read file_path=./data-grid-component.md offset=450 limit=8`    |
+| 14  | SkyDataGridRowDeleteArgs     | development | 458–473  | `Read file_path=./data-grid-component.md offset=458 limit=16`   |
+| 15  | SkyDataGridSort              | development | 474–496  | `Read file_path=./data-grid-component.md offset=474 limit=23`   |
+| 16  | SkyDataGridHarness           | testing     | 497–732  | `Read file_path=./data-grid-component.md offset=497 limit=236`  |
+| 17  | SkyDataGridHarnessFilters    | testing     | 733–748  | `Read file_path=./data-grid-component.md offset=733 limit=16`   |
+| 18  | provideSkyDataGridTesting    | testing     | 749–758  | `Read file_path=./data-grid-component.md offset=749 limit=10`   |
+| 19  | Code Examples                | examples    | 759–2505 | `Read file_path=./data-grid-component.md offset=759 limit=1747` |

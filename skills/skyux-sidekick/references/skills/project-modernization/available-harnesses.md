@@ -33,6 +33,10 @@ In addition to harnesses (`Sky*Harness`), this list includes the other testing u
 - `SkyChartLineHarness`
 - `SkyChartTableModalHarness`
 
+## `@skyux/code/testing`
+
+- `SkyCodeHarness`
+
 ## `@skyux/colorpicker/testing`
 
 - `SkyColorpickerDropdownHarness`

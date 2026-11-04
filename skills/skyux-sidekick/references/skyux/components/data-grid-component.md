@@ -31,15 +31,143 @@ Don't use data grids to display content that requires a complex layout. To displ
 
 Don't use data grids to display visual content or other complex layouts.
 
+## Anatomy
+
+1
+
+Header row
+
+2
+
+Row divider
+
+3
+
+[Data manager](./data-manager.md) toolbar (optional)
+
+4
+
+[Filter bar](./filter-bar.md) (optional)
+
+5
+
+[List summary](./list-summary.md) (optional)
+
+6
+
+[Data manager](./data-manager.md) multiselect toolbar (optional)
+
+7
+
+[Help inline button](./help-inline.md) (optional)
+
+8
+
+Row selection checkbox (optional)
+
+9
+
+[Context-menu dropdown](./dropdown.md) button (optional)
+
+10
+
+Selected row (optional)
+
+11
+
+[Pagination](./paging.md) (optional)
+
+12
+
+[Summary action bar](./summary-action-bar.md) (optional)
+
+![image](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-anatomy.5b66888f.png)
+
+## Options
+
+### Filter bar
+
+To present users with inline filter options that allow them to apply structured criteria that narrows down the list to the items they are interested in, use the [filter bar](./filter-bar.md).
+
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-filter.367e29dd.png)
+
+### List summary
+
+To highlight important information that users should know at a glance, including a list count, use the [list summary](./list-summary.md).
+
+### Multiselect
+
+To let users select multiple rows in a data grid, use a [data manager](./data-manager.md) and enable multiselect.
+
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-multiselect.8ac8c329.png)
+
+Do use multiselect to let users select multiple rows.
+
+To let users perform actions on the multiple rows that they select in a data grid, include the [summary action bar](./summary-action-bar.md) at the bottom of the data grid's container. Only use multiselect with a summary action bar when the container is a [page](./page.md), [modal](./modal.md), [split view workspace](./split-view.md), or [flyout](./flyout.md). Don't use multiselect with a summary action bar when the data grid is in a container, such as a [tile](./tile.md) or [box](./box.md).
+
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-multiselect-actions.c90ab344.png)
+
+Do use multiselect to let users perform actions on multiple rows.
+
+### Help inline button
+
+When you need to supplement a data grid column heading with additional information but don't require persistent inline help, you can place a [help inline button](./help-inline.md) beside the heading to invoke contextual user assistance.
+
+### Context-menu dropdown
+
+To display actions that affect individual items in the data grid, use [context-menu dropdowns](./dropdown.md).
+
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-context-menu.91ed3dcd.png)
+
+### Sorting
+
+Make column headers sortable. Sort by the leftmost column or the primary record column in the data grid. Always indicate a data grid's sort order.
+
+Only include the [sort button](./sort.md) in the toolbar if the list includes other views in addition to the data grid (e.g., repeater) or it contains templated columns where users need to sort by another property in that column.
+
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-double-sort.77632d7a.png)
+
+Don't use a sort button if the list only uses data grid view and not templated columns. Rely on column headers for sorting.
+
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-multiple-view-sort.b3261ef0.png)
+
+Do use a sort button when there are other views of the data in addition to a data grid to supporting sorting in those views (without column headers).
+
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-templated-sort.06353de6.png)
+
+Do use a sort button when there are templated columns to provide sort options for multiple properties within a single templated column (e.g., First name and last name).
+
+### Templated items
+
+To display composite information instead of single values, use templated columns.
+
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-templated-items.98d8a20d.png)
+
+### Top scrollbar
+
+When you use default vertical sizing to display all rows in a data grid instead of docking the grid to its container with the `dock="fill"` input, move the horizontal scrollbar to the top of the grid with `topScrollEnabled` so that users don't need to scroll to the bottom to access it.
+
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-top-scrollbar.3bd89a32.png)
+
 ## Behavior and states
+
+### Fit
+
+The fit determines how to place data grids within their containers. If a container is wider than the data grid, the fit stretches the data grid to fill the container.
+
+The `columnFit` property on `sky-data-grid` controls how columns are auto-sized, where `container` prioritizes constraining the grid to fit its container and `content` sizes the grid to fit the content, scrolling if needed. Individual `sky-data-grid-column` elements can use the `flexWidth` option to set a relative size or `width` to set a fixed size. If the grid is wider than its container, it scrolls horizontally.
+
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/data-grid/data-grid-horizontal-scroll.3e5dbeb1.png)
+
+Data grids with many columns use horizontal scrollbars to fit in narrower containers.
 
 ### Reordering columns
 
-To reorder columns, users can drag and drop them.
+To reorder columns, users can drag and drop the columns, or they can hold down the shift key and use the left and right arrow keys when the column header is focused.
 
 ### Resizing columns
 
-To resize columns, users can select and drag.
+To resize columns, users can select and drag, or hold down alt or option and use the left and right arrow keys when the column header is focused.
 
 ### Responsiveness
 
@@ -53,8 +181,8 @@ To provide a text equivalent for screen readers [to support accessibility](../le
 
 ### Components
 
-- [Data grid (advanced)](./data-grid.md)
 - [Data entry grid](./data-entry-grid.md)
+- [Data grid (advanced)](./data-grid.md)
 - [Data manager](./data-manager.md)
 - [Dropdown](./dropdown.md)
 - [Filter bar](./filter-bar.md)
@@ -88,6 +216,16 @@ Install with NPM
 In addition to the `@skyux/data-grid` package, you need to install the [`ag-grid-angular`](https://www.ag-grid.com/angular-grid/) and [`ag-grid-community`](https://www.npmjs.com/package/ag-grid-community) packages.
 
 To add the SKY UX styles for AG Grid to your SPA, run `ng g @skyux/packages:add-ag-grid-styles --project _my-app_`.
+
+## Data manager directive
+
+If you use a data grid within a [data manager component](./data-manager.md), the `skyDataManagerViewController` directive can manage some standard interactions between the data grid and the data manager service. Add the directive to the `sky-data-grid` element to initialize properties from the data state and keep the data grid in sync with the data state. When the data grid changes, the data state is updated, and when the data state changes, the data grid responds to the changes. The directive manages:
+
+- column visibility and order
+- selected rows
+- active sort state when selected by column header
+
+Other properties of the data state, such as filters and applying the sort, still need to be implemented for each use.
 
 ## SkyDataGrid
 
