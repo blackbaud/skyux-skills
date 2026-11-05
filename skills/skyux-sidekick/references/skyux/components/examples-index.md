@@ -2,7 +2,7 @@
 
 # Code examples — all components
 
-83 of 89 components have a `## Code Examples` section in their source docs.
+84 of 90 components have a `## Code Examples` section in their source docs.
 
 ## Components with code examples
 
@@ -20,6 +20,7 @@
 | card                         | 1        | [card.examples-index.md](./card.examples-index.md)                                                 |
 | chart-bar                    | 12       | [chart-bar.examples-index.md](./chart-bar.examples-index.md)                                       |
 | checkbox                     | 3        | [checkbox.examples-index.md](./checkbox.examples-index.md)                                         |
+| code                         | 1        | [code.examples-index.md](./code.examples-index.md)                                                 |
 | colorpicker                  | 3        | [colorpicker.examples-index.md](./colorpicker.examples-index.md)                                   |
 | confirm                      | 2        | [confirm.examples-index.md](./confirm.examples-index.md)                                           |
 | country-field                | 1        | [country-field.examples-index.md](./country-field.examples-index.md)                               |

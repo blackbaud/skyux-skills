@@ -19,6 +19,7 @@ SKY UX components, available as Angular components, services, and modules, allow
 - [Card](./card.md) - The card module creates a small container to highlight important information.
 - [Charts (preview)](./charts.md) - Charts visualize data to help users compare values and spot trends at a glance.
 - [Checkbox](./checkbox.md) - The checkbox component renders a SKY UX-themed checkbox.
+- [Code (preview)](./code.md) - The code component displays an inline code token, such as a file name or property name, within a body of text.
 - [Colorpicker](./colorpicker.md) - The colorpicker module provides an input for users to select colors.
 - [Confirm](./confirm.md) - The confirm component launches simple confirmation dialogs for users to confirm actions.
 - [Country field](./country-field.md) - The country field component creates a text input for users to enter search criteria and select a country.

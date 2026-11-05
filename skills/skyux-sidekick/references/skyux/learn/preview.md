@@ -7,6 +7,14 @@ Reference: https://developer.blackbaud.com/skyux/learn/preview
 
 Monitor this page for updates to the SKY UX API that are not yet fully documented. In the developer docs, a preview tag will highlight these updates and indicate that features aren't yet represented in the design docs, demo, and code examples. This helps facilitate far-reaching changes that span multiple iterations and affect multiple components. It can also highlight breaking changes in minor versions, but the SKY UX team strives to avoid those.
 
+## November 2026
+
+### New code component
+
+The [code component](../components/code.md) displays an inline code token, such as a file name or property name, within a body of text.
+
+This component is in preview and will be officially supported in an upcoming minor version of SKY UX v15.
+
 ## October 2026
 
 ### New button component
