@@ -1049,6 +1049,7 @@ import {
   ValidationErrors,
   Validators,
 } from '@angular/forms';
+import { SkyCode } from '@skyux/code';
 import { SkyDatepickerModule } from '@skyux/datetime';
 import { SkyInputBoxModule } from '@skyux/forms';
 
@@ -1077,7 +1078,7 @@ function validateDate(control: AbstractControl<Date | string | null>): Validatio
   selector: 'app-datetime-datepicker-basic-example',
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, SkyDatepickerModule, SkyInputBoxModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, SkyCode, SkyDatepickerModule, SkyInputBoxModule],
 })
 export class DatetimeDatepickerBasicExampleComponent {
   protected formGroup: FormGroup<DemoForm>;
@@ -1119,7 +1120,7 @@ export class DatetimeDatepickerBasicExampleComponent {
     </sky-input-box>
   </form>
 
-  <p>Selected date: <code>{{ startDate.value | json }}</code></p>
+  <p>Selected date: <sky-code>{{ startDate.value | json }}</sky-code></p>
 </div>
 ```
 
@@ -1200,6 +1201,7 @@ describe('Basic datepicker example', () => {
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SkyCode } from '@skyux/code';
 import { SkyDatepickerCalendarChange, SkyDatepickerCustomDate, SkyDatepickerModule } from '@skyux/datetime';
 import { SkyInputBoxModule } from '@skyux/forms';
 
@@ -1213,7 +1215,7 @@ import { delay } from 'rxjs/operators';
   selector: 'app-datetime-datepicker-custom-dates-example',
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, SkyDatepickerModule, SkyInputBoxModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, SkyCode, SkyDatepickerModule, SkyInputBoxModule],
 })
 export class DatetimeDatepickerCustomDatesExampleComponent {
   protected formGroup: FormGroup;
@@ -1319,7 +1321,7 @@ export class DatetimeDatepickerCustomDatesExampleComponent {
     </sky-input-box>
   </form>
 
-  <p>Selected date: <code>{{ formGroup.value.startDate | json }}</code></p>
+  <p>Selected date: <sky-code>{{ formGroup.value.startDate | json }}</sky-code></p>
 </div>
 ```
 
@@ -1330,6 +1332,7 @@ export class DatetimeDatepickerCustomDatesExampleComponent {
 ```typescript
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { SkyCode } from '@skyux/code';
 import { SkyDatepickerModule } from '@skyux/datetime';
 import { SkyInputBoxModule } from '@skyux/forms';
 
@@ -1340,7 +1343,7 @@ import { SkyInputBoxModule } from '@skyux/forms';
   selector: 'app-datetime-datepicker-fuzzy-example',
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [FormsModule, ReactiveFormsModule, SkyDatepickerModule, SkyInputBoxModule],
+  imports: [FormsModule, ReactiveFormsModule, SkyCode, SkyDatepickerModule, SkyInputBoxModule],
 })
 export class DatetimeDatepickerFuzzyExampleComponent {
   protected formGroup: FormGroup;
@@ -1379,7 +1382,7 @@ export class DatetimeDatepickerFuzzyExampleComponent {
     </sky-input-box>
   </form>
 
-  <p>Selected date: <code>{{ getFuzzyDateForDisplay }}</code></p>
+  <p>Selected date: <sky-code>{{ getFuzzyDateForDisplay }}</sky-code></p>
 </div>
 ```
 

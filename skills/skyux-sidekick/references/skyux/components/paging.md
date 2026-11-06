@@ -400,12 +400,12 @@ export class ListsPagingBasicExampleComponent {
 #### example.component.ts (primary file)
 
 ```typescript
-import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
 import { SkyDescriptionListModule } from '@skyux/layout';
 import { SkyPagingContentChangeArgs, SkyPagingModule, SkyRepeaterModule } from '@skyux/lists';
 
-import { Subject, shareReplay, switchMap, tap } from 'rxjs';
+import { Subject, switchMap, tap } from 'rxjs';
 
 import { DemoDataService } from './demo-data.service';
 
@@ -415,8 +415,7 @@ import { DemoDataService } from './demo-data.service';
 @Component({
   selector: 'app-lists-paging-with-content-example',
   templateUrl: './example.component.html',
-  imports: [CommonModule, SkyDescriptionListModule, SkyPagingModule, SkyRepeaterModule],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [SkyDescriptionListModule, SkyPagingModule, SkyRepeaterModule],
 })
 export class ListsPagingWithContentExampleComponent {
   #demoDataSvc = inject(DemoDataService);
@@ -425,15 +424,16 @@ export class ListsPagingWithContentExampleComponent {
   protected pageSize = 5;
   protected contentChange = new Subject<SkyPagingContentChangeArgs>();
 
-  protected pagedData = this.contentChange.pipe(
-    switchMap((args) =>
-      this.#demoDataSvc.getPagedData(args.currentPage, this.pageSize).pipe(
-        tap(() => {
-          args.loadingComplete();
-        }),
+  protected readonly pagedData = toSignal(
+    this.contentChange.pipe(
+      switchMap((args) =>
+        this.#demoDataSvc.getPagedData(args.currentPage, this.pageSize).pipe(
+          tap(() => {
+            args.loadingComplete();
+          }),
+        ),
       ),
     ),
-    shareReplay(1),
   );
 }
 ```
@@ -564,7 +564,7 @@ export interface DemoData {
 ```html
 <sky-paging
   data-sky-id="my-paging-content"
-  [itemCount]="(pagedData | async)?.totalCount ?? 0"
+  [itemCount]="pagedData()?.totalCount ?? 0"
   [maxPages]="3"
   [pageSize]="pageSize"
   [(currentPage)]="currentPage"
@@ -572,7 +572,7 @@ export interface DemoData {
 >
   <sky-paging-content>
     <sky-repeater>
-      @for (person of (pagedData | async)?.people; track person) {
+      @for (person of pagedData()?.people; track person) {
       <sky-repeater-item>
         <sky-repeater-item-title> {{ person.name }} </sky-repeater-item-title>
         <sky-repeater-item-content>

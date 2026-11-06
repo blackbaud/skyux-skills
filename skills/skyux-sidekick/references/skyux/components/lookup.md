@@ -1602,14 +1602,14 @@ Sets the value of the input. The value will be set by simulating key presses tha
 #### example.component.ts (primary file)
 
 ```typescript
-import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
+import { JsonPipe } from '@angular/common';
+import { Component, inject } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import {
   AbstractControl,
   FormBuilder,
   FormControl,
   FormGroup,
-  FormsModule,
   ReactiveFormsModule,
   ValidationErrors,
 } from '@angular/forms';
@@ -1633,18 +1633,9 @@ import { Person } from './person';
 @Component({
   selector: 'app-lookup-single-select-example',
   templateUrl: './example.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    SkyButton,
-    SkyFormErrorModule,
-    SkyInputBoxModule,
-    SkyLookupModule,
-  ],
+  imports: [JsonPipe, ReactiveFormsModule, SkyButton, SkyFormErrorModule, SkyInputBoxModule, SkyLookupModule],
 })
-export class LookupSingleSelectExampleComponent implements OnInit {
+export class LookupSingleSelectExampleComponent {
   public favoritesForm: FormGroup<{
     favoriteName: FormControl<Person[] | null>;
   }>;
@@ -1674,12 +1665,10 @@ export class LookupSingleSelectExampleComponent implements OnInit {
     this.favoritesForm = inject(FormBuilder).group({
       favoriteName: name,
     });
-  }
 
-  public ngOnInit(): void {
     // If you need to execute some logic after the lookup values change,
     // subscribe to Angular's built-in value changes observable.
-    this.favoritesForm.valueChanges.subscribe((changes) => {
+    this.favoritesForm.valueChanges.pipe(takeUntilDestroyed()).subscribe((changes) => {
       console.log('Lookup value changes:', changes);
     });
   }
@@ -1944,14 +1933,14 @@ export interface LookupAsyncDemoSearchResults {
 #### example.component.ts (primary file)
 
 ```typescript
-import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
+import { JsonPipe } from '@angular/common';
+import { Component, inject } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import {
   AbstractControl,
   FormBuilder,
   FormControl,
   FormGroup,
-  FormsModule,
   ReactiveFormsModule,
   ValidationErrors,
 } from '@angular/forms';
@@ -1975,18 +1964,9 @@ import { Person } from './person';
 @Component({
   selector: 'app-lookup-multi-select-example',
   templateUrl: './example.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    SkyButton,
-    SkyFormErrorModule,
-    SkyInputBoxModule,
-    SkyLookupModule,
-  ],
+  imports: [JsonPipe, ReactiveFormsModule, SkyButton, SkyFormErrorModule, SkyInputBoxModule, SkyLookupModule],
 })
-export class LookupMultiSelectExampleComponent implements OnInit {
+export class LookupMultiSelectExampleComponent {
   public favoritesForm: FormGroup<{
     favoriteNames: FormControl<Person[] | null>;
   }>;
@@ -2016,12 +1996,10 @@ export class LookupMultiSelectExampleComponent implements OnInit {
     this.favoritesForm = inject(FormBuilder).group({
       favoriteNames: names,
     });
-  }
 
-  public ngOnInit(): void {
     // If you need to execute some logic after the lookup values change,
     // subscribe to Angular's built-in value changes observable.
-    this.favoritesForm.valueChanges.subscribe((changes) => {
+    this.favoritesForm.valueChanges.pipe(takeUntilDestroyed()).subscribe((changes) => {
       console.log('Lookup value changes:', changes);
     });
   }
@@ -2288,9 +2266,10 @@ export interface LookupAsyncDemoSearchResults {
 #### example.component.ts (primary file)
 
 ```typescript
-import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, OnInit, TemplateRef, ViewChild, inject } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { JsonPipe } from '@angular/common';
+import { Component, TemplateRef, ViewChild, inject } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { SkyButton, SkyInputBoxModule } from '@skyux/forms';
 import { SkyWaitService } from '@skyux/indicators';
 import {
@@ -2311,10 +2290,9 @@ import { Person } from './person';
 @Component({
   selector: 'app-lookup-result-templates-example',
   templateUrl: './example.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, SkyButton, SkyInputBoxModule, SkyLookupModule],
+  imports: [JsonPipe, ReactiveFormsModule, SkyButton, SkyInputBoxModule, SkyLookupModule],
 })
-export class LookupResultTemplatesExampleComponent implements OnInit {
+export class LookupResultTemplatesExampleComponent {
   public favoritesForm: FormGroup<{
     favoriteNames: FormControl<Person[] | null>;
   }>;
@@ -2348,12 +2326,10 @@ export class LookupResultTemplatesExampleComponent implements OnInit {
     this.favoritesForm = inject(FormBuilder).group({
       favoriteNames: names,
     });
-  }
 
-  public ngOnInit(): void {
     // If you need to execute some logic after the lookup values change,
     // subscribe to Angular's built-in value changes observable.
-    this.favoritesForm.valueChanges.subscribe((changes) => {
+    this.favoritesForm.valueChanges.pipe(takeUntilDestroyed()).subscribe((changes) => {
       console.log('Lookup value changes:', changes);
     });
   }
@@ -2774,9 +2750,10 @@ export interface LookupAsyncDemoSearchResults {
 #### example.component.ts (primary file)
 
 ```typescript
-import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { JsonPipe } from '@angular/common';
+import { Component, inject } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { SkyButton, SkyInputBoxModule } from '@skyux/forms';
 import { SkyWaitService } from '@skyux/indicators';
 import {
@@ -2800,10 +2777,9 @@ import { PickerModalComponent } from './picker-modal.component';
 @Component({
   selector: 'app-lookup-custom-picker-example',
   templateUrl: './example.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, SkyButton, SkyInputBoxModule, SkyLookupModule],
+  imports: [JsonPipe, ReactiveFormsModule, SkyButton, SkyInputBoxModule, SkyLookupModule],
 })
-export class LookupCustomPickerExampleComponent implements OnInit {
+export class LookupCustomPickerExampleComponent {
   public favoritesForm: FormGroup<{
     favoriteNames: FormControl<Person[] | null>;
   }>;
@@ -2847,12 +2823,10 @@ export class LookupCustomPickerExampleComponent implements OnInit {
         },
       },
     };
-  }
 
-  public ngOnInit(): void {
     // If you need to execute some logic after the lookup values change,
     // subscribe to Angular's built-in value changes observable.
-    this.favoritesForm.valueChanges.subscribe((changes) => {
+    this.favoritesForm.valueChanges.pipe(takeUntilDestroyed()).subscribe((changes) => {
       console.log('Lookup value changes:', changes);
     });
   }
@@ -3325,8 +3299,8 @@ export class PickerHarness extends ComponentHarness {
 #### picker-modal.component.ts
 
 ```typescript
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, inject } from '@angular/core';
-import { FormArray, FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ChangeDetectorRef, Component, inject } from '@angular/core';
+import { FormArray, FormBuilder, FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { SkyButton, SkyCheckboxModule, SkySelectionBoxModule } from '@skyux/forms';
 import { SkyIconModule } from '@skyux/icon';
 import { SkyWaitModule } from '@skyux/indicators';
@@ -3342,9 +3316,7 @@ import { Person } from './person';
   selector: 'app-picker-modal',
   templateUrl: './picker-modal.component.html',
   styleUrls: ['./picker-modal.component.scss'],
-  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
-    FormsModule,
     ReactiveFormsModule,
     SkyButton,
     SkyCheckboxModule,
@@ -3416,9 +3388,10 @@ export interface LookupAsyncDemoSearchResults {
 #### example.component.ts (primary file)
 
 ```typescript
-import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, OnDestroy, OnInit, inject } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { JsonPipe } from '@angular/common';
+import { Component, DestroyRef, inject } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { SkyIdModule } from '@skyux/core';
 import { SkyButton, SkyInputBoxModule } from '@skyux/forms';
 import { SkyWaitService } from '@skyux/indicators';
@@ -3430,7 +3403,6 @@ import {
 } from '@skyux/lookup';
 import { SkyModalService } from '@skyux/modals';
 
-import { Subscription } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { AddItemModalComponent } from './add-item-modal.component';
@@ -3443,10 +3415,9 @@ import { Person } from './person';
 @Component({
   selector: 'app-lookup-add-item-example',
   templateUrl: './example.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, SkyButton, SkyIdModule, SkyInputBoxModule, SkyLookupModule],
+  imports: [JsonPipe, ReactiveFormsModule, SkyButton, SkyIdModule, SkyInputBoxModule, SkyLookupModule],
 })
-export class LookupAddItemExampleComponent implements OnInit, OnDestroy {
+export class LookupAddItemExampleComponent {
   public favoritesForm: FormGroup<{
     favoriteNames: FormControl<Person[] | null>;
   }>;
@@ -3457,8 +3428,7 @@ export class LookupAddItemExampleComponent implements OnInit, OnDestroy {
     },
   };
 
-  #subscriptions = new Subscription();
-
+  readonly #destroyRef = inject(DestroyRef);
   readonly #svc = inject(DemoService);
   readonly #modalSvc = inject(SkyModalService);
   readonly #waitSvc = inject(SkyWaitService);
@@ -3469,18 +3439,12 @@ export class LookupAddItemExampleComponent implements OnInit, OnDestroy {
     this.favoritesForm = inject(FormBuilder).group({
       favoriteNames: names,
     });
-  }
 
-  public ngOnInit(): void {
     // If you need to execute some logic after the lookup values change,
     // subscribe to Angular's built-in value changes observable.
-    this.favoritesForm.valueChanges.subscribe((changes) => {
+    this.favoritesForm.valueChanges.pipe(takeUntilDestroyed()).subscribe((changes) => {
       console.log('Lookup value changes:', changes);
     });
-  }
-
-  public ngOnDestroy(): void {
-    this.#subscriptions.unsubscribe();
   }
 
   public onSubmit(): void {
@@ -3504,22 +3468,21 @@ export class LookupAddItemExampleComponent implements OnInit, OnDestroy {
   public addClick(args: SkyLookupAddClickEventArgs): void {
     const modal = this.#modalSvc.open(AddItemModalComponent);
 
-    this.#subscriptions.add(
-      modal.closed.subscribe((close) => {
-        if (close.reason === 'save') {
-          const person = close.data as Person;
+    modal.closed.pipe(takeUntilDestroyed(this.#destroyRef)).subscribe((close) => {
+      if (close.reason === 'save') {
+        const person = close.data as Person;
 
-          this.#subscriptions.add(
-            this.#waitSvc.blockingWrap(this.#svc.addPerson(person)).subscribe((data) => {
-              args.itemAdded({
-                item: person,
-                data,
-              });
-            }),
-          );
-        }
-      }),
-    );
+        this.#waitSvc
+          .blockingWrap(this.#svc.addPerson(person))
+          .pipe(takeUntilDestroyed(this.#destroyRef))
+          .subscribe((data) => {
+            args.itemAdded({
+              item: person,
+              data,
+            });
+          });
+      }
+    });
   }
 }
 ```
@@ -3530,13 +3493,13 @@ export class LookupAddItemExampleComponent implements OnInit, OnDestroy {
 <form novalidate [formGroup]="formGroup" (ngSubmit)="save()">
   <sky-modal headingText="Add Item">
     <sky-modal-content>
-      <sky-input-box labelText="Name" hintText="Find an individual by first name">
+      <sky-input-box data-sky-id="add-item-name-field" labelText="Name" hintText="Find an individual by first name">
         <input type="text" autocapitalize="words" autocomplete="off" formControlName="name" />
       </sky-input-box>
     </sky-modal-content>
     <sky-modal-footer>
       <sky-button labelText="Cancel" (buttonClick)="close()" />
-      <sky-button buttonStyle="primary" buttonType="submit" labelText="Add" />
+      <sky-button buttonStyle="primary" buttonType="submit" data-sky-id="add-item-button" labelText="Add" />
     </sky-modal-footer>
   </sky-modal>
 </form>
@@ -3545,8 +3508,8 @@ export class LookupAddItemExampleComponent implements OnInit, OnDestroy {
 #### add-item-modal.component.ts
 
 ```typescript
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Component, inject } from '@angular/core';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { SkyButton, SkyInputBoxModule } from '@skyux/forms';
 import { SkyModalInstance, SkyModalModule } from '@skyux/modals';
 
@@ -3555,8 +3518,7 @@ let nextId = 21;
 @Component({
   selector: 'app-add-item-modal',
   templateUrl: './add-item-modal.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [FormsModule, ReactiveFormsModule, SkyButton, SkyInputBoxModule, SkyModalModule],
+  imports: [ReactiveFormsModule, SkyButton, SkyInputBoxModule, SkyModalModule],
 })
 export class AddItemModalComponent {
   protected readonly formGroup: FormGroup;
@@ -3620,8 +3582,10 @@ export class AddItemModalComponent {
 ```typescript
 import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SkyInputBoxHarness } from '@skyux/forms/testing';
+import { provideNoopSkyAnimations } from '@skyux/core';
+import { SkyButtonHarness, SkyInputBoxHarness } from '@skyux/forms/testing';
 import { SkyLookupHarness } from '@skyux/lookup/testing';
+import { SkyModalHarness } from '@skyux/modals/testing';
 
 import { of } from 'rxjs';
 
@@ -3648,7 +3612,10 @@ describe('Lookup asynchronous search example', () => {
   beforeEach(() => {
     // Create a mock search service. In a real-world application, the search
     // service would make a web request which should be avoided in unit tests.
-    mockSvc = jasmine.createSpyObj<DemoService>('DemoService', ['search']);
+    mockSvc = jasmine.createSpyObj<DemoService>('DemoService', ['addPerson', 'search']);
+
+    mockSvc.search.and.returnValue(of({ hasMore: false, people: [], totalCount: 0 }));
+    mockSvc.addPerson.and.callFake((person) => of([person]));
 
     TestBed.configureTestingModule({
       imports: [LookupAddItemExampleComponent],
@@ -3657,6 +3624,7 @@ describe('Lookup asynchronous search example', () => {
           provide: DemoService,
           useValue: mockSvc,
         },
+        provideNoopSkyAnimations(),
       ],
     });
   });
@@ -3719,6 +3687,52 @@ describe('Lookup asynchronous search example', () => {
 
     await expectAsync(picker.getSearchAriaLabel()).toBeResolvedTo('Search names');
     await expectAsync(picker.getSaveButtonAriaLabel()).toBeResolvedTo('Select names');
+  });
+
+  describe('add item modal', () => {
+    async function openAddItemModal(
+      fixture: ComponentFixture<LookupAddItemExampleComponent>,
+      lookupHarness: SkyLookupHarness,
+    ): Promise<{
+      modalHarness: SkyModalHarness;
+      nameInputBoxHarness: SkyInputBoxHarness;
+      addButtonHarness: SkyButtonHarness;
+    }> {
+      // The add button is displayed in the lookup's search results dropdown.
+      await lookupHarness.enterText('n');
+      await lookupHarness.clickAddButton();
+
+      const rootLoader = TestbedHarnessEnvironment.documentRootLoader(fixture);
+
+      return {
+        modalHarness: await rootLoader.getHarness(SkyModalHarness),
+        nameInputBoxHarness: await rootLoader.getHarness(SkyInputBoxHarness.with({ dataSkyId: 'add-item-name-field' })),
+        addButtonHarness: await rootLoader.getHarness(SkyButtonHarness.with({ dataSkyId: 'add-item-button' })),
+      };
+    }
+
+    it('should add a new name to the lookup', async () => {
+      const { lookupHarness, fixture } = await setupTest();
+      const { modalHarness, nameInputBoxHarness, addButtonHarness } = await openAddItemModal(fixture, lookupHarness);
+
+      await expectAsync(modalHarness.getHeadingText()).toBeResolvedTo('Add Item');
+
+      await (await nameInputBoxHarness.querySelector('input')).sendKeys('Newman');
+      await addButtonHarness.click();
+
+      expect(mockSvc.addPerson.calls.mostRecent().args[0]).toEqual(jasmine.objectContaining({ name: 'Newman' }));
+      await expectAsync(lookupHarness.getSelectionsText()).toBeResolvedTo(['Shirley', 'Newman']);
+    });
+
+    it('should require a name before adding', async () => {
+      const { lookupHarness, fixture } = await setupTest();
+      const { nameInputBoxHarness, addButtonHarness } = await openAddItemModal(fixture, lookupHarness);
+
+      await addButtonHarness.click();
+
+      await expectAsync(nameInputBoxHarness.hasRequiredError()).toBeResolvedTo(true);
+      expect(mockSvc.addPerson.calls.count()).toBe(0);
+    });
   });
 });
 ```

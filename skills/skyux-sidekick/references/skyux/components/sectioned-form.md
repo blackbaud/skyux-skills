@@ -542,6 +542,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideNoopSkyAnimations } from '@skyux/core';
 import { SkyMediaQueryTestingController, provideSkyMediaQueryTesting } from '@skyux/core/testing';
 import { SkyInputBoxHarness } from '@skyux/forms/testing';
+import { SkyStatusIndicatorHarness } from '@skyux/indicators/testing';
 import { SkySectionedFormHarness } from '@skyux/tabs/testing';
 
 import { TabsSectionedFormModalExampleComponent } from './example.component';
@@ -600,6 +601,34 @@ describe('Sectioned form in a modal example', () => {
 
     await expectAsync(idField?.getProperty('value')).toBeResolvedTo('5324901');
   });
+
+  it('should show an error when the ID is not numeric', async () => {
+    const { sectionedFormHarness } = await setupTest();
+
+    await (
+      await sectionedFormHarness.getSection({
+        sectionHeading: 'Basic information',
+      })
+    ).click();
+
+    const idInputBox = await (
+      await sectionedFormHarness.getActiveSectionContent()
+    )?.queryHarness(SkyInputBoxHarness.with({ dataSkyId: 'id-field' }));
+    const idField = await idInputBox?.querySelector('input');
+
+    await expectAsync(idInputBox?.queryHarnesses(SkyStatusIndicatorHarness)).toBeResolvedTo([]);
+
+    await idField?.clear();
+    await idField?.sendKeys('abc');
+
+    const [errorIndicator] = (await idInputBox?.queryHarnesses(SkyStatusIndicatorHarness)) ?? [];
+    await expectAsync(errorIndicator?.getText()).toBeResolvedTo('Enter a valid value.');
+
+    await idField?.clear();
+    await idField?.sendKeys('123');
+
+    await expectAsync(idInputBox?.queryHarnesses(SkyStatusIndicatorHarness)).toBeResolvedTo([]);
+  });
 });
 ```
 
@@ -634,7 +663,8 @@ describe('Sectioned form in a modal example', () => {
 #### information-form.component.ts
 
 ```typescript
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { SkyInputBoxModule } from '@skyux/forms';
 import { SkyStatusIndicatorModule } from '@skyux/indicators';
@@ -644,10 +674,9 @@ import { SkySectionedFormService } from '@skyux/tabs';
 @Component({
   selector: 'app-information-form',
   templateUrl: './information-form.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [ReactiveFormsModule, SkyInputBoxModule, SkyFluidGridModule, SkyStatusIndicatorModule],
 })
-export class InformationFormComponent implements OnInit {
+export class InformationFormComponent {
   protected id = '5324901';
   protected formGroup: FormGroup<{
     name: FormControl<string>;
@@ -658,7 +687,6 @@ export class InformationFormComponent implements OnInit {
   protected nameRequired = false;
 
   readonly #sectionedFormSvc = inject(SkySectionedFormService);
-  readonly #changeDetector = inject(ChangeDetectorRef);
 
   constructor() {
     this.formGroup = inject(FormBuilder).group({
@@ -669,17 +697,13 @@ export class InformationFormComponent implements OnInit {
         validators: [Validators.pattern('^[0-9]+$')],
       }),
     });
-  }
 
-  public ngOnInit(): void {
-    this.formGroup.valueChanges.subscribe((changes) => {
+    this.formGroup.valueChanges.pipe(takeUntilDestroyed()).subscribe((changes) => {
       this.id = changes.id ?? '';
       this.name = changes.name ?? '';
       this.nameRequired = !!changes.nameRequired;
       this.#checkValidity();
     });
-
-    this.#changeDetector.markForCheck();
   }
 
   #checkValidity(): void {

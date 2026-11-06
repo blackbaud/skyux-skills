@@ -1094,10 +1094,9 @@ describe('Basic date range picker example', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { FormBuilder, FormControl, FormsModule, ReactiveFormsModule, ValidationErrors } from '@angular/forms';
+import { Component, inject } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { FormBuilder, FormControl, ReactiveFormsModule, ValidationErrors } from '@angular/forms';
 import {
   SkyDateRangeCalculation,
   SkyDateRangeCalculator,
@@ -1107,14 +1106,15 @@ import {
   SkyDateRangeService,
 } from '@skyux/datetime';
 
+import { map, startWith, switchMap } from 'rxjs';
+
 /**
  * @title Date range picker with custom calculator
  */
 @Component({
   selector: 'app-datetime-date-range-picker-custom-calculator-example',
   templateUrl: './example.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, SkyDateRangePickerModule],
+  imports: [ReactiveFormsModule, SkyDateRangePickerModule],
 })
 export class DatetimeDateRangePickerCustomCalculatorExampleComponent {
   readonly #dateRangeSvc = inject(SkyDateRangeService);
@@ -1138,8 +1138,26 @@ export class DatetimeDateRangePickerCustomCalculatorExampleComponent {
     lastDonation: this.lastDonation,
   });
 
-  protected selectedCalculator = signal<SkyDateRangeCalculator | undefined>(
-    this.#getCalculatorById(SkyDateRangeCalculatorId.AnyTime),
+  protected readonly selectedCalculatorDescription = toSignal(
+    this.lastDonation.valueChanges.pipe(
+      startWith(this.lastDonation.value),
+      switchMap((value) => this.#getCalculatorById(value.calculatorId).shortDescription$),
+    ),
+  );
+
+  // The picker updates the control after a delay, so derive the error state
+  // from status changes to keep it in sync under OnPush change detection.
+  protected readonly hasDateIsAfterTodayError = toSignal(
+    this.lastDonation.statusChanges.pipe(
+      map(() => {
+        const dateRangeError = this.lastDonation.getError('skyDateRange') as {
+          errors?: ValidationErrors;
+        } | null;
+
+        return !!dateRangeError?.errors?.['dateIsAfterToday'];
+      }),
+    ),
+    { initialValue: false },
   );
 
   constructor() {
@@ -1180,12 +1198,6 @@ export class DatetimeDateRangePickerCustomCalculatorExampleComponent {
       dateBeforeToday.calculatorId,
       SkyDateRangeCalculatorId.AnyTime,
     ];
-
-    this.lastDonation.valueChanges.pipe(takeUntilDestroyed()).subscribe((value) => {
-      const selectedCalculator = this.#getCalculatorById(value?.calculatorId);
-
-      this.selectedCalculator.set(selectedCalculator);
-    });
   }
 
   #getCalculatorById(id: SkyDateRangeCalculatorId): SkyDateRangeCalculator {
@@ -1200,21 +1212,144 @@ export class DatetimeDateRangePickerCustomCalculatorExampleComponent {
 <div class="sky-theme-padding-inset-balanced-l">
   <form [formGroup]="formGroup">
     <sky-date-range-picker
+      data-sky-id="last-donation"
       formControlName="lastDonation"
       [calculatorIds]="customCalculators"
       [helpPopoverContent]="inlineHelpPopover"
       [hintText]="hintText"
       [labelText]="labelText"
     >
-      @if ( lastDonation.errors?.['skyDateRange']?.errors?.['dateIsAfterToday'] ) {
+      @if (hasDateIsAfterTodayError()) {
       <sky-form-error errorName="dateIsAfterToday" errorText="Enter a date before today." />
       }
     </sky-date-range-picker>
   </form>
-  <p>Selected calculator: {{ selectedCalculator()?.shortDescription$ | async }}</p>
+  <p>Selected calculator: {{ selectedCalculatorDescription() }}</p>
 </div>
 
 <ng-template #inlineHelpPopover>
   By default, donations include one-time gifts, pledges, and matching gifts. To customize, see <a>Giving settings</a>.
 </ng-template>
+```
+
+#### example.component.spec.ts
+
+```typescript
+import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideNoopSkyAnimations } from '@skyux/core';
+import { SkyDateRangeCalculatorId, SkyDateRangeService } from '@skyux/datetime';
+import { SkyDateRangePickerHarness } from '@skyux/datetime/testing';
+
+import { firstValueFrom } from 'rxjs';
+
+import { DatetimeDateRangePickerCustomCalculatorExampleComponent } from './example.component';
+
+describe('Date range picker with custom calculator example', () => {
+  async function setupTest(): Promise<{
+    harness: SkyDateRangePickerHarness;
+    fixture: ComponentFixture<DatetimeDateRangePickerCustomCalculatorExampleComponent>;
+  }> {
+    const fixture = TestBed.createComponent(DatetimeDateRangePickerCustomCalculatorExampleComponent);
+    const loader = TestbedHarnessEnvironment.loader(fixture);
+
+    const harness = await loader.getHarness(SkyDateRangePickerHarness.with({ dataSkyId: 'last-donation' }));
+
+    fixture.detectChanges();
+    await fixture.whenStable();
+
+    return { harness, fixture };
+  }
+
+  async function getCustomCalculatorId(shortDescription: string): Promise<SkyDateRangeCalculatorId> {
+    for (const calculator of TestBed.inject(SkyDateRangeService).calculators) {
+      if ((await firstValueFrom(calculator.shortDescription$)) === shortDescription) {
+        return calculator.calculatorId;
+      }
+    }
+
+    throw new Error(`Could not find calculator "${shortDescription}".`);
+  }
+
+  function getSelectedCalculatorText(
+    fixture: ComponentFixture<DatetimeDateRangePickerCustomCalculatorExampleComponent>,
+  ): string | undefined {
+    return (fixture.nativeElement as HTMLElement).querySelector('p')?.textContent?.trim();
+  }
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [DatetimeDateRangePickerCustomCalculatorExampleComponent],
+      providers: [provideNoopSkyAnimations()],
+    });
+  });
+
+  it('should set initial values', async () => {
+    const { harness, fixture } = await setupTest();
+
+    await expectAsync(harness.getLabelText()).toBeResolvedTo('Last donation');
+    await expectAsync(harness.getHintText()).toBeResolvedTo(
+      'Donations received today are updated at the top of each hour.',
+    );
+    await expectAsync(harness.getSelectedCalculator()).toBeResolvedTo(SkyDateRangeCalculatorId.AnyTime);
+    await expectAsync(harness.isDisabled()).toBeResolvedTo(false);
+    await expectAsync(harness.isStartDateVisible()).toBeResolvedTo(false);
+    await expectAsync(harness.isEndDateVisible()).toBeResolvedTo(false);
+
+    expect(getSelectedCalculatorText(fixture)).toBe('Selected calculator: At any time');
+
+    await harness.clickHelpInline();
+    await expectAsync(harness.getHelpPopoverContent()).toBeResolvedTo(
+      'By default, donations include one-time gifts, pledges, and matching gifts. To customize, see Giving settings.',
+    );
+  });
+
+  it('should display the selected calculator', async () => {
+    const { harness, fixture } = await setupTest();
+
+    await harness.selectCalculator(SkyDateRangeCalculatorId.LastFiscalYear);
+    fixture.detectChanges();
+
+    await expectAsync(harness.getSelectedCalculator()).toBeResolvedTo(SkyDateRangeCalculatorId.LastFiscalYear);
+    expect(getSelectedCalculatorText(fixture)).toBe('Selected calculator: Last fiscal year');
+
+    await harness.selectCalculator(await getCustomCalculatorId('Since 1999'));
+    fixture.detectChanges();
+
+    expect(getSelectedCalculatorText(fixture)).toBe('Selected calculator: Since 1999');
+  });
+
+  it('should show start and end dates for a specific range', async () => {
+    const { harness } = await setupTest();
+
+    await harness.selectCalculator(SkyDateRangeCalculatorId.SpecificRange);
+
+    await expectAsync(harness.isStartDateVisible()).toBeResolvedTo(true);
+    await expectAsync(harness.isEndDateVisible()).toBeResolvedTo(true);
+
+    await harness.setStartDateValue('01/01/2024');
+    await harness.setEndDateValue('01/31/2024');
+
+    await expectAsync(harness.getStartDateValue()).toBeResolvedTo('01/01/2024');
+    await expectAsync(harness.getEndDateValue()).toBeResolvedTo('01/31/2024');
+  });
+
+  it('should show an error when the custom calculator receives a future date', async () => {
+    const { harness } = await setupTest();
+
+    await harness.selectCalculator(await getCustomCalculatorId('Date before today'));
+
+    await expectAsync(harness.isStartDateVisible()).toBeResolvedTo(false);
+    await expectAsync(harness.isEndDateVisible()).toBeResolvedTo(true);
+
+    const nextYear = new Date().getFullYear() + 1;
+    await harness.setEndDateValue(`01/01/${nextYear}`);
+
+    await expectAsync(harness.hasError('dateIsAfterToday')).toBeResolvedTo(true);
+
+    await harness.setEndDateValue('01/01/2020');
+
+    await expectAsync(harness.hasError('dateIsAfterToday')).toBeResolvedTo(false);
+  });
+});
 ```

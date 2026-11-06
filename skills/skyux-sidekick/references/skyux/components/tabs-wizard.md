@@ -737,7 +737,7 @@ Only find instances whose `data-sky-id` attribute matches the given value.
 #### example.component.ts (primary file)
 
 ```typescript
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { SkyButton } from '@skyux/forms';
 import { SkyModalService } from '@skyux/modals';
 
@@ -748,7 +748,6 @@ import { ModalComponent } from './modal.component';
  */
 @Component({
   selector: 'app-tabs-wizard-basic-example',
-  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
   imports: [SkyButton],
 })
@@ -767,6 +766,49 @@ export class TabsWizardBasicExampleComponent {
 
 ```html
 <sky-button ariaHasPopup="dialog" labelText="Open Wizard" (buttonClick)="openWizard()" />
+```
+
+#### example.component.spec.ts
+
+```typescript
+import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
+import { TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
+import { provideNoopSkyAnimations } from '@skyux/core';
+import { SkyButtonHarness } from '@skyux/forms/testing';
+import { SkyModalHarness } from '@skyux/modals/testing';
+import { SkyTabsetHarness } from '@skyux/tabs/testing';
+
+import { TabsWizardBasicExampleComponent } from './example.component';
+
+describe('Wizard in a modal example', () => {
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [TabsWizardBasicExampleComponent],
+      providers: [provideNoopSkyAnimations(), provideRouter([])],
+    });
+  });
+
+  it('should open the wizard in a large modal', async () => {
+    const fixture = TestBed.createComponent(TabsWizardBasicExampleComponent);
+    const loader = TestbedHarnessEnvironment.loader(fixture);
+    const rootLoader = TestbedHarnessEnvironment.documentRootLoader(fixture);
+
+    const openButton = await loader.getHarness(SkyButtonHarness);
+    await expectAsync(openButton.getLabelText()).toBeResolvedTo('Open Wizard');
+    await expectAsync(openButton.getAriaHasPopup()).toBeResolvedTo('dialog');
+
+    await openButton.click();
+
+    const modalHarness = await rootLoader.getHarness(SkyModalHarness);
+    await expectAsync(modalHarness.getHeadingText()).toBeResolvedTo('New Member Sign-up');
+    await expectAsync(modalHarness.getSize()).toBeResolvedTo('large');
+
+    const tabsetHarness = await rootLoader.getHarness(SkyTabsetHarness.with({ dataSkyId: 'sign-up-wizard' }));
+    await expectAsync(tabsetHarness.isWizardTabset()).toBeResolvedTo(true);
+    await expectAsync(tabsetHarness.getAriaLabel()).toBeResolvedTo('Sign-up steps');
+  });
+});
 ```
 
 #### modal.component.html
@@ -803,7 +845,7 @@ export class TabsWizardBasicExampleComponent {
             </sky-row>
           </sky-fluid-grid>
         </sky-tab>
-        <sky-tab tabHeading="2. Contact Information" [disabled]="isStep2Disabled">
+        <sky-tab tabHeading="2. Contact Information" [disabled]="isStep2Disabled()">
           <sky-fluid-grid gutterSize="small">
             <sky-row>
               <sky-column [screenSmall]="12" [screenMedium]="6">
@@ -821,7 +863,7 @@ export class TabsWizardBasicExampleComponent {
             </sky-row>
           </sky-fluid-grid>
         </sky-tab>
-        <sky-tab tabHeading="3. More Information" [disabled]="isStep3Disabled">
+        <sky-tab tabHeading="3. More Information" [disabled]="isStep3Disabled()">
           <sky-fluid-grid gutterSize="small">
             <sky-row>
               <sky-column [screenSmall]="12">
@@ -838,7 +880,7 @@ export class TabsWizardBasicExampleComponent {
     <sky-modal-footer>
       <sky-tabset-nav-button buttonType="previous" [tabset]="wizardDemo" />
       <sky-tabset-nav-button buttonType="next" [tabset]="wizardDemo" />
-      <sky-tabset-nav-button buttonType="finish" [tabset]="wizardDemo" [disabled]="isSaveDisabled" />
+      <sky-tabset-nav-button buttonType="finish" [tabset]="wizardDemo" [disabled]="isSaveDisabled()" />
       <sky-button buttonStyle="link" labelText="Cancel" (buttonClick)="onCancelClick()" />
     </sky-modal-footer>
   </sky-modal>
@@ -944,14 +986,51 @@ describe('Wizard tabset demo', () => {
     await nextButton.click();
     await expectAsync(tab2.isActive()).toBeResolvedTo(true);
   });
+
+  it('should enable the third step and the finish button as each step is completed', async () => {
+    const { loader, fixture } = await setupTest({
+      dataSkyId: 'sign-up-wizard',
+    });
+
+    const nextButton = await loader.getHarness(SkyTabsetNavButtonHarness.with({ buttonType: 'next' }));
+
+    const formGroup = fixture.componentInstance.formGroup;
+    formGroup.patchValue({ firstName: 'John', lastName: 'Doe' });
+    fixture.detectChanges();
+
+    await nextButton.click();
+
+    // The next button is disabled until the third step is enabled.
+    await expectAsync(nextButton.isDisabled()).toBeResolvedTo(true);
+
+    formGroup.patchValue({
+      phoneNumber: '6675555309',
+      email: 'john@example.com',
+    });
+    fixture.detectChanges();
+
+    await expectAsync(nextButton.isDisabled()).toBeResolvedTo(false);
+
+    await nextButton.click();
+
+    // The finish button is only displayed on the last step.
+    const finishButton = await loader.getHarness(SkyTabsetNavButtonHarness.with({ buttonType: 'finish' }));
+    await expectAsync(finishButton.isDisabled()).toBeResolvedTo(true);
+
+    formGroup.patchValue({ termsAccepted: true });
+    fixture.detectChanges();
+
+    await expectAsync(finishButton.isDisabled()).toBeResolvedTo(false);
+  });
 });
 ```
 
 #### modal.component.ts
 
 ```typescript
-import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Component, computed, inject } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { FormBuilder, FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 import { SkyButton, SkyCheckboxModule, SkyInputBoxModule } from '@skyux/forms';
 import { SkyFluidGridModule } from '@skyux/layout';
 import { SkyModalInstance, SkyModalModule } from '@skyux/modals';
@@ -961,7 +1040,6 @@ import { SkyTabIndex, SkyTabsModule } from '@skyux/tabs';
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     ReactiveFormsModule,
     SkyButton,
@@ -973,33 +1051,41 @@ import { SkyTabIndex, SkyTabsModule } from '@skyux/tabs';
     SkyTabsModule,
   ],
 })
-export class ModalComponent implements OnInit {
+export class ModalComponent {
   protected activeIndex: SkyTabIndex = 0;
-  public formGroup: FormGroup;
-  protected isSaveDisabled = true;
-  protected isStep2Disabled = true;
-  protected isStep3Disabled = true;
   protected title = 'New Member Sign-up';
 
   readonly #instance = inject(SkyModalInstance);
 
-  constructor() {
-    this.formGroup = inject(FormBuilder).group({
-      firstName: new FormControl('', Validators.required),
-      middleName: new FormControl(''),
-      lastName: new FormControl('', Validators.required),
-      phoneNumber: new FormControl('', Validators.required),
-      email: new FormControl('', Validators.required),
-      termsAccepted: new FormControl(false),
-      mailingList: new FormControl(false),
-    });
-  }
+  public formGroup = inject(FormBuilder).group({
+    firstName: new FormControl('', Validators.required),
+    middleName: new FormControl(''),
+    lastName: new FormControl('', Validators.required),
+    phoneNumber: new FormControl('', Validators.required),
+    email: new FormControl('', Validators.required),
+    termsAccepted: new FormControl(false),
+    mailingList: new FormControl(false),
+  });
 
-  public ngOnInit(): void {
-    this.formGroup.valueChanges.subscribe(() => {
-      this.#checkRequirementsMet();
-    });
-  }
+  readonly #formValue = toSignal(this.formGroup.valueChanges, {
+    initialValue: this.formGroup.value,
+  });
+
+  protected readonly isStep2Disabled = computed(() => {
+    const { firstName, lastName } = this.#formValue();
+
+    return !(firstName && lastName);
+  });
+
+  protected readonly isStep3Disabled = computed(() => {
+    const { phoneNumber, email } = this.#formValue();
+
+    // Validity is not part of the form value, but the form updates it before
+    // emitting the value change that recomputes this signal.
+    return !(phoneNumber && this.formGroup.controls.phoneNumber.valid && email);
+  });
+
+  protected readonly isSaveDisabled = computed(() => !this.#formValue().termsAccepted);
 
   protected onCancelClick(): void {
     this.#instance.cancel();
@@ -1007,18 +1093,6 @@ export class ModalComponent implements OnInit {
 
   protected onSave(): void {
     this.#instance.save();
-  }
-
-  #checkRequirementsMet(): void {
-    this.isStep2Disabled = !(this.formGroup?.get('firstName')?.value && this.formGroup?.get('lastName')?.value);
-
-    this.isStep3Disabled = !(
-      this.formGroup?.get('phoneNumber')?.value &&
-      this.formGroup?.get('phoneNumber')?.valid &&
-      this.formGroup?.get('email')?.value
-    );
-
-    this.isSaveDisabled = !this.formGroup?.get('termsAccepted')?.value;
   }
 }
 ```

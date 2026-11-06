@@ -7,6 +7,20 @@ Reference: https://developer.blackbaud.com/skyux/learn/develop/testing/jasmine-m
 
 The `@skyux-sdk/testing` package provides matchers for Karma and Jasmine unit tests.
 
+## Installation
+
+To add the `@skyux-sdk/testing` package to your project, run the following command:
+
+Bash
+
+    ng add @skyux-sdk/testing
+
+This adds the package and its `axe-core` peer dependency to your `devDependencies`.
+
+## Usage
+
+Installing the package doesn't register the matchers. In each spec file that uses them, import `expect` and `expectAsync` from `@skyux-sdk/testing` to register the matchers with Jasmine and add their types. Use `await expectAsync(...)` for asynchronous matchers, such as `toBeAccessible`.
+
 ## expect
 
 Type: Function

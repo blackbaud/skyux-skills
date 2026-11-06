@@ -222,6 +222,7 @@ Only find blocking or non-blocking instances created by the `SkyWaitService`.
 
 ```typescript
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { SkyCode } from '@skyux/code';
 import { SkyButton } from '@skyux/forms';
 import { SkyWaitModule } from '@skyux/indicators';
 
@@ -239,7 +240,7 @@ import { SkyWaitModule } from '@skyux/indicators';
   `,
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [SkyButton, SkyWaitModule],
+  imports: [SkyButton, SkyCode, SkyWaitModule],
 })
 export class IndicatorsWaitElementExampleComponent {
   protected isWaiting = false;
@@ -252,7 +253,7 @@ export class IndicatorsWaitElementExampleComponent {
 <sky-button data-sky-id="toggle-wait-button" labelText="Toggle wait" (buttonClick)="isWaiting = !isWaiting" />
 
 <div class="wrapper">
-  The <code>sky-wait</code> directive can apply to a large area.
+  The <sky-code>sky-wait</sky-code> directive can apply to a large area.
   <sky-wait data-sky-id="wait-example" [isWaiting]="isWaiting" />
 </div>
 ```

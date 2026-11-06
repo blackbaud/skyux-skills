@@ -872,13 +872,11 @@ export class ModalComponent {
 #### example.component.ts (primary file)
 
 ```typescript
-import { ChangeDetectionStrategy, Component, OnDestroy, inject } from '@angular/core';
+import { Component, DestroyRef, inject, signal } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { SkyButton } from '@skyux/forms';
 import { SkyWaitService } from '@skyux/indicators';
 import { SkyModalConfigurationInterface, SkyModalService } from '@skyux/modals';
-
-import { Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
 
 import { ModalDemoContext } from './context';
 import { ModalDemoData } from './data';
@@ -890,30 +888,23 @@ import { ModalComponent } from './modal.component';
  */
 @Component({
   selector: 'app-modals-modal-basic-with-harness-example',
-  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
   imports: [SkyButton],
 })
-export class ModalsModalBasicWithHarnessExampleComponent implements OnDestroy {
+export class ModalsModalBasicWithHarnessExampleComponent {
   protected modalSize = 'medium';
-  protected exampleValue: string | null | undefined;
-
-  #ngUnsubscribe = new Subject<void>();
+  protected readonly exampleValue = signal<string | null | undefined>(undefined);
 
   readonly #dataSvc = inject(ModalDemoDataService);
+  readonly #destroyRef = inject(DestroyRef);
   readonly #modalSvc = inject(SkyModalService);
   readonly #waitSvc = inject(SkyWaitService);
-
-  public ngOnDestroy(): void {
-    this.#ngUnsubscribe.next();
-    this.#ngUnsubscribe.complete();
-  }
 
   public onOpenModalClick(): void {
     // Display a blocking wait while data is loaded from the data service.
     this.#waitSvc
       .blockingWrap(this.#dataSvc.load())
-      .pipe(takeUntil(this.#ngUnsubscribe))
+      .pipe(takeUntilDestroyed(this.#destroyRef))
       .subscribe((data) => {
         const options: SkyModalConfigurationInterface = {
           providers: [
@@ -931,7 +922,7 @@ export class ModalsModalBasicWithHarnessExampleComponent implements OnDestroy {
         instance.closed.subscribe((result) => {
           if (result.reason === 'save') {
             // Display the updated value.
-            this.exampleValue = (result.data as ModalDemoData).value1;
+            this.exampleValue.set((result.data as ModalDemoData).value1);
           }
         });
       });
@@ -993,8 +984,8 @@ export interface ModalDemoData {
 
 ```html
 <sky-button ariaHasPopup="dialog" labelText="Open modal example" (buttonClick)="onOpenModalClick()" />
-@if (exampleValue) {
-<div>The user entered {{ exampleValue }}</div>
+@if (exampleValue()) {
+<div>The user entered {{ exampleValue() }}</div>
 }
 ```
 
@@ -1003,16 +994,30 @@ export interface ModalDemoData {
 ```typescript
 import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideNoopSkyAnimations } from '@skyux/core';
+import { SkyButtonHarness, SkyInputBoxHarness } from '@skyux/forms/testing';
 import { SkyWaitService } from '@skyux/indicators';
 import { SkyModalHarness } from '@skyux/modals/testing';
 
 import { Observable, of } from 'rxjs';
 
+import { ModalDemoData } from './data';
 import { ModalDemoDataService } from './data.service';
 import { ModalsModalBasicWithHarnessExampleComponent } from './example.component';
 
-class mockWaitSvc {
-  public blockingWrap(data: unknown): Observable<unknown> {
+class MockWaitService {
+  public blockingWrap<T>(observable: Observable<T>): Observable<T> {
+    return observable;
+  }
+}
+
+// Return data synchronously instead of simulating network latency.
+class MockModalDemoDataService {
+  public load(): Observable<ModalDemoData> {
+    return of({ value1: 'Hello world' });
+  }
+
+  public save(data: ModalDemoData): Observable<ModalDemoData> {
     return of(data);
   }
 }
@@ -1042,9 +1047,13 @@ describe('Basic modal', () => {
       providers: [
         {
           provide: SkyWaitService,
-          useClass: mockWaitSvc,
+          useClass: MockWaitService,
         },
-        ModalDemoDataService,
+        {
+          provide: ModalDemoDataService,
+          useClass: MockModalDemoDataService,
+        },
+        provideNoopSkyAnimations(),
       ],
     });
   });
@@ -1064,6 +1073,27 @@ describe('Basic modal', () => {
     await expectAsync(modalHarness.getHelpPopoverContent()).toBeResolvedTo(
       'Use the help inline component to invoke contextual user assistance.',
     );
+  });
+
+  it('should display the saved value after the modal is closed', async () => {
+    const { fixture } = await setupTest();
+    const rootLoader = TestbedHarnessEnvironment.documentRootLoader(fixture);
+
+    const input = await (await rootLoader.getHarness(SkyInputBoxHarness)).querySelector('input');
+
+    await expectAsync(input.getProperty('value')).toBeResolvedTo('Hello world');
+
+    await input.clear();
+    await input.sendKeys('Hello there');
+
+    const buttons = await rootLoader.getAllHarnesses(SkyButtonHarness);
+    const labels = await Promise.all(buttons.map((b) => b.getLabelText()));
+    await buttons[labels.indexOf('Save')].click();
+
+    fixture.detectChanges();
+    await fixture.whenStable();
+
+    expect((fixture.nativeElement as HTMLElement).textContent).toContain('The user entered Hello there');
   });
 });
 ```
@@ -1094,7 +1124,7 @@ describe('Basic modal', () => {
 #### modal.component.ts
 
 ```typescript
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { SkyButton, SkyInputBoxModule } from '@skyux/forms';
 import { SkyWaitService } from '@skyux/indicators';
@@ -1106,7 +1136,6 @@ import { ModalDemoDataService } from './data.service';
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ReactiveFormsModule, SkyButton, SkyInputBoxModule, SkyModalModule],
 })
 export class ModalComponent {
@@ -1145,13 +1174,11 @@ export class ModalComponent {
 #### example.component.ts (primary file)
 
 ```typescript
-import { ChangeDetectionStrategy, Component, OnDestroy, inject } from '@angular/core';
+import { Component, DestroyRef, inject, signal } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { SkyButton } from '@skyux/forms';
 import { SkyWaitService } from '@skyux/indicators';
 import { SkyModalConfigurationInterface, SkyModalService } from '@skyux/modals';
-
-import { Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
 
 import { ModalDemoContext } from './context';
 import { ModalDemoData } from './data';
@@ -1163,30 +1190,23 @@ import { ModalComponent } from './modal.component';
  */
 @Component({
   selector: 'app-modals-modal-basic-with-harness-help-key-example',
-  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
   imports: [SkyButton],
 })
-export class ModalsModalBasicWithHarnessHelpKeyExampleComponent implements OnDestroy {
+export class ModalsModalBasicWithHarnessHelpKeyExampleComponent {
   protected modalSize = 'medium';
-  protected exampleValue: string | null | undefined;
-
-  #ngUnsubscribe = new Subject<void>();
+  protected readonly exampleValue = signal<string | null | undefined>(undefined);
 
   readonly #dataSvc = inject(ModalDemoDataService);
+  readonly #destroyRef = inject(DestroyRef);
   readonly #modalSvc = inject(SkyModalService);
   readonly #waitSvc = inject(SkyWaitService);
-
-  public ngOnDestroy(): void {
-    this.#ngUnsubscribe.next();
-    this.#ngUnsubscribe.complete();
-  }
 
   public onOpenModalClick(): void {
     // Display a blocking wait while data is loaded from the data service.
     this.#waitSvc
       .blockingWrap(this.#dataSvc.load())
-      .pipe(takeUntil(this.#ngUnsubscribe))
+      .pipe(takeUntilDestroyed(this.#destroyRef))
       .subscribe((data) => {
         const options: SkyModalConfigurationInterface = {
           providers: [
@@ -1204,7 +1224,7 @@ export class ModalsModalBasicWithHarnessHelpKeyExampleComponent implements OnDes
         instance.closed.subscribe((result) => {
           if (result.reason === 'save') {
             // Display the updated value.
-            this.exampleValue = (result.data as ModalDemoData).value1;
+            this.exampleValue.set((result.data as ModalDemoData).value1);
           }
         });
       });
@@ -1266,8 +1286,8 @@ export interface ModalDemoData {
 
 ```html
 <sky-button ariaHasPopup="dialog" labelText="Open modal example" (buttonClick)="onOpenModalClick()" />
-@if (exampleValue) {
-<div>The user entered {{ exampleValue }}</div>
+@if (exampleValue()) {
+<div>The user entered {{ exampleValue() }}</div>
 }
 ```
 
@@ -1276,22 +1296,36 @@ export interface ModalDemoData {
 ```typescript
 import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideNoopSkyAnimations } from '@skyux/core';
 import { SkyHelpTestingController, SkyHelpTestingModule } from '@skyux/core/testing';
+import { SkyButtonHarness, SkyInputBoxHarness } from '@skyux/forms/testing';
 import { SkyWaitService } from '@skyux/indicators';
 import { SkyModalHarness } from '@skyux/modals/testing';
 
 import { Observable, of } from 'rxjs';
 
+import { ModalDemoData } from './data';
 import { ModalDemoDataService } from './data.service';
 import { ModalsModalBasicWithHarnessHelpKeyExampleComponent } from './example.component';
 
-class mockWaitSvc {
-  public blockingWrap(data: unknown): Observable<unknown> {
+class MockWaitService {
+  public blockingWrap<T>(observable: Observable<T>): Observable<T> {
+    return observable;
+  }
+}
+
+// Return data synchronously instead of simulating network latency.
+class MockModalDemoDataService {
+  public load(): Observable<ModalDemoData> {
+    return of({ value1: 'Hello world' });
+  }
+
+  public save(data: ModalDemoData): Observable<ModalDemoData> {
     return of(data);
   }
 }
 
-describe('Basic modal', () => {
+describe('Modal with a help key example', () => {
   async function setupTest(): Promise<{
     modalHarness: SkyModalHarness;
     fixture: ComponentFixture<ModalsModalBasicWithHarnessHelpKeyExampleComponent>;
@@ -1318,9 +1352,13 @@ describe('Basic modal', () => {
       providers: [
         {
           provide: SkyWaitService,
-          useClass: mockWaitSvc,
+          useClass: MockWaitService,
         },
-        ModalDemoDataService,
+        {
+          provide: ModalDemoDataService,
+          useClass: MockModalDemoDataService,
+        },
+        provideNoopSkyAnimations(),
       ],
     });
   });
@@ -1331,6 +1369,27 @@ describe('Basic modal', () => {
     await modalHarness.clickHelpInline();
 
     helpController.expectCurrentHelpKey('modal-help');
+  });
+
+  it('should display the saved value after the modal is closed', async () => {
+    const { fixture } = await setupTest();
+    const rootLoader = TestbedHarnessEnvironment.documentRootLoader(fixture);
+
+    const input = await (await rootLoader.getHarness(SkyInputBoxHarness)).querySelector('input');
+
+    await expectAsync(input.getProperty('value')).toBeResolvedTo('Hello world');
+
+    await input.clear();
+    await input.sendKeys('Hello there');
+
+    const buttons = await rootLoader.getAllHarnesses(SkyButtonHarness);
+    const labels = await Promise.all(buttons.map((b) => b.getLabelText()));
+    await buttons[labels.indexOf('Save')].click();
+
+    fixture.detectChanges();
+    await fixture.whenStable();
+
+    expect((fixture.nativeElement as HTMLElement).textContent).toContain('The user entered Hello there');
   });
 });
 ```
@@ -1356,7 +1415,7 @@ describe('Basic modal', () => {
 #### modal.component.ts
 
 ```typescript
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { SkyButton, SkyInputBoxModule } from '@skyux/forms';
 import { SkyWaitService } from '@skyux/indicators';
@@ -1368,7 +1427,6 @@ import { ModalDemoDataService } from './data.service';
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ReactiveFormsModule, SkyButton, SkyInputBoxModule, SkyModalModule],
 })
 export class ModalComponent {
@@ -1407,13 +1465,11 @@ export class ModalComponent {
 #### example.component.ts (primary file)
 
 ```typescript
-import { ChangeDetectionStrategy, Component, OnDestroy, inject } from '@angular/core';
+import { Component, DestroyRef, inject, signal } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { SkyButton } from '@skyux/forms';
 import { SkyWaitService } from '@skyux/indicators';
 import { SkyModalConfigurationInterface, SkyModalService } from '@skyux/modals';
-
-import { Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
 
 import { ModalDemoContext } from './context';
 import { ModalDemoData } from './data';
@@ -1425,30 +1481,23 @@ import { ModalComponent } from './modal.component';
  */
 @Component({
   selector: 'app-modals-modal-with-error-example',
-  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
   imports: [SkyButton],
 })
-export class ModalsModalWithErrorExampleComponent implements OnDestroy {
+export class ModalsModalWithErrorExampleComponent {
   protected modalSize = 'medium';
-  protected exampleValue: string | null | undefined;
-
-  #ngUnsubscribe = new Subject<void>();
+  protected readonly exampleValue = signal<string | null | undefined>(undefined);
 
   readonly #dataSvc = inject(ModalDemoDataService);
+  readonly #destroyRef = inject(DestroyRef);
   readonly #modalSvc = inject(SkyModalService);
   readonly #waitSvc = inject(SkyWaitService);
-
-  public ngOnDestroy(): void {
-    this.#ngUnsubscribe.next();
-    this.#ngUnsubscribe.complete();
-  }
 
   public onOpenModalClick(): void {
     // Display a blocking wait while data is loaded from the data service.
     this.#waitSvc
       .blockingWrap(this.#dataSvc.load())
-      .pipe(takeUntil(this.#ngUnsubscribe))
+      .pipe(takeUntilDestroyed(this.#destroyRef))
       .subscribe((data) => {
         const options: SkyModalConfigurationInterface = {
           providers: [
@@ -1466,7 +1515,7 @@ export class ModalsModalWithErrorExampleComponent implements OnDestroy {
         instance.closed.subscribe((result) => {
           if (result.reason === 'save') {
             // Display the updated value.
-            this.exampleValue = (result.data as ModalDemoData).value1;
+            this.exampleValue.set((result.data as ModalDemoData).value1);
           }
         });
       });
@@ -1530,8 +1579,8 @@ export interface ModalDemoData {
 
 ```html
 <sky-button ariaHasPopup="dialog" labelText="Open modal example" (buttonClick)="onOpenModalClick()" />
-@if (exampleValue) {
-<div>The user entered {{ exampleValue }}</div>
+@if (exampleValue()) {
+<div>The user entered {{ exampleValue() }}</div>
 }
 ```
 
@@ -1540,21 +1589,36 @@ export interface ModalDemoData {
 ```typescript
 import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideNoopSkyAnimations } from '@skyux/core';
+import { SkyButtonHarness, SkyInputBoxHarness } from '@skyux/forms/testing';
 import { SkyWaitService } from '@skyux/indicators';
+import { SkyStatusIndicatorHarness } from '@skyux/indicators/testing';
 import { SkyModalHarness } from '@skyux/modals/testing';
 
 import { Observable, of } from 'rxjs';
 
+import { ModalDemoData } from './data';
 import { ModalDemoDataService } from './data.service';
 import { ModalsModalWithErrorExampleComponent } from './example.component';
 
-class mockWaitSvc {
-  public blockingWrap(data: unknown): Observable<unknown> {
+class MockWaitService {
+  public blockingWrap<T>(observable: Observable<T>): Observable<T> {
+    return observable;
+  }
+}
+
+// Return data synchronously instead of simulating network latency.
+class MockModalDemoDataService {
+  public load(): Observable<ModalDemoData> {
+    return of({ value1: 'Hello world' });
+  }
+
+  public save(data: ModalDemoData): Observable<ModalDemoData> {
     return of(data);
   }
 }
 
-describe('Basic modal', () => {
+describe('Modal with form errors example', () => {
   async function setupTest(): Promise<{
     modalHarness: SkyModalHarness;
     fixture: ComponentFixture<ModalsModalWithErrorExampleComponent>;
@@ -1579,9 +1643,13 @@ describe('Basic modal', () => {
       providers: [
         {
           provide: SkyWaitService,
-          useClass: mockWaitSvc,
+          useClass: MockWaitService,
         },
-        ModalDemoDataService,
+        {
+          provide: ModalDemoDataService,
+          useClass: MockModalDemoDataService,
+        },
+        provideNoopSkyAnimations(),
       ],
     });
   });
@@ -1595,6 +1663,43 @@ describe('Basic modal', () => {
     await expectAsync(modalHarness.getSize()).toBeResolvedTo('medium');
     await expectAsync(modalHarness.isFullPage()).toBeResolvedTo(false);
   });
+
+  it('should display the saved value after the modal is closed', async () => {
+    const { fixture } = await setupTest();
+    const rootLoader = TestbedHarnessEnvironment.documentRootLoader(fixture);
+
+    const input = await (await rootLoader.getHarness(SkyInputBoxHarness)).querySelector('input');
+
+    await expectAsync(input.getProperty('value')).toBeResolvedTo('Hello world');
+
+    await input.clear();
+    await input.sendKeys('Hello there');
+
+    const buttons = await rootLoader.getAllHarnesses(SkyButtonHarness);
+    const labels = await Promise.all(buttons.map((b) => b.getLabelText()));
+    await buttons[labels.indexOf('Save')].click();
+
+    fixture.detectChanges();
+    await fixture.whenStable();
+
+    expect((fixture.nativeElement as HTMLElement).textContent).toContain('The user entered Hello there');
+  });
+
+  it('should display a form error when the save fails', async () => {
+    const { fixture } = await setupTest();
+    const rootLoader = TestbedHarnessEnvironment.documentRootLoader(fixture);
+
+    await expectAsync(rootLoader.getAllHarnesses(SkyStatusIndicatorHarness)).toBeResolvedTo([]);
+
+    const buttons = await rootLoader.getAllHarnesses(SkyButtonHarness);
+    const labels = await Promise.all(buttons.map((b) => b.getLabelText()));
+    await buttons[labels.indexOf('Save form with an error')].click();
+
+    const errorIndicator = await rootLoader.getHarness(SkyStatusIndicatorHarness);
+    await expectAsync(errorIndicator.getText()).toBeResolvedTo('There was an error saving the form.');
+    await expectAsync(errorIndicator.getIndicatorType()).toBeResolvedTo('danger');
+    await expectAsync(errorIndicator.getDescriptionType()).toBeResolvedTo('error');
+  });
 });
 ```
 
@@ -1602,7 +1707,12 @@ describe('Basic modal', () => {
 
 ```html
 <form [formGroup]="exampleForm" (submit)="saveForm()">
-  <sky-modal data-sky-id="modal-example" headingText="Modal title" [isDirty]="exampleForm.dirty" [formErrors]="errors">
+  <sky-modal
+    data-sky-id="modal-example"
+    headingText="Modal title"
+    [isDirty]="exampleForm.dirty"
+    [formErrors]="errors()"
+  >
     <sky-modal-content>
       <sky-input-box labelText="An input inside a modal">
         <input formControlName="value1" type="text" />
@@ -1620,7 +1730,7 @@ describe('Basic modal', () => {
 #### modal.component.ts
 
 ```typescript
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { SkyButton, SkyInputBoxModule } from '@skyux/forms';
 import { SkyWaitService } from '@skyux/indicators';
@@ -1632,7 +1742,6 @@ import { ModalDemoDataService } from './data.service';
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ReactiveFormsModule, SkyButton, SkyInputBoxModule, SkyModalModule],
 })
 export class ModalComponent {
@@ -1645,7 +1754,7 @@ export class ModalComponent {
   readonly #instance = inject(SkyModalInstance);
   readonly #waitSvc = inject(SkyWaitService);
 
-  public errors: SkyModalError[] = [];
+  protected readonly errors = signal<SkyModalError[]>([]);
 
   constructor() {
     this.exampleForm = new FormGroup({
@@ -1666,7 +1775,7 @@ export class ModalComponent {
     // Use the data service to save the data.
 
     this.#waitSvc.blockingWrap(this.#dataSvc.save(this.exampleForm.value, true)).subscribe(() => {
-      this.errors = [{ message: 'There was an error saving the form.' }];
+      this.errors.set([{ message: 'There was an error saving the form.' }]);
     });
   }
 

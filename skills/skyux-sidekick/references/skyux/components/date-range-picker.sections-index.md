@@ -36,4 +36,4 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 20  | SkyDateRangePickerFilters              | testing     | 751–766  | `Read file_path=./date-range-picker.md offset=751 limit=16`  |
 | 21  | SkyFormErrorHarness                    | testing     | 767–802  | `Read file_path=./date-range-picker.md offset=767 limit=36`  |
 | 22  | SkyFormErrorHarnessFilters             | testing     | 803–823  | `Read file_path=./date-range-picker.md offset=803 limit=21`  |
-| 23  | Code Examples                          | examples    | 824–1221 | `Read file_path=./date-range-picker.md offset=824 limit=398` |
+| 23  | Code Examples                          | examples    | 824–1356 | `Read file_path=./date-range-picker.md offset=824 limit=533` |

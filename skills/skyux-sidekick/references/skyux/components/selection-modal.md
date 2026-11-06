@@ -1080,7 +1080,8 @@ export interface SearchResults {
 #### example.component.ts (primary file)
 
 ```typescript
-import { ChangeDetectionStrategy, Component, OnDestroy, inject } from '@angular/core';
+import { Component, DestroyRef, inject, signal } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { SkyButton } from '@skyux/forms';
 import {
   SkySelectionModalAddClickEventArgs,
@@ -1090,7 +1091,6 @@ import {
 } from '@skyux/lookup';
 import { SkyModalService } from '@skyux/modals';
 
-import { Subscription } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { AddItemModalComponent } from './add-item-modal.component';
@@ -1102,22 +1102,16 @@ import { Person } from './person';
  */
 @Component({
   selector: 'app-lookup-selection-modal-add-item-example',
-  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './example.component.html',
   imports: [SkyButton],
 })
-export class LookupSelectionModalAddItemExampleComponent implements OnDestroy {
-  protected selectedPeople: Person[] | undefined;
+export class LookupSelectionModalAddItemExampleComponent {
+  protected readonly selectedPeople = signal<Person[]>([]);
 
-  #subscriptions = new Subscription();
-
+  readonly #destroyRef = inject(DestroyRef);
   readonly #modalSvc = inject(SkyModalService);
   readonly #searchSvc = inject(ExampleService);
   readonly #selectionModalSvc = inject(SkySelectionModalService);
-
-  public ngOnDestroy(): void {
-    this.#subscriptions.unsubscribe();
-  }
 
   protected showSelectionModal(): void {
     const instance = this.#selectionModalSvc.open({
@@ -1139,25 +1133,21 @@ export class LookupSelectionModalAddItemExampleComponent implements OnDestroy {
       addClick: (args: SkySelectionModalAddClickEventArgs) => {
         const modal = this.#modalSvc.open(AddItemModalComponent);
 
-        this.#subscriptions.add(
-          modal.closed.subscribe((close) => {
-            if (close.reason === 'save') {
-              const person = close.data as Person;
-              this.#searchSvc.addItem(person);
-              args.itemAdded({ item: person });
-            }
-          }),
-        );
+        modal.closed.pipe(takeUntilDestroyed(this.#destroyRef)).subscribe((close) => {
+          if (close.reason === 'save') {
+            const person = close.data as Person;
+            this.#searchSvc.addItem(person);
+            args.itemAdded({ item: person });
+          }
+        });
       },
     });
 
-    this.#subscriptions.add(
-      instance.closed.subscribe((args: SkySelectionModalCloseArgs) => {
-        if (args.reason === 'save') {
-          this.selectedPeople = args.selectedItems as Person[];
-        }
-      }),
-    );
+    instance.closed.pipe(takeUntilDestroyed(this.#destroyRef)).subscribe((args: SkySelectionModalCloseArgs) => {
+      if (args.reason === 'save') {
+        this.selectedPeople.set(args.selectedItems as Person[]);
+      }
+    });
   }
 }
 ```
@@ -1168,12 +1158,12 @@ export class LookupSelectionModalAddItemExampleComponent implements OnDestroy {
 <form novalidate [formGroup]="formGroup" (ngSubmit)="save()">
   <sky-modal headingText="Add Item">
     <sky-modal-content>
-      <sky-input-box labelText="Name">
+      <sky-input-box data-sky-id="add-item-name-field" labelText="Name">
         <input type="text" autocapitalize="words" autocomplete="off" formControlName="name" />
       </sky-input-box>
     </sky-modal-content>
     <sky-modal-footer>
-      <sky-button buttonStyle="primary" buttonType="submit" labelText="Add" />
+      <sky-button buttonStyle="primary" buttonType="submit" data-sky-id="add-item-button" labelText="Add" />
       <sky-button buttonStyle="link" labelText="Cancel" (buttonClick)="close()" />
     </sky-modal-footer>
   </sky-modal>
@@ -1183,7 +1173,7 @@ export class LookupSelectionModalAddItemExampleComponent implements OnDestroy {
 #### add-item-modal.component.ts
 
 ```typescript
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { SkyButton, SkyInputBoxModule } from '@skyux/forms';
 import { SkyModalInstance, SkyModalModule } from '@skyux/modals';
@@ -1193,7 +1183,6 @@ let nextId = 21;
 @Component({
   selector: 'app-add-item-modal',
   templateUrl: './add-item-modal.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ReactiveFormsModule, SkyButton, SkyInputBoxModule, SkyModalModule],
 })
 export class AddItemModalComponent {
@@ -1234,11 +1223,11 @@ export class AddItemModalComponent {
   />
 </div>
 
-@if (selectedPeople?.length) {
+@if (selectedPeople().length) {
 <div>
   Selected people:
   <ul class="selection-modal-example-selected">
-    @for (selectedPerson of selectedPeople; track selectedPerson) {
+    @for (selectedPerson of selectedPeople(); track selectedPerson) {
     <li>{{ selectedPerson.name }}</li>
     }
   </ul>
@@ -1251,7 +1240,8 @@ export class AddItemModalComponent {
 ```typescript
 import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SkyButtonHarness } from '@skyux/forms/testing';
+import { provideNoopSkyAnimations } from '@skyux/core';
+import { SkyButtonHarness, SkyInputBoxHarness } from '@skyux/forms/testing';
 import { SkySelectionModalHarness } from '@skyux/lookup/testing';
 
 import { of } from 'rxjs';
@@ -1286,7 +1276,7 @@ describe('Selection modal example', () => {
   beforeEach(() => {
     // Create a mock search service. In a real-world application, the search
     // service would make a web request which should be avoided in unit tests.
-    mockSvc = jasmine.createSpyObj<ExampleService>('ExampleService', ['search']);
+    mockSvc = jasmine.createSpyObj<ExampleService>('ExampleService', ['addItem', 'search']);
 
     mockSvc.search.and.callFake((searchText) => {
       return of({
@@ -1306,7 +1296,7 @@ describe('Selection modal example', () => {
 
     TestBed.configureTestingModule({
       imports: [LookupSelectionModalAddItemExampleComponent],
-      providers: [{ provide: ExampleService, useValue: mockSvc }],
+      providers: [{ provide: ExampleService, useValue: mockSvc }, provideNoopSkyAnimations()],
     });
   });
 
@@ -1344,6 +1334,47 @@ describe('Selection modal example', () => {
 
     await expectAsync(harness.getSearchAriaLabel()).toBeResolvedTo('Search person');
     await expectAsync(harness.getSaveButtonAriaLabel()).toBeResolvedTo('Select person');
+  });
+
+  describe('add item modal', () => {
+    it('should select a newly added person', async () => {
+      const { harness, el, fixture } = await setupTest();
+      await harness.clickAddButton();
+
+      const rootLoader = TestbedHarnessEnvironment.documentRootLoader(fixture);
+      const nameInputBoxHarness = await rootLoader.getHarness(
+        SkyInputBoxHarness.with({ dataSkyId: 'add-item-name-field' }),
+      );
+      const addButtonHarness = await rootLoader.getHarness(SkyButtonHarness.with({ dataSkyId: 'add-item-button' }));
+
+      await (await nameInputBoxHarness.querySelector('input')).sendKeys('Newman');
+      await addButtonHarness.click();
+
+      expect(mockSvc.addItem.calls.mostRecent().args[0]).toEqual(jasmine.objectContaining({ name: 'Newman' }));
+
+      await harness.saveAndClose();
+
+      const selectedItemEls = el.querySelectorAll<HTMLLIElement>('.selection-modal-example-selected li');
+
+      expect(selectedItemEls).toHaveSize(1);
+      expect(selectedItemEls[0].innerText.trim()).toBe('Newman');
+    });
+
+    it('should require a name before adding', async () => {
+      const { harness, fixture } = await setupTest();
+      await harness.clickAddButton();
+
+      const rootLoader = TestbedHarnessEnvironment.documentRootLoader(fixture);
+      const nameInputBoxHarness = await rootLoader.getHarness(
+        SkyInputBoxHarness.with({ dataSkyId: 'add-item-name-field' }),
+      );
+      const addButtonHarness = await rootLoader.getHarness(SkyButtonHarness.with({ dataSkyId: 'add-item-button' }));
+
+      await addButtonHarness.click();
+
+      await expectAsync(nameInputBoxHarness.hasRequiredError()).toBeResolvedTo(true);
+      expect(mockSvc.addItem.calls.count()).toBe(0);
+    });
   });
 });
 ```

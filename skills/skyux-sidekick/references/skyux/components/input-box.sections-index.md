@@ -35,4 +35,4 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 19  | SkyInputBoxHarnessFilters       | testing     | 729–744  | `Read file_path=./input-box.md offset=729 limit=16`   |
 | 20  | SkyFormErrorHarness             | testing     | 745–780  | `Read file_path=./input-box.md offset=745 limit=36`   |
 | 21  | SkyFormErrorHarnessFilters      | testing     | 781–801  | `Read file_path=./input-box.md offset=781 limit=21`   |
-| 22  | Code Examples                   | examples    | 802–2477 | `Read file_path=./input-box.md offset=802 limit=1676` |
+| 22  | Code Examples                   | examples    | 802–2467 | `Read file_path=./input-box.md offset=802 limit=1666` |

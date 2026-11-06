@@ -11,7 +11,7 @@ Monitor this page for updates to the SKY UX API that are not yet fully documente
 
 ### New code component
 
-The [code component](../components/code.md) displays an inline code token, such as a file name or property name, within a body of text.
+The [code component](../components/code.md) formats text, such as a file name or property name, to display an inline code fragment within a larger body of text.
 
 This component is in preview and will be officially supported in an upcoming minor version of SKY UX v15.
 

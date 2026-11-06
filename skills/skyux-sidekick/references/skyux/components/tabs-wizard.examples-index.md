@@ -12,4 +12,4 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example           | Lines    | Read invocation                                        |
 | --- | ----------------- | -------- | ------------------------------------------------------ |
-| 1   | Wizard in a modal | 735–1025 | `Read file_path=./tabs-wizard.md offset=735 limit=291` |
+| 1   | Wizard in a modal | 735–1099 | `Read file_path=./tabs-wizard.md offset=735 limit=365` |

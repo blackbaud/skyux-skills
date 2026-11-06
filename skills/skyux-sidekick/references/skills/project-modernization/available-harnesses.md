@@ -157,6 +157,7 @@ In addition to harnesses (`Sky*Harness`), this list includes the other testing u
 - `SkyActionButtonContainerHarness`
 - `SkyActionButtonHarness`
 - `SkyBackToTopHarness`
+- `SkyBlockquoteHarness`
 - `SkyBoxHarness`
 - `SkyColumnHarness`
 - `SkyDescriptionListContentHarness`

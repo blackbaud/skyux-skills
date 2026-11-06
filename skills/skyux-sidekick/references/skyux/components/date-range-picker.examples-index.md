@@ -14,4 +14,4 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 | --- | ---------------------------------------- | --------- | ------------------------------------------------------------- |
 | 1   | Date range picker with basic setup       | 826–975   | `Read file_path=./date-range-picker.md offset=826 limit=150`  |
 | 2   | Date range picker with help key          | 976–1091  | `Read file_path=./date-range-picker.md offset=976 limit=116`  |
-| 3   | Date range picker with custom calculator | 1092–1221 | `Read file_path=./date-range-picker.md offset=1092 limit=130` |
+| 3   | Date range picker with custom calculator | 1092–1356 | `Read file_path=./date-range-picker.md offset=1092 limit=265` |

@@ -29,7 +29,7 @@ Don't use code components when code spans multiple lines. Display multiline code
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/code/code-usage-2.7c93a1a1.png)
 
-Don't use code components for multiple lines of computer code.
+Don't use code components for multiple lines of code.
 
 Don't use code components to emphasize text that isn't code. Use [typography styles](../design/styles/typography.md) instead.
 

@@ -36,4 +36,4 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 20  | SkyDatepickerCalendarHarness        | testing     | 651–720   | `Read file_path=./datepicker.md offset=651 limit=70`   |
 | 21  | SkyDatepickerCalendarHarnessFilters | testing     | 721–728   | `Read file_path=./datepicker.md offset=721 limit=8`    |
 | 22  | SkyInputBoxHarness                  | testing     | 729–1032  | `Read file_path=./datepicker.md offset=729 limit=304`  |
-| 23  | Code Examples                       | examples    | 1033–1442 | `Read file_path=./datepicker.md offset=1033 limit=410` |
+| 23  | Code Examples                       | examples    | 1033–1445 | `Read file_path=./datepicker.md offset=1033 limit=413` |

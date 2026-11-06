@@ -1670,6 +1670,7 @@ import {
   ValidationErrors,
   Validators,
 } from '@angular/forms';
+import { SkyCode } from '@skyux/code';
 import { SkyDatepickerModule } from '@skyux/datetime';
 import { SkyInputBoxModule } from '@skyux/forms';
 
@@ -1698,7 +1699,7 @@ function validateDate(control: AbstractControl<Date | string | null>): Validatio
   selector: 'app-datetime-datepicker-basic-example',
   templateUrl: './example.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, SkyDatepickerModule, SkyInputBoxModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, SkyCode, SkyDatepickerModule, SkyInputBoxModule],
 })
 export class DatetimeDatepickerBasicExampleComponent {
   protected formGroup: FormGroup<DemoForm>;
@@ -1740,7 +1741,7 @@ export class DatetimeDatepickerBasicExampleComponent {
     </sky-input-box>
   </form>
 
-  <p>Selected date: <code>{{ startDate.value | json }}</code></p>
+  <p>Selected date: <sky-code>{{ startDate.value | json }}</sky-code></p>
 </div>
 ```
 
@@ -1818,14 +1819,14 @@ describe('Basic datepicker example', () => {
 #### example.component.ts (primary file)
 
 ```typescript
-import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
+import { JsonPipe } from '@angular/common';
+import { Component, inject } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import {
   AbstractControl,
   FormBuilder,
   FormControl,
   FormGroup,
-  FormsModule,
   ReactiveFormsModule,
   ValidationErrors,
 } from '@angular/forms';
@@ -1849,18 +1850,9 @@ import { Person } from './person';
 @Component({
   selector: 'app-lookup-single-select-example',
   templateUrl: './example.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    SkyButton,
-    SkyFormErrorModule,
-    SkyInputBoxModule,
-    SkyLookupModule,
-  ],
+  imports: [JsonPipe, ReactiveFormsModule, SkyButton, SkyFormErrorModule, SkyInputBoxModule, SkyLookupModule],
 })
-export class LookupSingleSelectExampleComponent implements OnInit {
+export class LookupSingleSelectExampleComponent {
   public favoritesForm: FormGroup<{
     favoriteName: FormControl<Person[] | null>;
   }>;
@@ -1890,12 +1882,10 @@ export class LookupSingleSelectExampleComponent implements OnInit {
     this.favoritesForm = inject(FormBuilder).group({
       favoriteName: name,
     });
-  }
 
-  public ngOnInit(): void {
     // If you need to execute some logic after the lookup values change,
     // subscribe to Angular's built-in value changes observable.
-    this.favoritesForm.valueChanges.subscribe((changes) => {
+    this.favoritesForm.valueChanges.pipe(takeUntilDestroyed()).subscribe((changes) => {
       console.log('Lookup value changes:', changes);
     });
   }
