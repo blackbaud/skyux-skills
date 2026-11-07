@@ -516,6 +516,30 @@ Harness for interacting with a bar chart component in tests.
 
 ### Methods
 
+#### `getLegendItem(filters: SkyChartLegendItemHarnessFilters): Promise<SkyChartLegendItemHarness>`
+
+Gets the harness for the legend item that meets the given criteria. The legend renders only when the chart has multiple series.
+
+#### Parameters
+
+##### `filters: SkyChartLegendItemHarnessFilters`
+
+#### Returns
+
+`Promise<SkyChartLegendItemHarness>`
+
+#### `getLegendItems(filters?: SkyChartLegendItemHarnessFilters): Promise<SkyChartLegendItemHarness[]>`
+
+Gets the harnesses for the legend items that meet the given criteria. The legend renders only when the chart has multiple series.
+
+#### Parameters
+
+##### `filters?: SkyChartLegendItemHarnessFilters`
+
+#### Returns
+
+`Promise<SkyChartLegendItemHarness[]>`
+
 #### `isChartRendered(): Promise<boolean>`
 
 Whether the bar chart has rendered its plot. The plot renders once the chart is given a category axis, a value axis, and at least one series.
@@ -746,6 +770,73 @@ Only find instances whose `data-sky-id` attribute matches the given value.
 #### `headingText?: string | RegExp`
 
 Only find instances whose heading text matches the given value.
+
+## SkyChartLegendItemHarness
+
+Type: Class
+
+`import { SkyChartLegendItemHarness } from '@skyux/charts/testing';`
+
+Harness for interacting with a chart legend item in tests. Each legend item represents a series and toggles that series' visibility when clicked.
+
+### Methods
+
+#### `click(): Promise<void>`
+
+Clicks the legend item, which toggles the visibility of its series.
+
+#### Returns
+
+`Promise<void>`
+
+#### `getLabelText(): Promise<string>`
+
+Gets the label text of the series the legend item represents.
+
+#### Returns
+
+`Promise<string>`
+
+#### `isSeriesVisible(): Promise<boolean>`
+
+Whether the series the legend item represents is visible in the chart.
+
+#### Returns
+
+`Promise<boolean>`
+
+#### `SkyChartLegendItemHarness.with(filters: SkyChartLegendItemHarnessFilters): HarnessPredicate<SkyChartLegendItemHarness>`
+
+Gets a `HarnessPredicate` that can be used to search for a `SkyChartLegendItemHarness` that meets certain criteria.
+
+#### Parameters
+
+##### `filters: SkyChartLegendItemHarnessFilters`
+
+#### Returns
+
+`HarnessPredicate<SkyChartLegendItemHarness>`
+
+## SkyChartLegendItemHarnessFilters
+
+Type: Interface
+
+A set of criteria for filtering `SkyChartLegendItemHarness` instances.
+
+    interface SkyChartLegendItemHarnessFilters {
+      dataSkyId?: string | RegExp;
+      labelText?: string | RegExp;
+    }
+
+### Properties
+
+#### `dataSkyId?: string | RegExp`
+
+Only find instances whose `data-sky-id` attribute matches the given value.
+
+#### `labelText?: string | RegExp`
+
+Only find instances whose label text matches the given value.
 
 ## SkyChartTableModalHarness
 

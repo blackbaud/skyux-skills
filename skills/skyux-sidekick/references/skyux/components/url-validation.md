@@ -95,7 +95,7 @@ Type: Function Preview
 
 Validates that a signal forms field contains a valid URL. Apply inside a `form()` schema. Empty values pass; combine with Angular's `required` rule to require a value.
 
-    function skyUrl(path: SchemaPath<string | undefined, 1, TPathKind>, options?: <a class="sky-docs-codespan-anchor" href="https://developer.blackbaud.com/skyux/components/url-validation?docs-active-tab=design#interface_sky-url-validation-options">SkyUrlValidationOptions</a>): void
+    function skyUrl(path: SchemaPath<string | undefined, 1, TPathKind>, options?: SkyUrlValidationOptions): void
 
 ### Parameters
 

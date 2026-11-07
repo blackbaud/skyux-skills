@@ -67,7 +67,7 @@ Type: Function
 
 Registers a listener to receive instrumentation events. Provide this in your application config so that components in lazy-loaded routes can reach the listener.
 
-    function provideSkyInstrumentationListener(listener: Type<<a class="sky-docs-codespan-anchor" href="https://developer.blackbaud.com/skyux/components/instrumentation?docs-active-tab=design#interface_sky-instrumentation-listener">SkyInstrumentationListener</a>>): EnvironmentProviders
+    function provideSkyInstrumentationListener(listener: Type<SkyInstrumentationListener>): EnvironmentProviders
 
 ### Parameters
 

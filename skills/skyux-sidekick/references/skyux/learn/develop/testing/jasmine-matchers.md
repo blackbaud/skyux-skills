@@ -27,7 +27,7 @@ Type: Function
 
 Create an expectation for a spec.
 
-    function expect(actual: T): <a class="sky-docs-codespan-anchor" href="https://developer.blackbaud.com/skyux/learn/develop/testing/jasmine-matchers#interface_sky-matchers">SkyMatchers</a><T>
+    function expect(actual: T): SkyMatchers<T>
 
 ### Parameters
 
@@ -41,7 +41,7 @@ Type: Function
 
 Create an async expectation for a spec.
 
-    function expectAsync(actual: T | PromiseLike<T>): <a class="sky-docs-codespan-anchor" href="https://developer.blackbaud.com/skyux/learn/develop/testing/jasmine-matchers#interface_sky-async-matchers">SkyAsyncMatchers</a><T, U>
+    function expectAsync(actual: T | PromiseLike<T>): SkyAsyncMatchers<T, U>
 
 ### Parameters
 

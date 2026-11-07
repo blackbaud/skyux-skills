@@ -2,7 +2,7 @@
 
 # Code examples — all components
 
-84 of 90 components have a `## Code Examples` section in their source docs.
+85 of 91 components have a `## Code Examples` section in their source docs.
 
 ## Components with code examples
 
@@ -16,6 +16,7 @@
 | autonumeric                  | 4        | [autonumeric.examples-index.md](./autonumeric.examples-index.md)                                   |
 | avatar                       | 1        | [avatar.examples-index.md](./avatar.examples-index.md)                                             |
 | back-to-top                  | 2        | [back-to-top.examples-index.md](./back-to-top.examples-index.md)                                   |
+| blockquote                   | 1        | [blockquote.examples-index.md](./blockquote.examples-index.md)                                     |
 | box                          | 2        | [box.examples-index.md](./box.examples-index.md)                                                   |
 | card                         | 1        | [card.examples-index.md](./card.examples-index.md)                                                 |
 | chart-bar                    | 12       | [chart-bar.examples-index.md](./chart-bar.examples-index.md)                                       |

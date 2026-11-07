@@ -31,5 +31,5 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 15  | SkyDataGridSort              | development | 474–496  | `Read file_path=./data-grid-component.md offset=474 limit=23`   |
 | 16  | SkyDataGridHarness           | testing     | 497–732  | `Read file_path=./data-grid-component.md offset=497 limit=236`  |
 | 17  | SkyDataGridHarnessFilters    | testing     | 733–748  | `Read file_path=./data-grid-component.md offset=733 limit=16`   |
-| 18  | provideSkyDataGridTesting    | testing     | 749–758  | `Read file_path=./data-grid-component.md offset=749 limit=10`   |
-| 19  | Code Examples                | examples    | 759–2505 | `Read file_path=./data-grid-component.md offset=759 limit=1747` |
+| 18  | provideSkyDataGridTesting    | testing     | 749–756  | `Read file_path=./data-grid-component.md offset=749 limit=8`    |
+| 19  | Code Examples                | examples    | 757–2503 | `Read file_path=./data-grid-component.md offset=757 limit=1747` |

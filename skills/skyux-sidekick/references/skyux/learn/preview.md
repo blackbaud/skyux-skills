@@ -9,6 +9,12 @@ Monitor this page for updates to the SKY UX API that are not yet fully documente
 
 ## November 2026
 
+### New blockquote component
+
+The [blockquote component](../components/blockquote.md) sets a quotation, such as a customer testimonial, apart from the surrounding body text.
+
+This component is in preview and will be officially supported in an upcoming minor version of SKY UX v15.
+
 ### New code component
 
 The [code component](../components/code.md) formats text, such as a file name or property name, to display an inline code fragment within a larger body of text.
