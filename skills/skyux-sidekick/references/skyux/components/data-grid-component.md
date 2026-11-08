@@ -754,6 +754,8 @@ Configures every data grid in the test to disable AG Grid's row/column virtualiz
 
     function provideSkyDataGridTesting(): Provider[]
 
+Loading complete.
+
 ## Code Examples
 
 ### Basic data grid
