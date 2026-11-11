@@ -109,7 +109,7 @@ To maintain visual balance, use SKY UX spacing values to separate elements.
 
 Use small spot illustrations in this horizontal layout to draw user attention to important actions.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spot-illustrations/spot-illustration-spacing-left-aligned.22879bd6.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spot-illustrations/spot-illustration-spacing-left-aligned.7fc7861c.png)
 
 Spacing for left-aligned illustrations and text.
 

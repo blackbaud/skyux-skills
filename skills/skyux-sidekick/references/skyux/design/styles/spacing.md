@@ -47,11 +47,11 @@ Containers require padding to set content apart from their edges. The amount of 
 
 Do use padding classes for even spacing around the inside edges of containers.
 
-### Extra small and small
+### Extra-small and small
 
-Extra small and small container padding is typically applied to nested containers within another padded region. The content is already visually separated by the surrounding structure, and this padding helps maintain internal clarity without compounding whitespace.
+Extra-small and small container padding is typically applied to nested containers within another padded region. The content is already visually separated by the surrounding structure, and this padding helps maintain internal clarity without compounding whitespace.
 
-Example:
+Small example:
 
 - [Alert](../../components/alert.md)
 
@@ -59,20 +59,20 @@ Example:
 
 Medium container padding helps create a comfortable reading boundary without elevating a container's visual weight. It typically is used within secondary or supporting content regions or containers that don't sit directly against the viewport edge, such as [alerts](../../components/alert.md) and [toasts](../../components/toast.md).
 
-Examples:
+Medium example:
 
 - [Split view](../../components/split-view.md) content panel
 - [Tab](../../components/tabs.md) content panel
 
-### Large and extra large
+### Large and extra-large
 
-Large and extra-large container padding establishes a strong internal boundary so that content does not feel constrained or edge-bound. It's typically used within containers or content regions that act as a primary content region or surface, such the content panel on [split view page layouts](../guidelines/page-layouts/split-view-page.md) . These containers are visually prominent and tend to house a large amount of cotent.
+Large and extra-large container padding establishes a strong internal boundary so that content does not feel constrained or edge-bound. It's typically used within containers or content regions that act as a primary content region or surface, such as the content panel on [split view page layouts](../guidelines/page-layouts/split-view-page.md). These containers are visually prominent and tend to house a large amount of content.
 
 Large example:
 
 - [Popover](../../components/popover.md)
 
-Extra large examples:
+Extra-large examples:
 
 - [Action button](../../components/action-button.md)
 - [Box](../../components/box.md)
@@ -90,7 +90,7 @@ The guidance below focuses on applying vertical and horizontal spacing within co
 
 ### Spacing values
 
-Spacing between elements indicates how closely related the elements are. The closer the relationship, the less spacing is required. The available spacing values are: None, Extra small, Small, Medium, Large, Extra large, and Extra, extra large. None only applies to vertical spacing, while Medium and Extra, extra large only apply to horizontal spacing.
+Spacing between elements indicates how closely related the elements are. The closer the relationship, the less spacing is required. The available spacing values are: None, Extra-small, Small, Medium, Large, Extra-large, and Extra-extra-large. None only applies to vertical spacing, while Medium and Extra-extra-large only apply to horizontal spacing.
 
 Apply spacing between adjacent block-level elements in a content region. The vertical or horizontal orientation of the content determines which spacing values to use. For each orientation, a matrix defines the exact spacing to apply for common content patterns. For consistent, predictable results, follow these patterns.
 
@@ -136,7 +136,7 @@ Use with elements that form a single semantic entity.
     <tr>
       <td>
 
-**Extra small**
+**Extra-small**
 
 </td>
       <td>
@@ -168,7 +168,7 @@ Use with closely related elements in the same group.
 </td>
       <td>
 
-- Homogenous items in a set, such as links in a list
+- Homogeneous items in a set, such as links in a list
 - Headings (H2, H3) and content
 
 </td>
@@ -189,14 +189,14 @@ Use with distinct, peer groups of content.
       <td>
 
 - Sections and headings
-- Distinct or heterogenous content related to a parent group
+- Distinct or heterogeneous content related to a parent group
 
 </td>
     </tr>
     <tr>
       <td>
 
-**Extra large**
+**Extra-large**
 
 </td>
       <td>
@@ -227,22 +227,22 @@ Use no spacing classes when elements form a single semantic entity that should r
 
 Do use no spacing for single semantic entities.
 
-### Extra small
+### Extra-small
 
-Use extra small spacing classes when adjacent elements form a bound relationship within the same object. Apply between:
+Use extra-small spacing classes when adjacent elements form a bound relationship within the same object. Apply between:
 
 - Small sets of information about an entity, such as identifying text and its metadata, supplemental details, or status information
 - Small headings (H4, H5) and content
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/xs-vertical.cb117d20.png)
 
-Do use extra small spacing for closely related elements that form a bound unit.
+Do use extra-small spacing for closely related elements that form a bound unit.
 
 ### Small
 
 Use small spacing classes as the default spacing flow when elements belong to the same group and contribute equally to the meaning. Apply between:
 
-- Homogenous items in a set, such as links in a list, [description list](../../components/description-list.md) pairs, and [key info](../../components/key-info.md) items
+- Homogeneous items in a set, such as links in a list, [description list](../../components/description-list.md) pairs, and [key info](../../components/key-info.md) items
 - Headings (H2, H3) and content
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/s-vertical.0bd91c10.png)
@@ -254,7 +254,7 @@ Do use content spacing when elements belong to the same content group and contri
 Use large spacing classes when distinct peer sections of content appear in a container or page section. Apply between:
 
 - Sections and headings
-- Distinct or heterogenous content related to a parent group
+- Distinct or heterogeneous content related to a parent group
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/l-vertical-1.bc7605bd.png)
 
@@ -262,18 +262,18 @@ Do use section spacing to separate distinct content groups that don't belong to 
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/l-vertical-2.d264126f.png)
 
-Don't use section spacing to articulate close relationships
+Don't use section spacing to articulate close relationships between content.
 
-### Extra large
+### Extra-large
 
-Use extra large spacing classes when a strong separation is required for loosely related regions in a container or for content and container-level actions. Apply between:
+Use extra-large spacing classes when a strong separation is required for loosely related regions in a container or for content and container-level actions. Apply between:
 
 - New or distinct content from other content
 - Elements set off for more attention within a container, such as drill-in links
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/xl-vertical.de457dd9.png)
 
-Do separate drill-in links from content groups using extra large spacing to signal a transition from reading content to taking action.
+Do separate drill-in links from content groups using extra-large spacing to signal a transition from reading content to taking action.
 
 ## Horizontal spacing
 
@@ -320,7 +320,7 @@ Do use large gutters to separate containers without visible borders.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/large-gutters-2.695effc8.png)
 
-Do use large gutters to separate content in large areas
+Do use large gutters to separate content in large areas.
 
 ### Disable margin for fluid grid in containers
 
@@ -350,7 +350,7 @@ Separates
     <tr>
       <td>
 
-**Extra small**
+**Extra-small**
 
 </td>
       <td>
@@ -401,7 +401,7 @@ Use with elements for visual pairing.
 </td>
       <td>
 
-- Small spot illustrations and labels
+- Small and medium spot illustrations and labels
 - Large icons and labels
 
 </td>
@@ -416,19 +416,19 @@ Use with elements for visual pairing.
 
 **Loose pairing**
 
-Use with larger illustrative elements and text for pairing with increased visual separation.
+Use with larger visual elements and text for pairing with increased visual separation.
 
 </td>
       <td>
 
-- Medium/large spot illustrations and labels
+- Large avatars and text
 
 </td>
     </tr>
     <tr>
       <td>
 
-**Extra large**
+**Extra-large**
 
 </td>
       <td>
@@ -440,7 +440,7 @@ Use with related regions or groups of content in a container for visual separati
 </td>
       <td>
 
-- Extra large spot illustrations and text
+- Large and extra-large spot illustrations and text
 - Horizontally oriented label and value pairs
 
 </td>
@@ -448,14 +448,14 @@ Use with related regions or groups of content in a container for visual separati
     <tr>
       <td>
 
-**Extra, extra large**
+**Extra-extra-large**
 
 </td>
       <td>
 
 **Distinct sections**
 
-Use with elements or regions that are conceptually related for a stronger visual boundary.
+Use with loosely related elements or regions for a stronger visual boundary.
 
 </td>
       <td>
@@ -468,16 +468,16 @@ Use with elements or regions that are conceptually related for a stronger visual
   </tbody>
 </table>
 
-### Extra small
+### Extra-small
 
-Use extra small inline spacing classes when adjacent elements form a bound relationship in the same group, such as small icons and a single line of text. Apply between:
+Use extra-small inline spacing classes when adjacent elements form a bound relationship in the same group, such as small icons and a single line of text. Apply between:
 
 - Labels and values
 - Small or medium icons and single-line labels
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/xs-horizontal.b4b73318.png)
 
-Do use extra small inline spacing between strongly bonded elements.
+Do use extra-small inline spacing between strongly bonded elements.
 
 ### Small
 
@@ -489,22 +489,18 @@ Use small inline spacing classes when tight pairing is necessary to visually lin
 
 Do use small inline spacing to tightly pair UI elements.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/s-horizontal-2.fb07eb01.png)
-
-Do use small inline spacing to distinguish multiple larger UI elements from each other while remaining visually linked.
-
 ### Medium
 
 Use medium inline spacing classes when you need to distinguish large UI elements from each other while still visually linking them. Apply between:
 
+- Small and medium spot illustrations and labels
 - Large icons and labels
-- Small spot illustrations and labels
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/m-horizontal-1.f00b01e4.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/m-horizontal-2.c93c6b80.png)
 
 Do use medium inline spacing to distinguish multiple larger UI elements from each other while still visually linking them.
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/m-horizontal-2.c93c6b80.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/m-horizontal-1.f00b01e4.png)
 
 Do use medium inline spacing to distinguish multiple larger UI elements from each other while still visually linking them.
 
@@ -512,41 +508,41 @@ Do use medium inline spacing to distinguish multiple larger UI elements from eac
 
 Use large inline spacing classes when larger UI elements need visual separation but remain loosely linked. Apply between:
 
-- Medium or large spot illustrations and text
+- Large avatars and text
 
-![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/l-horizontal.6b866c4c.png)
+![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/l-horizontal.8997a8e9.png)
 
-Do use large inline spacing to distinguish medium or large spot illustrations from other content.
+Do use large inline spacing to separate a large avatar from its corresponding heading and text.
 
-### Extra large
+### Extra-large
 
-Use extra large inline spacing classes when visual separation is necessary between content sections within a container or region. Apply between:
+Use extra-large inline spacing classes when visual separation is necessary between content sections within a container or region. Apply between:
 
-- Extra large spot illustrations and text
+- Large and extra-large spot illustrations and text
 - Horizontally oriented label and value pairs
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/xl-horizontal-1.88331994.png)
 
-Do use extra large inline spacing to distinguish extra large spot illustrations from other content.
+Do use extra-large inline spacing to distinguish large and extra-large spot illustrations from other content.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/xl-horizontal-2.1e0f0345.png)
 
-Do use extra large inline spacing to separate horizontally oriented label and value pairs.
+Do use extra-large inline spacing to separate horizontally oriented label and value pairs.
 
-### Extra, extra large
+### Extra-extra-large
 
-Use extra, extra large inline spacing classes when borderless sections of loosely related content or sections of unrelated content require separation. This prevents them from running together visually. Apply between:
+Use extra-extra-large inline spacing classes when borderless sections of loosely related content or sections of unrelated content require separation. This prevents them from running together visually. Apply between:
 
 - Distinct peer content groups
 - Vertically oriented label and value pairs
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/xxl-horizontal-1.a2511d3d.png)
 
-Do use extra, extra large inline spacing for strong boundaries that separate distinct peer groups of content within a container.
+Do use extra-extra-large inline spacing for strong boundaries that separate distinct peer groups of content within a container.
 
 ![undefined](https://sky.blackbaudcdn.net/skyuxapps/skyux/assets/img/guidelines/spacing/xxl-horizontal-2.fa6d06e7.png)
 
-Do use extra, extra large inline spacing for strong boundaries that separate vertically oriented label and value pairs.
+Do use extra-extra-large inline spacing for strong boundaries that separate vertically oriented label and value pairs.
 
 ## Example compositions
 
