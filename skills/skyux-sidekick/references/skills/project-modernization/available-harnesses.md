@@ -29,6 +29,7 @@ In addition to harnesses (`Sky*Harness`), this list includes the other testing u
 ## `@skyux/charts/testing`
 
 - `SkyChartBarHarness`
+- `SkyChartDataPointHarness`
 - `SkyChartHarness`
 - `SkyChartLegendItemHarness`
 - `SkyChartLineHarness`

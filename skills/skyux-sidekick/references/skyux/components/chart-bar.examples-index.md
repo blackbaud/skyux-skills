@@ -2,7 +2,7 @@
 
 component: chart-bar
 source: ./chart-bar.md
-example_count: 12
+example_count: 13
 
 ---
 
@@ -24,3 +24,4 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 | 10  | Bar chart with fixed value bounds                       | 1762–1860 | `Read file_path=./chart-bar.md offset=1762 limit=99`  |
 | 11  | Bar chart value formats (number, currency, and percent) | 1861–2008 | `Read file_path=./chart-bar.md offset=1861 limit=148` |
 | 12  | Bar chart with asynchronously loaded data               | 2009–2167 | `Read file_path=./chart-bar.md offset=2009 limit=159` |
+| 13  | Bar chart with clickable data points                    | 2168–2303 | `Read file_path=./chart-bar.md offset=2168 limit=136` |

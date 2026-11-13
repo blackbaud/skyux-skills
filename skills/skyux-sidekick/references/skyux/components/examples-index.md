@@ -19,7 +19,7 @@
 | blockquote                   | 1        | [blockquote.examples-index.md](./blockquote.examples-index.md)                                     |
 | box                          | 2        | [box.examples-index.md](./box.examples-index.md)                                                   |
 | card                         | 1        | [card.examples-index.md](./card.examples-index.md)                                                 |
-| chart-bar                    | 12       | [chart-bar.examples-index.md](./chart-bar.examples-index.md)                                       |
+| chart-bar                    | 13       | [chart-bar.examples-index.md](./chart-bar.examples-index.md)                                       |
 | checkbox                     | 3        | [checkbox.examples-index.md](./checkbox.examples-index.md)                                         |
 | code                         | 1        | [code.examples-index.md](./code.examples-index.md)                                                 |
 | colorpicker                  | 3        | [colorpicker.examples-index.md](./colorpicker.examples-index.md)                                   |

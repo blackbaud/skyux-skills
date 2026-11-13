@@ -2164,3 +2164,139 @@ describe('Async bar chart example', () => {
   });
 });
 ```
+
+### Bar chart with clickable data points
+
+#### example.ts (primary file)
+
+```typescript
+import { CurrencyPipe } from '@angular/common';
+import { Component, signal } from '@angular/core';
+import {
+  SkyChart,
+  SkyChartAxisCategory,
+  SkyChartAxisValue,
+  SkyChartBar,
+  SkyChartBarSeries,
+  type SkyChartBarSeriesValue,
+  type SkyChartDataPointClickArgs,
+} from '@skyux/charts';
+
+/**
+ * @title Bar chart with clickable data points
+ */
+@Component({
+  imports: [CurrencyPipe, SkyChart, SkyChartAxisCategory, SkyChartAxisValue, SkyChartBar, SkyChartBarSeries],
+  selector: 'app-chart-bar-data-point-click-example',
+  templateUrl: './example.html',
+})
+export class ChartsChartBarDataPointClickExample {
+  protected readonly quarters = ['Q1', 'Q2', 'Q3', 'Q4'];
+  protected readonly online = [42000, 38500, 51200, 67800];
+  protected readonly inPerson = [25300, 31000, 28400, 45100];
+
+  protected readonly selection = signal<
+    { category: string | number; seriesLabelText: string; value: number } | undefined
+  >(undefined);
+
+  protected onDataPointClick(dataPoint: SkyChartDataPointClickArgs<SkyChartBarSeriesValue>): void {
+    const { category, seriesLabelText, value } = dataPoint;
+
+    // Floating bars report their value as a [start, end] range. This chart
+    // plots only single values, so ranges are ignored.
+    if (typeof value === 'number') {
+      this.selection.set({ category, seriesLabelText, value });
+    }
+  }
+}
+```
+
+#### example.html
+
+```html
+<sky-chart data-sky-id="donations-by-channel" headingText="Donations by channel">
+  <sky-chart-bar (dataPointClick)="onDataPointClick($event)">
+    <sky-chart-axis-category labelText="Quarter" [categories]="quarters" />
+    <sky-chart-axis-value currencyCode="USD" format="currency" labelText="Donations" />
+    <sky-chart-bar-series labelText="Online" [values]="online" />
+    <sky-chart-bar-series labelText="In person" [values]="inPerson" />
+  </sky-chart-bar>
+</sky-chart>
+<p aria-live="polite" class="sky-theme-margin-bottom-l" data-sky-id="selection">
+  @if (selection(); as selection) { {{ selection.seriesLabelText }} donations in {{ selection.category }}: {{
+  selection.value | currency: 'USD' }} } @else { Select a bar to see its details. }
+</p>
+```
+
+#### example.spec.ts
+
+```typescript
+import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { SkyChartBarHarness, SkyChartHarness } from '@skyux/charts/testing';
+import { provideNoopSkyAnimations } from '@skyux/core';
+
+import { ChartsChartBarDataPointClickExample } from './example';
+
+describe('Bar chart with clickable data points example', () => {
+  async function setupTest(): Promise<{
+    fixture: ComponentFixture<ChartsChartBarDataPointClickExample>;
+    barHarness: SkyChartBarHarness;
+  }> {
+    TestBed.configureTestingModule({
+      providers: [provideNoopSkyAnimations()],
+    });
+
+    const fixture = TestBed.createComponent(ChartsChartBarDataPointClickExample);
+    const loader = TestbedHarnessEnvironment.loader(fixture);
+    const harness = await loader.getHarness(SkyChartHarness.with({ dataSkyId: 'donations-by-channel' }));
+    const barHarness = await harness.queryHarness(SkyChartBarHarness);
+
+    return { fixture, barHarness };
+  }
+
+  function getSelectionText(fixture: ComponentFixture<ChartsChartBarDataPointClickExample>): string {
+    const selection = (fixture.nativeElement as HTMLElement).querySelector('[data-sky-id="selection"]');
+
+    return selection?.textContent?.trim() ?? '';
+  }
+
+  it('should prompt the user to select a bar', async () => {
+    const { fixture } = await setupTest();
+
+    expect(getSelectionText(fixture)).toBe('Select a bar to see its details.');
+  });
+
+  it('should show the details of the clicked bar', async () => {
+    const { barHarness, fixture } = await setupTest();
+
+    const dataPoint = await barHarness.getDataPoint({
+      category: 'Q4',
+      seriesLabelText: 'In person',
+    });
+
+    await dataPoint.click();
+
+    expect(getSelectionText(fixture)).toBe('In person donations in Q4: $45,100.00');
+  });
+
+  it('should replace the details when another bar is clicked', async () => {
+    const { barHarness, fixture } = await setupTest();
+
+    await (
+      await barHarness.getDataPoint({
+        category: 'Q4',
+        seriesLabelText: 'Online',
+      })
+    ).click();
+    await (
+      await barHarness.getDataPoint({
+        category: 'Q1',
+        seriesLabelText: 'Online',
+      })
+    ).click();
+
+    expect(getSelectionText(fixture)).toBe('Online donations in Q1: $42,000.00');
+  });
+});
+```

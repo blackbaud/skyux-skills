@@ -39,4 +39,4 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 23  | SkyChartLegendItemHarness        | testing     | 774–819  | `Read file_path=./chart-bar.md offset=774 limit=46`   |
 | 24  | SkyChartLegendItemHarnessFilters | testing     | 820–840  | `Read file_path=./chart-bar.md offset=820 limit=21`   |
 | 25  | SkyChartTableModalHarness        | testing     | 841–890  | `Read file_path=./chart-bar.md offset=841 limit=50`   |
-| 26  | Code Examples                    | examples    | 891–2167 | `Read file_path=./chart-bar.md offset=891 limit=1277` |
+| 26  | Code Examples                    | examples    | 891–2303 | `Read file_path=./chart-bar.md offset=891 limit=1413` |

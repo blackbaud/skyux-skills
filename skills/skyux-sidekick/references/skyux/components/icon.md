@@ -1692,7 +1692,7 @@ Example
     <tr>
       <td><code>xs</code></td>
       <td>
-12px
+0.75rem (12px)
 </td>
       <td>
 
@@ -1701,7 +1701,7 @@ Example
     <tr>
       <td><code>s</code></td>
       <td>
-16px
+1rem (16px)
 </td>
       <td>
 
@@ -1710,7 +1710,7 @@ Example
     <tr>
       <td><code>m</code></td>
       <td>
-20px
+1.25rem (20px)
 </td>
       <td>
 
@@ -1719,7 +1719,7 @@ Example
     <tr>
       <td><code>l</code></td>
       <td>
-24px
+1.5rem (24px)
 </td>
       <td>
 
@@ -1728,7 +1728,7 @@ Example
     <tr>
       <td><code>xl</code></td>
       <td>
-24px
+2rem (32px)
 </td>
       <td>
 
@@ -1737,7 +1737,7 @@ Example
     <tr>
       <td><code>xxl</code></td>
       <td>
-32px
+2.5rem (40px)
 </td>
       <td>
 
@@ -1746,7 +1746,7 @@ Example
     <tr>
       <td><code>xxxl</code></td>
       <td>
-40px
+3rem (48px)
 </td>
       <td>
 
