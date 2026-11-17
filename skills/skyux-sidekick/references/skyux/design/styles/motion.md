@@ -43,7 +43,7 @@ Like other properties of visual design, motion takes advantage of the observer's
 
 SKY UX uses a set of metaphor-based motion effects. These patterns should be included in the definitions of SKY UX components and should not be invoked directly.
 
-Slide
+### Slide
 
 This behavior moves content horizontally or vertically without altering other visual properties such as scale and transparency.
 
@@ -63,7 +63,7 @@ _Slide_ should follow these guidelines:
   - **200 ms** for sidebars and other patterns where one set of content partially covers another
   - **300 ms** for wizard steps, tabs, and other effects where one set of content completely replaces another
 
-Expand/collapse
+### Expand/collapse
 
 A close relative of _slide_, this behavior changes the dimensions of containers that toggle between expanded and collapsed views of content. _Expand/collapse_ does not affect the z-order of the container, which means that the surrounding content needs to be moved (using _slide_) at the same time to make room (or reclaim vacated space).
 
@@ -81,7 +81,7 @@ _Expand/collapse_ should follow these guidelines:
 - Use a duration of **300** milliseconds.
   - If it necessary to _slide_ other content, use a 300 ms duration for that movement as well (with the same acceleration curve).
 
-Emerge/recede
+### Emerge/recede
 
 This behavior shows content that is called or dismissed as a direct consequence of user actions. It uses an eye-catching combination of scale, translation, and transparency transformations. This gives the affected content immediate prominence and also draws a clear relationship between the content and the initiating action that a user performs. Content that _emerges_ is elevated above its surroundings (and calling affordance) in the z-order with a shadow or even a mask over the rest of the page. When the interaction that began with the _emerge_ effect is completed (or abandoned), the content _recedes_ back into its related affordance with a reverse animation.
 
@@ -102,3 +102,27 @@ _Emerge/recede_ should follow these guidelines:
   - **200 ms** for menus, pickers, and dropdown/select controls
   - **300 ms** for toasts and modal dialogs
 - If a modal dialog also uses a translucent mask behind it, the mask does not need the full _emerge_ effect. Simply increase the mask's alpha from 0 to its final value with the same acceleration and duration as the other transitions.
+
+## Durations
+
+The length of time for transitions and animations. Use an ease-in-out acceleration curve, and use the same duration for animations that occur simultaneously.
+
+Short duration
+
+The duration for small, quick changes like hover and focus states, and for elements that slide or emerge over part of the page, such as sidebars, menus, and dropdowns.
+
+`var(--sky-theme-duration-short)`
+
+Medium duration
+
+The duration for larger changes like expanding and collapsing containers, and for content that replaces or overlays the page, such as modals and toasts.
+
+`var(--sky-theme-duration-medium)`
+
+## Deprecated SCSS variables
+
+SKY UX does not support these deprecated SCSS variables. In many cases, the styles in these variables are now built into components or supported classes and don't need to be manually applied. Read the style overview guidelines to find a suitable replacement.
+
+`$sky-transition-time-short`
+
+`$sky-transition-time-medium`

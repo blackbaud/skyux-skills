@@ -426,6 +426,12 @@ How the bars of multiple series are arranged within each category. `grouped` pla
 
 Default: `'grouped'`
 
+### Outputs
+
+#### `dataPointClick: OutputRef<SkyChartDataPointClickArgs<SkyChartBarSeriesValue>>`
+
+Fires when the user clicks a data point, or presses Enter or Space while a data point has focus.
+
 ## SkyChartBarSeries
 
 Type: Component
@@ -472,6 +478,42 @@ A single value plotted by a bar chart series: a number renders a standard bar me
 
     type SkyChartBarSeriesValue = number | readonly [number, number] | null
 
+## SkyChartDataPointClickArgs
+
+Type: Interface Preview
+
+Describes the data point a user clicked, or activated with Enter or Space. `TValue` is the chart's series value type, such as `SkyChartBarSeriesValue`.
+
+    interface SkyChartDataPointClickArgs {
+      category: string | number;
+      categoryIndex: number;
+      seriesIndex: number;
+      seriesLabelText: string;
+      value: NonNullable<TValue>;
+    }
+
+### Properties
+
+#### `category: string | number`
+
+The category the data point is plotted against.
+
+#### `categoryIndex: number`
+
+The index of the data point's category, in the order the categories are declared.
+
+#### `seriesIndex: number`
+
+The index of the data point's series, in the order the series are declared.
+
+#### `seriesLabelText: string`
+
+The label of the data point's series.
+
+#### `value: NonNullable<TValue>`
+
+The data point's value. A floating bar's value is a `[start, end]` tuple. Gaps (`null` values) cannot be clicked, so the value is never `null`.
+
 ## SkyChartHeadingLevel
 
 Type: Type alias
@@ -515,6 +557,30 @@ Type: Class
 Harness for interacting with a bar chart component in tests.
 
 ### Methods
+
+#### `getDataPoint(filters: SkyChartDataPointHarnessFilters): Promise<SkyChartDataPointHarness>`
+
+Gets the harness for the data point that meets the given criteria.
+
+#### Parameters
+
+##### `filters: SkyChartDataPointHarnessFilters`
+
+#### Returns
+
+`Promise<SkyChartDataPointHarness>`
+
+#### `getDataPoints(filters?: SkyChartDataPointHarnessFilters): Promise<SkyChartDataPointHarness[]>`
+
+Gets the harnesses for the data points that meet the given criteria. Data points of hidden series are excluded.
+
+#### Parameters
+
+##### `filters?: SkyChartDataPointHarnessFilters`
+
+#### Returns
+
+`Promise<SkyChartDataPointHarness[]>`
 
 #### `getLegendItem(filters: SkyChartLegendItemHarnessFilters): Promise<SkyChartLegendItemHarness>`
 
@@ -770,6 +836,73 @@ Only find instances whose `data-sky-id` attribute matches the given value.
 #### `headingText?: string | RegExp`
 
 Only find instances whose heading text matches the given value.
+
+## SkyChartDataPointHarness
+
+Type: Class Preview
+
+`import { SkyChartDataPointHarness } from '@skyux/charts/testing';`
+
+Harness for interacting with a chart data point (for example, a bar or a line point) in tests.
+
+### Methods
+
+#### `click(): Promise<void>`
+
+Clicks the data point, which emits the chart's `dataPointClick` event.
+
+#### Returns
+
+`Promise<void>`
+
+#### `getCategory(): Promise<string>`
+
+Gets the category the data point is plotted against.
+
+#### Returns
+
+`Promise<string>`
+
+#### `getSeriesLabelText(): Promise<string>`
+
+Gets the label text of the data point's series.
+
+#### Returns
+
+`Promise<string>`
+
+#### `SkyChartDataPointHarness.with(filters: SkyChartDataPointHarnessFilters): HarnessPredicate<SkyChartDataPointHarness>`
+
+Gets a `HarnessPredicate` that can be used to search for a `SkyChartDataPointHarness` that meets certain criteria.
+
+#### Parameters
+
+##### `filters: SkyChartDataPointHarnessFilters`
+
+#### Returns
+
+`HarnessPredicate<SkyChartDataPointHarness>`
+
+## SkyChartDataPointHarnessFilters
+
+Type: Interface Preview
+
+A set of criteria for filtering `SkyChartDataPointHarness` instances.
+
+    interface SkyChartDataPointHarnessFilters {
+      category?: string | RegExp;
+      seriesLabelText?: string | RegExp;
+    }
+
+### Properties
+
+#### `category?: string | RegExp`
+
+Only find instances whose category matches the given value.
+
+#### `seriesLabelText?: string | RegExp`
+
+Only find instances whose series label text matches the given value.
 
 ## SkyChartLegendItemHarness
 

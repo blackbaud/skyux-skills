@@ -4,16 +4,16 @@
 
 ## SKY UX Schematics (`@skyux/packages`)
 
-| Command                                                                    | Purpose                                                                                  | Verify After   |
-| -------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | -------------- |
-| `npx ng g @skyux/packages:convert-definition-list-to-description-list`     | Convert <sky-definition-list> components to <sky-description-list> components.           | `npx ng build` |
-| `npx ng g @skyux/packages:convert-grid-to-data-grid`                       | Convert <sky-grid> components to <sky-data-grid> components.                             | `npx ng build` |
-| `npx ng g @skyux/packages:convert-page-summary-to-page-header`             | Convert <sky-page-summary> components to <sky-page-header> components.                   | `npx ng build` |
-| `npx ng g @skyux/packages:convert-progress-indicator-wizard-to-tab-wizard` | Convert <sky-progress-indicator> components using wizard to use <sky-tabset> components. | `npx ng build` |
-| `npx ng g @skyux/packages:convert-stache-code-to-code`                     | Convert Stache's SkyCodeModule to SKY UX's SkyCode component.                            | `npx ng build` |
-| `npx ng g @skyux/packages:migrate-karma-to-vitest`                         | Replace the @skyux-sdk/testing Jasmine matchers with the @skyux-sdk/vitest matchers.     | `npx ng build` |
-| `npx ng g @skyux/packages:remove-compat-stylesheets`                       | Remove SKY UX compatibility stylesheets.                                                 | `npx ng build` |
-| `npx ng g @skyux/packages:standalone-migration`                            | Convert components to standalone using SKY UX modules.                                   | `npx ng build` |
+| Command                                                                    | Purpose                                                                                    | Verify After   |
+| -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | -------------- |
+| `npx ng g @skyux/packages:convert-definition-list-to-description-list`     | Convert <sky-definition-list> components to <sky-description-list> components.             | `npx ng build` |
+| `npx ng g @skyux/packages:convert-grid-to-data-grid`                       | Convert <sky-grid> components to <sky-data-grid> components.                               | `npx ng build` |
+| `npx ng g @skyux/packages:convert-page-summary-to-page-header`             | Convert <sky-page-summary> components to <sky-page-header> components.                     | `npx ng build` |
+| `npx ng g @skyux/packages:convert-progress-indicator-wizard-to-tab-wizard` | Convert <sky-progress-indicator> components using wizard to use <sky-tabset> components.   | `npx ng build` |
+| `npx ng g @skyux/packages:convert-stache-code-to-code`                     | Convert Stache's SkyCodeModule to SKY UX's SkyCode component.                              | `npx ng build` |
+| `npx ng g @skyux/packages:migrate-karma-to-vitest`                         | Install the @skyux-sdk/vitest matchers, replacing the @skyux-sdk/testing Jasmine matchers. | `npx ng build` |
+| `npx ng g @skyux/packages:remove-compat-stylesheets`                       | Remove SKY UX compatibility stylesheets.                                                   | `npx ng build` |
+| `npx ng g @skyux/packages:standalone-migration`                            | Convert components to standalone using SKY UX modules.                                     | `npx ng build` |
 
 ## Angular Core Schematics (`@angular/core`)
 

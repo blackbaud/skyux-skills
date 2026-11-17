@@ -1904,8 +1904,6 @@ export class IconBasicExampleComponent {}
 #### example.component.html
 
 ```html
-<sky-icon iconName="calendar-ltr" iconSize="xxxs" />
-<sky-icon iconName="calendar-ltr" iconSize="xxs" />
 <sky-icon iconName="calendar-ltr" iconSize="xs" />
 <sky-icon iconName="calendar-ltr" iconSize="s" />
 <sky-icon iconName="calendar-ltr" />
