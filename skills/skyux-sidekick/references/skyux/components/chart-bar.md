@@ -278,7 +278,7 @@ The chart menu provides access to export controls and a screen-reader accessible
 
 NPM package
 
-`@skyux/charts`[View in NPM](https://www.npmjs.com/package/@skyux/charts) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/charts/src/lib/chart/chart.ts#L46)
+`@skyux/charts`[View in NPM](https://www.npmjs.com/package/@skyux/charts) | [View in GitHub](https://github.com/blackbaud/skyux/blob/main/libs/components/charts/src/lib/chart/chart.ts#L47)
 
 Install with NPM
 
@@ -286,7 +286,7 @@ Install with NPM
 
 ## SkyChart
 
-Type: Component
+Type: Component Preview
 
 Selector: `sky-chart`
 
@@ -338,7 +338,7 @@ The text to display as the chart's subheading.
 
 ## SkyChartAxisCategory
 
-Type: Component
+Type: Component Preview
 
 Selector: `sky-chart-axis-category`
 
@@ -360,7 +360,7 @@ The text of the axis label.
 
 ## SkyChartAxisValue
 
-Type: Component
+Type: Component Preview
 
 Selector: `sky-chart-axis-value`
 
@@ -406,7 +406,7 @@ Default: `'linear'`
 
 ## SkyChartBar
 
-Type: Component
+Type: Component Preview
 
 Selector: `sky-chart-bar`
 
@@ -434,7 +434,7 @@ Fires when the user clicks a data point, or presses Enter or Space while a data 
 
 ## SkyChartBarSeries
 
-Type: Component
+Type: Component Preview
 
 Selector: `sky-chart-bar-series`
 
@@ -456,7 +456,7 @@ The values for this series, aligned to the category axis categories by index. A 
 
 ## SkyChartBarOrientation
 
-Type: Type alias
+Type: Type alias Preview
 
 The orientation of a bar chart's bars.
 
@@ -464,7 +464,7 @@ The orientation of a bar chart's bars.
 
 ## SkyChartBarSeriesLayout
 
-Type: Type alias
+Type: Type alias Preview
 
 How a bar chart arranges the bars of multiple series within each category. `grouped` places the series' bars side by side; `stacked` accumulates the bars into a single bar per category. Neither has a visible effect when the chart has a single series.
 
@@ -472,7 +472,7 @@ How a bar chart arranges the bars of multiple series within each category. `grou
 
 ## SkyChartBarSeriesValue
 
-Type: Type alias
+Type: Type alias Preview
 
 A single value plotted by a bar chart series: a number renders a standard bar measured from the value axis's baseline, a `[start, end]` tuple renders a floating bar spanning the two values, and `null` renders a gap.
 
@@ -516,7 +516,7 @@ The data point's value. A floating bar's value is a `[start, end]` tuple. Gaps (
 
 ## SkyChartHeadingLevel
 
-Type: Type alias
+Type: Type alias Preview
 
 The allowed heading levels for charts, corresponding to the semantic heading levels in HTML.
 
@@ -524,7 +524,7 @@ The allowed heading levels for charts, corresponding to the semantic heading lev
 
 ## SkyChartHeadingStyle
 
-Type: Type alias
+Type: Type alias Preview
 
 The allowed heading styles for charts, corresponding to the font styles defined in the SKY UX design system.
 
@@ -532,7 +532,7 @@ The allowed heading styles for charts, corresponding to the font styles defined 
 
 ## SkyChartValueFormat
 
-Type: Type alias
+Type: Type alias Preview
 
 How a chart formats its numeric values in axis labels, tooltips, and the data table. The `percent` format expects fractional values, so `0.25` displays as `25%`.
 
@@ -540,7 +540,7 @@ How a chart formats its numeric values in axis labels, tooltips, and the data ta
 
 ## SkyChartValueScaleType
 
-Type: Type alias
+Type: Type alias Preview
 
 The scale type for a chart value axis. Use `logarithmic` when values span several orders of magnitude; otherwise use the default `linear` scale. Note that the `logarithmic` scale cannot display zero or negative values.
 
@@ -550,7 +550,7 @@ SKY UX test harnesses are built upon Angular CDK component harnesses. For more i
 
 ## SkyChartBarHarness
 
-Type: Class
+Type: Class Preview
 
 `import { SkyChartBarHarness } from '@skyux/charts/testing';`
 
@@ -628,7 +628,7 @@ Gets a `HarnessPredicate` that can be used to search for a `SkyChartBarHarness` 
 
 ## SkyChartBarHarnessFilters
 
-Type: Interface
+Type: Interface Preview
 
 A set of criteria for filtering `SkyChartBarHarness` instances.
 
@@ -644,7 +644,7 @@ Only find instances whose `data-sky-id` attribute matches the given value.
 
 ## SkyChartHarness
 
-Type: Class
+Type: Class Preview
 
 `import { SkyChartHarness } from '@skyux/charts/testing';`
 
@@ -818,7 +818,7 @@ Gets a `HarnessPredicate` that can be used to search for a `SkyChartHarness` tha
 
 ## SkyChartHarnessFilters
 
-Type: Interface
+Type: Interface Preview
 
 A set of criteria for filtering `SkyChartHarness` instances.
 
@@ -906,7 +906,7 @@ Only find instances whose series label text matches the given value.
 
 ## SkyChartLegendItemHarness
 
-Type: Class
+Type: Class Preview
 
 `import { SkyChartLegendItemHarness } from '@skyux/charts/testing';`
 
@@ -952,7 +952,7 @@ Gets a `HarnessPredicate` that can be used to search for a `SkyChartLegendItemHa
 
 ## SkyChartLegendItemHarnessFilters
 
-Type: Interface
+Type: Interface Preview
 
 A set of criteria for filtering `SkyChartLegendItemHarness` instances.
 
@@ -973,7 +973,7 @@ Only find instances whose label text matches the given value.
 
 ## SkyChartTableModalHarness
 
-Type: Class
+Type: Class Preview
 
 `import { SkyChartTableModalHarness } from '@skyux/charts/testing';`
 
