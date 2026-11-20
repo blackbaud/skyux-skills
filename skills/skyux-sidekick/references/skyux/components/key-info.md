@@ -93,6 +93,18 @@ When you need to supplement a key info label with additional information but don
 
 You can style the key info component as a link to let users select the value to navigate to a different location.
 
+## Content
+
+To ensure that users can quickly scan key info, keep the values and the labels short and concise. Limit labels to a few words that describe the values, and don't use complete sentences.
+
+### Capitalization
+
+Use sentence-style capitalization for key info labels. Capitalize only the first word and proper nouns.
+
+### Punctuation
+
+Don't use periods or any other unnecessary punctuation at the end of key info labels. Labels shouldn't be complete sentences, so they don't need periods or colons at the end.
+
 ## Layout
 
 ### Horizontal layout
@@ -120,6 +132,7 @@ Use caution with fluid grid to space key info components horizontally. This can 
 ### Guidelines
 
 - [Call out information](../design/guidelines/call-out-info.md)
+- [Content](../design/guidelines/content/README.md)
 
 ## Installation
 

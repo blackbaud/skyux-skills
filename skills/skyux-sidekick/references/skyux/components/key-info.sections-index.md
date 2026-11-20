@@ -2,7 +2,7 @@
 
 component: key-info
 source: ./key-info.md
-section_count: 16
+section_count: 17
 
 ---
 
@@ -18,15 +18,16 @@ Read only the section you need. Each entry below gives the exact `Read` argument
 | 2   | Anatomy                  | design      | 48–63   | `Read file_path=./key-info.md offset=48 limit=16`   |
 | 3   | Options                  | design      | 64–89   | `Read file_path=./key-info.md offset=64 limit=26`   |
 | 4   | Behavior and states      | design      | 90–95   | `Read file_path=./key-info.md offset=90 limit=6`    |
-| 5   | Layout                   | design      | 96–112  | `Read file_path=./key-info.md offset=96 limit=17`   |
-| 6   | Related information      | design      | 113–123 | `Read file_path=./key-info.md offset=113 limit=11`  |
-| 7   | Installation             | development | 124–133 | `Read file_path=./key-info.md offset=124 limit=10`  |
-| 8   | Styling                  | development | 134–137 | `Read file_path=./key-info.md offset=134 limit=4`   |
-| 9   | SkyKeyInfoModule         | development | 138–143 | `Read file_path=./key-info.md offset=138 limit=6`   |
-| 10  | SkyKeyInfoComponent      | development | 144–169 | `Read file_path=./key-info.md offset=144 limit=26`  |
-| 11  | SkyKeyInfoLabelComponent | development | 170–177 | `Read file_path=./key-info.md offset=170 limit=8`   |
-| 12  | SkyKeyInfoValueComponent | development | 178–185 | `Read file_path=./key-info.md offset=178 limit=8`   |
-| 13  | SkyKeyInfoLayoutType     | development | 186–193 | `Read file_path=./key-info.md offset=186 limit=8`   |
-| 14  | SkyKeyInfoHarness        | testing     | 194–263 | `Read file_path=./key-info.md offset=194 limit=70`  |
-| 15  | SkyKeyInfoHarnessFilters | testing     | 264–279 | `Read file_path=./key-info.md offset=264 limit=16`  |
-| 16  | Code Examples            | examples    | 280–505 | `Read file_path=./key-info.md offset=280 limit=226` |
+| 5   | Content                  | design      | 96–107  | `Read file_path=./key-info.md offset=96 limit=12`   |
+| 6   | Layout                   | design      | 108–124 | `Read file_path=./key-info.md offset=108 limit=17`  |
+| 7   | Related information      | design      | 125–136 | `Read file_path=./key-info.md offset=125 limit=12`  |
+| 8   | Installation             | development | 137–146 | `Read file_path=./key-info.md offset=137 limit=10`  |
+| 9   | Styling                  | development | 147–150 | `Read file_path=./key-info.md offset=147 limit=4`   |
+| 10  | SkyKeyInfoModule         | development | 151–156 | `Read file_path=./key-info.md offset=151 limit=6`   |
+| 11  | SkyKeyInfoComponent      | development | 157–182 | `Read file_path=./key-info.md offset=157 limit=26`  |
+| 12  | SkyKeyInfoLabelComponent | development | 183–190 | `Read file_path=./key-info.md offset=183 limit=8`   |
+| 13  | SkyKeyInfoValueComponent | development | 191–198 | `Read file_path=./key-info.md offset=191 limit=8`   |
+| 14  | SkyKeyInfoLayoutType     | development | 199–206 | `Read file_path=./key-info.md offset=199 limit=8`   |
+| 15  | SkyKeyInfoHarness        | testing     | 207–276 | `Read file_path=./key-info.md offset=207 limit=70`  |
+| 16  | SkyKeyInfoHarnessFilters | testing     | 277–292 | `Read file_path=./key-info.md offset=277 limit=16`  |
+| 17  | Code Examples            | examples    | 293–518 | `Read file_path=./key-info.md offset=293 limit=226` |

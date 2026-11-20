@@ -12,5 +12,5 @@ Read only the slice you need. Each entry below gives the exact `Read` arguments 
 
 | #   | Example                   | Lines   | Read invocation                                     |
 | --- | ------------------------- | ------- | --------------------------------------------------- |
-| 1   | Key info with basic setup | 282–394 | `Read file_path=./key-info.md offset=282 limit=113` |
-| 2   | Key info with help key    | 395–505 | `Read file_path=./key-info.md offset=395 limit=111` |
+| 1   | Key info with basic setup | 295–407 | `Read file_path=./key-info.md offset=295 limit=113` |
+| 2   | Key info with help key    | 408–518 | `Read file_path=./key-info.md offset=408 limit=111` |
